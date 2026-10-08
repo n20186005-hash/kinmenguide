@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+<Base title="找到適合你的金門行程" description="依旅遊天數與汽車、機車或公共交通，選一條金門行程作為規劃起點。提供路線與交通搭配說明，再按班機、同行者與天氣調整。" noindex breadcrumbs={[{name:'我的行程提案'}]}>
+<div class="shell reading-page"><Breadcrumb items={[{name:'我的行程提案'}]}/><span class="eyebrow">YOUR JOURNEY STARTS HERE</span><h1>一條適合你的金門路線</h1><form action="/plan/" class="contact-form" id="plan-form"><label>旅行天數<select class="search-input" name="days"><option value="1">一日遊</option><option value="2">兩天一夜</option><option value="3" selected>三天兩夜</option><option value="4">四天三夜</option></select></label><label>交通方式<select name="mode" class="search-input"><option value="car">汽車自駕</option><option value="scooter">機車慢遊</option><option value="transit">公車與步行</option></select></label><button class="button" type="submit">更新行程建議</button></form><section class="booking-panel" aria-live="polite"><span class="eyebrow">RECOMMENDED FOR YOU</span><h2 id="plan-title">金門三天兩夜</h2><p id="plan-note">以金城、金沙與烈嶼作為起點，依實際班機時間調整。</p><a class="button" id="plan-link" href="/itineraries/kinmen-three-days-two-nights/">查看建議行程</a><p><a class="text-link" id="plan-transport" href="/car-rental/car/">查看交通準備</a></p></section><p class="small">行程提案不代表已預訂任何交通或住宿。若搭公共交通，實際可走站點取決於當期班次與路線。</p><noscript><p>您可以直接前往<a href="/itineraries/">所有行程</a>選擇天數與交通方式。</p></noscript></div>
+</Base>
+<script>
+const form=document.querySelector<HTMLFormElement>('#plan-form');
+const days=form?.elements.namedItem('days') as HTMLSelectElement;
+const mode=form?.elements.namedItem('mode') as HTMLSelectElement;
+const params=new URLSearchParams(location.search);
+if(['1','2','3','4'].includes(params.get('days')||''))days.value=params.get('days')!;
+if(['car','scooter','transit'].includes(params.get('mode')||''))mode.value=params.get('mode')!;
+function recommend(){const names:Record<string,string>={'1':'金門一日遊','2':'金門兩天一夜','3':'金門三天兩夜','4':'金門四天三夜'};const slugs:Record<string,string>={'1':'kinmen-one-day','2':'kinmen-two-days-one-night','3':'kinmen-three-days-two-nights','4':'kinmen-four-days-three-nights'};const transit=mode.value==='transit';const title=document.querySelector('#plan-title');const note=document.querySelector('#plan-note');const link=document.querySelector<HTMLAnchorElement>('#plan-link');const transport=document.querySelector<HTMLAnchorElement>('#plan-transport');if(title)title.textContent=transit?'不租車的金門旅行':names[days.value];if(note)note.textContent=transit?`你選擇 ${days.value} 天、公車與步行。先以不租車的兩天範例為起點：一天走金城，另一天確認觀光路線；只有一天就保留步行圈，多出的天數再按可預約路線延伸。`:`你選擇${names[days.value]}、${mode.value==='scooter'?'機車慢遊':'汽車自駕'}。${mode.value==='scooter'?'把長途騎行分段，遇大風雨減少海岸與跨橋行程。':'同區景點順遊，老街與聚落外停車後步行。'} 請依抵達與離島時間刪減站點。`;if(link)link.href=`/itineraries/${transit?'kinmen-without-car':slugs[days.value]}/`;if(transport)transport.href=transit?'/transport/bus/':`/car-rental/${mode.value==='scooter'?'scooter':'car'}/`;}
+recommend();form?.addEventListener('submit',e=>{e.preventDefault();history.replaceState(null,'',`?days=${days.value}&mode=${mode.value}`);recommend();});
+</script>

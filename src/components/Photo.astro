@@ -1,0 +1,8 @@
+---
+import { Image } from 'astro:assets';
+import { photo } from '../lib/photos';
+interface Props { name: string; class?: string; eager?: boolean; sizes?: string; }
+const { name, class: className, eager = false, sizes = '(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw' } = Astro.props;
+const p = photo(name);
+---
+<Image src={p.src} alt={p.alt} class={className} widths={[480, 800, 1200, 1600].filter(w => w <= p.src.width)} sizes={sizes} format="webp" quality={82} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : 'auto'} decoding="async" />

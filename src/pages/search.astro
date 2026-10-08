@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { allEntries, entryHref } from '../lib/content';
+import { categories } from '../data/site';
+const entries=await allEntries();
+---
+<Base title="搜尋金門旅遊攻略" description="搜尋金門景點、行程、交通、美食、住宿與租車指南。輸入想去的地方或旅遊主題，找到相關內容，接著安排一段適合自己的金門旅行。" breadcrumbs={[{name:'搜尋攻略'}]}>
+<div class="shell search-layout"><Breadcrumb items={[{name:'搜尋攻略'}]}/><span class="eyebrow">FIND YOUR NEXT STOP</span><h1>你想在金門，找到什麼？</h1><p>試試「水頭」、「三天兩夜」或「不租車」。</p><div class="search-box"><label class="sr-only" for="site-search">搜尋關鍵字</label><input class="search-input" id="site-search" type="search" placeholder="搜尋景點、地區或主題…" autocomplete="off"/></div><p class="result-count" id="search-count" aria-live="polite">共 {entries.length} 篇指南</p><div id="search-results">{entries.map(e=><article class="search-result" data-search={`${e.data.title} ${e.data.description} ${e.data.nameEn}`}><span>{categories[e.collection].name}</span><h2><a href={entryHref(e)}>{e.data.title}</a></h2><p>{e.data.description}</p></article>)}</div><div id="search-empty" class="empty-state" hidden><h2>還沒有找到符合的內容</h2><p>縮短關鍵字或換成地區名稱，再試一次。</p><button type="button" id="search-reset" class="button button-light">顯示全部指南</button></div><noscript><p>JavaScript 未啟用，您仍可直接瀏覽以上全部指南。</p></noscript></div>
+</Base>
+<script>
+import { normalizeSearch } from '../lib/search';
+const input=document.querySelector<HTMLInputElement>('#site-search');
+const results=[...document.querySelectorAll<HTMLElement>('.search-result')];
+function search(){const q=normalizeSearch(input?.value||'');let n=0;results.forEach(el=>{el.hidden=!normalizeSearch(el.dataset.search||'').includes(q);if(!el.hidden)n++;});const count=document.querySelector('#search-count');if(count)count.textContent=q?`找到 ${n} 篇相關指南`:`共 ${n} 篇指南`;const empty=document.querySelector<HTMLElement>('#search-empty');if(empty)empty.hidden=n!==0;}
+input?.addEventListener('input',search);
+const q=new URLSearchParams(location.search).get('q');if(q&&input){input.value=q;search();}
+document.querySelector('#search-reset')?.addEventListener('click',()=>{if(input){input.value='';search();input.focus();}});
+</script>

@@ -1,0 +1,5 @@
+---
+import BookingCard from './BookingCard.astro';
+interface Props { area?: string; }
+---
+<BookingCard type="hotel" area={Astro.props.area}/>

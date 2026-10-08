@@ -1,0 +1,44 @@
+{
+  "name": "kinmenguide",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.32.1",
+  "engines": {
+    "node": ">=22.12.0 <25",
+    "pnpm": "10.32.1"
+  },
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "check": "astro check",
+    "build": "astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "test": "node scripts/verify-build.mjs",
+    "test:browser": "playwright test",
+    "validate": "astro check && astro build && node scripts/verify-build.mjs",
+    "cf:dev": "wrangler dev --config ./wrangler.jsonc",
+    "cf:dry-run": "wrangler deploy --config ./wrangler.jsonc --dry-run --outdir .wrangler/dry-run"
+  },
+  "dependencies": {
+    "astro": "7.3.5",
+    "@astrojs/sitemap": "3.7.4",
+    "tailwindcss": "4.3.3",
+    "@tailwindcss/vite": "4.3.3",
+    "sharp": "0.35.4"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "typescript": "6.0.3",
+    "wrangler": "4.144.0",
+    "@playwright/test": "1.63.0",
+    "cheerio": "1.2.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild",
+      "sharp",
+      "workerd"
+    ]
+  }
+}

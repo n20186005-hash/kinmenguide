@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Photo from '../components/Photo.astro';
+import { credits } from '../lib/photos';
+---
+<Base title="金門照片來源與授權｜Kinmen Guide" description="查詢 Kinmen Guide 使用的真實金門照片、原始檔案、攝影者與 Creative Commons 授權。保留來源與授權連結，標明圖片縮放、格式轉換和版面裁切。" breadcrumbs={[{name:'照片與授權'}]}>
+<div class="shell reading-page"><Breadcrumb items={[{name:'照片與授權'}]}/><span class="eyebrow">REAL PLACES, CREDITED PHOTOGRAPHERS</span><h1>每一張島嶼風景，都有出處。</h1><p class="lead">照片來自 Wikimedia Commons 所收錄的真實金門影像。攝影者保有作品權利，以下列出個別來源、授權及本站處理方式。</p><p class="small">圖片與網站程式碼的授權分開處理。CC BY-SA 圖片及其改作沿用原授權；不暗示攝影者推薦本站。部分照片反映拍攝當時的樣貌。</p>{Object.entries(credits).map(([key,p])=><article class="credit-row" id={key}><Photo name={key}/><div><h2>{p.alt}</h2><p>攝影：{p.author} · {p.license}</p><p>{p.file}</p><p>處理：{p.changes}</p><a href={p.source} target="_blank" rel="noopener noreferrer">原始檔案頁</a><a href={p.licenseUrl} target="_blank" rel="noopener noreferrer">授權條款</a></div></article>)}</div>
+</Base>

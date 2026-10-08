@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kinmenguide.com/sitemap-index.xml

@@ -1,0 +1,21 @@
+---
+import Icon from './Icon.astro';
+const path = Astro.url.pathname;
+const nav = [['島上景點','attractions'],['行程提案','itineraries'],['在地味道','food'],['交通指南','transport'],['住在金門','hotels']];
+---
+<header class="site-header">
+  <div class="header-inner shell">
+    <a href="/" class="brand" aria-label="Kinmen Guide 首頁"><span class="brand-seal" aria-hidden="true">金<br/>門</span><span><strong>KINMEN <span>GUIDE</span></strong><small>金門・島嶼旅行指南</small></span></a>
+    <nav class="desktop-nav" aria-label="主要導覽">{nav.map(([name,url]) => <a href={`/${url}/`} aria-current={path.startsWith(`/${url}/`) ? 'page' : undefined}>{name}</a>)}</nav>
+    <div class="header-actions"><a href="/search/" class="icon-button" aria-label="搜尋攻略"><Icon name="search" /></a><a href="/guides/first-time-visitor/" class="header-cta">第一次去金門</a><button class="icon-button mobile-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="開啟導覽"><Icon name="menu"/></button></div>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="手機導覽" hidden>{[...nav,['探索地區','areas'],['租車攻略','car-rental'],['在地體驗','tours'],['行前攻略','guides'],['景點地圖','map']].map(([name,url]) => <a href={`/${url}/`}>{name}</a>)}</nav>
+</header>
+<script>
+const toggle = document.querySelector<HTMLButtonElement>('.mobile-toggle');
+const menu = document.querySelector<HTMLElement>('#mobile-nav');
+function closeMenu() { if (toggle && menu) { toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label','開啟導覽'); menu.hidden = true; } }
+toggle?.addEventListener('click', () => { if (!menu) return; const expanded = toggle.getAttribute('aria-expanded') === 'true'; toggle.setAttribute('aria-expanded', String(!expanded)); toggle.setAttribute('aria-label',expanded ? '開啟導覽' : '關閉導覽'); menu.hidden = expanded; });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') { closeMenu(); toggle.focus(); } });
+window.matchMedia('(min-width: 1050px)').addEventListener('change', e => { if(e.matches) closeMenu(); });
+</script>

@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Card from '../../components/Card.astro';
+import Photo from '../../components/Photo.astro';
+import { allEntries, entryHref } from '../../lib/content';
+import { categoryKeys, categories, areaNames, SITE, type Category } from '../../data/site';
+export function getStaticPaths() { return categoryKeys.map(collection => ({ params: { collection } })); }
+const key = Astro.params.collection as Category;
+const category = categories[key];
+const entries = (await allEntries()).filter(e => e.collection === key);
+const breadcrumbs = [{ name: category.name }];
+const schema = [{'@type':'CollectionPage',name:category.title,url:`${SITE.url}/${key}/`},{'@type':'ItemList',itemListElement:entries.map((e,i) => ({'@type':'ListItem',position:i+1,name:e.data.title,url:new URL(entryHref(e),SITE.url).href}))}];
+---
+<Base title={category.title} description={category.description} image={category.image} breadcrumbs={breadcrumbs} schema={schema}>
+ <div class="shell"><Breadcrumb items={breadcrumbs}/><section class="page-hero"><div><span class="eyebrow">{category.en}</span><h1>{category.title}</h1><p>{category.description}</p></div><Photo name={category.image} eager sizes="(max-width: 760px) 100vw, 45vw"/></section>
+ <section class="pb-16" aria-label={category.name} data-catalog><div class="filter-bar"><div class="filter-chips" role="group" aria-label="依地區篩選">{Object.entries(areaNames).map(([area,name]) => <button class="chip" type="button" data-filter={area} aria-pressed={area === 'all'}>{name}</button>)}</div><label class="catalog-search"><span class="sr-only">搜尋{category.name}</span><input class="search-input" type="search" placeholder="搜尋這個欄目…" data-query/></label></div><p class="result-count" aria-live="polite" data-count>{entries.length} 篇{category.name}指南</p><div class="card-grid">{entries.map(entry => <Card entry={entry}/>)}</div><div class="empty-state" hidden data-empty><h2>這個條件還沒有找到內容</h2><p>試著換個關鍵字，或查看全島的指南。</p><button type="button" class="button button-light" data-reset>清除篩選</button></div><noscript><p>目前顯示全部內容。啟用 JavaScript 後可依地區和關鍵字篩選。</p></noscript></section></div>
+</Base>
+<script>
+import { normalizeSearch } from '../../lib/search';
+const root = document.querySelector<HTMLElement>('[data-catalog]');
+const cards = [...(root?.querySelectorAll<HTMLElement>('[data-card]') ?? [])];
+const buttons = [...(root?.querySelectorAll<HTMLButtonElement>('[data-filter]') ?? [])];
+const input = root?.querySelector<HTMLInputElement>('[data-query]');
+let area = 'all';
+function update() { let n = 0; const query = normalizeSearch(input?.value || ''); for (const card of cards) { const matchesArea = area === 'all' || card.dataset.area === area || card.dataset.area === 'all'; const match = matchesArea && normalizeSearch(card.dataset.search || '').includes(query); card.hidden = !match; if(match) n++; } const count=root?.querySelector('[data-count]'); if(count) count.textContent=`找到 ${n} 篇指南`; const empty=root?.querySelector<HTMLElement>('[data-empty]'); if(empty) empty.hidden=n!==0; buttons.forEach(b => b.setAttribute('aria-pressed',String(b.dataset.filter === area))); }
+buttons.forEach(b => b.addEventListener('click',() => { area=b.dataset.filter || 'all'; update(); }));
+input?.addEventListener('input',update);
+root?.querySelector('[data-reset]')?.addEventListener('click',() => { area='all'; if(input) input.value=''; update(); input?.focus(); });
+</script>

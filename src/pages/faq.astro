@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { faqs } from '../data/faq';
+const schema=[{'@type':'FAQPage',mainEntity:faqs.map(f=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))}];
+---
+<Base title="金門自由行常見問題｜天數、交通、住宿與烈嶼" description="第一次去金門的常見問題：玩幾天、不租車怎麼玩、金城與金湖住宿比較、小金門交通、雨天備案及預訂方式，整理行前最常需要釐清的事項。" schema={schema} breadcrumbs={[{name:'常見問題'}]}>
+<div class="shell reading-page"><Breadcrumb items={[{name:'常見問題'}]}/><span class="eyebrow">GOOD QUESTIONS BEFORE A GOOD JOURNEY</span><h1>出發前，你可能想問</h1><div class="faq-list">{faqs.map(f=><details><summary>{f.question}</summary><p>{f.answer}</p></details>)}</div><div class="mt-10 flex flex-wrap gap-4"><a class="button" href="/guides/first-time-visitor/">閱讀初訪指南</a><a class="button button-light" href="/contact/">聯絡與勘誤</a></div></div>
+</Base>
