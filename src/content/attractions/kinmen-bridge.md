@@ -9,7 +9,7 @@
   "tag": "跨海風景",
   "duration": "觀景 20–40 分鐘；烈嶼另留半天",
   "order": 13,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "related": [
     "/itineraries/lieyu-one-day/",
     "/transport/kinmen-to-lieyu/",
@@ -46,3 +46,6 @@
 從金城或金寧出發，先在本島端合法觀景點停留，再跨橋去[烈嶼](/areas/lieyu/)。以[九宮坑道](/attractions/jiugong-tunnel/)作為主要參觀，搭配一餐與一段聚落步行，就能安排不趕路的半日。想多走海岸，另留完整一天。
 
 公車旅客請看[前往烈嶼交通](/transport/kinmen-to-lieyu/)，確認跨橋路線與回程班次；不要以為橋通了就代表每個景點都能步行串接。最後一天若還要搭機，按還車和報到時間提前折返。
+
+## 想拍橋，從湖下與慈湖選一站
+[湖下海堤](/attractions/huxia-seawall/)適合把大橋放進海岸全景；[慈湖三角堡](/attractions/cihu-triangle-fortress/)可結合堡壘參觀與海邊風景。先完成有關門時間的展區，再按天候與照明安排岸邊短停。燈光開啟與通行管制查官方即時資訊，橋面行車道不作拍照停車點。

@@ -1,49 +1,58 @@
 ---
 {
-  "title": "金城奶茶與老街散步",
-  "nameEn": "Tea Stops in Jincheng",
-  "seoTitle": "金城奶茶與老街散步｜Kinmen Guide 金門旅遊",
-  "description": "在金城老街安排一杯奶茶與一段散步：以中興路、總兵署和模範街串起休息時間，說明奶茶一條街名稱的辨識、店家查詢、點單與含酒茶飲的注意事項。",
-  "image": "mofan",
+  "title": "金門奶茶一條街：中興路146巷",
+  "nameEn": "Jincheng Milk Tea Lane",
+  "seoTitle": "金門奶茶一條街：中興路146巷｜Kinmen Guide 金門旅遊",
+  "description": "金門奶茶一條街就在金城車站旁的中興路146巷。整理巷道位置、茶飲與雞排搭配、候車時的短程散步，以及總兵署和模範街的順遊安排。",
   "area": "kincheng",
   "tag": "奶茶與街區",
-  "duration": "45–90 分鐘",
+  "duration": "30–60 分鐘",
   "order": 8,
-  "updatedAt": "2026-10-08",
-  "related": [
-    "/attractions/kinmen-military-headquarters/",
-    "/attractions/mofan-street/",
-    "/food/kincheng-food/"
-  ],
+  "updatedAt": "2026-10-09",
   "sources": [
     {
-      "title": "金門觀光旅遊網・中興路早餐與奶茶店家資訊",
-      "url": "https://kinmen.travel/zh-tw/shop/details/3871"
+      "title": "金門觀光旅遊網・中興路146巷店家位置資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/2733"
     },
     {
-      "title": "金門觀光旅遊網・官方店家名錄",
-      "url": "https://kinmen.travel/zh-tw/shop/index"
-    },
-    {
-      "title": "經濟部品牌一條街・高雄鹽埕奶茶一條街",
-      "url": "https://serv.gcis.nat.gov.tw/mainstreetbranding/story/detail/3"
+      "title": "艋舺雞排・中興路146巷金城門店資料",
+      "url": "https://www.mongag.com/store.html"
     }
+  ],
+  "related": [
+    "/food/monga-fried-chicken/",
+    "/food/pinchilin-croissants/",
+    "/tours/houpu-night-walk/"
+  ],
+  "facts": [
+    {
+      "label": "街巷位置",
+      "value": "金門縣金城鎮中興路146巷，金城車站旁。"
+    },
+    {
+      "label": "適合時段",
+      "value": "依想去的店家營業時間安排，候車需保留回站時間。"
+    }
+  ],
+  "aliases": [
+    "奶茶一条街",
+    "中兴路146巷",
+    "金城奶茶"
   ]
 }
 ---
 
-## 想找「奶茶一條街」，先確認城市
-網路上以「奶茶一條街」為正式街區品牌介紹的，是**高雄鹽埕新樂街**。目前沒有足夠官方資料把這個名稱直接標為金門的一條景點街道，因此本頁以**金城奶茶與老街散步**整理實際可安排的休息路線，不替未確認的街區畫一個地圖位置。
+## 奶茶一條街就在金城車站旁
+金門旅人所說的**奶茶一條街，是金城鎮中興路146巷**，就在金城車站旁。這個名稱用來辨認集中的茶飲與點心街巷；逛街、候車或參觀老城時，都能安排一杯飲料的休息時間。
 
-## 把飲料安排在老街走讀之間
-先參觀[清金門鎮總兵署](/attractions/kinmen-military-headquarters/)，沿金城市區步行找當日營業的茶飲或早餐店，再走[模範街](/attractions/mofan-street/)看紅磚拱廊。中興路及周邊巷弄是可以查找餐飲的區域；例如官方名錄收錄中興路 83 號「艾瑪烤焦吐司早餐」，介紹中提到奶茶搭配早餐，但它不是全街統一營業的觀光設施。
+[用中興路146巷查找位置](https://www.google.com/maps/search/?api=1&query=金門縣金城鎮中興路146巷)，到場再依招牌選店。巷道沒有統一營業時段，各店的店休、座位與飲品供應分別確認。
 
-這是一段編輯建議的散步，不是指定商家的合作或排名。依現場菜單、營業公告與座位狀況選店，步行和休息留 45–90 分鐘；要吃完整一餐可接[金城美食指南](/food/kincheng-food/)。
+## 一杯飲料配一份鹹食
+同巷可查[艋舺雞排金城店](/food/monga-fried-chicken/)，周邊民生路則有[品其林牛角包](/food/pinchilin-croissants/)。先看食物出餐時間，再決定飲料是否立即取走；有公車要搭時，別把等餐時間估得太緊。
 
-## 點一杯之前，問清楚口味
-奶茶、鮮奶茶、奶精茶與加料飲品的成分不同，有乳類過敏或飲食限制時先問店家。甜度與冰量不一定每款都能調整，地方特色口味也可能季節限定；不要把網路舊菜單當成現價。
+鮮奶茶、奶精茶和加料飲品成分不同，點餐時確認甜度、冰量和過敏原。特色口味不一定每天供應，價格以各店現場菜單為準。
 
-若選含高粱的茶飲，先確認是否含酒精。未滿 18 歲與駕駛者不要選含酒精飲品；喝完仍須遵守不酒駕的原則，不能因「只是奶茶」而忽略酒精。
+## 從車站走到後浦老城
+編輯建議先買飲料休息，再走[浯江書院](/attractions/wujiang-academy/)、[總兵署](/attractions/kinmen-military-headquarters/)與[模範街](/attractions/mofan-street/)；館內是否能飲食依規定，先喝完或收妥。晚上想聽老城故事，可改接[後浦夜遊](/tours/houpu-night-walk/)。
 
-## 散步的小細節
-金城是居民生活的街區，等餐時不堵住騎樓與店家門口；拍照先避開住戶和用餐客人，垃圾自行帶走。去總兵署等室內場館前先喝完或依規定收好飲料。雨天找能合法停留的騎樓，不站在車道拍人車穿梭的畫面。
+巷道也有居民、機車與送貨人員通行。排隊靠店家指示的範圍，不站車道拍照，飲料杯與食物包裝自行回收。含酒茶飲先確認酒精成分，駕駛者不選含酒精飲品。

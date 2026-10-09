@@ -9,7 +9,7 @@
   "tag": "湖畔自然",
   "duration": "散步 45–90 分鐘",
   "order": 17,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "related": [
     "/food/jinhu-food/",
     "/attractions/chen-jinglan-house/",
@@ -49,3 +49,6 @@
 上午先看[陳景蘭洋樓](/attractions/chen-jinglan-house/)，午餐往[山外](/food/jinhu-food/)，下午留給湖畔與一處館舍；親子旅人也可把洋樓換成[畜產試驗所](/attractions/kinmen-livestock/)。若同日登[太武山](/attractions/taiwu-mountain/)，湖邊改成短程散步，讓雙腳休息。
 
 公車轉乘通常以山外一帶查詢較方便，但下車站到所選湖岸入口仍有距離；請核對當日路線，不憑地圖上一片湖就假設每側都有站牌。
+
+## 中正公園彩繪與山外甜點
+想替湖畔散步加一點趣味，可接[漂浮斑馬線與獺上太湖](/attractions/zhongzheng-park-3d/)；拍照後回[山外街區](/attractions/shanwai-old-street/)吃[談天樓湯圓](/food/tantianlou/)或買[麥斯麵包](/food/max-bakery/)。先核對店休，不把所有餐點硬排成同一頓。

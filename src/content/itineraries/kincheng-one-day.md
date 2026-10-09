@@ -10,7 +10,7 @@
   "duration": "1 天",
   "order": 7,
   "featured": false,
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-09",
   "related": [
     "/transport/",
     "/hotels/kincheng/",
@@ -90,3 +90,8 @@
 以金城連住可減少搬行李；東半島活動較多可考慮金湖。自駕先確認證件與保險，不自駕則先訂觀光巴士或確認回程公車。不要等抵達偏遠景點後才尋找下一段交通。
 ## 天氣不配合時
 大風或雨天縮短海岸與健行段，改成總兵署等有室內展示的景點；仍需確認場館當日開放。遇到濃霧、航班異動或施工，保留最想去的兩三站，比原封不動追行程更實際。
+
+## 想加新景點，優先替換同區的一站
+金城段可用[浯江書院](/attractions/wujiang-academy/)和[奶茶街](/food/kincheng-tea-walk/)豐富步行圈，晚間另選[總兵署夜遊](/tours/houpu-night-walk/)。[建功嶼](/attractions/jiangong-islet/)必須配合潮汐，[古崗樓](/attractions/gugang-tower/)2026年秋季二樓以上施工，均先查公告再安排。
+
+有金湖段的行程，可把[高洞](/attractions/gaodong-tunnel/)、[天坑](/attractions/tiankeng/)和[新湖漁港](/attractions/xinhu-fishing-harbor/)組成一個半日，或選[山外老街](/attractions/shanwai-old-street/)加[中正公園彩繪](/attractions/zhongzheng-park-3d/)。金寧段則可替換成[慈湖三角堡](/attractions/cihu-triangle-fortress/)與[湖下海堤](/attractions/huxia-seawall/)。不要在原本已排滿的一天全部加上去。

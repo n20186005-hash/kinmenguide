@@ -10,7 +10,7 @@
   "duration": "5 分鐘",
   "order": 2,
   "featured": false,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "related": [
     "/food/kinmen-food-guide/",
     "/food/breakfast/",
@@ -33,4 +33,15 @@
 市區相對容易找到餐飲，但仍有個別店休。若住水頭或郊外古厝，可考慮在市區用餐後再回住宿，或先向民宿詢問周邊選擇。
 
 ## 更多選擇與行前準備
-在總兵署與模範街之間留一段喝茶時間，參考[金城奶茶與老街散步](/food/kincheng-tea-walk/)；店家與含酒茶飲按當日菜單確認。
+在總兵署與模範街之間留一段喝茶時間，參考[中興路146巷奶茶一條街](/food/kincheng-tea-walk/)；店家與含酒茶飲按當日菜單確認。
+
+## 具體店家與用餐安排
+- [中興路146巷奶茶街](/food/kincheng-tea-walk/)
+- [聯成廣東粥](/food/liancheng-congee/)
+- [永春廣東粥](/food/yongchun-congee/)
+- [雨川食堂](/food/yuchuan-canteen/)
+- [品其林牛角包](/food/pinchilin-croissants/)
+- [甜水厝豆花](/food/tianshuicuo-tofu-pudding/)
+- [艋舺雞排](/food/monga-fried-chicken/)
+
+先依當日區域選店，再核對營業、店休與品項；以上為內容整理，沒有付費排名。

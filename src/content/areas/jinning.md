@@ -10,7 +10,7 @@
   "duration": "半天至 1 天",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "related": [
     "/attractions/kinmen-bridge/",
     "/attractions/kinmen-distillery/",
@@ -42,3 +42,11 @@
 下列內容可依天候、開放與同行者體力擇一加入，替換原行程的一站，避免只增加景點數。
 
 [金門大橋與岸邊觀景](/attractions/kinmen-bridge/)、[金門酒廠：金寧廠參訪](/attractions/kinmen-distillery/)。
+
+## 新增景點與沿路吃什麼
+- [福寓宮旁彩繪](/attractions/fuyu-temple-photo-spot/)
+- [慈湖三角堡](/attractions/cihu-triangle-fortress/)
+- [湖下海堤](/attractions/huxia-seawall/)
+- [金門大橋](/attractions/kinmen-bridge/)
+
+依同一街區或道路選兩三站就好；半日遊不必把清單全部走完。

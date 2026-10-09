@@ -10,7 +10,7 @@
   "duration": "半天至 1 天",
   "order": 1,
   "featured": true,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "related": [
     "/attractions/jinshui-school/",
     "/attractions/oucuo-tank/",
@@ -42,4 +42,19 @@
 ## 這一區還可以這樣走
 下列內容可依天候、開放與同行者體力擇一加入，替換原行程的一站，避免只增加景點數。
 
-[金水國小展示館](/attractions/jinshui-school/)、[歐厝沙灘與沉睡戰車](/attractions/oucuo-tank/)、[金城奶茶與老街散步](/food/kincheng-tea-walk/)。
+[金水國小展示館](/attractions/jinshui-school/)、[歐厝沙灘與沉睡戰車](/attractions/oucuo-tank/)、[中興路146巷奶茶一條街](/food/kincheng-tea-walk/)。
+
+## 新增景點與沿路吃什麼
+- [建功嶼](/attractions/jiangong-islet/)
+- [古崗樓](/attractions/gugang-tower/)
+- [浯江書院](/attractions/wujiang-academy/)
+- [總兵署夜遊](/tours/houpu-night-walk/)
+- [中興路146巷奶茶街](/food/kincheng-tea-walk/)
+- [聯成廣東粥](/food/liancheng-congee/)
+- [永春廣東粥](/food/yongchun-congee/)
+- [雨川食堂](/food/yuchuan-canteen/)
+- [品其林牛角包](/food/pinchilin-croissants/)
+- [甜水厝豆花](/food/tianshuicuo-tofu-pudding/)
+- [艋舺雞排](/food/monga-fried-chicken/)
+
+依同一街區或道路選兩三站就好；半日遊不必把清單全部走完。

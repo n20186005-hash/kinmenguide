@@ -10,7 +10,7 @@
   "duration": "半天至 1 天",
   "order": 2,
   "featured": true,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "related": [
     "/attractions/chen-jinglan-house/",
     "/attractions/taihu-lake/",
@@ -43,3 +43,17 @@
 金湖可以把洋樓、湖邊與牧場分成兩個半天；帶孩子時不要再把登山硬塞進同一日。
 
 [陳景蘭洋樓](/attractions/chen-jinglan-house/)、[太湖與湖畔散步](/attractions/taihu-lake/)、[金門縣畜產試驗所與牧場散步](/attractions/kinmen-livestock/)。
+
+## 新增景點與沿路吃什麼
+- [小徑公車亭](/attractions/xiaojing-bus-stop/)
+- [山外老街](/attractions/shanwai-old-street/)
+- [高洞坑道](/attractions/gaodong-tunnel/)
+- [天坑](/attractions/tiankeng/)
+- [新湖漁港](/attractions/xinhu-fishing-harbor/)
+- [中正公園3D彩繪](/attractions/zhongzheng-park-3d/)
+- [畜試所牛奶盒](/attractions/kinmen-livestock/)
+- [炸雞棺材板](/food/shanwai-chicken-coffin-bread/)
+- [談天樓](/food/tantianlou/)
+- [麥斯西點麵包](/food/max-bakery/)
+
+依同一街區或道路選兩三站就好；半日遊不必把清單全部走完。

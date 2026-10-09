@@ -25,8 +25,8 @@ for(const file of files){
  $('script[type="application/ld+json"]').each((_,el)=>{try{const s=JSON.parse($(el).text());check(s['@context']==='https://schema.org','Invalid JSON-LD context');schemas+=s['@graph'].length;}catch{check(false,'Invalid JSON-LD');}});
  const ids=new Set();$('[id]').each((_,el)=>{const id=$(el).attr('id');check(!ids.has(id),`Duplicate ID ${id}`);ids.add(id);});
  $('img').each((_,el)=>{images++;check(Boolean($(el).attr('alt')),'Image missing alt');check(Boolean($(el).attr('width'))&&Boolean($(el).attr('height')),'Image missing dimensions');});
- $('a[href],img[src],script[src],link[rel="stylesheet"][href]').each((_,el)=>{
-  const value=$(el).attr('href')||$(el).attr('src');if(!value||/^(mailto:|tel:|data:)/.test(value))return;
+ $('a[href],img[src],script[src],link[rel="stylesheet"][href],meta[property="og:image"]').each((_,el)=>{
+  const value=$(el).attr('href')||$(el).attr('src')||$(el).attr('content');if(!value||/^(mailto:|tel:|data:)/.test(value))return;
   let url;try{url=new URL(value,'https://kinmenguide.com'+route);}catch{check(false,`Invalid URL ${value}`);return;}
   if(url.origin!=='https://kinmenguide.com')return;
   links++;

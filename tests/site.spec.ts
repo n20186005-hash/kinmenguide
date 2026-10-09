@@ -12,14 +12,14 @@ test('home navigation, image loading and viewport',async({page},info)=>{
 });
 
 test('catalog filters, zero results, and reset',async({page})=>{
- await page.goto('/attractions/');await expect(page.locator('[data-card]:visible')).toHaveCount(20);
+ await page.goto('/attractions/');await expect(page.locator('[data-card]:visible')).toHaveCount(32);
  await page.getByRole('button',{name:'烈嶼',exact:true}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(1);await expect(page.locator('[data-card]:visible h3')).toHaveText('九宮坑道');
- await page.locator('[data-query]').fill('不存在的景點xyz');await expect(page.locator('[data-empty]')).toBeVisible();await page.getByRole('button',{name:'清除篩選'}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(20);
+ await page.locator('[data-query]').fill('不存在的景點xyz');await expect(page.locator('[data-empty]')).toBeVisible();await page.getByRole('button',{name:'清除篩選'}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(32);
 });
 
 test('search accepts simplified queries and empty state',async({page})=>{
  await page.goto('/search/');await page.getByLabel('搜尋關鍵字').fill('水头');await expect(page.locator('.search-result:visible')).not.toHaveCount(0);await expect(page.locator('.search-result:visible').filter({hasText:'水頭聚落'}).first()).toBeVisible();
- await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(72);
+ await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(96);
 });
 
 test('planner respects days and transport',async({page})=>{
@@ -38,7 +38,7 @@ test('FAQ and honest contact draft download',async({page})=>{
 });
 
 test('representative pages have no horizontal overflow or broken images',async({page})=>{
- for(const route of ['/attractions/zhaishan-tunnel/','/itineraries/kinmen-three-days-two-nights/','/hotels/kincheng/','/areas/lieyu/','/credits/','/transport/from-mainland-china/','/guides/entry-documents/','/guides/restricted-items/','/guides/travel-checklist/','/attractions/chen-jinglan-house/','/404.html']){
+ for(const route of ['/attractions/zhaishan-tunnel/','/itineraries/kinmen-three-days-two-nights/','/hotels/kincheng/','/areas/lieyu/','/credits/','/transport/from-mainland-china/','/guides/entry-documents/','/guides/restricted-items/','/guides/travel-checklist/','/attractions/chen-jinglan-house/','/food/kincheng-tea-walk/','/food/aliang-fried-chicken/','/attractions/jiangong-islet/','/attractions/xiaojing-bus-stop/','/tours/houpu-night-walk/','/404.html']){
   await page.goto(route);await expect(page.locator('h1')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),route).toBeTruthy();
   const eager=page.locator('img[loading=eager]');for(const img of await eager.all())expect(await img.evaluate((i:HTMLImageElement)=>i.complete&&i.naturalWidth>0),route).toBeTruthy();
  }
@@ -67,4 +67,20 @@ test('travel checklist remains usable when browser storage is unavailable',async
 
 test('travel checklist has a printable no-JavaScript fallback',async({browser,baseURL})=>{
  const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.goto(`${baseURL}/guides/travel-checklist/`);await expect(page.locator('[data-check-item]:visible')).toHaveCount(22);await expect(page.getByRole('button',{name:'下載文字清單'})).toBeHidden();await expect(page.locator('noscript p')).toBeVisible();await expect(page.locator('noscript p')).toContainText('目前顯示全部項目');await context.close();
+});
+
+
+test('new place aliases lead to the corrected street and real guides',async({page})=>{
+ await page.goto('/search/');
+ for(const [query,href] of [['奶茶一条街','/food/kincheng-tea-walk/'],['品其林','/food/pinchilin-croissants/'],['水濑路标','/guides/otter-road-signs/'],['小径车站','/attractions/xiaojing-bus-stop/']]){
+  await page.getByLabel('搜尋關鍵字').fill(query);await expect(page.locator(`.search-result:visible a[href="${href}"]`)).toBeVisible();
+ }
+ await page.goto('/food/kincheng-tea-walk/');await expect(page.locator('h1')).toContainText('中興路146巷');await expect(page.locator('.prose')).toContainText('金城車站旁');await expect(page.locator('.article-cover')).toHaveCount(0);
+ await page.goto('/food/');await page.locator('[data-query]').fill('品其林');await expect(page.locator('[data-card]:visible')).toHaveCount(1);await expect(page.locator('[data-card]:visible .guide-cover')).toBeVisible();
+});
+
+test('map distinguishes verified coordinates from place search',async({page})=>{
+ await page.goto('/map/');await expect(page.locator('#map-count')).toHaveText('32 個景點');
+ const stop=page.locator('.map-point').filter({hasText:'小徑公車亭'});await expect(stop.getByRole('link',{name:'Google 地圖'})).toHaveAttribute('href',/query=/);await expect(stop.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
+ await page.getByRole('button',{name:'金湖',exact:true}).click();await expect(stop).toBeVisible();await expect(page.locator('.map-point:visible')).toHaveCount(10);
 });

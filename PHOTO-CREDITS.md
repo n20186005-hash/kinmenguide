@@ -199,3 +199,21 @@
 - 授權：[CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
 - [原始檔案頁](https://commons.wikimedia.org/wiki/File:%E9%87%91%E9%97%A8%E5%8E%BF%E7%95%9C%E4%BA%A7%E8%AF%95%E9%AA%8C%E6%89%80_-_Kinmen_Livestock_Research_Institute_-_2014.09_-_panoramio.jpg)
 - 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## jiangong
+
+- 內容：建功嶼退潮步道與小島景觀
+- 檔案：Jiangong Islet from causeway.jpg
+- 作者：Miklcct
+- 授權：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:Jiangong_Islet_from_causeway.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## gugang
+
+- 內容：金門古崗樓的紅色樓閣與傳統屋頂
+- 檔案：Gugang Tower.jpg
+- 作者：Fang Lan Hsu
+- 授權：[CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:Gugang_Tower.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
