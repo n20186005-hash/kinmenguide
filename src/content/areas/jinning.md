@@ -10,12 +10,12 @@
   "duration": "半天至 1 天",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-08",
   "related": [
+    "/attractions/kinmen-bridge/",
+    "/attractions/kinmen-distillery/",
     "/attractions/guningtou-battle-museum/",
-    "/attractions/mofan-street/",
-    "/hotels/",
-    "/transport/"
+    "/attractions/mofan-street/"
   ],
   "sources": [
     {
@@ -37,3 +37,8 @@
 
 ## 選擇住宿前
 先確認住宿和晚餐的距離、停車位置與接送服務。地圖上的直線距離不足以判斷步行方便，帶行李時更應向業者確認抵達方式。
+
+## 這一區還可以這樣走
+下列內容可依天候、開放與同行者體力擇一加入，替換原行程的一站，避免只增加景點數。
+
+[金門大橋與岸邊觀景](/attractions/kinmen-bridge/)、[金門酒廠：金寧廠參訪](/attractions/kinmen-distillery/)。

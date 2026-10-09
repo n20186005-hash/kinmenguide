@@ -1,0 +1,4 @@
+---
+import { origins } from '../data/travel';
+---
+<section class="arrival-guide" aria-labelledby="arrival-heading"><div class="section-heading"><div><span class="eyebrow">BEFORE THE ISLAND / 先把路線走通</span><h2 id="arrival-heading">你從哪裡來金門？</h2><p>先選出發地看交通，再按持有證件確認入境材料。</p></div></div><div class="origin-grid">{origins.map((o,i)=><a class="origin-card" href={`/transport/${o.slug}/`}><span class="eyebrow">0{i+1}</span><h3>{o.name}<span aria-hidden="true">↗</span></h3><strong>{o.route}</strong><p>{o.note}</p></a>)}</div><nav class="preparation-links" aria-label="出發前準備"><a href="/guides/entry-documents/">01 · 要帶哪些證件</a><a href="/guides/restricted-items/">02 · 哪些物品不能帶</a><a href="/guides/travel-checklist/">03 · 打開旅行清單 →</a></nav></section>

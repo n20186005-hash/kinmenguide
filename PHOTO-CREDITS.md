@@ -1,6 +1,6 @@
 # 照片來源與授權
 
-照片來源可逐筆核對，禁止移除署名或把照片說成本站自攝。每張圖保留其個別授權；CC BY-SA 的改作仍依原相容授權提供。
+照片來源可逐筆核對，禁止移除署名或把照片說成本站自攝。每張圖保留其個別授權；CC BY-SA 的改作仍依原相容授權提供。照片為不同年份的實景紀錄，不代表場館當日狀態。
 
 ## shuitou
 
@@ -137,3 +137,65 @@
 - [原始檔案頁](https://commons.wikimedia.org/wiki/File:Mashan_Observation_Post_27879011111_2b6237efd6_o.jpg)
 - 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
 
+## chen-jinglan
+
+- 內容：陳景蘭洋樓的白色拱廊與前方金湯公園
+- 檔案：金汤公园与陈景兰洋楼 - Jintang Park and Chen Jinglan's House - 2014.05 - panoramio.jpg
+- 作者：rheins
+- 授權：[CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:%E9%87%91%E6%B1%A4%E5%85%AC%E5%9B%AD%E4%B8%8E%E9%99%88%E6%99%AF%E5%85%B0%E6%B4%8B%E6%A5%BC_-_Jintang_Park_and_Chen_Jinglan%27s_House_-_2014.05_-_panoramio.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## jinshui
+
+- 內容：水頭金水國小展示館的歷史校舍外觀
+- 檔案：Jinshui Elementary School 金水國小 - panoramio.jpg
+- 作者：lienyuan lee
+- 授權：[CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:Jinshui_Elementary_School_%E9%87%91%E6%B0%B4%E5%9C%8B%E5%B0%8F_-_panoramio.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## taihu
+
+- 內容：金湖太湖湖面與岸邊步道
+- 檔案：金门太湖 - Taihu Lake - 2014.09 - panoramio.jpg
+- 作者：rheins
+- 授權：[CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:%E9%87%91%E9%97%A8%E5%A4%AA%E6%B9%96_-_Taihu_Lake_-_2014.09_-_panoramio.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## distillery
+
+- 內容：金門酒廠金寧廠的園區與建築
+- 檔案：金门酒厂 - Kinmen Kaoliang Liquor Inc. - 2015.01 - panoramio.jpg
+- 作者：rheins
+- 授權：[CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:%E9%87%91%E9%97%A8%E9%85%92%E5%8E%82_-_Kinmen_Kaoliang_Liquor_Inc._-_2015.01_-_panoramio.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## oucuo
+
+- 內容：歐厝沙灘退潮時露出的鏽蝕M18戰車
+- 檔案：歐厝戰車.jpg
+- 作者：Alan850507
+- 授權：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:%E6%AD%90%E5%8E%9D%E6%88%B0%E8%BB%8A.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## mashan-broadcast
+
+- 內容：馬山播音站的建築入口與標示
+- 檔案：Mashan broadcasting post.JPG
+- 作者：koika
+- 授權：[CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:Mashan_broadcasting_post.JPG)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## livestock
+
+- 內容：金門縣畜產試驗所的入口與園區綠地
+- 檔案：金门县畜产试验所 - Kinmen Livestock Research Institute - 2014.09 - panoramio.jpg
+- 作者：rheins
+- 授權：[CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:%E9%87%91%E9%97%A8%E5%8E%BF%E7%95%9C%E4%BA%A7%E8%AF%95%E9%AA%8C%E6%89%80_-_Kinmen_Livestock_Research_Institute_-_2014.09_-_panoramio.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。

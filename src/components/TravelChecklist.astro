@@ -1,0 +1,58 @@
+---
+import { checklistGroups, origins } from '../data/travel';
+---
+<section id="travel-checklist" class="travel-checklist" data-travel-checklist aria-labelledby="checklist-heading"><span class="eyebrow">READY FOR KINMEN</span><h2 id="checklist-heading">我的出發清單</h2><p>按這次路線選擇；沒有安排的選用活動可略過。勾選不代表入境核准。</p>
+<div class="checklist-tools" hidden data-checklist-tools><label for="checklist-origin">這次從哪裡出發<select id="checklist-origin"><option value="all">尚未選擇／查看全部</option>{origins.map(o=><option value={o.id}>{o.name}</option>)}</select></label><p data-origin-tip>選擇出發地後，顯示相應準備事項。</p></div>
+<p data-checklist-progress role="status" aria-live="polite">可直接勾選下方項目。</p><progress data-progress-bar value="0" max="1" aria-label="目前顯示清單的完成比例" hidden></progress><p class="small" data-save-status>資訊核對日期：2026-10-08。詳見本文說明與官方來源。</p>
+{checklistGroups.map(group=><fieldset class="checklist-group"><legend>{group.title}</legend>{group.items.map(item=><div class="checklist-row" data-scope={item.scope}><label><input type="checkbox" name={item.id} data-check-item/><span><strong>{item.text}</strong><small>{item.detail}</small></span></label>{item.href&&<a href={item.href} aria-label={`閱讀「${item.text}」相關指南`}>查看指南 ↗</a>}</div>)}</fieldset>)}
+<div class="checklist-actions" hidden data-checklist-tools><button type="button" class="button" data-download-checklist>下載文字清單</button><button type="button" class="button button-light" data-print-checklist>列印清單</button><button type="button" class="text-link" data-clear-checklist>清空全部勾選</button></div><p role="status" class="small" data-checklist-action-status></p><noscript><p>目前顯示全部項目，可手動勾選並使用瀏覽器列印。啟用 JavaScript 後可篩選路線、保存進度及下載文字檔。</p></noscript>
+</section>
+<script>
+import { origins } from '../data/travel';
+const root=document.querySelector<HTMLElement>('[data-travel-checklist]');
+if(root){
+ const storageKey='kinmenguide-checklist-v1';
+ const select=root.querySelector<HTMLSelectElement>('#checklist-origin')!;
+ const inputs=[...root.querySelectorAll<HTMLInputElement>('[data-check-item]')];
+ const rows=[...root.querySelectorAll<HTMLElement>('.checklist-row')];
+ const status=root.querySelector<HTMLElement>('[data-save-status]')!;
+ const action=root.querySelector<HTMLElement>('[data-checklist-action-status]')!;
+ const progress=root.querySelector<HTMLProgressElement>('[data-progress-bar]')!;
+ const accepted=new Set(['all',...origins.map(o=>o.id)]);
+ let storageAvailable=true;
+ try {
+  const saved=JSON.parse(localStorage.getItem(storageKey)||'null');
+  if(saved&&saved.version===1){
+   if(accepted.has(saved.origin))select.value=saved.origin;
+   if(Array.isArray(saved.checked))inputs.forEach(input=>input.checked=saved.checked.includes(input.name));
+  }
+ }catch{storageAvailable=false;}
+ function save(){
+  try{localStorage.setItem(storageKey,JSON.stringify({version:1,origin:select.value,checked:inputs.filter(i=>i.checked).map(i=>i.name)}));storageAvailable=true;}
+  catch{storageAvailable=false;}
+  updateStorageStatus();
+ }
+ function updateStorageStatus(){status.textContent=storageAvailable?'進度僅保存在這台裝置的瀏覽器；清空勾選可移除已完成記錄。資訊核對：2026-10-08。':'瀏覽器未允許保存進度，本次仍可勾選、下載或列印；關閉後可能不保留。';}
+ function update(){
+  const chosen=select.value;
+  rows.forEach(row=>row.hidden=!(chosen==='all'||row.dataset.scope==='all'||row.dataset.scope===chosen||(row.dataset.scope==='border'&&chosen!=='taiwan')));
+  const visible=inputs.filter(i=>!i.closest<HTMLElement>('.checklist-row')!.hidden);
+  const count=visible.filter(i=>i.checked).length;
+  root!.querySelector('[data-checklist-progress]')!.textContent=`目前顯示 ${visible.length} 項，已完成 ${count} 項（選用活動可略過）`;
+  progress.max=visible.length;progress.value=count;
+  root!.querySelector('[data-origin-tip]')!.textContent=origins.find(o=>o.id===chosen)?.tip||'選擇出發地後，顯示相應準備事項。出發地不能代替證件身分判斷。';
+ }
+ root.querySelectorAll<HTMLElement>('[data-checklist-tools]').forEach(el=>el.hidden=false);progress.hidden=false;update();updateStorageStatus();
+ select.addEventListener('change',()=>{update();save();action.textContent='已更新適用項目，其他路線的勾選仍保留。';});
+ inputs.forEach(input=>input.addEventListener('change',()=>{update();save();action.textContent='';}));
+ root.querySelector('[data-clear-checklist]')?.addEventListener('click',()=>{inputs.forEach(input=>input.checked=false);update();save();action.textContent='已清空所有路線的勾選，出發地選擇保留。';});
+ root.querySelector('[data-print-checklist]')?.addEventListener('click',()=>window.print());
+ root.querySelector('[data-download-checklist]')?.addEventListener('click',()=>{
+  const lines=['Kinmen Guide｜金門旅行清單',`出發地：${select.selectedOptions[0]?.textContent}`,'資訊核對：2026-10-08；規定以主管機關最新公告為準。','勾選代表自行核對，不代表入境核准。選用活動可略過。',''];
+  root!.querySelectorAll('fieldset').forEach(group=>{lines.push(group.querySelector('legend')!.textContent||'');group.querySelectorAll<HTMLElement>('.checklist-row').forEach(row=>{if(row.hidden)return;const input=row.querySelector<HTMLInputElement>('input')!;lines.push(`[${input.checked?'x':' '}] ${row.querySelector('strong')!.textContent}`,`    ${row.querySelector('small')!.textContent}`);});lines.push('');});
+  lines.push('證件對照：https://kinmenguide.com/guides/entry-documents/','禁限帶物品：https://kinmenguide.com/guides/restricted-items/','完整清單及官方來源：https://kinmenguide.com/guides/travel-checklist/');
+  const url=URL.createObjectURL(new Blob(['\uFEFF'+lines.join('\n')],{type:'text/plain;charset=utf-8'}));
+  const a=document.createElement('a');a.href=url;a.download='kinmen-travel-checklist.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);action.textContent='已下載目前路線的清單；沒有上傳任何資料。';
+ });
+}
+</script>

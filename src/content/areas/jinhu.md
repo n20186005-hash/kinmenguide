@@ -10,12 +10,13 @@
   "duration": "半天至 1 天",
   "order": 2,
   "featured": true,
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-08",
   "related": [
+    "/attractions/chen-jinglan-house/",
+    "/attractions/taihu-lake/",
+    "/attractions/kinmen-livestock/",
     "/attractions/taiwu-mountain/",
-    "/attractions/shanhou-folk-culture-village/",
-    "/hotels/",
-    "/transport/"
+    "/attractions/shanhou-folk-culture-village/"
   ],
   "sources": [
     {
@@ -37,3 +38,8 @@
 
 ## 選擇住宿前
 先確認住宿和晚餐的距離、停車位置與接送服務。地圖上的直線距離不足以判斷步行方便，帶行李時更應向業者確認抵達方式。
+
+## 這一區還可以這樣走
+金湖可以把洋樓、湖邊與牧場分成兩個半天；帶孩子時不要再把登山硬塞進同一日。
+
+[陳景蘭洋樓](/attractions/chen-jinglan-house/)、[太湖與湖畔散步](/attractions/taihu-lake/)、[金門縣畜產試驗所與牧場散步](/attractions/kinmen-livestock/)。

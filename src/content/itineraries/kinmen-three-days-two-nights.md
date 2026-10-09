@@ -10,7 +10,7 @@
   "duration": "3 天 2 夜",
   "order": 1,
   "featured": true,
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-08",
   "related": [
     "/transport/",
     "/hotels/kincheng/",
@@ -150,3 +150,6 @@
 以金城連住可減少搬行李；東半島活動較多可考慮金湖。自駕先確認證件與保險，不自駕則先訂觀光巴士或確認回程公車。不要等抵達偏遠景點後才尋找下一段交通。
 ## 天氣不配合時
 大風或雨天縮短海岸與健行段，改成總兵署等有室內展示的景點；仍需確認場館當日開放。遇到濃霧、航班異動或施工，保留最想去的兩三站，比原封不動追行程更實際。
+
+## 更多選擇與行前準備
+第 1 天在水頭可加入[金水國小](/attractions/jinshui-school/)，縮短購物時間即可。第 2 天想走湖畔與洋樓，可把較遠的馬山段改成[陳景蘭洋樓](/attractions/chen-jinglan-house/)與[太湖](/attractions/taihu-lake/)，不必同一天跑完東西兩種路線。第 3 天跨橋前查看[金門大橋觀景與管制提醒](/attractions/kinmen-bridge/)。

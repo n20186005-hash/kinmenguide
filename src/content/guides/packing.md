@@ -10,7 +10,7 @@
   "duration": "6 分鐘",
   "order": 5,
   "featured": true,
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-08",
   "related": [
     "/itineraries/kinmen-three-days-two-nights/",
     "/transport/",
@@ -36,3 +36,6 @@
 聚落門檻、石階與坑道地面需要穩定鞋底。帶防曬、遮陽與防風層，雨具以方便收納為主，騎車時不要使用妨礙操作的物品。
 ## 行李越簡單，古厝越好走
 入住傳統聚落可能需要走一小段路或搬過門檻，先問業者卸行李的位置。行動電源等物品依航空公司最新規定攜帶，伴手禮則確認保存和運輸方式。
+
+## 更多選擇與行前準備
+證件依[身分對照](/guides/entry-documents/)準備，入境與回程先看[禁限帶物品](/guides/restricted-items/)。你也可以直接打開[可勾選的旅行清單](/guides/travel-checklist/)，保存進度、下載或列印帶走。

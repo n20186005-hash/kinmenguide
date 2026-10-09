@@ -9,7 +9,7 @@ export const categories = {
   attractions: { name: '島上景點', title: '金門景點：把喜歡的風景，排進旅程', en: 'PLACES TO DISCOVER', description: '從翟山坑道、水頭聚落到烈嶼九宮坑道，依地區探索金門必去景點。每站整理參觀重點、交通方式、停留建議與順遊路線，找到適合自己的旅行節奏。', image: 'shanhou' },
   itineraries: { name: '行程提案', title: '金門行程：留幾天，就有幾種走法', en: 'YOUR ISLAND ITINERARY', description: '金門一日遊、兩天一夜、三天兩夜與四天三夜行程，搭配機車環島、不租車和烈嶼路線。按實際移動方向規劃，留時間給一碗早餐、一條老街與海風。', image: 'shuitou' },
   food: { name: '在地味道', title: '金門美食：從一碗熱粥，開始認識島嶼', en: 'A TASTE OF KINMEN', description: '認識金門廣東粥、燒餅、牛肉與蚵料理，整理金城與金湖覓食區域、早餐安排和點餐建議。把用餐接上景點動線，少繞路，多吃一點在地風味。', image: 'food' },
-  transport: { name: '交通指南', title: '金門交通：抵達以後，輕鬆移動', en: 'GETTING HERE & AROUND', description: '金門機場、市區公車、計程車、小三通與前往烈嶼的交通指南。比較自駕和公共交通，掌握查詢班次、銜接機場、取還車與跨橋移動的行前重點。', image: 'bridge' },
+  transport: { name: '交通指南', title: '金門交通：從你的出發地，一路規劃到島上', en: 'GETTING HERE & AROUND', description: '海外、台灣本島、香港、澳門與中國大陸如何去金門？比較航班與小三通，按身分準備證件，查入境行李規則，再接上金門公車、租車與烈嶼交通。', image: 'bridge' },
   areas: { name: '探索地區', title: '五個鄉鎮，五種金門日常', en: 'FIVE WAYS TO KNOW AN ISLAND', description: '金城老街、金湖山景、金沙聚落、金寧戰地記憶與烈嶼海岸。依地區選擇金門景點、美食、住宿及交通，安排同區順遊，深入金門本島與小金門。', image: 'taiwu' },
   hotels: { name: '住在金門', title: '金門住宿：先選生活步調，再選一張床', en: 'STAY A LITTLE LONGER', description: '金門住哪裡方便？比較金城、金湖、機場周邊與親子住宿需求，了解古厝民宿和市區旅館的差異，整理訂房前應確認的接送、隔音、停車與取消條件。', image: 'guesthouse' },
   'car-rental': { name: '租車攻略', title: '金門租車：選一種適合你的移動方式', en: 'FIND YOUR OWN PACE', description: '金門租機車、租汽車與機場取還車實用比較，整理證件、保險、車況檢查、油量與接送問題。依同行人數、行李和天氣選車，透過官方名錄尋找業者。', image: 'bridge' },

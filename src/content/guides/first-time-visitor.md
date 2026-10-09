@@ -10,7 +10,7 @@
   "duration": "6 分鐘",
   "order": 1,
   "featured": true,
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-08",
   "related": [
     "/itineraries/kinmen-three-days-two-nights/",
     "/transport/",
@@ -38,3 +38,6 @@
 第一天金城與水頭，第二天金沙及金湖，第三天在金寧與烈嶼之間擇一。愛登山可把第二天改太武山，不需要同時保留所有東北景點。
 ## 出發前的最後確認
 證件、駕照適用性、交通預約、住宿入住與最新天氣都要確認。需要銜接小三通者另查入出境要求；重要工作或國際轉機前，建議為海島交通保留彈性。
+
+## 更多選擇與行前準備
+[交通指南](/transport/)新增海外、台灣本島、香港、澳門與中國大陸五種出發方案。先核對[證件與入境資格](/guides/entry-documents/)，再用[旅行清單](/guides/travel-checklist/)完成訂票、行李與回程準備。

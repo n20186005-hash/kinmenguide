@@ -10,7 +10,7 @@
   "duration": "4 天 3 夜",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-08",
   "related": [
     "/transport/",
     "/hotels/kincheng/",
@@ -174,3 +174,6 @@
 以金城連住可減少搬行李；東半島活動較多可考慮金湖。自駕先確認證件與保險，不自駕則先訂觀光巴士或確認回程公車。不要等抵達偏遠景點後才尋找下一段交通。
 ## 天氣不配合時
 大風或雨天縮短海岸與健行段，改成總兵署等有室內展示的景點；仍需確認場館當日開放。遇到濃霧、航班異動或施工，保留最想去的兩三站，比原封不動追行程更實際。
+
+## 更多選擇與行前準備
+金湖的一天可在[陳景蘭洋樓](/attractions/chen-jinglan-house/)、[太湖](/attractions/taihu-lake/)與[畜產試驗所](/attractions/kinmen-livestock/)中挑兩處，替換原路線的一段。想拍[歐厝戰車](/attractions/oucuo-tank/)則先查潮汐，海況不適合時改去[金水國小](/attractions/jinshui-school/)。
