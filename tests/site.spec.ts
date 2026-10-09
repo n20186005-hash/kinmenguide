@@ -47,8 +47,8 @@ test('representative pages have no horizontal overflow or broken images',async({
 test('arrival guides connect origins, documents and new attractions',async({page})=>{
  await page.goto('/transport/');await expect(page.locator('.origin-card')).toHaveCount(5);
  await page.locator('.origin-card[href="/transport/from-mainland-china/"]').click();await expect(page.locator('h1')).toContainText('中國大陸');await expect(page.locator('.prose')).toContainText('有效');
- await page.goto('/search/');await page.getByLabel('搜尋關鍵字').fill('陈景兰');await expect(page.locator('.search-result:visible').filter({hasText:'陳景蘭洋樓'})).toHaveCount(1);
- await page.getByLabel('搜尋關鍵字').fill('高粱酒厂');await expect(page.locator('.search-result:visible').filter({hasText:'金門酒廠'})).toHaveCount(1);
+ await page.goto('/search/');await page.getByLabel('搜尋關鍵字').fill('陈景兰');await expect(page.getByRole('link',{name:'陳景蘭洋樓',exact:true})).toBeVisible();await expect(page.getByRole('link',{name:'陳景蘭洋樓',exact:true})).toHaveAttribute('href','/attractions/chen-jinglan-house/');
+ await page.getByLabel('搜尋關鍵字').fill('高粱酒厂');await expect(page.getByRole('link',{name:'金門酒廠：金寧廠參訪',exact:true})).toBeVisible();
 });
 
 test('travel checklist filters, persists, downloads and clears every route',async({page})=>{
@@ -66,5 +66,5 @@ test('travel checklist remains usable when browser storage is unavailable',async
 });
 
 test('travel checklist has a printable no-JavaScript fallback',async({browser,baseURL})=>{
- const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.goto(`${baseURL}/guides/travel-checklist/`);await expect(page.locator('[data-check-item]:visible')).toHaveCount(22);await expect(page.getByRole('button',{name:'下載文字清單'})).toBeHidden();await expect(page.locator('noscript')).toContainText('目前顯示全部項目');await context.close();
+ const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.goto(`${baseURL}/guides/travel-checklist/`);await expect(page.locator('[data-check-item]:visible')).toHaveCount(22);await expect(page.getByRole('button',{name:'下載文字清單'})).toBeHidden();await expect(page.locator('noscript p')).toBeVisible();await expect(page.locator('noscript p')).toContainText('目前顯示全部項目');await context.close();
 });
