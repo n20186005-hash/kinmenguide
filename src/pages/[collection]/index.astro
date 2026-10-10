@@ -24,9 +24,11 @@ const root = document.querySelector<HTMLElement>('[data-catalog]');
 const cards = [...(root?.querySelectorAll<HTMLElement>('[data-card]') ?? [])];
 const buttons = [...(root?.querySelectorAll<HTMLButtonElement>('[data-filter]') ?? [])];
 const input = root?.querySelector<HTMLInputElement>('[data-query]');
-let area = 'all';
+const requestedArea = new URLSearchParams(window.location.search).get('area');
+let area = buttons.some(b=>b.dataset.filter===requestedArea) ? requestedArea! : 'all';
 function update() { let n = 0; const query = normalizeSearch(input?.value || ''); for (const card of cards) { const matchesArea = area === 'all' || card.dataset.area === area || card.dataset.area === 'all'; const match = matchesArea && normalizeSearch(card.dataset.search || '').includes(query); card.hidden = !match; if(match) n++; } const count=root?.querySelector('[data-count]'); if(count) count.textContent=`找到 ${n} 篇指南`; const empty=root?.querySelector<HTMLElement>('[data-empty]'); if(empty) empty.hidden=n!==0; buttons.forEach(b => b.setAttribute('aria-pressed',String(b.dataset.filter === area))); }
 buttons.forEach(b => b.addEventListener('click',() => { area=b.dataset.filter || 'all'; update(); }));
 input?.addEventListener('input',update);
+update();
 root?.querySelector('[data-reset]')?.addEventListener('click',() => { area='all'; if(input) input.value=''; update(); input?.focus(); });
 </script>

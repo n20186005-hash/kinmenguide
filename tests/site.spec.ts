@@ -12,14 +12,14 @@ test('home navigation, image loading and viewport',async({page},info)=>{
 });
 
 test('catalog filters, zero results, and reset',async({page})=>{
- await page.goto('/attractions/');await expect(page.locator('[data-card]:visible')).toHaveCount(32);
- await page.getByRole('button',{name:'烈嶼',exact:true}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(1);await expect(page.locator('[data-card]:visible h3')).toHaveText('九宮坑道');
- await page.locator('[data-query]').fill('不存在的景點xyz');await expect(page.locator('[data-empty]')).toBeVisible();await page.getByRole('button',{name:'清除篩選'}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(32);
+ await page.goto('/attractions/');await expect(page.locator('[data-card]:visible')).toHaveCount(65);
+ await page.getByRole('button',{name:'烈嶼',exact:true}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(34);await expect(page.locator('[data-card]:visible h3').filter({hasText:'九宮坑道'})).toBeVisible();
+ await page.locator('[data-query]').fill('不存在的景點xyz');await expect(page.locator('[data-empty]')).toBeVisible();await page.getByRole('button',{name:'清除篩選'}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(65);
 });
 
 test('search accepts simplified queries and empty state',async({page})=>{
  await page.goto('/search/');await page.getByLabel('搜尋關鍵字').fill('水头');await expect(page.locator('.search-result:visible')).not.toHaveCount(0);await expect(page.locator('.search-result:visible').filter({hasText:'水頭聚落'}).first()).toBeVisible();
- await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(96);
+ await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(130);
 });
 
 test('planner respects days and transport',async({page})=>{
@@ -29,7 +29,7 @@ test('planner respects days and transport',async({page})=>{
 
 test('map loads only on request and filters by area',async({page})=>{
  await page.route('https://www.openstreetmap.org/**',route=>route.fulfill({body:'<html><body>Test map surface</body></html>',contentType:'text/html'}));
- await page.goto('/map/');await expect(page.locator('#kinmen-map')).not.toHaveAttribute('src',/.+/);await page.getByRole('button',{name:'烈嶼',exact:true}).click();await expect(page.locator('.map-point:visible')).toHaveCount(1);await page.getByRole('button',{name:'圖上查看',exact:true}).last().click();await expect(page.locator('#kinmen-map')).toHaveAttribute('src',/marker=24/);await expect(page.locator('#map-consent')).toBeHidden();
+ await page.goto('/map/');await expect(page.locator('#kinmen-map')).not.toHaveAttribute('src',/.+/);await page.getByRole('button',{name:'烈嶼',exact:true}).click();await expect(page.locator('.map-point:visible')).toHaveCount(34);await page.locator('.map-point:visible').filter({hasText:'九宮坑道'}).getByRole('button',{name:'圖上查看',exact:true}).click();await expect(page.locator('#kinmen-map')).toHaveAttribute('src',/marker=24/);await expect(page.locator('#map-consent')).toBeHidden();
 });
 
 test('FAQ and honest contact draft download',async({page})=>{
@@ -38,7 +38,7 @@ test('FAQ and honest contact draft download',async({page})=>{
 });
 
 test('representative pages have no horizontal overflow or broken images',async({page})=>{
- for(const route of ['/attractions/zhaishan-tunnel/','/itineraries/kinmen-three-days-two-nights/','/hotels/kincheng/','/areas/lieyu/','/credits/','/transport/from-mainland-china/','/guides/entry-documents/','/guides/restricted-items/','/guides/travel-checklist/','/attractions/chen-jinglan-house/','/food/kincheng-tea-walk/','/food/aliang-fried-chicken/','/attractions/jiangong-islet/','/attractions/xiaojing-bus-stop/','/tours/houpu-night-walk/','/404.html']){
+ for(const route of ['/attractions/zhaishan-tunnel/','/itineraries/kinmen-three-days-two-nights/','/hotels/kincheng/','/areas/lieyu/','/itineraries/lieyu-two-days/','/attractions/lieyu-culture-museum/','/attractions/hujingtou-war-museum/','/attractions/lieyu-seaside-park/','/attractions/tiger-fort/','/credits/','/transport/from-mainland-china/','/guides/entry-documents/','/guides/restricted-items/','/guides/travel-checklist/','/attractions/chen-jinglan-house/','/food/kincheng-tea-walk/','/food/aliang-fried-chicken/','/attractions/jiangong-islet/','/attractions/xiaojing-bus-stop/','/tours/houpu-night-walk/','/404.html']){
   await page.goto(route);await expect(page.locator('h1')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),route).toBeTruthy();
   const eager=page.locator('img[loading=eager]');for(const img of await eager.all())expect(await img.evaluate((i:HTMLImageElement)=>i.complete&&i.naturalWidth>0),route).toBeTruthy();
  }
@@ -80,7 +80,50 @@ test('new place aliases lead to the corrected street and real guides',async({pag
 });
 
 test('map distinguishes verified coordinates from place search',async({page})=>{
- await page.goto('/map/');await expect(page.locator('#map-count')).toHaveText('32 個景點');
+ await page.goto('/map/');await expect(page.locator('#map-count')).toHaveText('65 個景點');
  const stop=page.locator('.map-point').filter({hasText:'小徑公車亭'});await expect(stop.getByRole('link',{name:'Google 地圖'})).toHaveAttribute('href',/query=/);await expect(stop.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
  await page.getByRole('button',{name:'金湖',exact:true}).click();await expect(stop).toBeVisible();await expect(page.locator('.map-point:visible')).toHaveCount(10);
+});
+
+
+test('all requested Lieyu names resolve to their individual guides',async({page})=>{
+ await page.goto('/search/');
+ const places = [
+  ['沙溪堡','shaxi-fort'],['三民主义万岁墙','sanmin-wall'],['烈屿乡海滨公园','lieyu-seaside-park'],
+  ['青岐码头','qingqi-harbor'],['烈屿上林将军庙','shanglin-general-temple'],['L26据点','l26-outpost'],
+  ['双口海边','shuangkou-beach'],['红土沟一营区','hongtugou-first-camp'],['湖井頭戰史館','hujingtou-war-museum'],
+  ['国姓井','guoxing-well'],['北风爷','north-wind-lord'],['烈屿乡文化馆','lieyu-culture-museum'],
+  ['八达楼子','bada-tower'],['烈屿东林宋代东井','donglin-east-well'],['烈屿习山湖公园','xishan-lake-park'],
+  ['烈屿人文风鸡','lieyu-wind-rooster'],['九宮坑道','jiugong-tunnel'],['四维七营区','siwei-seventh-camp'],
+  ['麒麟山森林公园','qilin-mountain-park'],['红土沟三营区','hongtugou-third-camp'],
+  ['猫公石滨海休憩区','maogongshi-coast'],['猫公石眺景平台','maogongshi-viewpoint'],
+  ['地雷主题馆','landmine-museum'],['铁汉堡','tiehan-fort'],['仿雷区公园','simulated-minefield-park'],
+  ['后麟模拟靶场','houlin-shooting-simulator'],['后頭風獅爺','houtou-wind-lions'],['虎堡','tiger-fort'],
+  ['金门烈屿将军堡','general-fort'],['L56据点','l56-outpost'],['诚实亭','chengshi-pavilion'],
+  ['介寿亭','jieshou-pavilion'],['妈祖公园','luocuo-mazu-park']
+ ];
+ for(const [query,slug] of places){
+  await page.getByLabel('搜尋關鍵字').fill(query);
+  await expect(page.locator(`.search-result:visible a[href="/attractions/${slug}/"]`),query).toBeVisible();
+ }
+});
+
+test('Lieyu entry points preserve exact park identity and access notices',async({page})=>{
+ await page.goto('/');await page.getByRole('link',{name:'查看烈嶼全部景點',exact:true}).click();
+ await expect(page.locator('[data-card]:visible')).toHaveCount(34);
+ await expect(page.getByRole('button',{name:'烈嶼',exact:true})).toHaveAttribute('aria-pressed','true');
+ await page.goto('/attractions/lieyu-seaside-park/');
+ await expect(page.locator('.facts-grid')).toContainText('C66F+6M');
+ await expect(page.getByRole('link',{name:'在 Google 地圖查看位置',exact:true})).toHaveAttribute('href','https://www.google.com/maps/search/?api=1&query=24.4105791,118.2241265');
+ await expect(page.locator('.prose')).toContainText('不是東林海濱公園');
+ await page.goto('/map/');const restricted=page.locator('.map-point').filter({hasText:'虎堡'});
+ await expect(restricted.locator('[data-visit-notice]')).toContainText('尚未確認常態開放');
+ await expect(restricted.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
+ await page.goto('/attractions/tiger-fort/');await expect(page.locator('[data-visit-notice]')).toContainText('未列入本站推薦參觀路線');
+ for(const route of ['lieyu-one-day','lieyu-two-days']){
+  await page.goto(`/itineraries/${route}/`);
+  await expect(page.locator('.timeline a[href="/attractions/tiger-fort/"]')).toHaveCount(0);
+  await expect(page.locator('.timeline-day')).toHaveCount(route==='lieyu-one-day'?1:2);
+  await expect(page.locator('.alert-note').first()).not.toContainText('翟山');
+ }
 });

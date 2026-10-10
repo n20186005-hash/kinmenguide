@@ -21,6 +21,7 @@ const common = z.object({
   faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
 });
 const attraction = common.extend({
+  visitNotice: z.string().optional(),
   coordinates: z.object({ lat: z.number().min(24).max(25), lng: z.number().min(118).max(119) }).optional(),
   address: z.string(),
   parking: z.string(),

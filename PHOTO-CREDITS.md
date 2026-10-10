@@ -217,3 +217,21 @@
 - 授權：[CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
 - [原始檔案頁](https://commons.wikimedia.org/wiki/File:Gugang_Tower.jpg)
 - 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## hujingtou
+
+- 內容：烈嶼湖井頭戰史館的入口與城堡式外觀
+- 檔案：金門烈嶼湖井頭戰史館 20200815104613 01.jpg
+- 作者：Ping an Chang
+- 授權：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:%E9%87%91%E9%96%80%E7%83%88%E5%B6%BC%E6%B9%96%E4%BA%95%E9%A0%AD%E6%88%B0%E5%8F%B2%E9%A4%A8_20200815104613_01.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## lieyu-culture
+
+- 內容：烈嶼鄉文化館的紅磚入口（2024年照片，展訊以當期公告為準）
+- 檔案：Lieyu Township Culture Museum 01.jpg
+- 作者：Allenwang6212a
+- 授權：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:Lieyu_Township_Culture_Museum_01.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。

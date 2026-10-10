@@ -49,3 +49,7 @@
 
 ## 想拍橋，從湖下與慈湖選一站
 [湖下海堤](/attractions/huxia-seawall/)適合把大橋放進海岸全景；[慈湖三角堡](/attractions/cihu-triangle-fortress/)可結合堡壘參觀與海邊風景。先完成有關門時間的展區，再按天候與照明安排岸邊短停。燈光開啟與通行管制查官方即時資訊，橋面行車道不作拍照停車點。
+
+
+## 抵達烈嶼後怎麼玩
+先看[烈嶼分區景點指南](/areas/lieyu/)，再選[一日代表性路線](/itineraries/lieyu-one-day/)或[兩天慢遊](/itineraries/lieyu-two-days/)。九宮、南西岸與北岸各有不同看點，依同行者體力和當日開放擇一安排，別把每個營區都排進同半天。
