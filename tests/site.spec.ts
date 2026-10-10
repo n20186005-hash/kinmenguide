@@ -24,7 +24,7 @@ test('Jincheng requested names and aliases resolve without duplicate Moses pages
 test('Jincheng navigation separates port buildings, museums and township boundaries',async({page})=>{
  await page.goto('/');await page.getByRole('link',{name:'查看金城全部景點',exact:true}).click();
  await expect(page.getByRole('button',{name:'金城',exact:true})).toHaveAttribute('aria-pressed','true');
- await expect(page.locator('[data-card]:visible')).toHaveCount(36);
+ await expect(page.locator('[data-card]:visible')).toHaveCount(41);
  await expect(page.locator('[data-card]:visible').filter({hasText:'東洲風獅爺'})).toHaveCount(0);
  await page.getByRole('button',{name:'金寧',exact:true}).click();
  await expect(page.locator('[data-card]:visible').filter({hasText:'東洲風獅爺'})).toBeVisible();
@@ -56,14 +56,14 @@ test('home navigation, image loading and viewport',async({page},info)=>{
 });
 
 test('catalog filters, zero results, and reset',async({page})=>{
- await page.goto('/attractions/');await expect(page.locator('[data-card]:visible')).toHaveCount(91);
+ await page.goto('/attractions/');await expect(page.locator('[data-card]:visible')).toHaveCount(153);
  await page.getByRole('button',{name:'烈嶼',exact:true}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(34);await expect(page.locator('[data-card]:visible h3').filter({hasText:'九宮坑道'})).toBeVisible();
- await page.locator('[data-query]').fill('不存在的景點xyz');await expect(page.locator('[data-empty]')).toBeVisible();await page.getByRole('button',{name:'清除篩選'}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(91);
+ await page.locator('[data-query]').fill('不存在的景點xyz');await expect(page.locator('[data-empty]')).toBeVisible();await page.getByRole('button',{name:'清除篩選'}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(153);
 });
 
 test('search accepts simplified queries and empty state',async({page})=>{
  await page.goto('/search/');await page.getByLabel('搜尋關鍵字').fill('水头');await expect(page.locator('.search-result:visible')).not.toHaveCount(0);await expect(page.locator('.search-result:visible').filter({hasText:'水頭聚落'}).first()).toBeVisible();
- await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(157);
+ await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(225);
 });
 
 test('planner respects days and transport',async({page})=>{
@@ -124,9 +124,9 @@ test('new place aliases lead to the corrected street and real guides',async({pag
 });
 
 test('map distinguishes verified coordinates from place search',async({page})=>{
- await page.goto('/map/');await expect(page.locator('#map-count')).toHaveText('91 個景點');
+ await page.goto('/map/');await expect(page.locator('#map-count')).toHaveText('153 個景點');
  const stop=page.locator('.map-point').filter({hasText:'小徑公車亭'});await expect(stop.getByRole('link',{name:'Google 地圖'})).toHaveAttribute('href',/query=/);await expect(stop.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
- await page.getByRole('button',{name:'金湖',exact:true}).click();await expect(stop).toBeVisible();await expect(page.locator('.map-point:visible')).toHaveCount(10);
+ await page.getByRole('button',{name:'金湖',exact:true}).click();await expect(stop).toBeVisible();await expect(page.locator('.map-point:visible')).toHaveCount(47);
 });
 
 

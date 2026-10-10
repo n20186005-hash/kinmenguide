@@ -10,12 +10,11 @@
   "duration": "60–90 分鐘",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-10",
   "related": [
-    "/areas/jinsha/",
     "/attractions/shishan-howitzer-front/",
-    "/itineraries/kinmen-three-days-two-nights/",
-    "/food/kincheng-food/"
+    "/attractions/ship-shaped-fort/",
+    "/itineraries/jinsha-one-day/"
   ],
   "sources": [
     {
@@ -40,6 +39,9 @@
       "question": "山后與水頭有什麼不同？",
       "answer": "山后適合看整齊的閩南建築群；水頭則可連看傳統古厝與僑鄉洋樓。"
     }
+  ],
+  "aliases": [
+    "金门山后民俗文化村"
   ]
 }
 ---
@@ -57,3 +59,8 @@
 看建築時先觀察整排屋脊與巷道的秩序，再靠近看磚雕、石雕和彩繪。比較住宅、宗祠和學堂入口的尺度，是適合親子一起做的小觀察；不須每一棟都進去，也不應把有人居住的古厝當成公共展館。
 
 初訪可與[獅山砲陣地](/attractions/shishan-howitzer-front/)串成上午，午後再擇一前往[馬山](/attractions/mashan-observation-post/)或回山外用餐。若想對照僑鄉建築，另一天到[金水國小](/attractions/jinshui-school/)與[陳景蘭洋樓](/attractions/chen-jinglan-house/)，會看到金門人與海外連結的不同面貌。
+
+## 從十八間大厝走到北岸
+聚落的前後空間、巷道與屋脊，比逐棟趕拍更值得慢看。室內展示、廟宇和仍使用中的建物分別確認；車停外圍，不把巷道當停車場。
+
+想接戰地史，選[獅山砲陣地](/attractions/shishan-howitzer-front/)；想看海，從[寒舍花海岸](/attractions/hanshehua-coast/)或[船型堡](/attractions/ship-shaped-fort/)擇一，兩者都須依當日公開動線。

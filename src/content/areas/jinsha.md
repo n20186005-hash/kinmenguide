@@ -3,18 +3,19 @@
   "title": "金沙",
   "nameEn": "Jinsha",
   "seoTitle": "金沙｜金門旅遊實用攻略",
-  "description": "金沙怎麼玩？山后民俗文化村、獅山砲陣地與馬山觀測所，串起金沙東北側的文化與戰地線。整理區域特色、適合旅人、景點順遊與住宿交通建議，從一個鄉鎮開始，規劃自己的金門旅行。",
+  "description": "金沙分區攻略：陽翟與金東電影院、山后與獅山、官澳馬山、西園鹽場及縣立博物館。整理老街、風獅爺、北岸步道與開放條件，挑選同區站點慢慢走。",
   "image": "shanhou",
   "area": "jinsha",
   "tag": "古厝與海岸",
   "duration": "半天至 1 天",
   "order": 3,
   "featured": true,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-10",
   "related": [
-    "/attractions/mashan-broadcasting-station/",
-    "/attractions/shanhou-folk-culture-village/",
-    "/attractions/mashan-observation-post/"
+    "/itineraries/jinsha-one-day/",
+    "/attractions/kinmen-county-museum/",
+    "/attractions/shamei-old-street/",
+    "/attractions/shanhou-folk-culture-village/"
   ],
   "sources": [
     {
@@ -41,3 +42,39 @@
 下列內容可依天候、開放與同行者體力擇一加入，替換原行程的一站，避免只增加景點數。
 
 [馬山播音站](/attractions/mashan-broadcasting-station/)。
+
+## 分區查找這次想去的地方
+以下是選點索引，不是一日全部走完的行程。海岸、山線、館舍和需申請的場址請分開安排。
+
+### 陽翟、碧山與山后海岸
+
+| 地點 | 參觀重點與條件 |
+| --- | --- |
+| [陽翟老街](/attractions/yangzhai-old-street/) | 軍旅街區，45–60 分鐘 |
+| [金東電影院](/attractions/jindong-cinema/) | 老戲院與軍旅記憶，20–40 分鐘 |
+| [碧山風獅爺：兩尊怎麼分](/attractions/bishan-wind-lions/) | 村落風獅爺，15–25 分鐘 |
+| [船型堡（湖山堡 E-037）](/attractions/ship-shaped-fort/) | 依當日正式開放範圍參觀；不探入封閉坑道、不跨越海岸障礙物。 |
+| [寒舍花海岸（安檢所周邊）](/attractions/hanshehua-coast/) | 安檢所是執勤設施；僅走公開海岸，不進工作區、不擋公務通道。 |
+| [獅山海灘](/attractions/shishan-beach/) | 非承諾有救生服務的游泳場；巨石、岩壁與潮水邊保持距離。 |
+
+### 沙美、西園與北岸
+
+| 地點 | 參觀重點與條件 |
+| --- | --- |
+| [沙美老街與沙美摩洛哥](/attractions/shamei-old-street/) | 老街巷弄，1–1.5 小時 |
+| [金門縣立博物館](/attractions/kinmen-county-museum/) | 島嶼文化與展覽，1–1.5 小時 |
+| [西園鹽場地方文化館](/attractions/xiyuan-salt-museum/) | 鹽業文化，40–60 分鐘 |
+| [田墩風獅爺](/attractions/tiandun-wind-lion/) | 村落風獅爺，15–25 分鐘 |
+| [官澳風獅爺：新舊石獅尋訪](/attractions/guanao-wind-lions/) | 村落風獅爺，15–25 分鐘 |
+| [天摩山步道](/attractions/tianmo-mountain/) | 北岸登高，45–60 分鐘 |
+
+### 山腳與東南聚落
+
+| 地點 | 參觀重點與條件 |
+| --- | --- |
+| [斗門古道](/attractions/doumen-trail/) | 路短但陡，含花崗岩路段；先確認路況與回程，不推薦雨後或當作輕鬆親子散步。 |
+| [第十一次全國羅浮大會紀念碑](/attractions/rover-moot-monument/) | 童軍活動紀念，15–25 分鐘 |
+| [東沙尾風獅爺](/attractions/dongshawei-wind-lion/) | 村落風獅爺，15–25 分鐘 |
+
+## 先決定文化線或北岸線
+[金沙一日遊](/itineraries/jinsha-one-day/)以陽翟、山后、沙美和西園為主；想走馬山就替換下午館舍，不把所有北岸點再加上去。[警光會館](/hotels/kinmen-police-hostel/)2026年整建暫停營業，也有入住資格限制，住宿另作安排。

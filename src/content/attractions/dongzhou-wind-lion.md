@@ -14,7 +14,7 @@
   ],
   "area": "jinning",
   "order": 90,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-10",
   "related": [
     "/areas/jinning/",
     "/attractions/kincheng-old-streets/",
@@ -45,3 +45,6 @@
 
 ## 小停留，不打擾廟埕
 在廟埕公開區安靜觀察，祭典或供奉時先讓信眾通行。不觸摸紅袍、供品和獅身，也不為照片搬動物件。適合從金城移動往金寧途中短停，更多安排見[金寧指南](/areas/jinning/)。
+
+## 分清東洲與東村
+東洲風獅爺位於金寧；本次新增的[東村風獅爺](/attractions/dongcun-wind-lion/)則在金湖。查找時連同鄉鎮與村名核對，不能只輸入「東」字風獅爺就跟著最近的導航結果走。

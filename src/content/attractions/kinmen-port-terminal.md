@@ -10,11 +10,13 @@
     "金门港旅运中心",
     "金門港旅運中心",
     "水頭新碼頭",
-    "水头新码头"
+    "水头新码头",
+    "水头码头",
+    "水頭碼頭"
   ],
   "area": "kincheng",
   "order": 73,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-10",
   "related": [
     "/attractions/shuitou-passenger-service-center/",
     "/attractions/shuitou-village/",
@@ -61,3 +63,6 @@
 
 ## 行李與散步怎麼安排
 行李推車按場站限定路線使用，不推往戶外柏油路或停車場。通關、查驗和碼頭作業區需依旅客資格進入，建築外觀參觀也不能穿越管制線。想去[水頭聚落](/attractions/shuitou-village/)，先處理行李、接送與船班時間，再另排交通；不把轉船空檔預設為完整半日遊。
+
+## 搜尋「水頭碼頭」時先確認用途
+現在搭小三通請依票券與港務處通知前往本頁的新旅運中心。若要看[原旅客服務中心](/attractions/shuitou-passenger-service-center/)外觀或[水頭聚落](/attractions/shuitou-village/)，那是另外的目的地；接送時傳完整地址，不只說在水頭。

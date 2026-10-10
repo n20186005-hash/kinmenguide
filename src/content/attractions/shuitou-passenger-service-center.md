@@ -9,12 +9,11 @@
   "aliases": [
     "金门港水头港区旅客服务中心",
     "金門港水頭港區旅客服務中心",
-    "水頭碼頭舊站",
-    "水头码头"
+    "水頭碼頭舊站"
   ],
   "area": "kincheng",
   "order": 72,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-10",
   "related": [
     "/attractions/kinmen-port-terminal/",
     "/attractions/shuitou-village/",

@@ -9,11 +9,11 @@
   "tag": "僑鄉洋樓",
   "duration": "45–75 分鐘",
   "order": 14,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-10",
   "related": [
-    "/attractions/taihu-lake/",
-    "/areas/jinhu/",
-    "/food/jinhu-food/"
+    "/attractions/chenggong-tunnel/",
+    "/attractions/chenggong-beach/",
+    "/attractions/chenggong-wind-lion/"
   ],
   "sources": [
     {
@@ -32,7 +32,8 @@
   "address": "金門縣金湖鎮正義里成功村1號",
   "hours": "一般參觀資訊為 08:30–17:30；特殊休館與臨時調整請先向場館確認。",
   "admission": "一般參觀費用與特別活動，以管理單位當期公告為準。",
-  "parking": "使用現場劃設停車位置，停妥後步行；勿擋住住戶、車道與工作區入口。"
+  "parking": "使用現場劃設停車位置，停妥後步行；勿擋住住戶、車道與工作區入口。",
+  "aliases": []
 }
 ---
 
@@ -51,3 +52,6 @@
 
 ## 帶長輩或遇雨的安排
 公園階梯與樓層移動需要體力，行動不便者出發前向場館確認可通行範圍。下雨時以室內展覽為主，石階濕滑不逗留拍照；大風或停班停課時先確認是否臨時休館。
+
+## 洋樓前後的三個停留
+看完建築，可接[成功海防坑道](/attractions/chenggong-tunnel/)、[成功沙灘](/attractions/chenggong-beach/)與[成功風獅爺](/attractions/chenggong-wind-lion/)。先安排有開館時間的洋樓與坑道，海邊則按當日風浪取捨；這一區已足夠半天，不必再連續追每座海岸碉堡。

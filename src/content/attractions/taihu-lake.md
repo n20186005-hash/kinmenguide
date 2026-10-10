@@ -9,11 +9,12 @@
   "tag": "湖畔自然",
   "duration": "散步 45–90 分鐘",
   "order": 17,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-10",
   "related": [
-    "/food/jinhu-food/",
-    "/attractions/chen-jinglan-house/",
-    "/attractions/kinmen-livestock/"
+    "/attractions/august-23-battle-museum/",
+    "/attractions/rongyuan/",
+    "/attractions/zhongzheng-park-3d/",
+    "/itineraries/jinhu-one-day/"
   ],
   "sources": [
     {
@@ -28,7 +29,12 @@
   "address": "金門縣金湖鎮太湖及太湖路周邊",
   "hours": "戶外步道依現場開放，建議日間；周邊館舍各有開館時間。",
   "admission": "一般湖畔散步免費；活動或個別場館依公告。",
-  "parking": "使用現場劃設停車位置，停妥後步行；勿擋住住戶、車道與工作區入口。"
+  "parking": "使用現場劃設停車位置，停妥後步行；勿擋住住戶、車道與工作區入口。",
+  "aliases": [
+    "太湖",
+    "太湖游憩区",
+    "太湖遊憩區"
+  ]
 }
 ---
 
@@ -52,3 +58,9 @@
 
 ## 中正公園彩繪與山外甜點
 想替湖畔散步加一點趣味，可接[漂浮斑馬線與獺上太湖](/attractions/zhongzheng-park-3d/)；拍照後回[山外街區](/attractions/shanwai-old-street/)吃[談天樓湯圓](/food/tantianlou/)或買[麥斯麵包](/food/max-bakery/)。先核對店休，不把所有餐點硬排成同一頓。
+
+## 太湖與太湖遊憩區怎麼分
+太湖是湖體，太湖遊憩區則涵蓋中正紀念林、榕園、俞大維紀念館與八二三戰史館等周邊空間。這兩個名字共用本頁作為總入口，館舍另有獨立指南，避免把同一片湖重複計成兩站。
+
+## 湖畔半天，先選一岸
+若以歷史展示為主，先看[八二三戰史館](/attractions/august-23-battle-museum/)、[俞大維紀念館](/attractions/yu-dawei-museum/)，再走[榕園](/attractions/rongyuan/)；偏好拍照和散步，改走[漂浮船3D彩繪](/attractions/zhongzheng-park-3d/)與[中正紀念林](/attractions/zhongzheng-forest/)。太湖不是太武山上的太武池，兩者需要完全不同的交通與體力安排。

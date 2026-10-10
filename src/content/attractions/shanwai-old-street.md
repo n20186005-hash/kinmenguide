@@ -8,7 +8,7 @@
   "tag": "老街與彩繪",
   "duration": "45–90 分鐘",
   "order": 25,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-10",
   "sources": [
     {
       "title": "金門觀光旅遊網・山外老街",
@@ -52,3 +52,6 @@
 午餐可選[山外不一樣雞排的炸雞棺材板](/food/shanwai-chicken-coffin-bread/)或[談天樓](/food/tantianlou/)，再去[麥斯西點麵包](/food/max-bakery/)挑點心。不同店家的開門時間不一樣，不必為了吃遍而來回折返。
 
 步行圈結束後，前往[中正公園3D彩繪](/attractions/zhongzheng-park-3d/)和[太湖](/attractions/taihu-lake/)；搭公車的旅人先確認返回山外或住宿的班次。這條半日以街區和短程散步為主，不再加太武山登頂。
+
+## 搭車去山外，找營運中的車站
+[山外車站](/transport/shanwai-station/)是黃海路的實際公車轉乘點，街區內舊巴士拍照地標不負責載客。先在車站查回程，再到老街吃飯或接太湖散步。

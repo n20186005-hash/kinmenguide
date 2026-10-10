@@ -9,6 +9,7 @@ const common = z.object({
   description: z.string().min(30).max(180),
   image: z.string().optional(),
   aliases: z.array(z.string()).default([]),
+  visitNotice: z.string().optional(),
   area: z.enum(['kincheng', 'jinhu', 'jinsha', 'jinning', 'lieyu', 'all']),
   tag: z.string(),
   duration: z.string(),
@@ -21,7 +22,6 @@ const common = z.object({
   faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
 });
 const attraction = common.extend({
-  visitNotice: z.string().optional(),
   coordinates: z.object({ lat: z.number().min(24).max(25), lng: z.number().min(118).max(119) }).optional(),
   address: z.string(),
   parking: z.string(),

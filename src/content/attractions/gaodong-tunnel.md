@@ -8,7 +8,7 @@
   "tag": "海岸坑道",
   "duration": "30–45 分鐘",
   "order": 26,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-10",
   "sources": [
     {
       "title": "金門觀光旅遊網・高洞坑道",
@@ -21,15 +21,18 @@
   ],
   "related": [
     "/attractions/tiankeng/",
-    "/attractions/xinhu-fishing-harbor/",
-    "/attractions/chen-jinglan-house/"
+    "/attractions/kinmen-ceramics/",
+    "/attractions/zhongxing-fort/"
   ],
   "address": "金門縣金湖鎮漁村海岸高洞坑道（E092據點）",
   "hours": "縣府2025/3介紹列08:00–17:30；依最新公告及現場管制。",
   "admission": "免費；活動與店家消費另計。",
   "parking": "依現場劃設車位停車，再步行前往；不占用公車停靠區、住戶出入口或工作通道。",
   "aliases": [
-    "天坑高洞"
+    "天坑高洞",
+    "E-092高洞坑道",
+    "E092",
+    "E-092"
   ],
   "coordinates": {
     "lat": 24.43331,
@@ -50,3 +53,6 @@
 上午先參觀[陳景蘭洋樓](/attractions/chen-jinglan-house/)，再走高洞與天坑，午餐回[山外](/attractions/shanwai-old-street/)；或把[新湖漁港](/attractions/xinhu-fishing-harbor/)作為最後一段看海時間。這是短程半日搭配，不建議每個海岸據點都塞進去。
 
 周邊停車空間有限，先停在合法位置再步行，避開漁村工作通道。遇雨天、濕滑或海風強，改為室內展館與街區用餐。
+
+## 后園海岸據點不要排成探洞競賽
+附近還有[中興堡E-095](/attractions/zhongxing-fort/)和[E-094天空之城](/attractions/sky-castle-e094/)，但維護與可進入條件不同。高洞依正式開放動線參觀，天空之城僅從安全岸段觀看；不能因同在海岸就假定每座碉堡都能爬上去。

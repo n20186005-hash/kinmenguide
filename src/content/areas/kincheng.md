@@ -10,7 +10,7 @@
   "duration": "分區半日；完整慢遊建議2天以上",
   "order": 1,
   "featured": true,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-10",
   "related": [
     "/itineraries/kincheng-one-day/",
     "/itineraries/kincheng-south-day/",
@@ -98,3 +98,21 @@
 
 ## 邊界旁的風獅爺
 [東洲風獅爺](/attractions/dongzhou-wind-lion/)雖可從金城市區短程前往，行政區屬於金寧鄉，已歸入[金寧指南](/areas/jinning/)和地圖的金寧篩選。
+
+## 分區查找這次想去的地方
+以下是選點索引，不是一日全部走完的行程。海岸、山線、館舍和需申請的場址請分開安排。
+
+### 南線風獅爺與社區彩繪
+
+| 地點 | 參觀重點與條件 |
+| --- | --- |
+| [金順興商號・泗湖風獅爺彩繪牆](/attractions/sihu-jinshunxing-mural/) | 社區彩繪，15–25 分鐘 |
+| [歐厝風獅爺](/attractions/oucuo-wind-lion/) | 村落風獅爺，15–25 分鐘 |
+| [官裡風獅爺](/attractions/guanli-wind-lion/) | 村落風獅爺，15–25 分鐘 |
+| [官路邊風獅爺](/attractions/guanlubian-wind-lion/) | 村落風獅爺，15–25 分鐘 |
+
+### 後浦信仰散步
+
+| 地點 | 參觀重點與條件 |
+| --- | --- |
+| [金門浯島城隍廟](/attractions/wudao-city-god-temple/) | 後浦信仰，30–45 分鐘 |

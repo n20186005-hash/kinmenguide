@@ -10,7 +10,7 @@
   "duration": "半天至 1 天",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-10",
   "related": [
     "/attractions/kinmen-bridge/",
     "/attractions/kinmen-distillery/",
@@ -54,3 +54,24 @@
 
 ## 靠近金城的聚落短停
 [東洲風獅爺](/attractions/dongzhou-wind-lion/)位於金寧鄉東州33之1號旁的孚佑廟一帶，可從金城往金寧移動時短停。尊重廟埕與供奉動線，導航同時核對「東洲／東州」及金寧鄉名稱。
+
+## 分區查找這次想去的地方
+以下是選點索引，不是一日全部走完的行程。海岸、山線、館舍和需申請的場址請分開安排。
+
+### 中山林與昔果山
+
+| 地點 | 參觀重點與條件 |
+| --- | --- |
+| [中山紀念林](/attractions/zhongshan-forest/) | 森林與親子，1–2 小時 |
+| [乳山故壘](/attractions/rushan-fort/) | 林間軍事遺址，40–60 分鐘 |
+| [賈村戰技體驗場](/attractions/jiacun-experience/) | 付費體驗與夜間場請先預約，並確認年齡、聲光效果和身體條件要求。 |
+| [昔果山風獅爺](/attractions/xiguoshan-wind-lion/) | 村落風獅爺，15–25 分鐘 |
+
+### 校園與下埔下
+
+| 地點 | 參觀重點與條件 |
+| --- | --- |
+| [國立金門大學](/attractions/national-quemoy-university/) | 校園與島嶼生活，30–60 分鐘 |
+
+## 順路補給
+[全聯金門慈湖店](/guides/pxmart-cihu/)位於下埔下，適合購買飲水與日用品；店址不在慈湖景區內。中山林、乳山故壘與賈村可組合半天，付費體驗先預約。

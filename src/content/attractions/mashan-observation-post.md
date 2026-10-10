@@ -10,13 +10,11 @@
   "duration": "40–60 分鐘",
   "order": 8,
   "featured": false,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-10",
   "related": [
     "/attractions/mashan-broadcasting-station/",
-    "/areas/jinsha/",
-    "/attractions/shanhou-folk-culture-village/",
-    "/itineraries/kinmen-three-days-two-nights/",
-    "/food/kincheng-food/"
+    "/attractions/guanao-wind-lions/",
+    "/attractions/tianmo-mountain/"
   ],
   "sources": [
     {
@@ -41,6 +39,10 @@
       "question": "適合雨天去嗎？",
       "answer": "部分參觀在室內，但進出仍需步行，開放與路況須先確認。"
     }
+  ],
+  "aliases": [
+    "馬山觀測所",
+    "马山观测所"
   ]
 }
 ---
@@ -58,3 +60,8 @@
 能看到多遠取決於當天能見度；海上距離看似近，並不代表可離開指定範圍走向海岸或進入管制點。若展示望遠鏡可供使用，依現場規定輪流觀看，不操作被封閉或標示禁用的設備。
 
 路旁的[馬山播音站](/attractions/mashan-broadcasting-station/)講的是聲音與廣播歷史，觀測所則著重視線與警戒；兩者可同一趟步行參觀，約留60–90分鐘。不要把金沙馬山與金寧的北山播音牆混為同一地點。參觀後往[山后民俗文化村](/attractions/shanhou-folk-culture-village/)或[獅山砲陣地](/attractions/shishan-howitzer-front/)擇一順遊。
+
+## 觀察視野，也認識官澳
+海上能看到多遠取決於能見度，強風、海霧和雨天不保證遠眺效果。沿展示動線走，不對仍受管制的軍事設施拍攝或探入。
+
+同區可接[馬山播音站](/attractions/mashan-broadcasting-station/)和[官澳風獅爺](/attractions/guanao-wind-lions/)；時間充裕再走[天摩山](/attractions/tianmo-mountain/)。從山后來回馬山仍需交通，先查回程班次。

@@ -253,3 +253,21 @@
 - 授權：[CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
 - [原始檔案頁](https://commons.wikimedia.org/wiki/File:%E7%8F%A0%E5%B1%B1%E8%81%9A%E8%90%BD_-_Zhushan_Settlement_-_2014.09_-_panoramio.jpg)
 - 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## battle-823
+
+- 內容：金湖八二三戰史館的入口、紅柱與綠瓦屋頂
+- 檔案：Aug.23 Artillery Battle Museum 20220205.jpg
+- 作者：Jane9306
+- 授權：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:Aug.23_Artillery_Battle_Museum_20220205.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## chenggong
+
+- 內容：金湖成功沙灘的沙岸、近岸岩石與料羅灣海面
+- 檔案：成功海滩 - Chenggong Beach - 2014.05 - panoramio.jpg
+- 作者：rheins
+- 授權：[CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:%E6%88%90%E5%8A%9F%E6%B5%B7%E6%BB%A9_-_Chenggong_Beach_-_2014.05_-_panoramio.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。

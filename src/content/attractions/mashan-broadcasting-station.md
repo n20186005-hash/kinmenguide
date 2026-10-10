@@ -9,11 +9,11 @@
   "tag": "聲音與歷史",
   "duration": "20–30 分鐘；馬山全區約 60–90 分鐘",
   "order": 18,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-10",
   "related": [
     "/attractions/mashan-observation-post/",
-    "/attractions/shishan-howitzer-front/",
-    "/areas/jinsha/"
+    "/attractions/guanao-wind-lions/",
+    "/attractions/tianmo-mountain/"
   ],
   "sources": [
     {
@@ -32,7 +32,10 @@
   "address": "金門縣金沙鎮官澳馬山區域（地圖為園區定位）",
   "hours": "播音站及周邊展示依管理單位當日開放，不保證固定播音活動。",
   "admission": "一般參觀費用與特別活動，以管理單位當期公告為準。",
-  "parking": "使用現場劃設停車位置，停妥後步行；勿擋住住戶、車道與工作區入口。"
+  "parking": "使用現場劃設停車位置，停妥後步行；勿擋住住戶、車道與工作區入口。",
+  "aliases": [
+    "马山播音站"
+  ]
 }
 ---
 
@@ -51,3 +54,8 @@
 
 ## 保留對場所的尊重
 沿指定步道行走，不推開封閉房門或操作展示設備。軍事管制與攝影標示照現場要求；遇到雨天、濃霧或大風，減少海岸停留，把時間留給可開放的室內展示。長輩、輪椅與推車旅客先詢問階梯和通行條件。
+
+## 播音站與觀測所各看什麼
+播音站重點是聲音傳播、心戰廣播及相關空間；[馬山觀測所](/attractions/mashan-observation-post/)則著重海岸位置與觀察視野。可以相連安排，仍按兩處各自開放範圍參觀，不把所有坑口當成串聯通道。
+
+離開前可看[官澳風獅爺](/attractions/guanao-wind-lions/)，若再上[天摩山](/attractions/tianmo-mountain/)，先留出白天下山的時間。

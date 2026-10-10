@@ -13,7 +13,7 @@
   ],
   "area": "kincheng",
   "order": 79,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-10",
   "related": [
     "/attractions/mingyi-old-street/",
     "/attractions/zhushan-village/",
@@ -44,3 +44,6 @@
 
 ## 山上多留一些步行時間
 官方一般時段為08:00–17:00，除夕、停班日或臨時公告可能停止開放。以白天抵達最自在；參拜和展覽依現場動線，拍照不攀書卷裝置。可接[明遺老街](/attractions/mingyi-old-street/)或[珠山聚落](/attractions/zhushan-village/)，兩段之間另安排交通。
+
+## 南線小聚落怎麼接
+看完書院後，可從[官裡風獅爺](/attractions/guanli-wind-lion/)或[泗湖彩繪牆](/attractions/sihu-jinshunxing-mural/)選一處短停，再往金門城。它們不是書院內的設施，各處需要分別導航；不要為串完所有點而穿越村內私地。
