@@ -51,9 +51,12 @@ test('restricted and closing facilities show notices and stay out of ordinary ro
   await expect(page.locator('.alert-note').first()).not.toContainText('翟山');
  }
  await page.goto('/map/');
- const doumen=page.locator('.map-point').filter({hasText:'斗門古道'});
+ const doumen=page.locator('.map-point').filter({has:page.locator('a[href="/attractions/doumen-trail/"]')});
+ await expect(doumen).toHaveCount(1);
  await expect(doumen.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
- const sky=page.locator('.map-point').filter({hasText:'E-094天空之城'});
+ await expect(doumen.getByRole('link',{name:'Google 地圖'})).toHaveAttribute('href',/maps\/search/);
+ const sky=page.locator('.map-point').filter({has:page.locator('a[href="/attractions/sky-castle-e094/"]')});
+ await expect(sky).toHaveCount(1);
  await expect(sky.locator('[data-visit-notice]')).toContainText('掏空');
 });
 
