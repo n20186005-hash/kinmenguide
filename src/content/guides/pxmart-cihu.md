@@ -55,3 +55,6 @@
 
 ## 把下一站排在附近
 [同安渡船頭](/attractions/tongan-ferry-pier/)、[慈湖三角堡](/attractions/cihu-triangle-fortress/)。停留時間是本站的安排建議，請把停車、步行和休息另外算入；想慢慢看，可只選其中一至兩站。
+
+## 伯玉路的另一個採買選擇
+若當天走伯玉路，可看[家樂福金門店（現名萬家福）](/guides/carrefour-kinmen/)的地址與營業參考；與本頁下埔下門市是不同位置，依住宿和當天動線擇一即可。
