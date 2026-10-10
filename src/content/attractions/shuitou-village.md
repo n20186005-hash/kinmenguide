@@ -12,10 +12,12 @@
   "featured": true,
   "updatedAt": "2026-10-09",
   "related": [
-    "/areas/kincheng/",
     "/attractions/deyue-tower/",
-    "/itineraries/kinmen-three-days-two-nights/",
-    "/food/kincheng-food/"
+    "/attractions/jinshui-school/",
+    "/attractions/overseas-chinese-museum/",
+    "/attractions/huang-tingcan-house/",
+    "/attractions/kinmen-port-terminal/",
+    "/itineraries/kincheng-south-day/"
   ],
   "sources": [
     {
@@ -55,3 +57,14 @@
 在聚落外停妥車輛，先往[金水國小展示館](/attractions/jinshui-school/)了解僑鄉教育，再到[得月樓](/attractions/deyue-tower/)一帶看洋樓與防禦建築，最後用剩餘時間散步古厝巷弄。兩館開放與臨時展覽分別確認，不因戶外巷道可走就推定室內仍開放。
 
 想加一段湖畔風景，可以把[古崗樓](/attractions/gugang-tower/)放在前後半段；想去[建功嶼](/attractions/jiangong-islet/)，先查潮汐，不能把它固定排在夕陽時段。這些景點之間需要交通，不是聚落內步行就能一次到達。
+
+## 把水頭五個空間分清楚
+| 地點 | 參觀重點 | 地址 |
+| --- | --- | --- |
+| [金水國小展示館](/attractions/jinshui-school/) | 僑鄉教育、教室與校舍 | 前水頭47號 |
+| [得月樓](/attractions/deyue-tower/) | 洋樓防禦與家族故事 | 前水頭45號 |
+| [僑鄉文化展示館](/attractions/overseas-chinese-museum/) | 南洋生活與建築 | 前水頭39號，57是地號 |
+| [風獅爺文物坊](/attractions/wind-lion-cultural-shop/) | 在地工藝與洋樓賣店 | 前水頭42號 |
+| [黃廷參三落大厝](/attractions/huang-tingcan-house/) | 古厝小舖、院落與休息 | 前水頭82號 |
+
+前面三處是展示參觀重點，後兩處按店家營業與消費規定安排。若是趕船，請直接查[金門港旅運中心](/attractions/kinmen-port-terminal/)的金豐路300號地址，勿把聚落停車位置當成小三通下客點。

@@ -235,3 +235,21 @@
 - 授權：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 - [原始檔案頁](https://commons.wikimedia.org/wiki/File:Lieyu_Township_Culture_Museum_01.jpg)
 - 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## wentai
+
+- 內容：金門文臺寶塔立在巨岩上，旁有林蔭與石階
+- 檔案：Wentai Pagoda - DSCF9539.JPG
+- 作者：User:Vmenkov
+- 授權：[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:Wentai_Pagoda_-_DSCF9539.JPG)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
+## zhushan
+
+- 內容：珠山聚落的傳統廟宇、石鋪廣場與燕尾屋脊（2014年照片）
+- 檔案：珠山聚落 - Zhushan Settlement - 2014.09 - panoramio.jpg
+- 作者：rheins
+- 授權：[CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
+- [原始檔案頁](https://commons.wikimedia.org/wiki/File:%E7%8F%A0%E5%B1%B1%E8%81%9A%E8%90%BD_-_Zhushan_Settlement_-_2014.09_-_panoramio.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。

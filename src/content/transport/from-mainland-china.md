@@ -9,11 +9,12 @@
   "tag": "出發指南",
   "duration": "行前必讀",
   "order": -1,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "related": [
     "/guides/entry-documents/",
     "/guides/restricted-items/",
-    "/guides/travel-checklist/"
+    "/guides/travel-checklist/",
+    "/attractions/kinmen-port-terminal/"
   ],
   "sources": [
     {
@@ -70,3 +71,6 @@
 
 ## 這些行李特別容易出問題
 不要把肉乾、香腸、肉鬆蛋捲、含肉月餅或新鮮水果塞進隨身包；真空包裝與熟食並不等於免檢疫。電子煙、未核准的加熱菸也不能以「自用一支」為由攜入。詳見[入境禁限帶物品](/guides/restricted-items/)，並使用[旅行清單](/guides/travel-checklist/)檢查每位同行者的行李。
+
+## 到水頭後，先辨認新場站
+小三通使用[金門港旅運中心](/attractions/kinmen-port-terminal/)新大樓，地址為金城鎮金豐路300號，一樓抵港、三樓離港。請按船公司通知報到與接送，不要以水頭聚落或原旅客服務中心代替新站地址。

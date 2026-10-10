@@ -15,7 +15,8 @@
     "/attractions/kinmen-bridge/",
     "/attractions/kinmen-distillery/",
     "/attractions/guningtou-battle-museum/",
-    "/attractions/mofan-street/"
+    "/attractions/mofan-street/",
+    "/attractions/dongzhou-wind-lion/"
   ],
   "sources": [
     {
@@ -50,3 +51,6 @@
 - [金門大橋](/attractions/kinmen-bridge/)
 
 依同一街區或道路選兩三站就好；半日遊不必把清單全部走完。
+
+## 靠近金城的聚落短停
+[東洲風獅爺](/attractions/dongzhou-wind-lion/)位於金寧鄉東州33之1號旁的孚佑廟一帶，可從金城往金寧移動時短停。尊重廟埕與供奉動線，導航同時核對「東洲／東州」及金寧鄉名稱。

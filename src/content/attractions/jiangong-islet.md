@@ -2,8 +2,8 @@
 {
   "title": "建功嶼：跟著潮汐走上小島",
   "nameEn": "Jiangong Islet",
-  "seoTitle": "建功嶼：跟著潮汐走上小島｜Kinmen Guide 金門旅遊",
-  "description": "建功嶼怎麼去？認識退潮才露出的石板步道、採蚵人裝置與小島風景，附官方潮汐入口、往返時間規劃和金城順遊建議，避免把登島時間排死。",
+  "seoTitle": "建功嶼・金門摩西分海｜潮汐查詢、登島步道與順遊",
+  "description": "金門摩西分海就是建功嶼退潮時出現的石板步道。整理官方潮汐查詢、往返時間規劃、採蚵人裝置與登島安全，搭配夏墅和金城海岸順遊。",
   "area": "kincheng",
   "tag": "潮汐小島",
   "duration": "40–60 分鐘，須配合可通行時段",
@@ -20,22 +20,32 @@
     }
   ],
   "related": [
-    "/attractions/juguang-tower/",
-    "/attractions/shuitou-village/",
+    "/attractions/yanping-prince-shrine/",
+    "/attractions/xiashu-wind-lion/",
+    "/attractions/kincheng-seaside-park/",
     "/itineraries/kincheng-one-day/"
   ],
   "address": "金門縣金城鎮建功嶼；由本島登島步道入口進出。",
   "hours": "依當日潮汐、天候與現場管制，不能全天登島。",
   "admission": "免費；活動與店家消費另計。",
   "parking": "依現場劃設車位停車，再步行前往；不占用公車停靠區、住戶出入口或工作通道。",
-  "aliases": [],
+  "aliases": [
+    "金门摩西分海",
+    "金門摩西分海",
+    "摩西分海",
+    "建功屿"
+  ],
   "coordinates": {
     "lat": 24.42746,
     "lng": 118.30005
   },
-  "image": "jiangong"
+  "image": "jiangong",
+  "visitNotice": "「金門摩西分海」即建功嶼潮汐步道；先查當日潮汐與現場通行公告，不涉水登島。"
 }
 ---
+
+## 金門摩西分海，就是這條潮汐步道
+「金門摩西分海」是建功嶼退潮步道的常見稱呼，並非另一座景點，與澎湖的同名景觀也不同。規劃清單只需排一次建功嶼，導航至金門本島一端的登島入口，再步行往返；地圖上的島嶼標記不能當成車輛抵達點。
 
 ## 退潮之後，海中出現一條路
 建功嶼位在金城西側海面，連接本島的石板道會隨潮水出現、消失。採蚵人裝置與遠方小島構成最容易辨認的畫面；走到島上，還能從不同方向看金城海岸與金烈水道。這一站的主角是潮汐，抵達時間應先配合自然條件。

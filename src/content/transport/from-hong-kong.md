@@ -9,11 +9,12 @@
   "tag": "出發指南",
   "duration": "行前必讀",
   "order": -3,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "related": [
     "/guides/entry-documents/",
     "/guides/restricted-items/",
-    "/guides/travel-checklist/"
+    "/guides/travel-checklist/",
+    "/attractions/kinmen-port-terminal/"
   ],
   "sources": [
     {
@@ -68,3 +69,6 @@
 
 ## 出發前最後一輪檢查
 護照與許可文件姓名一致、回程在有效期內、住宿有聯絡電話，並確認[禁限帶物品](/guides/restricted-items/)。持其他身分從香港出發，請按[證件對照](/guides/entry-documents/)選規則。打開[旅行清單](/guides/travel-checklist/)保留自己的準備進度。
+
+## 到水頭後，先辨認新場站
+小三通使用[金門港旅運中心](/attractions/kinmen-port-terminal/)新大樓，地址為金城鎮金豐路300號，一樓抵港、三樓離港。請按船公司通知報到與接送，不要以水頭聚落或原旅客服務中心代替新站地址。

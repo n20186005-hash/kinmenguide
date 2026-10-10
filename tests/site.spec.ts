@@ -1,5 +1,49 @@
 import { test, expect } from '@playwright/test';
 
+test('Jincheng requested names and aliases resolve without duplicate Moses pages',async({page})=>{
+ await page.goto('/search/');
+ const places=[
+  ['文台宝塔','wentai-pagoda'],['金门城西门','kinmen-city-west-gate'],['金门城东门','kinmen-city-east-gate'],['金门城北门','kinmen-city-north-gate'],
+  ['明遗老街','mingyi-old-street'],['珠山聚落','zhushan-village'],['金门港水头港区旅客服务中心','shuitou-passenger-service-center'],['金门港旅运中心','kinmen-port-terminal'],
+  ['金门港水头港渔港垂钓区','shuitou-port-fishing-area'],['延平郡王祠','yanping-prince-shrine'],['夏墅风狮爷','xiashu-wind-lion'],['丰莲山牧马武侯祠','muma-hou-shrine'],
+  ['金门县立体育馆','kinmen-sports-hall'],['燕南书院','yannan-academy'],['得月楼','deyue-tower'],['侨乡文化展示馆','overseas-chinese-museum'],
+  ['金水学校展示馆','jinshui-school'],['风狮爷文化坊','wind-lion-cultural-shop'],['黄延参三落大厝(古厝小铺)','huang-tingcan-house'],['古厝小铺','huang-tingcan-house'],
+  ['莒光楼','juguang-tower'],['莒光共融公园','juguang-inclusive-park'],['莒光湖','juguang-lake'],['建功屿','jiangong-islet'],['金门摩西分海','jiangong-islet'],
+  ['后埔16艺文特区','houpu-16-art-zone'],['清金门镇总兵署（浯江新庄）','kinmen-military-headquarters'],['金城民防坑道','kincheng-civil-defense-tunnel'],['金城老街','kincheng-old-streets'],
+  ['金门海滨休闲公园','kincheng-seaside-park'],['雄狮堡','xiongshi-fort'],['东洲风狮爷','dongzhou-wind-lion'],['同安渡船头','tongan-ferry-pier']
+ ];
+ for(const [query,slug] of places){
+  await page.getByLabel('搜尋關鍵字').fill(query);
+  await expect(page.locator(`.search-result:visible a[href="/attractions/${slug}/"]`),query).toBeVisible();
+ }
+ await page.goto('/attractions/');await page.locator('[data-query]').fill('摩西分海');
+ await expect(page.locator('[data-card]:visible')).toHaveCount(1);
+ await expect(page.locator('[data-card]:visible a').first()).toHaveAttribute('href','/attractions/jiangong-islet/');
+});
+
+test('Jincheng navigation separates port buildings, museums and township boundaries',async({page})=>{
+ await page.goto('/');await page.getByRole('link',{name:'查看金城全部景點',exact:true}).click();
+ await expect(page.getByRole('button',{name:'金城',exact:true})).toHaveAttribute('aria-pressed','true');
+ await expect(page.locator('[data-card]:visible')).toHaveCount(36);
+ await expect(page.locator('[data-card]:visible').filter({hasText:'東洲風獅爺'})).toHaveCount(0);
+ await page.getByRole('button',{name:'金寧',exact:true}).click();
+ await expect(page.locator('[data-card]:visible').filter({hasText:'東洲風獅爺'})).toBeVisible();
+ await page.goto('/attractions/kinmen-port-terminal/');
+ await expect(page.locator('.facts-grid')).toContainText('金豐路300號');
+ await expect(page.locator('.prose')).toContainText('三樓離港區');
+ await expect(page.getByRole('link',{name:'在 Google 地圖查看位置',exact:true})).toHaveAttribute('href','https://www.google.com/maps/search/?api=1&query=24.41787,118.2916');
+ await page.goto('/attractions/shuitou-passenger-service-center/');
+ await expect(page.locator('[data-visit-notice]')).toContainText('新旅運中心');
+ await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href','https://kinmenguide.com/attractions/shuitou-passenger-service-center/');
+ await page.goto('/attractions/overseas-chinese-museum/');await expect(page.locator('.facts-grid')).toContainText('前水頭39號');
+ await page.goto('/map/');const fish=page.locator('.map-point').filter({hasText:'水頭港垂釣區'});
+ await expect(fish.locator('[data-visit-notice]')).toContainText('資格');await expect(fish.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
+ await page.goto('/areas/kincheng/');await expect(page.locator('.prose')).toContainText('金門城與明遺老街');
+ await page.goto('/itineraries/kincheng-south-day/');await expect(page.locator('.timeline-day')).toHaveCount(1);
+ await expect(page.locator('.timeline a[href="/attractions/zhushan-village/"]').first()).toBeVisible();
+ await expect(page.locator('.alert-note').first()).not.toContainText('翟山');
+});
+
 test('home navigation, image loading and viewport',async({page},info)=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/');await expect(page.locator('h1')).toContainText('在金門');
@@ -12,14 +56,14 @@ test('home navigation, image loading and viewport',async({page},info)=>{
 });
 
 test('catalog filters, zero results, and reset',async({page})=>{
- await page.goto('/attractions/');await expect(page.locator('[data-card]:visible')).toHaveCount(65);
+ await page.goto('/attractions/');await expect(page.locator('[data-card]:visible')).toHaveCount(91);
  await page.getByRole('button',{name:'烈嶼',exact:true}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(34);await expect(page.locator('[data-card]:visible h3').filter({hasText:'九宮坑道'})).toBeVisible();
- await page.locator('[data-query]').fill('不存在的景點xyz');await expect(page.locator('[data-empty]')).toBeVisible();await page.getByRole('button',{name:'清除篩選'}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(65);
+ await page.locator('[data-query]').fill('不存在的景點xyz');await expect(page.locator('[data-empty]')).toBeVisible();await page.getByRole('button',{name:'清除篩選'}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(91);
 });
 
 test('search accepts simplified queries and empty state',async({page})=>{
  await page.goto('/search/');await page.getByLabel('搜尋關鍵字').fill('水头');await expect(page.locator('.search-result:visible')).not.toHaveCount(0);await expect(page.locator('.search-result:visible').filter({hasText:'水頭聚落'}).first()).toBeVisible();
- await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(130);
+ await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(157);
 });
 
 test('planner respects days and transport',async({page})=>{
@@ -38,7 +82,7 @@ test('FAQ and honest contact draft download',async({page})=>{
 });
 
 test('representative pages have no horizontal overflow or broken images',async({page})=>{
- for(const route of ['/attractions/zhaishan-tunnel/','/itineraries/kinmen-three-days-two-nights/','/hotels/kincheng/','/areas/lieyu/','/itineraries/lieyu-two-days/','/attractions/lieyu-culture-museum/','/attractions/hujingtou-war-museum/','/attractions/lieyu-seaside-park/','/attractions/tiger-fort/','/credits/','/transport/from-mainland-china/','/guides/entry-documents/','/guides/restricted-items/','/guides/travel-checklist/','/attractions/chen-jinglan-house/','/food/kincheng-tea-walk/','/food/aliang-fried-chicken/','/attractions/jiangong-islet/','/attractions/xiaojing-bus-stop/','/tours/houpu-night-walk/','/404.html']){
+ for(const route of ['/areas/kincheng/','/attractions/wentai-pagoda/','/attractions/zhushan-village/','/attractions/kinmen-port-terminal/','/attractions/shuitou-passenger-service-center/','/attractions/deyue-tower/','/itineraries/kincheng-south-day/','/attractions/zhaishan-tunnel/','/itineraries/kinmen-three-days-two-nights/','/hotels/kincheng/','/areas/lieyu/','/itineraries/lieyu-two-days/','/attractions/lieyu-culture-museum/','/attractions/hujingtou-war-museum/','/attractions/lieyu-seaside-park/','/attractions/tiger-fort/','/credits/','/transport/from-mainland-china/','/guides/entry-documents/','/guides/restricted-items/','/guides/travel-checklist/','/attractions/chen-jinglan-house/','/food/kincheng-tea-walk/','/food/aliang-fried-chicken/','/attractions/jiangong-islet/','/attractions/xiaojing-bus-stop/','/tours/houpu-night-walk/','/404.html']){
   await page.goto(route);await expect(page.locator('h1')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),route).toBeTruthy();
   const eager=page.locator('img[loading=eager]');for(const img of await eager.all())expect(await img.evaluate((i:HTMLImageElement)=>i.complete&&i.naturalWidth>0),route).toBeTruthy();
  }
@@ -80,7 +124,7 @@ test('new place aliases lead to the corrected street and real guides',async({pag
 });
 
 test('map distinguishes verified coordinates from place search',async({page})=>{
- await page.goto('/map/');await expect(page.locator('#map-count')).toHaveText('65 個景點');
+ await page.goto('/map/');await expect(page.locator('#map-count')).toHaveText('91 個景點');
  const stop=page.locator('.map-point').filter({hasText:'小徑公車亭'});await expect(stop.getByRole('link',{name:'Google 地圖'})).toHaveAttribute('href',/query=/);await expect(stop.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
  await page.getByRole('button',{name:'金湖',exact:true}).click();await expect(stop).toBeVisible();await expect(page.locator('.map-point:visible')).toHaveCount(10);
 });

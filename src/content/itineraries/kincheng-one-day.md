@@ -3,19 +3,19 @@
   "title": "金城一日散步",
   "nameEn": "A day around Jincheng",
   "seoTitle": "金城一日散步｜金門旅遊實用攻略",
-  "description": "以後浦老街為起點，慢慢走總兵署、模範街與莒光樓，再往水頭看古厝洋樓。整理金城一日遊步行與短程接駁的安排，適合初訪旅人。",
+  "description": "以後浦老街為起點，步行走總兵署、後浦16和模範街，下午接莒光樓或共融公園，再往水頭看古厝。整理分區接駁、親子替換和夜遊安排。",
   "image": "mofan",
-  "area": "all",
+  "area": "kincheng",
   "tag": "行程提案",
   "duration": "1 天",
   "order": 7,
   "featured": false,
   "updatedAt": "2026-10-09",
   "related": [
-    "/transport/",
-    "/hotels/kincheng/",
-    "/car-rental/scooter/",
-    "/tours/"
+    "/areas/kincheng/",
+    "/itineraries/kincheng-south-day/",
+    "/attractions/juguang-inclusive-park/",
+    "/tours/houpu-night-walk/"
   ],
   "sources": [
     {
@@ -25,38 +25,38 @@
   ],
   "days": [
     {
-      "title": "金城與水頭：古厝、坑道和老街",
-      "description": "適合上午抵達、完成取車後開始。若班機較晚，先刪減坑道，保留一個聚落與晚餐。",
+      "title": "後浦步行，莒光短停，水頭看洋樓",
+      "description": "適合早上已在金城的旅人；抵達較晚時刪去莒光段。後浦內步行，前往莒光與水頭需交通。",
       "stops": [
         {
-          "time": "10:30",
-          "title": "莒光樓",
-          "href": "/attractions/juguang-tower/",
-          "note": "先看地標與島嶼風景，停留約 45 分鐘。"
+          "time": "09:30",
+          "title": "總兵署與後浦老街",
+          "href": "/attractions/kinmen-military-headquarters/",
+          "note": "從院落看歷史，步行接模範街與後浦16。"
         },
         {
           "time": "12:00",
           "title": "金城午餐",
           "href": "/food/kincheng-food/",
-          "note": "先用餐再出發，留一小時吃飯與移動。"
+          "note": "用餐、休息及安排午後交通。"
         },
         {
           "time": "13:30",
-          "title": "翟山坑道",
-          "href": "/attractions/zhaishan-tunnel/",
-          "note": "先確認開放；10/16–18 暫停開放期間改看金城古蹟。"
+          "title": "莒光樓",
+          "href": "/attractions/juguang-tower/",
+          "note": "約45分鐘；親子可替換成共融公園，不兩處都塞入。"
         },
         {
           "time": "15:00",
-          "title": "水頭聚落與得月樓",
+          "title": "水頭聚落展示館",
           "href": "/attractions/shuitou-village/",
-          "note": "留約 1.5 小時步行看古厝，不急著趕下一站。"
+          "note": "金水國小、得月樓、僑鄉館擇二，留意17:00一般閉館時間。"
         },
         {
           "time": "18:00",
-          "title": "模範街散步",
-          "href": "/attractions/mofan-street/",
-          "note": "回金城吃晚餐，在拱廊下收尾。"
+          "title": "回金城晚餐與散步",
+          "href": "/attractions/kincheng-old-streets/",
+          "note": "想參加19:30夜遊，飯後先到總兵署確認當日集合。"
         }
       ]
     }
@@ -84,14 +84,13 @@
 }
 ---
 
-## 先確認這條路線適不適合你
-這是編輯建議行程，時間用來分配一天的節奏，並不是交通時刻表。若班機較晚抵達、帶長輩小孩或喜歡拍照，每半天減少一站會更舒服。離島日先確認航空公司報到期限，再倒推還車、接送與路程。
-## 住宿與交通怎麼搭
-以金城連住可減少搬行李；東半島活動較多可考慮金湖。自駕先確認證件與保險，不自駕則先訂觀光巴士或確認回程公車。不要等抵達偏遠景點後才尋找下一段交通。
-## 天氣不配合時
-大風或雨天縮短海岸與健行段，改成總兵署等有室內展示的景點；仍需確認場館當日開放。遇到濃霧、航班異動或施工，保留最想去的兩三站，比原封不動追行程更實際。
+## 市區步行，分區之間搭車
+以上時間為編輯建議，不是公車時刻表。這條路線先走後浦，再往莒光與水頭；若住宿在市區，上午不用急著取車。使用公車先查去回程，下午不把館舍關門時間當成抵達時間。
 
-## 想加新景點，優先替換同區的一站
-金城段可用[浯江書院](/attractions/wujiang-academy/)和[奶茶街](/food/kincheng-tea-walk/)豐富步行圈，晚間另選[總兵署夜遊](/tours/houpu-night-walk/)。[建功嶼](/attractions/jiangong-islet/)必須配合潮汐，[古崗樓](/attractions/gugang-tower/)2026年秋季二樓以上施工，均先查公告再安排。
+## 親子、坑道與海岸怎麼替換
+想去[金城民防坑道](/attractions/kincheng-civil-defense-tunnel/)，先確認金城車站二樓當日導覽，再替換上午的一處古蹟。親子用[莒光共融公園](/attractions/juguang-inclusive-park/)替換登樓；想看海則選[海濱公園](/attractions/kincheng-seaside-park/)，不必跑完每一區。
 
-有金湖段的行程，可把[高洞](/attractions/gaodong-tunnel/)、[天坑](/attractions/tiankeng/)和[新湖漁港](/attractions/xinhu-fishing-harbor/)組成一個半日，或選[山外老街](/attractions/shanwai-old-street/)加[中正公園彩繪](/attractions/zhongzheng-park-3d/)。金寧段則可替換成[慈湖三角堡](/attractions/cihu-triangle-fortress/)與[湖下海堤](/attractions/huxia-seawall/)。不要在原本已排滿的一天全部加上去。
+[建功嶼／金門摩西分海](/attractions/jiangong-islet/)只在潮汐、天候及現場管制允許時加入，且取代原行程一站。想看文臺寶塔、三座城門和珠山，另選[南線一日遊](/itineraries/kincheng-south-day/)，一天不把兩條完整路線疊在一起。
+
+## 下雨與離島日
+雨天先考慮總兵署、水頭展示館，仍查臨時開放；坑道有濕滑路段，並非任何雨天都適合。離島日先確定班機或船班報到期限，再倒推還車、交通與行李時間。

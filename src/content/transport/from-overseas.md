@@ -9,11 +9,12 @@
   "tag": "出發指南",
   "duration": "行前必讀",
   "order": -4,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "related": [
     "/guides/entry-documents/",
     "/guides/restricted-items/",
-    "/guides/travel-checklist/"
+    "/guides/travel-checklist/",
+    "/attractions/kinmen-port-terminal/"
   ],
   "sources": [
     {
@@ -66,3 +67,6 @@
 
 ## 把回程也串起來
 金門的船班與航班可能受天候影響，國際段與金門段分開出票時，先確認延誤後的改票責任和保險。帶回伴手禮還要查最終目的地規定；中途在廈門或香港入境，也要符合該地海關要求。出發前完成[行李與通關清單](/guides/travel-checklist/)。
+
+## 到水頭後，先辨認新場站
+小三通使用[金門港旅運中心](/attractions/kinmen-port-terminal/)新大樓，地址為金城鎮金豐路300號，一樓抵港、三樓離港。請按船公司通知報到與接送，不要以水頭聚落或原旅客服務中心代替新站地址。

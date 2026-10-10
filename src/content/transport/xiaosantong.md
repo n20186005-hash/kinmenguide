@@ -10,8 +10,9 @@
   "duration": "6 分鐘",
   "order": 7,
   "featured": false,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "related": [
+    "/attractions/kinmen-port-terminal/",
     "/transport/from-mainland-china/",
     "/guides/entry-documents/",
     "/guides/travel-checklist/"
@@ -36,6 +37,10 @@
     {
       "title": "金門觀光旅遊網・最新小三通船班資訊",
       "url": "https://www.kinmen.travel/zh-tw/news/details/3470"
+    },
+    {
+      "title": "金門縣港務處・新旅運中心通關動線",
+      "url": "https://kinmen.travel/zh-tw/news/details/4333"
     }
   ]
 }
@@ -48,6 +53,9 @@
 | 泉州南安石井 | 金門水頭／金門港旅運中心 | 約 70 分鐘 |
 
 以上只計航行，不含進出港、報到和通關；實際時間會受海況影響。班表依日期更動，請使用[官方船班資訊](https://www.kinmen.travel/zh-tw/news/details/3470)查當月公告，再向承運公司確認有位、票價與報到截止。
+
+## 2026年新場站：一樓抵港，三樓離港
+小三通已改至[金門港旅運中心](/attractions/kinmen-port-terminal/)，地址是**金城鎮金豐路300號**。從金門搭船出境到三樓離港區，抵達金門在一樓通關；接送請說清新站及樓層，不沿用[原水頭旅客服務中心](/attractions/shuitou-passenger-service-center/)的位置。船票與承運公司當日通知優先。
 
 ## 從訂票到出港的順序
 1. 先按[出發地交通指南](/transport/)選路線，再確認[旅行證件](/guides/entry-documents/)；船票不等於入境許可。
