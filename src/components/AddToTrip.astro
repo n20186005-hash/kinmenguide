@@ -1,0 +1,5 @@
+---
+interface Props { id: string; title: string; }
+const { id, title } = Astro.props;
+---
+<button type="button" class="trip-add" data-trip-add={id} data-trip-title={title} aria-label={`加入行程：${title}`} disabled>＋ 加入行程</button>

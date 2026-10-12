@@ -1,5 +1,6 @@
 ---
 import Photo from './Photo.astro';
+import AddToTrip from './AddToTrip.astro';
 import { areaNames } from '../data/site';
 import { entryHref, type Entry } from '../lib/content';
 interface Props { entry: Entry; compact?: boolean; }
@@ -8,5 +9,5 @@ const d = entry.data;
 ---
 <article class:list={['content-card', { compact }]} data-card data-area={d.area} data-search={`${d.title} ${d.description} ${d.nameEn} ${d.tag} ${areaNames[d.area]} ${d.aliases.join(' ')}`}>
   <a href={entryHref(entry)} class="card-photo" tabindex="-1" aria-hidden="true">{d.image ? <Photo name={d.image}/> : <div class:list={['guide-cover', {'guide-cover-food':entry.collection==='food'}]}><span class="guide-cover-brand">KINMEN GUIDE · 島上筆記</span><span class="guide-cover-title">{d.title.split('：')[0]}</span><span class="guide-cover-place">{areaNames[d.area]} / {d.nameEn}</span></div>}<span class="photo-tag">{d.tag}</span></a>
-  <div class="card-body"><div class="card-meta"><span>{areaNames[d.area]}</span><span>{d.duration}</span></div><h3><a href={entryHref(entry)}>{d.title}</a></h3><p>{d.description}</p>{d.visitNotice && <p class="small">{d.visitNotice}</p>}</div>
+  <div class="card-body"><div class="card-meta"><span>{areaNames[d.area]}</span><span>{d.duration}</span></div><h3><a href={entryHref(entry)}>{d.title}</a></h3><p>{d.description}</p>{d.visitNotice && <p class="small">{d.visitNotice}</p>}{entry.collection === 'attractions' && <AddToTrip id={entry.id} title={d.title}/>}</div>
 </article>

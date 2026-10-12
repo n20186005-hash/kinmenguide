@@ -37,9 +37,10 @@ for(const file of files){
  });
 }
 const sitemapIndex=fs.readFileSync(path.join(root,'sitemap-index.xml'),'utf8');assert.ok(sitemapIndex.includes('https://kinmenguide.com/sitemap-0.xml'));
-const sitemap=fs.readFileSync(path.join(root,'sitemap-0.xml'),'utf8');for(const r of routes.filter(r=>r!='/404.html'&&r!='/plan/'))assert.ok(sitemap.includes('https://kinmenguide.com'+r),`Missing sitemap route ${r}`);
+const sitemap=fs.readFileSync(path.join(root,'sitemap-0.xml'),'utf8');for(const r of routes.filter(r=>r!='/404.html'&&r!='/plan/'&&r!='/trip/'))assert.ok(sitemap.includes('https://kinmenguide.com'+r),`Missing sitemap route ${r}`);
 assert.ok(!sitemap.includes('/404'));
 assert.ok(!sitemap.includes('/plan/'),'noindex plan page should not be in sitemap');
+assert.ok(!sitemap.includes('/trip/'),'private trip page should not be in sitemap');
 assert.ok(fs.readFileSync(path.join(root,'robots.txt'),'utf8').includes('https://kinmenguide.com/sitemap-index.xml'));
 const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));assert.match(pkg.packageManager,/^pnpm@\d+\.\d+\.\d+$/);
 for(const group of ['dependencies','devDependencies'])for(const [name,version]of Object.entries(pkg[group]))assert.match(version,/^\d+\.\d+\.\d+$/,`${name} must be exact stable semver`);

@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+import { areaNames } from '../data/site';
+const places = (await getCollection('attractions')).map(({id,data}) => ({id,title:data.title.split('：')[0],area:areaNames[data.area],duration:data.duration,address:data.address,notice:data.visitNotice || '',href:`/attractions/${id}/`}));
+---
+<Base title="我的金門行程清單｜收藏景點、按天安排與保存圖片" description="將喜歡的金門景點加入自己的旅行清單，按天安排、調整順序並記下時間與備註。可保存帶有 kinmenguide.com 來源的行程圖片，資料保留於你的瀏覽器。" noindex breadcrumbs={[{name:'行程清單'}]}>
+<div class="shell trip-page">
+  <Breadcrumb items={[{name:'行程清單'}]}/>
+  <div class="trip-intro"><div><span class="eyebrow">YOUR ISLAND, YOUR PACE</span><h1>把喜歡的金門，排進旅行。</h1><p class="lead">逛景點、加入清單，再把每天的順序慢慢排好。</p></div><a class="button button-light" href="/attractions/">＋ 繼續挑景點</a></div>
+  <noscript><p class="alert-note">行程收藏和圖片保存需要啟用 JavaScript。你仍可查看<a href="/itineraries/">推薦行程</a>，使用瀏覽器列印保存。</p></noscript>
+  <section id="trip-app" hidden aria-label="我的旅行清單">
+    <div class="trip-toolbar"><label>行程名稱<input id="trip-title" class="search-input" maxlength="40" value="我的金門旅行" /></label><label>旅行天數<select id="trip-days" class="search-input">{Array.from({length:14},(_,i)=><option value={i+1} selected={i===2}>{i+1} 天</option>)}</select></label><button type="button" class="button" id="trip-export" disabled>保存行程圖片</button></div>
+    <div class="trip-summary"><p><strong id="trip-total">0</strong> 個景點 · <span id="trip-storage"></span></p><button type="button" id="trip-clear" class="trip-text-button" disabled>清空清單</button></div>
+    <p class="small">新加入的景點先放在第 1 天，可隨時改天數與順序。時間是自己的規劃，請另查開放資訊、交通與潮汐；系統不會自動計算路程。</p>
+    <div id="trip-status" role="status" aria-live="polite"></div><button id="trip-undo" class="trip-text-button" type="button" hidden>復原剛才移除的景點</button>
+    <div id="trip-empty" class="trip-empty"><span class="eyebrow">A LITTLE ROOM FOR ADVENTURE</span><h2>清單還是空的，先選一個想去的地方。</h2><p>在景點卡片或介紹頁點「＋ 加入行程」，回來就能安排你的旅行。</p><a class="button" href="/attractions/">探索金門景點</a></div>
+    <div id="trip-day-list"></div>
+    <section id="trip-images" class="trip-images" hidden aria-label="行程圖片預覽"><h2>把行程帶在身邊</h2><p>每張最多 6 個景點，右下角附本站網址。逐張下載；手機也可長按圖片儲存。</p><p class="small" id="trip-export-status" role="status"></p><div id="trip-image-list"></div></section>
+  </section>
+  <script type="application/json" id="trip-catalog" set:html={JSON.stringify(places).replace(/</g,'\\u003c')}/>
+</div>
+</Base>
+<script>import '../scripts/trip-page';</script>
