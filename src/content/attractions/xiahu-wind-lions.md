@@ -40,7 +40,8 @@
   "coordinates": {
     "lat": 24.43618,
     "lng": 118.45428
-  }
+  },
+  "image": "place-xiahu-wind-lions"
 }
 ---
 

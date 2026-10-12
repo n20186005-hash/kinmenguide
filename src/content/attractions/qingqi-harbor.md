@@ -34,7 +34,8 @@
   "coordinates": {
     "lat": 24.4121451,
     "lng": 118.230752
-  }
+  },
+  "image": "place-qingqi-harbor"
 }
 ---
 

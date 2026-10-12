@@ -32,7 +32,8 @@
   "coordinates": {
     "lat": 24.44607,
     "lng": 118.33737
-  }
+  },
+  "image": "place-fuyu-temple-photo-spot"
 }
 ---
 

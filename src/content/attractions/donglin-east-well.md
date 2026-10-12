@@ -34,7 +34,8 @@
   "coordinates": {
     "lat": 24.42752,
     "lng": 118.24945
-  }
+  },
+  "image": "place-donglin-east-well"
 }
 ---
 

@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.42551,
     "lng": 118.31003
-  }
+  },
+  "image": "place-xiashu-wind-lion"
 }
 ---
 

@@ -34,7 +34,8 @@
   "coordinates": {
     "lat": 24.43206,
     "lng": 118.31551
-  }
+  },
+  "image": "place-kincheng-old-streets"
 }
 ---
 

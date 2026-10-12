@@ -31,7 +31,8 @@
   "coordinates": {
     "lat": 24.43926,
     "lng": 118.35472
-  }
+  },
+  "image": "place-zhongshan-forest"
 }
 ---
 

@@ -32,7 +32,8 @@
   "coordinates": {
     "lat": 24.4556,
     "lng": 118.30245
-  }
+  },
+  "image": "place-huxia-seawall"
 }
 ---
 

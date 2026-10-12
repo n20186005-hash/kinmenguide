@@ -33,7 +33,8 @@
   "coordinates": {
     "lat": 24.43134,
     "lng": 118.3314
-  }
+  },
+  "image": "place-dongzhou-wind-lion"
 }
 ---
 

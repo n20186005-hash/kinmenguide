@@ -32,7 +32,8 @@
     "lat": 24.43311,
     "lng": 118.32021
   },
-  "visitNotice": "先到金城車站二樓確認導覽；開館時段不等於坑道可隨時自行入內。"
+  "visitNotice": "先到金城車站二樓確認導覽；開館時段不等於坑道可隨時自行入內。",
+  "image": "place-kincheng-civil-defense-tunnel"
 }
 ---
 

@@ -31,7 +31,8 @@
   "coordinates": {
     "lat": 24.41265,
     "lng": 118.4344
-  }
+  },
+  "image": "place-liaoluo-mazu-park"
 }
 ---
 

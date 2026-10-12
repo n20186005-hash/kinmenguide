@@ -38,7 +38,8 @@
     "lat": 24.4472,
     "lng": 118.47335
   },
-  "visitNotice": "大螃蟹為景觀裝置，不可攀爬；請從安全平台拍攝，勿進入危險岩岸。"
+  "visitNotice": "大螃蟹為景觀裝置，不可攀爬；請從安全平台拍攝，勿進入危險岩岸。",
+  "image": "place-fuguodun-viewpoint"
 }
 ---
 

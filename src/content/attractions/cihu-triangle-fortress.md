@@ -28,7 +28,8 @@
   "coordinates": {
     "lat": 24.46514,
     "lng": 118.29762
-  }
+  },
+  "image": "place-cihu-triangle-fortress"
 }
 ---
 

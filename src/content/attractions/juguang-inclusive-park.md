@@ -31,7 +31,8 @@
   "coordinates": {
     "lat": 24.4273602,
     "lng": 118.3176148
-  }
+  },
+  "image": "place-juguang-inclusive-park"
 }
 ---
 

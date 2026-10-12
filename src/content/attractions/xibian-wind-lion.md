@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.44164,
     "lng": 118.46148
-  }
+  },
+  "image": "place-xibian-wind-lion"
 }
 ---
 

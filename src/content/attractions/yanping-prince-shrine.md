@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.42448,
     "lng": 118.30477
-  }
+  },
+  "image": "place-yanping-prince-shrine"
 }
 ---
 

@@ -31,7 +31,8 @@
   "coordinates": {
     "lat": 24.43246,
     "lng": 118.31617
-  }
+  },
+  "image": "place-wudao-city-god-temple"
 }
 ---
 

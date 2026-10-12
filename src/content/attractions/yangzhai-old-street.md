@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.47944,
     "lng": 118.42725
-  }
+  },
+  "image": "place-yangzhai-old-street"
 }
 ---
 

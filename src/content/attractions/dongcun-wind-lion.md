@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.42701,
     "lng": 118.44669
-  }
+  },
+  "image": "place-dongcun-wind-lion"
 }
 ---
 

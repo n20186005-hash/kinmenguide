@@ -45,3 +45,5 @@ const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));assert.match(pkg.pa
 for(const group of ['dependencies','devDependencies'])for(const [name,version]of Object.entries(pkg[group]))assert.match(version,/^\d+\.\d+\.\d+$/,`${name} must be exact stable semver`);
 if(errors.length){console.error(errors.join('\n'));process.exit(1);}
 console.log(`Verified ${files.length} pages; ${links} internal references; ${images} image instances; ${schemas} schema nodes. Titles, descriptions, canonicals, links, anchors, sitemap, robots and exact versions pass.`);
+
+await import('./verify-photos.mjs');

@@ -40,7 +40,8 @@
   "coordinates": {
     "lat": 24.43809,
     "lng": 118.42867
-  }
+  },
+  "image": "place-zhongzheng-park-3d"
 }
 ---
 

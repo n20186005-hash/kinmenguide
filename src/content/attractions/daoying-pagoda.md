@@ -31,7 +31,8 @@
   "coordinates": {
     "lat": 24.46271,
     "lng": 118.41412
-  }
+  },
+  "image": "place-daoying-pagoda"
 }
 ---
 

@@ -32,7 +32,8 @@
     "lat": 24.43542,
     "lng": 118.38954
   },
-  "visitNotice": "只走已開放展示動線；未開放坑口及軍事管制區不得進入。"
+  "visitNotice": "只走已開放展示動線；未開放坑口及軍事管制區不得進入。",
+  "image": "place-chenggong-tunnel"
 }
 ---
 

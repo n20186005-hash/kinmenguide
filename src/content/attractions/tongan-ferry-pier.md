@@ -32,7 +32,8 @@
   "coordinates": {
     "lat": 24.4376,
     "lng": 118.30916
-  }
+  },
+  "image": "place-tongan-ferry-pier"
 }
 ---
 

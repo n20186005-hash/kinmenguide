@@ -31,7 +31,8 @@
   "coordinates": {
     "lat": 24.44785,
     "lng": 118.41792
-  }
+  },
+  "image": "place-kinmen-guesthouse"
 }
 ---
 

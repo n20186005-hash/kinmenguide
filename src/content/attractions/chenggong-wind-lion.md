@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.43718,
     "lng": 118.38954
-  }
+  },
+  "image": "place-chenggong-wind-lion"
 }
 ---
 

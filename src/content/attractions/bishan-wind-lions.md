@@ -36,7 +36,8 @@
   "coordinates": {
     "lat": 24.4878,
     "lng": 118.44237
-  }
+  },
+  "image": "place-bishan-wind-lions"
 }
 ---
 

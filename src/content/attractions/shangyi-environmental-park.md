@@ -35,7 +35,8 @@
   "coordinates": {
     "lat": 24.44069,
     "lng": 118.36894
-  }
+  },
+  "image": "place-shangyi-environmental-park"
 }
 ---
 

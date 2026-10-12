@@ -31,7 +31,8 @@
   "coordinates": {
     "lat": 24.42739,
     "lng": 118.31647
-  }
+  },
+  "image": "place-juguang-lake"
 }
 ---
 

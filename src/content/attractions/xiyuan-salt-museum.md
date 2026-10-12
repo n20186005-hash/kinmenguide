@@ -32,7 +32,8 @@
   "coordinates": {
     "lat": 24.50705,
     "lng": 118.40531
-  }
+  },
+  "image": "place-xiyuan-salt-museum"
 }
 ---
 

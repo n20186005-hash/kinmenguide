@@ -37,7 +37,8 @@
   "coordinates": {
     "lat": 24.49927,
     "lng": 118.40361
-  }
+  },
+  "image": "place-kinmen-county-museum"
 }
 ---
 

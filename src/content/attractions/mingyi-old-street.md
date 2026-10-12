@@ -31,7 +31,8 @@
   "coordinates": {
     "lat": 24.4035936,
     "lng": 118.308746
-  }
+  },
+  "image": "place-mingyi-old-street"
 }
 ---
 

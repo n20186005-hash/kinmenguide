@@ -34,7 +34,8 @@
   "coordinates": {
     "lat": 24.44092,
     "lng": 118.26624
-  }
+  },
+  "image": "place-general-fort"
 }
 ---
 

@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.43562,
     "lng": 118.40662
-  }
+  },
+  "image": "place-kinmen-ceramics"
 }
 ---
 

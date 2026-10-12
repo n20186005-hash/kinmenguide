@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.52675,
     "lng": 118.41812
-  }
+  },
+  "image": "place-tianmo-mountain"
 }
 ---
 

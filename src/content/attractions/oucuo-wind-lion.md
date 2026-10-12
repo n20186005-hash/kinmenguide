@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.4049,
     "lng": 118.33551
-  }
+  },
+  "image": "place-oucuo-wind-lion"
 }
 ---
 

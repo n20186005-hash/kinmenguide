@@ -37,7 +37,8 @@
   "coordinates": {
     "lat": 24.43331,
     "lng": 118.40682
-  }
+  },
+  "image": "place-gaodong-tunnel"
 }
 ---
 

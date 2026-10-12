@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.42611,
     "lng": 118.35097
-  }
+  },
+  "image": "place-xiguoshan-wind-lion"
 }
 ---
 

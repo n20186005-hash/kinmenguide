@@ -33,7 +33,8 @@
   "coordinates": {
     "lat": 24.44684,
     "lng": 118.25502
-  }
+  },
+  "image": "place-tiehan-fort"
 }
 ---
 

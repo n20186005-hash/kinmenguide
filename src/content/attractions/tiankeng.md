@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.43397,
     "lng": 118.40619
-  }
+  },
+  "image": "place-tiankeng"
 }
 ---
 

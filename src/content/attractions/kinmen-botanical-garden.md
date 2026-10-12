@@ -31,7 +31,8 @@
   "coordinates": {
     "lat": 24.45429,
     "lng": 118.39753
-  }
+  },
+  "image": "place-kinmen-botanical-garden"
 }
 ---
 

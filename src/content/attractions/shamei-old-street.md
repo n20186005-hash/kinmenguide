@@ -31,7 +31,8 @@
   "coordinates": {
     "lat": 24.49061,
     "lng": 118.41227
-  }
+  },
+  "image": "place-shamei-old-street"
 }
 ---
 

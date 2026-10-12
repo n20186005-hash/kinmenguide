@@ -35,7 +35,8 @@
   "coordinates": {
     "lat": 24.42521,
     "lng": 118.26281
-  }
+  },
+  "image": "place-luocuo-mazu-park"
 }
 ---
 

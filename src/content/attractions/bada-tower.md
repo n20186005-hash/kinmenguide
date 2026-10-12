@@ -33,7 +33,8 @@
   "coordinates": {
     "lat": 24.42998,
     "lng": 118.24573
-  }
+  },
+  "image": "place-bada-tower"
 }
 ---
 

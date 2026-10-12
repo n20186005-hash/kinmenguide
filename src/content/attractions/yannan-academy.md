@@ -32,7 +32,8 @@
   "coordinates": {
     "lat": 24.4073,
     "lng": 118.31355
-  }
+  },
+  "image": "place-yannan-academy"
 }
 ---
 

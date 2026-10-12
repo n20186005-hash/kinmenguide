@@ -42,7 +42,8 @@
   "coordinates": {
     "lat": 24.52128,
     "lng": 118.41351
-  }
+  },
+  "image": "place-guanao-wind-lions"
 }
 ---
 

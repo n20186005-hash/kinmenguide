@@ -34,7 +34,8 @@
   "coordinates": {
     "lat": 24.42914,
     "lng": 118.22843
-  }
+  },
+  "image": "place-shanglin-general-temple"
 }
 ---
 

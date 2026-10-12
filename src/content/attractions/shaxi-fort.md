@@ -33,7 +33,8 @@
   "coordinates": {
     "lat": 24.41166,
     "lng": 118.2128
-  }
+  },
+  "image": "place-shaxi-fort"
 }
 ---
 

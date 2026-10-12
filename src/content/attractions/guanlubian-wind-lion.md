@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.41188,
     "lng": 118.30842
-  }
+  },
+  "image": "place-guanlubian-wind-lion"
 }
 ---
 

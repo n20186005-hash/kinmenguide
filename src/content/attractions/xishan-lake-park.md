@@ -34,7 +34,8 @@
   "coordinates": {
     "lat": 24.4246643,
     "lng": 118.250032
-  }
+  },
+  "image": "place-xishan-lake-park"
 }
 ---
 

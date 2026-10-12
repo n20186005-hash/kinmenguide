@@ -32,7 +32,8 @@
   "coordinates": {
     "lat": 24.40967,
     "lng": 118.29888
-  }
+  },
+  "image": "place-overseas-chinese-museum"
 }
 ---
 

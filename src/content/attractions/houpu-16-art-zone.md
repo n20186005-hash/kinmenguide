@@ -33,7 +33,8 @@
   "coordinates": {
     "lat": 24.43278,
     "lng": 118.31701
-  }
+  },
+  "image": "place-houpu-16-art-zone"
 }
 ---
 

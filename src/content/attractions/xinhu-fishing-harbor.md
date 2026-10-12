@@ -28,7 +28,8 @@
   "coordinates": {
     "lat": 24.43038,
     "lng": 118.41032
-  }
+  },
+  "image": "place-xinhu-fishing-harbor"
 }
 ---
 

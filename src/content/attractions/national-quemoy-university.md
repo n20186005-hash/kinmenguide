@@ -35,7 +35,8 @@
   "coordinates": {
     "lat": 24.44815,
     "lng": 118.32254
-  }
+  },
+  "image": "place-national-quemoy-university"
 }
 ---
 

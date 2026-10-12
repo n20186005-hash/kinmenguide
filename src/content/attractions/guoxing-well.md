@@ -33,7 +33,8 @@
   "coordinates": {
     "lat": 24.43845,
     "lng": 118.23514
-  }
+  },
+  "image": "place-guoxing-well"
 }
 ---
 

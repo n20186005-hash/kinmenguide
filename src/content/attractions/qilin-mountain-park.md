@@ -37,7 +37,8 @@
   "coordinates": {
     "lat": 24.43916,
     "lng": 118.25456
-  }
+  },
+  "image": "place-qilin-mountain-park"
 }
 ---
 

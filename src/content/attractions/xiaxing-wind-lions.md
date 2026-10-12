@@ -36,7 +36,8 @@
   "coordinates": {
     "lat": 24.43978,
     "lng": 118.39447
-  }
+  },
+  "image": "place-xiaxing-wind-lions"
 }
 ---
 

@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.4593,
     "lng": 118.40979
-  }
+  },
+  "image": "place-liuyuzhang-statue"
 }
 ---
 

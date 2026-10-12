@@ -28,7 +28,8 @@
   "coordinates": {
     "lat": 24.43424,
     "lng": 118.31704
-  }
+  },
+  "image": "place-wujiang-academy"
 }
 ---
 

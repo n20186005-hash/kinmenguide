@@ -38,7 +38,8 @@
   "coordinates": {
     "lat": 24.43993,
     "lng": 118.26
-  }
+  },
+  "image": "place-houtou-wind-lions"
 }
 ---
 

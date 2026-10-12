@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.43711,
     "lng": 118.35248
-  }
+  },
+  "image": "place-rushan-fort"
 }
 ---
 

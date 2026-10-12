@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.43622,
     "lng": 118.41318
-  }
+  },
+  "image": "place-huqian-wind-lion"
 }
 ---
 

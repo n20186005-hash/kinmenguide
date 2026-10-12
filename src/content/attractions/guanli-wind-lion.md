@@ -31,7 +31,8 @@
   "coordinates": {
     "lat": 24.4125,
     "lng": 118.31914
-  }
+  },
+  "image": "place-guanli-wind-lion"
 }
 ---
 

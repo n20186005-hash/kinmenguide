@@ -32,7 +32,8 @@
   "coordinates": {
     "lat": 24.4302,
     "lng": 118.31027
-  }
+  },
+  "image": "place-kincheng-seaside-park"
 }
 ---
 

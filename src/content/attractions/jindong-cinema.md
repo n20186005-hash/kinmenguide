@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.47894,
     "lng": 118.42741
-  }
+  },
+  "image": "place-jindong-cinema"
 }
 ---
 

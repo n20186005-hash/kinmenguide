@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.43984,
     "lng": 118.41184
-  }
+  },
+  "image": "place-tahou-wind-lion"
 }
 ---
 

@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.42742,
     "lng": 118.46033
-  }
+  },
+  "image": "place-fengshang-patrol-fort"
 }
 ---
 

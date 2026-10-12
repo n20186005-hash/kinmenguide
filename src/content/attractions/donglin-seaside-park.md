@@ -33,7 +33,8 @@
   "coordinates": {
     "lat": 24.42508,
     "lng": 118.25177
-  }
+  },
+  "image": "place-donglin-seaside-park"
 }
 ---
 

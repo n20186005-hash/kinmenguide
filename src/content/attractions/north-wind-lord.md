@@ -34,7 +34,8 @@
   "coordinates": {
     "lat": 24.43676,
     "lng": 118.23978
-  }
+  },
+  "image": "place-north-wind-lord"
 }
 ---
 

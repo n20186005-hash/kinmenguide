@@ -31,7 +31,8 @@
   "coordinates": {
     "lat": 24.44393,
     "lng": 118.43201
-  }
+  },
+  "image": "place-rongyuan"
 }
 ---
 

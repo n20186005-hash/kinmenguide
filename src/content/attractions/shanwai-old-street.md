@@ -36,7 +36,8 @@
   "coordinates": {
     "lat": 24.44083,
     "lng": 118.41564
-  }
+  },
+  "image": "place-shanwai-old-street"
 }
 ---
 

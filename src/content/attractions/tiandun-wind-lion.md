@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.50316,
     "lng": 118.40872
-  }
+  },
+  "image": "place-tiandun-wind-lion"
 }
 ---
 

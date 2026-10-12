@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.4531,
     "lng": 118.44545
-  }
+  },
+  "image": "place-xiaxincuo-wind-lion"
 }
 ---
 

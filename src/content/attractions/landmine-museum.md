@@ -33,7 +33,8 @@
   "coordinates": {
     "lat": 24.44666,
     "lng": 118.25188
-  }
+  },
+  "image": "place-landmine-museum"
 }
 ---
 

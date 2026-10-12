@@ -34,7 +34,8 @@
   "coordinates": {
     "lat": 24.44955,
     "lng": 118.23829
-  }
+  },
+  "image": "place-hongtugou-third-camp"
 }
 ---
 

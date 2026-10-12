@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.45556,
     "lng": 118.44795
-  }
+  },
+  "image": "place-dongshawei-wind-lion"
 }
 ---
 

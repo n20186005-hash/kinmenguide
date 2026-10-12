@@ -33,7 +33,8 @@
   "coordinates": {
     "lat": 24.42073,
     "lng": 118.32239
-  }
+  },
+  "image": "place-muma-hou-shrine"
 }
 ---
 

@@ -34,7 +34,8 @@
   "coordinates": {
     "lat": 24.4390525,
     "lng": 118.2586598
-  }
+  },
+  "image": "place-houlin-shooting-simulator"
 }
 ---
 

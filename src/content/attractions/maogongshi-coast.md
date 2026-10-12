@@ -34,7 +34,8 @@
   "coordinates": {
     "lat": 24.45264,
     "lng": 118.2486
-  }
+  },
+  "image": "place-maogongshi-coast"
 }
 ---
 

@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.44304,
     "lng": 118.43153
-  }
+  },
+  "image": "place-yu-dawei-museum"
 }
 ---
 

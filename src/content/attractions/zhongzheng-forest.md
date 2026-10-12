@@ -30,7 +30,8 @@
   "coordinates": {
     "lat": 24.44132,
     "lng": 118.43009
-  }
+  },
+  "image": "place-zhongzheng-forest"
 }
 ---
 

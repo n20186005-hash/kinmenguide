@@ -35,7 +35,8 @@
   "coordinates": {
     "lat": 24.43152,
     "lng": 118.3101
-  }
+  },
+  "image": "place-xiongshi-fort"
 }
 ---
 

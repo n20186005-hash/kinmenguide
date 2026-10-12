@@ -32,7 +32,8 @@
     "小徑車站",
     "小径车站",
     "小徑一"
-  ]
+  ],
+  "image": "place-xiaojing-bus-stop"
 }
 ---
 

@@ -34,7 +34,8 @@
   "coordinates": {
     "lat": 24.439243,
     "lng": 118.229
-  }
+  },
+  "image": "place-shuangkou-beach"
 }
 ---
 
