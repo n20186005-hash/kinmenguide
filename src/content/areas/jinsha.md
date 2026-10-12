@@ -10,12 +10,13 @@
   "duration": "半天至 1 天",
   "order": 3,
   "featured": true,
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "related": [
     "/itineraries/jinsha-one-day/",
     "/attractions/kinmen-county-museum/",
     "/attractions/shamei-old-street/",
-    "/attractions/shanhou-folk-culture-village/"
+    "/attractions/shanhou-folk-culture-village/",
+    "/food/gaokeng-beef/"
   ],
   "sources": [
     {
@@ -78,3 +79,6 @@
 
 ## 先決定文化線或北岸線
 [金沙一日遊](/itineraries/jinsha-one-day/)以陽翟、山后、沙美和西園為主；想走馬山就替換下午館舍，不把所有北岸點再加上去。[警光會館](/hotels/kinmen-police-hostel/)2026年整建暫停營業，也有入住資格限制，住宿另作安排。
+
+## 高坑聚落的牛肉正餐
+[高坑牛肉食樂苑](/food/gaokeng-beef/)在高坑38號，適合安排牛肉湯與桌菜；官方列週二休息。它和沙美老街是不同用餐位置，可作金沙行程的替代午餐站，先確認交通與份量，再接下一個景點。

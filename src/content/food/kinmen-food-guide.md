@@ -10,10 +10,12 @@
   "duration": "6 分鐘",
   "order": 1,
   "featured": false,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-11",
   "related": [
     "/food/breakfast/",
-    "/areas/kincheng/"
+    "/areas/kincheng/",
+    "/food/beef-noodles/",
+    "/food/jinshan-smoked-goose/"
   ],
   "sources": [
     {
@@ -45,3 +47,13 @@
 - [阿亮雞排分店辨識](/food/aliang-fried-chicken/)
 
 先依當日區域選店，再核對營業、店休與品項；以上為內容整理，沒有付費排名。
+
+## 牛肉正餐、早餐與下午點心怎麼接
+先看[牛肉料理7個門店比較](/food/beef-noodles/)，再依地區選餐：
+
+- 金沙：[高坑牛肉食樂苑](/food/gaokeng-beef/)。
+- 金寧：[圓頭肉乾農牧概念館](/food/yuantou-ranch/)。
+- 金湖：[良金牧場工廠總店](/food/liangjin-ranch/)。
+- 金城：[良金貞節牌坊店](/food/liangjin-paifang/)、[廉坤牛肉店](/food/liankun-beef/)、[第一味牛肉麵](/food/diyiwei-beef-noodles/)、[牛家莊](/food/niujiazhuang/)。
+
+早餐可在[永春廣東粥](/food/yongchun-congee/)和[標記小吃店](/food/biaoji-snacks/)之間換口味；下午留給[蚵嗲之家](/food/oyster-fritter-house/)，茶飲可查[50嵐金城店](/food/50lan-kincheng/)的民生路現址。正餐不想吃牛，另看[金山煙燻鵝肉](/food/jinshan-smoked-goose/)。這些店的營業時段不同，請按各店頁的店休與當日供應安排。

@@ -10,11 +10,13 @@
   "duration": "4 分鐘",
   "order": 7,
   "featured": false,
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-11",
   "related": [
     "/food/kinmen-food-guide/",
     "/food/breakfast/",
-    "/areas/kincheng/"
+    "/areas/kincheng/",
+    "/food/oyster-fritter-house/",
+    "/food/biaoji-snacks/"
   ],
   "sources": [
     {
@@ -31,3 +33,6 @@
 食材供應與季節、進貨有關，不保證每家店每天都有同一品項。對貝類過敏者應避免點用，熟度或成分有疑問則先詢問店家。
 ## 吃完，再去看海
 想認識海岸環境，可安排開放區域的散步，但不自行進入養殖作業區或採集蚵類。用餐和海岸活動之間留休息，垃圾隨身帶走。
+
+## 蚵嗲與蚵仔麵線，分兩個時段選
+[標記小吃店](/food/biaoji-snacks/)可查早餐蚵仔麵線；[蚵嗲之家](/food/oyster-fritter-house/)則在莒光路一段59號，官方列下午14:30才開始營業。前者可作主餐，後者適合散步時少量分食，兩店皆須留意週四店休及當日蚵類供應。

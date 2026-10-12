@@ -10,13 +10,14 @@
   "duration": "半天至 1 天",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "related": [
     "/attractions/kinmen-bridge/",
     "/attractions/kinmen-distillery/",
     "/attractions/guningtou-battle-museum/",
     "/attractions/mofan-street/",
-    "/attractions/dongzhou-wind-lion/"
+    "/attractions/dongzhou-wind-lion/",
+    "/food/yuantou-ranch/"
   ],
   "sources": [
     {
@@ -77,3 +78,6 @@
 [家樂福金門店（現名萬家福）](/guides/carrefour-kinmen/)位於伯玉路二段223號，可在金寧行程中安排飲水、日用品及伴手禮採買。店名新舊並用時，以地址和頁內原始地圖確認。
 
 [全聯金門慈湖店](/guides/pxmart-cihu/)位於下埔下，適合購買飲水與日用品；店址不在慈湖景區內。中山林、乳山故壘與賈村可組合半天，付費體驗先預約。
+
+## 伯玉路的用餐與採買
+[圓頭肉乾農牧概念館](/food/yuantou-ranch/)位於伯玉路二段169號，可選牛肉麵或先洽現行用餐方案，再接同段的[家樂福／萬家福補給](/guides/carrefour-kinmen/)。用餐和採買時間分開保留，餐飲方案、營業與停車按店家當日安排。

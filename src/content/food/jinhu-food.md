@@ -10,11 +10,13 @@
   "duration": "4 分鐘",
   "order": 3,
   "featured": false,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-11",
   "related": [
     "/food/kinmen-food-guide/",
     "/food/breakfast/",
-    "/areas/kincheng/"
+    "/areas/kincheng/",
+    "/food/liangjin-ranch/",
+    "/areas/jinhu/"
   ],
   "sources": [
     {
@@ -38,3 +40,6 @@
 - [麥斯西點麵包](/food/max-bakery/)
 
 先依當日區域選店，再核對營業、店休與品項；以上為內容整理，沒有付費排名。
+
+## 漁村的牛肉麵，和山外分開安排
+[良金牧場工廠總店](/food/liangjin-ranch/)在漁村160號，可接陶瓷廠周邊行程吃鮮沖牛肉麵、買肉乾。它並非山外車站旁的門店，也不是金城貞節牌坊店；先看當天交通方向，再決定在漁村或山外用餐。

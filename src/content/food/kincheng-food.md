@@ -10,11 +10,13 @@
   "duration": "5 分鐘",
   "order": 2,
   "featured": false,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-11",
   "related": [
     "/food/kinmen-food-guide/",
     "/food/breakfast/",
-    "/areas/kincheng/"
+    "/areas/kincheng/",
+    "/food/beef-noodles/",
+    "/food/jinshan-smoked-goose/"
   ],
   "sources": [
     {
@@ -45,3 +47,15 @@
 - [艋舺雞排](/food/monga-fried-chicken/)
 
 先依當日區域選店，再核對營業、店休與品項；以上為內容整理，沒有付費排名。
+
+## 依時段挑一餐，不用逐店繞路
+
+| 時段 | 店家選擇 | 安排方式 |
+| --- | --- | --- |
+| 早餐 | [永春廣東粥](/food/yongchun-congee/)、[標記小吃](/food/biaoji-snacks/) | 莒光路或東門市場周邊，擇一開始老城步行 |
+| 牛肉麵 | [良金貞節牌坊店](/food/liangjin-paifang/)、[第一味](/food/diyiwei-beef-noodles/) | 午餐按當天散步方向選一家 |
+| 牛肉正餐 | [廉坤](/food/liankun-beef/)、[牛家莊](/food/niujiazhuang/) | 分別位於環島北路與民族路巷內，先看份量與交通 |
+| 下午點心 | [蚵嗲之家](/food/oyster-fritter-house/)、[50嵐金城店](/food/50lan-kincheng/) | 莒光路炸點或民生路茶飲，候車預留等餐時間 |
+| 鵝肉正餐 | [金山煙燻鵝肉](/food/jinshan-smoked-goose/) | 民族路244號，週一休息；晚餐先確認供應 |
+
+這些是可替換的選項，並非一天要吃完的清單。更多部位與吃法差異見[牛肉料理選店指南](/food/beef-noodles/)。

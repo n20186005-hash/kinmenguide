@@ -10,10 +10,12 @@
   "duration": "4 分鐘",
   "order": 4,
   "featured": false,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-11",
   "related": [
     "/food/kinmen-food-guide/",
-    "/areas/kincheng/"
+    "/areas/kincheng/",
+    "/food/biaoji-snacks/",
+    "/food/yongchun-congee/"
   ],
   "sources": [
     {
@@ -36,3 +38,6 @@
 - [永春廣東粥](/food/yongchun-congee/)
 
 先依當日區域選店，再核對營業、店休與品項；以上為內容整理，沒有付費排名。
+
+## 蛋餅、麵線或廣東粥
+[標記小吃店](/food/biaoji-snacks/)供應蛋餅、蚵仔麵線、廣東粥與肉羹麵，適合想換主食的早晨；官方列週四休息。[永春](/food/yongchun-congee/)則以糜湯粥底安排早餐，兩家皆列06:00起營業，出發前再確認臨時店休。午前用餐後接老城步行，比把早餐店排成下午茶更合適。

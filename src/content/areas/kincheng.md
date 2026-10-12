@@ -10,7 +10,7 @@
   "duration": "分區半日；完整慢遊建議2天以上",
   "order": 1,
   "featured": true,
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "related": [
     "/itineraries/kincheng-one-day/",
     "/itineraries/kincheng-south-day/",
@@ -116,3 +116,6 @@
 | 地點 | 參觀重點與條件 |
 | --- | --- |
 | [金門浯島城隍廟](/attractions/wudao-city-god-temple/) | 後浦信仰，30–45 分鐘 |
+
+## 老城用餐從早餐排到晚餐
+早餐可查[永春廣東粥](/food/yongchun-congee/)或[標記小吃](/food/biaoji-snacks/)，午晚餐在[良金牌坊店](/food/liangjin-paifang/)、[第一味牛肉麵](/food/diyiwei-beef-noodles/)、[廉坤](/food/liankun-beef/)、[牛家莊](/food/niujiazhuang/)與[金山鵝肉](/food/jinshan-smoked-goose/)之間按路線選一餐。下午另留[蚵嗲之家](/food/oyster-fritter-house/)或[50嵐金城店](/food/50lan-kincheng/)，完整時段比較見[金城美食散步](/food/kincheng-food/)。

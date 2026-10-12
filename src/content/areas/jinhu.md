@@ -10,12 +10,13 @@
   "duration": "半天至 1 天",
   "order": 2,
   "featured": true,
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "related": [
     "/itineraries/jinhu-one-day/",
     "/attractions/taihu-lake/",
     "/attractions/taiwu-mountain/",
-    "/transport/shanwai-station/"
+    "/transport/shanwai-station/",
+    "/food/liangjin-ranch/"
   ],
   "sources": [
     {
@@ -124,3 +125,6 @@
 
 ## 交通、午餐與一日提案
 搭車先看[山外車站](/transport/shanwai-station/)與[金門機場](/transport/kinmen-airport/)；漁村用餐可查[良金牧場總店](/food/liangjin-ranch/)。想按時間走，選[金湖一日遊](/itineraries/jinhu-one-day/)，太武山另留半天；不把需申請的軍事場所或未確認開放營區插進隨興路線。
+
+## 金湖吃良金，認明工廠總店
+[良金牧場工廠總店](/food/liangjin-ranch/)在漁村160號，適合接陶瓷廠一帶行程；金城莒光路的貞節牌坊店是另一處門店。兩家位置與電話已分頁整理，按當天路線選一家即可。

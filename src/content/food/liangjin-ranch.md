@@ -2,18 +2,23 @@
 {
   "title": "良金牧場・工廠總店",
   "nameEn": "Liangjin Ranch Factory Store",
-  "seoTitle": "良金牧場・工廠總店｜位置、參觀重點與順遊攻略",
+  "seoTitle": "良金牧場工廠總店｜金湖鮮沖牛肉麵與分店位置",
   "description": "良金牧場工廠總店在金湖漁村160號，主打酒糟牛肉麵與肉乾。整理店址、用餐時間和工廠參訪差別，避免和縣畜試所牛奶盒地標混淆。",
   "area": "jinhu",
   "aliases": [
     "良金牧場",
-    "良金牧场"
+    "良金牧场",
+    "良金牧场工厂总店",
+    "良金工廠總店",
+    "良金牧場工廠總店"
   ],
   "tag": "酒糟牛肉與伴手禮",
   "duration": "用餐約1小時",
   "order": 162,
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "related": [
+    "/food/liangjin-paifang/",
+    "/food/beef-noodles/",
     "/attractions/kinmen-ceramics/",
     "/attractions/kinmen-livestock/",
     "/areas/jinhu/"
@@ -45,6 +50,12 @@
       "label": "參觀提醒",
       "value": "餐廳、門市與養殖／生產區分開；工廠參訪先洽業者。"
     }
+  ],
+  "faq": [
+    {
+      "question": "工廠總店和貞節牌坊店怎麼選？",
+      "answer": "金湖行程可選漁村160號工廠總店；金城老城散步可選莒光路一段36號貞節牌坊店。兩家電話與門牌不同。"
+    }
   ]
 }
 ---
@@ -57,3 +68,11 @@
 
 ## 把下一站排在附近
 [金門縣陶瓷廠](/attractions/kinmen-ceramics/)、[金門縣畜產試驗所](/attractions/kinmen-livestock/)。停留時間是本站的安排建議，請把停車、步行和休息另外算入；想慢慢看，可只選其中一至兩站。
+
+## 鮮沖牛肉麵怎麼安排
+官方介紹以熱湯現沖牛肉麵為特色，適合把用餐與肉乾選購合併一站。點餐前可確認麵款、部位及熟度需求；肉乾選購按包裝保存，不把購物區視為可以自行進入的生產區。
+
+## 金城分店另外導航
+若當天主要逛總兵署、模範街，可改選[良金貞節牌坊店](/food/liangjin-paifang/)，地址為金城莒光路一段36號、電話082-324080。本站將兩家分開建頁，避免把金城市區用餐排到金湖工廠。
+
+[在 Google 地圖查找工廠總店](https://www.google.com/maps/search/?api=1&query=%E9%87%91%E9%96%80%E7%B8%A3%E9%87%91%E6%B9%96%E9%8E%AE%E6%BC%81%E6%9D%91160%E8%99%9F%20%E8%89%AF%E9%87%91%E7%89%A7%E5%A0%B4%E5%B7%A5%E5%BB%A0%E7%B8%BD%E5%BA%97)。

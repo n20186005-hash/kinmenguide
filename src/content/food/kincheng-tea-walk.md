@@ -8,7 +8,7 @@
   "tag": "奶茶與街區",
   "duration": "30–60 分鐘",
   "order": 8,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-11",
   "sources": [
     {
       "title": "金門觀光旅遊網・中興路146巷店家位置資料",
@@ -22,7 +22,8 @@
   "related": [
     "/food/monga-fried-chicken/",
     "/food/pinchilin-croissants/",
-    "/tours/houpu-night-walk/"
+    "/tours/houpu-night-walk/",
+    "/food/50lan-kincheng/"
   ],
   "facts": [
     {
@@ -56,3 +57,6 @@
 編輯建議先買飲料休息，再走[浯江書院](/attractions/wujiang-academy/)、[總兵署](/attractions/kinmen-military-headquarters/)與[模範街](/attractions/mofan-street/)；館內是否能飲食依規定，先喝完或收妥。晚上想聽老城故事，可改接[後浦夜遊](/tours/houpu-night-walk/)。
 
 巷道也有居民、機車與送貨人員通行。排隊靠店家指示的範圍，不站車道拍照，飲料杯與食物包裝自行回收。含酒茶飲先確認酒精成分，駕駛者不選含酒精飲品。
+
+## 周邊50嵐，依民生路現址查找
+[50嵐金門金城店](/food/50lan-kincheng/)目前核對位置為**民生路9-15號**，可與奶茶街放在同次散步選店。奶茶一條街本身仍指**中興路146巷**，請分別使用兩個地址導航，避免把街區名稱當成所有飲料店的共同門牌。

@@ -63,7 +63,7 @@ test('catalog filters, zero results, and reset',async({page})=>{
 
 test('search accepts simplified queries and empty state',async({page})=>{
  await page.goto('/search/');await page.getByLabel('搜尋關鍵字').fill('水头');await expect(page.locator('.search-result:visible')).not.toHaveCount(0);await expect(page.locator('.search-result:visible').filter({hasText:'水頭聚落'}).first()).toBeVisible();
- await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(226);
+ await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(236);
 });
 
 test('planner respects days and transport',async({page})=>{
@@ -82,7 +82,7 @@ test('FAQ and honest contact draft download',async({page})=>{
 });
 
 test('representative pages have no horizontal overflow or broken images',async({page})=>{
- for(const route of ['/areas/kincheng/','/attractions/wentai-pagoda/','/attractions/zhushan-village/','/attractions/kinmen-port-terminal/','/attractions/shuitou-passenger-service-center/','/attractions/deyue-tower/','/itineraries/kincheng-south-day/','/attractions/zhaishan-tunnel/','/itineraries/kinmen-three-days-two-nights/','/hotels/kincheng/','/areas/lieyu/','/itineraries/lieyu-two-days/','/attractions/lieyu-culture-museum/','/attractions/hujingtou-war-museum/','/attractions/lieyu-seaside-park/','/attractions/tiger-fort/','/credits/','/transport/from-mainland-china/','/guides/entry-documents/','/guides/restricted-items/','/guides/travel-checklist/','/attractions/chen-jinglan-house/','/food/kincheng-tea-walk/','/food/aliang-fried-chicken/','/attractions/jiangong-islet/','/attractions/xiaojing-bus-stop/','/tours/houpu-night-walk/','/404.html']){
+ for(const route of ['/areas/kincheng/','/attractions/wentai-pagoda/','/attractions/zhushan-village/','/attractions/kinmen-port-terminal/','/attractions/shuitou-passenger-service-center/','/attractions/deyue-tower/','/itineraries/kincheng-south-day/','/attractions/zhaishan-tunnel/','/itineraries/kinmen-three-days-two-nights/','/hotels/kincheng/','/areas/lieyu/','/itineraries/lieyu-two-days/','/attractions/lieyu-culture-museum/','/attractions/hujingtou-war-museum/','/attractions/lieyu-seaside-park/','/attractions/tiger-fort/','/credits/','/transport/from-mainland-china/','/guides/entry-documents/','/guides/restricted-items/','/guides/travel-checklist/','/attractions/chen-jinglan-house/','/food/kincheng-tea-walk/','/food/aliang-fried-chicken/','/food/beef-noodles/','/food/liangjin-paifang/','/food/50lan-kincheng/','/food/jinshan-smoked-goose/','/attractions/jiangong-islet/','/attractions/xiaojing-bus-stop/','/tours/houpu-night-walk/','/404.html']){
   await page.goto(route);await expect(page.locator('h1')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),route).toBeTruthy();
   const eager=page.locator('img[loading=eager]');for(const img of await eager.all())expect(await img.evaluate((i:HTMLImageElement)=>i.complete&&i.naturalWidth>0),route).toBeTruthy();
  }
@@ -116,7 +116,7 @@ test('travel checklist has a printable no-JavaScript fallback',async({browser,ba
 
 test('new place aliases lead to the corrected street and real guides',async({page})=>{
  await page.goto('/search/');
- for(const [query,href] of [['奶茶一条街','/food/kincheng-tea-walk/'],['品其林','/food/pinchilin-croissants/'],['水濑路标','/guides/otter-road-signs/'],['小径车站','/attractions/xiaojing-bus-stop/'],['家乐福','/guides/carrefour-kinmen/'],['萬家福','/guides/carrefour-kinmen/'],['Carrefour','/guides/carrefour-kinmen/']]){
+ for(const [query,href] of [['奶茶一条街','/food/kincheng-tea-walk/'],['品其林','/food/pinchilin-croissants/'],['水濑路标','/guides/otter-road-signs/'],['小径车站','/attractions/xiaojing-bus-stop/'],['家乐福','/guides/carrefour-kinmen/'],['萬家福','/guides/carrefour-kinmen/'],['Carrefour','/guides/carrefour-kinmen/'],["高坑牛肉食乐苑餐厅", "/food/gaokeng-beef/"],["圆头肉干农牧概念馆", "/food/yuantou-ranch/"],["良金牧场工厂总店", "/food/liangjin-ranch/"],["良金牧场贞节牌坊店", "/food/liangjin-paifang/"],["廉坤牛肉店", "/food/liankun-beef/"],["金门第一味牛肉面店", "/food/diyiwei-beef-noodles/"],["永春广东粥", "/food/yongchun-congee/"],["50岚金门金城店", "/food/50lan-kincheng/"],["标记小吃店", "/food/biaoji-snacks/"],["蚵嗲之家", "/food/oyster-fritter-house/"],["金门牛家庄", "/food/niujiazhuang/"],["金门金山烟熏鹅肉", "/food/jinshan-smoked-goose/"]]){
   await page.getByLabel('搜尋關鍵字').fill(query);await expect(page.locator(`.search-result:visible a[href="${href}"]`)).toBeVisible();
  }
  await page.goto('/food/kincheng-tea-walk/');await expect(page.locator('h1')).toContainText('中興路146巷');await expect(page.locator('.prose')).toContainText('金城車站旁');await expect(page.locator('.article-cover')).toHaveCount(0);
