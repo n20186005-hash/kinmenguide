@@ -2,7 +2,7 @@ export const SITE = {
   name: 'Kinmen Guide', url: 'https://kinmenguide.com', locale: 'zh-Hant-TW',
   title: '金門旅遊攻略｜景點、自由行行程、美食、交通與住宿',
   description: '從紅磚聚落到海岸坑道，探索金城、金湖、金沙、金寧與烈嶼。Kinmen Guide 整理金門必去景點、三天兩夜行程、島上交通、美食、住宿與租車攻略，陪你規劃自己的金門旅行。',
-  contactEmail: import.meta.env.PUBLIC_CONTACT_EMAIL || '',
+  contactEmail: 'n20186005@gmail.com',
 };
 export const areaNames = { all: '全島', kincheng: '金城', jinhu: '金湖', jinsha: '金沙', jinning: '金寧', lieyu: '烈嶼' } as const;
 export const categories = {
