@@ -61,4 +61,4 @@ ASTRO_TELEMETRY_DISABLED=1 corepack pnpm test:browser
 
 ## 聯絡信箱
 
-站方指定 n20186005@gmail.com，已接上全站頁腳的技術支援、問題反饋與合作入口、文章附網址的郵件反饋，以及Contact和隱私頁。全部255頁的頁腳及mailto收件人核對通過；Contact帶入郵件程式，下載草稿功能保留。
+站方指定 n20186005@gmail.com，已接上全站頁腳的技術支援與問題反饋入口、About內的合作信箱、文章附網址的郵件反饋，以及Contact和隱私頁。全部255頁的頁腳及mailto收件人核對通過；Contact帶入郵件程式，下載草稿功能保留。
