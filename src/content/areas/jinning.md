@@ -10,9 +10,10 @@
   "duration": "半天至 1 天",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-13",
   "related": [
     "/attractions/kinmen-bridge/",
+    "/attractions/houhu-seaside-park/",
     "/attractions/kinmen-distillery/",
     "/attractions/guningtou-battle-museum/",
     "/attractions/mofan-street/",
@@ -46,6 +47,7 @@
 [金門大橋與岸邊觀景](/attractions/kinmen-bridge/)、[金門酒廠：金寧廠參訪](/attractions/kinmen-distillery/)。
 
 ## 新增景點與沿路吃什麼
+- [后湖海濱公園：料羅灣西岸沙灘](/attractions/houhu-seaside-park/)
 - [福寓宮旁彩繪](/attractions/fuyu-temple-photo-spot/)
 - [慈湖三角堡](/attractions/cihu-triangle-fortress/)
 - [湖下海堤](/attractions/huxia-seawall/)

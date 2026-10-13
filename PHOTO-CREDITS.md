@@ -11,6 +11,15 @@
 - [來源頁](https://commons.wikimedia.org/wiki/File:Shuitou_Settlements_%E6%B0%B4%E9%A0%AD%E8%81%9A%E8%90%BD_-_panoramio.jpg) · [原始圖片](https://upload.wikimedia.org/wikipedia/commons/f/fc/Shuitou_Settlements_%E6%B0%B4%E9%A0%AD%E8%81%9A%E8%90%BD_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original)
 - 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
 
+## place-houhu-seaside-park
+
+- 內容：2014 年后湖海濱公園入口、步道與遠方海景
+- 檔案：后湖滨海公园 - Houhu Seaside Park - 2014.09 - panoramio.jpg
+- 攝影／提供：rheins
+- 授權：[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+- [來源頁](https://commons.wikimedia.org/wiki/File:%E5%90%8E%E6%B9%96%E6%BB%A8%E6%B5%B7%E5%85%AC%E5%9B%AD_-_Houhu_Seaside_Park_-_2014.09_-_panoramio.jpg) · [原始圖片](https://upload.wikimedia.org/wikipedia/commons/f/fc/%E5%90%8E%E6%B9%96%E6%BB%A8%E6%B5%B7%E5%85%AC%E5%9B%AD_-_Houhu_Seaside_Park_-_2014.09_-_panoramio.jpg)
+- 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
+
 ## guesthouse
 
 - 內容：水頭聚落傳統民居的紅磚院落

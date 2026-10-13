@@ -56,14 +56,14 @@ test('home navigation, image loading and viewport',async({page},info)=>{
 });
 
 test('catalog filters, zero results, and reset',async({page})=>{
- await page.goto('/attractions/');await expect(page.locator('[data-card]:visible')).toHaveCount(153);
+ await page.goto('/attractions/');await expect(page.locator('[data-card]:visible')).toHaveCount(154);
  await page.getByRole('button',{name:'烈嶼',exact:true}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(34);await expect(page.locator('[data-card]:visible h3').filter({hasText:'九宮坑道'})).toBeVisible();
- await page.locator('[data-query]').fill('不存在的景點xyz');await expect(page.locator('[data-empty]')).toBeVisible();await page.getByRole('button',{name:'清除篩選'}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(153);
+ await page.locator('[data-query]').fill('不存在的景點xyz');await expect(page.locator('[data-empty]')).toBeVisible();await page.getByRole('button',{name:'清除篩選'}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(154);
 });
 
 test('search accepts simplified queries and empty state',async({page})=>{
  await page.goto('/search/');await page.getByLabel('搜尋關鍵字').fill('水头');await expect(page.locator('.search-result:visible')).not.toHaveCount(0);await expect(page.locator('.search-result:visible').filter({hasText:'水頭聚落'}).first()).toBeVisible();
- await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(245);
+ await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(246);
 });
 
 test('planner respects days and transport',async({page})=>{
@@ -124,9 +124,24 @@ test('new place aliases lead to the corrected street and real guides',async({pag
 });
 
 test('map distinguishes verified coordinates from place search',async({page})=>{
- await page.goto('/map/');await expect(page.locator('#map-count')).toHaveText('153 個景點');
+ await page.goto('/map/');await expect(page.locator('#map-count')).toHaveText('154 個景點');
  const stop=page.locator('.map-point').filter({hasText:'小徑公車亭'});await expect(stop.getByRole('link',{name:'Google 地圖'})).toHaveAttribute('href',/query=/);await expect(stop.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
  await page.getByRole('button',{name:'金湖',exact:true}).click();await expect(stop).toBeVisible();await expect(page.locator('.map-point:visible')).toHaveCount(47);
+});
+
+test('Houhu seaside park keeps its Jinning location, map point and credited photo',async({page})=>{
+ await page.goto('/attractions/');
+ await page.getByRole('button',{name:'金寧',exact:true}).click();
+ await expect(page.locator('[data-card]:visible')).toHaveCount(13);
+ await expect(page.locator('[data-card]:visible a[href="/attractions/houhu-seaside-park/"]')).toBeVisible();
+ await page.goto('/attractions/houhu-seaside-park/');
+ await expect(page.locator('h1')).toHaveText('后湖海濱公園');
+ await expect(page.getByRole('link',{name:'在 Google 地圖查看位置',exact:true})).toHaveAttribute('href','https://www.google.com/maps/search/?api=1&query=24.4158999,118.346068');
+ await expect(page.locator('.article-cover img')).toHaveAttribute('alt',/2014 年后湖海濱公園/);
+ await expect(page.locator('.article-cover a[href="/credits/#place-houhu-seaside-park"]')).toBeVisible();
+ await expect(page.locator('[data-visit-notice]')).toContainText('水域開放');
+ await page.goto('/areas/jinning/');
+ await expect(page.locator('.prose a[href="/attractions/houhu-seaside-park/"]')).toBeVisible();
 });
 
 
