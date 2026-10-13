@@ -1,0 +1,18 @@
+{
+  "sourceSha256": "82aff3960ec82755c3dd14ba729fb96891cfaebb2f667eb942e0feee106d24ad",
+  "pages": 1,
+  "tableRows": 33,
+  "columns": 28,
+  "days": 30,
+  "directions": 2,
+  "sailingsPerDirectionPerDay": 12,
+  "totalSailings": 720,
+  "checks": [
+    "All table cells equal independently extracted PDF text stream",
+    "All dates and weekdays checked against the calendar",
+    "Departure headers identical in both directions",
+    "No empty vessel cells",
+    "Source PDF copied byte-for-byte"
+  ],
+  "note": "Source table has no separate footnotes, fares, check-in deadlines or cancellation status. Vessel names retain source spelling."
+}

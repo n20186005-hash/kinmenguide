@@ -10,8 +10,9 @@
   "duration": "6 分鐘",
   "order": 7,
   "featured": false,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-12",
   "related": [
+    "/transport/xiamen-kinmen-ferry-november-2026/",
     "/attractions/kinmen-port-terminal/",
     "/transport/from-mainland-china/",
     "/guides/entry-documents/",
@@ -45,6 +46,9 @@
   ]
 }
 ---
+
+## 2026年11月廈門往返金門船班
+[查詢11月廈金小三通船班表](/transport/xiamen-kinmen-ferry-november-2026/)：選搭船日期和方向，查看當日12班開航時間及船名，也可下載站方提供的原始PDF。此表只含廈門五通線，不含石井線；實際開航與換船請向承運公司確認。
 
 ## 兩條航線，抵達同一個金門
 | 出發港 | 抵達港 | 官方概略航程 |

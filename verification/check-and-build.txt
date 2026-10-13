@@ -1,12 +1,12 @@
-2026-10-12 — ASTRO_TELEMETRY_DISABLED=1 corepack pnpm validate
+2026-10-12 - ASTRO_TELEMETRY_DISABLED=1 corepack pnpm validate
 
-Result (51 files):
+Result (53 files):
 - 0 errors
 - 0 warnings
 - 0 hints
-18:13:06 [build] output: "static"
-18:13:06 [build] mode: "static"
-18:13:06 [build] 262 page(s) built in 920ms
-18:13:06 [build] Complete!
-Verified 262 pages; 18937 internal references; 1141 image instances; 1494 schema nodes. Titles, descriptions, canonicals, links, anchors, sitemap, robots and exact versions pass.
+22:39:06 [build] output: "static"
+22:39:06 [build] mode: "static"
+22:39:06 [build] 263 page(s) built in 839ms
+22:39:06 [build] Complete!
+Verified 263 pages; 19259 internal references; 1141 image instances; 1500 schema nodes. Titles, descriptions, canonicals, links, anchors, sitemap, robots and exact versions pass.
 Photo audit passed: 127 decodable credited assets; 125/153 attractions with photographs; 28 explicitly documented pending.

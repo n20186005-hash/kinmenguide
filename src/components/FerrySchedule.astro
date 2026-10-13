@@ -1,0 +1,65 @@
+---
+import schedule from '../data/ferry-2026-11.json';
+const directions = [{ key: 'toKinmen', label: '廈門五通 → 金門', short: '五通出發' }, { key: 'toWutong', label: '金門 → 廈門五通', short: '金門出發' }] as const;
+---
+<section class="ferry-schedule" id="ferry-schedule" aria-labelledby="ferry-heading" data-ferry-schedule>
+  <div class="ferry-heading"><span class="eyebrow">NOVEMBER 2026 / XIAMEN ↔ KINMEN</span><h2 id="ferry-heading">11月廈金小三通船班查詢</h2><p>2026年11月1日至30日 · 兩個方向每日各12班</p></div>
+  <p class="ferry-notice">依站方提供的11月PDF整理，供行程規劃參考；不是即時餘票或停航資訊。改班、換船及是否開航，請以承運公司當日通知為準。</p>
+  <div class="ferry-actions"><a class="button button-light" href={schedule.sourceFile} download>下載11月原始PDF</a><a class="text-link" href="https://www.kinmen.travel/zh-tw/news/details/3470" target="_blank" rel="noopener noreferrer">查看官方船班與訂票入口 ↗</a></div>
+  <div class="ferry-picker" data-ferry-picker hidden>
+    <h3>選擇搭船日期與方向</h3>
+    <div class="ferry-controls"><label for="ferry-date">搭船日期<select id="ferry-date">{schedule.days.map(d => <option value={d.date}>{d.date.replaceAll('-', '/')}（週{d.weekday}）</option>)}</select></label><label for="ferry-direction">航行方向<select id="ferry-direction">{directions.map(d => <option value={d.key}>{d.label}</option>)}</select></label></div>
+    <p class="ferry-result" role="status" aria-live="polite" data-ferry-status></p>
+    <table class="ferry-daily"><caption data-ferry-caption>當日開航時間與船名</caption><thead><tr><th scope="col">開航時間</th><th scope="col">船名（依原表）</th></tr></thead><tbody data-ferry-rows></tbody></table>
+    <p class="ferry-small">兩地均為 UTC+8；時間是出發時間，不是抵達或報到截止時間。船名保留原表寫法。</p>
+  </div>
+  <noscript><p>下方完整月表可直接閱讀；開啟 JavaScript 後可按日期及方向查詢。</p></noscript>
+  <details class="ferry-month" open data-ferry-month><summary>查看完整11月月表（雙向720班）</summary>
+    <p class="ferry-small">手機上可在表格內左右滑動；日期欄固定在左側，方便對照。</p>
+    {directions.map(direction => <section class="ferry-direction-table" aria-label={direction.label}>
+      <h3>{direction.label}</h3><div class="ferry-table-scroll" tabindex="0" role="region" aria-label={`${direction.label}完整月表，可橫向捲動`}><table data-ferry-full={direction.key}>
+        <caption>2026年11月 · {direction.short} · 欄位為開航時間</caption>
+        <thead><tr><th scope="col">日期／星期</th>{schedule.times.map(t => <th scope="col">{t}</th>)}</tr></thead>
+        <tbody>{schedule.days.map(day => <tr data-ferry-day={day.date}><th scope="row">11/{Number(day.date.slice(-2))}（{day.weekday}）</th>{day[direction.key].map(vessel => <td>{vessel}</td>)}</tr>)}</tbody>
+      </table></div>
+    </section>)}
+  </details>
+</section>
+<script>
+import schedule from '../data/ferry-2026-11.json';
+const root = document.querySelector<HTMLElement>('[data-ferry-schedule]');
+if (root) {
+  const date = root.querySelector<HTMLSelectElement>('#ferry-date')!;
+  const direction = root.querySelector<HTMLSelectElement>('#ferry-direction')!;
+  const rows = root.querySelector<HTMLTableSectionElement>('[data-ferry-rows]')!;
+  const status = root.querySelector<HTMLElement>('[data-ferry-status]')!;
+  const caption = root.querySelector<HTMLElement>('[data-ferry-caption]')!;
+  function update() {
+    const day = schedule.days.find(d => d.date === date.value) ?? schedule.days[0];
+    const key = direction.value === 'toWutong' ? 'toWutong' : 'toKinmen';
+    const label = key === 'toKinmen' ? '廈門五通 → 金門' : '金門 → 廈門五通';
+    rows.replaceChildren(...schedule.times.map((time, i) => {
+      const row = document.createElement('tr');
+      const cell = document.createElement('th'); cell.scope = 'row'; cell.textContent = time;
+      const vessel = document.createElement('td'); vessel.textContent = day[key][i];
+      row.append(cell, vessel); return row;
+    }));
+    const heading = `${day.date.replaceAll('-', '/')}（週${day.weekday}） · ${label}`;
+    status.textContent = `${heading} · 共 ${day[key].length} 班`;
+    caption.textContent = `${heading} 開航表`;
+  }
+  // A date link can be shared; unsupported dates safely use November 1.
+  const params = new URLSearchParams(window.location.search);
+  const requestedDate = params.get('date');
+  if (schedule.days.some(d => d.date === requestedDate)) date.value = requestedDate!;
+  if (params.get('direction') === 'toWutong') direction.value = 'toWutong';
+  date.addEventListener('change', update); direction.addEventListener('change', update);
+  update();
+  root.querySelector<HTMLElement>('[data-ferry-picker]')!.hidden = false;
+  root.querySelector<HTMLDetailsElement>('[data-ferry-month]')!.open = false;
+}
+</script>
+<style>
+.ferry-schedule{scroll-margin-top:110px;margin:10px 0 45px;min-width:0}.ferry-heading{border-top:3px solid #9e4936;padding-top:23px}.ferry-heading h2{font-family:var(--font-serif);font-size:30px;line-height:1.45;margin:10px 0}.ferry-heading p{color:var(--muted);font-size:14px}.ferry-notice{font-size:14px;line-height:1.9;background:#f1e9dc;border-left:3px solid #aa6542;padding:16px 20px;margin:20px 0}.ferry-actions{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:22px 0 28px}.ferry-actions a{font-size:13px}.ferry-picker{padding:25px;background:#eaece1;border:1px solid #d6d7c9}.ferry-picker h3,.ferry-direction-table h3{font-family:var(--font-serif);font-size:23px;margin:0 0 18px}.ferry-controls{display:grid;grid-template-columns:1fr 1fr;gap:18px}.ferry-controls label{display:grid;gap:8px;font-size:13px;font-weight:600}.ferry-controls select{width:100%;min-width:0;padding:12px 10px;background:#fffdf8;border:1px solid #bfbcae;color:#293d32;font:inherit;font-size:15px;border-radius:0}.ferry-result{font-size:14px;font-weight:600;margin:23px 0 14px}.ferry-daily{border-collapse:collapse;width:100%;background:#fffdf8;text-align:left;font-size:15px}.ferry-daily th,.ferry-daily td{padding:12px 16px;border-bottom:1px solid #ddd8cc}.ferry-daily th[scope=row]{font-size:20px;font-variant-numeric:tabular-nums;color:#934530}.ferry-daily thead{background:#344b3c;color:#fff}.ferry-daily caption{font-size:12px;text-align:left;padding-bottom:10px;color:#5d6658}.ferry-small{font-size:12px;line-height:1.9;color:var(--muted);margin:16px 0 0}.ferry-month{margin-top:24px;border:1px solid #d8d0c2;padding:20px;min-width:0}.ferry-month summary{cursor:pointer;font-weight:600;line-height:1.7}.ferry-direction-table{margin-top:26px;min-width:0}.ferry-table-scroll{overflow:auto;max-width:100%;border:1px solid #d4cabb}.ferry-table-scroll table{border-collapse:separate;border-spacing:0;min-width:1400px;width:100%;font-size:13px;text-align:left}.ferry-table-scroll caption{padding:12px;text-align:left;font-size:13px}.ferry-table-scroll th,.ferry-table-scroll td{padding:10px;border-right:1px solid #ded6c8;border-bottom:1px solid #ded6c8;white-space:nowrap}.ferry-table-scroll thead th{background:#344b3c;color:#fff}.ferry-table-scroll tbody th{background:#eee7da}.ferry-table-scroll tr>:first-child{position:sticky;left:0;z-index:1}.ferry-table-scroll tbody tr:nth-child(even) td{background:#f1ede4}
+@media(max-width:600px){.ferry-heading h2{font-size:25px}.ferry-picker{padding:18px 14px}.ferry-controls{grid-template-columns:1fr;gap:14px}.ferry-month{padding:16px 12px}.ferry-daily th,.ferry-daily td{padding:11px 12px}.ferry-result{line-height:1.8}.ferry-actions{gap:15px}.ferry-actions .button{width:100%;justify-content:center}}
+</style>
