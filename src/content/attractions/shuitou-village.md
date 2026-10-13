@@ -10,8 +10,9 @@
   "duration": "90–120 分鐘",
   "order": 5,
   "featured": true,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-12",
   "related": [
+    "/itineraries/kinmen-culture-trail/",
     "/attractions/deyue-tower/",
     "/attractions/jinshui-school/",
     "/attractions/overseas-chinese-museum/",

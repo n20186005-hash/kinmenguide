@@ -12,8 +12,9 @@
   ],
   "area": "kincheng",
   "order": 83,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-12",
   "related": [
+    "/itineraries/kinmen-with-kids/",
     "/attractions/juguang-lake/",
     "/attractions/juguang-tower/",
     "/areas/kincheng/"

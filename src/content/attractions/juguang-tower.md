@@ -10,8 +10,9 @@
   "duration": "45–60 分鐘",
   "order": 2,
   "featured": true,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-12",
   "related": [
+    "/itineraries/kinmen-family-slow-travel/",
     "/attractions/juguang-lake/",
     "/attractions/juguang-inclusive-park/",
     "/attractions/muma-hou-shrine/",

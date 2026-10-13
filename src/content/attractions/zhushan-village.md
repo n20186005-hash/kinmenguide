@@ -11,8 +11,9 @@
   ],
   "area": "kincheng",
   "order": 71,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-12",
   "related": [
+    "/itineraries/kinmen-couples/",
     "/attractions/wentai-pagoda/",
     "/attractions/oucuo-tank/",
     "/areas/kincheng/"

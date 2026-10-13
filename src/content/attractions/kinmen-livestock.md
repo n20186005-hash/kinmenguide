@@ -9,8 +9,9 @@
   "tag": "牧場與親子",
   "duration": "60–90 分鐘；預約體驗另計",
   "order": 20,
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-12",
   "related": [
+    "/itineraries/kinmen-with-kids/",
     "/attractions/taihu-lake/",
     "/food/jinhu-food/",
     "/hotels/family/"

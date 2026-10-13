@@ -1,0 +1,14 @@
+---
+import Photo from './Photo.astro';
+import { travelThemes } from '../data/travel-themes';
+interface Props { compact?: boolean; }
+const { compact = false } = Astro.props;
+---
+<section id="travel-themes" class:list={['travel-themes', { 'travel-themes-compact': compact }]} aria-labelledby="travel-themes-title">
+  <div class="section-heading"><div><span class="eyebrow">YOUR COMPANY, YOUR KIND OF JOURNEY</span><h2 id="travel-themes-title">和誰來，想怎麼玩？</h2><p>依同行旅人與旅行興趣，挑一條適合自己的路線。</p></div><a class="text-link" href="/itineraries/">所有行程提案</a></div>
+  <div class="theme-grid">{travelThemes.map(t => <a class="theme-card" href={`/itineraries/${t.route}/`} data-travel-theme={t.id}>
+    {!compact && <Photo name={t.image} sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"/>}
+    <div class="theme-copy"><span class="theme-label">{t.label}<span aria-hidden="true">↗</span></span><h3>{t.title}</h3><p>{t.text}</p><small>{t.duration}</small></div>
+  </a>)}</div>
+  <p class="theme-footnote">選好路線後，打開喜歡的景點加入<a href="/trip/">我的行程</a>，按自己的天數調整，也能保存成圖片。</p>
+</section>

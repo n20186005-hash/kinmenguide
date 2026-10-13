@@ -1,6 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
+import { themeKeys } from './data/travel-themes';
 const internalLink = z.string().regex(/^\/[a-z0-9/-]*\/$/);
 const common = z.object({
   title: z.string().min(2),
@@ -29,6 +30,7 @@ const attraction = common.extend({
   admission: z.string(),
 });
 const itinerary = common.extend({
+  themes: z.array(z.enum(themeKeys)).default([]),
   days: z.array(z.object({
     title: z.string(),
     description: z.string(),

@@ -8,7 +8,7 @@
   "tag": "書院與古蹟",
   "duration": "30–45 分鐘",
   "order": 23,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-12",
   "sources": [
     {
       "title": "金門觀光旅遊網・浯江書院",
@@ -16,6 +16,7 @@
     }
   ],
   "related": [
+    "/itineraries/kinmen-culture-trail/",
     "/tours/houpu-night-walk/",
     "/food/yongchun-congee/",
     "/attractions/kinmen-military-headquarters/"

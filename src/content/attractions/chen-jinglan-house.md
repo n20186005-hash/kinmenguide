@@ -9,8 +9,9 @@
   "tag": "僑鄉洋樓",
   "duration": "45–75 分鐘",
   "order": 14,
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-12",
   "related": [
+    "/itineraries/kinmen-couples/",
     "/attractions/chenggong-tunnel/",
     "/attractions/chenggong-beach/",
     "/attractions/chenggong-wind-lion/"

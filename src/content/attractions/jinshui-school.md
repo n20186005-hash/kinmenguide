@@ -9,8 +9,9 @@
   "tag": "僑鄉教育",
   "duration": "30–45 分鐘",
   "order": 16,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-12",
   "related": [
+    "/itineraries/kinmen-culture-trail/",
     "/attractions/overseas-chinese-museum/",
     "/attractions/deyue-tower/",
     "/attractions/shuitou-village/",

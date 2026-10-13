@@ -9,8 +9,9 @@
   "tag": "湖畔自然",
   "duration": "散步 45–90 分鐘",
   "order": 17,
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-12",
   "related": [
+    "/itineraries/kinmen-family-slow-travel/",
     "/attractions/august-23-battle-museum/",
     "/attractions/rongyuan/",
     "/attractions/zhongzheng-park-3d/",

@@ -10,8 +10,9 @@
   "duration": "30–60 分鐘",
   "order": 9,
   "featured": false,
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-12",
   "related": [
+    "/itineraries/kinmen-solo/",
     "/areas/kincheng/",
     "/attractions/kinmen-military-headquarters/",
     "/itineraries/kinmen-three-days-two-nights/",

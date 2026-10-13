@@ -1,4 +1,6 @@
 ---
+import TravelThemes from '../../components/TravelThemes.astro';
+import { travelThemes } from '../../data/travel-themes';
 import ArrivalGuide from '../../components/ArrivalGuide.astro';
 import Base from '../../layouts/Base.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
@@ -16,19 +18,24 @@ const schema = [{'@type':'CollectionPage',name:category.title,url:`${SITE.url}/$
 <Base title={category.title} description={category.description} image={category.image} breadcrumbs={breadcrumbs} schema={schema}>
  <div class="shell"><Breadcrumb items={breadcrumbs}/><section class="page-hero"><div><span class="eyebrow">{category.en}</span><h1>{category.title}</h1><p>{category.description}</p></div><Photo name={category.image} eager sizes="(max-width: 760px) 100vw, 45vw"/></section>
  {key==='transport' && <ArrivalGuide/>}
- <section class="pb-16" aria-label={category.name} data-catalog><div class="filter-bar"><div class="filter-chips" role="group" aria-label="依地區篩選">{Object.entries(areaNames).map(([area,name]) => <button class="chip" type="button" data-filter={area} aria-pressed={area === 'all'}>{name}</button>)}</div><label class="catalog-search"><span class="sr-only">搜尋{category.name}</span><input class="search-input" type="search" placeholder="搜尋這個欄目…" data-query/></label></div><p class="result-count" aria-live="polite" data-count>{entries.length} 篇指南</p><div class="card-grid">{entries.map(entry => <Card entry={entry}/>)}</div><div class="empty-state" hidden data-empty><h2>這個條件還沒有找到內容</h2><p>試著換個關鍵字，或查看全島的指南。</p><button type="button" class="button button-light" data-reset>清除篩選</button></div><noscript><p>目前顯示全部內容。啟用 JavaScript 後可依地區和關鍵字篩選。</p></noscript></section></div>
+ {['attractions','itineraries'].includes(key) && <TravelThemes compact/>}
+ <section class="pb-16" aria-label={category.name} data-catalog>{key === 'itineraries' && <div class="theme-filters"><span class="filter-label">依旅人與主題</span><div class="filter-chips" role="group" aria-label="依旅人與主題篩選"><button type="button" class="chip" data-theme="all" aria-pressed="true">全部主題</button>{travelThemes.map(t => <button type="button" class="chip" data-theme={t.id} aria-pressed="false">{t.label}</button>)}</div></div>}<div class="filter-bar"><div class="filter-chips" role="group" aria-label="依地區篩選">{Object.entries(areaNames).map(([area,name]) => <button class="chip" type="button" data-filter={area} aria-pressed={area === 'all'}>{name}</button>)}</div><label class="catalog-search"><span class="sr-only">搜尋{category.name}</span><input class="search-input" type="search" placeholder="搜尋這個欄目…" data-query/></label></div><p class="result-count" aria-live="polite" data-count>{entries.length} 篇指南</p><div class="card-grid">{entries.map(entry => <Card entry={entry}/>)}</div><div class="empty-state" hidden data-empty><h2>這個條件還沒有找到內容</h2><p>試著換個關鍵字，或查看全島的指南。</p><button type="button" class="button button-light" data-reset>清除篩選</button></div><noscript><p>目前顯示全部內容。啟用 JavaScript 後可依地區和關鍵字篩選。</p></noscript></section></div>
 </Base>
 <script>
 import { normalizeSearch } from '../../lib/search';
 const root = document.querySelector<HTMLElement>('[data-catalog]');
 const cards = [...(root?.querySelectorAll<HTMLElement>('[data-card]') ?? [])];
 const buttons = [...(root?.querySelectorAll<HTMLButtonElement>('[data-filter]') ?? [])];
+const themeButtons = [...(root?.querySelectorAll<HTMLButtonElement>('[data-theme]') ?? [])];
+const requestedTheme = new URLSearchParams(window.location.search).get('theme');
+let theme = themeButtons.some(b => b.dataset.theme === requestedTheme) ? requestedTheme! : 'all';
 const input = root?.querySelector<HTMLInputElement>('[data-query]');
 const requestedArea = new URLSearchParams(window.location.search).get('area');
 let area = buttons.some(b=>b.dataset.filter===requestedArea) ? requestedArea! : 'all';
-function update() { let n = 0; const query = normalizeSearch(input?.value || ''); for (const card of cards) { const matchesArea = area === 'all' || card.dataset.area === area || card.dataset.area === 'all'; const match = matchesArea && normalizeSearch(card.dataset.search || '').includes(query); card.hidden = !match; if(match) n++; } const count=root?.querySelector('[data-count]'); if(count) count.textContent=`找到 ${n} 篇指南`; const empty=root?.querySelector<HTMLElement>('[data-empty]'); if(empty) empty.hidden=n!==0; buttons.forEach(b => b.setAttribute('aria-pressed',String(b.dataset.filter === area))); }
+function update() { let n = 0; const query = normalizeSearch(input?.value || ''); for (const card of cards) { const matchesArea = area === 'all' || card.dataset.area === area || card.dataset.area === 'all'; const matchesTheme = theme === 'all' || (card.dataset.themes || '').split(' ').includes(theme); const match = matchesArea && matchesTheme && normalizeSearch(card.dataset.search || '').includes(query); card.hidden = !match; if(match) n++; } const count=root?.querySelector('[data-count]'); if(count) count.textContent=`找到 ${n} 篇指南`; const empty=root?.querySelector<HTMLElement>('[data-empty]'); if(empty) empty.hidden=n!==0; buttons.forEach(b => b.setAttribute('aria-pressed',String(b.dataset.filter === area))); themeButtons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.theme === theme))); }
 buttons.forEach(b => b.addEventListener('click',() => { area=b.dataset.filter || 'all'; update(); }));
+themeButtons.forEach(b => b.addEventListener('click', () => { theme = b.dataset.theme || 'all'; update(); }));
 input?.addEventListener('input',update);
 update();
-root?.querySelector('[data-reset]')?.addEventListener('click',() => { area='all'; if(input) input.value=''; update(); input?.focus(); });
+root?.querySelector('[data-reset]')?.addEventListener('click',() => { area='all'; theme='all'; if(input) input.value=''; update(); input?.focus(); });
 </script>
