@@ -28,20 +28,20 @@ test('theme filters compose with area and text and reset the empty state', async
   await page.locator('[data-filter="jinhu"]').click();
   await expect(page.locator('[data-empty]')).toBeVisible();
   await page.getByRole('button', { name: '清除篩選' }).click();
-  await expect(page.locator('[data-card]:visible')).toHaveCount(18);
+  await expect(page.locator('[data-card]:visible')).toHaveCount(19);
   await expect(page.getByRole('button', { name: '全部主題', exact: true })).toHaveAttribute('aria-pressed', 'true');
   await page.locator('[data-query]').fill('情侣游');
   await expect(page.locator('[data-card]:visible')).toHaveCount(1);
   await expect(page.locator('[data-card]:visible h3')).toContainText('情侶');
   await page.goto('/itineraries/?theme=unknown');
-  await expect(page.locator('[data-card]:visible')).toHaveCount(18);
+  await expect(page.locator('[data-card]:visible')).toHaveCount(19);
 });
 
 test('theme route discovery works without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
   await page.goto('http://127.0.0.1:4321/itineraries/');
-  await expect(page.locator('[data-card]:visible')).toHaveCount(18);
+  await expect(page.locator('[data-card]:visible')).toHaveCount(19);
   await page.locator('[data-travel-theme="family"]').click();
   await expect(page.locator('h1')).toContainText('家庭');
   await expect(page.locator('.timeline-day')).toHaveCount(2);

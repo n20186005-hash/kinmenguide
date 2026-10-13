@@ -36,11 +36,25 @@ for(const file of files){
   if(url.hash&&fs.existsSync(target)&&target.endsWith('.html')){const doc=target===file?$:load(fs.readFileSync(target,'utf8'));const id=decodeURIComponent(url.hash.slice(1));check(doc('[id]').toArray().some(n=>doc(n).attr('id')===id),`Missing anchor ${value}`);}
  });
 }
-const sitemapIndex=fs.readFileSync(path.join(root,'sitemap-index.xml'),'utf8');assert.ok(sitemapIndex.includes('https://kinmenguide.com/sitemap-0.xml'));
-const sitemap=fs.readFileSync(path.join(root,'sitemap-0.xml'),'utf8');for(const r of routes.filter(r=>r!='/404.html'&&r!='/plan/'&&r!='/trip/'))assert.ok(sitemap.includes('https://kinmenguide.com'+r),`Missing sitemap route ${r}`);
-assert.ok(!sitemap.includes('/404'));
-assert.ok(!sitemap.includes('/plan/'),'noindex plan page should not be in sitemap');
-assert.ok(!sitemap.includes('/trip/'),'private trip page should not be in sitemap');
+const sitemapIndex=load(fs.readFileSync(path.join(root,'sitemap-index.xml'),'utf8'),{xmlMode:true});
+assert.deepEqual(sitemapIndex('sitemap loc').map((_,el)=>sitemapIndex(el).text()).get(),['https://kinmenguide.com/sitemap-0.xml']);
+const sitemap=load(fs.readFileSync(path.join(root,'sitemap-0.xml'),'utf8'),{xmlMode:true});
+const sitemapUrls=sitemap('url').map((_,el)=>({loc:sitemap(el).find('loc').text(),lastmod:sitemap(el).find('lastmod').text()})).get();
+const expectedUrls=routes.filter(r=>r!='/404.html'&&r!='/plan/'&&r!='/trip/').map(r=>'https://kinmenguide.com'+r);
+assert.deepEqual(sitemapUrls.map(item=>item.loc).sort(),expectedUrls.sort(),'Sitemap must list every and only indexable canonical URL once');
+for(const {loc,lastmod} of sitemapUrls){
+ const url=new URL(loc);
+ assert.equal(url.origin,'https://kinmenguide.com');
+ const match=url.pathname.match(/^\/([a-z-]+)\/([a-z0-9-]+)\/$/);
+ const source=match&&path.join('src/content',match[1],`${match[2]}.md`);
+ if(source&&fs.existsSync(source)){
+  const raw=fs.readFileSync(source,'utf8');
+  const frontmatter=raw.match(/^---\n([\s\S]*?)\n---/);
+  assert.ok(frontmatter,`Missing frontmatter for ${url.pathname}`);
+  const updatedAt=JSON.parse(frontmatter[1]).updatedAt;
+  assert.equal(lastmod.slice(0,10),updatedAt,`Incorrect lastmod for ${url.pathname}`);
+ }else assert.equal(lastmod,'',`Undocumented lastmod for ${url.pathname}`);
+}
 assert.ok(fs.readFileSync(path.join(root,'robots.txt'),'utf8').includes('https://kinmenguide.com/sitemap-index.xml'));
 const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));assert.match(pkg.packageManager,/^pnpm@\d+\.\d+\.\d+$/);
 for(const group of ['dependencies','devDependencies'])for(const [name,version]of Object.entries(pkg[group]))assert.match(version,/^\d+\.\d+\.\d+$/,`${name} must be exact stable semver`);

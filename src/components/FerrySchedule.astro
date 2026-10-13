@@ -8,7 +8,7 @@ const directions = [{ key: 'toKinmen', label: '廈門五通 → 金門', short: 
   <div class="ferry-actions"><a class="button button-light" href={schedule.sourceFile} download>下載11月原始PDF</a><a class="text-link" href="https://www.kinmen.travel/zh-tw/news/details/3470" target="_blank" rel="noopener noreferrer">查看官方船班與訂票入口 ↗</a></div>
   <div class="ferry-picker" data-ferry-picker hidden>
     <h3>選擇搭船日期與方向</h3>
-    <div class="ferry-controls"><label for="ferry-date">搭船日期<select id="ferry-date">{schedule.days.map(d => <option value={d.date}>{d.date.replaceAll('-', '/')}（週{d.weekday}）</option>)}</select></label><label for="ferry-direction">航行方向<select id="ferry-direction">{directions.map(d => <option value={d.key}>{d.label}</option>)}</select></label></div>
+    <div class="ferry-controls"><label for="ferry-date"><span id="ferry-date-label">搭船日期</span><select id="ferry-date" aria-labelledby="ferry-date-label">{schedule.days.map(d => <option value={d.date}>{d.date.replaceAll('-', '/')}（週{d.weekday}）</option>)}</select></label><label for="ferry-direction"><span id="ferry-direction-label">航行方向</span><select id="ferry-direction" aria-labelledby="ferry-direction-label">{directions.map(d => <option value={d.key}>{d.label}</option>)}</select></label></div>
     <p class="ferry-result" role="status" aria-live="polite" data-ferry-status></p>
     <table class="ferry-daily"><caption data-ferry-caption>當日開航時間與船名</caption><thead><tr><th scope="col">開航時間</th><th scope="col">船名（依原表）</th></tr></thead><tbody data-ferry-rows></tbody></table>
     <p class="ferry-small">兩地均為 UTC+8；時間是出發時間，不是抵達或報到截止時間。船名保留原表寫法。</p>

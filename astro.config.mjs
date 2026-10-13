@@ -7,8 +7,7 @@ import path from 'node:path';
 const SITE_URL = 'https://kinmenguide.com';
 const CONTENT_COLLECTIONS = ['attractions', 'itineraries', 'food', 'transport', 'areas', 'hotels', 'car-rental', 'tours', 'guides'];
 
-// Map a generated page URL to the content file's `updatedAt` so Google gets a
-// real freshness signal. Falls back to the build date for non-content pages.
+// Only publish dates that can be verified against the matching content page.
 function lastmodFor(urlPath) {
   const match = urlPath.match(/^\/([a-z-]+)\/([a-z0-9-]+)\/$/);
   if (match && CONTENT_COLLECTIONS.includes(match[1])) {
@@ -16,16 +15,16 @@ function lastmodFor(urlPath) {
     try {
       const raw = fs.readFileSync(file, 'utf8');
       const frontmatter = raw.match(/^---\n([\s\S]*?)\n---/);
-      const dateLine = frontmatter && frontmatter[1].match(/updatedAt:\s*(\S+)/);
-      if (dateLine) {
-        const date = new Date(dateLine[1]);
-        if (!Number.isNaN(date.getTime())) return date;
+      const data = frontmatter && JSON.parse(frontmatter[1]);
+      if (typeof data?.updatedAt === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(data.updatedAt)) {
+        const date = new Date(`${data.updatedAt}T00:00:00.000Z`);
+        if (!Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === data.updatedAt) return date;
       }
     } catch {
-      // source missing or unreadable: fall through to build date
+      // Unknown dates should be omitted, rather than replaced with build time.
     }
   }
-  return new Date();
+  return undefined;
 }
 
 export default defineConfig({
@@ -36,7 +35,9 @@ export default defineConfig({
     filter: (page) => !page.endsWith('/404/') && !page.endsWith('/plan/') && !page.endsWith('/trip/'),
     serialize: (item) => {
       const url = new URL(item.url);
-      item.lastmod = lastmodFor(url.pathname);
+      const lastmod = lastmodFor(url.pathname);
+      if (lastmod) item.lastmod = lastmod;
+      else delete item.lastmod;
       return item;
     },
   })],

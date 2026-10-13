@@ -2,17 +2,18 @@
 {
   "title": "烈嶼・小金門",
   "nameEn": "Lieyu / Little Kinmen",
-  "seoTitle": "烈嶼景點攻略｜小金門分區、34個景點與一日兩日路線",
-  "description": "烈嶼從九宮坑道、沙溪堡到湖井頭與貓公石，還有東林古井、親子公園和聚落信仰。依四個區域整理34個景點、開放提醒、交通及一日兩日安排，少繞路慢慢玩小金門。",
+  "seoTitle": "烈嶼景點攻略｜小金門34個景點、一日單車與兩日路線",
+  "description": "烈嶼從九宮坑道、沙溪堡到湖井頭與貓公石，還有東林古井、親子公園和聚落信仰。依四區整理34個景點、開放提醒、跨橋交通、一日單車及兩日慢遊安排。",
   "image": "bridge",
   "area": "lieyu",
   "tag": "跨海慢旅行",
   "duration": "1–2 天",
   "order": 5,
   "featured": true,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-13",
   "related": [
     "/itineraries/lieyu-one-day/",
+    "/itineraries/lieyu-cycling-one-day/",
     "/itineraries/lieyu-two-days/",
     "/transport/kinmen-to-lieyu/",
     "/attractions/lieyu-seaside-park/"
@@ -33,7 +34,7 @@
 ## 初訪先選一個主題
 烈嶼不只有九宮坑道。南岸看岬角、漁港與夕照，西北岸有戰史、營區和岩石地景，東林與后頭則適合聚落、親子和信仰散步。以下分區收錄34個景點與參訪資訊點；其中開放待確認的虎堡及L56只提供辨認與查詢提醒，不代表全部都可隨時入內。
 
-半天留給九宮周邊與午餐；第一次環島可選[一日路線](/itineraries/lieyu-one-day/)的五六站。若對營區、古井或民俗有興趣，參考[兩天慢遊](/itineraries/lieyu-two-days/)，每半天保留交通和休息空間。
+半天留給九宮周邊與午餐；第一次環島可選[一日路線](/itineraries/lieyu-one-day/)的五六站。喜歡騎行可先讀[金門自行車旅行指南](/guides/kinmen-cycling/)，再從[烈嶼單車一日遊](/itineraries/lieyu-cycling-one-day/)刪減適合自己的站點。若對營區、古井或民俗有興趣，參考[兩天慢遊](/itineraries/lieyu-two-days/)，每半天保留交通和休息空間。
 
 ## 九宮、羅厝與東林：坑道到聚落
 | 景點 | 怎麼選 |
