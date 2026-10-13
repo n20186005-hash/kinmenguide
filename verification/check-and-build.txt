@@ -4,9 +4,9 @@ Result (53 files):
 - 0 errors
 - 0 warnings
 - 0 hints
-22:39:06 [build] output: "static"
-22:39:06 [build] mode: "static"
-22:39:06 [build] 263 page(s) built in 839ms
-22:39:06 [build] Complete!
-Verified 263 pages; 19259 internal references; 1141 image instances; 1500 schema nodes. Titles, descriptions, canonicals, links, anchors, sitemap, robots and exact versions pass.
+22:41:14 [build] output: "static"
+22:41:14 [build] mode: "static"
+22:41:14 [build] 263 page(s) built in 838ms
+22:41:14 [build] Complete!
+Verified 263 pages; 19016 internal references; 1141 image instances; 1500 schema nodes. Titles, descriptions, canonicals, links, anchors, sitemap, robots and exact versions pass.
 Photo audit passed: 127 decodable credited assets; 125/153 attractions with photographs; 28 explicitly documented pending.
