@@ -133,7 +133,7 @@ test('Houhu seaside park keeps its Jinning location, map point and credited phot
  await page.goto('/attractions/');
  await page.getByRole('button',{name:'金寧',exact:true}).click();
  await expect(page.locator('[data-card]:visible')).toHaveCount(13);
- await expect(page.locator('[data-card]:visible a[href="/attractions/houhu-seaside-park/"]')).toBeVisible();
+ await expect(page.locator('[data-card]:visible h3 a[href="/attractions/houhu-seaside-park/"]')).toBeVisible();
  await page.goto('/attractions/houhu-seaside-park/');
  await expect(page.locator('h1')).toHaveText('后湖海濱公園');
  await expect(page.getByRole('link',{name:'在 Google 地圖查看位置',exact:true})).toHaveAttribute('href','https://www.google.com/maps/search/?api=1&query=24.4158999,118.346068');
