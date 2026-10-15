@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { SITE } from '../data/site';
+---
+<Base title="使用條款｜Kinmen Guide" description="閱讀 Kinmen Guide 的網站使用條款：旅遊資訊的適用範圍、官方資訊核對、第三方服務、內容與照片授權，以及聯絡方式。" breadcrumbs={[{name:'使用條款'}]}>
+  <div class="shell reading-page">
+    <Breadcrumb items={[{name:'使用條款'}]}/>
+    <span class="eyebrow">TERMS OF USE</span>
+    <h1>使用條款</h1>
+    <p class="small">最後更新：2026 年 10 月 14 日</p>
+    <div class="prose">
+      <h2>網站提供的內容</h2>
+      <p>Kinmen Guide 提供獨立編輯的金門景點、路線、交通、餐飲與行前資訊，供旅程規劃參考。頁面標示的停留時間與動線是編輯建議，並非票券、預訂、即時班次或入境資格保證。</p>
+
+      <h2>出發前請重新核對</h2>
+      <p>景點開放、交通班次、價格、天候、海岸與軍事管制、入境及攜帶物品規定都可能變動。請以主管機關、交通業者或場館當期公告為準，並依自身證件與旅客身分確認適用規定。本站會盡力標明資料來源與更新日期；若發現差異，歡迎透過<a href="/contact/">聯絡與勘誤</a>提供原始公告。</p>
+
+      <h2>預訂與外部網站</h2>
+      <p>本站目前不受理住宿、租車、交通或活動訂單，也不在站內收款。點選官方網站、地圖、商家或其他外部連結後，相關服務、交易、取消與個人資料處理依對方公布的條款及政策辦理。外部連結不代表本站對其內容或服務作出保證。</p>
+
+      <h2>文字、照片與網站使用</h2>
+      <p>本站原創文字、設計與程式由 Kinmen Guide 或相關權利人持有；景點照片另依各張圖片的授權使用，作者、來源及授權列於<a href="/credits/">照片與授權</a>。閱讀、分享頁面連結與個人旅行規劃不受限制；重製或商業使用圖片時，請先核對其個別授權與署名要求。請勿以本站內容冒充官方公告、商家承諾或可核准的個人證件建議。</p>
+
+      <h2>服務變更與聯絡</h2>
+      <p>本站可能更新、修正或移除過時內容及功能。本條款更新時會調整頁首日期。對條款、內容使用或授權有疑問，請寄信至 <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>。個人資料與本機保存方式另見<a href="/privacy/">隱私政策</a>和<a href="/cookies/">Cookie 設定</a>。</p>
+    </div>
+  </div>
+</Base>

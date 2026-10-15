@@ -1,20 +1,24 @@
 # 交付驗證紀錄
 
-最後本地驗證：2026-10-13（America/Los_Angeles）。本次更新未執行部署、修改 DNS 或建立 Cloudflare 資源。
+最後本地驗證：2026-10-14（America/Los_Angeles）。本次更新未執行部署、修改 DNS 或建立 Cloudflare 資源。
 
 ## 已通過
 
 | 檢查 | 結果 |
 | --- | --- |
-| Astro檢查 | 53個檔案；0 errors、0 warnings、0 hints |
-| Astro建置 | 266個HTML頁面 |
-| 產物檢查 | 19,260個站內引用、1,157個圖片實例、1,518個結構化資料節點 |
+| Astro檢查 | 56個檔案；0 errors、0 warnings、0 hints |
+| Astro建置 | 268個HTML頁面 |
+| 產物檢查 | 19,896個站內引用、1,157個圖片實例、1,526個結構化資料節點 |
 | 內容 | 9個集合、246篇Markdown、154個景點、19條路線 |
 | 照片 | 128張本地金門實景，各附作者、來源、授權和修改說明 |
 | 精確版本 | 依賴未變更，pnpm@10.32.1、TypeScript6.0.3符合check支援範圍 |
 | 鎖定檔 | 凍結鎖定檔離線安裝成功，無鎖定檔變更 |
 
 產物檢查涵蓋 title、description、canonical、H1、OG、JSON-LD、站內連結、錨點、圖片 alt 與尺寸、sitemap、robots 及版本固定。`verification/check-and-build.txt` 保留先前檢查紀錄，以上為本次實際執行結果。
+
+## 隱私與法律頁
+
+隱私政策已按現有功能更新，新增使用條款和 Cookie 設定頁；三個連結集中於全站頁腳。Cookie 頁僅清除 `kinmenguide-trip-v1` 與 `kinmenguide-checklist-v1` 兩種指定資料，按鈕會確認刪除，並在儲存不可用時停用。沒有新增分析、廣告 Cookie 或虛假的同意狀態。桌面與手機瀏覽器測試已加入法律頁導覽與資料刪除驗證；CI 結果以對應提交為準。
 
 ## 景點補圖
 

@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+<Base title="Cookie 設定與本機資料｜Kinmen Guide" description="查看 Kinmen Guide 的 Cookie 與本機儲存用途，並分別刪除保存在此瀏覽器的行程清單與旅行檢查清單。" breadcrumbs={[{name:'Cookie 設定'}]}>
+  <div class="shell reading-page">
+    <Breadcrumb items={[{name:'Cookie 設定'}]}/>
+    <span class="eyebrow">YOUR DATA, YOUR CHOICE</span>
+    <h1>Cookie 設定</h1>
+    <p class="small">最後更新：2026 年 10 月 14 日</p>
+    <p class="lead">目前沒有可開啟的廣告或分析 Cookie。你可以在這裡管理本站保存於此瀏覽器的旅行資料。</p>
+    <div class="prose">
+      <h2>本站使用哪些儲存方式？</h2>
+      <p>本站程式目前不設定廣告或流量分析 Cookie。旅行工具使用 <code>localStorage</code>，這與 Cookie 不同：資料留在此瀏覽器，供你下次回來繼續編排，不會因使用清單而傳送到本站。瀏覽器可能自行清除儲存資料，因此重要行程請先保存圖片。</p>
+      <table>
+        <thead><tr><th>類別</th><th>用途</th><th>如何控制</th></tr></thead>
+        <tbody>
+          <tr><td>行程清單（本機儲存）</td><td>景點、天數、名稱、時間與備註</td><td>使用下方「刪除我的行程」或清除瀏覽器本站資料</td></tr>
+          <tr><td>旅行檢查清單（本機儲存）</td><td>出發地與已勾選項目</td><td>使用下方「刪除旅行清單進度」或清除瀏覽器本站資料</td></tr>
+          <tr><td>主機安全 Cookie（可能）</td><td>Cloudflare 在啟用相應安全功能時可能設定驗證或防護 Cookie</td><td>由瀏覽器的網站資料設定管理；本頁不能關閉必要的主機安全功能</td></tr>
+        </tbody>
+      </table>
+      <p>目前沒有非必要 Cookie 類別可供切換，因此本站不顯示無作用的「接受全部」開關。主機安全 Cookie 是否出現取決於實際啟用的功能，細節可參閱 <a href="https://developers.cloudflare.com/fundamentals/reference/policies-compliances/cloudflare-cookies/">Cloudflare 官方說明</a>。</p>
+    </div>
+
+    <section class="site-data-panel" aria-labelledby="site-data-heading">
+      <span class="eyebrow">ON THIS DEVICE</span>
+      <h2 id="site-data-heading">清除這台裝置保存的旅程</h2>
+      <p>以下操作只刪除本站兩項指定的本機資料；不會清除其他網站資料、瀏覽器歷史或主機安全 Cookie。刪除後無法從本站還原，請先下載需要保留的行程圖片或清單。</p>
+      <p id="storage-overview" class="small" role="status">啟用 JavaScript 後可檢查此瀏覽器的保存狀態。</p>
+      <div class="site-data-actions">
+        <button type="button" class="button button-light" id="clear-trip-data" hidden>刪除我的行程</button>
+        <button type="button" class="button button-light" id="clear-checklist-data" hidden>刪除旅行清單進度</button>
+      </div>
+      <p id="storage-action-status" class="small" role="status" aria-live="polite"></p>
+      <noscript><p class="small">目前未啟用 JavaScript。你仍可在瀏覽器的網站資料設定中清除 kinmenguide.com 的資料。</p></noscript>
+    </section>
+
+    <div class="prose">
+      <h2>外部地圖與更多說明</h2>
+      <p>互動 OpenStreetMap 只有在你主動點擊載入時才會出現；外部網站可能自行使用 Cookie，需到對方網站或瀏覽器設定管理。本頁刪除按鈕不會影響外部服務。詳見<a href="/privacy/">隱私政策</a>與<a href="/terms/">使用條款</a>。</p>
+    </div>
+  </div>
+</Base>
+
+<script>
+import { TRIP_KEY } from '../lib/trip-store';
+const entries = [
+  { key: TRIP_KEY, id: 'clear-trip-data', label: '我的行程' },
+  { key: 'kinmenguide-checklist-v1', id: 'clear-checklist-data', label: '旅行清單進度' },
+] as const;
+const overview = document.querySelector<HTMLElement>('#storage-overview');
+const action = document.querySelector<HTMLElement>('#storage-action-status');
+function refresh() {
+  try {
+    const stored = entries.filter(item => localStorage.getItem(item.key) !== null);
+    for (const item of entries) {
+      const button = document.getElementById(item.id) as HTMLButtonElement;
+      button.hidden = false;
+      button.disabled = !stored.some(current => current.key === item.key);
+    }
+    if (overview) overview.textContent = stored.length ? `此瀏覽器目前保存：${stored.map(item => item.label).join('、')}。` : '此瀏覽器目前沒有保存本站的行程或旅行清單進度。';
+  } catch {
+    if (overview) overview.textContent = '瀏覽器未允許讀取本站資料，請到瀏覽器的網站資料設定管理。';
+    for (const item of entries) {
+      const button = document.getElementById(item.id) as HTMLButtonElement;
+      button.hidden = false;
+      button.disabled = true;
+    }
+  }
+}
+for (const item of entries) {
+  document.getElementById(item.id)?.addEventListener('click', () => {
+    if (!window.confirm(`確定刪除這台裝置保存的「${item.label}」？刪除後無法還原。`)) return;
+    try {
+      localStorage.removeItem(item.key);
+      if (item.key === TRIP_KEY) window.dispatchEvent(new StorageEvent('storage', { key: TRIP_KEY }));
+      if (action) action.textContent = `已刪除${item.label}。`;
+    } catch {
+      if (action) action.textContent = '刪除失敗；請使用瀏覽器的網站資料設定清除。';
+    }
+    refresh();
+  });
+}
+refresh();
+</script>
