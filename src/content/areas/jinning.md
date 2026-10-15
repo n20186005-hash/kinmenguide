@@ -10,12 +10,15 @@
   "duration": "半天至 1 天",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-14",
   "related": [
     "/attractions/kinmen-bridge/",
     "/attractions/houhu-seaside-park/",
     "/attractions/kinmen-distillery/",
     "/attractions/guningtou-battle-museum/",
+    "/attractions/guningtou-village/",
+    "/attractions/shuangli-wetland-center/",
+    "/itineraries/jinning-guningtou-one-day/",
     "/attractions/mofan-street/",
     "/attractions/dongzhou-wind-lion/",
     "/food/yuantou-ranch/"
@@ -36,7 +39,7 @@
 金寧適合想深入古寧頭歷史、喜歡安靜散步的人。部分住宿看起來離金城很近，實際仍可能需要車輛，訂房前請看步行動線。
 
 ## 順路的一天
-以古寧頭戰史館為核心排半天，另外留一段聚落散步。潮間帶不因退潮就適合自行走入，尊重現場限制與生態空間。
+以[古寧頭戰史館](/attractions/guningtou-battle-museum/)為核心排半天，另外留一段[北山、南山聚落](/attractions/guningtou-village/)散步。想走完整一天，可看[古寧頭戰史、生態路線](/itineraries/jinning-guningtou-one-day/)。潮間帶不因退潮就適合自行走入，尊重現場限制與生態空間。
 
 ## 選擇住宿前
 先確認住宿和晚餐的距離、停車位置與接送服務。地圖上的直線距離不足以判斷步行方便，帶行李時更應向業者確認抵達方式。
@@ -52,8 +55,14 @@
 - [慈湖三角堡](/attractions/cihu-triangle-fortress/)
 - [湖下海堤](/attractions/huxia-seawall/)
 - [金門大橋](/attractions/kinmen-bridge/)
+- [北山古洋樓](/attractions/beishan-old-mansion/)
+- [北山播音牆](/attractions/beishan-broadcasting-wall/)
+- [雙鯉溼地自然中心](/attractions/shuangli-wetland-center/)
+- [金門和平紀念園區](/attractions/kinmen-peace-memorial-park/)
 
 依同一街區或道路選兩三站就好；半日遊不必把清單全部走完。
+
+慈湖落日觀海平台目前因整修封閉，官方預計2026年11月中旬重開；[慈湖三角堡](/attractions/cihu-triangle-fortress/)、雙鯉中心與戰史館照常營運。施工期間不要進入封閉平台，出發前再查[官方公告](https://kinmen.travel/zh-tw/news/details/4479)。
 
 ## 靠近金城的聚落短停
 [東洲風獅爺](/attractions/dongzhou-wind-lion/)位於金寧鄉東州33之1號旁的孚佑廟一帶，可從金城往金寧移動時短停。尊重廟埕與供奉動線，導航同時核對「東洲／東州」及金寧鄉名稱。

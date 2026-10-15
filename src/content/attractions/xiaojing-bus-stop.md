@@ -46,6 +46,6 @@
 站亭仍在服務乘客。有人候車、上下車時先讓位，拍攝者留在安全步行空間，不站在伯玉路車道取景，也不讓車輛停在公車停靠區。合照時不爬上、懸掛或踩踏水獺裝置。
 
 ## 用一個短停串起金湖行程
-沿伯玉路前往金湖時，可把這裡作為短暫休息，再去[陳景蘭洋樓](/attractions/chen-jinglan-house/)或[山外街區](/attractions/shanwai-old-street/)。若要完整參觀特約茶室展示館，需另留時間並查開放資訊。
+沿伯玉路前往金湖時，可把這裡作為短暫休息，再去[陳景蘭洋樓](/attractions/chen-jinglan-house/)或[山外街區](/attractions/shanwai-old-street/)。若要完整參觀[特約茶室展示館](/attractions/special-teahouse-museum/)，需另留時間並查開放資訊。
 
 喜歡水獺題材，也可讀[水獺路標與友善拍照指南](/guides/otter-road-signs/)，分清楚藝術裝置與提醒駕駛減速的交通標誌。

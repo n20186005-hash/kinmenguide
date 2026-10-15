@@ -10,13 +10,14 @@
   "duration": "半天至 1 天",
   "order": 2,
   "featured": true,
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-14",
   "related": [
     "/itineraries/jinhu-one-day/",
     "/attractions/taihu-lake/",
     "/attractions/taiwu-mountain/",
     "/transport/shanwai-station/",
-    "/food/liangjin-ranch/"
+    "/food/liangjin-ranch/",
+    "/attractions/qionglin-village/"
   ],
   "sources": [
     {
@@ -44,8 +45,13 @@
 
 [陳景蘭洋樓](/attractions/chen-jinglan-house/)、[太湖與湖畔散步](/attractions/taihu-lake/)、[金門縣畜產試驗所與牧場散步](/attractions/kinmen-livestock/)。
 
+喜歡歷史聚落的旅人可另排[瓊林聚落](/attractions/qionglin-village/)半天：先看蔡氏宗祠與花磚牆，再依體力選[瓊林戰鬥坑道](/attractions/qionglin-battle-tunnel/)；走伯玉路時也能在[特約茶室展示館](/attractions/special-teahouse-museum/)理解另一段戰地生活史。
+
 ## 新增景點與沿路吃什麼
 - [小徑公車亭](/attractions/xiaojing-bus-stop/)
+- [瓊林聚落](/attractions/qionglin-village/)
+- [瓊林戰鬥坑道](/attractions/qionglin-battle-tunnel/)
+- [特約茶室展示館](/attractions/special-teahouse-museum/)
 - [山外老街](/attractions/shanwai-old-street/)
 - [高洞坑道](/attractions/gaodong-tunnel/)
 - [天坑](/attractions/tiankeng/)

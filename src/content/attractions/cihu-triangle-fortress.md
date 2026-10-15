@@ -8,11 +8,15 @@
   "tag": "堡壘與海岸",
   "duration": "40–60 分鐘",
   "order": 31,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-14",
   "sources": [
     {
       "title": "金門觀光旅遊網・慈湖三角堡",
       "url": "https://kinmen.travel/zh-tw/travel/attraction/666"
+    },
+    {
+      "title": "金門觀光旅遊網・慈湖觀海平台整修公告",
+      "url": "https://kinmen.travel/zh-tw/news/details/4479"
     }
   ],
   "related": [
@@ -29,7 +33,8 @@
     "lat": 24.46514,
     "lng": 118.29762
   },
-  "image": "place-cihu-triangle-fortress"
+  "image": "place-cihu-triangle-fortress",
+  "visitNotice": "慈湖落日觀海平台自2026年8月17日起因整修封閉，官方預計11月中旬重開；慈湖三角堡照常營運。施工期間勿進封閉平台，行前再查最新公告。"
 }
 ---
 
@@ -44,4 +49,4 @@
 ## 春夏看鳥，全年尊重棲地
 春末夏初，周邊有機會觀察栗喉蜂虎等鳥類。用望遠鏡或長焦遠看，不靠近巢洞、不播放鳥叫引誘，也不把能否看到鳥當成行程保證。冬季則可配合慈湖一帶的賞鳥資訊，依現場規劃選步行路段。
 
-可接[湖下海堤](/attractions/huxia-seawall/)看大橋，或把[古寧頭戰史館](/attractions/guningtou-battle-museum/)當作同區歷史主題的另一站。若要看夕陽，先完成有關門時間的場館，再往合法開放的岸邊移動。
+可接[湖下海堤](/attractions/huxia-seawall/)看大橋，或把[古寧頭戰史館](/attractions/guningtou-battle-museum/)當作同區歷史主題的另一站。若要看夕陽，先完成有關門時間的場館，再往合法開放的岸邊移動；目前不能走上整修封閉的慈湖觀海平台。

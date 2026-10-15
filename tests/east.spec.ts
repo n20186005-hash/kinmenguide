@@ -17,7 +17,7 @@ test('east navigation keeps geography and facility purposes distinct',async({pag
  await page.goto('/');
  await page.getByRole('link',{name:'查看金湖全部景點',exact:true}).click();
  await expect(page.getByRole('button',{name:'金湖',exact:true})).toHaveAttribute('aria-pressed','true');
- await expect(page.locator('[data-card]:visible')).toHaveCount(47);
+ await expect(page.locator('[data-card]:visible')).toHaveCount(50);
  await page.locator('[data-query]').fill('尚义');
  await expect(page.locator('[data-card]:visible')).toHaveCount(1);
  await page.goto('/attractions/liaoluo-mazu-park/');
