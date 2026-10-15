@@ -14,6 +14,7 @@
   "order": 129,
   "updatedAt": "2026-10-10",
   "related": [
+    "/guides/kinmen-war-sites-history/",
     "/attractions/yu-dawei-museum/",
     "/attractions/rongyuan/",
     "/areas/jinhu/"

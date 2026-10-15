@@ -12,6 +12,7 @@
   "featured": false,
   "updatedAt": "2026-10-07",
   "related": [
+    "/guides/kinmen-war-sites-history/",
     "/areas/jinning/",
     "/attractions/mashan-observation-post/",
     "/itineraries/kinmen-three-days-two-nights/",

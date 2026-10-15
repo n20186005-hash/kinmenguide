@@ -16,6 +16,7 @@
   "order": 90,
   "updatedAt": "2026-10-10",
   "related": [
+    "/guides/kinmen-wind-lion-stories/",
     "/areas/jinning/",
     "/attractions/kincheng-old-streets/",
     "/attractions/xiashu-wind-lion/"

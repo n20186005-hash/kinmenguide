@@ -11,6 +11,7 @@
   "order": 17,
   "updatedAt": "2026-10-12",
   "related": [
+    "/guides/kinmen-birdwatching-otters/",
     "/itineraries/kinmen-family-slow-travel/",
     "/attractions/august-23-battle-museum/",
     "/attractions/rongyuan/",

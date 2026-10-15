@@ -12,6 +12,7 @@
   "featured": true,
   "updatedAt": "2026-10-12",
   "related": [
+    "/guides/kinmen-village-architecture/",
     "/itineraries/kinmen-culture-trail/",
     "/attractions/deyue-tower/",
     "/attractions/jinshui-school/",

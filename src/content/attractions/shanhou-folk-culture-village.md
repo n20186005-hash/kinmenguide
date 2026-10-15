@@ -12,6 +12,8 @@
   "featured": true,
   "updatedAt": "2026-10-10",
   "related": [
+    "/guides/kinmen-summer-heat-family/",
+    "/guides/kinmen-village-architecture/",
     "/attractions/shishan-howitzer-front/",
     "/attractions/ship-shaped-fort/",
     "/itineraries/jinsha-one-day/"

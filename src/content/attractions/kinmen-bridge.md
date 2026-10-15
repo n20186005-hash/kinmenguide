@@ -11,6 +11,7 @@
   "order": 13,
   "updatedAt": "2026-10-09",
   "related": [
+    "/guides/kinmen-winter-wind-itinerary/",
     "/itineraries/lieyu-one-day/",
     "/transport/kinmen-to-lieyu/",
     "/attractions/jiugong-tunnel/"

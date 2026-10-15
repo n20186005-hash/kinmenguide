@@ -13,6 +13,7 @@
   "order": 115,
   "updatedAt": "2026-10-10",
   "related": [
+    "/guides/kinmen-wind-lion-stories/",
     "/attractions/mashan-observation-post/",
     "/attractions/tianmo-mountain/",
     "/areas/jinsha/"

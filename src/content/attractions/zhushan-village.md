@@ -13,6 +13,7 @@
   "order": 71,
   "updatedAt": "2026-10-12",
   "related": [
+    "/guides/kinmen-village-architecture/",
     "/itineraries/kinmen-couples/",
     "/attractions/wentai-pagoda/",
     "/attractions/oucuo-tank/",

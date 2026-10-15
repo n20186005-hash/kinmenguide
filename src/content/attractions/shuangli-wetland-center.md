@@ -10,7 +10,7 @@
   "order": 158,
   "updatedAt": "2026-10-14",
   "aliases": ["雙鯉濕地自然中心", "雙鯉湖", "双鲤湿地自然中心"],
-  "related": ["/attractions/guningtou-village/", "/attractions/guningtou-battle-museum/", "/itineraries/jinning-guningtou-one-day/", "/attractions/cihu-triangle-fortress/"],
+  "related": ["/guides/kinmen-summer-heat-family/", "/guides/kinmen-winter-wind-itinerary/", "/guides/kinmen-birdwatching-otters/", "/attractions/guningtou-village/", "/attractions/guningtou-battle-museum/", "/itineraries/jinning-guningtou-one-day/", "/attractions/cihu-triangle-fortress/"],
   "sources": [
     { "title": "金門觀光旅遊網・雙鯉湖／雙鯉溼地中心", "url": "https://www.kinmen.travel/zh-tw/travel/attraction/509" },
     { "title": "金門觀光旅遊網・慈湖觀海平台整修公告", "url": "https://kinmen.travel/zh-tw/news/details/4479" }

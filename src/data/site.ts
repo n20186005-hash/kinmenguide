@@ -14,7 +14,7 @@ export const categories = {
   hotels: { name: '住在金門', title: '金門住宿：先選生活步調，再選一張床', en: 'STAY A LITTLE LONGER', description: '金門住哪裡方便？比較金城、金湖、機場周邊與親子住宿需求，了解古厝民宿和市區旅館的差異，整理訂房前應確認的接送、隔音、停車與取消條件。', image: 'guesthouse' },
   'car-rental': { name: '租車攻略', title: '金門租車：選一種適合你的移動方式', en: 'FIND YOUR OWN PACE', description: '金門租機車、租汽車與機場取還車實用比較，整理證件、保險、車況檢查、油量與接送問題。依同行人數、行李和天氣選車，透過官方名錄尋找業者。', image: 'bridge' },
   tours: { name: '在地體驗', title: '金門體驗：讓旅程，多一點島嶼的故事', en: 'GO A LITTLE DEEPER', description: '古厝散步、戰地歷史與包車導覽，三種深入金門的方式。了解體驗適合對象、預約前要問的問題與地區搭配，不趕景點，也能走進島嶼的日常。', image: 'deyue' },
-  guides: { name: '行前攻略', title: '金門自由行：你的第一本島嶼筆記', en: 'BEFORE YOUR JOURNEY', description: '第一次去金門，從玩幾天、何時出發到雨天備案開始規劃。整理初訪行程、旅遊季節、行李與天氣查詢，搭配地圖、交通和住宿，完成金門自由行準備。', image: 'juguang' },
+  guides: { name: '行前攻略', title: '金門自由行：你的第一本島嶼筆記', en: 'BEFORE YOUR JOURNEY', description: '從古厝洋樓、戰地歷史與風獅爺信仰讀懂金門，也用冬季風、夏季熱、賞鳥生態及潮汐開放指南安排旅程；初訪、交通、行李和天氣備案一次找到。', image: 'juguang' },
 } as const;
 export type Category = keyof typeof categories;
 export const categoryKeys = Object.keys(categories) as Category[];

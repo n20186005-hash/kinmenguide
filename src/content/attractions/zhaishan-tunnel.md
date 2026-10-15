@@ -12,6 +12,8 @@
   "featured": true,
   "updatedAt": "2026-10-08",
   "related": [
+    "/guides/kinmen-attraction-opening-tides/",
+    "/guides/kinmen-war-sites-history/",
     "/areas/kincheng/",
     "/attractions/shuitou-village/",
     "/itineraries/kinmen-three-days-two-nights/",

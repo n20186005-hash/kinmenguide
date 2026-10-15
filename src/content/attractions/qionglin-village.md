@@ -10,7 +10,7 @@
   "order": 159,
   "updatedAt": "2026-10-14",
   "aliases": ["琼林聚落", "瓊林古厝", "瓊林戰鬥村"],
-  "related": ["/attractions/qionglin-battle-tunnel/", "/areas/jinhu/", "/attractions/xiaojing-bus-stop/", "/attractions/shuitou-village/"],
+  "related": ["/guides/kinmen-wind-lion-stories/", "/guides/kinmen-village-architecture/", "/attractions/qionglin-battle-tunnel/", "/areas/jinhu/", "/attractions/xiaojing-bus-stop/", "/attractions/shuitou-village/"],
   "sources": [
     { "title": "金門觀光旅遊網・瓊林聚落", "url": "https://www.kinmen.travel/zh-tw/travel/attraction/1453" },
     { "title": "金門縣政府・聚落保存風華再現", "url": "https://www.kinmen.gov.tw/News_Content2.aspx?Create=1&n=98E3CA7358C89100&s=8ABAB93336C0FD72&sms=BF7D6D478B935644" }

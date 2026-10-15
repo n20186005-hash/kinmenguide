@@ -20,6 +20,7 @@
     }
   ],
   "related": [
+    "/guides/kinmen-attraction-opening-tides/",
     "/attractions/yanping-prince-shrine/",
     "/attractions/xiashu-wind-lion/",
     "/attractions/kincheng-seaside-park/",
