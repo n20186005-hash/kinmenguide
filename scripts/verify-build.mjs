@@ -8,6 +8,7 @@ const files=walk(root).filter(f=>f.endsWith('.html'));
 assert.ok(files.length>=70,`Expected at least 70 pages, got ${files.length}`);
 const titles=new Set(),descriptions=new Set();
 const errors=[];
+const noindexRoutes=new Set(['/404.html','/plan/','/trip/','/search/']);
 const fileFor = pathname => path.join(root,pathname.endsWith('/')?pathname+'index.html':pathname);
 const routes=files.map(f=>'/'+path.relative(root,f).replace(/index\.html$/,'').replace(/\\/g,'/'));
 let links=0,images=0,schemas=0;
@@ -20,6 +21,7 @@ for(const file of files){
  check(Boolean(title)&&!titles.has(title),'Missing/duplicate title');titles.add(title);
  check(Boolean(description)&&!descriptions.has(description),'Missing/duplicate description');descriptions.add(description);
  check($('link[rel="canonical"]').attr('href')==='https://kinmenguide.com'+(route==='/404.html'?'/404/':route),'Incorrect canonical');
+ check($('meta[name="robots"]').attr('content')===(noindexRoutes.has(route)?'noindex, follow':'index, follow, max-image-preview:large'),'Incorrect robots meta');
  check($('html').attr('lang')==='zh-Hant-TW','Incorrect locale');
  for(const key of ['og:title','og:description','og:image','og:url','og:locale'])check(Boolean($(`meta[property="${key}"]`).attr('content')),`Missing ${key}`);
  $('script[type="application/ld+json"]').each((_,el)=>{try{const s=JSON.parse($(el).text());check(s['@context']==='https://schema.org','Invalid JSON-LD context');schemas+=s['@graph'].length;}catch{check(false,'Invalid JSON-LD');}});
@@ -40,7 +42,7 @@ const sitemapIndex=load(fs.readFileSync(path.join(root,'sitemap-index.xml'),'utf
 assert.deepEqual(sitemapIndex('sitemap loc').map((_,el)=>sitemapIndex(el).text()).get(),['https://kinmenguide.com/sitemap-0.xml']);
 const sitemap=load(fs.readFileSync(path.join(root,'sitemap-0.xml'),'utf8'),{xmlMode:true});
 const sitemapUrls=sitemap('url').map((_,el)=>({loc:sitemap(el).find('loc').text(),lastmod:sitemap(el).find('lastmod').text()})).get();
-const expectedUrls=routes.filter(r=>r!='/404.html'&&r!='/plan/'&&r!='/trip/').map(r=>'https://kinmenguide.com'+r);
+const expectedUrls=routes.filter(r=>!noindexRoutes.has(r)).map(r=>'https://kinmenguide.com'+r);
 assert.deepEqual(sitemapUrls.map(item=>item.loc).sort(),expectedUrls.sort(),'Sitemap must list every and only indexable canonical URL once');
 for(const {loc,lastmod} of sitemapUrls){
  const url=new URL(loc);

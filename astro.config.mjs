@@ -32,7 +32,7 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
   integrations: [sitemap({
-    filter: (page) => !page.endsWith('/404/') && !page.endsWith('/plan/') && !page.endsWith('/trip/'),
+    filter: (page) => !page.endsWith('/404/') && !page.endsWith('/plan/') && !page.endsWith('/trip/') && !page.endsWith('/search/'),
     serialize: (item) => {
       const url = new URL(item.url);
       const lastmod = lastmodFor(url.pathname);

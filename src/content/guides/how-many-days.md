@@ -10,9 +10,13 @@
   "duration": "6 分鐘",
   "order": 2,
   "featured": true,
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-15",
   "related": [
+    "/itineraries/kinmen-one-day/",
+    "/itineraries/kinmen-two-days-one-night/",
     "/itineraries/kinmen-three-days-two-nights/",
+    "/itineraries/kinmen-four-days-three-nights/",
+    "/guides/packing/",
     "/transport/",
     "/hotels/",
     "/map/"
@@ -31,10 +35,10 @@
 ---
 
 ## 一天：選金城，不追全島
-把重心放老街、莒光樓與水頭，其中再依交通擇減。當天來回需要扣掉報到、抵達與取還車時間，真正觀光往往只有幾小時。
+把重心放老街、莒光樓與水頭，其中再依交通擇減。當天來回需要扣掉報到、抵達與取還車時間，真正觀光往往只有幾小時。可先看[金門一日遊路線](/itineraries/kinmen-one-day/)，選少量順路的站點。
 ## 兩天一夜：一西一東
-第一天金城南線，第二天金沙或金湖選一段。適合週末短旅，建議連住市區方便用餐，不再硬加烈嶼完整環島。
+第一天金城南線，第二天金沙或金湖選一段。適合週末短旅，建議連住市區方便用餐，不再硬加烈嶼完整環島。[兩天一夜行程](/itineraries/kinmen-two-days-one-night/)可作為排程起點。
 ## 三天兩夜：初訪的彈性起點
-多一段時間可以加金寧或烈嶼，也能把步調放慢。自駕旅人較容易跨區，不自駕則依觀光路線與公車調整。
+多一段時間可以加金寧或烈嶼，也能把步調放慢。自駕旅人較容易跨區，不自駕則依觀光路線與公車調整。初訪可對照[三天兩夜經典路線](/itineraries/kinmen-three-days-two-nights/)，再刪掉不順路的站。
 ## 四天三夜：留給山林與日常
-想走太武山、烈嶼，又喜歡建築拍照或帶家人慢遊，多一天更有餘裕。旅遊天數沒有標準答案，想深度導覽也可以只走兩個地區。
+想走太武山、烈嶼，又喜歡建築拍照或帶家人慢遊，多一天更有餘裕。旅遊天數沒有標準答案，想深度導覽也可以只走兩個地區。可參考[四天三夜安排](/itineraries/kinmen-four-days-three-nights/)。選定天數後，再用[金門行李清單](/guides/packing/)按季節與交通方式整理準備。

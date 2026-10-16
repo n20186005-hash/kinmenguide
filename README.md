@@ -109,15 +109,15 @@ public/_redirects            # 舊版 /guide/ 等 URL 301 對應
 
 正式網域在 `astro.config.mjs` 和 `src/data/site.ts` 固定為 `https://kinmenguide.com`。每頁有獨立 title / description、canonical、OG / Twitter image、可見麵包屑與 BreadcrumbList。內容有 Article，景點另加 TouristAttraction；FAQ 標記只對應頁上可見問答。無虛構 Review、AggregateRating、Offer。
 
-所有正式內容以尾斜線為 canonical。`/plan/` 為使用者選項建議頁，設 noindex 並排除 sitemap；404 同樣 noindex。只有真實繁中內容，未輸出不存在的英文 / 日文頁面或誤導的 hreflang；擴充語言時可新增實際翻譯路由和對應關聯。
+所有正式內容以尾斜線為 canonical。`/plan/`、`/trip/` 和 `/search/` 為功能頁，設 noindex 並排除 sitemap；404 同樣 noindex。只有真實繁中內容，未輸出不存在的英文 / 日文頁面或誤導的 hreflang；擴充語言時可新增實際翻譯路由和對應關聯。
 
 建置時自動生成 `dist/sitemap-index.xml` 與 `dist/sitemap-0.xml`；正式上線後可在 Google Search Console 提交 `https://kinmenguide.com/sitemap-index.xml`。`robots.txt` 已指向同一入口。地圖只包含可索引的 canonical 頁面；內容頁的 `lastmod` 使用文章 `updatedAt`，沒有可信日期的頁面不填 `lastmod`。提交前須確認網域可公開讀取該連結。
 
-## Cloudflare 準備狀態
+## Cloudflare 發布
 
 `wrangler.jsonc` 已配置 Workers Static Assets 指向 `dist`，使用 `force-trailing-slash` 與 `404-page`。本站全部預先生成 HTML，**不需要 SSR adapter 或 Worker 執行端資料庫**。Cloudflare Pages 也可將 `dist` 作為輸出目錄。
 
-本次未執行部署、登入 Cloudflare、修改 DNS 或綁定網域。`pnpm cf:dry-run` 只在本地檢查資產配置；`pnpm cf:dev` 可在本地模擬 Worker。將來明確要求發布後，再配置 Cloudflare 帳號、正式域名與 HTTPS，並在線驗證 canonical、重導向、404 與 sitemap。
+正式站點由 GitHub `main` 的既有 Cloudflare 部署連線發布。每次更新後應核對線上頁面、canonical、重導向、404 與 sitemap；GitHub Actions 的檢查通過不等於 Cloudflare 已完成發布。`pnpm cf:dry-run` 只在本地檢查資產配置；`pnpm cf:dev` 可在本地模擬 Worker。
 
 ## 授權與交付
 
