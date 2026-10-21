@@ -10,8 +10,9 @@
   "duration": "1 天",
   "order": 19,
   "featured": false,
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-21",
   "related": [
+    "/food/lieyu-food/",
     "/guides/kinmen-cycling/",
     "/areas/lieyu/",
     "/transport/kinmen-to-lieyu/",
@@ -99,3 +100,7 @@
 ## 不騎車也有替代路線
 
 帶幼童、需要減少戶外時間，或不想自行判斷騎行道路的旅人，可以改用[烈嶼一般一日遊](/itineraries/lieyu-one-day/)；若想在同一地區多看聚落，可改成[兩天慢遊](/itineraries/lieyu-two-days/)。
+
+## 午餐與芋頭點心，跟著今天的區域選
+
+[烈嶼美食指南](/food/lieyu-food/)按東林、九宮、黃厝、西方與青岐整理店址和參考時段。依本日路線挑一餐、一份點心即可；三層樓官方列週三休息，其他店的菜色與當日營業也先核對，別為了多一家店把路線折返。

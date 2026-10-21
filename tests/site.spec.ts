@@ -62,8 +62,8 @@ test('catalog filters, zero results, and reset',async({page})=>{
 });
 
 test('search accepts simplified queries and empty state',async({page})=>{
- await page.goto('/search/');await page.getByLabel('搜尋關鍵字').fill('水头');await expect(page.locator('.search-result:visible')).not.toHaveCount(0);await expect(page.locator('.search-result:visible').filter({hasText:'水頭聚落'}).first()).toBeVisible();
- await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(262);
+ await page.goto('/search/');const total=await page.locator('.search-result').count();await page.getByLabel('搜尋關鍵字').fill('水头');await expect(page.locator('.search-result:visible')).not.toHaveCount(0);await expect(page.locator('.search-result:visible').filter({hasText:'水頭聚落'}).first()).toBeVisible();
+ await page.getByLabel('搜尋關鍵字').fill('xyzzy-nothing');await expect(page.locator('#search-empty')).toBeVisible();await page.getByRole('button',{name:'顯示全部指南'}).click();await expect(page.locator('.search-result:visible')).toHaveCount(total);
 });
 
 test('planner respects days and transport',async({page})=>{
@@ -82,7 +82,7 @@ test('FAQ and honest contact draft download',async({page})=>{
 });
 
 test('representative pages have no horizontal overflow or broken images',async({page})=>{
- for(const route of ['/areas/kincheng/','/attractions/wentai-pagoda/','/attractions/zhushan-village/','/attractions/kinmen-port-terminal/','/attractions/shuitou-passenger-service-center/','/attractions/deyue-tower/','/itineraries/kincheng-south-day/','/attractions/zhaishan-tunnel/','/itineraries/kinmen-three-days-two-nights/','/hotels/kincheng/','/areas/lieyu/','/itineraries/lieyu-two-days/','/attractions/lieyu-culture-museum/','/attractions/hujingtou-war-museum/','/attractions/lieyu-seaside-park/','/attractions/tiger-fort/','/credits/','/transport/from-mainland-china/','/guides/entry-documents/','/guides/restricted-items/','/guides/travel-checklist/','/attractions/chen-jinglan-house/','/food/kincheng-tea-walk/','/food/aliang-fried-chicken/','/food/beef-noodles/','/food/liangjin-paifang/','/food/50lan-kincheng/','/food/jinshan-smoked-goose/','/attractions/jiangong-islet/','/attractions/xiaojing-bus-stop/','/tours/houpu-night-walk/','/404.html']){
+ for(const route of ['/areas/kincheng/','/attractions/wentai-pagoda/','/attractions/zhushan-village/','/attractions/kinmen-port-terminal/','/attractions/shuitou-passenger-service-center/','/attractions/deyue-tower/','/itineraries/kincheng-south-day/','/attractions/zhaishan-tunnel/','/itineraries/kinmen-three-days-two-nights/','/hotels/kincheng/','/areas/lieyu/','/itineraries/lieyu-two-days/','/attractions/lieyu-culture-museum/','/attractions/hujingtou-war-museum/','/attractions/lieyu-seaside-park/','/attractions/tiger-fort/','/credits/','/transport/from-mainland-china/','/guides/entry-documents/','/guides/restricted-items/','/guides/travel-checklist/','/attractions/chen-jinglan-house/','/food/kincheng-food/','/food/jinhu-food/','/food/lieyu-food/','/food/max-bakery/','/food/oyster-fritter-house/','/food/kincheng-tea-walk/','/food/aliang-fried-chicken/','/food/beef-noodles/','/food/liangjin-paifang/','/food/50lan-kincheng/','/food/jinshan-smoked-goose/','/attractions/jiangong-islet/','/attractions/xiaojing-bus-stop/','/tours/houpu-night-walk/','/404.html']){
   await page.goto(route);await expect(page.locator('h1')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),route).toBeTruthy();
   const eager=page.locator('img[loading=eager]');for(const img of await eager.all())expect(await img.evaluate((i:HTMLImageElement)=>i.complete&&i.naturalWidth>0),route).toBeTruthy();
  }

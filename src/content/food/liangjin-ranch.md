@@ -15,8 +15,10 @@
   "tag": "酒糟牛肉與伴手禮",
   "duration": "用餐約1小時",
   "order": 162,
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-21",
   "related": [
+    "/food/jinhu-food/",
+    "/itineraries/kinmen-food-trail/",
     "/food/liangjin-paifang/",
     "/food/beef-noodles/",
     "/attractions/kinmen-ceramics/",
@@ -93,3 +95,7 @@
 若當天主要逛總兵署、模範街，可改選[良金貞節牌坊店](/food/liangjin-paifang/)，地址為金城莒光路一段36號、電話082-324080。本站將兩家分開建頁，避免把金城市區用餐排到金湖工廠。
 
 [在 Google 地圖查找工廠總店](https://www.google.com/maps/search/?api=1&query=%E9%87%91%E9%96%80%E7%B8%A3%E9%87%91%E6%B9%96%E9%8E%AE%E6%BC%81%E6%9D%91160%E8%99%9F%20%E8%89%AF%E9%87%91%E7%89%A7%E5%A0%B4%E5%B7%A5%E5%BB%A0%E7%B8%BD%E5%BA%97)。
+
+## 用餐後，往山外還是回金城？
+
+繼續走太湖與山外，可用[金湖午餐、點心與晚餐指南](/food/jinhu-food/)挑下一段；想按兩天分區吃，參考[金門美食兩日遊](/itineraries/kinmen-food-trail/)。這裡和金城牌坊店在不同鄉鎮，不要吃完工廠總店又為同品牌折返。

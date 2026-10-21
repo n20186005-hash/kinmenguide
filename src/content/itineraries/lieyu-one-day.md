@@ -10,8 +10,9 @@
   "duration": "1 天",
   "order": 8,
   "featured": false,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-21",
   "related": [
+    "/food/lieyu-food/",
     "/areas/lieyu/",
     "/itineraries/lieyu-two-days/",
     "/transport/kinmen-to-lieyu/",
@@ -51,7 +52,7 @@
         {
           "time": "12:00",
           "title": "東林或沿途聚落午餐",
-          "href": "/areas/lieyu/",
+          "href": "/food/lieyu-food/",
           "note": "保留一小時，先查店家營業；下午向青岐、沙溪堡方向移動。"
         },
         {
@@ -118,3 +119,7 @@
 
 
 青岐與沙溪堡之間可用[烈嶼海濱公園](/attractions/lieyu-seaside-park/)替換一處海岸短停留，位置已確認為C66F+6M；想加入散步時間，就相應縮短其他站點。
+
+## 午餐與芋頭點心，跟著今天的區域選
+
+[烈嶼美食指南](/food/lieyu-food/)按東林、九宮、黃厝、西方與青岐整理店址和參考時段。依本日路線挑一餐、一份點心即可；三層樓官方列週三休息，其他店的菜色與當日營業也先核對，別為了多一家店把路線折返。

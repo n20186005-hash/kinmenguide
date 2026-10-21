@@ -10,7 +10,7 @@
   "duration": "2 天",
   "order": 24,
   "featured": true,
-  "updatedAt": "2026-10-12",
+  "updatedAt": "2026-10-21",
   "themes": [
     "food"
   ],
@@ -20,10 +20,10 @@
     "小吃路线"
   ],
   "related": [
-    "/food/yongchun-congee/",
-    "/attractions/mofan-street/",
-    "/food/oyster-fritter-house/",
-    "/itineraries/",
+    "/food/kincheng-food/",
+    "/food/jinhu-food/",
+    "/food/lieyu-food/",
+    "/food/kinmen-food-guide/",
     "/trip/"
   ],
   "sources": [
@@ -75,15 +75,21 @@
         },
         {
           "time": "12:00",
-          "title": "蚵嗲之家",
-          "href": "/food/oyster-fritter-house/",
-          "note": "先確認當天開店與供應，小食按人數分食。"
+          "title": "後浦午餐：第一味或同區餐飲",
+          "href": "/food/kincheng-food/",
+          "note": "選一份正餐；第一味官方午餐列11:00–14:00，實際營業先查。蚵嗲之家此時尚未到官方開店時間。"
         },
         {
-          "time": "15:00",
-          "title": "金門奶茶一條街：中興路146巷",
+          "time": "14:30 後",
+          "title": "蚵嗲之家：午後點心",
+          "href": "/food/oyster-fritter-house/",
+          "note": "官方列14:30開始、週四休；確認開店及供應後少量分食。遇店休就換同區點心，不在門前等一整個下午。"
+        },
+        {
+          "time": "15:30",
+          "title": "中興路146巷奶茶街",
           "href": "/food/kincheng-tea-walk/",
-          "note": "中興路146巷挑飲料，晚餐可回金城依胃口單點。"
+          "note": "飲料依胃口擇一，也可以省略。晚上用餐見金城指南，別把每家店都當成必吃任務。"
         }
       ]
     },
@@ -102,6 +108,12 @@
           "title": "太湖與湖畔散步",
           "href": "/attractions/taihu-lake/",
           "note": "選一段湖畔散步，下午留時間休息；不要把餐廳午休當成可候位時段。"
+        },
+        {
+          "time": "14:30",
+          "title": "山外散步與麥斯採買",
+          "href": "/food/jinhu-food/",
+          "note": "麵包、街區短走或休息擇重點。談天樓此時在官方午休空檔，傍晚再確認用餐。"
         },
         {
           "time": "16:30",
@@ -152,3 +164,7 @@
 
 ## 把喜歡的景點排進自己的行程
 打開上方景點介紹，使用「加入行程」，再到[我的行程](/trip/)分配天數、調整順序與備註，完成後可保存附本站網址的圖片。
+
+## 第二天也能換成烈嶼
+
+若當天要跨橋，就用[烈嶼午餐與芋頭冰指南](/food/lieyu-food/)替換整段金湖：先選東林或九宮用餐，再挑一個附近景點。不要上午金湖、下午烈嶼只為再吃一份點心，返程另留跨橋、還車與機船報到時間。

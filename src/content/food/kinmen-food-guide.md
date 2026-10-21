@@ -1,59 +1,77 @@
 ---
 {
-  "title": "金門美食地圖",
+  "title": "金門美食怎麼安排？按地區選早餐、正餐與點心",
   "nameEn": "Flavours of Kinmen",
-  "seoTitle": "金門美食地圖｜金門旅遊實用攻略",
-  "description": "從廣東粥與燒餅到牛肉、蚵料理，認識金門旅行裡的在地味道。依早餐、正餐、小吃安排覓食節奏，結合金城與金湖生活圈，少繞路也吃得豐富。",
+  "seoTitle": "金門美食指南｜金城、山外、烈嶼用餐與兩日吃喝路線",
+  "description": "金門美食先按金城、山外金湖與烈嶼選區，再比較廣東粥、牛肉麵、鵝肉、蚵嗲與芋頭冰。整理五鄉鎮用餐方向、時段提醒及兩日路線，少繞路也留足每餐休息。",
   "image": "food",
   "area": "all",
   "tag": "飲食指南",
-  "duration": "6 分鐘",
+  "duration": "7 分鐘",
   "order": 1,
   "featured": false,
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-21",
   "related": [
-    "/food/breakfast/",
-    "/areas/kincheng/",
-    "/food/beef-noodles/",
-    "/food/jinshan-smoked-goose/"
+    "/food/kincheng-food/",
+    "/food/jinhu-food/",
+    "/food/lieyu-food/",
+    "/itineraries/kinmen-food-trail/",
+    "/food/beef-noodles/"
   ],
   "sources": [
     {
       "title": "金門觀光旅遊網・美食名錄",
       "url": "https://kinmen.travel/zh-tw/shop/index/all-regions/restaurants"
+    },
+    {
+      "title": "金門觀光旅遊網・蚵嗲之家",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3172"
+    },
+    {
+      "title": "金門觀光旅遊網・談天樓",
+      "url": "https://kinmen.travel/zh-tw/shop/details/1034"
+    },
+    {
+      "title": "金門觀光旅遊網・烈嶼餐飲名錄",
+      "url": "https://kinmen.travel/zh-tw/shop/index/lieyu/restaurants"
     }
   ]
 }
 ---
 
-## 用一整天認識金門的味道
-早餐留給廣東粥或燒餅，中午選牛肉或家常料理，下午再留一份小吃。比起一餐點滿，把不同口味分散到每天，更能配合景點方向，也不容易吃得太趕。
-## 先看地區，再挑店
-金城適合接老街步行圈；金湖可安排在太武山或東半島行程前後。離開生活圈前先確認晚餐，聚落裡看見餐飲招牌不代表每天都營業。
-## 點餐與購物的小細節
-餐點大小、配料與售完時間各店不同，點餐前可先詢問。若帶伴手禮搭機或搭船，確認保存方式、包裝和最新攜帶限制，尤其不要把易腐敗食物長時間放在車內。
 
-## 具體店家與用餐安排
-- [中興路146巷奶茶街](/food/kincheng-tea-walk/)
-- [聯成廣東粥](/food/liancheng-congee/)
-- [永春廣東粥](/food/yongchun-congee/)
-- [雨川食堂](/food/yuchuan-canteen/)
-- [品其林牛角包](/food/pinchilin-croissants/)
-- [甜水厝豆花](/food/tianshuicuo-tofu-pudding/)
-- [艋舺雞排](/food/monga-fried-chicken/)
-- [炸雞棺材板](/food/shanwai-chicken-coffin-bread/)
-- [談天樓](/food/tantianlou/)
-- [麥斯西點麵包](/food/max-bakery/)
-- [阿亮雞排分店辨識](/food/aliang-fried-chicken/)
+## 金門吃什麼，先從今天在哪一區開始
 
-先依當日區域選店，再核對營業、店休與品項；以上為內容整理，沒有付費排名。
+初訪可把廣東粥或燒餅放早餐，牛肉麵、鵝肉或其他料理擇一作正餐，小吃和冰品留在散步途中。**先定景點與住宿方向，再選餐廳**，比把金城、金湖、烈嶼的店名全塞進同一天更容易完成。
 
-## 牛肉正餐、早餐與下午點心怎麼接
-先看[牛肉料理7個門店比較](/food/beef-noodles/)，再依地區選餐：
+| 今天的區域 | 餐飲方向 | 接著看哪篇 |
+| --- | --- | --- |
+| 金城後浦與市區 | 早餐、麵食、牛肉或鵝肉正餐、午後蚵嗲及飲料 | [金城午餐與晚餐選擇](/food/kincheng-food/) |
+| 山外與金湖 | 復興路麵食、湯圓、麥斯麵包；漁村另排牛肉麵 | [山外午餐、晚餐與太湖半日](/food/jinhu-food/) |
+| 烈嶼小金門 | 東林用餐，九宮、黃厝或西方擇一份芋頭點心 | [烈嶼美食與跨橋安排](/food/lieyu-food/) |
+| 金沙 | 可比較[高坑牛肉食樂苑](/food/gaokeng-beef/)，另按當天聚落路線選餐 | [金沙一日遊](/itineraries/jinsha-one-day/) |
+| 金寧 | [圓頭農牧概念館](/food/yuantou-ranch/)等用餐或購物選項，與住宿補給一起看 | [金寧分區攻略](/areas/jinning/) |
 
-- 金沙：[高坑牛肉食樂苑](/food/gaokeng-beef/)。
-- 金寧：[圓頭肉乾農牧概念館](/food/yuantou-ranch/)。
-- 金湖：[良金牧場工廠總店](/food/liangjin-ranch/)。
-- 金城：[良金貞節牌坊店](/food/liangjin-paifang/)、[廉坤牛肉店](/food/liankun-beef/)、[第一味牛肉麵](/food/diyiwei-beef-noodles/)、[牛家莊](/food/niujiazhuang/)。
+表格是區域安排方向，並非各區完整商家名錄；指定餐點、當天營業與價格見店家頁和業者公告。
 
-早餐可在[永春廣東粥](/food/yongchun-congee/)和[標記小吃店](/food/biaoji-snacks/)之間換口味；下午留給[蚵嗲之家](/food/oyster-fritter-house/)，茶飲可查[50嵐金城店](/food/50lan-kincheng/)的民生路現址。正餐不想吃牛，另看[金山煙燻鵝肉](/food/jinshan-smoked-goose/)。這些店的營業時段不同，請按各店頁的店休與當日供應安排。
+## 早餐、午餐、點心、晚餐各留一個主角
+
+早餐可從[廣東粥](/food/cantonese-congee/)或[早餐指南](/food/breakfast/)開始。午餐想吃牛肉，先用[七個牛肉門店比較](/food/beef-noodles/)選區；不吃牛可另看[金山鵝肉](/food/jinshan-smoked-goose/)或各區其他料理。
+
+下午再留一份[蚵嗲](/food/oyster-fritter-house/)、[豆花](/food/tianshuicuo-tofu-pudding/)或烈嶼芋頭點心。買麵包和大餅可讀[麥斯選購指南](/food/max-bakery/)，想喝飲料再找[中興路146巷奶茶街](/food/kincheng-tea-walk/)。這些是替代選擇，不是每餐前後都要再加一輪小吃。
+
+## 用餐時段，比地圖上標了幾家店更重要
+
+金城蚵嗲之家官方列14:30開始，談天樓有午晚兩段及週三店休；不能用同一個下午茶時段套給兩家。餐廳的營業結束、最後點餐與特定商品售罄也不同，抵達較晚時先問廚房是否仍接單。
+
+若某家休息，替換同區店家或刪去點心，避免為同類餐點臨時跨島。親子、長輩與不吃牛肉的同行者，先問份量、座位及合適菜色；避酒需求也要確認酒釀與含酒飲品的實際成分。
+
+## 兩天分區吃，比一天跑全島更從容
+
+可把第一天留給金城早餐、老街正餐與午後點心，第二天走金湖的牛肉麵、太湖及山外；完整參考[金門美食兩日遊](/itineraries/kinmen-food-trail/)。若第二天改往小金門，就用[烈嶼美食指南](/food/lieyu-food/)換掉整段金湖，保留跨橋緩衝。
+
+需要安排整趟旅行，可接[三天兩夜行程](/itineraries/kinmen-three-days-two-nights/)；在景點頁加入自己的[行程清單](/trip/)，餐廳資訊目前可用筆記記下，收藏功能仍以景點為主。
+
+## 伴手禮放在回住宿或離島前
+
+肉乾、糕餅與冷藏品的保存不同，購買前看標示、行李空間和交通時間。出發前漏了日用品，可讀[家樂福／萬家福補給指南](/guides/carrefour-kinmen/)；食品、酒類與跨境攜帶另按[禁限帶物品](/guides/restricted-items/)核對，不能因商品密封就推定可帶入下一目的地。

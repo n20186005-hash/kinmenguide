@@ -10,8 +10,9 @@
   "duration": "1 天",
   "order": 7,
   "featured": false,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-21",
   "related": [
+    "/food/kincheng-food/",
     "/areas/kincheng/",
     "/itineraries/kincheng-south-day/",
     "/attractions/juguang-inclusive-park/",
@@ -94,3 +95,7 @@
 
 ## 下雨與離島日
 雨天先考慮總兵署、水頭展示館，仍查臨時開放；坑道有濕滑路段，並非任何雨天都適合。離島日先確定班機或船班報到期限，再倒推還車、交通與行李時間。
+
+## 吃飯也按區域安排
+
+用[金城午餐、晚餐與老街點心指南](/food/kincheng-food/)選一份正餐和需要的點心，先看各店營業時段，再安排景點順序。文內時間是編輯建議，不是店家開門或供應保證；需趕離島交通時，先倒推報到與移動緩衝。

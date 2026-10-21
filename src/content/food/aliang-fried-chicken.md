@@ -8,7 +8,7 @@
   "tag": "分店辨識",
   "duration": "約30–60分鐘",
   "order": 15,
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-21",
   "sources": [
     {
       "title": "經濟部・2023年9月金門商業設立清冊",
@@ -24,6 +24,8 @@
     }
   ],
   "related": [
+    "/food/jinhu-food/",
+    "/food/kincheng-food/",
     "/food/kincheng-tea-walk/",
     "/attractions/shanwai-old-street/",
     "/food/monga-fried-chicken/"
@@ -94,3 +96,7 @@
 資料於2026年10月15日核對。尚未取得各門市一致且最新的營業公告，請核對指定門店。價格、品項與臨時店休以店家當日公告為準。
 
 分別查找：[金城民權路71號](https://www.google.com/maps/search/?api=1&query=金門金城民權路71號阿亮)、[山外中正路59之5號](https://www.google.com/maps/search/?api=1&query=金門金湖中正路59之5號阿亮)、[金城車站斜坡店](https://www.google.com/maps/search/?api=1&query=金門珠浦北路5巷12弄5-2號車站斜坡香雞排)。請按近期門市資訊核對地址。
+
+## 找山外點心時，也要分清另一家店
+
+[山外不一樣雞排／炸雞棺材板](/food/shanwai-chicken-coffin-bread/)是另一個店名與門牌，不等同本頁的山外阿亮。想把正餐、炸物與麵包排在同一區，可先讀[山外美食與半日安排](/food/jinhu-food/)，每個時段選一家即可。

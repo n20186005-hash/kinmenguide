@@ -10,8 +10,9 @@
   "duration": "4 分鐘",
   "order": 8,
   "featured": false,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-21",
   "related": [
+    "/food/lieyu-food/",
     "/transport/bus/",
     "/car-rental/",
     "/itineraries/kinmen-without-car/"
@@ -35,3 +36,7 @@
 
 ## 抵達烈嶼後怎麼玩
 先看[烈嶼分區景點指南](/areas/lieyu/)，再選[一日代表性路線](/itineraries/lieyu-one-day/)或[兩天慢遊](/itineraries/lieyu-two-days/)。九宮、南西岸與北岸各有不同看點，依同行者體力和當日開放擇一安排，別把每個營區都排進同半天。
+
+## 吃飯也按區域安排
+
+用[烈嶼用餐與跨橋半日安排](/food/lieyu-food/)選一份正餐和需要的點心，先看各店營業時段，再安排景點順序。文內時間是編輯建議，不是店家開門或供應保證；需趕離島交通時，先倒推報到與移動緩衝。

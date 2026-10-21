@@ -9,8 +9,9 @@
   "tag": "分區一日路線",
   "duration": "1 天",
   "order": 11,
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-21",
   "related": [
+    "/food/jinhu-food/",
     "/areas/jinhu/",
     "/attractions/chen-jinglan-house/",
     "/attractions/taihu-lake/",
@@ -97,3 +98,7 @@
 
 ## 風浪或下雨的調整
 海岸段遇天候不佳就取消，改看仍開放的館舍。E-094懸空碉堡與未確認開放的龍堡三營區不在此路線；擎天廳需另申請。公車旅客先查[山外車站](/transport/shanwai-station/)去回班次，可只做太湖館舍半日。
+
+## 吃飯也按區域安排
+
+用[山外午餐、晚餐與太湖半日指南](/food/jinhu-food/)選一份正餐和需要的點心，先看各店營業時段，再安排景點順序。文內時間是編輯建議，不是店家開門或供應保證；需趕離島交通時，先倒推報到與移動緩衝。

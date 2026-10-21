@@ -10,8 +10,9 @@
   "duration": "1–2 天",
   "order": 5,
   "featured": true,
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-21",
   "related": [
+    "/food/lieyu-food/",
     "/itineraries/lieyu-one-day/",
     "/itineraries/lieyu-cycling-one-day/",
     "/itineraries/lieyu-two-days/",
@@ -95,3 +96,7 @@
 
 ## 風雨天與入夜後的取捨
 大風縮短岬角、平台和山頂停留；雨天先查文化館與戰史館是否開館。舊營區、潮間帶與無照明路段不要摸黑探路。精確座標未核實的點使用地名查詢，地圖搜尋結果仍需對照官方或現場入口。
+
+## 吃飯也按區域安排
+
+用[烈嶼午餐與芋頭冰指南](/food/lieyu-food/)選一份正餐和需要的點心，先看各店營業時段，再安排景點順序。文內時間是編輯建議，不是店家開門或供應保證；需趕離島交通時，先倒推報到與移動緩衝。

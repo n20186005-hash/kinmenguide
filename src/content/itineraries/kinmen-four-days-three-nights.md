@@ -10,7 +10,7 @@
   "duration": "4 天 3 夜",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-21",
   "related": [
     "/transport/",
     "/hotels/kincheng/",
@@ -44,7 +44,7 @@
           "time": "13:30",
           "title": "翟山坑道",
           "href": "/attractions/zhaishan-tunnel/",
-          "note": "先確認開放；10/16–18 暫停開放期間改看金城古蹟。"
+          "note": "先查當日開放與活動管制；若無法入內，改選水頭或金城古蹟，不沿用已結束的音樂節停開日期。"
         },
         {
           "time": "15:00",
