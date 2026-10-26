@@ -10,7 +10,7 @@
   "duration": "8 分鐘",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-26",
   "aliases": [
     "烈屿美食",
     "小金門美食",
@@ -158,5 +158,12 @@
 | [九宮冰菓室](/food/#business-food-6515fbf96d) · 甜品 | 金門縣烈嶼鄉羅厝5-5號 (九宮坑道旁) | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3590) |
 | [合成餅店](/food/#business-food-unresolved-dda952e18b) · 烘焙 | 金門縣烈嶼鄉西方75號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/2916) |
 | [民樂商店（源興興）](/food/#business-food-unresolved-3572dd8b10) · 甜品 | 金門縣烈嶼鄉青岐村41號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/2909) |
+| [【金瑞成貢糖廠】東林店](/food/#business-official-2841) | 金門縣烈嶼鄉東林街173號 | [來源資料](https://kinmen.travel/zh-tw/shop/details/2841) |
+| [新大同餐飲](/food/#business-food-258c0834a7) | 金門縣烈嶼鄉后井18號 | [來源資料](https://kinmen.travel/zh-tw/discover/tour/579) |
+| [雷斯燒烤](/food/#business-food-1e6b6da082) | 金門縣烈嶼鄉東林街53–1號 | [來源資料](https://kinmen.travel/zh-tw/discover/tour/673) |
+
+<!-- final-source-links-2026-10-26 -->
+東林街的金瑞成是伴手食品門市，不能代替正餐；雷斯燒烤的官方行程介紹建議外帶。新大同則在后井，前往[湖井頭戰史館](/attractions/hujingtou-war-museum/)或採用[烈嶼一日遊](/itineraries/lieyu-one-day/)時先核對道路與當日供餐，不把全鄉當成一個步行商圈。
+
 
 安排住宿與用餐時，可接著比較[同區的住宿基地](/hotels/lieyu/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。

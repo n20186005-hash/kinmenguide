@@ -134,6 +134,11 @@
 | 店家與名錄 | 來源地址 | 核對來源 |
 | --- | --- | --- |
 | [自由作烘培DIY - 金門店](/food/#business-food-c5d76cdf45) | 金門縣金寧鄉埔後48-3號 | [個別資料](https://kinmen.travel/zh-tw/shop/details/3876) |
+| [19house炙燒牛排店](/food/#business-food-6bb94602bb) | 金門縣金寧鄉伯玉路一段234號3樓 | [來源資料](https://www.kinmen.travel/zh-tw/shop/details/4019) |
+
+<!-- final-source-links-2026-10-26 -->
+19house 的官方資料介紹牛排與沙拉吧；伯玉路一段的用餐點，和湖下、古寧頭的咖啡店分開導航。供餐時段的來源欄位有差異，這裡不刊確定營業時間，出發前請直接詢問。
+
 
 [查看本區完整名錄與篩選條件](/food/?area=jinning#business-directory)。上表是本輪比較選項，並非本區全部店家。資料整理不代表親訪、當日營業或空房保證；先按實際道路安排，再向業者確認到店或入住條件。
 <!-- /reverse-directory-2026-10-26 -->

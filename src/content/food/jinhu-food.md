@@ -10,7 +10,7 @@
   "duration": "8 分鐘",
   "order": 3,
   "featured": false,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-26",
   "related": [
     "/food/max-bakery/",
     "/food/tantianlou/",
@@ -151,5 +151,11 @@
 | [老爹牛肉麵](/food/#business-food-95dbbaad04) · 牛肉料理 | 金門縣金湖鎮武德新莊26號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/372) |
 | [藝耕LiveHouse](/food/#business-food-1f1a3ddc02) · 餐酒 | 金門縣金湖鎮塔后43號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/2740) |
 | [雪莉冰菓室](/food/#business-noid-official-3077) · 甜品 | 金門縣金湖鎮黃海路31號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3077) |
+| [老屋子蚵嗲](/food/#business-official-2790) | 金門縣金湖鎮成功村64號 | [來源資料](https://www.kinmen.travel/zh-tw/shop/details/2790) |
+| [喫茶小舖 金門金湖復興店](/food/#business-food-unresolved-2d4dbfc1e1) | 金門縣金湖鎮復興路54號 | [來源資料](https://www.teashop168.com.tw/store/index.php?index_m_id=12) |
+
+<!-- final-source-links-2026-10-26 -->
+成功村的蚵嗲小吃與山外復興路的茶飲分屬不同路段；前往[成功海防坑道](/attractions/chenggong-tunnel/)和[太湖](/attractions/taihu-lake/)時，按當天行車方向選擇。茶飲門市與金城民生店分開列出，避免導航到另一鄉鎮。
+
 
 安排住宿與用餐時，可接著比較[同區的住宿基地](/hotels/jinhu/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。

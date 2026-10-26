@@ -110,6 +110,11 @@
 | [心琴一館](/hotels/#business-lodging-5a50c72642e6) | 金門縣金城鎮北門里珠浦北路5巷14號 | [個別資料](https://kinmen.travel/zh-cn/accommodation/details/3070) |
 | [珠山82號民宿(來喜樓)](/hotels/#business-lodging-c47f8af2faf5) | 金門縣金城鎮珠山82號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/2310) |
 | [小陳故事古厝民宿](/hotels/#business-lodging-78a582adea97) | 金門縣金城鎮前水頭3號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/2925) |
+| [斜坡客棧](/hotels/#business-lodging-58efbf0063ae) | 金門縣金城鎮古城里大古崗72號 | [來源資料](https://kinmen.travel/zh-tw/accommodation/details/3157) |
+
+<!-- final-source-links-2026-10-26 -->
+斜坡客棧的官方介紹分為雙人雅房與背包床位，訂房時要確認實際方案與衛浴安排。大古崗與金城市區是不同的住宿方向；可先閱讀[古崗樓](/attractions/gugang-tower/)與[金城南線](/itineraries/kincheng-south-day/)，再確認往返道路及晚餐。
+
 
 [查看本區完整名錄與篩選條件](/hotels/?area=kincheng#business-directory)。上表是本輪比較選項，並非本區全部店家。資料整理不代表親訪、當日營業或空房保證；先按實際道路安排，再向業者確認到店或入住條件。
 <!-- /reverse-directory-2026-10-26 -->

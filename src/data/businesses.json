@@ -27617,6 +27617,494 @@
           }
         ]
       }
+    },
+    {
+      "id": "lodging-58efbf0063ae",
+      "kind": "hotel",
+      "name": "斜坡客棧",
+      "address": "金門縣金城鎮古城里大古崗72號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "斜坡客棧",
+      "registrationNumber": "金門縣民宿627號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3157",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "primary-detail",
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁介紹雙人雅房及背包客床位住宿。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-981-089953"
+      },
+      "identityMatchNote": "官方個別詳頁列完整金門縣民宿627號、古城里大古崗72號及斜坡客棧，與縣府登記底冊同證號、大古崗72號核對，沿用既有登記實體ID；雅房及床位依來源所報，不推為獨立客房，未附未確認Google CID。"
+    },
+    {
+      "id": "food-6bb94602bb",
+      "kind": "food",
+      "name": "19house炙燒牛排店",
+      "address": "金門縣金寧鄉伯玉路一段234號3樓",
+      "area": "jinning",
+      "category": "restaurant",
+      "contact": {
+        "phone": "+886-82-321333"
+      },
+      "sources": [
+        {
+          "id": "official-shop-4019",
+          "url": "https://www.kinmen.travel/zh-tw/shop/details/4019",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "official-shop-4019"
+        ],
+        "address": [
+          "official-shop-4019"
+        ],
+        "area": [
+          "official-shop-4019"
+        ],
+        "category": [
+          "official-shop-4019"
+        ],
+        "contact.phone": [
+          "official-shop-4019"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "official-shop-4019",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceDescription": {
+          "value": "炙燒牛排料理；店內設有供用餐顧客取用的沙拉吧。",
+          "sourceId": "official-shop-4019",
+          "checkedAt": "2026-10-26",
+          "note": "官方個別頁 2026-10-20 更新，並列 2026 年優惠；屬來源所報餐飲服務，非當日電話或親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      }
+    },
+    {
+      "id": "official-2790",
+      "kind": "food",
+      "name": "老屋子蚵嗲",
+      "address": "金門縣金湖鎮成功村64號",
+      "area": "jinhu",
+      "category": "snack",
+      "contact": {
+        "phone": "+886-82-332223"
+      },
+      "sources": [
+        {
+          "id": "official-shop-2790",
+          "url": "https://www.kinmen.travel/zh-tw/shop/details/2790",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "official-shop-2790"
+        ],
+        "address": [
+          "official-shop-2790"
+        ],
+        "area": [
+          "official-shop-2790"
+        ],
+        "category": [
+          "official-shop-2790"
+        ],
+        "contact.phone": [
+          "official-shop-2790"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "official-shop-2790",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceDescription": {
+          "value": "蚵嗲、酥炸番薯片與芋頭片；提供外帶。",
+          "sourceId": "official-shop-2790",
+          "checkedAt": "2026-10-26",
+          "note": "官方個別頁 2025-06-25 更新；來源所報服務，非當日電話或親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      }
+    },
+    {
+      "id": "official-2841",
+      "kind": "food",
+      "name": "【金瑞成貢糖廠】東林店",
+      "address": "金門縣烈嶼鄉東林街173號",
+      "area": "lieyu",
+      "category": "specialty-food-retail",
+      "contact": {
+        "phone": "+886-82-362932"
+      },
+      "sources": [
+        {
+          "id": "official-shop-2841",
+          "url": "https://kinmen.travel/zh-tw/shop/details/2841",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "official-shop-2841"
+        ],
+        "address": [
+          "official-shop-2841"
+        ],
+        "area": [
+          "official-shop-2841"
+        ],
+        "category": [
+          "official-shop-2841"
+        ],
+        "contact.phone": [
+          "official-shop-2841"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "official-shop-2841",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceDescription": {
+          "value": "東林門市販售貢糖、花生荖、芋頭片等金門伴手食品。",
+          "sourceId": "official-shop-2841",
+          "checkedAt": "2026-10-26",
+          "note": "來源列示門市或餐飲服務；非當日電話或親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      }
+    },
+    {
+      "id": "food-258c0834a7",
+      "kind": "food",
+      "name": "新大同餐飲",
+      "address": "金門縣烈嶼鄉后井18號",
+      "area": "lieyu",
+      "category": "restaurant",
+      "contact": {
+        "phone": "082-362977"
+      },
+      "sources": [
+        {
+          "id": "official-tour-579",
+          "url": "https://kinmen.travel/zh-tw/discover/tour/579",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "official-tour-579"
+        ],
+        "address": [
+          "official-tour-579"
+        ],
+        "area": [
+          "official-tour-579"
+        ],
+        "category": [
+          "official-tour-579"
+        ],
+        "contact.phone": [
+          "official-tour-579"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "official-tour-579",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceDescription": {
+          "value": "提供石蚵、芋頭料理與家常菜。",
+          "sourceId": "official-tour-579",
+          "checkedAt": "2026-10-26",
+          "note": "來源列示門市或餐飲服務；非當日電話或親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      }
+    },
+    {
+      "id": "food-1e6b6da082",
+      "kind": "food",
+      "name": "雷斯燒烤",
+      "address": "金門縣烈嶼鄉東林街53–1號",
+      "area": "lieyu",
+      "category": "restaurant",
+      "sources": [
+        {
+          "id": "official-tour-673",
+          "url": "https://kinmen.travel/zh-tw/discover/tour/673",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "official-tour-673"
+        ],
+        "address": [
+          "official-tour-673"
+        ],
+        "area": [
+          "official-tour-673"
+        ],
+        "category": [
+          "official-tour-673"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "official-tour-673",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceDescription": {
+          "value": "販售燒烤，縣府行程文章建議外帶。",
+          "sourceId": "official-tour-673",
+          "checkedAt": "2026-10-26",
+          "note": "來源列示門市或餐飲服務；非當日電話或親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      }
+    },
+    {
+      "id": "food-unresolved-2d4dbfc1e1",
+      "kind": "food",
+      "name": "喫茶小舖 金門金湖復興店",
+      "address": "金門縣金湖鎮復興路54號",
+      "area": "jinhu",
+      "category": "beverage",
+      "contact": {
+        "phone": "082-334860"
+      },
+      "sources": [
+        {
+          "id": "operator-teashop-stores",
+          "url": "https://www.teashop168.com.tw/store/index.php?index_m_id=12",
+          "type": "business",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "operator-teashop-stores"
+        ],
+        "address": [
+          "operator-teashop-stores"
+        ],
+        "area": [
+          "operator-teashop-stores"
+        ],
+        "category": [
+          "operator-teashop-stores"
+        ],
+        "contact.phone": [
+          "operator-teashop-stores"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "operator-teashop-stores",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceDescription": {
+          "value": "喫茶小舖門市提供茶飲。",
+          "sourceId": "operator-teashop-stores",
+          "checkedAt": "2026-10-26",
+          "note": "來源列示門市或餐飲服務；非當日電話或親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      }
+    },
+    {
+      "id": "food-b3d200e946",
+      "kind": "food",
+      "name": "老先覺 金門金城店",
+      "address": "金門縣金城鎮民族路227-1號",
+      "area": "kincheng",
+      "category": "restaurant",
+      "contact": {
+        "phone": "(082)312-564"
+      },
+      "sources": [
+        {
+          "id": "operator-oldgod-branch6",
+          "url": "https://www.oldgod.com.tw/branch/all/6",
+          "type": "business",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "operator-oldgod-branch6"
+        ],
+        "address": [
+          "operator-oldgod-branch6"
+        ],
+        "area": [
+          "operator-oldgod-branch6"
+        ],
+        "category": [
+          "operator-oldgod-branch6"
+        ],
+        "contact.phone": [
+          "operator-oldgod-branch6"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "operator-oldgod-branch6",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceDescription": {
+          "value": "提供個人火鍋套餐及蔬食自助吧。",
+          "sourceId": "operator-oldgod-branch6",
+          "checkedAt": "2026-10-26",
+          "note": "來源列示門市或餐飲服務；非當日電話或親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      }
+    },
+    {
+      "id": "food-336e2072f5",
+      "kind": "food",
+      "name": "喫茶小舖 金城民生店",
+      "address": "金門縣金城鎮民生路5巷9號",
+      "area": "kincheng",
+      "category": "beverage",
+      "contact": {
+        "phone": "082-373101"
+      },
+      "sources": [
+        {
+          "id": "operator-teashop-stores",
+          "url": "https://www.teashop168.com.tw/store/index.php?index_m_id=12",
+          "type": "business",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "operator-teashop-stores"
+        ],
+        "address": [
+          "operator-teashop-stores"
+        ],
+        "area": [
+          "operator-teashop-stores"
+        ],
+        "category": [
+          "operator-teashop-stores"
+        ],
+        "contact.phone": [
+          "operator-teashop-stores"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "operator-teashop-stores",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceDescription": {
+          "value": "喫茶小舖門市提供茶飲。",
+          "sourceId": "operator-teashop-stores",
+          "checkedAt": "2026-10-26",
+          "note": "來源列示門市或餐飲服務；非當日電話或親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      }
     }
   ]
 }

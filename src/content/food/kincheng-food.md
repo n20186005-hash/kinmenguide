@@ -175,6 +175,12 @@
 | [金一燒餅店](/food/#business-food-ac900a8baa) | 金門縣金城鎮民族路191號 | [個別資料](https://kinmen.travel/zh-tw/shop/details/346) |
 | [松興油條](/food/#business-food-11181f210a) | 金門縣金城鎮民族路189號 | [個別資料](https://kinmen.travel/zh-tw/shop/details/3242) |
 | [源興燒餅](/food/#business-food-71b0e651e9) | 金門縣金城鎮民族路193號 | [個別資料](https://kinmen.travel/zh-tw/shop/details/3243) |
+| [老先覺 金門金城店](/food/#business-food-b3d200e946) | 金門縣金城鎮民族路227-1號 | [來源資料](https://www.oldgod.com.tw/branch/all/6) |
+| [喫茶小舖 金城民生店](/food/#business-food-336e2072f5) | 金門縣金城鎮民生路5巷9號 | [來源資料](https://www.teashop168.com.tw/store/index.php?index_m_id=12) |
+
+<!-- final-source-links-2026-10-26 -->
+民族路的個人火鍋與民生路巷內的茶飲可作不同餐別的查找選項。老先覺所報蔬食自助吧不等於整間餐廳是全素環境，飲食限制請另問；喫茶金城民生店也不要與金湖復興店混用地址。
+
 
 [查看本區完整名錄與篩選條件](/food/?area=kincheng#business-directory)。上表是本輪比較選項，並非本區全部店家。資料整理不代表親訪、當日營業或空房保證；先按實際道路安排，再向業者確認到店或入住條件。
 <!-- /reverse-directory-2026-10-26 -->
