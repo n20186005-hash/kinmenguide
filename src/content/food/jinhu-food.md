@@ -10,13 +10,14 @@
   "duration": "8 分鐘",
   "order": 3,
   "featured": false,
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-25",
   "related": [
     "/food/max-bakery/",
     "/food/tantianlou/",
     "/food/liangjin-ranch/",
     "/areas/jinhu/",
-    "/itineraries/jinhu-one-day/"
+    "/itineraries/jinhu-one-day/",
+    "/hotels/jinhu/"
   ],
   "sources": [
     {
@@ -30,6 +31,42 @@
     {
       "title": "金門觀光旅遊網・良金工廠總店",
       "url": "https://kinmen.travel/zh-tw/shop/details/2264"
+    },
+    {
+      "title": "佑昇生億飲食店公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3148"
+    },
+    {
+      "title": "〖聖祖食品〗機場門市公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/2845"
+    },
+    {
+      "title": "談天樓公開服務資料",
+      "url": "https://www.kinmen.travel/zh-tw/shop/details/1034"
+    },
+    {
+      "title": "歐某甜點公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3986"
+    },
+    {
+      "title": "舊識咖啡公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/2739"
+    },
+    {
+      "title": "老爹牛肉麵公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/372"
+    },
+    {
+      "title": "藝耕LiveHouse公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/2740"
+    },
+    {
+      "title": "綠園餐館Garden Feast公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/2937"
+    },
+    {
+      "title": "雪莉冰菓室公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3077"
     }
   ],
   "aliases": [
@@ -55,6 +92,10 @@
   ]
 }
 ---
+
+
+
+
 
 ## 山外午餐與金湖美食，先分兩個用餐區
 
@@ -93,3 +134,22 @@
 ## 山外炸雞店名怎麼分？
 
 「不一樣雞排」與「阿亮」不是同一個搜尋名稱。想找棺材板，先看中正路26號那頁；想找山外阿亮，另核對中正路59之5號及近期門市資訊。這兩處也不能套用金城車站斜坡店的價格與營業時間。
+
+## 本輪補核的同區選擇
+
+山外復興路、新市里、成功與小徑分屬不同路段。太湖散步前後可找山外用餐，往成功或小徑時另排交通；店家有分段營業或預約條件時，先確認再出發。
+
+以下是本輪補核的不同用餐類型，完整選擇仍以[餐飲名錄](/food/#business-directory)搜尋。時段只作來源參考，實際供餐、訂位與售完情況請再詢問。
+
+| 店家與類型 | 核對門牌 | 查詢依據 |
+|---|---|---|
+| [佑昇生億飲食店](/food/#business-yousheng-shengyi) · 餐廳 | 金門縣金湖鎮正義里成功171號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3148) |
+| [〖聖祖食品〗機場門市](/food/#business-shengzu-airport-store) · 食品採買 | 金門縣金湖鎮尚義機場2號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/2845) |
+| [談天樓](/food/#business-food-6cf6b1cb62) · 小吃 | 金門縣金湖鎮復興路3號 | [來源所報服務](https://www.kinmen.travel/zh-tw/shop/details/1034) |
+| [歐某甜點](/food/#business-food-97c00cb711) · 烘焙 | 金門縣金湖鎮新市里國順街3號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3986) |
+| [舊識咖啡](/food/#business-food-734feb8519) · 咖啡甜點 | 金門縣金湖鎮塔后208之63號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/2739) |
+| [老爹牛肉麵](/food/#business-food-95dbbaad04) · 牛肉料理 | 金門縣金湖鎮武德新莊26號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/372) |
+| [藝耕LiveHouse](/food/#business-food-1f1a3ddc02) · 餐酒 | 金門縣金湖鎮塔后43號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/2740) |
+| [雪莉冰菓室](/food/#business-noid-official-3077) · 甜品 | 金門縣金湖鎮黃海路31號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3077) |
+
+安排住宿與用餐時，可接著比較[同區的住宿基地](/hotels/jinhu/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。

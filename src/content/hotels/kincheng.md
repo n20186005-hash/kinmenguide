@@ -14,16 +14,49 @@
   "related": [
     "/itineraries/kinmen-three-days-two-nights/",
     "/transport/",
-    "/areas/"
+    "/areas/",
+    "/food/kincheng-food/"
   ],
   "sources": [
     {
       "title": "金門觀光旅遊網・住宿資訊",
       "url": "https://kinmen.travel/zh-tw/accommodation"
+    },
+    {
+      "title": "戴家民宿公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/2748"
+    },
+    {
+      "title": "慢漫民宿-藍海館公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/1662"
+    },
+    {
+      "title": "慢漫民宿-聽風館公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/1664"
+    },
+    {
+      "title": "天井的月光公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/1665"
+    },
+    {
+      "title": "天井的月光二館公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/1666"
+    },
+    {
+      "title": "落番居LuoFunJyu公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/2284"
+    },
+    {
+      "title": "浯島魁星背包棧公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/3937"
     }
   ]
 }
 ---
+
+
+
+
 
 
 ## 想步行吃飯，先看金城市區
@@ -43,3 +76,21 @@
 市區早餐可比較[傳記](/food/#business-chuanji-congee)、[聯成](/food/liancheng-congee/)與其他[金城用餐選擇](/food/kincheng-food/)；住南側古厝先確認早餐是否含於所訂方案，晚上是否要另行開車。前往[水頭聚落](/attractions/shuitou-village/)與[珠山](/attractions/zhushan-village/)分別導航，不把整個鎮當成步行範圍。
 
 [金城住宿名錄](/hotels/?area=kincheng#business-directory)可依類型、已核實設施搜尋；沒有列出的設施代表尚未核實，不代表店家一定不提供。
+
+## 本輪補核的同區選擇
+
+後浦的中興路、民族路與莒光路可以按實際門牌分段找餐；北堤、金門城與水頭不應直接當成同一個步行圈。先決定今天停在哪個街區，再確認用餐時段與最後點餐。
+
+下列是本輪核對登記與住宿服務資料的選擇。房型、樓梯、早餐、停車與接送未經逐項確認時，不作肯定承諾；訂房前也請說明抵達時間與用餐安排。完整資料可查[住宿名錄](/hotels/#business-directory)。
+
+| 住宿與登記 | 核對門牌 | 查詢依據 |
+|---|---|---|
+| [戴家民宿](/hotels/#business-registered-homestay-223) · 金門縣民宿223號 | 金門縣金城鎮小西門65-1號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/2748) |
+| [慢漫民宿-藍海館](/hotels/#business-registered-homestay-319) · 金門縣民宿319號 | 金門縣金城鎮珠山36號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/1662) |
+| [慢漫民宿-聽風館](/hotels/#business-registered-homestay-321) · 金門縣民宿321號 | 金門縣金城鎮珠山24號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/1664) |
+| [天井的月光](/hotels/#business-registered-homestay-323) · 金門縣民宿323號 | 金門縣金城鎮歐厝54號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/1665) |
+| [天井的月光二館](/hotels/#business-registered-homestay-324) · 金門縣民宿324號 | 金門縣金城鎮歐厝59號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/1666) |
+| [落番居LuoFunJyu](/hotels/#business-registered-homestay-352) · 金門縣民宿352號 | 金門縣金城鎮珠山28號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/2284) |
+| [浯島魁星背包棧](/hotels/#business-registered-homestay-809) · 金門縣民宿809號 | 金門縣金城鎮民族路162巷25號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/3937) |
+
+安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/kincheng-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。

@@ -30,10 +30,26 @@
     {
       "title": "官方或業者公開資料・八八觀海古厝民宿",
       "url": "https://www.kinmen.travel/zh-tw/accommodation/details/3624"
+    },
+    {
+      "title": "浯陽小學校公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/2694"
+    },
+    {
+      "title": "蕃茄紅了古典館公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/3370"
+    },
+    {
+      "title": "麗絲的家2館公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/3234"
     }
   ]
 }
 ---
+
+
+
+
 
 ## 住東北側之前，先想晚上怎麼回來
 
@@ -56,3 +72,17 @@
 往沙美可接[沙美老街](/attractions/shamei-old-street/)與[金沙用餐指南](/food/jinsha-food/)；住山后時，先看[民俗文化村](/attractions/shanhou-folk-culture-village/)和[狮山砲陣地](/attractions/shishan-howitzer-front/)的實際開放，再安排一餐。若翌日改往金湖，不必為了增加景點反覆返回北岸。
 
 搭公車要另查可達站點與末班車，自駕也需先確認夜間道路和停車入口。[金沙一日遊](/itineraries/jinsha-one-day/)作取捨起點即可；抵達較晚就先入住與用餐，不把海邊觀景放在報到或退房之前。
+
+## 本輪補核的同區選擇
+
+沙美、高坑、陽翟與山后不能只因同在金沙就排成連續步行。先選當天北線的主要路段，再決定正餐、點心與採買；烘焙、伴手禮門市和可以坐下吃正餐的餐廳也要分開判斷。
+
+下列是本輪核對登記與住宿服務資料的選擇。房型、樓梯、早餐、停車與接送未經逐項確認時，不作肯定承諾；訂房前也請說明抵達時間與用餐安排。完整資料可查[住宿名錄](/hotels/#business-directory)。
+
+| 住宿與登記 | 核對門牌 | 查詢依據 |
+|---|---|---|
+| [浯陽小學校](/hotels/#business-registered-homestay-240) · 金門縣民宿240號 | 金門縣金沙鎮陽翟32號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/2694) |
+| [蕃茄紅了古典館](/hotels/#business-registered-homestay-466) · 金門縣民宿466號 | 金門縣金沙鎮山后45號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/3370) |
+| [麗絲的家2館](/hotels/#business-registered-homestay-585) · 金門縣民宿585號 | 金門縣金沙鎮光前里陽翟219號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/3234) |
+
+安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/jinsha-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。

@@ -10,13 +10,14 @@
   "duration": "8 分鐘",
   "order": 2,
   "featured": false,
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-25",
   "related": [
     "/food/kinmen-food-guide/",
     "/itineraries/kincheng-one-day/",
     "/itineraries/kinmen-food-trail/",
     "/tours/houpu-night-walk/",
-    "/food/beef-noodles/"
+    "/food/beef-noodles/",
+    "/hotels/kincheng/"
   ],
   "sources": [
     {
@@ -34,6 +35,50 @@
     {
       "title": "金門觀光旅遊網・美食名錄",
       "url": "https://kinmen.travel/zh-tw/shop/index/all-regions/restaurants"
+    },
+    {
+      "title": "光野麵館公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3967"
+    },
+    {
+      "title": "金道地小吃店公開服務資料",
+      "url": "https://www.kinmen.travel/zh-tw/shop/details/3212"
+    },
+    {
+      "title": "阡湖餐廳公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/323"
+    },
+    {
+      "title": "A-ki-o 黑雅砌咖啡公開服務資料",
+      "url": "https://www.kinmen.travel/zh-tw/shop/details/2707"
+    },
+    {
+      "title": "利德紅豆餅公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3456"
+    },
+    {
+      "title": "佳味小吃公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/345"
+    },
+    {
+      "title": "牛二爺酒糟全牛海鮮料理館公開服務資料",
+      "url": "https://www.kinmen.travel/zh-tw/shop/details/2413"
+    },
+    {
+      "title": "金門牛家莊公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/375"
+    },
+    {
+      "title": "金門蛋捲公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3176"
+    },
+    {
+      "title": "夢酒館 Vent Bar公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/2866"
+    },
+    {
+      "title": "陸柒捌茶飲行（龜記金城店）公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3957"
     }
   ],
   "aliases": [
@@ -59,6 +104,10 @@
   ]
 }
 ---
+
+
+
+
 
 ## 先決定吃正餐，還是老街邊走邊吃
 
@@ -96,3 +145,22 @@
 ## 菜單與預算，先確認再下單
 
 麵食、切盤、分享料理的份量不能直接比單價。先核對每個人的飲食需求、店內當日菜單與是否有最低消費；有避牛、海鮮、花生或酒精需求，問清湯底與配料。出發前查店休，抵達後看現場價格，相關時段於2026年10月21日按文末官方頁核對。
+
+## 本輪補核的同區選擇
+
+後浦的中興路、民族路與莒光路可以按實際門牌分段找餐；北堤、金門城與水頭不應直接當成同一個步行圈。先決定今天停在哪個街區，再確認用餐時段與最後點餐。
+
+以下是本輪補核的不同用餐類型，完整選擇仍以[餐飲名錄](/food/#business-directory)搜尋。時段只作來源參考，實際供餐、訂位與售完情況請再詢問。
+
+| 店家與類型 | 核對門牌 | 查詢依據 |
+|---|---|---|
+| [光野麵館](/food/#business-guangye-noodle) · 牛肉料理 | 金門縣金城鎮中興路161巷21號1樓 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3967) |
+| [金道地小吃店](/food/#business-jindaodi-snacks) · 小吃 | 金門縣金城鎮前水頭15號 | [來源所報服務](https://www.kinmen.travel/zh-tw/shop/details/3212) |
+| [阡湖餐廳](/food/#business-qianhu-restaurant) · 餐廳 | 金門縣金城鎮古城里金門城5-2號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/323) |
+| [A-ki-o 黑雅砌咖啡](/food/#business-akio-black-cafe) · 咖啡甜點 | 金門縣金城鎮西海路3段2巷21-1號 | [來源所報服務](https://www.kinmen.travel/zh-tw/shop/details/2707) |
+| [利德紅豆餅](/food/#business-food-82ae4bb63a) · 甜品 | 金門縣金城鎮民族路96號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3456) |
+| [金門蛋捲](/food/#business-food-eb7984d627) · 烘焙 | 金門縣金城鎮莒光路一段42號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3176) |
+| [夢酒館 Vent Bar](/food/#business-official-2866) · 餐酒 | 金門縣金城鎮莒光路110巷4號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/2866) |
+| [陸柒捌茶飲行（龜記金城店）](/food/#business-official-3957) · 飲料 | 金門縣金城鎮中興路136號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3957) |
+
+安排住宿與用餐時，可接著比較[同區的住宿基地](/hotels/kincheng/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。

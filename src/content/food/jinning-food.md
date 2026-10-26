@@ -38,10 +38,50 @@
     {
       "title": "官方或業者公開資料・茶曉伊金門店",
       "url": "https://kinmen.travel/zh-tw/shop/details/4001"
+    },
+    {
+      "title": "蘇菲の午后珈琲屋~無麩質手作甜點專賣公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3798"
+    },
+    {
+      "title": "寂寞寂寞山芭地公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3873"
+    },
+    {
+      "title": "初原麵場金寧店公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3368"
+    },
+    {
+      "title": "勁吼犽烘焙工作室公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3900"
+    },
+    {
+      "title": "壽記粥糜公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/2465"
+    },
+    {
+      "title": "綠洲 OASIS公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3463"
+    },
+    {
+      "title": "金門Amei手工料理公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3478"
+    },
+    {
+      "title": "海洋餐廳公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/1039"
+    },
+    {
+      "title": "圓頭肉乾農牧概念館公開服務資料",
+      "url": "https://www.kinmen.travel/zh-tw/shop/details/3099"
     }
   ]
 }
 ---
+
+
+
+
 
 ## 早餐、正餐與咖啡不是同一種備案
 
@@ -66,3 +106,22 @@
 桌菜先確認人數與可點菜方式，咖啡甜點先看取貨或內用條件。避酒者對高粱甜點、藥膳與料理成分直接詢問，不能從名稱推定不含酒。來源有參考營業時段，仍以當日店家公告與接單為準；沒有確認的價格、停車或外送條件，本站不作保證。
 
 挑好後把店家加入[旅行清單](/trip/)，以「早餐／午餐／點心」註記需要的時段。選擇休息時，改用同方向已確認營業的店，而不是臨時橫跨全島補同一道菜。
+
+## 本輪補核的同區選擇
+
+金鼎與大學生活圈、盤山、湖下及古寧頭各有不同移動方向。住在聚落不代表附近每家都能步行抵達；把早餐、午休與回住宿的路線一起問清楚，取貨型工作室也要先確認接待方式。
+
+以下是本輪補核的不同用餐類型，完整選擇仍以[餐飲名錄](/food/#business-directory)搜尋。時段只作來源參考，實際供餐、訂位與售完情況請再詢問。
+
+| 店家與類型 | 核對門牌 | 查詢依據 |
+|---|---|---|
+| [蘇菲の午后珈琲屋~無麩質手作甜點專賣](/food/#business-sophie-glutenfree-desserts) · 甜品 | 金門縣金寧鄉后湖28號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3798) |
+| [寂寞寂寞山芭地](/food/#business-lonely-somebody-cafe) · 咖啡甜點 | 金門縣金寧鄉下堡87號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3873) |
+| [初原麵場金寧店](/food/#business-chuyuan-noodle-jinning) · 餐廳 | 金門縣金寧鄉盤山村伯玉路二段223-2號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3368) |
+| [勁吼犽烘焙工作室](/food/#business-food-b8c496ef63) · 烘焙 | 金門縣金寧鄉盤果路23號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3900) |
+| [壽記粥糜](/food/#business-food-3390ccf5bb) · 小吃 | 金門縣金寧鄉伯玉路一段216-1號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/2465) |
+| [綠洲 OASIS](/food/#business-food-1fa5f3fe8f) · 餐酒 | 金門縣金寧鄉伯玉路二段223號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3463) |
+| [圓頭肉乾農牧概念館](/food/#business-official-food-109) · 牛肉料理 | 金門縣金寧鄉伯玉路二段169號 | [來源所報服務](https://www.kinmen.travel/zh-tw/shop/details/3099) |
+| [金門Amei手工料理](/food/#business-amei-handmade-food) · 餐廳 | 金門縣金寧鄉后沙56號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3478) |
+
+安排住宿與用餐時，可接著比較[同區的住宿基地](/hotels/jinning/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。

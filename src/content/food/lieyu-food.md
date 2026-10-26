@@ -10,7 +10,7 @@
   "duration": "8 分鐘",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-25",
   "aliases": [
     "烈屿美食",
     "小金門美食",
@@ -23,7 +23,8 @@
     "/itineraries/lieyu-one-day/",
     "/itineraries/lieyu-two-days/",
     "/transport/kinmen-to-lieyu/",
-    "/food/kinmen-food-guide/"
+    "/food/kinmen-food-guide/",
+    "/hotels/lieyu/"
   ],
   "sources": [
     {
@@ -53,6 +54,14 @@
     {
       "title": "金門觀光旅遊網・民樂商店（源興興）",
       "url": "https://kinmen.travel/zh-tw/shop/details/2909"
+    },
+    {
+      "title": "妙香小吃店公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/347"
+    },
+    {
+      "title": "合成餅店公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/shop/details/2916"
     }
   ],
   "facts": [
@@ -85,6 +94,10 @@
   ]
 }
 ---
+
+
+
+
 
 ## 小金門午餐，先選一區再挑芋頭點心
 
@@ -132,3 +145,18 @@
 初訪可用[烈嶼一日遊](/itineraries/lieyu-one-day/)作骨架，先定午餐區，再替換一站點心；想看更多聚落再用[兩天慢遊](/itineraries/lieyu-two-days/)。六家全部不是一天的必吃清單。騎車、自行車、公車的路程與班次差異，另看[跨橋交通](/transport/kinmen-to-lieyu/)；強風時縮短海岸，返本島後還需還車與機船報到。
 
 封面是金門大橋實景，代表跨海動線，不是店家或餐點照片。
+
+## 本輪補核的同區選擇
+
+東林、西路、九宮與青岐是不同用餐方向，跨橋後先想好午餐與回程。若住在北岸或西岸聚落，晚餐供餐與夜間接待先向店家確認，不把行政區相同理解成步行方便。
+
+以下是本輪補核的不同用餐類型，完整選擇仍以[餐飲名錄](/food/#business-directory)搜尋。時段只作來源參考，實際供餐、訂位與售完情況請再詢問。
+
+| 店家與類型 | 核對門牌 | 查詢依據 |
+|---|---|---|
+| [妙香小吃店](/food/#business-food-35adf1b9d3) · 小吃 | 金門縣烈嶼鄉后頭43之1號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/347) |
+| [九宮冰菓室](/food/#business-food-6515fbf96d) · 甜品 | 金門縣烈嶼鄉羅厝5-5號 (九宮坑道旁) | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3590) |
+| [合成餅店](/food/#business-food-unresolved-dda952e18b) · 烘焙 | 金門縣烈嶼鄉西方75號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/2916) |
+| [民樂商店（源興興）](/food/#business-food-unresolved-3572dd8b10) · 甜品 | 金門縣烈嶼鄉青岐村41號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/2909) |
+
+安排住宿與用餐時，可接著比較[同區的住宿基地](/hotels/lieyu/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。

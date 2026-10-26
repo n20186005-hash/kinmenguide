@@ -14,16 +14,25 @@
   "related": [
     "/itineraries/kinmen-three-days-two-nights/",
     "/transport/",
-    "/areas/"
+    "/areas/",
+    "/food/jinhu-food/"
   ],
   "sources": [
     {
       "title": "金門觀光旅遊網・住宿資訊",
       "url": "https://kinmen.travel/zh-tw/accommodation"
+    },
+    {
+      "title": "喜悅瓊林公開服務資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/3190"
     }
   ]
 }
 ---
+
+
+
+
 
 
 ## 行程多在東邊，金湖很實用
@@ -43,3 +52,15 @@
 用餐從[山外與金湖美食](/food/jinhu-food/)選需求：麵食、義式正餐、飯店餐廳與食品門市的供應不同。湖光餐廳、點心坊與咖啡空間不能視為同一營業場所或共用全部時段，訂位要報明要去的餐廳。
 
 喜歡散步可把[太湖](/attractions/taihu-lake/)放在白天，不用假定夜間沿湖道路都適合步行回住宿。公車旅客以站點與末班車決定晚餐地點；全部已核對住宿見[金湖名錄](/hotels/?area=jinhu#business-directory)。
+
+## 本輪補核的同區選擇
+
+山外復興路、新市里、成功與小徑分屬不同路段。太湖散步前後可找山外用餐，往成功或小徑時另排交通；店家有分段營業或預約條件時，先確認再出發。
+
+下列是本輪核對登記與住宿服務資料的選擇。房型、樓梯、早餐、停車與接送未經逐項確認時，不作肯定承諾；訂房前也請說明抵達時間與用餐安排。完整資料可查[住宿名錄](/hotels/#business-directory)。
+
+| 住宿與登記 | 核對門牌 | 查詢依據 |
+|---|---|---|
+| [喜悅瓊林](/hotels/#business-registered-homestay-294) · 金門縣民宿294號 | 金門縣金湖鎮瓊林102號 | [來源所報服務](https://www.kinmen.travel/zh-tw/accommodation/details/3190) |
+
+安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/jinhu-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。

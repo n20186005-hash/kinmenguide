@@ -38,10 +38,34 @@
     {
       "title": "官方或業者公開資料・瓦櫃",
       "url": "https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=3869"
+    },
+    {
+      "title": "W民宿公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/1702"
+    },
+    {
+      "title": "幸福樹舍背包客棧民宿公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/1409"
+    },
+    {
+      "title": "小東林民宿公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/2399"
+    },
+    {
+      "title": "慈湖山莊海景公開服務資料",
+      "url": "https://kinmen.travel/zh-tw/accommodation/details/3224"
+    },
+    {
+      "title": "好室行旅公開服務資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/4036"
     }
   ]
 }
 ---
+
+
+
+
 
 ## 寫「金寧」的房源，可能在不同方向
 
@@ -65,3 +89,19 @@
 古寧頭住宿可先看[古寧頭聚落](/attractions/guningtou-village/)與[金寧一日路線](/itineraries/jinning-guningtou-one-day/)；湖下住宿搭配[湖下海堤](/attractions/huxia-seawall/)方向，后湖則先看[后湖海濱公園](/attractions/houhu-seaside-park/)。海邊散步受風雨影響，夜間不要把未照明岸線當回住宿的捷徑。
 
 用餐可用[金寧早餐、正餐與咖啡指南](/food/jinning-food/)選同方向的一餐。店家在同鄉鎮不代表步行可達；安排入住、晚餐與隔天離島交通時，分別核對實際道路及接駁。
+
+## 本輪補核的同區選擇
+
+金鼎與大學生活圈、盤山、湖下及古寧頭各有不同移動方向。住在聚落不代表附近每家都能步行抵達；把早餐、午休與回住宿的路線一起問清楚，取貨型工作室也要先確認接待方式。
+
+下列是本輪核對登記與住宿服務資料的選擇。房型、樓梯、早餐、停車與接送未經逐項確認時，不作肯定承諾；訂房前也請說明抵達時間與用餐安排。完整資料可查[住宿名錄](/hotels/#business-directory)。
+
+| 住宿與登記 | 核對門牌 | 查詢依據 |
+|---|---|---|
+| [W民宿](/hotels/#business-registered-homestay-159) · 金門縣民宿159號 | 金門縣金寧鄉盤山村下堡28號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/1702) |
+| [幸福樹舍背包客棧民宿](/hotels/#business-registered-homestay-185) · 金門縣民宿185號 | 金門縣金寧鄉環島北路二段613號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/1409) |
+| [小東林民宿](/hotels/#business-registered-homestay-383) · 金門縣民宿383號 | 金門縣金寧鄉盤果路91-3號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/2399) |
+| [慈湖山莊海景](/hotels/#business-registered-homestay-597) · 金門縣民宿597號 | 金門縣金寧鄉慈湖路一段32之6號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/3224) |
+| [好室行旅](/hotels/#business-county-4036) · 金門縣民宿395號 | 金門縣金寧鄉環島西路二段93巷5號 | [來源所報服務](https://www.kinmen.travel/zh-tw/accommodation/details/4036) |
+
+安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/jinning-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。
