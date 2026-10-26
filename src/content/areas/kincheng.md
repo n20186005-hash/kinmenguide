@@ -10,13 +10,14 @@
   "duration": "分區半日；完整慢遊建議2天以上",
   "order": 1,
   "featured": true,
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-25",
   "related": [
     "/itineraries/kincheng-one-day/",
     "/itineraries/kincheng-south-day/",
     "/attractions/kincheng-old-streets/",
     "/attractions/kinmen-port-terminal/",
-    "/hotels/kincheng/"
+    "/hotels/kincheng/",
+    "/food/kincheng-food/"
   ],
   "sources": [
     {
@@ -26,6 +27,7 @@
   ]
 }
 ---
+
 
 ## 先選一區，別把整個金城鎮當步行圈
 金城鎮包含熱鬧的後浦市區，也包括水頭、金門城、珠山和海岸。**金城老街指後浦街區；金門城與明遺老街在南邊另一處。** 市區內適合步行，分區之間請安排公車、接送或自駕。
@@ -119,3 +121,8 @@
 
 ## 老城用餐從早餐排到晚餐
 早餐可查[永春廣東粥](/food/yongchun-congee/)或[標記小吃](/food/biaoji-snacks/)，午晚餐在[良金牌坊店](/food/liangjin-paifang/)、[第一味牛肉麵](/food/diyiwei-beef-noodles/)、[廉坤](/food/liankun-beef/)、[牛家莊](/food/niujiazhuang/)與[金山鵝肉](/food/jinshan-smoked-goose/)之間按路線選一餐。下午另留[蚵嗲之家](/food/oyster-fritter-house/)或[50嵐金城店](/food/50lan-kincheng/)，完整時段比較見[金城美食散步](/food/kincheng-food/)。
+## 後浦和南側古厝，分開找吃住
+
+住後浦可比較[海福商務飯店](/hotels/haifu-business-hotel/)與[時光旅舍金城車站館](/hotels/#business-county-3746)；想住珠山則看[校長的家](/hotels/principal-home/)與[大夫第](/hotels/#business-county-1181)。車站館和珠山古厝的門牌、行李動線及晚餐方向不同，不能用「同在金城」推定步行可達。
+
+用餐可從[傳記廣東粥](/food/#business-chuanji-congee)的早餐、[雨川食堂](/food/yuchuan-canteen/)正餐或[Chez Ray](/food/#business-chez-ray)的餐飲名錄挑一個需求；先看供餐與店休，再將一餐和住宿加入[旅行清單](/trip/)。同品牌分店分開收藏，避免導航到另一個門牌。

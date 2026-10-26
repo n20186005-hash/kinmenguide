@@ -2,5 +2,10 @@
 export const businessLinks: Record<string, string> = {
   "food:yuchuan-canteen": "/food/yuchuan-canteen/",
   "food:liangjin-factory": "/food/liangjin-ranch/",
-  "food:liangjin-paifang": "/food/liangjin-paifang/"
+  "food:liangjin-paifang": "/food/liangjin-paifang/",
+  "food:gaokeng-beef-restaurant": "/food/gaokeng-beef/",
+  "food:biaoji": "/food/biaoji-snacks/",
+  "food:diyiwei-beef-noodles": "/food/diyiwei-beef-noodles/",
+  "food:liankun-beef": "/food/liankun-beef/",
+  "food:liancheng-congee": "/food/liancheng-congee/"
 };

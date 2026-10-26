@@ -15,6 +15,17 @@ for (const kind of ['food', 'hotel']) {
   const folder = kind === 'hotel' ? 'hotels' : 'food';
   const $ = load(fs.readFileSync(`dist/${folder}/index.html`, 'utf8'));
   assert.equal($('[data-business-card]').length, group.length, 'Directory count is entity count, not article count');
+  const pageSize = Number($('[data-business-directory]').attr('data-page-size'));
+  assert.ok(Number.isSafeInteger(pageSize) && pageSize > 0, 'A finite page size must be declared');
+  const batches = $('[data-business-batch]');
+  assert.equal(batches.length, Math.ceil(group.length / pageSize), 'SSR batches must contain the entire public directory');
+  assert.equal(batches.filter('[open]').length, group.length ? 1 : 0, 'Only the first native batch starts expanded');
+  batches.each((index, batch) => {
+    assert.equal($(batch).find('[data-business-card]').length, Math.min(pageSize, group.length - index * pageSize), 'Each no-JS batch must stay bounded');
+    assert.ok($(batch).find('summary').text().trim(), 'Native batches need a usable expand control');
+  });
+  assert.equal($('[data-business-form][hidden]').length, 1, 'Interactive-only filters must not present inert no-JS controls');
+  console.log(`${folder}: ${group.length} SSR cards in ${batches.length} native batches of at most ${pageSize}; directory HTML ${fs.statSync(`dist/${folder}/index.html`).size} bytes.`);
   for (const b of group) {
     assert.ok(['directory', 'detail'].includes(b.publication.level) && !b.synthetic, 'Only approved public data may enter the site');
     const card = $(`[id="business-${b.id}"]`);

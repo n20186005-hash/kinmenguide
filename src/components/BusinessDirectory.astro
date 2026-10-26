@@ -1,5 +1,6 @@
 ---
 import AddToTrip from './AddToTrip.astro';
+import { BUSINESS_PAGE_SIZE, businessPhoneHref } from '../lib/business-directory';
 import { areaNames } from '../data/site';
 import { getPublicBusinesses, businessCategoryNames, facilityNames } from '../lib/businesses';
 interface Props { kind: 'food' | 'hotel'; }
@@ -7,19 +8,23 @@ const { kind } = Astro.props;
 const businesses = getPublicBusinesses().filter(b => b.kind === kind);
 const categories = [...new Set(businesses.map(b => kind === 'hotel' ? b.lodgingClass! : b.category))];
 const facilityKeys = Object.keys(facilityNames).filter(key => businesses.some(b => b.filterFacts.includes(key)));
+const batches = Array.from({ length: Math.ceil(businesses.length / BUSINESS_PAGE_SIZE) }, (_, index) => businesses.slice(index * BUSINESS_PAGE_SIZE, (index + 1) * BUSINESS_PAGE_SIZE));
+const factLabels: Record<string, string> = { sourceReportedServiceOrHours: '服務與時段', cuisine: '餐點與用餐方式', roomTypes: '房型參考', laundry: '洗衣服務', mealPeriods: '供餐時段', openingHours: '營業時間', closedDays: '店休', diningOptions: '內用與外帶', reservation: '訂位', menuSource: '菜單來源' };
 ---
-<section class="business-directory section" id="business-directory" data-business-directory data-business-release="stay-food-2026-10-25" aria-label={kind === 'hotel' ? '住宿店家名錄' : '餐飲店家名錄'}>
+<section class="business-directory section" id="business-directory" data-business-directory data-page-size={BUSINESS_PAGE_SIZE} data-business-total={businesses.length} data-business-release="stay-food-2026-10-25" aria-label={kind === 'hotel' ? '住宿店家名錄' : '餐飲店家名錄'}>
   <div class="section-heading"><div><span class="eyebrow">{kind === 'hotel' ? 'A PLACE TO STAY' : 'A TABLE ON THE ISLAND'}</span><h2>{kind === 'hotel' ? '先選生活圈，再找今晚的住宿' : '今天在哪一區，就在那一區找味道'}</h2><p>{kind === 'hotel' ? '把旅館、民宿與選區攻略放在一起比較，訂房前再向業者確認房型與條件。' : '用地區、餐飲類型與店名找一餐，把喜歡的店家放進自己的旅行清單。'}</p></div><a class="text-link" href="/trip/">安排我的行程</a></div>
   <div class="directory-note"><p>以下依官方或業者公開資料整理；核對日期是本站查閱來源的日期，不代表實地訪查、當日營業或空房保證。一般收錄不代表付費合作。</p><p class="small">{kind === 'hotel' ? '一般旅館／民宿列出官方登記資訊；停車、早餐、電梯與接送未核實時不作肯定標示。' : '各門市分開收錄；營業時段、售完、訂位與價格以店家當日公告為準。'} <a href="/contact/">提供更正或補充資料 →</a></p></div>
-  <form class="business-filters" data-business-form role="search" onsubmit="return false">
+  <form class="business-filters" data-business-form role="search" hidden>
     <label>所在地區<select class="search-input" data-business-area><option value="all">全島</option>{Object.entries(areaNames).filter(([key]) => key !== 'all').map(([key, label]) => <option value={key}>{label}</option>)}</select></label>
     <label>{kind === 'hotel' ? '住宿類型' : '餐飲類型'}<select class="search-input" data-business-category><option value="all">全部類型</option>{categories.map(key => <option value={key}>{businessCategoryNames[key] || key}</option>)}</select></label>
     <label class="business-query-label">店名或地址<input class="search-input" type="search" placeholder={kind === 'hotel' ? '搜尋旅館、民宿或地址' : '搜尋店名、街道或料理'} data-business-query/></label>
     <button type="button" class="button button-light" data-business-reset>清除條件</button>
     {facilityKeys.length > 0 && <fieldset class="business-facilities"><legend>已核實提供的服務</legend>{facilityKeys.map(key => <label><input type="checkbox" value={key} data-business-facility/>{facilityNames[key]}</label>)}</fieldset>}
   </form>
-  <p class="result-count" data-business-count aria-live="polite">{businesses.length} 家{kind === 'hotel' ? '住宿' : '餐飲'} · 名錄與下方攻略篇數分開計算</p>
-  <div class="business-grid">{businesses.map(b => <article class="business-card" id={`business-${b.id}`} data-business-card data-business-key={b.key} data-area={b.area} data-category={kind === 'hotel' ? b.lodgingClass : b.category} data-facilities={b.filterFacts.join(' ')} data-search={`${b.name} ${b.aliases.join(' ')} ${b.address} ${areaNames[b.area]} ${businessCategoryNames[b.category] || b.category}`}>
+  <p class="result-count" data-business-count aria-live="polite" aria-atomic="true">共 {businesses.length} 家{kind === 'hotel' ? '住宿' : '餐飲'} · 每批 {BUSINESS_PAGE_SIZE} 家，可展開後續名錄 · 名錄與攻略篇數分開計算</p>
+  <div class="business-list" id="business-results" data-business-list>{batches.map((batch, index) => <details class="business-batch" data-business-batch open={index === 0}>
+    <summary>第 {index * BUSINESS_PAGE_SIZE + 1}–{Math.min((index + 1) * BUSINESS_PAGE_SIZE, businesses.length)} 家 · 展開或收合名錄</summary>
+    <div class="business-grid">{batch.map(b => <article class="business-card" id={`business-${b.id}`} data-business-card data-business-key={b.key} data-area={b.area} data-category={kind === 'hotel' ? b.lodgingClass : b.category} data-facilities={b.filterFacts.join(' ')} data-search={`${b.name} ${b.aliases.join(' ')} ${b.address} ${areaNames[b.area]} ${businessCategoryNames[b.category] || b.category}`}>
     <div class="business-card-top"><span class="eyebrow">{areaNames[b.area]} / {businessCategoryNames[kind === 'hotel' ? b.lodgingClass! : b.category] || b.category}</span><span class="business-index" aria-hidden="true">{kind === 'hotel' ? '住' : '食'}</span></div>
     <h3>{b.detailHref ? <a href={b.detailHref}>{b.name}</a> : b.name}</h3><p class="business-address">{b.address}</p>
     {b.registrationNumber && <p class="small">登記名稱：{b.legalName}<br/>登記字號：{b.registrationNumber}<br/><a href={b.sources.find(s => s.url.includes('/accommodation/details/'))?.url || b.sourceUrl} target="_blank" rel="noopener noreferrer">核對官方登記 →</a></p>}
@@ -27,40 +32,90 @@ const facilityKeys = Object.keys(facilityNames).filter(key => businesses.some(b 
     {b.filterFacts.length > 0 && <ul class="business-tags" aria-label="已核實服務">{b.filterFacts.map(key => <li>{facilityNames[key] || key}</li>)}</ul>}
     {b.facts.filter(f => b.filterFacts.includes(f.name) && f.note).map(f => <p class="small">{f.note}</p>)}
     {kind === 'food' && b.facts.filter(f => f.name === 'sourceReportedSundayScheduleAndService').map(f => <details class="small"><summary>來源列出的週日時段／服務參考</summary><p>{String(f.value)}</p><p>不代表當日供餐保證；其他日期與最後點餐請查來源或向店家確認。</p></details>)}
+    {b.facts.filter(f => factLabels[f.name]).map(f => <details class="small" data-business-fact={f.name}><summary>{factLabels[f.name]}</summary><p>{String(f.value)}</p>{f.note && <p>{f.note}</p>}<a href={f.sourceUrl} target="_blank" rel="noopener noreferrer">核對此項來源 · {f.checkedAt}</a></details>)}
     <p class:list={['small', { 'business-closed': b.state !== 'operating' }]}>{b.notice}</p>
-    <div class="business-actions">{b.detailHref && <a href={b.detailHref}>閱讀店家攻略</a>}{b.phone && <a href={`tel:${b.phone.replace(/[^+\d]/g, '')}`}>致電 {b.phone}</a>}{b.website && <a href={b.website} target="_blank" rel="noopener noreferrer">業者網站</a>}<a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(b.address + ' ' + b.name)}`} target="_blank" rel="noopener noreferrer">地址導航</a><a href={b.sourceUrl} target="_blank" rel="noopener noreferrer">資料來源</a></div>
+    <div class="business-actions">{b.detailHref && <a href={b.detailHref}>閱讀店家攻略</a>}{b.phone && <a href={businessPhoneHref(b.phone)}>致電 {b.phone}</a>}{b.website && <a href={b.website} target="_blank" rel="noopener noreferrer">業者網站</a>}<a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(b.address + ' ' + b.name)}`} target="_blank" rel="noopener noreferrer">地址導航</a><a href={b.sourceUrl} target="_blank" rel="noopener noreferrer">資料來源</a></div>
     <div class="business-card-bottom"><span class="small">來源核對 {b.checkedAt}</span>{b.state === 'operating' && <AddToTrip id={b.key} title={b.name}/>}</div>
-  </article>)}</div>
+  </article>)}</div></details>)}</div>
+  <nav class="business-pagination" data-business-pagination aria-label="店家名錄分頁" hidden>
+    <button type="button" class="button button-light" data-business-previous aria-controls="business-results">上一頁</button>
+    <span data-business-page></span>
+    <button type="button" class="button button-light" data-business-next aria-controls="business-results">下一頁</button>
+  </nav>
   <div class="empty-state" data-business-empty hidden><h3>這組條件暫時沒有店家</h3><p>清除條件或改看同區攻略；未知服務不會列入肯定篩選。</p><button type="button" class="button button-light" data-business-reset>顯示全部店家</button></div>
-  <noscript><p class="directory-note">未啟用 JavaScript，這裡顯示全部已收錄店家；電話、地址、來源和攻略連結仍可使用。</p></noscript>
+  <noscript><p class="directory-note">未啟用 JavaScript，可逐批展開全部已收錄店家；電話、地址、來源和攻略連結仍可使用。</p></noscript>
 </section>
 <script>
 import { normalizeSearch } from '../lib/search';
+import { BUSINESS_PAGE_SIZE, paginateBusinesses } from '../lib/business-directory';
 document.querySelectorAll<HTMLElement>('[data-business-directory]').forEach(root => {
   const cards = [...root.querySelectorAll<HTMLElement>('[data-business-card]')];
+  const list = root.querySelector<HTMLElement>('[data-business-list]')!;
   const area = root.querySelector<HTMLSelectElement>('[data-business-area]')!;
   const category = root.querySelector<HTMLSelectElement>('[data-business-category]')!;
   const query = root.querySelector<HTMLInputElement>('[data-business-query]')!;
   const facilities = [...root.querySelectorAll<HTMLInputElement>('[data-business-facility]')];
+  const pagination = root.querySelector<HTMLElement>('[data-business-pagination]')!;
+  const previous = root.querySelector<HTMLButtonElement>('[data-business-previous]')!;
+  const next = root.querySelector<HTMLButtonElement>('[data-business-next]')!;
+  const searchable = new Map(cards.map(card => [card, normalizeSearch(card.dataset.search || '')]));
+  let currentPage = 1;
+  // Keep every public card in server HTML; JS only replaces the native disclosure layout.
+  cards.forEach(card => list.append(card));
+  root.querySelectorAll('[data-business-batch]').forEach(batch => batch.remove());
+  list.classList.add('business-grid');
+  root.querySelector<HTMLFormElement>('[data-business-form]')!.hidden = false;
   const requested = new URLSearchParams(location.search).get('area');
   if ([...area.options].some(o => o.value === requested)) area.value = requested!;
-  function update() {
+  function matches() {
     const q = normalizeSearch(query.value), selected = facilities.filter(f => f.checked).map(f => f.value);
-    let count = 0;
-    cards.forEach(card => {
-      const match = (area.value === 'all' || card.dataset.area === area.value) && (category.value === 'all' || card.dataset.category === category.value) && normalizeSearch(card.dataset.search || '').includes(q) && selected.every(key => (card.dataset.facilities || '').split(' ').includes(key));
-      card.hidden = !match; if (match) count++;
-    });
-    root.querySelector('[data-business-count]')!.textContent = `找到 ${count} 家店家 · 名錄與攻略篇數分開計算`;
-    root.querySelector<HTMLElement>('[data-business-empty]')!.hidden = count !== 0;
+    return cards.filter(card => (area.value === 'all' || card.dataset.area === area.value)
+      && (category.value === 'all' || card.dataset.category === category.value)
+      && searchable.get(card)!.includes(q)
+      && selected.every(key => (card.dataset.facilities || '').split(' ').includes(key)));
+  }
+  function update() {
+    const result = paginateBusinesses(matches(), currentPage);
+    currentPage = result.page;
+    const visible = new Set(result.items);
+    cards.forEach(card => card.hidden = !visible.has(card));
+    root.querySelector('[data-business-count]')!.textContent = `找到 ${result.total} 家店家 · 目前顯示 ${result.first}–${result.last} 家 · 名錄與攻略篇數分開計算`;
+    root.querySelector<HTMLElement>('[data-business-empty]')!.hidden = result.total !== 0;
+    pagination.hidden = result.pages <= 1;
+    previous.disabled = result.page <= 1;
+    next.disabled = result.page >= result.pages;
+    root.querySelector('[data-business-page]')!.textContent = `第 ${result.page} / ${result.pages} 頁 · 每頁 ${BUSINESS_PAGE_SIZE} 家`;
+  }
+  function clearFilters() {
+    area.value = 'all'; category.value = 'all'; query.value = ''; facilities.forEach(f => f.checked = false);
+    currentPage = 1;
+  }
+  function changeFilters() { currentPage = 1; update(); }
+  function showAnchor() {
+    // Resolve against the known cards instead of inserting an arbitrary hash into a selector.
+    let id: string;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+    const target = cards.find(card => card.id === id);
+    if (!target) return;
+    if (!matches().includes(target)) clearFilters();
+    currentPage = Math.floor(matches().indexOf(target) / BUSINESS_PAGE_SIZE) + 1;
+    update();
+    target.tabIndex = -1;
+    requestAnimationFrame(() => { target.focus({ preventScroll: true }); target.scrollIntoView({ block: 'start' }); });
   }
   root.querySelector('form')?.addEventListener('submit', event => event.preventDefault());
-  area.addEventListener('change', update); category.addEventListener('change', update); query.addEventListener('input', update);
-  facilities.forEach(f => f.addEventListener('change', update));
-  root.querySelectorAll('[data-business-reset]').forEach(button => button.addEventListener('click', () => { area.value = 'all'; category.value = 'all'; query.value = ''; facilities.forEach(f => f.checked = false); update(); query.focus(); }));
+  area.addEventListener('change', changeFilters); category.addEventListener('change', changeFilters); query.addEventListener('input', changeFilters);
+  facilities.forEach(f => f.addEventListener('change', changeFilters));
+  root.querySelectorAll('[data-business-reset]').forEach(button => button.addEventListener('click', () => { clearFilters(); update(); query.focus(); }));
+  [[previous, -1], [next, 1]].forEach(([button, step]) => (button as HTMLButtonElement).addEventListener('click', () => {
+    currentPage += step as number; update();
+    root.querySelector<HTMLElement>('[data-business-count]')!.scrollIntoView({ block: 'start' });
+  }));
+  window.addEventListener('hashchange', showAnchor);
   update();
+  showAnchor();
 });
 </script>
 <style>
-.business-directory{border-top:1px solid var(--line);padding-top:42px;scroll-margin-top:115px}.directory-note{padding:18px 22px;background:#eeeee4;border-left:3px solid #a43e2e;font-size:14px;line-height:1.8}.directory-note p+p{margin-top:6px}.directory-note a{color:#a43e2e;text-decoration:underline}.business-filters{display:grid;grid-template-columns:1fr 1fr 1.5fr auto;gap:16px;align-items:end;margin:24px 0 8px}.business-filters label{display:grid;gap:6px;font-size:13px}.business-filters .search-input{min-width:0;width:100%}.business-facilities{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:16px;border:1px solid var(--line);padding:12px 16px}.business-facilities legend{font-size:12px;color:var(--muted)}.business-facilities label{display:flex;align-items:center;gap:7px}.business-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.business-card{min-width:0;padding:24px;background:white;border:1px solid var(--line);display:flex;flex-direction:column;gap:12px;scroll-margin-top:120px}.business-card:target{outline:2px solid #a43e2e;outline-offset:4px}.business-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.business-card-top .eyebrow{margin:0;font-size:10px}.business-index{font:24px var(--font-serif);color:#a43e2e;border:1px solid #cfb9a6;padding:3px 9px;flex-shrink:0}.business-card h3{font:700 22px/1.5 var(--font-serif)}.business-card h3 a:hover{color:#a43e2e}.business-address{font-size:14px;overflow-wrap:anywhere}.business-actions{display:flex;flex-wrap:wrap;gap:10px 16px;font-size:13px;color:#a43e2e}.business-actions a{border-bottom:1px solid #d7b2a5;overflow-wrap:anywhere}.business-card-bottom{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.business-tags{list-style:none;padding:0;margin:0;display:flex;gap:7px;flex-wrap:wrap}.business-tags li{padding:2px 8px;background:#edf2e9;font-size:12px}.business-closed{color:#a43e2e;font-weight:600}@media(max-width:1000px){.business-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.business-filters{grid-template-columns:1fr 1fr}.business-query-label{grid-column:1/2}}@media(max-width:600px){.business-grid{grid-template-columns:1fr}.business-filters{grid-template-columns:1fr 1fr}.business-query-label{grid-column:1/-1}.business-filters>button{grid-column:1/-1}.business-card{padding:20px}.directory-note{padding:16px}}
+.business-directory{border-top:1px solid var(--line);padding-top:42px;scroll-margin-top:115px}.directory-note{padding:18px 22px;background:#eeeee4;border-left:3px solid #a43e2e;font-size:14px;line-height:1.8}.directory-note p+p{margin-top:6px}.directory-note a{color:#a43e2e;text-decoration:underline}.business-filters[hidden],.business-pagination[hidden]{display:none}.business-filters{display:grid;grid-template-columns:1fr 1fr 1.5fr auto;gap:16px;align-items:end;margin:24px 0 8px}.business-filters label{display:grid;gap:6px;font-size:13px}.business-filters .search-input{min-width:0;width:100%}.business-facilities{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:16px;border:1px solid var(--line);padding:12px 16px}.business-facilities legend{font-size:12px;color:var(--muted)}.business-facilities label{display:flex;align-items:center;gap:7px}.business-batch{margin:0 0 20px}.business-batch>summary{cursor:pointer;padding:12px 0;font-size:14px;font-weight:600;color:#a43e2e}.business-pagination{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:24px}.business-pagination span{font-size:14px}.business-pagination button:disabled{opacity:.45;cursor:default}.result-count{scroll-margin-top:120px}.business-card[hidden]{display:none}.business-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.business-card{min-width:0;padding:24px;background:white;border:1px solid var(--line);display:flex;flex-direction:column;gap:12px;scroll-margin-top:120px}.business-card:target{outline:2px solid #a43e2e;outline-offset:4px}.business-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.business-card-top .eyebrow{margin:0;font-size:10px}.business-index{font:24px var(--font-serif);color:#a43e2e;border:1px solid #cfb9a6;padding:3px 9px;flex-shrink:0}.business-card h3{font:700 22px/1.5 var(--font-serif)}.business-card h3 a:hover{color:#a43e2e}.business-address{font-size:14px;overflow-wrap:anywhere}.business-actions{display:flex;flex-wrap:wrap;gap:10px 16px;font-size:13px;color:#a43e2e}.business-actions a{border-bottom:1px solid #d7b2a5;overflow-wrap:anywhere}.business-card-bottom{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.business-tags{list-style:none;padding:0;margin:0;display:flex;gap:7px;flex-wrap:wrap}.business-tags li{padding:2px 8px;background:#edf2e9;font-size:12px}.business-closed{color:#a43e2e;font-weight:600}@media(max-width:1000px){.business-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.business-filters{grid-template-columns:1fr 1fr}.business-query-label{grid-column:1/2}}@media(max-width:600px){.business-grid{grid-template-columns:1fr}.business-filters{grid-template-columns:1fr 1fr}.business-query-label{grid-column:1/-1}.business-filters>button{grid-column:1/-1}.business-card{padding:20px}.directory-note{padding:16px}}
 </style>

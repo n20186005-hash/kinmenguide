@@ -10,13 +10,15 @@
   "duration": "7 分鐘",
   "order": 1,
   "featured": false,
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-25",
   "related": [
     "/food/kincheng-food/",
     "/food/jinhu-food/",
     "/food/lieyu-food/",
     "/itineraries/kinmen-food-trail/",
-    "/food/beef-noodles/"
+    "/food/beef-noodles/",
+    "/food/jinning-food/",
+    "/food/jinsha-food/"
   ],
   "sources": [
     {
@@ -38,6 +40,7 @@
   ]
 }
 ---
+
 
 
 ## 金門吃什麼，先從今天在哪一區開始
@@ -70,8 +73,11 @@
 
 可把第一天留給金城早餐、老街正餐與午後點心，第二天走金湖的牛肉麵、太湖及山外；完整參考[金門美食兩日遊](/itineraries/kinmen-food-trail/)。若第二天改往小金門，就用[烈嶼美食指南](/food/lieyu-food/)換掉整段金湖，保留跨橋緩衝。
 
-需要安排整趟旅行，可接[三天兩夜行程](/itineraries/kinmen-three-days-two-nights/)；在景點頁加入自己的[行程清單](/trip/)，餐廳資訊目前可用筆記記下，收藏功能仍以景點為主。
+需要安排整趟旅行，可接[三天兩夜行程](/itineraries/kinmen-three-days-two-nights/)；在景點與名錄卡片加入自己的[行程清單](/trip/)，將住宿、餐飲與景點分天編排；清單不代為訂位。
 
 ## 伴手禮放在回住宿或離島前
 
 肉乾、糕餅與冷藏品的保存不同，購買前看標示、行李空間和交通時間。出發前漏了日用品，可讀[家樂福／萬家福補給指南](/guides/carrefour-kinmen/)；食品、酒類與跨境攜帶另按[禁限帶物品](/guides/restricted-items/)核對，不能因商品密封就推定可帶入下一目的地。
+## 補上金寧與金沙的比較入口
+
+[金寧美食](/food/jinning-food/)按古寧頭、湖下、湖南與頂堡分區；[金沙用餐](/food/jinsha-food/)把沙美、山后與高坑分開。先判斷要正餐、點心或飲料，再用[可搜尋餐飲名錄](/food/#business-directory)核對店址、聯絡與來源日期。

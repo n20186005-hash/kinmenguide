@@ -10,14 +10,15 @@
   "duration": "1–2 天",
   "order": 5,
   "featured": true,
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-25",
   "related": [
     "/food/lieyu-food/",
     "/itineraries/lieyu-one-day/",
     "/itineraries/lieyu-cycling-one-day/",
     "/itineraries/lieyu-two-days/",
     "/transport/kinmen-to-lieyu/",
-    "/attractions/lieyu-seaside-park/"
+    "/attractions/lieyu-seaside-park/",
+    "/hotels/lieyu/"
   ],
   "sources": [
     {
@@ -31,6 +32,7 @@
   ]
 }
 ---
+
 
 ## 初訪先選一個主題
 烈嶼不只有九宮坑道。南岸看岬角、漁港與夕照，西北岸有戰史、營區和岩石地景，東林與后頭則適合聚落、親子和信仰散步。以下分區收錄34個景點與參訪資訊點；其中開放待確認的虎堡及L56只提供辨認與查詢提醒，不代表全部都可隨時入內。
@@ -100,3 +102,8 @@
 ## 吃飯也按區域安排
 
 用[烈嶼午餐與芋頭冰指南](/food/lieyu-food/)選一份正餐和需要的點心，先看各店營業時段，再安排景點順序。文內時間是編輯建議，不是店家開門或供應保證；需趕離島交通時，先倒推報到與移動緩衝。
+## 留一晚小金門，把兩天的用餐先排好
+
+[烈嶼住宿比較](/hotels/lieyu/)把西路、雙口、埔頭與上林分開：金典兩館地址不同，雙口的[國境之西](/hotels/#business-guojing-zhixi)與埔頭的[成秀文旅](/hotels/#business-cheng-xiu)也不在同一個聚落。
+
+東林可查[廣豐早餐](/food/#business-guangfeng-breakfast)、[金芋閣](/food/#business-jinyuge)與[沐珈啡](/food/#business-mucafe)；湖下可查[蔡師傅手工麵線](/food/#business-cai-handmade-noodles)。先按餐別與營業時間挑選，不把一份冰品當作全家的晚餐，也不要將烈嶼湖下和本島金寧湖下混淆。

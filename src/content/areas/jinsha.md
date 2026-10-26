@@ -10,13 +10,15 @@
   "duration": "半天至 1 天",
   "order": 3,
   "featured": true,
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-25",
   "related": [
     "/itineraries/jinsha-one-day/",
     "/attractions/kinmen-county-museum/",
     "/attractions/shamei-old-street/",
     "/attractions/shanhou-folk-culture-village/",
-    "/food/gaokeng-beef/"
+    "/food/gaokeng-beef/",
+    "/hotels/jinsha/",
+    "/food/jinsha-food/"
   ],
   "sources": [
     {
@@ -26,6 +28,7 @@
   ]
 }
 ---
+
 
 ## 這一區的旅行表情
 山后民俗文化村、獅山砲陣地與馬山觀測所，串起金沙東北側的文化與戰地線。
@@ -82,3 +85,8 @@
 
 ## 高坑聚落的牛肉正餐
 [高坑牛肉食樂苑](/food/gaokeng-beef/)在高坑38號，適合安排牛肉湯與桌菜；官方列週二休息。它和沙美老街是不同用餐位置，可作金沙行程的替代午餐站，先確認交通與份量，再接下一個景點。
+## 金沙北線的吃住選擇
+
+用[金沙住宿比較](/hotels/jinsha/)先分下塘頭、山后與官澳；[金沙用餐指南](/food/jinsha-food/)再分沙美街區、高坑牛肉與山后小吃。想逛山后可查[王阿婆小吃店](/food/#business-wang-apo)，留在沙美則比較[遠來興](/food/#business-yuanlaixing)和[好好咖啡](/food/#business-hoho-cafe)的餐別。
+
+下午若轉往金湖，就把晚餐往當天最後一站安排；不必為了一份點心重走北岸。名錄可按金沙、類型搜尋，收藏的是具體門市，不代表餐廳已保留座位。

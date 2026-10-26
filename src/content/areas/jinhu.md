@@ -10,14 +10,16 @@
   "duration": "半天至 1 天",
   "order": 2,
   "featured": true,
-  "updatedAt": "2026-10-14",
+  "updatedAt": "2026-10-25",
   "related": [
     "/itineraries/jinhu-one-day/",
     "/attractions/taihu-lake/",
     "/attractions/taiwu-mountain/",
     "/transport/shanwai-station/",
     "/food/liangjin-ranch/",
-    "/attractions/qionglin-village/"
+    "/attractions/qionglin-village/",
+    "/hotels/jinhu/",
+    "/food/jinhu-food/"
   ],
   "sources": [
     {
@@ -27,6 +29,7 @@
   ]
 }
 ---
+
 
 ## 這一區的旅行表情
 太武山、山外生活圈與較開闊的島嶼景觀，是金湖旅行的節奏。
@@ -134,3 +137,8 @@
 
 ## 金湖吃良金，認明工廠總店
 [良金牧場工廠總店](/food/liangjin-ranch/)在漁村160號，適合接陶瓷廠一帶行程；金城莒光路的貞節牌坊店是另一處門店。兩家位置與電話已分頁整理，按當天路線選一家即可。
+## 太湖住宿、山外正餐和海岸另排
+
+太湖路可比較[金湖飯店](/hotels/golden-lake-hotel/)與[明園民宿](/hotels/#business-county-1166)，夏興方向另看[八二三行館](/hotels/#business-county-2281)。[金湖住宿比較](/hotels/jinhu/)說明基地選擇，接送、早餐或停車都以各場所已核實資料為準。
+
+山外正餐可比較[金拌麵](/food/#business-jinfen-noodles)、[薩諾瓦義式廚房](/food/#business-sanova-italian)及[一來順山外店](/food/#business-ilai-shun-shanwai)的不同用途：食品門市不是同類型餐廳。沿復國墩海岸的[海角之東36](/food/#business-haijiao36)也不是山外步行街內的替代店，先看完整地址與預約，再安排交通。

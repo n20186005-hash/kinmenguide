@@ -9,6 +9,7 @@ const common = z.object({
   seoTitle: z.string().min(8),
   description: z.string().min(30).max(180),
   image: z.string().optional(),
+  imageCaption: z.string().optional(),
   aliases: z.array(z.string()).default([]),
   visitNotice: z.string().optional(),
   area: z.enum(['kincheng', 'jinhu', 'jinsha', 'jinning', 'lieyu', 'all']),

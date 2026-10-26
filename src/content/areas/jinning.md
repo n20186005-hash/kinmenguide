@@ -10,7 +10,7 @@
   "duration": "半天至 1 天",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-14",
+  "updatedAt": "2026-10-25",
   "related": [
     "/attractions/kinmen-bridge/",
     "/attractions/houhu-seaside-park/",
@@ -21,7 +21,9 @@
     "/itineraries/jinning-guningtou-one-day/",
     "/attractions/mofan-street/",
     "/attractions/dongzhou-wind-lion/",
-    "/food/yuantou-ranch/"
+    "/food/yuantou-ranch/",
+    "/hotels/jinning/",
+    "/food/jinning-food/"
   ],
   "sources": [
     {
@@ -31,6 +33,7 @@
   ]
 }
 ---
+
 
 ## 這一區的旅行表情
 古寧頭一帶的展館、傳統聚落與海岸，把歷史和地方生活放在同一幅風景裡。
@@ -92,3 +95,8 @@
 
 ## 伯玉路的用餐與採買
 [圓頭肉乾農牧概念館](/food/yuantou-ranch/)位於伯玉路二段169號，可選牛肉麵或先洽現行用餐方案，再接同段的[家樂福／萬家福補給](/guides/carrefour-kinmen/)。用餐和採買時間分開保留，餐飲方案、營業與停車按店家當日安排。
+## 把金寧住宿與用餐放回聚落
+
+古寧頭、湖下、后湖及大學周邊適合不同旅行方向，[金寧住宿比較](/hotels/jinning/)逐區整理登記名錄與訂房問題。古寧頭可查[雙鯉湖畔咖啡館](/food/#business-double-carp-cafe)，湖下可查[蘿熙咖啡](/food/#business-luoxi-cafe)，湖南正餐另看[聯泰餐廳](/food/#business-lian-tai)。
+
+咖啡、冰品和茶飲不能一概當早餐或晚餐；[金寧美食指南](/food/jinning-food/)分開列用途。住后湖時不用為吃同一道菜折回北山，先核對實際道路、營業和住宿交接，再決定當天順序。
