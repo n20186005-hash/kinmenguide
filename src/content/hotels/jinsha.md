@@ -11,7 +11,7 @@
   "duration": "6 分鐘",
   "order": 8,
   "featured": false,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-26",
   "related": [
     "/areas/jinsha/",
     "/food/jinsha-food/",
@@ -86,3 +86,17 @@
 | [麗絲的家2館](/hotels/#business-registered-homestay-585) · 金門縣民宿585號 | 金門縣金沙鎮光前里陽翟219號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/3234) |
 
 安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/jinsha-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。
+
+<!-- reverse-directory-2026-10-26 -->
+## 分區補查後的店家選項
+
+這批住宿以完整登記名稱、證號和場所地址核對，再補讀官方或業者的住宿介紹。同一品牌不同門牌分開列出；客房與背包床位的差異請展開名錄服務說明，不預設早餐、停車或接送。
+
+| 店家與名錄 | 來源地址 | 核對來源 |
+| --- | --- | --- |
+| [三里拾光](/hotels/#business-lodging-b64e657abcf4) | 金門縣金沙鎮碧山82號 | [個別資料](https://media.taiwan.net.tw/en-us/portal/travel/details/hotel_a15010000h_033275) |
+| [金沙假日大飯店](/hotels/#business-lodging-b072bc030d3a) | 金門縣金沙鎮汶沙里後浦頭135號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/1154) |
+| [鹽埕i驛站古厝民宿](/hotels/#business-lodging-188bc1cbad69) | 金門縣金沙鎮西園74號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/3626) |
+
+[查看本區完整名錄與篩選條件](/hotels/?area=jinsha#business-directory)。上表是本輪比較選項，並非本區全部店家。資料整理不代表親訪、當日營業或空房保證；先按實際道路安排，再向業者確認到店或入住條件。
+<!-- /reverse-directory-2026-10-26 -->

@@ -11,7 +11,7 @@
   "duration": "6 分鐘",
   "order": 8,
   "featured": false,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-26",
   "related": [
     "/areas/jinning/",
     "/food/jinning-food/",
@@ -105,3 +105,22 @@
 | [好室行旅](/hotels/#business-county-4036) · 金門縣民宿395號 | 金門縣金寧鄉環島西路二段93巷5號 | [來源所報服務](https://www.kinmen.travel/zh-tw/accommodation/details/4036) |
 
 安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/jinning-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。
+
+<!-- reverse-directory-2026-10-26 -->
+## 分區補查後的店家選項
+
+這批住宿以完整登記名稱、證號和場所地址核對，再補讀官方或業者的住宿介紹。同一品牌不同門牌分開列出；客房與背包床位的差異請展開名錄服務說明，不預設早餐、停車或接送。
+
+| 店家與名錄 | 來源地址 | 核對來源 |
+| --- | --- | --- |
+| [浮雲澗民宿](/hotels/#business-lodging-59b58bac4fd2) | 金門縣金寧鄉埔後133號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/3959) |
+| [優豆民宿](/hotels/#business-lodging-16a448ced764) | 金門縣金寧鄉安美村安岐37之2號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/1719) |
+| [閒事別館](/hotels/#business-lodging-f9ddb3312446) | 金門縣金寧鄉榜林村66號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/3225) |
+| [蟬說希臘](/hotels/#business-lodging-f79bccd0efdc) | 金門縣金寧鄉伯玉路二段446巷2弄6號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/2678) |
+| [嚨口秘境古厝民宿](/hotels/#business-lodging-67c607ad5b00) | 金門縣金寧鄉嚨口16、18號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/2309) |
+| [不倒翁輕旅](/hotels/#business-lodging-705fe929edbc) | 金門縣金寧鄉昔果山25之1號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/3093) |
+| [野遊](/hotels/#business-lodging-d90209379855) | 金門縣金寧鄉盤山村下堡12-8號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/2920) |
+| [金大彩繪民宿](/hotels/#business-lodging-ef5beaed4458) | 金門縣金寧鄉大學路53巷5號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/3544) |
+
+[查看本區完整名錄與篩選條件](/hotels/?area=jinning#business-directory)。上表是本輪比較選項，並非本區全部店家。資料整理不代表親訪、當日營業或空房保證；先按實際道路安排，再向業者確認到店或入住條件。
+<!-- /reverse-directory-2026-10-26 -->

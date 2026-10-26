@@ -10,7 +10,7 @@
   "duration": "5 分鐘",
   "order": 1,
   "featured": false,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-26",
   "related": [
     "/itineraries/kinmen-three-days-two-nights/",
     "/transport/",
@@ -94,3 +94,22 @@
 | [浯島魁星背包棧](/hotels/#business-registered-homestay-809) · 金門縣民宿809號 | 金門縣金城鎮民族路162巷25號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/3937) |
 
 安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/kincheng-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。
+
+<!-- reverse-directory-2026-10-26 -->
+## 分區補查後的店家選項
+
+這批住宿以完整登記名稱、證號和場所地址核對，再補讀官方或業者的住宿介紹。同一品牌不同門牌分開列出；客房與背包床位的差異請展開名錄服務說明，不預設早餐、停車或接送。
+
+| 店家與名錄 | 來源地址 | 核對來源 |
+| --- | --- | --- |
+| [作客七號洋樓民宿](/hotels/#business-lodging-05c5ba905e5c) | 金門縣金城鎮後豐港7號 | [個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/3486) |
+| [一號館裕園](/hotels/#business-lodging-9676db6e0615) | 金門縣金城鎮金水里7鄰前水頭75號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/3636) |
+| [慢漫民宿-古典館](/hotels/#business-lodging-c356ed959277) | 金門縣金城鎮珠山20號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/1663) |
+| [珠山大院](/hotels/#business-lodging-e1e73359dca7) | 金門縣金城鎮珠山19號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/3231) |
+| [如一家精緻民宿](/hotels/#business-lodging-781ec5d5fcb2) | 金門縣金城鎮珠浦北路35-1號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/1208) |
+| [心琴一館](/hotels/#business-lodging-5a50c72642e6) | 金門縣金城鎮北門里珠浦北路5巷14號 | [個別資料](https://kinmen.travel/zh-cn/accommodation/details/3070) |
+| [珠山82號民宿(來喜樓)](/hotels/#business-lodging-c47f8af2faf5) | 金門縣金城鎮珠山82號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/2310) |
+| [小陳故事古厝民宿](/hotels/#business-lodging-78a582adea97) | 金門縣金城鎮前水頭3號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/2925) |
+
+[查看本區完整名錄與篩選條件](/hotels/?area=kincheng#business-directory)。上表是本輪比較選項，並非本區全部店家。資料整理不代表親訪、當日營業或空房保證；先按實際道路安排，再向業者確認到店或入住條件。
+<!-- /reverse-directory-2026-10-26 -->

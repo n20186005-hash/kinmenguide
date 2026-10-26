@@ -22117,6 +22117,5506 @@
           }
         ]
       }
+    },
+    {
+      "id": "lodging-05c5ba905e5c",
+      "kind": "hotel",
+      "name": "作客七號洋樓民宿",
+      "address": "金門縣金城鎮後豐港7號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "作客7號",
+      "registrationNumber": "金門縣民宿687號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://www.kinmen.travel/zh-tw/accommodation/details/3486",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-937-604702"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "identityMatchNote": "官方個別詳頁與既有登記底冊的完整民宿證號、場所門牌相合；展示名稱依個別詳頁，保留既有登記實體 ID。未以發現的 Google CID 作為名稱或門牌證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-9676db6e0615",
+      "kind": "hotel",
+      "name": "一號館裕園",
+      "address": "金門縣金城鎮金水里7鄰前水頭75號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "一號館裕園",
+      "registrationNumber": "金門縣民宿374號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3636",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-963-000062"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/shuitou-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在水頭聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-c356ed959277",
+      "kind": "hotel",
+      "name": "慢漫民宿-古典館",
+      "address": "金門縣金城鎮珠山20號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "慢漫民宿-古典館",
+      "registrationNumber": "金門縣民宿320號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1663",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-988-182832"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/zhushan-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在珠山聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-e1e73359dca7",
+      "kind": "hotel",
+      "name": "珠山大院",
+      "address": "金門縣金城鎮珠山19號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "珠山大院",
+      "registrationNumber": "金門縣民宿669號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3231",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-921-588002"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/zhushan-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在珠山聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-781ec5d5fcb2",
+      "kind": "hotel",
+      "name": "如一家精緻民宿",
+      "address": "金門縣金城鎮珠浦北路35-1號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "如一家精緻民宿",
+      "registrationNumber": "金門縣民宿061號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1208",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-937-392737"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-5a50c72642e6",
+      "kind": "hotel",
+      "name": "心琴一館",
+      "address": "金門縣金城鎮北門里珠浦北路5巷14號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "心琴一館",
+      "registrationNumber": "金門縣民宿610號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-cn/accommodation/details/3070",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-937-943287"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-c47f8af2faf5",
+      "kind": "hotel",
+      "name": "珠山82號民宿(來喜樓)",
+      "address": "金門縣金城鎮珠山82號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "珠山82號民宿",
+      "registrationNumber": "金門縣民宿086號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2310",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-987-773637"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "identityMatchNote": "官方個別詳頁與既有登記底冊的完整民宿證號、場所門牌相合；展示名稱依個別詳頁，保留既有登記實體 ID。未以發現的 Google CID 作為名稱或門牌證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/zhushan-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在珠山聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-78a582adea97",
+      "kind": "hotel",
+      "name": "小陳故事古厝民宿",
+      "address": "金門縣金城鎮前水頭3號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "小陳故事古厝民宿",
+      "registrationNumber": "金門縣民宿567號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2925",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-935-875776"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/shuitou-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在水頭聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-5aeaf48c9c75",
+      "kind": "hotel",
+      "name": "浯洲憶民宿",
+      "address": "金門縣金城鎮賢庵里庵前35-8號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "浯洲憶民宿",
+      "registrationNumber": "金門縣民宿590號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3213",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-972-629111"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-5242ffed7138",
+      "kind": "hotel",
+      "name": "市中心民宿",
+      "address": "金門縣金城鎮中興路173巷23號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "市中心民宿",
+      "registrationNumber": "金門縣民宿626號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=30578",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-965-706399"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-7ea2426e78b8",
+      "kind": "hotel",
+      "name": "卡薩行旅一館",
+      "address": "金門縣金湖鎮塔后512號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "卡薩行旅",
+      "registrationNumber": "金門縣民宿663號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3597",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-911-883465"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供包棟住宿服務；僅提供包棟，訂房人數與入住條件請先向業者確認。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "identityMatchNote": "官方個別詳頁與既有登記底冊的完整民宿證號、場所門牌相合；展示名稱依個別詳頁，保留既有登記實體 ID。未以發現的 Google CID 作為名稱或門牌證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-8b1b9ad862f3",
+      "kind": "hotel",
+      "name": "卡薩行旅二館",
+      "address": "金門縣金湖鎮塔后175號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "卡薩行旅貳館",
+      "registrationNumber": "金門縣民宿707號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3598",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-911-883465"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供包棟住宿服務；僅提供包棟，訂房人數與入住條件請先向業者確認。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "identityMatchNote": "官方個別詳頁與既有登記底冊的完整民宿證號、場所門牌相合；展示名稱依個別詳頁，保留既有登記實體 ID。未以發現的 Google CID 作為名稱或門牌證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-6149b82027a5",
+      "kind": "hotel",
+      "name": "老閩宅",
+      "address": "金門縣金湖鎮瓊林153號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "老閩宅",
+      "registrationNumber": "金門縣民宿432號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1190",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-933-699582"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-75682686b62b",
+      "kind": "hotel",
+      "name": "老閩宅2館",
+      "address": "金門縣金湖鎮瓊林131號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "老閩宅2館",
+      "registrationNumber": "金門縣民宿486號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1198",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-933-699582"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-487ad012e43d",
+      "kind": "hotel",
+      "name": "伯爵民宿",
+      "address": "金門縣金湖鎮新湖里7鄰塔后47之11號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "伯爵民宿",
+      "registrationNumber": "金門縣民宿010號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1169",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "primary-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-929-232773"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "food-ac900a8baa",
+      "kind": "food",
+      "name": "金一燒餅店",
+      "address": "金門縣金城鎮民族路191號",
+      "area": "kincheng",
+      "category": "bakery",
+      "contact": {
+        "phone": "+886-82-325146"
+      },
+      "sources": [
+        {
+          "id": "reverse-food-346",
+          "url": "https://kinmen.travel/zh-tw/shop/details/346",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "reverse-food-346"
+        ],
+        "address": [
+          "reverse-food-346"
+        ],
+        "area": [
+          "reverse-food-346"
+        ],
+        "category": [
+          "reverse-food-346"
+        ],
+        "contact.phone": [
+          "reverse-food-346"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "reverse-food-346",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceDescription": {
+          "value": "甜燒餅、鹹燒餅。",
+          "sourceId": "reverse-food-346",
+          "checkedAt": "2026-10-26",
+          "note": "依官方個別頁刊載的餐飲或販售資訊列入名錄，非當日電話或親訪確認；實際供應情況請向店家確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "food-11181f210a",
+      "kind": "food",
+      "name": "松興油條",
+      "address": "金門縣金城鎮民族路189號",
+      "area": "kincheng",
+      "category": "snack",
+      "contact": {
+        "phone": "+886-82-327728"
+      },
+      "sources": [
+        {
+          "id": "reverse-food-3242",
+          "url": "https://kinmen.travel/zh-tw/shop/details/3242",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "reverse-food-3242"
+        ],
+        "address": [
+          "reverse-food-3242"
+        ],
+        "area": [
+          "reverse-food-3242"
+        ],
+        "category": [
+          "reverse-food-3242"
+        ],
+        "contact.phone": [
+          "reverse-food-3242"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "reverse-food-3242",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceDescription": {
+          "value": "油條；提供外帶。",
+          "sourceId": "reverse-food-3242",
+          "checkedAt": "2026-10-26",
+          "note": "依官方個別頁刊載的餐飲或販售資訊列入名錄，非當日電話或親訪確認；實際供應情況請向店家確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "food-71b0e651e9",
+      "kind": "food",
+      "name": "源興燒餅",
+      "address": "金門縣金城鎮民族路193號",
+      "area": "kincheng",
+      "category": "bakery",
+      "contact": {
+        "phone": "+886-82-321997"
+      },
+      "sources": [
+        {
+          "id": "reverse-food-3243",
+          "url": "https://kinmen.travel/zh-tw/shop/details/3243",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "reverse-food-3243"
+        ],
+        "address": [
+          "reverse-food-3243"
+        ],
+        "area": [
+          "reverse-food-3243"
+        ],
+        "category": [
+          "reverse-food-3243"
+        ],
+        "contact.phone": [
+          "reverse-food-3243"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "reverse-food-3243",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceDescription": {
+          "value": "燒餅；官方正文列可訂購與宅配。",
+          "sourceId": "reverse-food-3243",
+          "checkedAt": "2026-10-26",
+          "note": "依官方個別頁刊載的餐飲或販售資訊列入名錄，非當日電話或親訪確認；實際供應情況請向店家確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-2fc963821bc4",
+      "kind": "hotel",
+      "name": "宏福旅店",
+      "address": "金門縣金城鎮民族路171號",
+      "area": "kincheng",
+      "category": "hotel",
+      "legalName": "宏福旅店",
+      "registrationNumber": "金門縣旅館001號",
+      "lodgingClass": "hotel",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1144",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-82-326768"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-9cde836817e1",
+      "kind": "hotel",
+      "name": "金瑞旅店",
+      "address": "金門縣金城鎮民權路166號",
+      "area": "kincheng",
+      "category": "hotel",
+      "legalName": "金瑞旅店",
+      "registrationNumber": "金門縣旅館015號",
+      "lodgingClass": "hotel",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://www.kinmen.travel/zh-tw/accommodation/details/2999",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-82-323777"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-59b58bac4fd2",
+      "kind": "hotel",
+      "name": "浮雲澗民宿",
+      "address": "金門縣金寧鄉埔後133號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "浮雲澗民宿",
+      "registrationNumber": "金門縣民宿306號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3959",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-16a448ced764",
+      "kind": "hotel",
+      "name": "優豆民宿",
+      "address": "金門縣金寧鄉安美村安岐37之2號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "優豆民宿",
+      "registrationNumber": "金門縣民宿256號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1719",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-905-131969"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-a08202fe6ee4",
+      "kind": "hotel",
+      "name": "伯爵四季休閒民宿",
+      "address": "金門縣金湖鎮塔后158-5號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "春約民宿",
+      "registrationNumber": "金門縣民宿135號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1538",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-929-232773"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-51617dbf4223",
+      "kind": "hotel",
+      "name": "金鷺二館",
+      "address": "金門縣金城鎮西海路三段72巷3弄3號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "金鷺二館",
+      "registrationNumber": "金門縣民宿415號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://www.kinmen.travel/zh-tw/accommodation/details/2798",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-905-266080"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-3ab6505d9c02",
+      "kind": "hotel",
+      "name": "定風波民宿",
+      "address": "金門縣金城鎮前水頭54號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "定風波民宿",
+      "registrationNumber": "金門縣民宿180號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1164",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-82-322389"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/shuitou-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在水頭聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-d4a528d68a7c",
+      "kind": "hotel",
+      "name": "慢漫民宿-夢想館",
+      "address": "金門縣金城鎮珠山75號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "慢漫民宿-夢想館",
+      "registrationNumber": "金門縣民宿189號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1176",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-988-182832"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/zhushan-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在珠山聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-0fe1faa94118",
+      "kind": "hotel",
+      "name": "茱碧樓1館",
+      "address": "金門縣金城鎮珠山1-6號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "茱碧樓1館",
+      "registrationNumber": "金門縣民宿443號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=7619",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-909-763378"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/zhushan-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在珠山聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-ba7fbe91351d",
+      "kind": "hotel",
+      "name": "大義山莊",
+      "address": "金門縣金湖鎮塔后48之8號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "大義山莊",
+      "registrationNumber": "金門縣民宿390號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2883",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-905-878988"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-451c7cf48d05",
+      "kind": "hotel",
+      "name": "背包客棧497",
+      "address": "金門縣金湖鎮塔后497號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "背包客棧497",
+      "registrationNumber": "金門縣民宿424號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2589",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-905-134369"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-f9ddb3312446",
+      "kind": "hotel",
+      "name": "閒事別館",
+      "address": "金門縣金寧鄉榜林村66號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "閒事別館",
+      "registrationNumber": "金門縣民宿556號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3225",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-82-373777"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-52e3a1237bf8",
+      "kind": "hotel",
+      "name": "而雨",
+      "address": "金門縣金湖鎮小徑10號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "而雨",
+      "registrationNumber": "金門縣民宿668號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3838",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-910-115655"
+      },
+      "identityMatchNote": "個別住宿詳頁的名稱、小徑10號及數字668，與完整金門縣民宿668號登記底冊核對；完整證號由登記來源支持。保留既有實體 ID，未附未確認 Google CID。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-aa230061fe7e",
+      "kind": "hotel",
+      "name": "金門十美渡假村",
+      "address": "金門縣金湖鎮溪湖里后壟200號",
+      "area": "jinhu",
+      "category": "hotel",
+      "legalName": "金門十美渡假村",
+      "registrationNumber": "金門縣旅館036號",
+      "lodgingClass": "hotel",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3119",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-82-331088"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-37c6546932a5",
+      "kind": "hotel",
+      "name": "島中大厝",
+      "address": "金門縣金湖鎮瓊林100號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "島中大厝",
+      "registrationNumber": "金門縣民宿628號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3160",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-905-611225"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-b64e657abcf4",
+      "kind": "hotel",
+      "name": "三里拾光",
+      "address": "金門縣金沙鎮碧山82號",
+      "area": "jinsha",
+      "category": "homestay",
+      "legalName": "三里拾光",
+      "registrationNumber": "金門縣民宿693號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://media.taiwan.net.tw/en-us/portal/travel/details/hotel_a15010000h_033275",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-952-689121"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinsha/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-2c4080496ae2",
+      "kind": "hotel",
+      "name": "喜苑民宿",
+      "address": "金門縣金湖鎮前港路5巷8號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "喜苑民宿",
+      "registrationNumber": "金門縣民宿644號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3612",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-933-699950"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-7d7cae63f028",
+      "kind": "hotel",
+      "name": "湖前58民宿",
+      "address": "金門縣金湖鎮湖前58號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "湖前58",
+      "registrationNumber": "金門縣民宿370號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2751",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-937-511234"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-d404f3ff7368",
+      "kind": "hotel",
+      "name": "太武山下民宿",
+      "address": "金門縣金湖鎮正義里夏興38-2、38-6號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "太武山下",
+      "registrationNumber": "金門縣民宿368號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2601",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-935-002070"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-9580f5ea4268",
+      "kind": "hotel",
+      "name": "花藝雅築",
+      "address": "金門縣金湖鎮瓊義路461號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "花藝雅築民宿",
+      "registrationNumber": "金門縣民宿659號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3444",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-988-020802"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-12dec8214b06",
+      "kind": "hotel",
+      "name": "陳佳苑裡",
+      "address": "金門縣金城鎮前水頭139號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "陳佳苑裡",
+      "registrationNumber": "金門縣民宿760號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://media.taiwan.net.tw/en-us/portal/travel/details/hotel_a15010000h_035892",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-972-738672"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/shuitou-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在水頭聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-16a59bfb3605",
+      "kind": "hotel",
+      "name": "成功民宿",
+      "address": "金門縣金湖鎮正義里成功123-2號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "成功民宿",
+      "registrationNumber": "金門縣民宿117號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://media.taiwan.net.tw/zh-tw/portal/travel/details/hotel_a15010000h_004753",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-ea662543c9f1",
+      "kind": "hotel",
+      "name": "2home璞居",
+      "address": "金門縣金湖鎮瓊林里環島南路三段550號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "2home璞居",
+      "registrationNumber": "金門縣民宿322號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2720",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-917-865536"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-f3e62deaa9c3",
+      "kind": "hotel",
+      "name": "壹樓文旅",
+      "address": "金門縣金湖鎮瓊林179號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "壹樓文旅",
+      "registrationNumber": "金門縣民宿711號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3595",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "operator-contact",
+          "url": "https://gokinmen.tw/1stfloor/contact.html",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "county-register-2025-09",
+          "operator-contact"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-905-965299"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-f79172b2dc61",
+      "kind": "hotel",
+      "name": "三力民宿",
+      "address": "金門縣金湖鎮山外里山外17號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "三力民宿",
+      "registrationNumber": "金門縣民宿252號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=15092",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-82-331635"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-c7ac7045f0c3",
+      "kind": "hotel",
+      "name": "金門金閱莊園(金閱莊園會館)",
+      "address": "金門縣金湖鎮正義里尚義34之1號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "金門金閱莊園",
+      "registrationNumber": "金門縣民宿259號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1680",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-933-311270"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-83f42569788c",
+      "kind": "hotel",
+      "name": "歐特文旅",
+      "address": "金門縣金湖鎮市港路220號",
+      "area": "jinhu",
+      "category": "hotel",
+      "legalName": "歐特旅館",
+      "registrationNumber": "金門縣旅館039號",
+      "lodgingClass": "hotel",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3118",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-82-330970"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-b072bc030d3a",
+      "kind": "hotel",
+      "name": "金沙假日大飯店",
+      "address": "金門縣金沙鎮汶沙里後浦頭135號",
+      "area": "jinsha",
+      "category": "hotel",
+      "legalName": "金沙假日大飯店",
+      "registrationNumber": "金門縣旅館029號",
+      "lodgingClass": "hotel",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1154",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinsha/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-f79bccd0efdc",
+      "kind": "hotel",
+      "name": "蟬說希臘",
+      "address": "金門縣金寧鄉伯玉路二段446巷2弄6號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "蟬說希臘",
+      "registrationNumber": "金門縣民宿403號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2678",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-7787f5154355",
+      "kind": "hotel",
+      "name": "林居民宿",
+      "address": "金門縣金湖鎮林兜337號",
+      "area": "jinhu",
+      "category": "homestay",
+      "legalName": "林居民宿",
+      "registrationNumber": "金門縣民宿508號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3088",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-922-091999"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinhu/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-7e4a28c7a729",
+      "kind": "hotel",
+      "name": "家之形民宿",
+      "address": "金門縣金城鎮和平新村80號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "家之形民宿",
+      "registrationNumber": "金門縣民宿376號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2317",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-905-986318"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-188bc1cbad69",
+      "kind": "hotel",
+      "name": "鹽埕i驛站古厝民宿",
+      "address": "金門縣金沙鎮西園74號",
+      "area": "jinsha",
+      "category": "homestay",
+      "legalName": "鹽埕i驛站古厝民宿",
+      "registrationNumber": "金門縣民宿722號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3626",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-927-627970"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinsha/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-67c607ad5b00",
+      "kind": "hotel",
+      "name": "嚨口秘境古厝民宿",
+      "address": "金門縣金寧鄉嚨口16、18號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "嚨口秘境古厝民宿",
+      "registrationNumber": "金門縣民宿231號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2309",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供客房住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-966-698973"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-705fe929edbc",
+      "kind": "hotel",
+      "name": "不倒翁輕旅",
+      "address": "金門縣金寧鄉昔果山25之1號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "不倒翁輕旅",
+      "registrationNumber": "金門縣民宿516號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3093",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "national-registration",
+          "url": "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Hotel-json.zip",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09",
+          "national-registration"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "national-registration"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供單人膠囊床位住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "identityMatchNote": "官方3093個別詳頁的證號欄原文為「睏不睏民宿516號」，未將該異常文字視為完整縣別與類別證號。國家完整旅宿登記列不倒翁輕旅、金門縣民宿516號、昔果山25-1號，與詳頁品牌及25之1門牌核對；保留既有登記實體 ID。住宿服務依3093正文為單人膠囊床位，未附未驗證的 Google CID。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-d90209379855",
+      "kind": "hotel",
+      "name": "野遊",
+      "address": "金門縣金寧鄉盤山村下堡12-8號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "野遊",
+      "registrationNumber": "金門縣民宿771號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2920",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "原始來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-911-700028"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-ef5beaed4458",
+      "kind": "hotel",
+      "name": "金大彩繪民宿",
+      "address": "金門縣金寧鄉大學路53巷5號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "金大彩繪",
+      "registrationNumber": "金門縣民宿451號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3544",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "原始來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-935-103877"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-60b96ae8f6fb",
+      "kind": "hotel",
+      "name": "睏不睏民宿",
+      "address": "金門縣金寧鄉盤山村林堡路320巷6號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "睏不睏民宿",
+      "registrationNumber": "金門縣民宿513號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2775",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "原始來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-980-996775"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-091ff3b1de1f",
+      "kind": "hotel",
+      "name": "時光旅舍古厝一館",
+      "address": "金門縣金寧鄉榜林90號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "時光旅舍古厝一館",
+      "registrationNumber": "金門縣民宿714號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3766",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "原始來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-903-160999"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-afc54d0893d6",
+      "kind": "hotel",
+      "name": "悠哉悠(悠哉悠古厝民宿)",
+      "address": "金門縣金寧鄉古寧村南山39號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "悠哉悠",
+      "registrationNumber": "金門縣民宿720號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3804",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "原始來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-922-866470"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/guningtou-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在南山與古寧頭聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-d99565732c4e",
+      "kind": "hotel",
+      "name": "北山洋玩藝古洋樓民宿",
+      "address": "金門縣金寧鄉北山171號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "北山171號民宿",
+      "registrationNumber": "金門縣民宿149號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://dow6877.wixsite.com/yangwanyi",
+          "type": "business",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "national-detail",
+          "url": "https://media.taiwan.net.tw/en-us/portal/travel/details/hotel_a15010000h_010942",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "national-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "業者個別網站提供客房住宿及訂房服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "原始來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-972-984979"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/guningtou-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在北山與古寧頭聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-bab26a9e1bde",
+      "kind": "hotel",
+      "name": "湖峰古厝民宿",
+      "address": "金門縣金寧鄉湖埔村湖下75號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "湖峰古厝民宿",
+      "registrationNumber": "金門縣民宿595號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://media.taiwan.net.tw/en-us/portal/travel/details/hotel_a15010000h_028548",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "原始來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-909-319330"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/huxia-seawall/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在湖下聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-884c5444f1d9",
+      "kind": "hotel",
+      "name": "金八家民宿",
+      "address": "金門縣金寧鄉古寧村南山80號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "金八家民宿",
+      "registrationNumber": "金門縣民宿812號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://www.kinbaguesthouse.com/",
+          "type": "business",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "national-detail",
+          "url": "https://media.taiwan.net.tw/en-us/portal/travel/details/hotel_a15010000h_037782",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09",
+          "national-detail"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "業者個別網站提供客房住宿及訂房服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "原始來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-82-322008"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/guningtou-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在南山與古寧頭聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-bccb107817c6",
+      "kind": "hotel",
+      "name": "南山85號民宿(金八家)",
+      "address": "金門縣金寧鄉南山85號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "南山85號民宿",
+      "registrationNumber": "金門縣民宿218號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=20611",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "operator-brand",
+          "url": "https://www.kinbaguesthouse.com/",
+          "type": "business",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail",
+          "operator-brand"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "原始來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-82-322008"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/guningtou-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在南山與古寧頭聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-9441dacddb61",
+      "kind": "hotel",
+      "name": "海之風玫瑰莊園",
+      "address": "金門縣金寧鄉西堡79號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "海之風",
+      "registrationNumber": "金門縣民宿459號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3658",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-936-898866"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-1f8f40d39b24",
+      "kind": "hotel",
+      "name": "紅築民宿",
+      "address": "金門縣金城鎮金門城80-3號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "紅築民宿",
+      "registrationNumber": "金門縣民宿544號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2738",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-953-259599"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-6c1b7465bde1",
+      "kind": "hotel",
+      "name": "歇會兒典藏館",
+      "address": "金門縣金城鎮前水頭9號",
+      "area": "kincheng",
+      "category": "homestay",
+      "legalName": "歇會兒民宿典藏館",
+      "registrationNumber": "金門縣民宿528號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3084",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-972-728388"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/kincheng/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/shuitou-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在水頭聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-a1ffbac64549",
+      "kind": "hotel",
+      "name": "老許山莊",
+      "address": "金門縣金寧鄉環島北路一段265號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "老許山莊",
+      "registrationNumber": "金門縣民宿640號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://media.taiwan.net.tw/zh-tw/portal/travel/details/hotel_a15010000h_031232",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-932-757802"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lodging-e560cfcafdea",
+      "kind": "hotel",
+      "name": "金門藍山客棧民宿",
+      "address": "金門縣金寧鄉古寧頭南山11號",
+      "area": "jinning",
+      "category": "homestay",
+      "legalName": "藍山客棧",
+      "registrationNumber": "金門縣民宿447號",
+      "lodgingClass": "homestay",
+      "sources": [
+        {
+          "id": "primary-detail",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2752",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        },
+        {
+          "id": "county-register-2025-09",
+          "url": "https://ws.kinmen.gov.tw/Download.ashx?n=MTE05bm0OeaciOS7vemHkemWgOe4o%2BWQiOazleeHn%2BalreaXheWuv%2BWQjeWGii5wZGY%3D&u=LzAwMS9VcGxvYWQvMzA0L3JlbGZpbGUvMTE5NTkvNzg2OTMyL2M3OWY1MjNhLTI5NjctNGMxMS05Njg4LWI3OGY2YTRmMDk2Yy5wZGY%3D",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "primary-detail"
+        ],
+        "address": [
+          "primary-detail"
+        ],
+        "area": [
+          "primary-detail"
+        ],
+        "category": [
+          "primary-detail"
+        ],
+        "legalName": [
+          "county-register-2025-09"
+        ],
+        "registrationNumber": [
+          "county-register-2025-09"
+        ],
+        "contact.phone": [
+          "primary-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "primary-detail",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceBasis": {
+          "value": "官方個別詳頁提供住宿服務介紹。",
+          "sourceId": "primary-detail",
+          "checkedAt": "2026-10-26",
+          "note": "官方來源所報住宿服務；查閱日不等於來源更新日或當日電話、親訪確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "contact": {
+        "phone": "+886-965-419680"
+      },
+      "identityMatchNote": "個別來源與既有底冊的完整旅宿證號及場所門牌核對；保留登記實體 ID。服務入口與登記多門牌或樓層範圍分開記錄，未以發現的 Google CID 作為門牌或別名證據。",
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/guningtou-village/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在南山與古寧頭聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "food-ffcc305e09",
+      "kind": "food",
+      "name": "ha.ju柒月壹日晴有限公司",
+      "address": "金門縣金沙鎮陽翟90號",
+      "area": "jinsha",
+      "category": "beverage",
+      "contact": {
+        "phone": "+886-912-749915"
+      },
+      "sources": [
+        {
+          "id": "reverse-food-supplement-2969",
+          "url": "https://kinmen.travel/zh-tw/shop/details/2969",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "reverse-food-supplement-2969"
+        ],
+        "address": [
+          "reverse-food-supplement-2969"
+        ],
+        "area": [
+          "reverse-food-supplement-2969"
+        ],
+        "category": [
+          "reverse-food-supplement-2969"
+        ],
+        "contact.phone": [
+          "reverse-food-supplement-2969"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "reverse-food-supplement-2969",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceDescription": {
+          "value": "飲品、糖磚產品與果乾；提供內用、外帶。",
+          "sourceId": "reverse-food-supplement-2969",
+          "checkedAt": "2026-10-26",
+          "note": "依官方個別頁刊載的餐飲、販售或預訂資訊列入名錄，非當日電話或親訪確認。官方頁列目前僅週六、週日09:00–17:00營業；此為來源所報安排，出發前請向店家確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinsha/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          },
+          {
+            "href": "/attractions/yangzhai-old-street/",
+            "mode": "聚落規劃",
+            "basis": "來源店址在陽翟聚落方向，提供同區閱讀入口；實際道路、入口與營業時段仍須核對。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "food-c5d76cdf45",
+      "kind": "food",
+      "name": "自由作烘培DIY - 金門店",
+      "address": "金門縣金寧鄉埔後48-3號",
+      "area": "jinning",
+      "category": "bakery",
+      "contact": {
+        "phone": "+886-82-371760"
+      },
+      "sources": [
+        {
+          "id": "reverse-food-supplement-3876",
+          "url": "https://kinmen.travel/zh-tw/shop/details/3876",
+          "type": "official",
+          "checkedAt": "2026-10-26"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "reverse-food-supplement-3876"
+        ],
+        "address": [
+          "reverse-food-supplement-3876"
+        ],
+        "area": [
+          "reverse-food-supplement-3876"
+        ],
+        "category": [
+          "reverse-food-supplement-3876"
+        ],
+        "contact.phone": [
+          "reverse-food-supplement-3876"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "reverse-food-supplement-3876",
+        "checkedAt": "2026-10-26"
+      },
+      "facts": {
+        "serviceDescription": {
+          "value": "烘焙DIY體驗、蛋糕及甜點訂製、餐盒與點心盤預訂，另提供活動包場服務。",
+          "sourceId": "reverse-food-supplement-3876",
+          "checkedAt": "2026-10-26",
+          "note": "依官方個別頁刊載的餐飲、販售或預訂資訊列入名錄，非當日電話或親訪確認。烘焙DIY、訂製餐點或包場的供應與預約條件請先向店家確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      },
+      "detail": {
+        "decisionNotes": [
+          "來源資料與分區規劃入口；訂房、供餐與道路條件須向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/areas/jinning/",
+            "mode": "同區規劃",
+            "basis": "依來源地址提供行政區查找入口；同鄉鎮不代表步行可達。"
+          }
+        ]
+      }
     }
   ]
 }

@@ -36,6 +36,12 @@ for (const kind of ['food', 'hotel']) {
     if (kind === 'hotel') {
       if (b.lodgingClass === 'restricted') assert.ok(b.facts?.eligibility?.value && card.text().includes(b.facts.eligibility.value), 'Restricted lodging needs visible eligibility');
       else assert.ok(b.registrationNumber && card.text().includes(b.registrationNumber), 'Registered lodging needs visible certificate identity');
+      if (b.registrationNumber) {
+        const registrationLink = card.find('a').filter((_, a) => $(a).text().trim() === '核對官方登記 →');
+        assert.equal(registrationLink.length, 1, `One registration evidence link required: ${b.id}`);
+        const evidence = b.sources.filter(s => s.type === 'official' && b.verifiedFields.registrationNumber?.includes(s.id));
+        assert.ok(evidence.some(s => s.url === registrationLink.attr('href')), `Registration link must lead to this certificate's official evidence, not a business website: ${b.id}`);
+      }
       assert.ok(!card.find('[data-trip-add]').length || b.status.state === 'operating', 'Closed lodging cannot be offered as a planning recommendation');
     }
     if (b.status.state === 'operating') {

@@ -10,7 +10,7 @@
   "duration": "5 分鐘",
   "order": 2,
   "featured": false,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-26",
   "related": [
     "/itineraries/kinmen-three-days-two-nights/",
     "/transport/",
@@ -64,3 +64,22 @@
 | [喜悅瓊林](/hotels/#business-registered-homestay-294) · 金門縣民宿294號 | 金門縣金湖鎮瓊林102號 | [來源所報服務](https://www.kinmen.travel/zh-tw/accommodation/details/3190) |
 
 安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/jinhu-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。
+
+<!-- reverse-directory-2026-10-26 -->
+## 分區補查後的店家選項
+
+這批住宿以完整登記名稱、證號和場所地址核對，再補讀官方或業者的住宿介紹。同一品牌不同門牌分開列出；客房與背包床位的差異請展開名錄服務說明，不預設早餐、停車或接送。
+
+| 店家與名錄 | 來源地址 | 核對來源 |
+| --- | --- | --- |
+| [卡薩行旅一館](/hotels/#business-lodging-7ea2426e78b8) | 金門縣金湖鎮塔后512號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/3597) |
+| [卡薩行旅二館](/hotels/#business-lodging-8b1b9ad862f3) | 金門縣金湖鎮塔后175號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/3598) |
+| [老閩宅](/hotels/#business-lodging-6149b82027a5) | 金門縣金湖鎮瓊林153號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/1190) |
+| [老閩宅2館](/hotels/#business-lodging-75682686b62b) | 金門縣金湖鎮瓊林131號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/1198) |
+| [伯爵民宿](/hotels/#business-lodging-487ad012e43d) | 金門縣金湖鎮新湖里7鄰塔后47之11號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/1169) |
+| [伯爵四季休閒民宿](/hotels/#business-lodging-a08202fe6ee4) | 金門縣金湖鎮塔后158-5號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/1538) |
+| [大義山莊](/hotels/#business-lodging-ba7fbe91351d) | 金門縣金湖鎮塔后48之8號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/2883) |
+| [背包客棧497](/hotels/#business-lodging-451c7cf48d05) | 金門縣金湖鎮塔后497號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/2589) |
+
+[查看本區完整名錄與篩選條件](/hotels/?area=jinhu#business-directory)。上表是本輪比較選項，並非本區全部店家。資料整理不代表親訪、當日營業或空房保證；先按實際道路安排，再向業者確認到店或入住條件。
+<!-- /reverse-directory-2026-10-26 -->

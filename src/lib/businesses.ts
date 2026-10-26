@@ -87,11 +87,18 @@ const data = z.object({ version: z.literal(1), records: z.array(record) }).stric
 export const businessCategoryNames: Record<string, string> = { restaurant: '餐廳', breakfast: '早餐', snack: '在地小吃', cafe: '咖啡甜點', beverage: '飲料', bakery: '麵包糕點', beef: '牛肉料理', dessert: '甜品', bar: '餐酒館', 'specialty-food-retail': '伴手禮食品門市', hotel: '旅館飯店', homestay: '民宿', restricted: '資格限定住宿' };
 export const facilityNames: Record<string, string> = { parking: '停車', breakfast: '早餐', pickup: '接送', elevator: '電梯', accessibility: '無障礙' };
 export const businessHref = (b: { id: string; kind: 'food' | 'hotel'; detailHref?: string }) => b.detailHref || `/${b.kind === 'hotel' ? 'hotels' : 'food'}/#business-${b.id}`;
+function registrationSourceUrl(b: BusinessRecord) {
+  const evidence = b.sources.filter(s => s.type === 'official' && b.verifiedFields.registrationNumber?.includes(s.id));
+  // The service description may come from the operator; certificate links
+  // must instead follow the official evidence for the registration field.
+  return (evidence.find(s => /\/accommodation\/details\/|taiwanstay\.net\.tw\/|\/portal\/travel\/details\/hotel_/i.test(s.url)) || evidence[0])?.url;
+}
 export function getPublicBusinesses() {
   // Explicit field projection: internal notes and raw source payloads are never spread into UI data.
   return data.records.map(b => ({
     key: `${b.kind}:${b.id}`, id: b.id, kind: b.kind, name: b.name, aliases: b.aliases || [], address: b.address, area: b.area, category: b.category,
     lodgingClass: b.lodgingClass, legalName: b.legalName, registrationNumber: b.registrationNumber,
+    registrationSourceUrl: registrationSourceUrl(b),
     phone: b.contact?.phone, website: b.contact?.website,
     sourceUrl: b.sources.find(s => s.id === b.status.sourceId)!.url, sources: b.sources.map(s => ({ url: s.url, checkedAt: s.checkedAt })),
     checkedAt: b.status.checkedAt, state: b.status.state,

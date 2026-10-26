@@ -27,7 +27,7 @@ const factLabels: Record<string, string> = { sourceReportedServiceOrHours: '服�
     <div class="business-grid">{batch.map(b => <article class="business-card" id={`business-${b.id}`} data-business-card data-business-key={b.key} data-area={b.area} data-category={kind === 'hotel' ? b.lodgingClass : b.category} data-facilities={b.filterFacts.join(' ')} data-search={`${b.name} ${b.aliases.join(' ')} ${b.address} ${areaNames[b.area]} ${businessCategoryNames[b.category] || b.category}`}>
     <div class="business-card-top"><span class="eyebrow">{areaNames[b.area]} / {businessCategoryNames[kind === 'hotel' ? b.lodgingClass! : b.category] || b.category}</span><span class="business-index" aria-hidden="true">{kind === 'hotel' ? '住' : '食'}</span></div>
     <h3>{b.detailHref ? <a href={b.detailHref}>{b.name}</a> : b.name}</h3><p class="business-address">{b.address}</p>
-    {b.registrationNumber && <p class="small">登記名稱：{b.legalName}<br/>登記字號：{b.registrationNumber}<br/><a href={b.sources.find(s => s.url.includes('/accommodation/details/'))?.url || b.sourceUrl} target="_blank" rel="noopener noreferrer">核對官方登記 →</a></p>}
+    {b.registrationNumber && <p class="small">登記名稱：{b.legalName}<br/>登記字號：{b.registrationNumber}<br/><a href={b.registrationSourceUrl} target="_blank" rel="noopener noreferrer">核對官方登記 →</a></p>}
     {b.facts.filter(f => f.name === 'eligibility').map(f => <p class="alert-note">入住資格：{String(f.value)}</p>)}
     {b.filterFacts.length > 0 && <ul class="business-tags" aria-label="已核實服務">{b.filterFacts.map(key => <li>{facilityNames[key] || key}</li>)}</ul>}
     {b.facts.filter(f => b.filterFacts.includes(f.name) && f.note).map(f => <p class="small">{f.note}</p>)}

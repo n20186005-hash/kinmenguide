@@ -10,7 +10,7 @@
   "duration": "8 分鐘",
   "order": 2,
   "featured": false,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-26",
   "related": [
     "/food/kinmen-food-guide/",
     "/itineraries/kincheng-one-day/",
@@ -164,3 +164,17 @@
 | [陸柒捌茶飲行（龜記金城店）](/food/#business-official-3957) · 飲料 | 金門縣金城鎮中興路136號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/3957) |
 
 安排住宿與用餐時，可接著比較[同區的住宿基地](/hotels/kincheng/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。
+
+<!-- reverse-directory-2026-10-26 -->
+## 分區補查後的店家選項
+
+以下補入本區的餐飲場所。店名和地址按個別來源核對，供餐安排與預訂條件請展開名錄說明；有矛盾的時段不作確定營業時間刊登。
+
+| 店家與名錄 | 來源地址 | 核對來源 |
+| --- | --- | --- |
+| [金一燒餅店](/food/#business-food-ac900a8baa) | 金門縣金城鎮民族路191號 | [個別資料](https://kinmen.travel/zh-tw/shop/details/346) |
+| [松興油條](/food/#business-food-11181f210a) | 金門縣金城鎮民族路189號 | [個別資料](https://kinmen.travel/zh-tw/shop/details/3242) |
+| [源興燒餅](/food/#business-food-71b0e651e9) | 金門縣金城鎮民族路193號 | [個別資料](https://kinmen.travel/zh-tw/shop/details/3243) |
+
+[查看本區完整名錄與篩選條件](/food/?area=kincheng#business-directory)。上表是本輪比較選項，並非本區全部店家。資料整理不代表親訪、當日營業或空房保證；先按實際道路安排，再向業者確認到店或入住條件。
+<!-- /reverse-directory-2026-10-26 -->

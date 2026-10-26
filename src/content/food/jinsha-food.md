@@ -11,7 +11,7 @@
   "duration": "6 分鐘",
   "order": 8,
   "featured": false,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-26",
   "related": [
     "/areas/jinsha/",
     "/hotels/jinsha/",
@@ -118,3 +118,15 @@
 | [食味鮮金門美食](/food/#business-official-2594) · 餐廳 | 金門縣金沙鎮浦山里14鄰呂厝50號 | [來源所報服務](https://kinmen.travel/zh-tw/shop/details/2594) |
 
 安排住宿與用餐時，可接著比較[同區的住宿基地](/hotels/jinsha/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。
+
+<!-- reverse-directory-2026-10-26 -->
+## 分區補查後的店家選項
+
+以下補入本區的餐飲場所。店名和地址按個別來源核對，供餐安排與預訂條件請展開名錄說明；有矛盾的時段不作確定營業時間刊登。
+
+| 店家與名錄 | 來源地址 | 核對來源 |
+| --- | --- | --- |
+| [ha.ju柒月壹日晴有限公司](/food/#business-food-ffcc305e09) | 金門縣金沙鎮陽翟90號 | [個別資料](https://kinmen.travel/zh-tw/shop/details/2969) |
+
+[查看本區完整名錄與篩選條件](/food/?area=jinsha#business-directory)。上表是本輪比較選項，並非本區全部店家。資料整理不代表親訪、當日營業或空房保證；先按實際道路安排，再向業者確認到店或入住條件。
+<!-- /reverse-directory-2026-10-26 -->
