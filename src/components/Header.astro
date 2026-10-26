@@ -9,7 +9,7 @@ const nav = [['島上景點','attractions'],['行程提案','itineraries'],['在
     <nav class="desktop-nav" aria-label="主要導覽">{nav.map(([name,url]) => <a href={`/${url}/`} aria-current={path.startsWith(`/${url}/`) ? 'page' : undefined}>{name}</a>)}</nav>
     <div class="header-actions"><a href="/trip/" class="trip-nav" aria-label="我的行程清單">行程<span data-trip-count>0</span></a><a href="/search/" class="icon-button" aria-label="搜尋攻略"><Icon name="search" /></a><a href="/guides/first-time-visitor/" class="header-cta">第一次去金門</a><button class="icon-button mobile-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="開啟導覽"><Icon name="menu"/></button></div>
   </div>
-  <nav id="mobile-nav" class="mobile-nav" aria-label="手機導覽" hidden>{[...nav,['探索地區','areas'],['租車攻略','car-rental'],['在地體驗','tours'],['行前攻略','guides'],['景點地圖','map'],['搜尋攻略','search']].map(([name,url]) => <a href={`/${url}/`}>{name}</a>)}</nav>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="手機導覽" hidden>{[...nav,['探索地區','areas'],['租車攻略','car-rental'],['在地體驗','tours'],['行前攻略','guides'],['住吃玩地圖','map'],['搜尋攻略','search']].map(([name,url]) => <a href={`/${url}/`}>{name}</a>)}</nav>
 </header>
 <script>
 const toggle = document.querySelector<HTMLButtonElement>('.mobile-toggle');

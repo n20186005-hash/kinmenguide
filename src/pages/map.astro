@@ -2,17 +2,63 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import AddToTrip from '../components/AddToTrip.astro';
 import { areaNames } from '../data/site';
 import { mapLink } from '../lib/content';
-const entries=(await getCollection('attractions')).sort((a,b)=>a.data.order-b.data.order);
+import { getPublicBusinesses, businessHref } from '../lib/businesses';
+type Kind = 'attraction' | 'food' | 'hotel';
+const labels = { attraction: '景點', food: '餐飲', hotel: '住宿' };
+const attractions = (await getCollection('attractions')).sort((a,b)=>a.data.order-b.data.order).map(e => ({
+  key:e.id, id:e.id, kind:'attraction' as Kind, title:e.data.title, area:e.data.area,
+  address:e.data.address, notice:e.data.visitNotice || '', duration:e.data.duration,
+  href:`/attractions/${e.id}/`, coordinates:e.data.coordinates, canPlan:true,
+}));
+const businesses = getPublicBusinesses().map(b => ({
+  key:b.key, id:b.id, kind:b.kind as Kind, title:b.name, area:b.area, address:b.address, notice:b.notice,
+  duration:'', href:businessHref(b), coordinates:b.coordinates, canPlan:b.state==='operating',
+}));
+const entries = [...attractions, ...businesses];
+const bounds = { west:118.18, east:118.49, south:24.37, north:24.58 };
+const x = (lng:number) => 45 + (lng-bounds.west)/(bounds.east-bounds.west)*910;
+const y = (lat:number) => 25 + (bounds.north-lat)/(bounds.north-bounds.south)*480;
+const pinned = entries.filter(e => e.coordinates);
+const anchor = (e:typeof entries[number]) => `map-point-${e.kind}-${e.id}`;
 ---
-<Base title="金門景點地圖｜依五個鄉鎮找下一站" description="依金城、金湖、金沙、金寧與烈嶼探索金門核心景點，查看位置與導航連結。先選同區景點，再搭配金門交通與路線指南，減少來回繞路。" image="bridge" breadcrumbs={[{name:'景點地圖'}]}>
-<div class="shell pb-16"><Breadcrumb items={[{name:'景點地圖'}]}/><header class="article-header"><span class="eyebrow">FIND YOUR WAY AROUND</span><h1>把下一站，放回地圖上</h1><p class="article-lead">先選一個地區，再把喜歡的景點串起來。地圖只標位置，實際路況與開放仍請行前確認。</p></header><div class="map-consent" id="map-consent"><h2>從金門本島，看到小金門</h2><p>點擊後載入 OpenStreetMap，該服務將接收連線資訊。</p><button type="button" class="button" id="load-map">載入互動地圖</button><a class="text-link" href="https://www.openstreetmap.org/#map=12/24.452/118.338" target="_blank" rel="noopener noreferrer">直接在 OpenStreetMap 開啟</a></div><div id="map-container" hidden><iframe class="map-frame" id="kinmen-map" title="金門地區互動地圖" loading="lazy" referrerpolicy="no-referrer" data-src="https://www.openstreetmap.org/export/embed.html?bbox=118.18%2C24.37%2C118.48%2C24.55&amp;layer=mapnik"></iframe><p class="small">地圖資料 © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap 貢獻者</a> · 選擇下方景點可在圖中顯示位置。</p></div><div class="filter-bar"><div class="filter-chips" role="group" aria-label="地圖景點地區">{Object.entries(areaNames).map(([id,name])=><button type="button" class="chip" data-map-area={id} aria-pressed={id==='all'}>{name}</button>)}</div><span class="small" id="map-count" aria-live="polite">{entries.length} 個景點</span></div><div class="map-points">{entries.map(e=><article class="map-point" data-area={e.data.area}><span class="eyebrow">{areaNames[e.data.area]}</span><h2>{e.data.title}</h2><p>建議停留 {e.data.duration}</p>{e.data.visitNotice && <p class="small" data-visit-notice>{e.data.visitNotice}</p>}<div class="flex flex-wrap gap-3"><a href={`/attractions/${e.id}/`}>閱讀指南</a><a href={e.data.coordinates ? mapLink(e.data.coordinates.lat,e.data.coordinates.lng) : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.data.address+' '+e.data.title.split('：')[0])}`}  target="_blank" rel="noopener noreferrer">Google 地圖</a>{e.data.coordinates && <button type="button" class="text-link" data-pin={`${e.data.coordinates.lat},${e.data.coordinates.lng}`}>圖上查看</button>}</div></article>)}</div><noscript><p>您仍可使用各景點的 Google 地圖連結導航。篩選與嵌入地圖需啟用 JavaScript。</p></noscript></div>
+<Base title="金門住吃玩地圖｜按景點、餐飲與住宿找下一站" description="切換金門景點、餐飲與住宿名錄，按五個鄉鎮安排住吃玩。已核實坐標顯示位置示意，未確認坐標保留地址導航；地圖按選擇載入，喜歡的站點可加入旅行清單。" image="bridge" breadcrumbs={[{name:'住吃玩地圖'}]}>
+<div class="shell pb-16">
+  <Breadcrumb items={[{name:'住吃玩地圖'}]}/>
+  <header class="article-header"><span class="eyebrow">STAY · EAT · EXPLORE</span><h1>把下一站，放回地圖上</h1><p class="article-lead">先選區域，再把景點、一餐和今晚的住宿放在一起看。位置不等於路程，出發前仍需核對道路、開放、供餐與訂房。</p></header>
+  <nav class="map-kind-filters" aria-label="住吃玩類別"><button class="chip" type="button" data-map-kind="attraction" aria-pressed="true">景點</button><button class="chip" type="button" data-map-kind="food" aria-pressed="false">餐飲</button><button class="chip" type="button" data-map-kind="hotel" aria-pressed="false">住宿</button><button class="chip" type="button" data-map-kind="all" aria-pressed="false">全部站點</button></nav>
+  <div class="filter-bar"><div class="filter-chips" role="group" aria-label="地圖站點地區">{Object.entries(areaNames).map(([id,name])=><button type="button" class="chip" data-map-area={id} aria-pressed={id==='all'}>{name}</button>)}</div><span class="small" id="map-count" aria-live="polite">{attractions.length} 個景點</span></div>
+  <section class="map-overview" aria-labelledby="coordinate-heading"><div class="map-overview-heading"><h2 id="coordinate-heading">已核實坐標的位置概覽</h2><p class="small" id="map-pin-count">點選位置可跳到下方條目；詳細地形另按選擇載入。</p></div>
+    <svg class="coordinate-map" viewBox="0 0 1000 550" role="group" aria-label="金門站點坐標位置示意，非道路導航地圖">
+      <rect x="0" y="0" width="1000" height="550" fill="#edf1ed"/>
+      {[118.2,118.3,118.4].map(lng => <g><line x1={x(lng)} x2={x(lng)} y1="25" y2="505" stroke="#cfdacf" stroke-dasharray="5 5"/><text x={x(lng)} y="535" text-anchor="middle" fill="#657069" font-size="13">{lng.toFixed(1)}°E</text></g>)}
+      {[24.4,24.45,24.5,24.55].map(lat => <g><line x1="45" x2="955" y1={y(lat)} y2={y(lat)} stroke="#cfdacf" stroke-dasharray="5 5"/><text x="8" y={y(lat)-6} fill="#657069" font-size="12">{lat.toFixed(2)}°N</text></g>)}
+      <text x="135" y="75" fill="#73866d" font-size="20">烈嶼方向</text><text x="650" y="75" fill="#73866d" font-size="20">金門本島方向</text>
+      {pinned.map(e => <a href={`#${anchor(e)}`} data-map-marker data-area={e.area} data-kind={e.kind} style={e.kind !== 'attraction' ? 'display:none' : undefined} aria-label={`${labels[e.kind]}：${e.title}`}><circle cx={x(e.coordinates!.lng)} cy={y(e.coordinates!.lat)} r="6" fill={e.kind === 'food' ? '#a57630' : e.kind === 'hotel' ? '#34634d' : '#a43e2e'} stroke="white" stroke-width="1.5"/></a>)}
+    </svg>
+    <p class="small">示意僅使用已確認坐標，不繪製推測道路或岸線。餐飲、住宿若尚無可確認及復用的坐標，不放置近似圖點，仍可由下方地址導航查找。</p>
+  </section>
+  <div class="map-consent" id="map-consent"><h2>詳細地形，依你的選擇載入</h2><p>點擊後載入 OpenStreetMap，該服務將接收連線資訊。</p><button type="button" class="button" id="load-map">載入互動地圖</button><a class="text-link" href="https://www.openstreetmap.org/#map=12/24.452/118.338" target="_blank" rel="noopener noreferrer">直接在 OpenStreetMap 開啟</a></div>
+  <div id="map-container" hidden><iframe class="map-frame" id="kinmen-map" title="金門地區互動地圖" loading="lazy" referrerpolicy="no-referrer" data-src="https://www.openstreetmap.org/export/embed.html?bbox=118.18%2C24.37%2C118.48%2C24.55&amp;layer=mapnik"></iframe><p class="small">地圖資料 © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap 貢獻者</a> · 詳細地圖顯示所選站點；上方概覽顯示目前條件的已核實位置。</p></div>
+  <div class="map-points">{entries.map(e=><article class="map-point" id={anchor(e)} data-area={e.area} data-kind={e.kind} hidden={e.kind!=='attraction'}><span class="eyebrow">{areaNames[e.area]} / {labels[e.kind]}</span><h2>{e.title}</h2>{e.duration && <p>建議停留 {e.duration}</p>}<p class="small">{e.address}</p>{e.notice && <p class="small" data-visit-notice>{e.notice}</p>}<div class="flex flex-wrap gap-3"><a href={e.href}>閱讀指南</a><a href={e.coordinates ? mapLink(e.coordinates.lat,e.coordinates.lng) : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.address+' '+e.title.split('：')[0])}`} target="_blank" rel="noopener noreferrer">Google 地圖</a>{e.coordinates && <button type="button" class="text-link" data-pin={`${e.coordinates.lat},${e.coordinates.lng}`}>圖上查看</button>}{e.canPlan && <AddToTrip id={e.key} title={e.title}/>}</div></article>)}</div>
+  <noscript><p>未啟用 JavaScript 時顯示景點列表。你仍可查看<a href="/food/#business-directory">餐飲名錄</a>、<a href="/hotels/#business-directory">住宿名錄</a>，並使用各條目的地址導航。</p></noscript>
+</div>
 </Base>
 <script>
 const iframe=document.querySelector<HTMLIFrameElement>('#kinmen-map');
 function loadMap(lat?:number,lng?:number){if(!iframe)return;iframe.src=lat&&lng?`https://www.openstreetmap.org/export/embed.html?bbox=${lng-.014}%2C${lat-.01}%2C${lng+.014}%2C${lat+.01}&layer=mapnik&marker=${lat}%2C${lng}`:iframe.dataset.src!;document.querySelector<HTMLElement>('#map-consent')!.hidden=true;document.querySelector<HTMLElement>('#map-container')!.hidden=false;}
 document.querySelector('#load-map')?.addEventListener('click',()=>loadMap());
 document.querySelectorAll<HTMLButtonElement>('[data-pin]').forEach(b=>b.addEventListener('click',()=>{const [lat,lng]=b.dataset.pin!.split(',').map(Number);loadMap(lat,lng);iframe?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'});}));
-const filters=[...document.querySelectorAll<HTMLButtonElement>('[data-map-area]')];filters.forEach(b=>b.addEventListener('click',()=>{const area=b.dataset.mapArea;let n=0;document.querySelectorAll<HTMLElement>('.map-point').forEach(p=>{p.hidden=area!=='all'&&p.dataset.area!==area;if(!p.hidden)n++;});filters.forEach(f=>f.setAttribute('aria-pressed',String(f===b)));document.querySelector('#map-count')!.textContent=`${n} 個景點`;}));
+const filters=[...document.querySelectorAll<HTMLButtonElement>('[data-map-area]')];
+const kinds=[...document.querySelectorAll<HTMLButtonElement>('[data-map-kind]')];
+const params=new URLSearchParams(location.search);
+let area=filters.some(b=>b.dataset.mapArea===params.get('area'))?params.get('area')!:'all';
+let kind=kinds.some(b=>b.dataset.mapKind===params.get('kind'))?params.get('kind')!:'attraction';
+function update(){let n=0,pins=0;document.querySelectorAll<HTMLElement>('.map-point').forEach(p=>{p.hidden=!((area==='all'||p.dataset.area===area)&&(kind==='all'||p.dataset.kind===kind));if(!p.hidden)n++;});document.querySelectorAll<SVGAElement>('[data-map-marker]').forEach(p=>{const match=(area==='all'||p.dataset.area===area)&&(kind==='all'||p.dataset.kind===kind);p.style.display=match?'':'none';if(match)pins++;});filters.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapArea===area)));kinds.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapKind===kind)));const names:Record<string,string>={attraction:'景點',food:'餐飲',hotel:'住宿',all:'站點'};document.querySelector('#map-count')!.textContent=`${n} 個${names[kind]}`;document.querySelector('#map-pin-count')!.textContent=pins?`${pins} 個已核實坐標 · 點選位置可跳到下方條目`:'目前條件沒有可確認及復用的坐標，請使用下方地址導航。';}
+filters.forEach(b=>b.addEventListener('click',()=>{area=b.dataset.mapArea!;update();}));kinds.forEach(b=>b.addEventListener('click',()=>{kind=b.dataset.mapKind!;update();}));update();
 </script>
+<style>
+.map-kind-filters{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}.map-overview{border:1px solid var(--line);padding:20px;margin-bottom:24px;background:white}.map-overview-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:15px}.map-overview h2{font-size:19px}.coordinate-map{width:100%;height:auto;max-height:420px}.coordinate-map a:focus circle{stroke:#26382f;stroke-width:4}.map-point:target{outline:2px solid #a43e2e;outline-offset:4px}.map-point{scroll-margin-top:120px}@media(max-width:600px){.map-overview{padding:12px}.map-overview-heading{display:block}.map-overview-heading p{margin-top:8px}.coordinate-map{min-height:220px}}
+</style>

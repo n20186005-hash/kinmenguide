@@ -3,6 +3,8 @@ import TravelThemes from '../../components/TravelThemes.astro';
 import { travelThemes } from '../../data/travel-themes';
 import ArrivalGuide from '../../components/ArrivalGuide.astro';
 import FoodRegions from '../../components/FoodRegions.astro';
+import BusinessDirectory from '../../components/BusinessDirectory.astro';
+import { getPublicBusinesses, businessSchema } from '../../lib/businesses';
 import Base from '../../layouts/Base.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import Card from '../../components/Card.astro';
@@ -16,12 +18,15 @@ const all = await allEntries();
 const entries = all.filter(e => e.collection === key);
 const storyGuides = ['kinmen-village-architecture','kinmen-war-sites-history','kinmen-wind-lion-stories','kinmen-birdwatching-otters'].map(id=>all.find(e=>e.collection==='guides'&&e.id===id)!);
 const breadcrumbs = [{ name: category.name }];
-const schema = [{'@type':'CollectionPage',name:category.title,url:`${SITE.url}/${key}/`},{'@type':'ItemList',itemListElement:entries.map((e,i) => ({'@type':'ListItem',position:i+1,name:e.data.title,url:new URL(entryHref(e),SITE.url).href}))}];
+const schema: Record<string,unknown>[] = [{'@type':'CollectionPage',name:category.title,url:`${SITE.url}/${key}/`},{'@type':'ItemList',itemListElement:entries.map((e,i) => ({'@type':'ListItem',position:i+1,name:e.data.title,url:new URL(entryHref(e),SITE.url).href}))}];
+const businesses = getPublicBusinesses().filter(b => b.kind === (key === 'hotels' ? 'hotel' : key === 'food' ? 'food' : 'none'));
+schema.push(...businesses.map(b => businessSchema(b)));
 ---
 <Base title={category.title} description={category.description} image={category.image} breadcrumbs={breadcrumbs} schema={schema}>
  <div class="shell"><Breadcrumb items={breadcrumbs}/><section class="page-hero"><div><span class="eyebrow">{category.en}</span><h1>{category.title}</h1><p>{category.description}</p></div><Photo name={category.image} eager sizes="(max-width: 760px) 100vw, 45vw"/></section>
  {key==='transport' && <ArrivalGuide/>}
  {key==='food' && <FoodRegions/>}
+ {(key==='food'||key==='hotels') && <BusinessDirectory kind={key === 'food' ? 'food' : 'hotel'}/>}
  {['attractions','itineraries'].includes(key) && <TravelThemes compact/>}
  {key==='attractions' && <section class="section" style="padding-top:0"><div class="section-heading"><div><span class="eyebrow">BEYOND THE PHOTO</span><h2>先讀故事，再去景點</h2><p>從聚落建築、戰地歷史、風獅爺信仰到溼地生態，為走訪找一條線索。</p></div><a class="text-link" href="/guides/">更多旅行文章</a></div><div class="card-grid four">{storyGuides.map(entry=><Card entry={entry} compact filterable={false}/>)}</div></section>}
  <section class="pb-16" aria-label={category.name} data-catalog>{key === 'itineraries' && <div class="theme-filters"><span class="filter-label">依旅人與主題</span><div class="filter-chips" role="group" aria-label="依旅人與主題篩選"><button type="button" class="chip" data-theme="all" aria-pressed="true">全部主題</button>{travelThemes.map(t => <button type="button" class="chip" data-theme={t.id} aria-pressed="false">{t.label}</button>)}</div></div>}<div class="filter-bar"><div class="filter-chips" role="group" aria-label="依地區篩選">{Object.entries(areaNames).map(([area,name]) => <button class="chip" type="button" data-filter={area} aria-pressed={area === 'all'}>{name}</button>)}</div><label class="catalog-search"><span class="sr-only">搜尋{category.name}</span><input class="search-input" type="search" placeholder="搜尋這個欄目…" data-query/></label></div><p class="result-count" aria-live="polite" data-count>{entries.length} 篇指南</p><div class="card-grid">{entries.map(entry => <Card entry={entry}/>)}</div><div class="empty-state" hidden data-empty><h2>這個條件還沒有找到內容</h2><p>試著換個關鍵字，或查看全島的指南。</p><button type="button" class="button button-light" data-reset>清除篩選</button></div><noscript><p>目前顯示全部內容。啟用 JavaScript 後可依地區和關鍵字篩選。</p></noscript></section></div>

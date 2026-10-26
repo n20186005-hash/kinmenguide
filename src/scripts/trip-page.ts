@@ -1,5 +1,5 @@
 import { getTrip, saveTrip, storageMessage, type Trip } from '../lib/trip-store';
-import { createTripImages, type Place } from '../lib/trip-image';
+import { createTripImages, placeSummary, type Place } from '../lib/trip-image';
 const catalog: Place[] = JSON.parse(document.querySelector('#trip-catalog')!.textContent!);
 const places = new Map(catalog.map(p => [p.id, p]));
 const app = document.querySelector<HTMLElement>('#trip-app')!;
@@ -35,7 +35,7 @@ function render() {
   const valid = trip.stops.filter(stop => places.has(stop.id));
   if (valid.length !== trip.stops.length) {
     trip.stops = valid; saveTrip(trip);
-    status.textContent = '已移除不再收錄的景點，請重新確認行程。'; return;
+    status.textContent = '已移除不再收錄的站點，請重新確認行程。'; return;
   }
   const focus = document.activeElement as HTMLElement | null;
   const focusId = focus?.closest<HTMLElement>('[data-stop]')?.dataset.stop;
@@ -52,15 +52,15 @@ function render() {
   for (let day = 1; day <= trip.days; day++) {
     const dayStops = trip.stops.filter(stop => stop.day === day);
     const section = node('section', undefined, 'trip-day'); section.dataset.day = String(day);
-    const heading = node('h2', `第 ${day} 天`); heading.append(node('span', `${dayStops.length} 個景點`, 'small')); section.append(heading);
-    if (!dayStops.length) section.append(node('p', '這一天還留著空白，從其他天移入景點，或再挑一個想去的地方。', 'small'));
+    const heading = node('h2', `第 ${day} 天`); heading.append(node('span', `${dayStops.length} 個站點`, 'small')); section.append(heading);
+    if (!dayStops.length) section.append(node('p', '這一天還留著空白，從其他天移入站點，或再挑一個想去的地方。', 'small'));
     dayStops.forEach((stop, index) => {
       const place = places.get(stop.id)!;
       const row = node('article', undefined, 'trip-stop'); row.dataset.stop = stop.id;
       const number = node('span', String(index + 1).padStart(2,'0'), 'trip-stop-number'); number.setAttribute('aria-hidden','true');
       const content = node('div', undefined, 'trip-stop-content');
       const h3 = node('h3'); const link = node('a', place.title); link.href = place.href; h3.append(link);
-      content.append(h3, node('p', `${place.area} · 建議停留 ${place.duration}`, 'small'), node('p', place.address, 'small'));
+      content.append(h3, node('p', placeSummary(place), 'small'), node('p', place.address, 'small'));
       if (place.notice) content.append(node('p', place.notice, 'trip-visit-note'));
       const fields = node('div', undefined, 'trip-stop-fields');
       const dayLabel = node('label', '安排日期'); const daySelect = node('select'); daySelect.dataset.field = 'day'; daySelect.setAttribute('aria-label',`${place.title}安排日期`);
@@ -109,20 +109,20 @@ list.addEventListener('click', event => {
     const other = sameDay[current + (button.dataset.action === 'up' ? -1 : 1)]; if (!other) return;
     const target = trip.stops.findIndex(s => s.id === other.id);
     [trip.stops[index],trip.stops[target]] = [trip.stops[target],trip.stops[index]]; commit(trip);
-    status.textContent = '已更新這一天的景點順序。';
+    status.textContent = '已更新這一天的站點順序。';
   }
 });
 title.addEventListener('input', () => { const trip = getTrip(); trip.title = title.value; commit(trip,false); });
 days.addEventListener('change', () => {
   const trip = getTrip(); trip.days = Number(days.value);
   const moved = trip.stops.some(s => s.day > trip.days); trip.stops.forEach(s => { s.day = Math.min(s.day,trip.days); }); commit(trip);
-  status.textContent = moved ? `已把超出天數的景點移到第 ${trip.days} 天，景點沒有刪除。` : '已更新旅行天數。';
+  status.textContent = moved ? `已把超出天數的站點移到第 ${trip.days} 天，站點沒有刪除。` : '已更新旅行天數。';
 });
 document.querySelector('#trip-clear')!.addEventListener('click', () => {
-  if (!confirm('要清空目前的景點清單嗎？')) return;
-  const snapshot = getTrip(); const trip = getTrip(); trip.stops = []; commit(trip); previous = snapshot; undo.hidden = false; status.textContent = '清單已清空，可復原剛才的景點。'; undo.focus();
+  if (!confirm('要清空目前的站點清單嗎？')) return;
+  const snapshot = getTrip(); const trip = getTrip(); trip.stops = []; commit(trip); previous = snapshot; undo.hidden = false; status.textContent = '清單已清空，可復原剛才的站點。'; undo.focus();
 });
-undo.addEventListener('click', () => { if (!previous) return; const restore = previous; commit(restore); status.textContent = '已復原景點清單。'; });
+undo.addEventListener('click', () => { if (!previous) return; const restore = previous; commit(restore); status.textContent = '已復原站點清單。'; });
 exportButton.addEventListener('click', async () => {
   const trip = getTrip(); if (!trip.stops.length || exporting) return;
   const version = revision;
@@ -140,7 +140,7 @@ exportButton.addEventListener('click', async () => {
     imageSection.hidden = false;
     document.querySelector('#trip-export-status')!.textContent = `已製作 ${blobs.length} 張圖片。若修改行程，請重新保存。`;
     imageSection.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',block:'start'});
-  } catch { status.textContent = '圖片製作未完成，請重試或減少景點；你的行程仍保留在清單中。'; }
+  } catch { status.textContent = '圖片製作未完成，請重試或減少站點；你的行程仍保留在清單中。'; }
   finally { exporting = false; exportButton.disabled = !getTrip().stops.length; exportButton.textContent = '保存行程圖片'; }
 });
 window.addEventListener('pagehide',invalidateImages);

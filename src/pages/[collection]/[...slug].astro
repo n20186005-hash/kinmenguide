@@ -1,6 +1,8 @@
 ---
 import { render } from 'astro:content';
 import AddToTrip from '../../components/AddToTrip.astro';
+import StayEatExplore from '../../components/StayEatExplore.astro';
+import { getPublicBusinesses, businessSchema } from '../../lib/businesses';
 import FerrySchedule from '../../components/FerrySchedule.astro';
 import TravelChecklist from '../../components/TravelChecklist.astro';
 import { travelThemes } from '../../data/travel-themes';
@@ -26,11 +28,13 @@ const relatedHubs = d.related.filter(url=>!entries.some(e=>entryHref(e)===url));
 const p=d.image ? photo(d.image) : undefined;
 const breadcrumbs=[{name:categories[entry.collection].name,href:`/${entry.collection}/`},{name:d.title}];
 const canonical = new URL(entryHref(entry),SITE.url).href;
+const business = getPublicBusinesses().find(b => b.detailHref === entryHref(entry));
 const previewImage=p ? await getImage({src:p.src,width:1200,format:'jpg'}) : undefined;
 const imageUrl=previewImage ? new URL(previewImage.src,SITE.url).href : undefined;
 const schema: Record<string,unknown>[]=[{'@type':'Article',headline:d.title,description:d.description,image:imageUrl,datePublished:d.updatedAt.toISOString(),dateModified:d.updatedAt.toISOString(),author:{'@type':'Organization',name:'Kinmen Guide 編輯',url:`${SITE.url}/about/`},publisher:{'@id':`${SITE.url}/#organization`},mainEntityOfPage:canonical,inLanguage:'zh-Hant-TW'}];
 if(entry.collection==='attractions') schema.push({'@type':'TouristAttraction',name:d.title,description:d.description,url:canonical,image:imageUrl,address:{'@type':'PostalAddress',streetAddress:entry.data.address,addressLocality:areaNames[d.area],addressRegion:'金門縣'},...(entry.data.coordinates ? {geo:{'@type':'GeoCoordinates',latitude:entry.data.coordinates.lat,longitude:entry.data.coordinates.lng}} : {})});
 if(d.faq.length) schema.push({'@type':'FAQPage',mainEntity:d.faq.map(f=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))});
+if(business) schema.push(businessSchema(business));
 const attraction = entry.collection==='attractions' ? entry.data : undefined;
 const itinerary = entry.collection==='itineraries' ? entry.data : undefined;
 const facts=attraction ? [{label:'地區與位置',value:attraction.address},{label:'建議停留',value:d.duration},{label:'開放資訊',value:attraction.hours},{label:'門票與費用',value:attraction.admission},{label:'停車提醒',value:attraction.parking}] : d.facts;
@@ -42,8 +46,10 @@ const facts=attraction ? [{label:'地區與位置',value:attraction.address},{la
  {itinerary && <>{itinerary.themes.length > 0 && <nav class="itinerary-themes" aria-label="行程主題">{travelThemes.filter(t => itinerary.themes.includes(t.id)).map(t => <a class="chip" href={`/itineraries/?theme=${t.id}`}>{t.label}行程</a>)}<a class="text-link" href="/trip/">安排我的行程</a></nav>}<div class="alert-note">以下時間為編輯建議，並非公車或導覽時刻表。{itinerary.themes.length > 0 ? ' 本路線按同行需求保留休息時間；場館與店家先查當日開放，戶外段依天候取捨，抵離日另留交通及報到緩衝。' : d.area==='lieyu' ? ' 烈嶼場館、預約體驗與跨橋通行請在出發前確認；海岸段依風浪與現場管制調整。' : d.area==='kincheng' ? ' 金城場館與店家各有開放時間，分區之間需安排交通；海岸段先確認天候及現場通行。' : d.area==='jinhu' ? ' 金湖館舍先確認開放與午休；海岸依風浪取捨，太武山另留半天，申請制營區不可隨興進入。' : d.area==='jinsha' ? ' 西園鹽場與縣立博物館一般週一休館；獅山砲操另查演出日和施工公告。' : ' 跨區交通、坑道開放與砲操場次分別核對當日公告；臨時管制時替換同區景點，抵離日另留報到緩衝。'}{['kinmen-one-day','kinmen-two-days-one-night','kincheng-one-day'].includes(entry.id) && ' 最後一天下午的站點僅適用較晚離島的旅人，請依航班提前刪減。'}</div><section id="daily-plan"><h2 class="content-section-title">每天怎麼走</h2>{itinerary.days.map((day,i)=><div class="timeline-day"><span class="eyebrow">DAY {String(i+1).padStart(2,'0')}</span><h3>{day.title}</h3><p>{day.description}</p><ol class="timeline">{day.stops.map(stop=><li><span class="time">{stop.time}</span><div class="stop"><a href={stop.href}>{stop.title}</a><p>{stop.note}</p></div></li>)}</ol></div>)}</section></>}
  {entry.collection==='transport' && entry.id==='xiamen-kinmen-ferry-november-2026' && <FerrySchedule/>}
  <div class="prose"><Content/></div>
+ {business && <section class="business-detail-panel" aria-label="店家核對資料"><h2>把這一家，放進自己的行程</h2><p>{business.name} · {business.address}</p>{business.registrationNumber && <p>登記名稱：{business.legalName} · 字號：{business.registrationNumber}</p>}<p class="small">來源核對：{business.checkedAt}。{business.notice}本站查閱公開來源，不代表實地訪查或完成訂房。</p><div class="flex flex-wrap gap-5 mt-4"><AddToTrip id={business.key} title={business.name}/><a class="text-link" href={`/${business.kind === 'food' ? 'food' : 'hotels'}/#business-${business.id}`}>比較其他店家</a><a class="text-link" href={business.sourceUrl} target="_blank" rel="noopener noreferrer">查詢資料來源</a></div></section>}
  {entry.collection==='guides' && entry.id==='travel-checklist' && <TravelChecklist/>}
  {d.faq.length>0 && <section id="questions"><h2 class="content-section-title">你可能還想知道</h2><div class="faq-list">{d.faq.map(f=><details><summary>{f.question}</summary><p>{f.answer}</p></details>)}</div></section>}
+ {['attractions','food','hotels','areas','itineraries'].includes(entry.collection) && <StayEatExplore area={d.area} exclude={entryHref(entry)}/>}
  {entry.collection==='hotels' && entry.id!=='kinmen-police-hostel' && <HotelCard area={d.area}/>}{(entry.collection==='car-rental'||entry.collection==='itineraries')&&<CarRentalCard/>}{entry.collection==='tours'&&entry.id!=='houpu-night-walk'&&<TourCard/>}
  <section class="sources" id="sources"><h2>資料來源與編輯說明</h2><p>背景資料參考官方、場館、店家公開資訊及文末列出的實地報導；停留時間、用餐與路線取捨為編輯建議。開放、班次、費用及預約條件可能異動，請出發前向管理單位確認。</p>{d.sources.map(s=><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a>)}<a href={`mailto:${SITE.contactEmail}?subject=${encodeURIComponent("[Kinmen Guide] 頁面問題反饋："+d.title)}&body=${encodeURIComponent("相關頁面："+canonical+"\n\n問題說明：\n")}`}>發現資訊有誤？寄信至 {SITE.contactEmail}</a></section></article>
  <aside class="article-sidebar"><h2>這篇指南</h2><nav aria-label="文章目錄">{entry.collection==='guides' && entry.id==='travel-checklist' && <a href="#travel-checklist">我的出發清單</a>}{entry.collection==='transport' && entry.id==='xiamen-kinmen-ferry-november-2026' && <a href="#ferry-schedule">11月船班查詢</a>}{itinerary&&<a href="#daily-plan">每天怎麼走</a>}{headings.filter(h=>h.depth===2).map(h=><a href={`#${h.slug}`}>{h.text}</a>)}{d.faq.length>0&&<a href="#questions">你可能還想知道</a>}<a href="#sources">資料來源</a></nav><div class="sidebar-note">接著安排下一步</div><a href="/map/">查看全島景點地圖</a><a href="/transport/">從出發地選交通</a><a href="/guides/travel-checklist/">旅行清單</a><a href="/hotels/">找到住宿區域</a></aside></div>

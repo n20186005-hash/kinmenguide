@@ -64,3 +64,4 @@ if(errors.length){console.error(errors.join('\n'));process.exit(1);}
 console.log(`Verified ${files.length} pages; ${links} internal references; ${images} image instances; ${schemas} schema nodes. Titles, descriptions, canonicals, links, anchors, sitemap, robots and exact versions pass.`);
 
 await import('./verify-photos.mjs');
+await import('./verify-businesses.mjs');

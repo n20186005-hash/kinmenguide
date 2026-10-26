@@ -1,0 +1,1438 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "id": "golden-lake-hotel",
+      "name": "金湖飯店",
+      "legalName": "金湖飯店",
+      "registrationNumber": "金門縣旅館034號",
+      "address": "金門縣金湖鎮太湖路二段218號",
+      "area": "jinhu",
+      "category": "飯店",
+      "lodgingClass": "hotel",
+      "kind": "hotel",
+      "sources": [
+        {
+          "id": "county",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1464",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "taiwanstay",
+          "url": "https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=19980",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "business",
+          "url": "https://www.goldenlakehotel.com/",
+          "type": "business",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "business-booking",
+          "url": "https://www.gobooking.com.tw/EverRich/ER-GL",
+          "type": "business",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "county"
+        ],
+        "address": [
+          "county"
+        ],
+        "area": [
+          "county"
+        ],
+        "category": [
+          "county"
+        ],
+        "legalName": [
+          "county",
+          "taiwanstay"
+        ],
+        "registrationNumber": [
+          "county",
+          "taiwanstay"
+        ],
+        "contact.phone": [
+          "county"
+        ],
+        "contact.website": [
+          "business",
+          "county"
+        ]
+      },
+      "contact": {
+        "phone": "+886-82-338688",
+        "website": "https://www.goldenlakehotel.com/"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "business",
+        "checkedAt": "2026-10-25"
+      },
+      "facts": {
+        "parking": {
+          "value": true,
+          "sourceId": "business",
+          "checkedAt": "2026-10-25",
+          "note": "官網列入住期間B1免費停車；入口與車牌登記依業者指引。"
+        }
+      },
+      "filterFacts": [
+        "parking"
+      ],
+      "publication": {
+        "level": "detail",
+        "href": "/hotels/golden-lake-hotel/"
+      },
+      "detail": {
+        "decisionNotes": [
+          "位於太湖路二段，可把太湖館舍安排在住宿同一天；若想逛後浦老街，另留跨區交通。",
+          "官網列有多種住房專案，含早餐與不含早餐方案並存，訂房前按所選方案核對。",
+          "飯店官網列入住期間可使用B1停車場，入口與車牌登記按業者指引。",
+          "官網訂房頁公告戶外泳池自2026年11月1日起冬令暫停；若行程包含泳池，先確認入住日開放狀態。",
+          "來源顯示提供住宿或訂房服務；本頁不是即時房態，抵達與訂房條件請向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/itineraries/jinhu-one-day/",
+            "mode": "自駕或預約接送，太湖段另選短段步行",
+            "basis": "官方地址為太湖路二段218號，官網明示毗鄰太湖；既有路線由成功、漁村轉移至太湖館舍，住宿可接太湖段，跨區仍以車輛安排。"
+          },
+          {
+            "href": "/attractions/taihu-lake/",
+            "mode": "步行前先確認實際入口",
+            "basis": "飯店官網明示毗鄰太湖；僅建議由公共出入口接湖畔開放步道，不以直線距離推算路程。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "haifu-business-hotel",
+      "name": "海福商務飯店",
+      "legalName": "海福商務飯店",
+      "registrationNumber": "金門縣旅館014號",
+      "address": "金門縣金城鎮民權路85號",
+      "area": "kincheng",
+      "category": "商務旅館",
+      "lodgingClass": "hotel",
+      "kind": "hotel",
+      "sources": [
+        {
+          "id": "county",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2585",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "taiwanstay",
+          "url": "https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=11032",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "business",
+          "url": "https://haifu.com.tw/business",
+          "type": "business",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "county"
+        ],
+        "address": [
+          "county"
+        ],
+        "area": [
+          "county"
+        ],
+        "category": [
+          "county"
+        ],
+        "legalName": [
+          "county",
+          "taiwanstay"
+        ],
+        "registrationNumber": [
+          "county",
+          "taiwanstay"
+        ],
+        "contact.phone": [
+          "county"
+        ],
+        "contact.website": [
+          "business",
+          "county"
+        ]
+      },
+      "contact": {
+        "phone": "+886-82-322538",
+        "website": "https://haifu.com.tw/business"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "county",
+        "checkedAt": "2026-10-25"
+      },
+      "facts": {},
+      "filterFacts": [],
+      "publication": {
+        "level": "detail",
+        "href": "/hotels/haifu-business-hotel/"
+      },
+      "detail": {
+        "decisionNotes": [
+          "位於後浦民權路，適合把市區餐飲與老街散步安排在住宿前後。",
+          "金城市區住宿與金門城、珠山、水頭是不同生活圈，南線仍須安排車輛或實際公車班次。",
+          "官方詳頁列機場付費接駁，若需要接送，訂房時確認預約及報價。",
+          "來源顯示提供住宿或訂房服務；本頁不是即時房態，抵達與訂房條件請向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/itineraries/kincheng-one-day/",
+            "mode": "市區公共街巷步行，跨區用車",
+            "basis": "官方詳頁明示後浦市中心位置，地址為民權路85號，並列附近後浦小鎮商圈；可銜接既有後浦老街路線，不套用南線的金門城動線。"
+          },
+          {
+            "href": "/attractions/kincheng-old-streets/",
+            "mode": "步行",
+            "basis": "以民權路住宿出入口接後浦公共街巷；官方詳頁將後浦商圈列在周邊，未使用地圖直線距離換算步行時間。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "golden-sands-resort",
+      "name": "金沙大地國際渡假飯店",
+      "legalName": "金沙大地國際渡假飯店",
+      "registrationNumber": "金門縣旅館032號",
+      "address": "金門縣金沙鎮浦山里下塘頭5號",
+      "area": "jinsha",
+      "category": "飯店",
+      "lodgingClass": "hotel",
+      "kind": "hotel",
+      "sources": [
+        {
+          "id": "county",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1161",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "taiwanstay",
+          "url": "https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=20089",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "business",
+          "url": "https://rwd.ezhotel.cloud/goldensands/1",
+          "type": "business",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "county"
+        ],
+        "address": [
+          "county"
+        ],
+        "area": [
+          "county"
+        ],
+        "category": [
+          "county"
+        ],
+        "legalName": [
+          "county",
+          "taiwanstay"
+        ],
+        "registrationNumber": [
+          "county",
+          "taiwanstay"
+        ],
+        "contact.phone": [
+          "county"
+        ],
+        "contact.website": [
+          "business",
+          "county"
+        ]
+      },
+      "contact": {
+        "phone": "+886-82-355388",
+        "website": "https://rwd.ezhotel.cloud/goldensands/1"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "business",
+        "checkedAt": "2026-10-25"
+      },
+      "facts": {},
+      "filterFacts": [],
+      "publication": {
+        "level": "detail",
+        "href": "/hotels/golden-sands-resort/"
+      },
+      "detail": {
+        "decisionNotes": [
+          "住宿在下塘頭，適合將金沙段另排一日；晚餐地點與返宿交通先安排。",
+          "飯店訂房頁提供自駕由環島北路三段下塘頭轉入的說明，出發前按現場道路及導航確認入口。",
+          "需要公車者可先從官方訂房頁列的5、5A與小塘頭站查當日班次；此處不保證班距。",
+          "來源顯示提供住宿或訂房服務；本頁不是即時房態，抵達與訂房條件請向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/itineraries/jinsha-one-day/",
+            "mode": "自駕或預約接送",
+            "basis": "飯店訂房頁明示由環島北路三段下塘頭轉入；以此作進出住宿的道路依據，再以車輛銜接陽翟、山后、沙美、西園的既有分區路線，未估車程。"
+          },
+          {
+            "href": "/areas/jinsha/",
+            "mode": "自駕或按實際公車班次",
+            "basis": "官方住宿地址在金沙下塘頭；作為金沙生活圈住宿比較入口，並非宣稱整區可步行。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "principal-home",
+      "name": "校長的家",
+      "legalName": "校長的家",
+      "registrationNumber": "金門縣民宿190號",
+      "address": "金門縣金城鎮珠山17號",
+      "area": "kincheng",
+      "category": "古厝民宿",
+      "lodgingClass": "homestay",
+      "kind": "hotel",
+      "sources": [
+        {
+          "id": "county",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/1238",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "promo",
+          "url": "https://kinmen.travel/zh-tw/promotion/1506",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "county"
+        ],
+        "address": [
+          "county"
+        ],
+        "area": [
+          "county"
+        ],
+        "category": [
+          "county"
+        ],
+        "legalName": [
+          "county"
+        ],
+        "registrationNumber": [
+          "county"
+        ],
+        "contact.phone": [
+          "county"
+        ]
+      },
+      "contact": {
+        "phone": "+886-963-166171"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "promo",
+        "checkedAt": "2026-10-25"
+      },
+      "facts": {},
+      "filterFacts": [],
+      "publication": {
+        "level": "detail",
+        "href": "/hotels/principal-home/"
+      },
+      "detail": {
+        "decisionNotes": [
+          "住宿本身在珠山聚落，適合把聚落散步留到早晨或傍晚，再用車輛串聯金城南線。",
+          "官方介紹包含閣樓房型；有長者、幼童或搬行李需求時，先確認實際房間樓層與階梯。",
+          "晚餐與跨聚落接送先安排，住宿在珠山不代表步行即可使用後浦市區餐飲選擇。",
+          "來源顯示提供住宿或訂房服務；本頁不是即時房態，抵達與訂房條件請向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/attractions/zhushan-village/",
+            "mode": "聚落公共巷道步行",
+            "basis": "官方地址珠山17號，介紹明示位於珠山聚落且由聚落原校舍整修；只建議在公共巷道活動，不穿越私人院落。"
+          },
+          {
+            "href": "/itineraries/kincheng-south-day/",
+            "mode": "聚落內步行，聚落間自駕或預約接送",
+            "basis": "既有南線路線明列金門城、珠山與水頭，並明示分區之間車輛轉移；住宿在珠山段，可調整行程起點。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "yumi-guesthouse",
+      "name": "YUMI旅店",
+      "legalName": "YUMI旅店",
+      "registrationNumber": "金門縣民宿573號",
+      "address": "金門縣金寧鄉南山6之3號",
+      "area": "jinning",
+      "category": "民宿",
+      "lodgingClass": "homestay",
+      "kind": "hotel",
+      "sources": [
+        {
+          "id": "county",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/2895",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "taiwanstay",
+          "url": "https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=28127",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "county"
+        ],
+        "address": [
+          "county"
+        ],
+        "area": [
+          "county"
+        ],
+        "category": [
+          "county"
+        ],
+        "legalName": [
+          "county",
+          "taiwanstay"
+        ],
+        "registrationNumber": [
+          "county",
+          "taiwanstay"
+        ],
+        "contact.phone": [
+          "county"
+        ]
+      },
+      "contact": {
+        "phone": "+886-985-604489"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "county",
+        "checkedAt": "2026-10-25"
+      },
+      "facts": {},
+      "filterFacts": [],
+      "publication": {
+        "level": "detail",
+        "href": "/hotels/yumi-guesthouse/"
+      },
+      "detail": {
+        "decisionNotes": [
+          "位於古寧頭南山聚落，適合把雙鯉與北山的聚落、生態、戰史主題排在同一天。",
+          "南山住宿與金城晚餐區需分開規劃，沒有自駕者先查去回班次或預約接送。",
+          "官方詳頁列可寄放行李；實際抵達時間與行李安排仍先與業者確認。",
+          "來源顯示提供住宿或訂房服務；本頁不是即時房態，抵達與訂房條件請向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/itineraries/jinning-guningtou-one-day/",
+            "mode": "自駕或預約接送，聚落內公共路徑步行",
+            "basis": "官方詳頁明示南山聚落與雙鯉濕地生活圈；既有路線將古寧頭戰史館、北山、播音牆和雙鯉分段串聯，住宿可作南山段起終點。"
+          },
+          {
+            "href": "/attractions/guningtou-village/",
+            "mode": "聚落公共巷道步行",
+            "basis": "地址為南山6之3號，官方詳頁明示位於古寧頭南山聚落；限公共巷道動線，未推算到北山的步行時間。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "jindian-bnb",
+      "name": "金典民宿（JinDian B&B）",
+      "legalName": "金典民宿",
+      "registrationNumber": "金門縣民宿278號",
+      "address": "金門縣烈嶼鄉西路35之6號",
+      "area": "lieyu",
+      "category": "民宿",
+      "lodgingClass": "homestay",
+      "kind": "hotel",
+      "sources": [
+        {
+          "id": "county",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3348",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "taiwanstay",
+          "url": "https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=9431",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "county"
+        ],
+        "address": [
+          "county"
+        ],
+        "area": [
+          "county"
+        ],
+        "category": [
+          "county"
+        ],
+        "legalName": [
+          "county",
+          "taiwanstay"
+        ],
+        "registrationNumber": [
+          "county",
+          "taiwanstay"
+        ],
+        "contact.phone": [
+          "county"
+        ]
+      },
+      "contact": {
+        "phone": "+886-937-397950"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "county",
+        "checkedAt": "2026-10-25"
+      },
+      "facts": {},
+      "filterFacts": [],
+      "publication": {
+        "level": "detail",
+        "href": "/hotels/jindian-bnb/"
+      },
+      "detail": {
+        "decisionNotes": [
+          "一館地址是西路35之6號，與隔鄰二館的登記及門牌不同，訂房時確認入住館別。",
+          "官方介紹明示可步行接八達樓子等地標；若接九宮、沙溪堡與西岸路線，仍按分段交通安排。",
+          "官方頁列入住辦理時段15:00至22:30，晚抵達者先確認接待安排。",
+          "來源顯示提供住宿或訂房服務；本頁不是即時房態，抵達與訂房條件請向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/attractions/lieyu-culture-museum/",
+            "mode": "公共街道步行",
+            "basis": "官方詳頁明示民宿位於烈嶼市中心並列文化館、八達樓子周邊；由西路公共街道接館舍入口，不以附近直線數值換算步行時間。"
+          },
+          {
+            "href": "/itineraries/lieyu-one-day/",
+            "mode": "自駕或預約接送",
+            "basis": "既有烈嶼路線有文化館、東林午餐後往青岐與西岸的道路轉移；西路住宿可作島中段起終點，跨橋時間另計。"
+          }
+        ]
+      },
+      "identityMatchNote": "縣府名錄使用金典民宿(JinDian B&B)，旅宿網登記名為金典民宿；278號及西路35-6／35之6號相符。與二館723號、35-7號分開建檔。",
+      "brandId": "jindian"
+    },
+    {
+      "id": "jindian-bnb-2",
+      "name": "金典民宿二館",
+      "legalName": "金典民宿2館",
+      "registrationNumber": "金門縣民宿723號",
+      "address": "金門縣烈嶼鄉西路35-7號",
+      "area": "lieyu",
+      "category": "民宿",
+      "lodgingClass": "homestay",
+      "kind": "hotel",
+      "sources": [
+        {
+          "id": "county",
+          "url": "https://kinmen.travel/zh-tw/accommodation/details/3774",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        },
+        {
+          "id": "taiwanstay",
+          "url": "https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=34718",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "verifiedFields": {
+        "name": [
+          "county"
+        ],
+        "address": [
+          "county"
+        ],
+        "area": [
+          "county"
+        ],
+        "category": [
+          "county"
+        ],
+        "legalName": [
+          "county",
+          "taiwanstay"
+        ],
+        "registrationNumber": [
+          "county",
+          "taiwanstay"
+        ],
+        "contact.phone": [
+          "county"
+        ]
+      },
+      "contact": {
+        "phone": "+886-905-269360"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "county",
+        "checkedAt": "2026-10-25"
+      },
+      "facts": {
+        "elevator": {
+          "value": true,
+          "sourceId": "county",
+          "checkedAt": "2026-10-25",
+          "note": "官方列地上樓層電梯可達；未推定所有房間或衛浴均無障礙。"
+        }
+      },
+      "filterFacts": [
+        "elevator"
+      ],
+      "publication": {
+        "level": "detail",
+        "href": "/hotels/jindian-bnb-2/"
+      },
+      "detail": {
+        "decisionNotes": [
+          "二館為西路35-7號，請以館別、門牌與723號核對，避免把一館房型或條件套入。",
+          "官方詳頁介紹鄰近文化館、超商與公所，適合把島中散步和晚餐放在住宿前後。",
+          "官方頁列有電梯可達地上樓層；有無障礙需求者仍先確認所訂房間、入口及衛浴動線。",
+          "來源顯示提供住宿或訂房服務；本頁不是即時房態，抵達與訂房條件請向業者確認。"
+        ],
+        "connections": [
+          {
+            "href": "/attractions/lieyu-culture-museum/",
+            "mode": "公共街道步行",
+            "basis": "官方詳頁明示二館鄰近文化館、公所且可步行至生活商圈；以西路公共街道到文化館入口為規劃依據，未推估時間。"
+          },
+          {
+            "href": "/itineraries/lieyu-two-days/",
+            "mode": "自駕或預約接送，街區內步行",
+            "basis": "二館在烈嶼西路島中生活圈；既有兩天路線以車輛分區安排北岸與西岸，住宿可作每日出發點，未把全島景點當步行範圍。"
+          }
+        ]
+      },
+      "identityMatchNote": "縣府詳頁稱金典民宿二館，旅宿網稱金典民宿2館；723號與西路35-7號相符。另有278號的一館位在35之6號，未合併為同一門市。",
+      "brandId": "jindian"
+    },
+    {
+      "id": "yuanlaixing",
+      "kind": "food",
+      "name": "遠來興小吃店",
+      "publication": {
+        "level": "directory"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/1630",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣金沙鎮三民路22巷11號",
+      "area": "jinsha",
+      "category": "snack",
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ],
+        "contact.phone": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-82-352622"
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 05:00–13:00；官方頁列內用/外帶、廣東粥、餛飩、炒泡麵與手工蛋餅。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "filterFacts": []
+    },
+    {
+      "id": "yuchuan-canteen",
+      "kind": "food",
+      "name": "雨川食堂",
+      "publication": {
+        "level": "directory"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/2836",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣金城鎮莒光路53號",
+      "area": "kincheng",
+      "category": "restaurant",
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ],
+        "contact.phone": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-82-320165"
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 11:30–19:30；中式美食，內用/外帶，可預約。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "filterFacts": []
+    },
+    {
+      "id": "liontownship-cafe",
+      "kind": "food",
+      "name": "獅鄉 LionTownship(咖啡文創館)",
+      "publication": {
+        "level": "directory"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/3899",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣金城鎮模範街22號",
+      "area": "kincheng",
+      "category": "cafe",
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ],
+        "contact.phone": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "contact": {
+        "phone": "+886-82-322220"
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 11:00–20:30；手工甜點、簡餐、咖啡、無咖啡因飲品；內用/外帶。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "filterFacts": []
+    },
+    {
+      "id": "xishangmei-ice",
+      "kind": "food",
+      "name": "喜上眉燒冰菓室",
+      "publication": {
+        "level": "directory"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/3972",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣金沙鎮汶沙里博愛街6號",
+      "area": "jinsha",
+      "category": "dessert",
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 10:30–20:00；剉冰、燒仙草、鳥巢蛋、甜湯、起酥派、奶茶；內用/外帶。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "contact": {},
+      "filterFacts": []
+    },
+    {
+      "id": "xianfeng-canteen",
+      "kind": "food",
+      "name": "鮮豐食堂",
+      "publication": {
+        "level": "directory"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/1597",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣金沙鎮國中路7號",
+      "area": "jinsha",
+      "category": "restaurant",
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ],
+        "contact.phone": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 11:00–14:00；官方稱提供正餐及日常餐飲服務。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "contact": {
+        "phone": "+886-82-351633"
+      },
+      "filterFacts": []
+    },
+    {
+      "id": "liangjin-factory",
+      "kind": "food",
+      "name": "良金牧場-工廠總店",
+      "publication": {
+        "level": "directory"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/2264",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣金湖鎮漁村160號",
+      "area": "jinhu",
+      "category": "restaurant",
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ],
+        "contact.phone": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 10:30–19:30；官方提示最後點餐19:00，列現沖溫體牛肉麵。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "contact": {
+        "phone": "+886-82-335886"
+      },
+      "filterFacts": []
+    },
+    {
+      "id": "3q-chicken",
+      "kind": "food",
+      "name": "3Q脆皮雞排金門總店",
+      "publication": {
+        "level": "directory"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/3474",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣金城鎮中興路84號",
+      "area": "kincheng",
+      "category": "snack",
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ],
+        "contact.phone": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 15:00–00:00；雞排、魷魚、鹽酥雞、甘梅地瓜等炸物。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "contact": {
+        "phone": "+886-938-377531"
+      },
+      "filterFacts": []
+    },
+    {
+      "id": "shanghaochi-congee",
+      "kind": "food",
+      "name": "尚好吃廣東粥",
+      "publication": {
+        "level": "directory"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/3974",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣金城鎮民權路29號",
+      "area": "kincheng",
+      "category": "breakfast",
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 11:00–13:00、17:00–22:00；官方頁列廣東粥、海鮮粥。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "contact": {},
+      "filterFacts": []
+    },
+    {
+      "id": "daming-restaurant",
+      "kind": "food",
+      "name": "大明餐廳",
+      "publication": {
+        "level": "directory"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/3918",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣烈嶼鄉上林村1之8號",
+      "area": "lieyu",
+      "category": "restaurant",
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ],
+        "contact.phone": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "官方頁列內用、外燴及團體訂餐；官方烈嶼美食名錄列每日11:30–14:00、17:30–21:00。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "contact": {
+        "phone": "+886-82-364153"
+      },
+      "filterFacts": []
+    },
+    {
+      "id": "haijiao36",
+      "kind": "food",
+      "name": "海角之東36",
+      "publication": {
+        "level": "directory"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/3883",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣金湖鎮復國墩四維路36號",
+      "area": "jinhu",
+      "category": "restaurant",
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ],
+        "contact.phone": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 18:00–21:00；無菜單料理需提前預約訂位。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "contact": {
+        "phone": "+886-963-555588"
+      },
+      "filterFacts": []
+    },
+    {
+      "id": "jincheng-hotel-bar",
+      "kind": "food",
+      "name": "金城飯店｜酒吧｜金門威士忌博物館",
+      "publication": {
+        "level": "directory"
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/3872",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣金城鎮中興路67巷10-1號",
+      "area": "kincheng",
+      "category": "bar",
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ],
+        "contact.phone": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 19:30–00:00；調酒、咖啡威士忌、異國與在地料理，內用/可預約。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "contact": {
+        "phone": "+886-971-882587"
+      },
+      "filterFacts": []
+    },
+    {
+      "id": "carnival-ice",
+      "kind": "food",
+      "name": "嘉年華冰菓室",
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/2715",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣烈嶼鄉西口村西方29號",
+      "area": "lieyu",
+      "category": "dessert",
+      "contact": {
+        "phone": "+886-82-363126"
+      },
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ],
+        "contact.phone": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 11:00–18:00；官方頁列手工豆花、清冰加料。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      }
+    },
+    {
+      "id": "liangjin-paifang",
+      "kind": "food",
+      "name": "良金牧場-貞節牌坊店",
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/3251",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣金城鎮莒光路一段36號",
+      "area": "kincheng",
+      "category": "restaurant",
+      "contact": {
+        "phone": "+886-82-324080"
+      },
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ],
+        "contact.phone": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 10:30–19:30；官方提示最後點餐19:00，列溫體酒糟牛肉麵。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      }
+    },
+    {
+      "id": "daheng-snacks",
+      "kind": "food",
+      "name": "大亨小吃",
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/3943",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣金湖鎮黃海路一號",
+      "area": "jinhu",
+      "category": "snack",
+      "contact": {
+        "phone": "+886-82-332971"
+      },
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ],
+        "contact.phone": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 11:00–19:00；官方頁列小吃店。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      }
+    },
+    {
+      "id": "ilai-shun-shanwai",
+      "kind": "food",
+      "name": "一來順食品-山外店",
+      "sources": [
+        {
+          "id": "kinmen-tourism-detail",
+          "url": "https://kinmen.travel/zh-tw/shop/details/3116",
+          "type": "official",
+          "checkedAt": "2026-10-25"
+        }
+      ],
+      "address": "金門縣金湖鎮復興路74號",
+      "area": "jinhu",
+      "category": "specialty-food-retail",
+      "contact": {
+        "phone": "+886-82-330735"
+      },
+      "verifiedFields": {
+        "name": [
+          "kinmen-tourism-detail"
+        ],
+        "address": [
+          "kinmen-tourism-detail"
+        ],
+        "area": [
+          "kinmen-tourism-detail"
+        ],
+        "category": [
+          "kinmen-tourism-detail"
+        ],
+        "contact.phone": [
+          "kinmen-tourism-detail"
+        ]
+      },
+      "status": {
+        "state": "operating",
+        "sourceId": "kinmen-tourism-detail",
+        "checkedAt": "2026-10-25"
+      },
+      "facts": {
+        "sourceReportedSundayScheduleAndService": {
+          "value": "星期日 08:00–18:00；官方頁列在地特產食品與店售商品，非餐廳供餐。",
+          "sourceId": "kinmen-tourism-detail",
+          "checkedAt": "2026-10-25",
+          "note": "官方頁面所列時段與服務僅供參考，來源核對不等於當日營業確認；出發前另向店家確認。"
+        }
+      },
+      "filterFacts": [],
+      "publication": {
+        "level": "directory"
+      }
+    }
+  ]
+}

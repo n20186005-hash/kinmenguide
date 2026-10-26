@@ -22,7 +22,7 @@ document.addEventListener('click', event => {
   if (!button?.dataset.tripAdd) return;
   const trip = getTrip();
   if (trip.stops.some(stop => stop.id === button.dataset.tripAdd)) { location.href = '/trip/'; return; }
-  if (trip.stops.length >= MAX_STOPS) { announce(`清單最多收藏 ${MAX_STOPS} 個景點，請先到行程清單整理。`); return; }
+  if (trip.stops.length >= MAX_STOPS) { announce(`清單最多收藏 ${MAX_STOPS} 個站點，請先到行程清單整理。`); return; }
   trip.stops.push({ id: button.dataset.tripAdd, day: 1, time: '', note: '' });
   const saved = saveTrip(trip);
   announce(saved ? `已加入第 1 天：${button.dataset.tripTitle}。到「行程清單」安排天數與順序。` : `已加入。${storageMessage()}`);
