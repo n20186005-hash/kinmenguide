@@ -1,9 +1,10 @@
 import type { Trip, TripStop } from './trip-store';
-export type Place = { id: string; kind: 'attraction' | 'food' | 'hotel'; title: string; area: string; duration?: string; address: string; notice: string; href: string };
+export type Place = { id: string; kind: 'attraction' | 'food' | 'hotel'; title: string; area: string; duration?: string; address: string; notice: string; href: string; canPlan?: boolean };
 export type ExportStop = TripStop & { place: Place };
 export const placeKindNames = { attraction: '景點', food: '餐飲', hotel: '住宿' } as const;
 export function placeSummary(place: Place) {
   const details: string[] = [placeKindNames[place.kind], place.area];
+  if (place.canPlan === false) details.push('待確認');
   if (place.kind === 'attraction' && place.duration) details.push(`建議停留 ${place.duration}`);
   return details.join(' · ');
 }

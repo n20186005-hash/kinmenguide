@@ -11,7 +11,7 @@
   "duration": "6 分鐘",
   "order": 8,
   "featured": false,
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-27",
   "related": [
     "/areas/jinning/",
     "/food/jinning-food/",
@@ -155,3 +155,7 @@
 
 [查看本區完整名錄與篩選條件](/hotels/?area=jinning#business-directory)。表中是選區例子，完整選擇請用名錄篩選。官方頁所報服務不代表同日營運、目前登記狀態或空房；先按實際道路安排，再向業者確認入住條件。
 <!-- /reverse-directory-2026-10-26 -->
+
+## 北山床位與昔果山膠囊，不是同一個交通基地
+
+[北山古洋樓住宿](/hotels/beishan-hostel/)整理女性／混合宿舍、共用衛浴與不供早餐的業者說明，適合先比較古寧頭住宿條件；[不倒翁輕旅資料](/hotels/#business-lodging-705fe929edbc)則位於昔果山，來源介紹單人膠囊床位。兩者的機場抵達、晚餐與返宿方向不同，見[背包住宿比較](/hotels/hostels-and-backpackers/)。[金寧完整名錄](/hotels/?area=jinning#business-directory)可按登記類型及已有證據的住宿形式再篩選，未知房型另向業者確認。

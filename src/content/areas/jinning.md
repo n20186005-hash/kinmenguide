@@ -10,7 +10,7 @@
   "duration": "半天至 1 天",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-27",
   "related": [
     "/attractions/kinmen-bridge/",
     "/attractions/houhu-seaside-park/",
@@ -100,3 +100,7 @@
 古寧頭、湖下、后湖及大學周邊適合不同旅行方向，[金寧住宿比較](/hotels/jinning/)逐區整理登記名錄與訂房問題。古寧頭可查[雙鯉湖畔咖啡館](/food/#business-double-carp-cafe)，湖下可查[蘿熙咖啡](/food/#business-luoxi-cafe)，湖南正餐另看[聯泰餐廳](/food/#business-lian-tai)。
 
 咖啡、冰品和茶飲不能一概當早餐或晚餐；[金寧美食指南](/food/jinning-food/)分開列用途。住后湖時不用為吃同一道菜折回北山，先核對實際道路、營業和住宿交接，再決定當天順序。
+
+## 想把古寧頭留到隔天
+
+可用[北山古洋樓住宿詳頁](/hotels/beishan-hostel/)比較宿舍床位、共用衛浴、行李寄存和不供早餐的業者資料，再查看[金寧住宿分區](/hotels/jinning/)。住宿入口按北山46-5號與接待指引核對；參觀洋樓或聚落不等於可以自行進入住宿空間。

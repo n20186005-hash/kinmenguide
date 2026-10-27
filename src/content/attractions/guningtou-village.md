@@ -8,7 +8,7 @@
   "tag": "戰地聚落",
   "duration": "1–2 小時",
   "order": 155,
-  "updatedAt": "2026-10-14",
+  "updatedAt": "2026-10-27",
   "aliases": ["古寧頭", "古宁头聚落", "北山聚落", "南山聚落"],
   "related": ["/attractions/beishan-old-mansion/", "/attractions/guningtou-battle-museum/", "/attractions/shuangli-wetland-center/", "/itineraries/jinning-guningtou-one-day/"],
   "sources": [
@@ -36,3 +36,7 @@
 以戰史館和北山聚落為主，時間充裕再到[雙鯉濕地自然中心](/attractions/shuangli-wetland-center/)看自然展示。若同行者想看戰地聲音史，可換成[北山播音牆](/attractions/beishan-broadcasting-wall/)；海邊風大時，把戶外段縮短。
 
 聚落道路仍服務住戶。從公共道路看建築，不把民宅、住宿空間當作開放展室，也不在狹窄巷子臨停。想照順序玩，可用[金寧古寧頭一日路線](/itineraries/jinning-guningtou-one-day/)刪減成自己的半日版本。
+
+## 住在聚落，參觀與入住分開安排
+
+[北山古洋樓住宿資料](/hotels/beishan-hostel/)整理床位與家庭房介紹、共用衛浴及入住時間；[YUMI旅店](/hotels/yumi-guesthouse/)則在南山。先比較[金寧住宿生活圈](/hotels/jinning/)，再決定隔天行程。住宿資料不代表當日可訂；聚落參觀走公共巷道，私宅與住宿區依現場指引。

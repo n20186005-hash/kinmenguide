@@ -66,13 +66,39 @@ test('unavailable storage warns without falsely claiming persistent additions', 
   await page.goto('/trip/');await expect(page.locator('#trip-empty')).toBeVisible();
 });
 
-test('corrupted data recovers and stale or duplicate IDs do not become itinerary entries', async ({page}) => {
+test('corrupted data recovers while unknown saved IDs remain pending and duplicates are normalized safely', async ({page}) => {
+  await page.addInitScript(() => {
+    (window as any).__tripXssExecuted = false;
+    window.alert = () => { (window as any).__tripXssExecuted = true; };
+  });
   await page.goto('/trip/');await page.evaluate(key=>localStorage.setItem(key,'{broken'),key);await page.reload();
   await expect(page.locator('#trip-empty')).toBeVisible();await expect(page.locator('#trip-storage')).toContainText('無法讀取');
-  await page.evaluate(key=>localStorage.setItem(key,JSON.stringify({version:1,title:'<img src=x onerror=alert(1)>',days:2,stops:[{id:'juguang-tower',day:999,time:'99:00',note:'hello'},{id:'juguang-tower',day:1},{id:'removed-place',day:1}]})),key);
-  await page.reload();await expect(page.locator('.trip-stop')).toHaveCount(1);await expect(page.locator('[data-day="2"] .trip-stop')).toHaveCount(1);
-  await expect(page.locator('[data-field="time"]')).toHaveValue('');await expect(page.locator('[data-trip-count]')).toHaveText('1');
+  await page.evaluate(key=>localStorage.setItem(key,JSON.stringify({version:1,title:'<img src=x onerror=alert(1)>',days:2,stops:[{id:'juguang-tower',day:999,time:'99:00',note:'hello'},{id:'juguang-tower',day:1},{id:'removed-place',day:1,note:'keep this prior note'}]})),key);
+  await page.reload();await expect(page.locator('.trip-stop')).toHaveCount(2);await expect(page.locator('[data-day="2"] .trip-stop')).toHaveCount(1);
+  const known = page.locator('[data-stop="juguang-tower"]');
+  const pending = page.locator('[data-stop="removed-place"]');
+  await expect(known).toHaveCount(1);
+  await expect(known.locator('[data-field="time"]')).toHaveValue('');
+  await expect(known.locator('[data-field="day"]')).toHaveValue('2');
+  await expect(known.locator('[data-field="note"]')).toHaveValue('hello');
+  await expect(pending).toHaveAttribute('data-pending', 'true');
+  await expect(pending).toContainText('原有收藏資料待確認');
+  await expect(pending.locator('[data-field="note"]')).toHaveValue('keep this prior note');
+  await expect(pending.locator('[data-trip-add]')).toHaveCount(0);
+  await expect(pending.locator('a')).toHaveAttribute('href', '/search/');
+  expect(await page.locator('#trip-catalog').evaluate(element => JSON.parse(element.textContent!).some((place: { id: string }) => place.id === 'removed-place'))).toBeFalsy();
+  await expect(page.locator('[data-trip-count]')).toHaveText('2');
   await expect(page.locator('#trip-title')).toHaveValue('<img src=x onerror=alert(1)>');
+  await expect(page.locator('#trip-app img')).toHaveCount(0);
+  expect(await page.evaluate(() => (window as any).__tripXssExecuted)).toBeFalsy();
+  // An explicit user edit migrates storage; both stable IDs and original notes survive.
+  await page.locator('#trip-title').fill('<img src=x onerror=alert(1)> 保留收藏');
+  const saved = await page.evaluate(key => JSON.parse(localStorage.getItem(key)!), key);
+  expect(saved.stops).toEqual([
+    { id: 'juguang-tower', day: 2, time: '', note: 'hello' },
+    { id: 'removed-place', day: 1, time: '', note: 'keep this prior note' },
+  ]);
+  expect(await page.evaluate(() => (window as any).__tripXssExecuted)).toBeFalsy();
 });
 
 test('cart stays synchronized across tabs', async ({page,context}) => {

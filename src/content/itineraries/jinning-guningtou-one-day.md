@@ -9,7 +9,7 @@
   "tag": "金寧一日",
   "duration": "1 天",
   "order": 27,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-27",
   "themes": [
     "culture",
     "family"
@@ -104,3 +104,7 @@
 住古寧頭可先完成北山、南山，再安排咖啡或正餐；住湖下、后湖則不必為了同一道點心往北岸來回。
 
 用[住宿分區比較](/hotels/jinning/)與[同區餐飲名錄](/food/?area=jinning#business-directory)挑具體場所，加入[旅行清單](/trip/)後可調整天數和順序。清單不會替你預訂；出發前另向各店確認入住、營業、最後點餐和取消條件。
+
+## 留宿北山，先排隔天的早餐與行李
+
+若想把戰史館與聚落分成兩段，可比較[北山古洋樓住宿](/hotels/beishan-hostel/)與[其他金寧住宿](/hotels/?area=jinning#business-directory)。北山古洋樓業者頁寫明不供早餐，行李寄存也需確認時間；先排第一餐與退房，再調整隔天的南山、雙鯉或跨區交通。宿舍床位、整間房及共用衛浴的差異見[青旅住宿比較](/hotels/hostels-and-backpackers/)。

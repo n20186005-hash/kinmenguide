@@ -11,7 +11,7 @@
   "duration": "6 分鐘",
   "order": 8,
   "featured": false,
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-27",
   "related": [
     "/areas/jinsha/",
     "/food/jinsha-food/",
@@ -121,3 +121,7 @@
 
 [查看本區完整名錄與篩選條件](/hotels/?area=jinsha#business-directory)。表中是選區例子，完整選擇請用名錄篩選。官方頁所報服務不代表同日營運、目前登記狀態或空房；先按實際道路安排，再向業者確認入住條件。
 <!-- /reverse-directory-2026-10-26 -->
+
+## 官澳、山后與沙美，先確認回到哪個門牌
+
+[金沙住宿名錄](/hotels/?area=jinsha#business-directory)保留不同館別與完整登記門牌；有同名或品牌變動時，同時核對證號與地址。觀光名錄、登記及實際營業是不同資訊，查到登記不等於晚到一定有人接待。安排官澳或山后後回沙美用餐，先確認來回交通和餐飲時段；房型、早餐與接送沒有明示證據的項目仍需詢問。

@@ -10,7 +10,7 @@
   "duration": "5 分鐘",
   "order": 1,
   "featured": false,
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-27",
   "related": [
     "/itineraries/kinmen-three-days-two-nights/",
     "/transport/",
@@ -149,3 +149,7 @@
 
 [查看本區完整名錄與篩選條件](/hotels/?area=kincheng#business-directory)。表中是選區例子，完整選擇請用名錄篩選。官方頁所報服務不代表同日營運、目前登記狀態或空房；先按實際道路安排，再向業者確認入住條件。
 <!-- /reverse-directory-2026-10-26 -->
+
+## 古崗床位住宿與後浦客房，要分開比較
+
+住古崗的[斜坡客棧資料](/hotels/#business-lodging-58efbf0063ae)可查雙人雅房與背包床位來源，但古崗不是金城車站旁的晚餐步行圈。先用[青旅與背包住宿比較](/hotels/hostels-and-backpackers/)確認要訂一床還是一房，再接[金城南線](/itineraries/kincheng-south-day/)；晚餐、接待與夜間返宿各自確認。完整[金城住宿名錄](/hotels/?area=kincheng#business-directory)另列登記與營運核實狀態。

@@ -3,22 +3,23 @@ import { getPublicBusinesses, businessHref, type PublicBusiness } from '../lib/b
 import { areaNames } from '../data/site';
 interface Props { area: string; exclude?: string; }
 const { area, exclude } = Astro.props;
-const places = getPublicBusinesses().filter(b => b.area === area && b.state === 'operating' && businessHref(b) !== exclude);
+const places = getPublicBusinesses().filter(b => b.area === area && (b.kind === 'hotel' ? b.canShowReference : b.canPlan) && businessHref(b) !== exclude);
 const context = Astro.url.pathname;
 const connected = places.filter(b => b.connections.some(c => c.href === context && c.mode !== '同區規劃' && c.mode !== '行程規劃'));
 const curated = connected.length > 0;
 const selection = curated ? connected : places;
 const food = selection.filter(b => b.kind === 'food').slice(0, 3);
-const hotels = selection.filter(b => b.kind === 'hotel').slice(0, 2);
+const connectedHotels = connected.filter(b => b.kind === 'hotel');
+const hotels = (connectedHotels.length ? connectedHotels : places.filter(b => b.kind === 'hotel')).slice(0, 2);
 const name = areaNames[area as keyof typeof areaNames];
 const route: Record<string, string> = { kincheng: 'kincheng-one-day', jinhu: 'jinhu-one-day', jinsha: 'jinsha-one-day', jinning: 'jinning-guningtou-one-day', lieyu: 'lieyu-one-day' };
-const row = (b: PublicBusiness) => ({ href: businessHref(b), name: b.name, address: b.address, basis: b.connections.find(c => c.href === context)?.basis });
+const row = (b: PublicBusiness) => ({ key: b.key, href: businessHref(b), name: b.name, address: b.address, basis: b.connections.find(c => c.href === context)?.basis, pending: !b.canPlan });
 ---
 {area === 'all' && <section class="area-connections" aria-label="跨區住吃玩安排"><span class="eyebrow">STAY · EAT · EXPLORE</span><h2>先選每晚的住宿，再安排當天的一餐</h2><p>跨區行程先決定生活圈，再依實際道路與開放時間安排餐飲。收藏店家只作旅行規劃，房間與餐廳仍需自行聯絡確認。</p><div class="connections-grid"><div><h3>住在哪一區</h3><a href="/hotels/#business-directory">比較旅館與民宿 →</a><a href="/hotels/kincheng/">市區與古厝怎麼選 →</a></div><div><h3>在當天方向找一餐</h3><a href="/food/#business-directory">按地區與類型找店家 →</a><a href="/food/kinmen-food-guide/">安排早餐、正餐與點心 →</a></div><div><h3>放進同一份清單</h3><a href="/map/">切換景點、餐飲與住宿 →</a><a href="/trip/">按天編排並保存圖片 →</a></div></div></section>}
 {name && area !== 'all' && (food.length > 0 || hotels.length > 0) && <section class="area-connections" aria-label="同區住吃玩安排">
   <span class="eyebrow">STAY · EAT · EXPLORE</span><h2>留在{name}，把吃、住、玩接起來</h2>
-  <p>{curated ? '以下依本文的聚落或行程方向挑選，個別卡片說明關聯依據。這些是分區規劃選項，步行動線、營業時段與訂房仍需分別確認。' : '以下按鄉鎮提供規劃入口，並非步行距離推薦。先核對實際地址、道路與供餐時段，再決定順序；不以直線距離估算車程。'}</p>
-  <div class="connections-grid">{food.length > 0 && <div><h3>找一餐</h3><ul>{food.map(row).map(b => <li><a href={b.href}>{b.name}</a><small>{b.address}</small>{b.basis && <small>{b.basis}</small>}</li>)}</ul><a href={`/food/?area=${area}#business-directory`}>比較{name}餐飲 →</a></div>}{hotels.length > 0 && <div><h3>找一個住宿基地</h3><ul>{hotels.map(row).map(b => <li><a href={b.href}>{b.name}</a><small>{b.address}</small>{b.basis && <small>{b.basis}</small>}</li>)}</ul><a href={`/hotels/?area=${area}#business-directory`}>比較{name}住宿 →</a></div>}<div><h3>把順序排好</h3><p>同區也可能需要開車。從住宿出發前，把早餐、景點開放與晚餐一起核對。</p><a href={`/itineraries/${route[area]}/`}>{name}一日遊提案 →</a><a href={`/attractions/?area=${area}`}>同區景點 →</a><a href="/trip/">加入自己的行程 →</a></div></div>
+  <p>{curated ? '餐飲依本文的聚落或行程方向列出關聯；住宿另提供同區政府登記資料。這些資料不表示步行可達，實際動線與入住服務須分別確認。' : '以下按鄉鎮提供規劃入口，並非步行距離推薦。先核對實際地址、道路與供餐時段，再決定順序；不以直線距離估算車程。'}</p>
+  <div class="connections-grid">{food.length > 0 && <div><h3>找一餐</h3><ul>{food.map(row).map(b => <li><a href={b.href}>{b.name}</a><small>{b.address}</small>{b.basis && <small>{b.basis}</small>}</li>)}</ul><a href={`/food/?area=${area}#business-directory`}>比較{name}餐飲 →</a></div>}{hotels.length > 0 && <div><h3>同區登記住宿資料</h3><p class="small">政府查詢有登載；實際入住服務仍須另確認。未確認營業的項目只作資料參考。</p><ul>{hotels.map(row).map(b => <li data-lodging-reference={b.key}><a href={b.href}>{b.name}</a><small>{b.address}</small>{b.pending && <small>入住服務待確認</small>}{b.basis && <small>{b.basis}</small>}</li>)}</ul><a href={`/hotels/?area=${area}#business-directory`}>比較{name}住宿 →</a></div>}<div><h3>把順序排好</h3><p>同區也可能需要開車。從住宿出發前，把早餐、景點開放與晚餐一起核對。</p><a href={`/itineraries/${route[area]}/`}>{name}一日遊提案 →</a><a href={`/attractions/?area=${area}`}>同區景點 →</a><a href="/trip/">加入自己的行程 →</a></div></div>
 </section>}
 <style>
 .area-connections{margin:42px 0;padding:30px;background:#eff1e9;border-top:2px solid #536b55}.area-connections h2{font:700 26px/1.5 var(--font-serif)}.area-connections>p{font-size:14px;color:var(--muted);margin-top:12px}.connections-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:25px}.connections-grid h3{font-size:17px}.connections-grid ul{list-style:none;padding:0}.connections-grid li{margin:12px 0}.connections-grid small{display:block;font-size:11px;color:var(--muted)}.connections-grid a{display:block;font-size:14px;color:#a43e2e;padding:4px 0}.connections-grid p{font-size:13px;margin:12px 0;color:var(--muted)}@media(max-width:760px){.area-connections{padding:22px}.connections-grid{grid-template-columns:1fr}.area-connections h2{font-size:22px}}

@@ -3,6 +3,22 @@ import fs from 'node:fs/promises';
 import sharp from 'sharp';
 import { parseTrip, TRIP_KEY } from '../src/lib/trip-store';
 import type { Place } from '../src/lib/trip-image';
+import { canPlanBusiness, canShowBusinessReference, governmentRegistrationUrl } from '../src/lib/business-eligibility';
+
+test('source-reported operation and generic government pages cannot authorize lodging planning', () => {
+  const lodging = { kind: 'hotel', status: { state: 'operating' }, facts: {
+    actualOperationStatus: { value: 'unverified' }, registrationStatus: { value: 'government-listed' },
+  } };
+  expect(canPlanBusiness(lodging)).toBeFalsy();
+  expect(canShowBusinessReference(lodging)).toBeTruthy();
+  const historical = { ...lodging, facts: { ...lodging.facts, registrationStatus: { value: 'historical-only' } } };
+  expect(canPlanBusiness(historical)).toBeFalsy();
+  expect(canShowBusinessReference(historical)).toBeFalsy();
+  expect(canPlanBusiness({ ...lodging, facts: { ...lodging.facts, actualOperationStatus: { value: 'operating' } } })).toBeTruthy();
+  expect(canPlanBusiness({ kind: 'food', status: { state: 'operating' } })).toBeTruthy();
+  expect(governmentRegistrationUrl('https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=19980')).toBeTruthy();
+  for (const value of ['https://kmtd.kinmen.gov.tw/', 'https://www.kinmen.gov.tw/News_Content.aspx?s=anything', 'https://kinmen.travel/zh-tw/accommodation/details/1464', 'https://www.taiwanstay.net.tw/TSA/web_page/TSA010100.jsp', 'https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp']) expect(governmentRegistrationUrl(value)).toBeFalsy();
+});
 
 async function merchantCatalog(page: Page) {
   const catalog = await page.locator('#trip-catalog').evaluate(element => JSON.parse(element.textContent!) as Place[]);
@@ -29,7 +45,7 @@ test('trip parser migrates legacy attractions and keeps distinct namespaced iden
   expect(migrated.stops[0]).toEqual(legacy.stops[0]);
 });
 
-test('legacy saved attractions survive adding food and accommodation from their public lists', async ({ page }) => {
+test('legacy saved attractions and accommodation survive while unverified stays cannot be newly added', async ({ page }) => {
   await page.addInitScript(key => {
     if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify({ version: 1, title: '原有的金門假期', days: 4,
       stops: [{ id: 'juguang-tower', day: 3, time: '10:30', note: '舊的備註' }] }));
@@ -42,7 +58,12 @@ test('legacy saved attractions survive adding food and accommodation from their 
   await page.goto('/food/');
   await page.locator(`[data-trip-add="${food.id}"]`).click();
   await page.goto('/hotels/');
-  await page.locator(`[data-trip-add="${hotel.id}"]`).click();
+  await expect(page.locator(`[data-trip-add="${hotel.id}"]`)).toHaveCount(0);
+  await page.evaluate(({ key, id }) => {
+    const prior = JSON.parse(localStorage.getItem(key)!);
+    prior.stops.push({ id, day: 2, time: '18:00', note: '先前收藏的住宿' });
+    localStorage.setItem(key, JSON.stringify(prior));
+  }, { key: TRIP_KEY, id: hotel.id });
   await page.goto('/trip/');
   await expect(page.locator('.trip-stop')).toHaveCount(3);
   await expect(page.locator('#trip-title')).toHaveValue('原有的金門假期');
@@ -50,6 +71,8 @@ test('legacy saved attractions survive adding food and accommodation from their 
   await expect(page.locator('[data-day="3"] [data-stop="juguang-tower"] [data-field="time"]')).toHaveValue('10:30');
   await expect(page.locator(`[data-stop="${food.id}"]`)).toContainText('餐飲');
   await expect(page.locator(`[data-stop="${hotel.id}"]`)).toContainText('住宿');
+  await expect(page.locator(`[data-stop="${hotel.id}"]`)).toContainText('待確認');
+  await expect(page.locator(`[data-stop="${hotel.id}"] [data-field="note"]`)).toHaveValue('先前收藏的住宿');
   await expect(page.locator(`[data-stop="${hotel.id}"]`)).toContainText('不代表完成訂房');
   const saved = await page.evaluate(key => JSON.parse(localStorage.getItem(key)!), TRIP_KEY);
   expect(saved.version).toBe(2);
@@ -85,7 +108,7 @@ test('mixed PNG export labels every kind, uses conditional duration and invalida
   expect(drawn).toContain('kinmenguide.com');
   expect(drawn).toContain(`景點 · ${attraction.area} · 建議停留 ${attraction.duration}`);
   expect(drawn).toContain(`餐飲 · ${food.area}`);
-  expect(drawn).toContain(`住宿 · ${hotel.area}`);
+  expect(drawn).toContain(`住宿 · ${hotel.area}${hotel.canPlan === false ? ' · 待確認' : ''}`);
   expect(drawn.some(text => text.includes('3 個站點'))).toBeTruthy();
   expect(drawn.some(text => /undefined|null/.test(text))).toBeFalsy();
   const downloadPromise = page.waitForEvent('download');
@@ -106,7 +129,7 @@ test('mixed PNG export labels every kind, uses conditional duration and invalida
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
 });
 
-test('mixed stops support reorder, undo, stale cleanup and cross-tab preview invalidation', async ({ page, context }) => {
+test('mixed stops support reorder, undo, pending saved IDs and cross-tab preview invalidation', async ({ page, context }) => {
   await page.goto('/trip/');
   const { food, hotel } = await merchantCatalog(page);
   await page.evaluate(({ key, ids }) => localStorage.setItem(key, JSON.stringify({ version: 2, title: '混合站點', days: 2,
@@ -114,13 +137,14 @@ test('mixed stops support reorder, undo, stale cleanup and cross-tab preview inv
     key: TRIP_KEY, ids: ['juguang-tower', food.id, hotel.id, 'food:removed-business', food.id],
   });
   await page.reload();
-  await expect(page.locator('.trip-stop')).toHaveCount(3);
+  await expect(page.locator('.trip-stop')).toHaveCount(4);
+  await expect(page.locator('[data-stop="food:removed-business"]')).toContainText('原有收藏資料待確認');
   await page.locator(`[data-stop="${hotel.id}"] [data-action="up"]`).click();
   await expect(page.locator('.trip-stop').nth(1)).toHaveAttribute('data-stop', hotel.id);
   await page.locator(`[data-stop="${food.id}"] [data-action="remove"]`).click();
-  await expect(page.locator('.trip-stop')).toHaveCount(2);
-  await page.locator('#trip-undo').click();
   await expect(page.locator('.trip-stop')).toHaveCount(3);
+  await page.locator('#trip-undo').click();
+  await expect(page.locator('.trip-stop')).toHaveCount(4);
   await page.locator('#trip-export').click();
   await expect(page.locator('#trip-images')).toBeVisible();
   const other = await context.newPage();

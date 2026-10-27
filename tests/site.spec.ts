@@ -125,7 +125,7 @@ test('new place aliases lead to the corrected street and real guides',async({pag
 
 test('map distinguishes verified coordinates from place search',async({page})=>{
  await page.goto('/map/');await expect(page.locator('#map-count')).toHaveText('162 個景點');
- const stop=page.locator('.map-point').filter({hasText:'小徑公車亭'});await expect(stop.getByRole('link',{name:'Google 地圖'})).toHaveAttribute('href',/query=/);await expect(stop.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
+ const stop=page.locator('.map-point').filter({hasText:'小徑公車亭'});await expect(stop.locator('[data-map-location-link]')).toHaveAttribute('href',/query=/);await expect(stop.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
  await page.getByRole('button',{name:'金湖',exact:true}).click();await expect(stop).toBeVisible();await expect(page.locator('.map-point:visible')).toHaveCount(50);
 });
 

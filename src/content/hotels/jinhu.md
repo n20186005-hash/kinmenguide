@@ -10,7 +10,7 @@
   "duration": "5 分鐘",
   "order": 2,
   "featured": false,
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-27",
   "related": [
     "/itineraries/kinmen-three-days-two-nights/",
     "/transport/",
@@ -109,3 +109,7 @@
 
 [查看本區完整名錄與篩選條件](/hotels/?area=jinhu#business-directory)。表中是選區例子，完整選擇請用名錄篩選。官方頁所報服務不代表同日營運、目前登記狀態或空房；先按實際道路安排，再向業者確認入住條件。
 <!-- /reverse-directory-2026-10-26 -->
+
+## 比較房型時，別把旅館登記當成衛浴保證
+
+[金湖住宿名錄](/hotels/?area=jinhu#business-directory)把政府登記、房型來源和實際營運核實分開列出。山外辦完晚餐再回夏興、塔后或瓊林，需要按實際道路安排交通；選家庭房時，另問衛浴、樓梯及接送條件。同行者若想改訂床位，可先讀[背包住宿形式比較](/hotels/hostels-and-backpackers/)，不要因旅宿名稱含「旅館」就推定是整間套房。

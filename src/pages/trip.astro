@@ -6,9 +6,11 @@ import { areaNames } from '../data/site';
 import { getPublicBusinesses } from '../lib/businesses';
 import type { Place } from '../lib/trip-image';
 const attractions: Place[] = (await getCollection('attractions')).map(({id,data}) => ({id,kind:'attraction',title:data.title.split('：')[0],area:areaNames[data.area],duration:data.duration,address:data.address,notice:data.visitNotice || '',href:`/attractions/${id}/`}));
-const businesses: Place[] = getPublicBusinesses().filter(business => business.state === 'operating').map(business => ({
+// Retain lookup records for saved IDs; canPlan controls new recommendations separately.
+const businesses: Place[] = getPublicBusinesses().map(business => ({
   id:business.key, kind:business.kind, title:business.name, area:areaNames[business.area], address:business.address,
-  notice:[business.notice, `資料核對：${business.checkedAt}。${business.kind === 'hotel' ? '加入行程不代表完成訂房，請向業者確認空房、入住資格與入住時間。' : '用餐前請向店家確認營業時間、供餐與預約。'}`].filter(Boolean).join(' '),
+  canPlan:business.canPlan,
+  notice:[!business.canPlan ? '待確認：營業或目前登記資訊尚未符合新增行程條件；原有收藏已保留。' : '', business.notice, `資料核對：${business.checkedAt}。${business.kind === 'hotel' ? '加入行程不代表完成訂房，請向業者確認空房、入住資格與入住時間。' : '用餐前請向店家確認營業時間、供餐與預約。'}`].filter(Boolean).join(' '),
   href:business.detailHref || `/${business.kind === 'food' ? 'food' : 'hotels'}/#business-${business.id}`,
 }));
 const places = [...attractions, ...businesses];
@@ -24,7 +26,7 @@ const places = [...attractions, ...businesses];
     <div class="trip-summary"><p><strong id="trip-total">0</strong> 個站點 · <span id="trip-storage"></span></p><button type="button" id="trip-clear" class="trip-text-button" disabled>清空清單</button></div>
     <p class="small">新加入的站點先放在第 1 天，可隨時改天數與順序。時間是自己的規劃，請另查開放資訊、營業時間、訂房、交通與潮汐；系統不會自動計算路程，也不會代訂餐廳或住宿。</p>
     <div id="trip-status" role="status" aria-live="polite"></div><button id="trip-undo" class="trip-text-button" type="button" hidden>復原剛才移除的站點</button>
-    <div id="trip-empty" class="trip-empty"><span class="eyebrow">A LITTLE ROOM FOR ADVENTURE</span><h2>清單還是空的，先選一個想去的地方。</h2><p>在景點、餐飲或住宿名錄點「＋ 加入行程」，回來就能安排你的旅行。</p><a class="button" href="/attractions/">探索金門景點</a></div>
+    <div id="trip-empty" class="trip-empty"><span class="eyebrow">A LITTLE ROOM FOR ADVENTURE</span><h2>清單還是空的，先選一個想去的地方。</h2><p>在景點或餐飲名錄點「＋ 加入行程」。住宿待核實時可先查資料；先前收藏仍會保留並顯示確認提醒。</p><a class="button" href="/attractions/">探索金門景點</a></div>
     <div id="trip-day-list"></div>
     <section id="trip-images" class="trip-images" hidden aria-label="行程圖片預覽"><h2>把行程帶在身邊</h2><p>每張最多 6 個站點，右下角附本站網址。逐張下載；手機也可長按圖片儲存。請另外確認餐飲營業與住宿訂房。</p><p class="small" id="trip-export-status" role="status"></p><div id="trip-image-list"></div></section>
   </section>

@@ -37,14 +37,28 @@ for (const kind of ['food', 'hotel']) {
       if (b.lodgingClass === 'restricted') assert.ok(b.facts?.eligibility?.value && card.text().includes(b.facts.eligibility.value), 'Restricted lodging needs visible eligibility');
       else assert.ok(b.registrationNumber && card.text().includes(b.registrationNumber), 'Registered lodging needs visible certificate identity');
       if (b.registrationNumber) {
-        const registrationLink = card.find('a').filter((_, a) => $(a).text().trim() === '核對官方登記 →');
+        const registrationLink = card.find('[data-business-registration-source]');
         assert.equal(registrationLink.length, 1, `One registration evidence link required: ${b.id}`);
-        const evidence = b.sources.filter(s => s.type === 'official' && b.verifiedFields.registrationNumber?.includes(s.id));
+        const statusFact = b.facts?.registrationStatus;
+        const evidence = b.sources.filter(s => s.type === 'official' && (statusFact?.sourceId ? s.id === statusFact.sourceId : b.verifiedFields.registrationNumber?.includes(s.id)));
         assert.ok(evidence.some(s => s.url === registrationLink.attr('href')), `Registration link must lead to this certificate's official evidence, not a business website: ${b.id}`);
+        const state = statusFact?.historical ? 'historical-only' : statusFact?.value || 'pending';
+        assert.equal(card.find('[data-business-registration-status]').attr('data-business-registration-status'), state);
+        if (state === 'historical-only') assert.ok(card.text().includes('目前登記狀態待核實（僅有歷史底冊）'), 'Historical evidence must not appear as current legal verification');
       }
+      assert.equal(card.find('[data-business-actual-operation]').attr('data-business-actual-operation'), b.facts?.actualOperationStatus?.historical ? 'unverified' : b.facts?.actualOperationStatus?.value || 'unverified');
+      const mapCid = b.facts?.verifiedMapCid;
+      assert.equal(card.find('[data-business-verified-map]').length, mapCid?.value && !mapCid.historical ? 1 : 0, 'Only accepted map CID facts create verified-map links');
+      if (mapCid?.value && !mapCid.historical) assert.equal(card.find('[data-business-verified-map]').attr('href'), `https://www.google.com/maps?cid=${mapCid.value}`);
+      assert.equal(card.find('[data-business-address-search]').length, 1, 'Address searches remain explicitly separate from verified map matches');
       assert.ok(!card.find('[data-trip-add]').length || b.status.state === 'operating', 'Closed lodging cannot be offered as a planning recommendation');
+      if (b.status.state === 'unverified') assert.equal(card.find('[data-trip-add]').length, 0, 'Unknown-operation lodging is basic information, without normal-operation planning controls');
     }
-    if (b.status.state === 'operating') {
+    const canPlan = kind === 'hotel' ? b.facts?.actualOperationStatus?.value === 'operating' && !b.facts.actualOperationStatus.historical && b.facts?.registrationStatus?.value === 'government-listed' && !b.facts.registrationStatus.historical : b.status.state === 'operating';
+    assert.equal(card.find('[data-trip-add]').length, canPlan ? 1 : 0, 'Only verified operation and current government registration allow lodging planning');
+    assert.equal(catalog.find(p => p.id === `${kind}:${b.id}`)?.canPlan, canPlan, 'Saved-ID catalog eligibility must agree with every public entry point');
+    assert.equal(map(`[id="map-point-${kind}-${b.id}"] [data-trip-add]`).length, canPlan ? 1 : 0, 'Map planning must use the same eligibility');
+    if (canPlan) {
       assert.equal(card.find('[data-trip-add]').attr('data-trip-add'), `${kind}:${b.id}`);
       assert.ok(ids.has(`${kind}:${b.id}`), 'Add controls and trip catalog must agree');
     }
@@ -60,6 +74,7 @@ for (const kind of ['food', 'hotel']) {
       assert.equal(entity?.name, b.name);
       assert.equal(entity?.identifier, b.registrationNumber);
       assert.equal(entity?.aggregateRating, undefined, 'No imported or fabricated rating');
+      assert.equal(page(`[data-trip-add="${kind}:${b.id}"]`).length, canPlan ? 1 : 0, 'Detail-page planning must use the same eligibility');
     }
   }
 }

@@ -11,6 +11,16 @@ const errors=[];
 const noindexRoutes=new Set(['/404.html','/plan/','/trip/','/search/']);
 const fileFor = pathname => path.join(root,pathname.endsWith('/')?pathname+'index.html':pathname);
 const routes=files.map(f=>'/'+path.relative(root,f).replace(/index\.html$/,'').replace(/\\/g,'/'));
+// Large directory anchors recur across many pages. Parse each target's ID set
+// once, while retaining exactly the same missing-anchor validation.
+const targetIds = new Map();
+const idsForTarget = target => {
+  if (!targetIds.has(target)) {
+    const doc=load(fs.readFileSync(target,'utf8'));
+    targetIds.set(target,new Set(doc('[id]').toArray().map(n=>doc(n).attr('id'))));
+  }
+  return targetIds.get(target);
+};
 let links=0,images=0,schemas=0;
 for(const file of files){
  const $=load(fs.readFileSync(file,'utf8'));
@@ -26,6 +36,7 @@ for(const file of files){
  for(const key of ['og:title','og:description','og:image','og:url','og:locale'])check(Boolean($(`meta[property="${key}"]`).attr('content')),`Missing ${key}`);
  $('script[type="application/ld+json"]').each((_,el)=>{try{const s=JSON.parse($(el).text());check(s['@context']==='https://schema.org','Invalid JSON-LD context');schemas+=s['@graph'].length;}catch{check(false,'Invalid JSON-LD');}});
  const ids=new Set();$('[id]').each((_,el)=>{const id=$(el).attr('id');check(!ids.has(id),`Duplicate ID ${id}`);ids.add(id);});
+ targetIds.set(file,ids);
  $('img').each((_,el)=>{images++;check(Boolean($(el).attr('alt')),'Image missing alt');check(Boolean($(el).attr('width'))&&Boolean($(el).attr('height')),'Image missing dimensions');});
  $('a[href],img[src],script[src],link[rel="stylesheet"][href],meta[property="og:image"]').each((_,el)=>{
   const value=$(el).attr('href')||$(el).attr('src')||$(el).attr('content');if(!value||/^(mailto:|tel:|data:)/.test(value))return;
@@ -35,7 +46,7 @@ for(const file of files){
   let target=fileFor(decodeURIComponent(url.pathname));
   if(!fs.existsSync(target)&&!path.extname(target))target=path.join(target,'index.html');
   check(fs.existsSync(target),`Broken local target ${value}`);
-  if(url.hash&&fs.existsSync(target)&&target.endsWith('.html')){const doc=target===file?$:load(fs.readFileSync(target,'utf8'));const id=decodeURIComponent(url.hash.slice(1));check(doc('[id]').toArray().some(n=>doc(n).attr('id')===id),`Missing anchor ${value}`);}
+  if(url.hash&&fs.existsSync(target)&&target.endsWith('.html')){const id=decodeURIComponent(url.hash.slice(1));check(idsForTarget(target).has(id),`Missing anchor ${value}`);}
  });
 }
 const sitemapIndex=load(fs.readFileSync(path.join(root,'sitemap-index.xml'),'utf8'),{xmlMode:true});

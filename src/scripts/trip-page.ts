@@ -2,6 +2,13 @@ import { getTrip, saveTrip, storageMessage, type Trip } from '../lib/trip-store'
 import { createTripImages, placeSummary, type Place } from '../lib/trip-image';
 const catalog: Place[] = JSON.parse(document.querySelector('#trip-catalog')!.textContent!);
 const places = new Map(catalog.map(p => [p.id, p]));
+function savedPlace(id: string): Place {
+  const known = places.get(id);
+  if (known) return known;
+  const kind = id.startsWith('hotel:') ? 'hotel' : id.startsWith('food:') ? 'food' : 'attraction';
+  return { id, kind, title: '原有收藏資料待確認', area: '位置待確認', address: '原有收藏的位置尚待核對', canPlan: false,
+    notice: '目前名錄未找到這個原有收藏；你的日期、時間與備註均保留，請另核對資料。', href: '/search/' };
+}
 const app = document.querySelector<HTMLElement>('#trip-app')!;
 const days = document.querySelector<HTMLSelectElement>('#trip-days')!;
 const title = document.querySelector<HTMLInputElement>('#trip-title')!;
@@ -31,12 +38,7 @@ function commit(trip: Trip, rebuild = true) {
   skipRender = !rebuild; saveTrip(trip); skipRender = false;
 }
 function render() {
-  let trip = getTrip();
-  const valid = trip.stops.filter(stop => places.has(stop.id));
-  if (valid.length !== trip.stops.length) {
-    trip.stops = valid; saveTrip(trip);
-    status.textContent = '已移除不再收錄的站點，請重新確認行程。'; return;
-  }
+  const trip = getTrip();
   const focus = document.activeElement as HTMLElement | null;
   const focusId = focus?.closest<HTMLElement>('[data-stop]')?.dataset.stop;
   const field = focus?.dataset.field; const action = focus?.dataset.action;
@@ -55,8 +57,9 @@ function render() {
     const heading = node('h2', `第 ${day} 天`); heading.append(node('span', `${dayStops.length} 個站點`, 'small')); section.append(heading);
     if (!dayStops.length) section.append(node('p', '這一天還留著空白，從其他天移入站點，或再挑一個想去的地方。', 'small'));
     dayStops.forEach((stop, index) => {
-      const place = places.get(stop.id)!;
+      const place = savedPlace(stop.id);
       const row = node('article', undefined, 'trip-stop'); row.dataset.stop = stop.id;
+      if (place.canPlan === false) row.dataset.pending = 'true';
       const number = node('span', String(index + 1).padStart(2,'0'), 'trip-stop-number'); number.setAttribute('aria-hidden','true');
       const content = node('div', undefined, 'trip-stop-content');
       const h3 = node('h3'); const link = node('a', place.title); link.href = place.href; h3.append(link);
@@ -101,7 +104,7 @@ list.addEventListener('click', event => {
   const id = button.closest<HTMLElement>('[data-stop]')!.dataset.stop;
   const trip = getTrip(); const index = trip.stops.findIndex(s => s.id === id); if (index < 0) return;
   if (button.dataset.action === 'remove') {
-    const snapshot = getTrip(); const name = places.get(id!)!.title;
+    const snapshot = getTrip(); const name = savedPlace(id!).title;
     trip.stops.splice(index,1); commit(trip); previous = snapshot; undo.hidden = false; status.textContent = `已移除 ${name}。`; undo.focus();
   } else {
     const sameDay = trip.stops.filter(s => s.day === trip.stops[index].day);
@@ -126,7 +129,7 @@ undo.addEventListener('click', () => { if (!previous) return; const restore = pr
 exportButton.addEventListener('click', async () => {
   const trip = getTrip(); if (!trip.stops.length || exporting) return;
   const version = revision;
-  const stops = trip.stops.slice().sort((a,b) => a.day - b.day).map(stop => ({...stop,place:places.get(stop.id)!}));
+  const stops = trip.stops.slice().sort((a,b) => a.day - b.day).map(stop => ({...stop,place:savedPlace(stop.id)}));
   exporting = true; exportButton.disabled = true; exportButton.textContent = '正在製作圖片…';
   try {
     const blobs = await createTripImages(trip,stops);

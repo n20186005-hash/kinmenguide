@@ -11,7 +11,7 @@
   "duration": "6 分鐘",
   "order": 8,
   "featured": false,
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-27",
   "related": [
     "/areas/lieyu/",
     "/food/lieyu-food/",
@@ -86,3 +86,7 @@
 | [采藝民宿](/hotels/#business-lodging-e23251be9cd2) | 金門縣烈嶼鄉雙口36號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/2307) |
 
 [烈嶼完整住宿名錄](/hotels/?area=lieyu#business-directory)可接著比較其他門牌與來源；房型、晚到入住、早餐和交通請向各館確認。
+
+## 西岸與東林分館，先看登記地址再導航
+
+[烈嶼住宿名錄](/hotels/?area=lieyu#business-directory)可集中比較本輪政府查詢與既有資料；查店名後，仍要核對西路、雙口、上林或羅厝的完整門牌。同品牌一、二館保留各自紀錄，不用共同地標取代分館地址。晚上跨橋或留在烈嶼吃飯，應與接待時間一起確認；有登記的基本資料也不表示本站已確認當日營業。
