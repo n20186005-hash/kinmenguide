@@ -157,3 +157,5 @@
 ## 核對門牌後比較住宿
 
 金城鎮的[法蘭克民宿](/hotels/franks-hostel/)、[市區背包客棧民宿](/hotels/kinmen-backpacker/)及[庫克民宿](/hotels/cook-bnb/)分別位於民權路、珠浦西路與中興路巷內。可按完整地址、入住時間及所選房型比較，營業狀態和接待方式仍應先確認。
+
+[樂客2館](/hotels/yueke-second-house/)登記於金城賢聚51-6號，與金寧下埔下315號的[樂客民宿](/hotels/yueke-guesthouse/)不是同一地址；預訂前請先確認館別與入口。

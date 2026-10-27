@@ -163,3 +163,5 @@
 ## 分別核對大學路與聚落住宿
 
 金寧住宿門牌分散，可先比較[麥麥精品文旅](/hotels/maimai-hotel/)、[金門福見民宿](/hotels/fujian-guesthouse/)、[閒事別館](/hotels/xianshi-annex/)、[樂客民宿](/hotels/yueke-guesthouse/)、[獺浪](/hotels/talu-guesthouse/)、[散步的喵](/hotels/walking-meow/)與[漫。時光](/hotels/manlu-inn/)。各地址及入口不同，入住服務、餐飲和返宿交通應逐家查詢。
+
+伯玉路一段可另比較[歡樂滿屋](/hotels/happy-house-bnb/)的236-8號門牌；埔後則可查看[浮雲澗民宿](/hotels/fuyunjian-bnb/)的133號門牌。入住、晚餐與返宿交通仍需個別核對。

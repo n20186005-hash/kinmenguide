@@ -2,13 +2,13 @@ import { test, expect } from '@playwright/test';
 import { ctripHotels } from '../src/data/ctrip-hotels';
 import { businessLinks } from '../src/data/business-links';
 import fs from 'node:fs';
-const registry = JSON.parse(fs.readFileSync('src/data/businesses.json', 'utf8')) as { records: Array<{ id: string; kind: string; name: string }> };
+const registry = JSON.parse(fs.readFileSync('src/data/businesses.json', 'utf8')) as { records: Array<{ id: string; kind: string; name: string; publication: { href?: string } }> };
 
 test('each matched lodging opens its own article and exposes the verified ordinary Ctrip URL', async ({ page }) => {
   for (const [id, hotel] of Object.entries(ctripHotels)) {
     const business = registry.records.find(b => b.id === id && b.kind === 'hotel');
     expect(business).toBeTruthy();
-    const href = businessLinks[`hotel:${id}`];
+    const href = business!.publication.href || businessLinks[`hotel:${id}`];
     expect(href).toBeTruthy();
     await page.goto(href);
     await expect(page.locator('h1')).toHaveText(business!.name);
