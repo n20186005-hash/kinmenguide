@@ -199,3 +199,7 @@
 
 [查看本區完整名錄與篩選條件](/food/?area=kincheng#business-directory)。上表是本輪比較選項，並非本區全部店家。資料整理不代表親訪、當日營業或空房保證；先按實際道路安排，再向業者確認到店或入住條件。
 <!-- /reverse-directory-2026-10-26 -->
+
+## 把晚餐接回金城住宿
+
+在後浦安排餐飲時，可比較[法蘭克民宿](/hotels/franks-hostel/)、[市區背包客棧民宿](/hotels/kinmen-backpacker/)及[庫克民宿](/hotels/cook-bnb/)的完整門牌；依餐廳營業時間與實際道路確認晚餐、行李及返回住宿的順序。

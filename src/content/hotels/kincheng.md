@@ -153,3 +153,9 @@
 ## 古崗床位住宿與後浦客房，要分開比較
 
 住古崗的[斜坡客棧資料](/hotels/#business-lodging-58efbf0063ae)可查雙人雅房與背包床位來源，但古崗不是金城車站旁的晚餐步行圈。先用[青旅與背包住宿比較](/hotels/hostels-and-backpackers/)確認要訂一床還是一房，再接[金城南線](/itineraries/kincheng-south-day/)；晚餐、接待與夜間返宿各自確認。完整[金城住宿名錄](/hotels/?area=kincheng#business-directory)另列登記與營運核實狀態。
+
+## 核對門牌後比較住宿
+
+金城鎮的[法蘭克民宿](/hotels/franks-hostel/)、[市區背包客棧民宿](/hotels/kinmen-backpacker/)及[庫克民宿](/hotels/cook-bnb/)分別位於民權路、珠浦西路與中興路巷內。可按完整地址、入住時間及所選房型比較，營業狀態和接待方式仍應先確認。
+
+[樂客2館](/hotels/yueke-second-house/)登記於金城賢聚51-6號，與金寧下埔下315號的[樂客民宿](/hotels/yueke-guesthouse/)不是同一地址；預訂前請先確認館別與入口。

@@ -76,3 +76,5 @@ console.log(`Verified ${files.length} pages; ${links} internal references; ${ima
 
 await import('./verify-photos.mjs');
 await import('./verify-businesses.mjs');
+
+await import('./verify-ctrip.mjs');
