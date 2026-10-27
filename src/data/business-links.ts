@@ -1,5 +1,15 @@
 // Reconciled by exact physical address and individual official source, not brand alone.
 export const businessLinks: Record<string, string> = {
+  "hotel:lodging-451c01345513": "/hotels/maimai-hotel/",
+  "hotel:lodging-1e91f275984b": "/hotels/franks-hostel/",
+  "hotel:lodging-7f8e8a9e089f": "/hotels/kinmen-backpacker/",
+  "hotel:lodging-02520b9f906f": "/hotels/fujian-guesthouse/",
+  "hotel:lodging-f9ddb3312446": "/hotels/xianshi-annex/",
+  "hotel:lodging-6e6ebbdecc15": "/hotels/yueke-guesthouse/",
+  "hotel:lodging-35866da3b082": "/hotels/cook-bnb/",
+  "hotel:lodging-97aa34516c7b": "/hotels/talu-guesthouse/",
+  "hotel:lodging-e74496fa86cd": "/hotels/walking-meow/",
+  "hotel:lodging-57dd4152300b": "/hotels/manlu-inn/",
   "food:yuchuan-canteen": "/food/yuchuan-canteen/",
   "food:liangjin-factory": "/food/liangjin-ranch/",
   "food:liangjin-paifang": "/food/liangjin-paifang/",

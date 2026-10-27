@@ -159,3 +159,7 @@
 ## 北山床位與昔果山膠囊，不是同一個交通基地
 
 [北山古洋樓住宿](/hotels/beishan-hostel/)整理女性／混合宿舍、共用衛浴與不供早餐的業者說明，適合先比較古寧頭住宿條件；[不倒翁輕旅資料](/hotels/#business-lodging-705fe929edbc)則位於昔果山，來源介紹單人膠囊床位。兩者的機場抵達、晚餐與返宿方向不同，見[背包住宿比較](/hotels/hostels-and-backpackers/)。[金寧完整名錄](/hotels/?area=jinning#business-directory)可按登記類型及已有證據的住宿形式再篩選，未知房型另向業者確認。
+
+## 分別核對大學路與聚落住宿
+
+金寧住宿門牌分散，可先比較[麥麥精品文旅](/hotels/maimai-hotel/)、[金門福見民宿](/hotels/fujian-guesthouse/)、[閒事別館](/hotels/xianshi-annex/)、[樂客民宿](/hotels/yueke-guesthouse/)、[獺浪](/hotels/talu-guesthouse/)、[散步的喵](/hotels/walking-meow/)與[漫。時光](/hotels/manlu-inn/)。各地址及入口不同，入住服務、餐飲和返宿交通應逐家查詢。
