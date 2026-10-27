@@ -1,14 +1,14 @@
 ---
 {
-  "title": "艋舺雞排：金門金城店",
+  "title": "艋舺雞排新金門金城店",
   "nameEn": "Monga Fried Chicken Jincheng",
   "seoTitle": "艋舺雞排金門金城店菜單怎麼看？地址、電話與奶茶街",
-  "description": "找艋舺雞排金門金城店菜單？品牌網站列天王、苔客、辣妹雞排等品項，金城門市供應及價格須當日確認。附中興路146巷19號、電話與奶茶街順遊。",
+  "description": "艋舺雞排官方門市頁列新金門金城店在中興路146巷19號。品牌菜單可作選餐方向，門市當日供應與價格另洽；可接金城奶茶街與餐飲名錄。",
   "area": "kincheng",
   "tag": "奶茶街炸物",
   "duration": "約30–60分鐘",
   "order": 14,
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-26",
   "sources": [
     {
       "title": "艋舺雞排・官方門店列表",
@@ -22,7 +22,9 @@
   "related": [
     "/food/kincheng-tea-walk/",
     "/food/aliang-fried-chicken/",
-    "/attractions/kinmen-military-headquarters/"
+    "/attractions/kinmen-military-headquarters/",
+    "/food/kincheng-food/",
+    "/food/"
   ],
   "facts": [
     {
@@ -64,7 +66,7 @@
 ---
 
 ## 奶茶街旁的一份外帶
-艋舺雞排的「新金門金城店」門店資料列中興路146巷19號，與[奶茶一條街](/food/kincheng-tea-walk/)在同一巷道。若想把飲料和鹹食放在同一個休息點，可以先看雞排出餐時間，再去選飲料。
+艋舺雞排[官方門店列表](https://www.mongag.com/store.html)列「新金門金城店」在金城鎮中興路146巷19號、電話082-321689，與[奶茶一條街](/food/kincheng-tea-walk/)在同一巷道。若想把飲料和鹹食放在同一個休息點，可以先看雞排出餐時間，再去選飲料。
 
 ## 艋舺雞排金城店的菜單和價格怎麼查？
 [艋舺雞排品牌菜單](https://www.mongag.com/product.html)展示天王、苔客、辣妹雞排，以及爆汁雞、薯條、甜不辣等。這能幫你先選想吃的種類，**不能視為金城門市當日完整菜單**；品牌頁也沒有可核實的金城店現行售價。到店看價目表，或打082-321689詢問品項、價格、辣度與等候時間，別套用其他縣市分店的外送價格。
@@ -77,6 +79,8 @@
 
 
 ## 出發前確認
-資料於2026年10月15日核對。品牌公開門店資料列12:00–21:00；前往前電話確認仍有營業及當日時間。價格、品項與臨時店休以店家當日公告為準。
+品牌門市與菜單資料於2026年10月26日核對。品牌公開門店資料列12:00–21:00；前往前電話確認仍有營業及當日時間。價格、品項與臨時店休以店家當日公告為準。
 
 [在 Google 地圖查找店家](https://www.google.com/maps/search/?api=1&query=%E9%87%91%E9%96%80%E7%B8%A3%E9%87%91%E5%9F%8E%E9%8E%AE%E4%B8%AD%E8%88%88%E8%B7%AF146%E5%B7%B719%E8%99%9F%20%E8%89%8B%E8%88%BA%E9%9B%9E%E6%8E%92)，出發前核對店名、地址及最新營業資訊。
+
+回到[金城用餐比較](/food/kincheng-food/)，或在[餐飲名錄的金城篩選](/food/?area=kincheng#business-directory)查看[本店卡片](/food/#business-monga-fried-chicken-jincheng)。

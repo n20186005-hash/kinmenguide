@@ -17,7 +17,8 @@
     "/food/liangjin-ranch/",
     "/areas/jinhu/",
     "/itineraries/jinhu-one-day/",
-    "/hotels/jinhu/"
+    "/hotels/jinhu/",
+    "/attractions/fuguodun-viewpoint/"
   ],
   "sources": [
     {
@@ -67,6 +68,10 @@
     {
       "title": "雪莉冰菓室公開服務資料",
       "url": "https://kinmen.travel/zh-tw/shop/details/3077"
+    },
+    {
+      "title": "金門觀光旅遊網・金門蟹老闆手作坊",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3192"
     }
   ],
   "aliases": [
@@ -96,6 +101,10 @@
 
 
 
+
+## 復國墩看海後買伴手禮
+
+走[復國墩觀海台與大螃蟹](/attractions/fuguodun-viewpoint/)時，可按門牌查[金門蟹老闆手作坊名錄卡片](/food/#business-kinmen-crab-boss)：官方[個別資料](https://kinmen.travel/zh-tw/shop/details/3192)列金湖鎮復國墩66號，屬食品與伴手禮採買。景點的大螃蟹是景觀裝置，這家店也不能直接當成可坐下吃海鮮正餐的餐廳。若需要正餐，另從本頁山外或漁村的用餐選項安排，並確認兩地交通及供餐。
 
 ## 山外午餐與金湖美食，先分兩個用餐區
 
@@ -135,7 +144,7 @@
 
 「不一樣雞排」與「阿亮」不是同一個搜尋名稱。想找棺材板，先看中正路26號那頁；想找山外阿亮，另核對中正路59之5號及近期門市資訊。這兩處也不能套用金城車站斜坡店的價格與營業時間。
 
-## 本輪補核的同區選擇
+## 按街區補看正餐與點心
 
 山外復興路、新市里、成功與小徑分屬不同路段。太湖散步前後可找山外用餐，往成功或小徑時另排交通；店家有分段營業或預約條件時，先確認再出發。
 

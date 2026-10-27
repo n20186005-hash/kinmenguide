@@ -42,6 +42,18 @@
     {
       "title": "麗絲的家2館公開服務資料",
       "url": "https://kinmen.travel/zh-tw/accommodation/details/3234"
+    },
+    {
+      "title": "金門觀光旅遊網・立姐咖啡民宿住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/3035"
+    },
+    {
+      "title": "金門觀光旅遊網・小築佳趣住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/3696"
+    },
+    {
+      "title": "金門觀光旅遊網・蘭舍大門住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/3769"
     }
   ]
 }
@@ -73,7 +85,7 @@
 
 搭公車要另查可達站點與末班車，自駕也需先確認夜間道路和停車入口。[金沙一日遊](/itineraries/jinsha-one-day/)作取捨起點即可；抵達較晚就先入住與用餐，不把海邊觀景放在報到或退房之前。
 
-## 本輪補核的同區選擇
+## 按門牌比較同區住宿
 
 沙美、高坑、陽翟與山后不能只因同在金沙就排成連續步行。先選當天北線的主要路段，再決定正餐、點心與採買；烘焙、伴手禮門市和可以坐下吃正餐的餐廳也要分開判斷。
 
@@ -88,7 +100,7 @@
 安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/jinsha-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。
 
 <!-- reverse-directory-2026-10-26 -->
-## 分區補查後的店家選項
+## 按門牌比較更多住宿
 
 這批住宿以完整登記名稱、證號和場所地址核對，再補讀官方或業者的住宿介紹。同一品牌不同門牌分開列出；客房與背包床位的差異請展開名錄服務說明，不預設早餐、停車或接送。
 
@@ -98,5 +110,14 @@
 | [金沙假日大飯店](/hotels/#business-lodging-b072bc030d3a) | 金門縣金沙鎮汶沙里後浦頭135號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/1154) |
 | [鹽埕i驛站古厝民宿](/hotels/#business-lodging-188bc1cbad69) | 金門縣金沙鎮西園74號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/3626) |
 
-[查看本區完整名錄與篩選條件](/hotels/?area=jinsha#business-directory)。上表是本輪比較選項，並非本區全部店家。資料整理不代表親訪、當日營業或空房保證；先按實際道路安排，再向業者確認到店或入住條件。
+
+復興街、浦邊、中蘭不能只用「金沙」當導航終點；看沙美街區或北岸景點時，先以門牌決定當天停留和晚餐位置。依當天路線選住處，可接著比較下列實際門牌；資料來自官方個別住宿頁。
+
+| 店家與名錄 | 來源地址 | 核對來源 |
+| --- | --- | --- |
+| [立姐咖啡民宿](/hotels/#business-lodging-4f7b7d3c141b) | 金門縣金沙鎮復興街28號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/3035) |
+| [小築佳趣](/hotels/#business-lodging-09586afd12d2) | 金門縣金沙鎮浦邊66號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/3696) |
+| [蘭舍大門](/hotels/#business-lodging-6488aaf0db05) | 金門縣金沙鎮中蘭37號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/3769) |
+
+[查看本區完整名錄與篩選條件](/hotels/?area=jinsha#business-directory)。表中是選區例子，完整選擇請用名錄篩選。官方頁所報服務不代表同日營運、目前登記狀態或空房；先按實際道路安排，再向業者確認入住條件。
 <!-- /reverse-directory-2026-10-26 -->

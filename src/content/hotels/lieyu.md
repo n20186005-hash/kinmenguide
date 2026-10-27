@@ -11,7 +11,7 @@
   "duration": "6 分鐘",
   "order": 8,
   "featured": false,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-26",
   "related": [
     "/areas/lieyu/",
     "/food/lieyu-food/",
@@ -42,6 +42,14 @@
     {
       "title": "官方或業者公開資料・一家門",
       "url": "https://kinmen.travel/zh-tw/accommodation/details/2311"
+    },
+    {
+      "title": "金門觀光旅遊網・小金門民宿住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/2570"
+    },
+    {
+      "title": "金門觀光旅遊網・采藝民宿住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/2307"
     }
   ]
 }
@@ -67,3 +75,14 @@
 [金門到烈嶼交通](/transport/kinmen-to-lieyu/)先確認跨橋條件。若隔天離島，將民宿交接、早餐、跨橋、還車與航空報到分開倒推；本文不提供未核實的精確移動分鐘數。晚上看[雙口海邊](/attractions/shuangkou-beach/)或北岸後，回住宿走合法道路，不循未照明海岸抄近路。
 
 可用[烈嶼兩天慢遊](/itineraries/lieyu-two-days/)挑選站點，在[旅行清單](/trip/)把住宿、正餐與景點放在同一天。清單保存於自己的瀏覽器，不會替你訂房或向店家保留座位。
+
+## 按埔頭與雙口門牌再比較
+
+埔頭與雙口是兩個入住門牌；留宿烈嶼可把白天景點排鬆，晚餐與跨橋回本島仍須先規劃。兩處門牌與所報住宿資料於2026年10月26日按官方個別頁核對；房型及空房仍須向業者確認。
+
+| 店家與名錄 | 來源地址 | 核對來源 |
+| --- | --- | --- |
+| [小金門民宿](/hotels/#business-lodging-3c06542ec0b3) | 金門縣烈嶼鄉黃埔村5鄰埔頭11-6號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/2570) |
+| [采藝民宿](/hotels/#business-lodging-e23251be9cd2) | 金門縣烈嶼鄉雙口36號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/2307) |
+
+[烈嶼完整住宿名錄](/hotels/?area=lieyu#business-directory)可接著比較其他門牌與來源；房型、晚到入住、早餐和交通請向各館確認。

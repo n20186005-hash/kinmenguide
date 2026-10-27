@@ -58,6 +58,26 @@
     {
       "title": "好室行旅公開服務資料",
       "url": "https://www.kinmen.travel/zh-tw/accommodation/details/4036"
+    },
+    {
+      "title": "金門觀光旅遊網・KMQM住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/1175"
+    },
+    {
+      "title": "金門觀光旅遊網・嚨口秘境觀海民宿住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/2308"
+    },
+    {
+      "title": "金門觀光旅遊網・飛鳥集行館住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/3561"
+    },
+    {
+      "title": "金門觀光旅遊網・新時光旅舍住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/3371"
+    },
+    {
+      "title": "金門觀光旅遊網・雲峰精品文旅住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/2955"
     }
   ]
 }
@@ -90,7 +110,7 @@
 
 用餐可用[金寧早餐、正餐與咖啡指南](/food/jinning-food/)選同方向的一餐。店家在同鄉鎮不代表步行可達；安排入住、晚餐與隔天離島交通時，分別核對實際道路及接駁。
 
-## 本輪補核的同區選擇
+## 按門牌比較同區住宿
 
 金鼎與大學生活圈、盤山、湖下及古寧頭各有不同移動方向。住在聚落不代表附近每家都能步行抵達；把早餐、午休與回住宿的路線一起問清楚，取貨型工作室也要先確認接待方式。
 
@@ -107,7 +127,7 @@
 安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/jinning-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。
 
 <!-- reverse-directory-2026-10-26 -->
-## 分區補查後的店家選項
+## 按門牌比較更多住宿
 
 這批住宿以完整登記名稱、證號和場所地址核對，再補讀官方或業者的住宿介紹。同一品牌不同門牌分開列出；客房與背包床位的差異請展開名錄服務說明，不預設早餐、停車或接送。
 
@@ -122,5 +142,16 @@
 | [野遊](/hotels/#business-lodging-d90209379855) | 金門縣金寧鄉盤山村下堡12-8號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/2920) |
 | [金大彩繪民宿](/hotels/#business-lodging-ef5beaed4458) | 金門縣金寧鄉大學路53巷5號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/3544) |
 
-[查看本區完整名錄與篩選條件](/hotels/?area=jinning#business-directory)。上表是本輪比較選項，並非本區全部店家。資料整理不代表親訪、當日營業或空房保證；先按實際道路安排，再向業者確認到店或入住條件。
+
+下堡、大學路、慈湖路、湖下與嚨口是不同落腳點；同鄉鎮住宿也要依第一站、晚餐與行李路線比較。依當天路線選住處，可接著比較下列實際門牌；資料來自官方個別住宿頁。
+
+| 店家與名錄 | 來源地址 | 核對來源 |
+| --- | --- | --- |
+| [KMQM](/hotels/#business-lodging-a632d757026e) | 金門縣金寧鄉盤山村下堡28-1號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/1175) |
+| [嚨口秘境觀海民宿](/hotels/#business-lodging-99ef175cb4c9) | 金門縣金寧鄉嚨口26號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/2308) |
+| [飛鳥集行館](/hotels/#business-lodging-046facad78a0) | 金門縣金寧鄉湖下 380 之 8 號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/3561) |
+| [新時光旅舍](/hotels/#business-lodging-4a02c5dcb85c) | 金門縣金寧鄉慈湖路一段115-2號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/3371) |
+| [雲峰精品文旅](/hotels/#business-lodging-451c01345513) | 金門縣金寧鄉盤山村24鄰大學路32巷48號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/2955) |
+
+[查看本區完整名錄與篩選條件](/hotels/?area=jinning#business-directory)。表中是選區例子，完整選擇請用名錄篩選。官方頁所報服務不代表同日營運、目前登記狀態或空房；先按實際道路安排，再向業者確認入住條件。
 <!-- /reverse-directory-2026-10-26 -->

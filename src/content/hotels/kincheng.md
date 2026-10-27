@@ -49,6 +49,26 @@
     {
       "title": "浯島魁星背包棧公開服務資料",
       "url": "https://kinmen.travel/zh-tw/accommodation/details/3937"
+    },
+    {
+      "title": "金門觀光旅遊網・挺好客棧住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/3120"
+    },
+    {
+      "title": "金門觀光旅遊網・玩轉金門民宿住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/2727"
+    },
+    {
+      "title": "金門觀光旅遊網・依山行館住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/2296"
+    },
+    {
+      "title": "金門觀光旅遊網・如家住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/1656"
+    },
+    {
+      "title": "金門觀光旅遊網・金門城民宿住宿資料",
+      "url": "https://www.kinmen.travel/zh-tw/accommodation/details/1653"
     }
   ]
 }
@@ -77,7 +97,7 @@
 
 [金城住宿名錄](/hotels/?area=kincheng#business-directory)可依類型、已核實設施搜尋；沒有列出的設施代表尚未核實，不代表店家一定不提供。
 
-## 本輪補核的同區選擇
+## 按門牌比較同區住宿
 
 後浦的中興路、民族路與莒光路可以按實際門牌分段找餐；北堤、金門城與水頭不應直接當成同一個步行圈。先決定今天停在哪個街區，再確認用餐時段與最後點餐。
 
@@ -96,7 +116,7 @@
 安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/kincheng-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。
 
 <!-- reverse-directory-2026-10-26 -->
-## 分區補查後的店家選項
+## 按門牌比較更多住宿
 
 這批住宿以完整登記名稱、證號和場所地址核對，再補讀官方或業者的住宿介紹。同一品牌不同門牌分開列出；客房與背包床位的差異請展開名錄服務說明，不預設早餐、停車或接送。
 
@@ -116,5 +136,16 @@
 斜坡客棧的官方介紹分為雙人雅房與背包床位，訂房時要確認實際方案與衛浴安排。大古崗與金城市區是不同的住宿方向；可先閱讀[古崗樓](/attractions/gugang-tower/)與[金城南線](/itineraries/kincheng-south-day/)，再確認往返道路及晚餐。
 
 
-[查看本區完整名錄與篩選條件](/hotels/?area=kincheng#business-directory)。上表是本輪比較選項，並非本區全部店家。資料整理不代表親訪、當日營業或空房保證；先按實際道路安排，再向業者確認到店或入住條件。
+
+民權路、珠浦北路可先和後浦用餐路線比較；珠山、前水頭與金門城要按各自門牌規劃往返，不能算作同一條市區步行線。依當天路線選住處，可接著比較下列實際門牌；資料來自官方個別住宿頁。
+
+| 店家與名錄 | 來源地址 | 核對來源 |
+| --- | --- | --- |
+| [挺好客棧](/hotels/#business-lodging-c2ea4a22eb13) | 金門縣金城鎮西門里民權路226巷4弄10號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/3120) |
+| [玩轉金門民宿](/hotels/#business-lodging-74458e599b23) | 金門縣金城鎮珠浦北路2號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/2727) |
+| [依山行館](/hotels/#business-lodging-225873e614f5) | 金門縣金城鎮珠山50號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/2296) |
+| [如家](/hotels/#business-lodging-8c9fed2b5731) | 金門縣金城鎮前水頭172-1號1樓 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/1656) |
+| [金門城民宿](/hotels/#business-lodging-e1a2c5f74d96) | 金門縣金城鎮金門城103之1號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/1653) |
+
+[查看本區完整名錄與篩選條件](/hotels/?area=kincheng#business-directory)。表中是選區例子，完整選擇請用名錄篩選。官方頁所報服務不代表同日營運、目前登記狀態或空房；先按實際道路安排，再向業者確認入住條件。
 <!-- /reverse-directory-2026-10-26 -->

@@ -14,11 +14,13 @@
   "tag": "岩岸與裝置藝術",
   "duration": "30–45 分鐘",
   "order": 138,
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-26",
   "related": [
     "/attractions/xibian-beach/",
     "/attractions/xiaxincuo-wind-lion/",
-    "/areas/jinhu/"
+    "/areas/jinhu/",
+    "/food/jinhu-food/",
+    "/food/"
   ],
   "sources": [
     {
@@ -28,6 +30,10 @@
     {
       "title": "金門縣政府・復國墩螃蟹景觀藝術",
       "url": "https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=E0292E3A86FEB8E5&sms=BF7D6D478B935644"
+    },
+    {
+      "title": "金門觀光旅遊網・金門蟹老闆手作坊",
+      "url": "https://kinmen.travel/zh-tw/shop/details/3192"
     }
   ],
   "address": "891 金門縣金湖鎮復國墩 60號旁",
@@ -51,3 +57,7 @@
 
 ## 把下一站排在附近
 [溪邊海水浴場](/attractions/xibian-beach/)、[下新厝風獅爺](/attractions/xiaxincuo-wind-lion/)。停留時間是本站的安排建議，請把停車、步行和休息另外算入；想慢慢看，可只選其中一至兩站。
+
+## 螃蟹地標與伴手禮分開安排
+
+觀景台的大螃蟹是景觀裝置；若要買食品伴手禮，可按[金門蟹老闆手作坊名錄卡片](/food/#business-kinmen-crab-boss)核對復國墩66號與[官方個別資料](https://kinmen.travel/zh-tw/shop/details/3192)。購物門市不等於海鮮正餐店；想坐下吃飯，另從[金湖用餐指南](/food/jinhu-food/)挑餐廳，並按實際道路安排交通。
