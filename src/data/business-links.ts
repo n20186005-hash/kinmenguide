@@ -1,5 +1,6 @@
 // Reconciled by exact physical address and individual official source, not brand alone.
 export const businessLinks: Record<string, string> = {
+  "hotel:county-4036": "/hotels/good-house-inn/",
   "hotel:lodging-451c01345513": "/hotels/maimai-hotel/",
   "hotel:lodging-1e91f275984b": "/hotels/franks-hostel/",
   "hotel:lodging-7f8e8a9e089f": "/hotels/kinmen-backpacker/",
