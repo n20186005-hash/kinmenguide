@@ -1,5 +1,10 @@
 // Reconciled by exact physical address and individual official source, not brand alone.
 export const businessLinks: Record<string, string> = {
+  "hotel:lodging-fc8d37f620ee": "/hotels/plum-green-homestay/",
+  "hotel:lodging-4453bd419df9": "/hotels/longmen-manor/",
+  "hotel:lodging-16a448ced764": "/hotels/you-dou-homestay/",
+  "hotel:lodging-4714daa85b81": "/hotels/summer-love-homestay/",
+  "hotel:lodging-5471ddc0cb73": "/hotels/mi-dai-homestay/",
   "hotel:lodging-7e4a28c7a729": "/hotels/jia-zhi-xing-homestay/",
   "hotel:in99-hotel": "/hotels/in99-hotel/",
   "hotel:lodging-e65419664112": "/hotels/bear-baby-homestay/",
