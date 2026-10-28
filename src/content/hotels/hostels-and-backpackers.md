@@ -10,7 +10,7 @@
   "tag": "獨旅住宿",
   "duration": "7 分鐘",
   "order": 9,
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "related": ["/hotels/beishan-hostel/", "/hotels/near-airport/", "/itineraries/kinmen-solo/", "/hotels/family/"],
   "sources": [
     {"title": "臺灣旅宿網合法旅宿查詢", "url": "https://www.taiwanstay.net.tw/TSA/web_page/TSA020100.jsp?hoci_city1=%E9%87%91%E9%96%80%E7%B8%A3&lang2=tw"},
@@ -66,3 +66,7 @@
 - 確認實際門牌與登記名稱；同品牌不同館別分開核對。
 
 本文整理公開資料與規劃問題，未聲稱親自入住，不提供即時房價或空床數。資料更動可由[聯絡與勘誤](/contact/)提供來源。
+
+## 補看塔后的背包住宿與年齡條款
+
+[背包客棧497](/hotels/backpackers-497/)位於金湖塔后497號，平台介紹分為私人與共用衛浴客房，床位或整房形式仍須按訂單核對；平台列不可攜帶兒童、辦理人須滿20歲。[北山古洋樓](/hotels/beishan-hostel/)則在金寧北山，平台僅接待6歲及以上兒童，與業者房型介紹中的家庭房資訊須一起確認。青旅名稱、家庭房與可接待兒童不能互相代替。

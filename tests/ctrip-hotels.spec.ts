@@ -14,6 +14,7 @@ test('closed lodging cannot receive a booking link', () => {
 });
 
 test('each matched lodging opens its own article and exposes its checked Ctrip URL', async ({ page }) => {
+  test.setTimeout(90_000);
   for (const [id, hotel] of Object.entries(ctripHotels)) {
     const business = registry.records.find(b => b.id === id && b.kind === 'hotel');
     expect(business).toBeTruthy();
@@ -48,6 +49,9 @@ test('directory only presents a Ctrip URL for the matched hotel and keeps disput
   for (const id of ['lodging-fd9dfbb1c47c', 'lodging-59130f8e4118', 'lodging-487ad012e43d']) {
     await expect(root.locator(`#business-${id} [data-ctrip-business]`)).toHaveCount(0);
   }
+  for (const id of ['registered-homestay-159', 'registered-homestay-383']) {
+    await expect(root.locator(`#business-${id} [data-ctrip-business]`)).toHaveCount(0);
+  }
 });
 
 test('lodging booking pages disclose material child and identity-document restrictions', async ({ page }) => {
@@ -56,6 +60,11 @@ test('lodging booking pages disclose material child and identity-document restri
     await expect(page.locator(`#business-${id} .alert-note`)).toContainText('不可攜帶兒童');
   }
   await expect(page.locator('#business-registered-homestay-466 .alert-note')).toContainText('中國內地簽發有效居民身分證');
+  for (const id of ['lodging-f79bccd0efdc', 'lodging-9441dacddb61', 'lodging-a632d757026e', 'jindian-bnb-2', 'lodging-451c7cf48d05']) {
+    await expect(page.locator(`#business-${id} .alert-note`)).toContainText('不可攜帶兒童');
+  }
+  await expect(page.locator('#business-beishan-old-house .alert-note')).toContainText('6歲及以上');
+  await expect(page.locator('#business-lodging-a632d757026e .alert-note')).toContainText('12歲');
   for (const path of ['/hotels/zhen-shan-mei/', '/hotels/xiaochen-gucuo/']) {
     await page.goto(path);
     await expect(page.locator('main')).toContainText('不可攜帶兒童');

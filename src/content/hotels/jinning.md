@@ -93,8 +93,8 @@
 
 | 住宿方向 | 可比較的已核對名錄 | 訂房前的問題 |
 | --- | --- | --- |
-| 古寧頭北山、南山 | [古寧歇心苑(古寧歇心苑古厝民宿)](/hotels/#business-county-2945)、[YUMI旅店](/hotels/#business-yumi-guesthouse) | 早晨想先看聚落或戰史館？晚餐是否需要另行開車？ |
-| 湖下 | [蘇適古厝民宿](/hotels/#business-sushi-inn) | 古厝房型有沒有閣樓？從停車處搬行李是否有門檻？ |
+| 古寧頭北山、南山 | [古寧歇心苑(古寧歇心苑古厝民宿)](/hotels/guning-xiexinyuan/)、[YUMI旅店](/hotels/#business-yumi-guesthouse) | 早晨想先看聚落或戰史館？晚餐是否需要另行開車？ |
+| 湖下 | [蘇適古厝民宿](/hotels/sushi-inn/) | 古厝房型有沒有閣樓？從停車處搬行李是否有門檻？ |
 | 后湖 | [甌沙遂民宿](/hotels/#business-oushasui) | 確認訂的是后湖31號；二館在另一處，接送不能只報品牌。 |
 | 大學路 | [瓦櫃](/hotels/#business-wugui) | 自助入住如何拿到指引？深夜抵達是否有人可協助？ |
 
@@ -169,3 +169,7 @@
 ## 先選伯玉路、頂堡或東洲，再安排接待時間
 
 伯玉路二段的[羊角村民宿](/hotels/goat-village-bnb/)需要提前聯絡取匙；頂堡113號的[八八古藝民宿](/hotels/guyi-88-bnb/)與下堡同品牌各館要分開核對。東洲91號的[雅舍](/hotels/arthur-guesthouse/)本輪平台入住時段為16至19時，且不供早餐，若晚班抵達應先問接待。三處不是同一條晚餐步行圈，返宿方式應按當天路線安排。
+
+## 北山、湖下與下堡，按入住條件比較
+
+北山可比較[古寧歇心苑](/hotels/guning-xiexinyuan/)、[藍山客棧](/hotels/blue-mountain-inn/)與[北山古洋樓](/hotels/beishan-hostel/)；古洋樓平台有6歲及以上兒童限制，女性或混合床位要選對。湖下的[蘇適古厝](/hotels/sushi-inn/)與下堡的[KMQM](/hotels/kmqm/)是另外的住宿位置；KMQM平台列不可攜帶兒童，同時列辦理人滿12歲，須先取得明確答覆。需要沿慈湖路安排交通，可查看[長鴻精品旅館](/hotels/chang-hong-hotel/)的接待窗口。

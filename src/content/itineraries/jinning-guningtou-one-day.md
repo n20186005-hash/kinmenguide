@@ -9,7 +9,7 @@
   "tag": "金寧一日",
   "duration": "1 天",
   "order": 27,
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "themes": [
     "culture",
     "family"
@@ -108,3 +108,7 @@
 ## 留宿北山，先排隔天的早餐與行李
 
 若想把戰史館與聚落分成兩段，可比較[北山古洋樓住宿](/hotels/beishan-hostel/)與[其他金寧住宿](/hotels/?area=jinning#business-directory)。北山古洋樓業者頁寫明不供早餐，行李寄存也需確認時間；先排第一餐與退房，再調整隔天的南山、雙鯉或跨區交通。宿舍床位、整間房及共用衛浴的差異見[青旅住宿比較](/hotels/hostels-and-backpackers/)。
+
+## 前後一晚住北山，先看接待窗口
+
+若把古寧頭安排在抵達當天或翌日，可比較[古寧歇心苑](/hotels/guning-xiexinyuan/)與[藍山客棧](/hotels/blue-mountain-inn/)；選擇[北山古洋樓](/hotels/beishan-hostel/)時要核對床位與兒童年齡限制。先決定接待、放行李和晚餐返宿方式，再調整景點順序，不能以住宿名稱推定所有館舍都在步行範圍內。

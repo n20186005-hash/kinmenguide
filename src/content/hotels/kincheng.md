@@ -165,3 +165,7 @@
 以市區餐飲為重點，可比較民族路的[宏福旅店](/hotels/hongfu-hotel/)、民權路的[金瑞旅店](/hotels/quemoy-hotel/)及珠浦北路的[浯島輕旅](/hotels/wudao-inn/)。民權路巷弄內的[拾己微光輕旅](/hotels/shiji-light-inn/)採平台所列的密碼入住，需先取得說明；各店早餐和接待時段不同。
 
 若希望把水頭聚落排在住宿前後，可查看前水頭75號的[一號館裕園](/hotels/yuyuan-house-one/)與3號的[小陳故事古厝民宿](/hotels/xiaochen-gucuo/)。後者攜程本輪列不可攜兒童，親子旅客先確認適用條件；同品牌其他門牌不等於同一館。
+
+## 市區用餐與珠山過夜，先選生活圈
+
+重視晚餐與市區活動，可比較民權路的[海福商務飯店](/hotels/haifu-business-hotel/)及珠浦東路的[晶城民宿](/hotels/jingcheng-bnb/)；前者與後者的早餐、前台及晚到聯絡不同。希望在珠山留宿則看[依山行館](/hotels/yishan-villa/)，先取得密碼入住說明，夜間返村交通另外安排。三家不能共用同一組入住時間。
