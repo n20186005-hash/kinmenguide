@@ -199,3 +199,5 @@
 浴井住宿可參考[依山村驛](/hotels/yishan-village/)，訂房前先核對抵達安排及兒童計費條件。
 
 金城市區可參考[總兵招待所](/hotels/pu-pien-hostel/)，官裡聚落可參考[官裡拾玖](/hotels/guanli-19-ancient-house/)，珠山古厝可參考[珠山官邸民宿](/hotels/zhushan-gandee-bnb/)；請依各店入住條件確認安排。
+
+水頭聚落可參考[紫雲廬](/hotels/casa-wisteria/)，泗湖可參考[好朋友民宿](/hotels/kinmen-good-friends/)，金門城可參考[微醺](/hotels/tipsy-hotel/)，浴井可參考[福中居](/hotels/fuzhongju-homestay/)，市區另有[牧雲市區館](/hotels/mu-yun-urban-homestay/)；請先確認各店入住條件。
