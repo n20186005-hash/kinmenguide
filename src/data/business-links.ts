@@ -1,5 +1,8 @@
 // Reconciled by exact physical address and individual official source, not brand alone.
 export const businessLinks: Record<string, string> = {
+  "hotel:lodging-dc86078bd4a1": "/hotels/zhushan-gandee-bnb/",
+  "hotel:lodging-42bd46329304": "/hotels/guanli-19-ancient-house/",
+  "hotel:lodging-8ecf12146482": "/hotels/pu-pien-hostel/",
   "hotel:lodging-363f38c2b862": "/hotels/yishan-village/",
   "hotel:lodging-5ed9c993ad7e": "/hotels/shuitou-121/",
   "hotel:lodging-1597bdd6c6b1": "/hotels/meedori-home-stay/",

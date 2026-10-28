@@ -197,3 +197,5 @@
 金城可比較[鳥藝得月樓館](/hotels/artistic-nest-deyue/)、[渡船頭](/hotels/duchuantou-bnb/)、[米豆咖啡旅宿](/hotels/meedori-home-stay/)與[水頭121號](/hotels/shuitou-121/)，訂房先核對門牌與館別。
 
 浴井住宿可參考[依山村驛](/hotels/yishan-village/)，訂房前先核對抵達安排及兒童計費條件。
+
+金城市區可參考[總兵招待所](/hotels/pu-pien-hostel/)，官裡聚落可參考[官裡拾玖](/hotels/guanli-19-ancient-house/)，珠山古厝可參考[珠山官邸民宿](/hotels/zhushan-gandee-bnb/)；請依各店入住條件確認安排。
