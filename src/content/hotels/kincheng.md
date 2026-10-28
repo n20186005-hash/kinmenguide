@@ -193,3 +193,7 @@
 金城可比較[定風波](/hotels/ding-fong-bo-hostel/)、[陳佳苑裡](/hotels/chens-courtyard-guesthouse/)、[紅築](/hotels/hongzhu-bnb/)、[挺好客棧](/hotels/ghold-hotel/)及[珠山娜一家](/hotels/nayas-house/)；選房時先核對門牌、館別與入住限制。
 
 金城另可比較[玩轉金門](/hotels/play-kinmen-bnb/)、[念念金門](/hotels/loving-kinmen-homestay/)、[蛋寶親子](/hotels/danbao-family-bnb/)及[溫馨庭園](/hotels/sweet-home-bnb/)，訂房前先核對同行年齡及接待條件。
+
+金城可比較[鳥藝得月樓館](/hotels/artistic-nest-deyue/)、[渡船頭](/hotels/duchuantou-bnb/)、[米豆咖啡旅宿](/hotels/meedori-home-stay/)與[水頭121號](/hotels/shuitou-121/)，訂房先核對門牌與館別。
+
+浴井住宿可參考[依山村驛](/hotels/yishan-village/)，訂房前先核對抵達安排及兒童計費條件。
