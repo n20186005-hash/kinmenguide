@@ -48,7 +48,7 @@ test('directory only presents a Ctrip URL for the matched hotel and keeps disput
   await root.getByLabel('店名或地址').fill('里舍民宿');
   await expect(root.locator('#business-lodging-3a2dd3d5ac9f')).toBeVisible();
   await expect(card.locator('[data-business-actual-operation="unverified"]')).toHaveCount(0);
-  for (const id of ['lodging-fd9dfbb1c47c', 'lodging-59130f8e4118']) {
+  for (const id of ['lodging-fd9dfbb1c47c', 'lodging-59130f8e4118', 'lodging-1e91f275984b', 'lodging-47adb41f91ad']) {
     await expect(root.locator(`#business-${id} [data-ctrip-business]`)).toHaveCount(0);
   }
   for (const id of ['registered-homestay-159', 'registered-homestay-383', 'lodging-4a02c5dcb85c']) {
@@ -79,6 +79,9 @@ test('lodging booking pages disclose material child and identity-document restri
   await expect(page.locator('#business-county-3960 .alert-note')).toContainText('不可攜帶兒童');
   await expect(page.locator('#business-maogongshi .alert-note')).toContainText('不可攜帶兒童');
   await expect(page.locator('#business-maogongshi .alert-note')).toContainText('年滿20歲');
+  await expect(page.locator('#business-lodging-c72f26124873 .alert-note')).toContainText('年滿20歲');
+  await expect(page.locator('#business-lodging-7f8e8a9e089f .alert-note')).toContainText('電話不同');
+  await expect(page.locator('#business-lodging-35866da3b082 .alert-note')).toContainText('沒有電梯');
   await expect(page.locator('#business-lodging-f771fb8c92a7 .alert-note')).toContainText('提前1天');
   await expect(page.locator('#business-lodging-a88d5c9388f5 .alert-note')).toContainText('兒童入住資格');
   await expect(page.locator('#business-lodging-42e7086cbfc7 .alert-note')).toContainText('年滿20歲');
