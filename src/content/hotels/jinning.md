@@ -183,3 +183,5 @@
 [不倒翁輕旅](/hotels/tumbler-travel/)位於昔果山，平台兒童及接送條件須於預訂前確認。
 
 西浦頭的[馨紫晶民宿](/hotels/xinzijing-country/)可搭配慈湖行程，請先確認接送與早餐條件。
+
+[阿鑫](/hotels/axin-bnb/)、[老柚木](/hotels/teak-hostel/)與[樂冶](/hotels/leye-homestay/)各有不同門牌；預訂前請核對入住年齡及交通。

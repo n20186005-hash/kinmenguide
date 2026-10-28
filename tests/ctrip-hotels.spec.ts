@@ -75,6 +75,11 @@ test('lodging booking pages disclose material child and identity-document restri
   await expect(page.locator('#business-lodging-a47d6396d342 .alert-note')).toContainText('2歲及以上');
   await expect(page.locator('#business-golden-sands-resort .alert-note')).toContainText('年滿20歲');
   await expect(page.locator('#business-county-3960 .alert-note')).toContainText('不可攜帶兒童');
+  await expect(page.locator('#business-maogongshi .alert-note')).toContainText('不可攜帶兒童');
+  await expect(page.locator('#business-maogongshi .alert-note')).toContainText('年滿20歲');
+  await expect(page.locator('#business-lodging-68982155956e .alert-note')).toContainText('年滿20歲');
+  await expect(page.locator('#business-lodging-7959747c13f4 .alert-note')).toContainText('年滿20歲');
+  await expect(page.locator('#business-lodging-804cf18cdc30 .alert-note')).toContainText('年滿20歲');
   await expect(page.locator('#business-lodging-705fe929edbc .alert-note')).toContainText('不可攜帶兒童');
   await expect(page.locator('#business-lodging-3fabbd2783ad .alert-note')).toContainText('18至65歲');
   await expect(page.locator('#business-lodging-166e6b5be87b .alert-note')).toContainText('年滿18歲');
