@@ -187,3 +187,5 @@
 金城市區可比較[時光旅舍車站館](/hotels/time-hostel-jincheng-station/)、[華欣商務飯店](/hotels/huasin-hotel/)與[金帝大飯店](/hotels/jindi-hotel/)；前水頭古厝可查看[歇會兒典藏館](/hotels/take-a-break-collection/)、[巧居](/hotels/shuitou-qiaoju/)和[談古說金](/hotels/tan-gu-shuo-jin/)。各家館別與兒童入住條件不同，請先閱讀詳頁。
 
 珠山住宿可核對[依山初晴](/hotels/i-shan-house/)的17-1號；市區的[金華民宿二館](/hotels/jim-hua-bnb-2/)請核對民生路54巷19號，不要混用其他館別。
+
+後豐港住宿可查看[作客七號](/hotels/be-our-guest-7/)，先核對門牌及辦理入住年齡。
