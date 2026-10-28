@@ -177,3 +177,5 @@
 珠山聚落內可查看[珠山閒庭](/hotels/zhushan-xianting/)的登記地址及訂房條件；餐飲與夜間返回聚落的交通需另行安排。
 
 珠山住宿可查看[慢漫民宿夢想館](/hotels/piano-piano-dream/)，水頭住宿可查看[銃樓民宿](/hotels/shuitou-chonglou/)；民族路另有[月亮民宿](/hotels/moon-hostel/)，入住限制請先核對。
+
+珠山可比較[大夫第](/hotels/dafudi-bnb/)及[茱碧樓1館](/hotels/zhubilou-one/)，先核對門牌與入住條件。

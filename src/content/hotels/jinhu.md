@@ -131,3 +131,5 @@
 [林居民宿](/hotels/linju-bnb/)與[蕃茄紅了現代館](/hotels/tomato-red-lindou/)在林兜不同門牌；後者平台本輪限持中國內地有效居民身分證者，不能把這項接待條件當作入境資格。漁村可查看[金戰民宿](/hotels/jinzhan-bnb/)、[浯島文旅](/hotels/wd-hotel/)與[紅屋頂](/hotels/red-roof-bnb/)的各自接待方式。若想把山外用餐安排在行程中，另比較[市港行旅](/hotels/shigang-stay/)和[大雁旅店](/hotels/dayen-hotel/)；大雁的平台早餐政策與簡介不同，須先問本次方案。
 
 比較[金門十美渡假村](/hotels/happy-casa-resorts/)時，請先核對后壠入口、家庭房與接送條件。
+
+[山春花繪本古厝](/hotels/yamaharuka-historic-house/)位於小徑29號，請先確認所訂館別與兒童需求。
