@@ -1,10 +1,10 @@
 ---
 import { ctripHotelFor } from '../lib/ctrip';
-interface Props { id: string; placement: 'detail' | 'directory'; }
-const { id, placement } = Astro.props;
+interface Props { id: string; placement: 'detail' | 'directory'; notice?: string; }
+const { id, placement, notice } = Astro.props;
 const hotel = ctripHotelFor(id);
 const target = hotel?.affiliate?.url || hotel?.url;
 const rel = hotel?.affiliate ? 'sponsored noopener noreferrer' : 'noopener noreferrer';
 ---
-{hotel && (placement === 'detail' ? <div class="ctrip-booking"><a data-ctrip-business={id} class="button" href={target} target="_blank" rel={rel}>查看房型・預訂房間</a><p>房價、房態及預訂條件，以攜程所選日期與最終訂單為準。</p></div> : <span><a data-ctrip-business={id} href={target} target="_blank" rel={rel}>查看房型・預訂房間</a></span>)}
+{hotel && (placement === 'detail' ? <div class="ctrip-booking">{notice && <p class="alert-note" data-booking-notice>入住資格：{notice}</p>}<a data-ctrip-business={id} class="button" href={target} target="_blank" rel={rel}>查看房型・預訂房間</a><p>房價、房態及預訂條件，以攜程所選日期與最終訂單為準。</p></div> : <span><a data-ctrip-business={id} href={target} target="_blank" rel={rel}>查看房型・預訂房間</a></span>)}
 <style>.ctrip-booking{margin-top:20px}.ctrip-booking p{font-size:13px;line-height:1.6;color:var(--muted);margin-top:8px}.ctrip-booking .button{display:inline-flex}</style>

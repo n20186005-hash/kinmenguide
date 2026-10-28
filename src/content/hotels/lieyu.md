@@ -100,3 +100,5 @@
 [金典民宿二館](/hotels/jindian-bnb-2/)與一館是不同門牌。攜程本輪列不可攜帶兒童，且平台與官方觀光資料的入住／退房時段不同；帶孩子或搭晚班交通者，先詢問住宿方本次可適用的條件，再決定是否訂房。
 
 [貓公石海景民宿](/hotels/maogongshi-seaview/)與[成秀文旅](/hotels/cheng-xiu/)均在埔頭，請先核對門牌、跨海交通及兒童入住條件。
+
+烈嶼可比較[金典民宿](/hotels/jindian-bnb/)、[尚品源](/hotels/xiang-pin-yuan/)及[羅厝5號](/hotels/luocuo-no5/)，先核對地址、館別及入住限制。

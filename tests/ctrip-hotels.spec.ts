@@ -77,6 +77,9 @@ test('lodging booking pages disclose material child and identity-document restri
   await expect(page.locator('#business-county-3960 .alert-note')).toContainText('不可攜帶兒童');
   await expect(page.locator('#business-maogongshi .alert-note')).toContainText('不可攜帶兒童');
   await expect(page.locator('#business-maogongshi .alert-note')).toContainText('年滿20歲');
+  await expect(page.locator('#business-lodging-05c5ba905e5c .alert-note')).toContainText('年滿18歲');
+  await expect(page.locator('#business-jindian-bnb .alert-note')).toContainText('不可攜帶兒童');
+  await expect(page.locator('#business-lodging-5080619d45a4 .alert-note')).toContainText('年滿20歲');
   await expect(page.locator('#business-lodging-b1b5b10ba5ea .alert-note')).toContainText('年滿12歲');
   await expect(page.locator('#business-county-3746 .alert-note')).toContainText('年滿12歲');
   await expect(page.locator('#business-lodging-51617dbf4223 .alert-note')).toContainText('年滿20歲');
@@ -114,4 +117,13 @@ test('lodging booking pages disclose material child and identity-document restri
   await expect(page.locator('main')).toContainText('年滿20歲');
   await expect(page.locator('main')).toContainText('不能代替金門入境規定');
   await expect(page.locator('main')).toContainText('目前國家合法旅宿登記尚未匹配');
+});
+
+test('material booking restrictions appear before the detail booking button', async ({ page }) => {
+  for (const [path, text] of [['/hotels/jindian-bnb/', '不可攜帶兒童'], ['/hotels/xiang-pin-yuan/', '年滿20歲'], ['/hotels/old-min-house-3/', '年滿12歲']]) {
+    await page.goto(path);
+    const notice = page.locator('.ctrip-booking [data-booking-notice]');
+    await expect(notice).toContainText(text);
+    await expect(page.locator('.ctrip-booking [data-booking-notice] + [data-ctrip-business]')).toHaveCount(1);
+  }
 });
