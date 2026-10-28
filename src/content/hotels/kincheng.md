@@ -207,3 +207,5 @@
 後豐港可參考[海豐民宿](/hotels/haifeng-homestay/)，歐厝66號可參考[時苑](/hotels/shiyuan-oucuo-66/)，市區可參考[依藍2館](/hotels/yilan-hall-2/)；訂房前請先核對館別和兒童條件。
 
 住宿資料可參考[任我行民宿](/hotels/antique-courtyard-bnb/)，按小西門完整門牌與入住資格安排交通。
+
+住宿資料可參考[初城民宿](/hotels/chucheng-bnb/)，訂房前請核對館別與入住條件。
