@@ -189,3 +189,5 @@
 金寧可比較南山的[日玥居](/hotels/sunmoon19-bnb/)與嚨口的[嚨口秘境](/hotels/longkou-mysterious-resort/)，以各自地址與接待時間安排路線。
 
 金寧住宿可查看[心琴二館](/hotels/xinqin-2-hall/)與[58%旅宿](/hotels/58-percent-inn/)，請核對門牌、入住時間和兒童計費條件。
+
+住宿資料可參考[瓦櫃](/hotels/wagui-bnb/)、[睏不睏民宿](/hotels/sleep-or-no/)，訂房前請核對館別與入住條件。
