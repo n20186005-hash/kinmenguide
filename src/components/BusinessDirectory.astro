@@ -1,6 +1,7 @@
 ---
 import AddToTrip from './AddToTrip.astro';
 import CtripBooking from './CtripBooking.astro';
+import { canOfferCtrip } from '../lib/ctrip';
 import { BUSINESS_PAGE_SIZE, businessPhoneHref } from '../lib/business-directory';
 import { areaNames } from '../data/site';
 import { getPublicBusinesses, businessCategoryNames, facilityNames, lodgingStyleNames } from '../lib/businesses';
@@ -17,7 +18,7 @@ const factLabels: Record<string, string> = { sourceReportedServiceOrHours: '服�
 ---
 <section class="business-directory section" id="business-directory" data-business-directory data-directory-kind={kind} data-page-size={BUSINESS_PAGE_SIZE} data-business-total={businesses.length} data-business-release={kind === 'hotel' ? 'lodging20261027' : 'stay-food-2026-10-25'} aria-label={kind === 'hotel' ? '住宿店家名錄' : '餐飲店家名錄'}>
   <div class="section-heading"><div><span class="eyebrow">{kind === 'hotel' ? 'A PLACE TO STAY' : 'A TABLE ON THE ISLAND'}</span><h2>{kind === 'hotel' ? '先選生活圈，再找今晚的住宿' : '今天在哪一區，就在那一區找味道'}</h2><p>{kind === 'hotel' ? '把旅館、民宿與選區攻略放在一起比較，訂房前再向業者確認房型與條件。' : '用地區、餐飲類型與店名找一餐，把喜歡的店家放進自己的旅行清單。'}</p></div><a class="text-link" href="/trip/">安排我的行程</a></div>
-  <div class="directory-note"><p>以下依官方或業者公開資料整理；核對日期是本站查閱來源的日期，不代表實地訪查、當日營業或空房保證。一般收錄不代表付費合作。</p><p class="small">{kind === 'hotel' ? '旅宿登記與實際營業分開標示；床位、獨立客房及包棟只列來源明確的住宿形式，未核實的服務不作肯定篩選。' : '各門市分開收錄；營業時段、售完、訂位與價格以店家當日公告為準。'} <a href="/contact/">提供更正或補充資料 →</a></p></div>
+  <div class="directory-note"><p>以下依官方或業者公開資料整理；核對日期是本站查閱來源的日期，不代表實地訪查、當日營業或空房保證。一般收錄不代表付費合作。</p><p class="small">{kind === 'hotel' ? '床位、獨立客房及包棟只列來源明確的住宿形式，未核實的服務不作肯定篩選。' : '各門市分開收錄；營業時段、售完、訂位與價格以店家當日公告為準。'} <a href="/contact/">提供更正或補充資料 →</a></p></div>
   <form class:list={['business-filters', { 'has-lodging-style': kind === 'hotel' && styles.length > 0 }]} data-business-form role="search" hidden>
     <label>所在地區<select class="search-input" data-business-area aria-label="所在地區"><option value="all">全島</option>{Object.entries(areaNames).filter(([key]) => key !== 'all').map(([key, label]) => <option value={key}>{label}</option>)}</select></label>
     <label>{kind === 'hotel' ? '政府登記類別' : '餐飲類型'}<select class="search-input" data-business-category aria-label={kind === 'hotel' ? '政府登記類別' : '餐飲類型'}><option value="all">全部類型</option>{categories.map(key => <option value={key}>{businessCategoryNames[key] || key}</option>)}</select></label>
@@ -33,7 +34,7 @@ const factLabels: Record<string, string> = { sourceReportedServiceOrHours: '服�
     <div class="business-card-top"><span class="eyebrow">{areaNames[b.area]} / {businessCategoryNames[kind === 'hotel' ? b.lodgingClass! : b.category] || b.category}</span><span class="business-index" aria-hidden="true">{kind === 'hotel' ? '住' : '食'}</span></div>
     <h3>{b.detailHref ? <a href={b.detailHref}>{b.name}</a> : b.name}</h3><p class="business-address">{b.address}</p>
     {b.registrationNumber && <p class="small" data-business-registration-status={b.registrationStatus}>登記名稱：{b.legalName}<br/>登記字號：{b.registrationNumber}<br/>{registrationLabels[b.registrationStatus] || registrationLabels.pending}{b.registrationCheckedAt && <> · 核對 {b.registrationCheckedAt}</>}<br/><a data-business-registration-source href={b.registrationSourceUrl} target="_blank" rel="noopener noreferrer">{b.registrationStatus === 'government-listed' ? '核對政府登記來源 →' : b.registrationStatus === 'historical-only' ? '查看歷史登記來源 →' : '查看證號來源 →'}</a>{b.registrationNote && <><br/>{b.registrationNote}</>}</p>}
-    {kind === 'hotel' && <p class="small" data-business-actual-operation={b.actualOperationStatus}>實際營業：{operationLabels[b.actualOperationStatus] || operationLabels.unverified}{b.actualOperationStatus !== 'unverified' && b.actualOperationCheckedAt && <> · 核對 {b.actualOperationCheckedAt}</>}</p>}
+    {kind === 'hotel' && b.actualOperationStatus !== 'unverified' && <p class="small" data-business-actual-operation={b.actualOperationStatus}>實際營業：{operationLabels[b.actualOperationStatus]}{b.actualOperationCheckedAt && <> · 核對 {b.actualOperationCheckedAt}</>}</p>}
     {b.lodgingStyle && <p class="small" data-business-lodging-style={b.lodgingStyle}>住宿形式：{lodgingStyleNames[b.lodgingStyle]}</p>}
     {b.facts.filter(f => f.name === 'eligibility').map(f => <p class="alert-note">入住資格：{String(f.value)}</p>)}
     {b.filterFacts.length > 0 && <ul class="business-tags" aria-label="已核實服務">{b.filterFacts.map(key => <li>{facilityNames[key] || key}</li>)}</ul>}
@@ -41,7 +42,7 @@ const factLabels: Record<string, string> = { sourceReportedServiceOrHours: '服�
     {kind === 'food' && b.facts.filter(f => f.name === 'sourceReportedSundayScheduleAndService').map(f => <details class="small"><summary>來源列出的週日時段／服務參考</summary><p>{String(f.value)}</p><p>不代表當日供餐保證；其他日期與最後點餐請查來源或向店家確認。</p></details>)}
     {b.facts.filter(f => factLabels[f.name]).map(f => <details class="small" data-business-fact={f.name}><summary>{factLabels[f.name]}</summary><p>{String(f.value)}</p>{f.note && <p>{f.note}</p>}<a href={f.sourceUrl} target="_blank" rel="noopener noreferrer">核對此項來源 · {f.checkedAt}</a></details>)}
     <p class:list={['small', { 'business-closed': ['temporary_closed', 'permanently_closed'].includes(b.state) }]}>{b.notice}</p>
-    <div class="business-actions">{b.detailHref && <a href={b.detailHref}>閱讀店家攻略</a>}{kind === 'hotel' && <CtripBooking id={b.id} placement="directory"/>}{b.phone && <a href={businessPhoneHref(b.phone)}>致電 {b.phone}</a>}{b.website && <a href={b.website} target="_blank" rel="noopener noreferrer">{b.websiteLabel}</a>}{b.verifiedMapUrl && <a data-business-verified-map href={b.verifiedMapUrl} target="_blank" rel="noopener noreferrer">已核對店家地圖</a>}<a data-business-address-search href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(b.address + ' ' + b.name)}`} target="_blank" rel="noopener noreferrer">以店名地址搜尋</a><a href={b.sourceUrl} target="_blank" rel="noopener noreferrer">資料來源</a></div>
+    <div class="business-actions">{b.detailHref && <a href={b.detailHref}>閱讀店家攻略</a>}{kind === 'hotel' && canOfferCtrip(b.state, b.actualOperationStatus) && <CtripBooking id={b.id} placement="directory"/>}{b.phone && <a href={businessPhoneHref(b.phone)}>致電 {b.phone}</a>}{b.website && <a href={b.website} target="_blank" rel="noopener noreferrer">{b.websiteLabel}</a>}{b.verifiedMapUrl && <a data-business-verified-map href={b.verifiedMapUrl} target="_blank" rel="noopener noreferrer">已核對店家地圖</a>}<a data-business-address-search href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(b.address + ' ' + b.name)}`} target="_blank" rel="noopener noreferrer">以店名地址搜尋</a><a href={b.sourceUrl} target="_blank" rel="noopener noreferrer">資料來源</a></div>
     <div class="business-card-bottom"><span class="small">{kind === 'hotel' ? b.state === 'unverified' ? '基本資料來源核對' : '服務來源核對' : '來源核對'} {b.checkedAt}</span>{b.canPlan && <AddToTrip id={b.key} title={b.name}/>}</div>
   </article>)}</div></details>)}</div>
   <nav class="business-pagination" data-business-pagination aria-label="店家名錄分頁" hidden>
@@ -50,6 +51,7 @@ const factLabels: Record<string, string> = { sourceReportedServiceOrHours: '服�
     <button type="button" class="button button-light" data-business-next aria-controls="business-results">下一頁</button>
   </nav>
   <div class="empty-state" data-business-empty hidden><h3>這組條件暫時沒有店家</h3><p>清除條件或改看同區攻略；未知服務不會列入肯定篩選。</p><button type="button" class="button button-light" data-business-reset>顯示全部店家</button></div>
+  {kind === 'hotel' && <p class="small" data-affiliate-disclosure>部分住宿使用攜程推廣連結；透過本站推廣連結完成預訂，本站可能獲得佣金。價格及預訂條件以攜程最終頁面為準。</p>}
   <noscript><p class="directory-note">未啟用 JavaScript，可逐批展開全部已收錄店家；電話、地址、來源和攻略連結仍可使用。</p></noscript>
 </section>
 <script>

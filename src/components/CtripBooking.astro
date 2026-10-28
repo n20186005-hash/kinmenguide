@@ -6,5 +6,5 @@ const hotel = ctripHotelFor(id);
 const target = hotel?.affiliate?.url || hotel?.url;
 const rel = hotel?.affiliate ? 'sponsored noopener noreferrer' : 'noopener noreferrer';
 ---
-{hotel && (placement === 'detail' ? <div class="ctrip-booking"><a data-ctrip-business={id} class="button" href={target} target="_blank" rel={rel}>前往攜程查看房價與可訂房型</a><p>{hotel.affiliate ? '透過本站推廣連結完成預訂，本站可能獲得佣金。' : ''}實際房價、房態及預訂條件，以攜程的所選日期與最終訂單為準。</p></div> : <span><a data-ctrip-business={id} href={target} target="_blank" rel={rel}>查看攜程房型</a>{hotel.affiliate && <small> · 透過本站推廣連結預訂，本站可能獲得佣金。</small>}</span>)}
+{hotel && (placement === 'detail' ? <div class="ctrip-booking"><a data-ctrip-business={id} class="button" href={target} target="_blank" rel={rel}>查看房型・預訂房間</a><p>房價、房態及預訂條件，以攜程所選日期與最終訂單為準。</p></div> : <span><a data-ctrip-business={id} href={target} target="_blank" rel={rel}>查看房型・預訂房間</a></span>)}
 <style>.ctrip-booking{margin-top:20px}.ctrip-booking p{font-size:13px;line-height:1.6;color:var(--muted);margin-top:8px}.ctrip-booking .button{display:inline-flex}</style>
