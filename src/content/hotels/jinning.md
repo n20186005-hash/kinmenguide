@@ -187,3 +187,5 @@
 [阿鑫](/hotels/axin-bnb/)、[老柚木](/hotels/teak-hostel/)與[樂冶](/hotels/leye-homestay/)各有不同門牌；預訂前請核對入住年齡及交通。
 
 金寧可比較南山的[日玥居](/hotels/sunmoon19-bnb/)與嚨口的[嚨口秘境](/hotels/longkou-mysterious-resort/)，以各自地址與接待時間安排路線。
+
+金寧住宿可查看[心琴二館](/hotels/xinqin-2-hall/)與[58%旅宿](/hotels/58-percent-inn/)，請核對門牌、入住時間和兒童計費條件。

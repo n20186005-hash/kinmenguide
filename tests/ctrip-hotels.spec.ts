@@ -77,6 +77,15 @@ test('lodging booking pages disclose material child and identity-document restri
   await expect(page.locator('#business-county-3960 .alert-note')).toContainText('不可攜帶兒童');
   await expect(page.locator('#business-maogongshi .alert-note')).toContainText('不可攜帶兒童');
   await expect(page.locator('#business-maogongshi .alert-note')).toContainText('年滿20歲');
+  await expect(page.locator('#business-lodging-6cbac6a2a5e6 .alert-note')).toContainText('館別');
+  await expect(page.locator('#business-lodging-3ab6505d9c02 .alert-note')).toContainText('年滿18歲');
+  await expect(page.locator('#business-lodging-12dec8214b06 .alert-note')).toContainText('提前一天');
+  await expect(page.locator('#business-lodging-1f8f40d39b24 .alert-note')).toContainText('提前三天');
+  await expect(page.locator('#business-lodging-c2ea4a22eb13 .alert-note')).toContainText('7歲及以上');
+  await expect(page.locator('#business-lodging-368160bd74cb .alert-note')).toContainText('年滿20歲');
+  await expect(page.locator('#business-lodging-1cad03205776 .alert-note')).toContainText('提前一天');
+  await expect(page.locator('#business-lodging-2dc00d77e2d4 .alert-note')).toContainText('年滿20歲');
+  await expect(page.locator('#business-lodging-46c67121dc69 .alert-note')).toContainText('僅限18歲');
   await expect(page.locator('#business-lodging-05c5ba905e5c .alert-note')).toContainText('年滿18歲');
   await expect(page.locator('#business-jindian-bnb .alert-note')).toContainText('不可攜帶兒童');
   await expect(page.locator('#business-lodging-5080619d45a4 .alert-note')).toContainText('年滿20歲');
