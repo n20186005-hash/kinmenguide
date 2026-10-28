@@ -46,7 +46,8 @@ for (const kind of ['food', 'hotel']) {
         assert.equal(card.find('[data-business-registration-status]').attr('data-business-registration-status'), state);
         if (state === 'historical-only') assert.ok(card.text().includes('目前登記狀態待核實（僅有歷史底冊）'), 'Historical evidence must not appear as current legal verification');
       }
-      assert.equal(card.find('[data-business-actual-operation]').attr('data-business-actual-operation'), b.facts?.actualOperationStatus?.historical ? 'unverified' : b.facts?.actualOperationStatus?.value || 'unverified');
+      const operation = b.facts?.actualOperationStatus?.historical ? 'unverified' : b.facts?.actualOperationStatus?.value || 'unverified';
+      assert.equal(card.find('[data-business-actual-operation]').attr('data-business-actual-operation'), operation === 'unverified' ? undefined : operation);
       const mapCid = b.facts?.verifiedMapCid;
       assert.equal(card.find('[data-business-verified-map]').length, mapCid?.value && !mapCid.historical ? 1 : 0, 'Only accepted map CID facts create verified-map links');
       if (mapCid?.value && !mapCid.historical) assert.equal(card.find('[data-business-verified-map]').attr('href'), `https://www.google.com/maps?cid=${mapCid.value}`);

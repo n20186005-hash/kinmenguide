@@ -12,7 +12,7 @@ for (const node of links) {
   const sponsored = link.attr('rel')?.split(' ').includes('sponsored');
   if (sponsored) {
     assert.match(href || '', /^https:\/\/t\.ctrip\.cn\/[A-Za-z0-9]+$/, 'Ctrip-generated short link');
-    assert.ok(link.parent().text().includes('可能獲得佣金'), 'Affiliate disclosure beside directory link');
+    assert.ok($('[data-business-directory] [data-affiliate-disclosure]').text().includes('可能獲得佣金'), 'Affiliate disclosure at directory bottom');
   } else {
     assert.match(href || '', /^https:\/\/hotels\.ctrip\.com\/hotels\/\d+\.html$/, 'Ordinary single-property URL without dates or fabricated tracking');
   }
@@ -23,9 +23,8 @@ for (const node of links) {
   assert.equal(page('h1').text(),b.name);
   assert.equal(page(`[data-ctrip-business="${id}"]`).attr('href'),href);
   assert.equal(page('link[rel="canonical"]').attr('href'),`https://kinmenguide.com${details}`);
-  assert.ok(page('body').text().includes('實際營業'), 'Display unverified operation');
   assert.equal(page(`[data-ctrip-business="${id}"]`).attr('rel'), link.attr('rel'));
-  if (sponsored) assert.ok(page(`[data-ctrip-business="${id}"]`).parent().text().includes('可能獲得佣金'), 'Affiliate disclosure beside detail link');
+  if (sponsored) assert.ok(page('footer [data-affiliate-disclosure]').text().includes('可能獲得佣金'), 'Affiliate disclosure in page footer');
 }
 assert.ok(seen.size > 0, 'Ctrip integration must have a confirmed hotel');
 for (const id of ['lodging-fd9dfbb1c47c','lodging-59130f8e4118']) assert.ok(!seen.has(id), 'Address conflicts must not get a booking link');

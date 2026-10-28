@@ -168,7 +168,8 @@ test('lodging registration, actual operation and map identity remain separate', 
     const card = byId.get(`business-${record.id}`)!;
     expect(card.registration).toBe(record.facts?.registrationStatus?.historical ? 'historical-only' : record.facts?.registrationStatus?.value || 'pending');
     if (card.registration === 'historical-only') expect(card.text).toContain('目前登記狀態待核實（僅有歷史底冊）');
-    expect(card.operation).toBe(record.facts?.actualOperationStatus?.historical ? 'unverified' : record.facts?.actualOperationStatus?.value || 'unverified');
+    const operation = record.facts?.actualOperationStatus?.historical ? 'unverified' : record.facts?.actualOperationStatus?.value || 'unverified';
+    expect(card.operation).toBe(operation === 'unverified' ? undefined : operation);
     const canPlan = record.facts?.actualOperationStatus?.value === 'operating' && !record.facts.actualOperationStatus.historical && record.facts?.registrationStatus?.value === 'government-listed' && !record.facts.registrationStatus.historical;
     expect(card.canPlan).toBe(Boolean(canPlan));
     const mapCid = record.facts?.verifiedMapCid;

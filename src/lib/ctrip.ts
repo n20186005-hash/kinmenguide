@@ -14,3 +14,6 @@ for (const [businessId, hotel] of Object.entries(ctripHotels)) {
   ids.add(hotel.hotelId);
 }
 export const ctripHotelFor = (businessId: string) => ctripHotels[businessId];
+export const canOfferCtrip = (state: string, operation: string) =>
+  !['temporary_closed', 'permanently_closed'].includes(state) &&
+  !['temporary_closed', 'permanently_closed'].includes(operation);
