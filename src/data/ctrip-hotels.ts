@@ -219,11 +219,6 @@ export const ctripHotels: Record<string, CtripHotel> = {
     "url": "https://hotels.ctrip.com/hotels/133042110.html",
     "checkedAt": "2026-10-26", "affiliate": {"url": "https://t.ctrip.cn/4Ez6gtk", "generatedAt": "2026-10-26", "verifiedAt": "2026-10-27T06:01:32.595313+00:00", "verifiedHotelId": "133042110", "generatedBy": "ctrip-alliance"}
   },
-  "lodging-1e91f275984b": {
-    "hotelId": "2165503",
-    "url": "https://hotels.ctrip.com/hotels/2165503.html",
-    "checkedAt": "2026-10-26", "affiliate": {"url": "https://t.ctrip.cn/9WP11Fp", "generatedAt": "2026-10-26", "verifiedAt": "2026-10-27T06:01:32.595313+00:00", "verifiedHotelId": "2165503", "generatedBy": "ctrip-alliance"}
-  },
   "lodging-7f8e8a9e089f": {
     "hotelId": "19831164",
     "url": "https://hotels.ctrip.com/hotels/19831164.html",
@@ -279,9 +274,4 @@ export const ctripHotels: Record<string, CtripHotel> = {
     "url": "https://hotels.ctrip.com/hotels/18027004.html",
     "checkedAt": "2026-10-26", "affiliate": {"url": "https://t.ctrip.cn/64JpLh6", "generatedAt": "2026-10-26", "verifiedAt": "2026-10-27T06:01:32.595313+00:00", "verifiedHotelId": "18027004", "generatedBy": "ctrip-alliance"}
   },
-  "lodging-47adb41f91ad": {
-    "hotelId": "88183680",
-    "url": "https://hotels.ctrip.com/hotels/88183680.html",
-    "checkedAt": "2026-10-26", "affiliate": {"url": "https://t.ctrip.cn/CrgtWAY", "generatedAt": "2026-10-26", "verifiedAt": "2026-10-27T06:01:32.595313+00:00", "verifiedHotelId": "88183680", "generatedBy": "ctrip-alliance"}
-  }
 };
