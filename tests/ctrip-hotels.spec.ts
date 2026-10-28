@@ -67,6 +67,9 @@ test('lodging booking pages disclose material child and identity-document restri
   await expect(page.locator('#business-lodging-9cbc06319012 .alert-note')).toContainText('1歲及以上');
   await expect(page.locator('#business-lodging-e259cd855d70 .alert-note')).toContainText('12至99歲');
   await expect(page.locator('#business-lodging-aa230061fe7e .alert-note')).toContainText('年滿18歲');
+  await expect(page.locator('#business-lodging-705fe929edbc .alert-note')).toContainText('不可攜帶兒童');
+  await expect(page.locator('#business-lodging-3fabbd2783ad .alert-note')).toContainText('18至65歲');
+  await expect(page.locator('#business-lodging-166e6b5be87b .alert-note')).toContainText('年滿18歲');
   for (const id of ['lodging-f79bccd0efdc', 'lodging-9441dacddb61', 'lodging-a632d757026e', 'jindian-bnb-2', 'lodging-451c7cf48d05']) {
     await expect(page.locator(`#business-${id} .alert-note`)).toContainText('不可攜帶兒童');
   }
