@@ -135,3 +135,5 @@
 [山春花繪本古厝](/hotels/yamaharuka-historic-house/)位於小徑29號，請先確認所訂館別與兒童需求。
 
 [明園民宿](/hotels/mingyuan-hostel/)位於太湖路三段，訂房前請留意入住年齡條件。
+
+金湖可比較[金金禮寓](/hotels/solis-hotel/)、[玉宿](/hotels/kinmen-yusu/)、[漫漫浯島](/hotels/stroll-wudao-inn/)、[夏興客棧](/hotels/summer-inn/)與[山外鄉村](/hotels/shanwai-village/)，先核對門牌、抵達及入住條件。

@@ -181,3 +181,5 @@
 珠山可比較[大夫第](/hotels/dafudi-bnb/)及[茱碧樓1館](/hotels/zhubilou-one/)，先核對門牌與入住條件。
 
 [鳥藝古厝](/hotels/artistic-nest/)在前水頭6號，[文青逸宿](/hotels/wenqing-yisu/)在東沙；請先核對館別及兒童入住政策。
+
+[背包客棧497二館](/hotels/backpack-home-497-no2/)位於金城，與金湖塔后本館分開；預訂前注意兒童及入住年齡條件。

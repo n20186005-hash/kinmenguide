@@ -1,5 +1,16 @@
 // Reconciled by exact physical address and individual official source, not brand alone.
 export const businessLinks: Record<string, string> = {
+  "hotel:lodging-9fd791757798": "/hotels/life-with-bird/",
+  "hotel:lodging-2afbfc8b9f44": "/hotels/shang-her-yuan/",
+  "hotel:lodging-9580f5ea4268": "/hotels/flower-hut/",
+  "hotel:lodging-d404f3ff7368": "/hotels/taiwu-cozy-bnb/",
+  "hotel:lodging-ba7fbe91351d": "/hotels/dayi-villa/",
+  "hotel:shanwai-village": "/hotels/shanwai-village/",
+  "hotel:summer-inn": "/hotels/summer-inn/",
+  "hotel:stroll-wudao-inn": "/hotels/stroll-wudao-inn/",
+  "hotel:lodging-7fcc85a2e454": "/hotels/kinmen-yusu/",
+  "hotel:lodging-3209f5284f72": "/hotels/backpack-home-497-no2/",
+  "hotel:lodging-fa592c08d167": "/hotels/solis-hotel/",
   "hotel:lodging-804cf18cdc30": "/hotels/leye-homestay/",
   "hotel:lodging-7959747c13f4": "/hotels/teak-hostel/",
   "hotel:lodging-68982155956e": "/hotels/axin-bnb/",
