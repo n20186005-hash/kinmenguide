@@ -179,3 +179,5 @@
 湖下可查看[飛鳥集行館](/hotels/flying-birds-inn/)，下埔下則有[陸島酒店](/hotels/lu-dao-hotel/)與[海院子](/hotels/hai-yuanzi/)等不同位置；景觀、早餐與交通均依所選房型及訂單查核，不因同在金寧就互相套用。慈湖路一帶的[芸田民宿](/hotels/yuntian-bnb/)與[雲峰．汐語](/hotels/yunfeng-xiyu/)各有接待窗口；[鄉居民宿](/hotels/xiangju-bnb/)攜程本輪另列中國內地居民身分證接待限制，先查證件，再比較房型。下后垵的[棲遲民宿](/hotels/qichi-bnb/)和[麥麥甘鹿園](/hotels/maimai-ganluyuan/)也不是同一家住宿。
 
 [湖下之星](/hotels/huxia-star/)位於湖下222-8號，攜程顯示名稱為金廈之星，訂房前請核對門牌及入住條件。
+
+[不倒翁輕旅](/hotels/tumbler-travel/)位於昔果山，平台兒童及接送條件須於預訂前確認。
