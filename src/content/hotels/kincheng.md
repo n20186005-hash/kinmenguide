@@ -189,3 +189,5 @@
 珠山住宿可核對[依山初晴](/hotels/i-shan-house/)的17-1號；市區的[金華民宿二館](/hotels/jim-hua-bnb-2/)請核對民生路54巷19號，不要混用其他館別。
 
 後豐港住宿可查看[作客七號](/hotels/be-our-guest-7/)，先核對門牌及辦理入住年齡。
+
+金城可比較[定風波](/hotels/ding-fong-bo-hostel/)、[陳佳苑裡](/hotels/chens-courtyard-guesthouse/)、[紅築](/hotels/hongzhu-bnb/)、[挺好客棧](/hotels/ghold-hotel/)及[珠山娜一家](/hotels/nayas-house/)；選房時先核對門牌、館別與入住限制。

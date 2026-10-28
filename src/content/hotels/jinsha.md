@@ -143,3 +143,5 @@
 [八八觀海](/hotels/baba-guanhai/)位於官澳，與后宅館別分開；兒童及早餐條件請確認。
 
 中蘭住宿可查看[蘭舍大門](/hotels/lanshe-homestay/)，先確認抵達時段、早餐與押金條件。
+
+金沙住宿可比較[想耀民宿](/hotels/xiang-yao-bnb/)與[金與手作](/hotels/kinyu-handmade-bnb/)，先核對聯絡方式和平台入住資格。
