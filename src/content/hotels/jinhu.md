@@ -125,3 +125,7 @@
 ## 瓊林聚落與山外塔后，住宿形式不同
 
 [島中大厝](/hotels/island-old-house/)和[壹樓文旅](/hotels/first-floor-hostel/)都在瓊林，門牌、取匙與早餐方案分開確認，白天參觀聚落不代表巷內有夜間供餐。想接山外餐飲與太湖，可查看[三力民宿](/hotels/sanli-bnb/)或[背包客棧497](/hotels/backpackers-497/)；後者平台列不可攜帶兒童，並有私人／共用衛浴差異，不能只看「背包客棧」就推定訂到的是宿舍床位。
+
+## 林兜、漁村與市港路的住宿比較
+
+[林居民宿](/hotels/linju-bnb/)與[蕃茄紅了現代館](/hotels/tomato-red-lindou/)在林兜不同門牌；後者平台本輪限持中國內地有效居民身分證者，不能把這項接待條件當作入境資格。漁村可查看[金戰民宿](/hotels/jinzhan-bnb/)、[浯島文旅](/hotels/wd-hotel/)與[紅屋頂](/hotels/red-roof-bnb/)的各自接待方式。若想把山外用餐安排在行程中，另比較[市港行旅](/hotels/shigang-stay/)和[大雁旅店](/hotels/dayen-hotel/)；大雁的平台早餐政策與簡介不同，須先問本次方案。
