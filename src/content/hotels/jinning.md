@@ -185,3 +185,5 @@
 西浦頭的[馨紫晶民宿](/hotels/xinzijing-country/)可搭配慈湖行程，請先確認接送與早餐條件。
 
 [阿鑫](/hotels/axin-bnb/)、[老柚木](/hotels/teak-hostel/)與[樂冶](/hotels/leye-homestay/)各有不同門牌；預訂前請核對入住年齡及交通。
+
+金寧可比較南山的[日玥居](/hotels/sunmoon19-bnb/)與嚨口的[嚨口秘境](/hotels/longkou-mysterious-resort/)，以各自地址與接待時間安排路線。

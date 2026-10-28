@@ -141,3 +141,5 @@
 [八八金歐王金城洋樓](/hotels/baba-jinou-wangjincheng/)登記於后宅2號，與2之1號二館分開核對。
 
 [八八觀海](/hotels/baba-guanhai/)位於官澳，與后宅館別分開；兒童及早餐條件請確認。
+
+中蘭住宿可查看[蘭舍大門](/hotels/lanshe-homestay/)，先確認抵達時段、早餐與押金條件。
