@@ -1,5 +1,10 @@
 // Reconciled by exact physical address and individual official source, not brand alone.
 export const businessLinks: Record<string, string> = {
+  "hotel:lodging-804cf18cdc30": "/hotels/leye-homestay/",
+  "hotel:lodging-7959747c13f4": "/hotels/teak-hostel/",
+  "hotel:lodging-68982155956e": "/hotels/axin-bnb/",
+  "hotel:cheng-xiu": "/hotels/cheng-xiu/",
+  "hotel:maogongshi": "/hotels/maogongshi-seaview/",
   "hotel:lodging-a47d6396d342": "/hotels/beyond-hill-main/",
   "hotel:jinsha-lakeside-hotel": "/hotels/jinsha-lakeside-hotel/",
   "hotel:otter-footprints": "/hotels/otter-footprints/",
