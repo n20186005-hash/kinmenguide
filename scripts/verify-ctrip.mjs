@@ -27,5 +27,5 @@ for (const node of links) {
   if (sponsored) assert.ok(page('footer [data-affiliate-disclosure]').text().includes('可能獲得佣金'), 'Affiliate disclosure in page footer');
 }
 assert.ok(seen.size > 0, 'Ctrip integration must have a confirmed hotel');
-for (const id of ['lodging-fd9dfbb1c47c','lodging-59130f8e4118']) assert.ok(!seen.has(id), 'Address conflicts must not get a booking link');
+for (const id of ['lodging-fd9dfbb1c47c','lodging-1e91f275984b','lodging-47adb41f91ad']) assert.ok(!seen.has(id), 'Unresolved identity or room scope must not get a booking link');
 console.log(`Ctrip audit passed: ${seen.size} matched single-property links, detail identities and unverified-operation notices.`);
