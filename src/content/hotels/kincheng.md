@@ -201,3 +201,5 @@
 金城市區可參考[總兵招待所](/hotels/pu-pien-hostel/)，官裡聚落可參考[官裡拾玖](/hotels/guanli-19-ancient-house/)，珠山古厝可參考[珠山官邸民宿](/hotels/zhushan-gandee-bnb/)；請依各店入住條件確認安排。
 
 水頭聚落可參考[紫雲廬](/hotels/casa-wisteria/)，泗湖可參考[好朋友民宿](/hotels/kinmen-good-friends/)，金門城可參考[微醺](/hotels/tipsy-hotel/)，浴井可參考[福中居](/hotels/fuzhongju-homestay/)，市區另有[牧雲市區館](/hotels/mu-yun-urban-homestay/)；請先確認各店入住條件。
+
+另可參考[獺上小島](/hotels/ta-shang-xiao-dao/)、[藍椅子民宿](/hotels/blue-chair-homestay/)、[里舍](/hotels/lishe-homestay/)、[來福客棧](/hotels/live-guesthouse/)及[水調歌頭](/hotels/shuei-diao-ge-tou/)，先核對各店入住與兒童條件。
