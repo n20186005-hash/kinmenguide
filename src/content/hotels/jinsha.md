@@ -145,3 +145,5 @@
 中蘭住宿可查看[蘭舍大門](/hotels/lanshe-homestay/)，先確認抵達時段、早餐與押金條件。
 
 金沙住宿可比較[想耀民宿](/hotels/xiang-yao-bnb/)與[金與手作](/hotels/kinyu-handmade-bnb/)，先核對聯絡方式和平台入住資格。
+
+住宿資料可參考[祥華民宿](/hotels/hsianghua-81/)，訂房前請核對館別與入住條件。
