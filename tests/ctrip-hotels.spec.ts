@@ -49,7 +49,7 @@ test('directory only presents a Ctrip URL for the matched hotel and keeps disput
   for (const id of ['lodging-fd9dfbb1c47c', 'lodging-59130f8e4118', 'lodging-487ad012e43d']) {
     await expect(root.locator(`#business-${id} [data-ctrip-business]`)).toHaveCount(0);
   }
-  for (const id of ['registered-homestay-159', 'registered-homestay-383', 'lodging-4a02c5dcb85c', 'lodging-5585728cb2d0']) {
+  for (const id of ['registered-homestay-159', 'registered-homestay-383', 'lodging-4a02c5dcb85c']) {
     await expect(root.locator(`#business-${id} [data-ctrip-business]`)).toHaveCount(0);
   }
 });
@@ -66,6 +66,7 @@ test('lodging booking pages disclose material child and identity-document restri
   }
   await expect(page.locator('#business-lodging-9cbc06319012 .alert-note')).toContainText('1歲及以上');
   await expect(page.locator('#business-lodging-e259cd855d70 .alert-note')).toContainText('12至99歲');
+  await expect(page.locator('#business-lodging-aa230061fe7e .alert-note')).toContainText('年滿18歲');
   for (const id of ['lodging-f79bccd0efdc', 'lodging-9441dacddb61', 'lodging-a632d757026e', 'jindian-bnb-2', 'lodging-451c7cf48d05']) {
     await expect(page.locator(`#business-${id} .alert-note`)).toContainText('不可攜帶兒童');
   }

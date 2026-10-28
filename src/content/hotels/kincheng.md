@@ -173,3 +173,5 @@
 ## 水頭、市區與浴井，訂房先看門牌
 
 想把水頭聚落接在入住前後，可比較[浯合居](/hotels/wuhe-hotel/)、[水頭118號](/hotels/shuitou-118/)、[詠詠の家](/hotels/yongyong-house/)與[金玉閣](/hotels/jinyuge/)；各館的取匙與早餐條件不同。重視市區晚餐，可查看[金華民宿](/hotels/jinhua-bnb/)、[金城艾美商務旅館](/hotels/aimei-business-hotel/)和[巷弄旅店](/hotels/alley-inn/)。金華一館20號與二館19號分開，不能共用預訂連結。浴井的[旅圖民宿](/hotels/travel-map-bnb/)另核對樓層、行李與返宿交通，不把金城全鎮視為同一個步行生活圈。
+
+珠山聚落內可查看[珠山閒庭](/hotels/zhushan-xianting/)的登記地址及訂房條件；餐飲與夜間返回聚落的交通需另行安排。
