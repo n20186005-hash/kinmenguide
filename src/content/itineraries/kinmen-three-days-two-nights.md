@@ -10,7 +10,7 @@
   "duration": "3 天 2 夜",
   "order": 1,
   "featured": true,
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-28",
   "related": [
     "/transport/",
     "/hotels/kincheng/",
@@ -158,3 +158,7 @@
 金城段可用[浯江書院](/attractions/wujiang-academy/)和[奶茶街](/food/kincheng-tea-walk/)豐富步行圈，晚間另選[總兵署夜遊](/tours/houpu-night-walk/)。[建功嶼](/attractions/jiangong-islet/)必須配合潮汐，[古崗樓](/attractions/gugang-tower/)2026年秋季二樓以上施工，均先查公告再安排。
 
 有金湖段的行程，可把[高洞](/attractions/gaodong-tunnel/)、[天坑](/attractions/tiankeng/)和[新湖漁港](/attractions/xinhu-fishing-harbor/)組成一個半日，或選[山外老街](/attractions/shanwai-old-street/)加[中正公園彩繪](/attractions/zhongzheng-park-3d/)。金寧段則可替換成[慈湖三角堡](/attractions/cihu-triangle-fortress/)與[湖下海堤](/attractions/huxia-seawall/)。不要在原本已排滿的一天全部加上去。
+
+## 兩晚住宿先核對接待與晚餐方向
+
+若想住前水頭，可從[水頭118號](/hotels/shuitou-118/)或[浯合居民宿](/hotels/wuhe-hotel/)的接待方式開始比較；住金寧則可查看[飛鳥集行館](/hotels/flying-birds-inn/)與[親愛的民宿二館](/hotels/dear-bnb-two/)的時間窗口。希望第一晚住金湖，可比較[浯島文旅](/hotels/wd-hotel/)和[市港行旅](/hotels/shigang-stay/)所在位置。先決定住宿、晚餐與回程交通，再調整三天順序，住宿有登記或平台有頁面都不等於即時有房。

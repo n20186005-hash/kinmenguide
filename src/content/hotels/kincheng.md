@@ -169,3 +169,7 @@
 ## 市區用餐與珠山過夜，先選生活圈
 
 重視晚餐與市區活動，可比較民權路的[海福商務飯店](/hotels/haifu-business-hotel/)及珠浦東路的[晶城民宿](/hotels/jingcheng-bnb/)；前者與後者的早餐、前台及晚到聯絡不同。希望在珠山留宿則看[依山行館](/hotels/yishan-villa/)，先取得密碼入住說明，夜間返村交通另外安排。三家不能共用同一組入住時間。
+
+## 水頭、市區與浴井，訂房先看門牌
+
+想把水頭聚落接在入住前後，可比較[浯合居](/hotels/wuhe-hotel/)、[水頭118號](/hotels/shuitou-118/)、[詠詠の家](/hotels/yongyong-house/)與[金玉閣](/hotels/jinyuge/)；各館的取匙與早餐條件不同。重視市區晚餐，可查看[金華民宿](/hotels/jinhua-bnb/)、[金城艾美商務旅館](/hotels/aimei-business-hotel/)和[巷弄旅店](/hotels/alley-inn/)。金華一館20號與二館19號分開，不能共用預訂連結。浴井的[旅圖民宿](/hotels/travel-map-bnb/)另核對樓層、行李與返宿交通，不把金城全鎮視為同一個步行生活圈。

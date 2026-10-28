@@ -133,3 +133,7 @@
 ## 後浦頭、高陽路與浦邊，先排返宿路線
 
 [金沙假日大飯店](/hotels/jinsha-holiday-hotel/)在後浦頭135號，[海福花園飯店](/hotels/haifu-garden-hotel/)在高陽路1號，[小築佳趣](/hotels/xiaozhu-jiaqu/)在浦邊66號。可按沙美街區、金沙東側行程或浦邊聚落選基地；三處不是同一個步行用餐圈。海福花園也與金城的海福商務飯店分屬不同地址，訂房前核對館名。
+
+## 碧山、浦邊與田墩，分開安排晚餐
+
+[百合莊園](/hotels/lily-manor/)位於碧山61號，[田鄰綠](/hotels/tianlin-green/)在浦邊151號，[煦樂軒古厝](/hotels/xulexuan-gucuo/)在田墩11號，三者是不同的過夜起點。選住宿時一併查晚餐供餐、取匙與返回路線；看過白天聚落小店，不代表晚上仍有正餐。[海灣Villa](/hotels/bay-villa/)與[星苑民宿](/hotels/xingyuan-bnb/)則分別在后宅與塘頭，仍按實際道路及到店時間比較。

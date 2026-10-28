@@ -173,3 +173,7 @@
 ## 北山、湖下與下堡，按入住條件比較
 
 北山可比較[古寧歇心苑](/hotels/guning-xiexinyuan/)、[藍山客棧](/hotels/blue-mountain-inn/)與[北山古洋樓](/hotels/beishan-hostel/)；古洋樓平台有6歲及以上兒童限制，女性或混合床位要選對。湖下的[蘇適古厝](/hotels/sushi-inn/)與下堡的[KMQM](/hotels/kmqm/)是另外的住宿位置；KMQM平台列不可攜帶兒童，同時列辦理人滿12歲，須先取得明確答覆。需要沿慈湖路安排交通，可查看[長鴻精品旅館](/hotels/chang-hong-hotel/)的接待窗口。
+
+## 湖下、下埔下與慈湖路，先分清住哪一側
+
+湖下可查看[飛鳥集行館](/hotels/flying-birds-inn/)，下埔下則有[陸島酒店](/hotels/lu-dao-hotel/)與[海院子](/hotels/hai-yuanzi/)等不同位置；景觀、早餐與交通均依所選房型及訂單查核，不因同在金寧就互相套用。慈湖路一帶的[芸田民宿](/hotels/yuntian-bnb/)與[雲峰．汐語](/hotels/yunfeng-xiyu/)各有接待窗口；[鄉居民宿](/hotels/xiangju-bnb/)攜程本輪另列中國內地居民身分證接待限制，先查證件，再比較房型。下后垵的[棲遲民宿](/hotels/qichi-bnb/)和[麥麥甘鹿園](/hotels/maimai-ganluyuan/)也不是同一家住宿。
