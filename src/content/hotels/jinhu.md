@@ -141,3 +141,5 @@
 瓊林可查看[老閩宅三館](/hotels/old-min-house-3/)，其149及150號登記與二館131號不同，訂房前請確認館別及入住資格。
 
 住宿資料可參考[伯爵民宿](/hotels/earl-house/)、[金門山拾民宿](/hotels/shan-shih-home-stay/)，訂房前請核對館別與入住條件。
+
+住宿資料可參考[木馬丑盒子 古厝民宿](/hotels/troy-droll-bin/)，訂房前請核對館別與入住條件。
