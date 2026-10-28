@@ -10,7 +10,7 @@
   "duration": "5 分鐘",
   "order": 1,
   "featured": false,
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "related": [
     "/itineraries/kinmen-three-days-two-nights/",
     "/transport/",
@@ -159,3 +159,9 @@
 金城鎮的[法蘭克民宿](/hotels/franks-hostel/)、[市區背包客棧民宿](/hotels/kinmen-backpacker/)及[庫克民宿](/hotels/cook-bnb/)分別位於民權路、珠浦西路與中興路巷內。可按完整地址、入住時間及所選房型比較，營業狀態和接待方式仍應先確認。
 
 [樂客2館](/hotels/yueke-second-house/)登記於金城賢聚51-6號，與金寧下埔下315號的[樂客民宿](/hotels/yueke-guesthouse/)不是同一地址；預訂前請先確認館別與入口。
+
+## 市區、巷內與水頭聚落的不同選擇
+
+以市區餐飲為重點，可比較民族路的[宏福旅店](/hotels/hongfu-hotel/)、民權路的[金瑞旅店](/hotels/quemoy-hotel/)及珠浦北路的[浯島輕旅](/hotels/wudao-inn/)。民權路巷弄內的[拾己微光輕旅](/hotels/shiji-light-inn/)採平台所列的密碼入住，需先取得說明；各店早餐和接待時段不同。
+
+若希望把水頭聚落排在住宿前後，可查看前水頭75號的[一號館裕園](/hotels/yuyuan-house-one/)與3號的[小陳故事古厝民宿](/hotels/xiaochen-gucuo/)。後者攜程本輪列不可攜兒童，親子旅客先確認適用條件；同品牌其他門牌不等於同一館。

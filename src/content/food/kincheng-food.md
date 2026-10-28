@@ -10,7 +10,7 @@
   "duration": "8 分鐘",
   "order": 2,
   "featured": false,
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-28",
   "related": [
     "/food/kinmen-food-guide/",
     "/itineraries/kincheng-one-day/",
@@ -203,3 +203,7 @@
 ## 把晚餐接回金城住宿
 
 在後浦安排餐飲時，可比較[法蘭克民宿](/hotels/franks-hostel/)、[市區背包客棧民宿](/hotels/kinmen-backpacker/)及[庫克民宿](/hotels/cook-bnb/)的完整門牌；依餐廳營業時間與實際道路確認晚餐、行李及返回住宿的順序。
+
+## 早餐要跟住宿方案一起看
+
+住[浯島輕旅](/hotels/wudao-inn/)或[拾己微光輕旅](/hotels/shiji-light-inn/)時，攜程本輪均列不供早餐，可先在本指南選店並確認當天營業。住[宏福旅店](/hotels/hongfu-hotel/)則另看訂單是否含早及當天供餐形式，避免已含早餐卻重複安排，或把「有早餐服務」當成所有房價都含早。

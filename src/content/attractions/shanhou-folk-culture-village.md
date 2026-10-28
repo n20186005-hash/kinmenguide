@@ -10,7 +10,7 @@
   "duration": "60–90 分鐘",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-28",
   "related": [
     "/guides/kinmen-summer-heat-family/",
     "/guides/kinmen-village-architecture/",
@@ -66,3 +66,7 @@
 聚落的前後空間、巷道與屋脊，比逐棟趕拍更值得慢看。室內展示、廟宇和仍使用中的建物分別確認；車停外圍，不把巷道當停車場。
 
 想接戰地史，選[獅山砲陣地](/attractions/shishan-howitzer-front/)；想看海，從[寒舍花海岸](/attractions/hanshehua-coast/)或[船型堡](/attractions/ship-shaped-fort/)擇一，兩者都須依當日公開動線。
+
+## 想在山后住一晚
+
+希望早晚留在聚落活動，可先看[山后65號民宿（山后海珠民宿）](/hotels/shanhou-65-bnb/)的接待時間，再安排參觀及晚餐。另一處山后45號的[蕃茄紅了古典館](/hotels/tomato-red-classical/)有平台接待證件限制；先查資格，再談訂房。這些是不同住宿，並非文化村提供的統一住宿服務。
