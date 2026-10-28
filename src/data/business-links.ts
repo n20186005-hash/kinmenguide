@@ -1,5 +1,17 @@
 // Reconciled by exact physical address and individual official source, not brand alone.
 export const businessLinks: Record<string, string> = {
+  "hotel:lodging-ca4e3f26083b": "/hotels/wujiang-hotel/",
+  "hotel:lodging-8819381196c9": "/hotels/tan-gu-shuo-jin/",
+  "hotel:lodging-fbc30a953465": "/hotels/jindi-hotel/",
+  "hotel:lodging-1e3fe9138ff6": "/hotels/yilan-homestay/",
+  "hotel:lodging-2e2d77cae7b4": "/hotels/huasin-hotel/",
+  "hotel:lodging-36a2c534a055": "/hotels/kinmen-jincheng-bnb/",
+  "hotel:lodging-203df4d6069a": "/hotels/shuitou-qiaoju/",
+  "hotel:lodging-d1ca7e5b7ee9": "/hotels/little-weekend-inn/",
+  "hotel:lodging-58efbf0063ae": "/hotels/kivala-hostel/",
+  "hotel:lodging-6c1b7465bde1": "/hotels/take-a-break-collection/",
+  "hotel:lodging-51617dbf4223": "/hotels/jinlu-second/",
+  "hotel:county-3746": "/hotels/time-hostel-jincheng-station/",
   "hotel:lodging-9fd791757798": "/hotels/life-with-bird/",
   "hotel:lodging-2afbfc8b9f44": "/hotels/shang-her-yuan/",
   "hotel:lodging-9580f5ea4268": "/hotels/flower-hut/",
