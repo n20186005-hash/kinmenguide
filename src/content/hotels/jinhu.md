@@ -137,3 +137,5 @@
 [明園民宿](/hotels/mingyuan-hostel/)位於太湖路三段，訂房前請留意入住年齡條件。
 
 金湖可比較[金金禮寓](/hotels/solis-hotel/)、[玉宿](/hotels/kinmen-yusu/)、[漫漫浯島](/hotels/stroll-wudao-inn/)、[夏興客棧](/hotels/summer-inn/)與[山外鄉村](/hotels/shanwai-village/)，先核對門牌、抵達及入住條件。
+
+瓊林可查看[老閩宅三館](/hotels/old-min-house-3/)，其149及150號登記與二館131號不同，訂房前請確認館別及入住資格。
