@@ -139,3 +139,5 @@
 [百合莊園](/hotels/lily-manor/)位於碧山61號，[田鄰綠](/hotels/tianlin-green/)在浦邊151號，[煦樂軒古厝](/hotels/xulexuan-gucuo/)在田墩11號，三者是不同的過夜起點。選住宿時一併查晚餐供餐、取匙與返回路線；看過白天聚落小店，不代表晚上仍有正餐。[海灣Villa](/hotels/bay-villa/)與[星苑民宿](/hotels/xingyuan-bnb/)則分別在后宅與塘頭，仍按實際道路及到店時間比較。
 
 [八八金歐王金城洋樓](/hotels/baba-jinou-wangjincheng/)登記於后宅2號，與2之1號二館分開核對。
+
+[八八觀海](/hotels/baba-guanhai/)位於官澳，與后宅館別分開；兒童及早餐條件請確認。

@@ -179,3 +179,5 @@
 珠山住宿可查看[慢漫民宿夢想館](/hotels/piano-piano-dream/)，水頭住宿可查看[銃樓民宿](/hotels/shuitou-chonglou/)；民族路另有[月亮民宿](/hotels/moon-hostel/)，入住限制請先核對。
 
 珠山可比較[大夫第](/hotels/dafudi-bnb/)及[茱碧樓1館](/hotels/zhubilou-one/)，先核對門牌與入住條件。
+
+[鳥藝古厝](/hotels/artistic-nest/)在前水頭6號，[文青逸宿](/hotels/wenqing-yisu/)在東沙；請先核對館別及兒童入住政策。
