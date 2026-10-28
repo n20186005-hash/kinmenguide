@@ -199,3 +199,5 @@
 住宿資料可參考[愛渡假](/hotels/loving-vacations/)、[大橋旁民宿](/hotels/da-ciao-pang-bb/)，訂房前請核對館別與入住條件。
 
 住宿資料可參考[愛玩客107](/hotels/love-player-107/)、[閩南小院](/hotels/minnan-courtyard/)，訂房前請核對館別與入住條件。
+
+住宿資料可參考[藍色星空庭園](/hotels/blue-starry-garden/)，訂房前請核對館別與入住條件。
