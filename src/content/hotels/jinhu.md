@@ -10,7 +10,7 @@
   "duration": "5 分鐘",
   "order": 2,
   "featured": false,
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "related": [
     "/itineraries/kinmen-three-days-two-nights/",
     "/transport/",
@@ -117,3 +117,7 @@
 ## 環島北路與太湖住宿分開比較
 
 [如荷自在民宿](/hotels/ruhe-guesthouse/)登記於環島北路三段303號；[金湖飯店](/hotels/golden-lake-hotel/)則在太湖路二段218號。兩處雖同在金湖，接駁、餐飲和景點應按實際道路與住宿方案分別安排。
+
+## 夏興與后壟，訂房前先看抵達時間
+
+[八二三行館](/hotels/823-hotel/)位於夏興100號，攜程本輪要求提前兩天聯絡並提供抵達資訊；[山水星渡假中心](/hotels/shanshui-star-resort/)在后壟31-1號，前台與入住時段不同，傍晚後抵達須先確認交接。兩者的早餐時段、晚餐基地及返回住宿交通分開安排，不因同在金湖就推定步行可達。

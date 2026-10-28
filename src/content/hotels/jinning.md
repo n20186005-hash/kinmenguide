@@ -11,7 +11,7 @@
   "duration": "6 分鐘",
   "order": 8,
   "featured": false,
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "related": [
     "/areas/jinning/",
     "/food/jinning-food/",
@@ -165,3 +165,7 @@
 金寧住宿門牌分散，可先比較[麥麥精品文旅](/hotels/maimai-hotel/)、[金門福見民宿](/hotels/fujian-guesthouse/)、[閒事別館](/hotels/xianshi-annex/)、[樂客民宿](/hotels/yueke-guesthouse/)、[獺浪](/hotels/talu-guesthouse/)、[散步的喵](/hotels/walking-meow/)與[漫。時光](/hotels/manlu-inn/)。各地址及入口不同，入住服務、餐飲和返宿交通應逐家查詢。
 
 伯玉路一段可另比較[歡樂滿屋](/hotels/happy-house-bnb/)的236-8號門牌；埔後則可查看[浮雲澗民宿](/hotels/fuyunjian-bnb/)的133號門牌。入住、晚餐與返宿交通仍需個別核對。
+
+## 先選伯玉路、頂堡或東洲，再安排接待時間
+
+伯玉路二段的[羊角村民宿](/hotels/goat-village-bnb/)需要提前聯絡取匙；頂堡113號的[八八古藝民宿](/hotels/guyi-88-bnb/)與下堡同品牌各館要分開核對。東洲91號的[雅舍](/hotels/arthur-guesthouse/)本輪平台入住時段為16至19時，且不供早餐，若晚班抵達應先問接待。三處不是同一條晚餐步行圈，返宿方式應按當天路線安排。

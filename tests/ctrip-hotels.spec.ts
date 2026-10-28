@@ -45,7 +45,25 @@ test('directory only presents a Ctrip URL for the matched hotel and keeps disput
   await expect(card.locator('[data-ctrip-business]')).toHaveAttribute('href', ctripHotels['lodging-451c01345513'].affiliate?.url || ctripHotels['lodging-451c01345513'].url);
   await expect(root.locator('[data-affiliate-disclosure]')).toContainText('可能獲得佣金');
   await expect(card.locator('[data-business-actual-operation="unverified"]')).toHaveCount(0);
-  for (const id of ['lodging-fd9dfbb1c47c', 'lodging-59130f8e4118']) {
+  for (const id of ['lodging-fd9dfbb1c47c', 'lodging-59130f8e4118', 'lodging-487ad012e43d']) {
     await expect(root.locator(`#business-${id} [data-ctrip-business]`)).toHaveCount(0);
   }
+});
+
+test('lodging booking pages disclose material child and identity-document restrictions', async ({ page }) => {
+  await page.goto('/hotels/');
+  for (const id of ['lodging-26429c655acd', 'lodging-78a582adea97']) {
+    await expect(page.locator(`#business-${id} .alert-note`)).toContainText('不可攜帶兒童');
+  }
+  await expect(page.locator('#business-registered-homestay-466 .alert-note')).toContainText('中國內地簽發有效居民身分證');
+  for (const path of ['/hotels/zhen-shan-mei/', '/hotels/xiaochen-gucuo/']) {
+    await page.goto(path);
+    await expect(page.locator('main')).toContainText('不可攜帶兒童');
+    await expect(page.locator('[data-ctrip-business]').first()).toBeVisible();
+  }
+  await page.goto('/hotels/tomato-red-classical/');
+  await expect(page.locator('main')).toContainText('僅接待持有中國內地簽發有效居民身分證');
+  await expect(page.locator('main')).toContainText('年滿20歲');
+  await expect(page.locator('main')).toContainText('不能代替金門入境規定');
+  await expect(page.locator('main')).toContainText('目前國家合法旅宿登記尚未匹配');
 });

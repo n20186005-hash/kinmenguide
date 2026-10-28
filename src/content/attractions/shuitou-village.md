@@ -10,7 +10,7 @@
   "duration": "90–120 分鐘",
   "order": 5,
   "featured": true,
-  "updatedAt": "2026-10-12",
+  "updatedAt": "2026-10-28",
   "related": [
     "/guides/kinmen-village-architecture/",
     "/itineraries/kinmen-culture-trail/",
@@ -70,3 +70,7 @@
 | [黃廷參三落大厝](/attractions/huang-tingcan-house/) | 古厝小舖、院落與休息 | 前水頭82號 |
 
 前面三處是展示參觀重點，後兩處按店家營業與消費規定安排。若是趕船，請直接查[金門港旅運中心](/attractions/kinmen-port-terminal/)的金豐路300號地址，勿把聚落停車位置當成小三通下客點。
+
+## 住水頭時先確認不同館別
+
+[一號館裕園](/hotels/yuyuan-house-one/)在前水頭75號，[小陳故事古厝民宿](/hotels/xiaochen-gucuo/)在3號。若打算參觀後直接入住，先與住宿方約好接待時間；小陳本輪攜程列不可攜兒童，親子行程需先查明。古厝與洋樓房型的實際衛浴、樓梯和行李入口仍應逐家詢問。
