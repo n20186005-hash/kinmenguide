@@ -203,3 +203,5 @@
 水頭聚落可參考[紫雲廬](/hotels/casa-wisteria/)，泗湖可參考[好朋友民宿](/hotels/kinmen-good-friends/)，金門城可參考[微醺](/hotels/tipsy-hotel/)，浴井可參考[福中居](/hotels/fuzhongju-homestay/)，市區另有[牧雲市區館](/hotels/mu-yun-urban-homestay/)；請先確認各店入住條件。
 
 另可參考[獺上小島](/hotels/ta-shang-xiao-dao/)、[藍椅子民宿](/hotels/blue-chair-homestay/)、[里舍](/hotels/lishe-homestay/)、[來福客棧](/hotels/live-guesthouse/)及[水調歌頭](/hotels/shuei-diao-ge-tou/)，先核對各店入住與兒童條件。
+
+後豐港可參考[海豐民宿](/hotels/haifeng-homestay/)，歐厝66號可參考[時苑](/hotels/shiyuan-oucuo-66/)，市區可參考[依藍2館](/hotels/yilan-hall-2/)；訂房前請先核對館別和兒童條件。
