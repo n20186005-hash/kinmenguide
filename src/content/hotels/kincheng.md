@@ -209,3 +209,5 @@
 住宿資料可參考[任我行民宿](/hotels/antique-courtyard-bnb/)，按小西門完整門牌與入住資格安排交通。
 
 住宿資料可參考[初城民宿](/hotels/chucheng-bnb/)，訂房前請核對館別與入住條件。
+
+住宿資料可參考[水頭古洋樓花磚民宿](/hotels/shuitou-ancient-water-tower/)，訂房前請核對館別與入住條件。
