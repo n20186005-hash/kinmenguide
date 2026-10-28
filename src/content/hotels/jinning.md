@@ -197,3 +197,5 @@
 住宿資料可參考[千尋民宿](/hotels/qianxun-sens-bnb/)、[小憩人輕旅](/hotels/haveachillday-inn/)、[慈湖山莊(白貓民宿)](/hotels/white-cat-cihu/)，訂房前請核對館別與入住條件。
 
 住宿資料可參考[愛渡假](/hotels/loving-vacations/)、[大橋旁民宿](/hotels/da-ciao-pang-bb/)，訂房前請核對館別與入住條件。
+
+住宿資料可參考[愛玩客107](/hotels/love-player-107/)、[閩南小院](/hotels/minnan-courtyard/)，訂房前請核對館別與入住條件。
