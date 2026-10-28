@@ -133,3 +133,5 @@
 比較[金門十美渡假村](/hotels/happy-casa-resorts/)時，請先核對后壠入口、家庭房與接送條件。
 
 [山春花繪本古厝](/hotels/yamaharuka-historic-house/)位於小徑29號，請先確認所訂館別與兒童需求。
+
+[明園民宿](/hotels/mingyuan-hostel/)位於太湖路三段，訂房前請留意入住年齡條件。

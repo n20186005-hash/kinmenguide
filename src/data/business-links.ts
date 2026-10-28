@@ -1,5 +1,14 @@
 // Reconciled by exact physical address and individual official source, not brand alone.
 export const businessLinks: Record<string, string> = {
+  "hotel:lodging-a47d6396d342": "/hotels/beyond-hill-main/",
+  "hotel:jinsha-lakeside-hotel": "/hotels/jinsha-lakeside-hotel/",
+  "hotel:otter-footprints": "/hotels/otter-footprints/",
+  "hotel:county-3960": "/hotels/xinyue-homestay/",
+  "hotel:county-1166": "/hotels/mingyuan-hostel/",
+  "hotel:county-3624": "/hotels/baba-guanhai/",
+  "hotel:county-3786": "/hotels/xinzijing-country/",
+  "hotel:county-3915": "/hotels/wenqing-yisu/",
+  "hotel:county-3765": "/hotels/artistic-nest/",
   "hotel:shanchun": "/hotels/yamaharuka-historic-house/",
   "hotel:county-1181": "/hotels/dafudi-bnb/",
   "hotel:lodging-0fe1faa94118": "/hotels/zhubilou-one/",
