@@ -79,6 +79,7 @@ test('lodging booking pages disclose material child and identity-document restri
   await expect(page.locator('#business-county-3960 .alert-note')).toContainText('不可攜帶兒童');
   await expect(page.locator('#business-maogongshi .alert-note')).toContainText('不可攜帶兒童');
   await expect(page.locator('#business-maogongshi .alert-note')).toContainText('年滿20歲');
+  await expect(page.locator('#business-lodging-f771fb8c92a7 .alert-note')).toContainText('提前1天');
   await expect(page.locator('#business-lodging-a88d5c9388f5 .alert-note')).toContainText('兒童入住資格');
   await expect(page.locator('#business-lodging-42e7086cbfc7 .alert-note')).toContainText('年滿20歲');
   await expect(page.locator('#business-lodging-2a253d2393a5 .alert-note')).toContainText('共用衛浴');
