@@ -8,7 +8,7 @@
   "tag": "閩南聚落",
   "duration": "1–2 小時",
   "order": 159,
-  "updatedAt": "2026-10-14",
+  "updatedAt": "2026-10-28",
   "aliases": ["琼林聚落", "瓊林古厝", "瓊林戰鬥村"],
   "related": ["/guides/kinmen-wind-lion-stories/", "/guides/kinmen-village-architecture/", "/attractions/qionglin-battle-tunnel/", "/areas/jinhu/", "/attractions/xiaojing-bus-stop/", "/attractions/shuitou-village/"],
   "sources": [
@@ -33,3 +33,7 @@
 
 ## 停車與公車
 官方建議由金城搭1A、2路至瓊林一，或搭5、5A路至瓊林圓環。先核對班次與回程；自駕則停在聚落外的合法位置，讓窄巷保持通暢。想把文化主題延伸到僑鄉建築，可在另半天走[水頭聚落](/attractions/shuitou-village/)，不要把兩區誤認為步行可達。
+
+## 想在瓊林住一晚
+
+聚落100號的[島中大厝](/hotels/island-old-house/)與179號的[壹樓文旅](/hotels/first-floor-hostel/)有各自的門牌與接待方式。白天參觀後入住，先約好取匙；早餐、晚餐與停車入口逐項詢問，公共巷道與私人院落也要分清。跨到山外用餐時另排交通，不推定全程可步行。

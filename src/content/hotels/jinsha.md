@@ -107,7 +107,7 @@
 | 店家與名錄 | 來源地址 | 核對來源 |
 | --- | --- | --- |
 | [三里拾光](/hotels/#business-lodging-b64e657abcf4) | 金門縣金沙鎮碧山82號 | [個別資料](https://media.taiwan.net.tw/en-us/portal/travel/details/hotel_a15010000h_033275) |
-| [金沙假日大飯店](/hotels/#business-lodging-b072bc030d3a) | 金門縣金沙鎮汶沙里後浦頭135號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/1154) |
+| [金沙假日大飯店](/hotels/jinsha-holiday-hotel/) | 金門縣金沙鎮汶沙里後浦頭135號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/1154) |
 | [鹽埕i驛站古厝民宿](/hotels/#business-lodging-188bc1cbad69) | 金門縣金沙鎮西園74號 | [個別資料](https://kinmen.travel/zh-tw/accommodation/details/3626) |
 
 
@@ -116,7 +116,7 @@
 | 店家與名錄 | 來源地址 | 核對來源 |
 | --- | --- | --- |
 | [立姐咖啡民宿](/hotels/#business-lodging-4f7b7d3c141b) | 金門縣金沙鎮復興街28號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/3035) |
-| [小築佳趣](/hotels/#business-lodging-09586afd12d2) | 金門縣金沙鎮浦邊66號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/3696) |
+| [小築佳趣](/hotels/xiaozhu-jiaqu/) | 金門縣金沙鎮浦邊66號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/3696) |
 | [蘭舍大門](/hotels/#business-lodging-6488aaf0db05) | 金門縣金沙鎮中蘭37號 | [官方個別資料](https://www.kinmen.travel/zh-tw/accommodation/details/3769) |
 
 [查看本區完整名錄與篩選條件](/hotels/?area=jinsha#business-directory)。表中是選區例子，完整選擇請用名錄篩選。官方頁所報服務不代表同日營運、目前登記狀態或空房；先按實際道路安排，再向業者確認入住條件。
@@ -129,3 +129,7 @@
 ## 山后聚落住宿，先核對館名和接待條件
 
 [山后65號民宿（山后海珠民宿）](/hotels/shanhou-65-bnb/)是山后65號，平台列16時後入住、10時前退房，與山后45號的[蕃茄紅了古典館](/hotels/tomato-red-classical/)不同。後者攜程本輪有中國內地居民身分證接待限制，先確認證件與訂房資格，再比較房型。聚落白天餐飲與夜間供餐不相同，晚餐及返宿交通請另外安排。
+
+## 後浦頭、高陽路與浦邊，先排返宿路線
+
+[金沙假日大飯店](/hotels/jinsha-holiday-hotel/)在後浦頭135號，[海福花園飯店](/hotels/haifu-garden-hotel/)在高陽路1號，[小築佳趣](/hotels/xiaozhu-jiaqu/)在浦邊66號。可按沙美街區、金沙東側行程或浦邊聚落選基地；三處不是同一個步行用餐圈。海福花園也與金城的海福商務飯店分屬不同地址，訂房前核對館名。
