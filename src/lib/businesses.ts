@@ -1,4 +1,5 @@
 import { z } from 'astro/zod';
+import { lodgingRoomFilters } from './lodging-room-filters';
 import raw from '../data/businesses.json';
 import { businessLinks } from '../data/business-links';
 import { canPlanBusiness, canShowBusinessReference, governmentRegistrationUrl } from './business-eligibility';
@@ -24,7 +25,7 @@ const record = z.object({
 }).strict();
 export type BusinessRecord = z.infer<typeof record>;
 const today = new Date().toISOString().slice(0, 10);
-const facilities = ['parking', 'breakfast', 'pickup', 'elevator', 'accessibility'];
+const facilities = ['parking', 'breakfast', 'pickup', 'elevator', 'accessibility', 'freeParking', 'laundryMachine', 'luggageStorageAvailable', 'restaurantAvailable', 'freeAirportPickup'];
 export const lodgingStyleNames: Record<string, string> = { dormitory: '床位／宿舍房', 'private-room': '獨立客房', 'whole-house': '包棟', mixed: '多種住宿形式', restricted: '資格限定住宿', backpacker: '背包客住宿', 'traditional-house': '傳統建築住宿', business: '商務住宿', resort: '渡假住宿' };
 const registrationStates = ['government-listed', 'historical-only', 'pending'];
 const operationStates = ['unverified', 'operating', 'temporary_closed', 'permanently_closed'];
@@ -122,7 +123,7 @@ const data = z.object({ version: z.literal(1), records: z.array(record) }).stric
 }).parse(raw);
 
 export const businessCategoryNames: Record<string, string> = { restaurant: '餐廳', breakfast: '早餐', snack: '在地小吃', cafe: '咖啡甜點', beverage: '飲料', bakery: '麵包糕點', beef: '牛肉料理', dessert: '甜品', bar: '餐酒館', 'specialty-food-retail': '伴手禮食品門市', hotel: '旅館', homestay: '民宿', tourist_hotel: '觀光旅館', restricted: '資格限定住宿' };
-export const facilityNames: Record<string, string> = { parking: '停車', breakfast: '早餐', pickup: '接送', elevator: '電梯', accessibility: '無障礙' };
+export const facilityNames: Record<string, string> = { parking: '停車', breakfast: '早餐', pickup: '接送', elevator: '電梯', accessibility: '無障礙', freeParking: '免費停車', laundryMachine: '洗衣設備', luggageStorageAvailable: '行李寄放', restaurantAvailable: '餐廳', freeAirportPickup: '免費機場接送' };
 export const businessHref = (b: { id: string; kind: 'food' | 'hotel'; detailHref?: string }) => b.detailHref || `/${b.kind === 'hotel' ? 'hotels' : 'food'}/#business-${b.id}`;
 function registrationSourceUrl(b: BusinessRecord) {
   const registration = b.facts?.registrationStatus;
@@ -154,6 +155,7 @@ export function getPublicBusinesses() {
     notice: b.kind === 'hotel' && !canPlanBusiness(b) && !['temporary_closed', 'permanently_closed'].includes(b.status.state) ? '此筆提供住宿資料參考；實際入住服務尚待確認，請先向業者核對。' : b.status.state === 'operating' ? '公開資料供規劃參考；出發前另確認營業、供餐或入住條件。' : b.status.state === 'unverified' ? '此筆提供住宿基本資料；入住服務與訂房條件尚待確認。' : b.status.reason!,
     detailHref: b.publication.href || businessLinks[`${b.kind}:${b.id}`],
     filterFacts: b.filterFacts || [],
+    roomFilters: b.kind === 'hotel' ? lodgingRoomFilters(b.id, b.facts?.roomTypes) : [],
     facts: Object.entries(b.facts || {}).filter(([, f]) => f.value !== null && !f.historical).map(([name, f]) => ({ name, value: f.value, checkedAt: f.checkedAt!, sourceUrl: b.sources.find(s => s.id === f.sourceId)!.url, note: f.note })),
     coordinates: b.coordinates ? { lat: b.coordinates.lat, lng: b.coordinates.lng } : undefined,
     connections: b.detail?.connections || [],
