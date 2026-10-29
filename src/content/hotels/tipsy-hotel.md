@@ -68,3 +68,7 @@
 ## 連住洗衣如何安排
 
 [查看連住洗衣如何安排](/hotels/kinmen-laundry-long-stay/)，實際方案及服務請向業者與平台確認。
+
+## 入住前後如何安排寄放
+
+可參考[金門住宿行李寄放與取件安排](/hotels/kinmen-luggage-storage-stay/)，並事先詢問民宿本次入住或退房當日的交接條件。
