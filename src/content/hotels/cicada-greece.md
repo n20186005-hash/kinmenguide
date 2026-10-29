@@ -69,3 +69,7 @@
 ## 相關住宿選擇
 
 [機場早班與晚到住宿安排](/hotels/near-airport/)，可依同行者與抵達時間比較。
+
+## 住宿基地怎麼選
+
+[比較金門五鄉鎮住宿、交通與行程](/hotels/kinmen-five-townships-stay-comparison/)，依實際地址、同行者與交通方式決定。

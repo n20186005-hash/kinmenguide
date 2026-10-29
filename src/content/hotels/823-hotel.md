@@ -83,3 +83,7 @@
 ## 相關住宿選擇
 
 [親子與長輩住宿：兒童同床、早餐與接送比較](/hotels/family/)、[機場早班與晚到住宿安排](/hotels/near-airport/)，可依同行者與抵達時間比較。
+
+## 住宿基地怎麼選
+
+[比較金門五鄉鎮住宿、交通與行程](/hotels/kinmen-five-townships-stay-comparison/)，依實際地址、同行者與交通方式決定。

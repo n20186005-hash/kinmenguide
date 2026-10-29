@@ -22,7 +22,7 @@ import { getImage } from 'astro:assets';
 export async function getStaticPaths() { return (await allEntries()).map(entry => ({ params:{collection:entry.collection,slug:entry.id},props:{entry} })); }
 interface Props { entry: Entry; }
 const { entry }=Astro.props;
-const curatedLodgingGuide = entry.collection === 'hotels' && ['family', 'near-airport', 'kinmen-traditional-house-room-choice'].includes(entry.id);
+const curatedLodgingGuide = entry.collection === 'hotels' && ['family', 'near-airport', 'kinmen-traditional-house-room-choice', 'kinmen-five-townships-stay-comparison', 'kinmen-ferry-shuitou-jincheng', 'kinmen-breakfast-stay-choice', 'guningtou-overnight', 'lieyu-overnight-comparison', 'kinmen-no-car-stay'].includes(entry.id);
 const d=entry.data;
 const { Content, headings } = await render(entry);
 const entries = await allEntries();
