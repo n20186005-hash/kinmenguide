@@ -15,6 +15,7 @@
   "sources": [
     {"title":"金門觀光旅遊網・壹樓文旅（2026-10-28查閱）","url":"https://kinmen.travel/zh-tw/accommodation/details/3595"},
     {"title":"觀光署・山后65號民宿房型資料（2026-10-28查閱）","url":"https://media.taiwan.net.tw/zh-tw/portal/travel/details/hotel_a15010000h_017965"},
+    {"title":"金門觀光旅遊網・金湖飯店（2026-10-28查閱）","url":"https://kinmen.travel/zh-tw/accommodation/details/1464"},
     {"title":"攜程・山后海珠民宿入住條件（2026-10-28查閱）","url":"https://hotels.ctrip.com/hotels/2171829.html"}
   ]
 }
@@ -35,6 +36,12 @@
 | 山后65號民宿，金沙山后65號 | 觀光署資料列家庭四人房兩種配置：床都在一樓，或一樓與閣樓各一床。 | 指明需要哪種配置，並確認可售房型及樓梯；攜程2026-10-28列10:00前退房。 | [閱讀住宿介紹](/hotels/shanhou-65-bnb/) · <a href="https://t.ctrip.cn/5Wkvp8w" target="_blank" rel="sponsored noopener noreferrer">到攜程查看房型與預訂</a> |
 
 金門觀光網對壹樓文旅的介紹亦列共用客廳與茶水間；「壹樓」是店名，不能推定每個房間都不用走樓梯。山后65號的政府與平台資料對電梯、無障礙和停車有差異；如果這些是必要條件，訂房前請直接確認，本文不作保證。
+
+## 古厝還是飯店：樓梯、衛浴與隔音怎麼問
+
+選古厝可比較上述兩家的房型配置；若偏好飯店形式，也可查看位於金湖太湖路二段218號的[金湖飯店住宿介紹](/hotels/golden-lake-hotel/)，<a href="https://t.ctrip.cn/yAdrsGO" target="_blank" rel="sponsored noopener noreferrer">到攜程查看金湖飯店房型與預訂</a>。飯店位於太湖方向，與瓊林、山后各是不同住宿基地；先按每天目的地、晚餐與返程交通比較。
+
+不論古厝或飯店，請問**實際房型**從入口到床位是否有樓梯、浴室是否獨立以及地面高低差；樓梯、電梯和無障礙動線是不同問題。隔音不能從建築形式或照片推定，可先詢問臨路、相鄰房間及夜間環境。沒有本次房型的證據時，不將任何一處標為無障礙或安靜保證。
 
 ## 把古厝放進白天路線
 

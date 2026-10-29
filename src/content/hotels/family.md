@@ -3,7 +3,7 @@
   "title": "金門親子與長輩住宿",
   "nameEn": "Family stays",
   "seoTitle": "金門親子與長輩住宿比較｜床型、兒童規定與樓層怎麼選",
-  "description": "比較八二三行館、山后65號民宿與海福花園飯店的家庭住宿重點，整理兒童計價、加床、房型樓層、早餐與接駁需要確認的事項，協助親子及長輩同行選房。",
+  "description": "比較八二三行館、山后65號民宿、海福花園及海福商務飯店的家庭住宿重點，整理兒童計價、加床、房型樓層、早餐與接駁需要確認的事項，協助親子及長輩同行選房。",
   "image": "guesthouse",
   "area": "all",
   "tag": "家庭旅行",
@@ -34,6 +34,10 @@
       "url": "https://kinmen.travel/zh-tw/accommodation/details/2867"
     },
     {
+      "title": "攜程・海福商務飯店兒童及入住政策（2026-10-28核對）",
+      "url": "https://hotels.ctrip.com/hotels/995191.html"
+    },
+    {
       "title": "攜程・海福花園飯店兒童及早餐政策（2026-10-28核對）",
       "url": "https://hotels.ctrip.com/hotels/1470130.html"
     }
@@ -45,9 +49,9 @@
 
 帶幼兒，先核對年齡、同床人數與嬰兒床；帶長輩，先問房間樓層、樓梯、門檻與從下車處到房間的距離。四人房只代表房型名稱，不能直接推定四位成人加幼兒都能入住，也不代表床位都在同一層。
 
-本篇是三家住宿的需求選輯，並非全島排名，也不是實際入住評測。以下政策於 **2026年10月28日**核對，仍須以所選日期、房型與業者回覆為準。
+本篇是四家住宿的需求選輯，並非全島排名，也不是實際入住評測。以下政策於 **2026年10月28日**核對，仍須以所選日期、房型與業者回覆為準。
 
-## 三家住宿怎麼比較
+## 四家住宿怎麼比較
 
 
 手機閱讀比較表時，可左右滑動查看完整內容與預訂入口。
@@ -57,6 +61,7 @@
 | 八二三行館 | 攜程列0–6歲兒童在不超過房型入住人數時可免費同床；所有房型不可加床 | 完整入住人數是否符合限制、嬰兒床能否預約、早餐費用及抵達時間 | [閱讀住宿介紹](/hotels/823-hotel/) · <a href="https://t.ctrip.cn/8imKMdT" target="_blank" rel="sponsored noopener noreferrer">查看房型與預訂</a> |
 | 山后65號民宿 | 官方介紹的家庭四人房有「全部一樓」及「一樓＋閣樓」兩種形式 | 能否指定全部一樓房型、實際門檻與動線、兒童人數如何計算 | [閱讀住宿介紹](/hotels/shanhou-65-bnb/) · <a href="https://t.ctrip.cn/5Wkvp8w" target="_blank" rel="sponsored noopener noreferrer">查看房型與預訂</a> |
 | 海福花園飯店 | 官方列單人、雙人、三人及四人房，可依同行人數比較 | 床型與樓層、兒童同床條件、早餐方案、付費機場接駁 | [閱讀住宿介紹](/hotels/haifu-garden-hotel/) · <a href="https://t.ctrip.cn/y6qog33" target="_blank" rel="sponsored noopener noreferrer">查看房型與預訂</a> |
+| 海福商務飯店 | 攜程列12歲及以上按成人計算；嬰兒床及加床依房型 | 各年齡兒童同床費用、早餐方案、床位數與動線 | [閱讀住宿介紹](/hotels/haifu-business-hotel/) · <a href="https://t.ctrip.cn/7683ieU" target="_blank" rel="sponsored noopener noreferrer">到攜程查看房型與預訂</a> |
 
 ### 八二三行館：幼兒同床與嬰兒床要分開確認
 
@@ -81,6 +86,12 @@
 官方列機場接駁為付費服務，預訂前請詢問費用、預約方式、時段與人數限制。早餐資訊在官方與攜程間有差異，請直接核對所選方案是否含每位同行者的早餐及兒童費用。帶長輩時，也要另問從下車處到房間的實際動線，不能由飯店名稱推定無障礙條件。
 
 [閱讀海福花園飯店住宿介紹](/hotels/haifu-garden-hotel/) · <a href="https://t.ctrip.cn/y6qog33" target="_blank" rel="sponsored noopener noreferrer">查看海福花園飯店房型與預訂</a>
+
+### 海福商務飯店：市區住宿要把兒童計價與房型一起看
+
+金城民權路85號的海福商務與金沙高陽路1號的海福花園是不同飯店。攜程2026年10月28日列兒童可入住、12歲及以上按成人計價；同床可能收費，嬰兒床及加床依房型而異。確認每位孩子年齡、所選房型人數與早餐是否包含，再核對實際樓層及浴室動線。
+
+[閱讀海福商務飯店住宿介紹](/hotels/haifu-business-hotel/) · <a href="https://t.ctrip.cn/7683ieU" target="_blank" rel="sponsored noopener noreferrer">到攜程查看房型與預訂</a>
 
 ## 訂房前，把需求寫成一則訊息
 
