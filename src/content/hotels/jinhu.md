@@ -145,3 +145,7 @@
 住宿資料可參考[木馬丑盒子 古厝民宿](/hotels/troy-droll-bin/)，訂房前請核對館別與入住條件。
 
 住宿資料可參考[泰上皇古厝民宿](/hotels/king-of-thailand-qionglin/)，訂房前請核對館別與入住條件。
+
+## 三人同行與自駕住宿
+
+三人同行可先比較[金門三人房床型](/hotels/kinmen-three-person-room/)，自駕則可參考[金門住宿停車安排](/hotels/kinmen-parking-stay/)，再依實際用車與訂單向住宿確認。
