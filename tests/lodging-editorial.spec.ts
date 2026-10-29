@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 const guides = [
+  { path: '/hotels/kinmen-luggage-storage-stay/', stays: [['/hotels/in99-hotel/', 'https://t.ctrip.cn/BD3rEfy'], ['/hotels/tipsy-hotel/', 'https://t.ctrip.cn/yVESf7h']] },
   { path: '/hotels/kinmen-cycling-stay/', stays: [['/hotels/banyan-tree-homestay/', 'https://t.ctrip.cn/ad2O1bR']] },
   { path: '/hotels/kinmen-seaview-room-choice/', stays: [['/hotels/haveachillday-inn/', 'https://t.ctrip.cn/1HjPRge']] },
   { path: '/hotels/kinmen-three-person-room/', stays: [['/hotels/happy-casa-resorts/', 'https://t.ctrip.cn/lalnZZA'], ['/hotels/home-teak-residence/', 'https://t.ctrip.cn/vFaQWZr']] },
