@@ -83,3 +83,7 @@
 ## 早餐方案怎麼比較
 
 [比較住宿早餐與外出早餐](/hotels/kinmen-breakfast-stay-choice/)，實際供應與含餐條件以所選方案確認。
+
+## 自駕停車如何確認
+
+可參考[金門自駕住宿停車安排](/hotels/kinmen-parking-stay/)，訂房前確認進場位置、車牌登記及當天停車條件。
