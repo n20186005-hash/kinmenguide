@@ -3,6 +3,7 @@ import AddToTrip from './AddToTrip.astro';
 import CtripBooking from './CtripBooking.astro';
 import { canOfferCtrip } from '../lib/ctrip';
 import { BUSINESS_PAGE_SIZE, businessPhoneHref } from '../lib/business-directory';
+import { lodgingRoomNames } from '../lib/lodging-room-filters';
 import { areaNames } from '../data/site';
 import { getPublicBusinesses, businessCategoryNames, facilityNames, lodgingStyleNames } from '../lib/businesses';
 interface Props { kind: 'food' | 'hotel'; }
@@ -10,6 +11,7 @@ const { kind } = Astro.props;
 const businesses = getPublicBusinesses().filter(b => b.kind === kind);
 const categories = [...new Set(businesses.map(b => kind === 'hotel' ? b.lodgingClass! : b.category))];
 const facilityKeys = Object.keys(facilityNames).filter(key => businesses.some(b => b.filterFacts.includes(key)));
+const roomKeys = Object.keys(lodgingRoomNames).filter(key => businesses.some(b => b.roomFilters.includes(key)));
 const styles = [...new Set(businesses.flatMap(b => b.lodgingStyle ? [b.lodgingStyle] : []))];
 const registrationLabels: Record<string, string> = { 'government-listed': '政府合法旅宿查詢有登載', 'historical-only': '目前登記狀態待核實（僅有歷史底冊）', pending: '目前旅宿登記待核實' };
 const operationLabels: Record<string, string> = { unverified: '未獨立確認', operating: '已核實提供住宿服務', temporary_closed: '暫停營業', permanently_closed: '已停止營業' };
@@ -23,22 +25,25 @@ const factLabels: Record<string, string> = { sourceReportedServiceOrHours: '服�
     <label>所在地區<select class="search-input" data-business-area aria-label="所在地區"><option value="all">全島</option>{Object.entries(areaNames).filter(([key]) => key !== 'all').map(([key, label]) => <option value={key}>{label}</option>)}</select></label>
     <label>{kind === 'hotel' ? '政府登記類別' : '餐飲類型'}<select class="search-input" data-business-category aria-label={kind === 'hotel' ? '政府登記類別' : '餐飲類型'}><option value="all">全部類型</option>{categories.map(key => <option value={key}>{businessCategoryNames[key] || key}</option>)}</select></label>
     {kind === 'hotel' && styles.length > 0 && <label>住宿形式<select class="search-input" data-business-style aria-label="住宿形式"><option value="all">全部已知形式</option>{styles.map(key => <option value={key}>{lodgingStyleNames[key]}</option>)}</select></label>}
+    {kind === 'hotel' && roomKeys.length > 0 && <label>房型參考<select class="search-input" data-business-room aria-label="房型參考"><option value="all">全部已知房型</option>{roomKeys.map(key => <option value={key}>{lodgingRoomNames[key]}</option>)}</select></label>}
     <label class="business-query-label">店名或地址<input class="search-input" type="search" placeholder={kind === 'hotel' ? '搜尋旅館、民宿或地址' : '搜尋店名、街道或料理'} data-business-query/></label>
     <button type="button" class="button button-light" data-business-reset>清除條件</button>
-    {facilityKeys.length > 0 && <fieldset class="business-facilities"><legend>已核實提供的服務</legend>{facilityKeys.map(key => <label><input type="checkbox" value={key} data-business-facility/>{facilityNames[key]}</label>)}</fieldset>}
+    {facilityKeys.length > 0 && <fieldset class="business-facilities"><legend>來源列出的服務（訂前確認）</legend>{facilityKeys.map(key => <label><input type="checkbox" value={key} data-business-facility/>{facilityNames[key]}</label>)}</fieldset>}
   </form>
+  {kind === 'hotel' && <p class="small filter-note">篩選只包含來源有明確記錄的住宿；未列出不代表沒有。房型與服務不代表當日供應，請預訂前確認。</p>}
+  {kind === 'hotel' && <details class="directory-note"><summary>更多訂房條件，請前往攜程確認</summary><p>星級／鑽級、評分與評論數、早餐份數、房間面積、付款方式、促銷、取消規則、開票和旅客入住資格，可能因日期、房型或方案而不同。可透過住宿卡片的「查看房型・預訂房間」在攜程核對。</p></details>}
   <p class="result-count" data-business-count aria-live="polite" aria-atomic="true">共 {businesses.length} {kind === 'hotel' ? '筆住宿資料' : '家餐飲'} · 每批 {BUSINESS_PAGE_SIZE} {kind === 'hotel' ? '筆' : '家'}，可展開後續名錄 · 名錄與攻略篇數分開計算</p>
   <div class="business-list" id="business-results" data-business-list>{batches.map((batch, index) => <details class="business-batch" data-business-batch open={index === 0}>
     <summary>第 {index * BUSINESS_PAGE_SIZE + 1}–{Math.min((index + 1) * BUSINESS_PAGE_SIZE, businesses.length)} {kind === 'hotel' ? '筆' : '家'} · 展開或收合名錄</summary>
-    <div class="business-grid">{batch.map(b => <article class="business-card" id={`business-${b.id}`} data-business-card data-business-key={b.key} data-area={b.area} data-category={kind === 'hotel' ? b.lodgingClass : b.category} data-style={b.lodgingStyle} data-facilities={b.filterFacts.join(' ')} data-search={`${b.name} ${b.aliases.join(' ')} ${b.address} ${areaNames[b.area]} ${businessCategoryNames[b.category] || b.category}`}>
+    <div class="business-grid">{batch.map(b => <article class="business-card" id={`business-${b.id}`} data-business-card data-business-key={b.key} data-area={b.area} data-category={kind === 'hotel' ? b.lodgingClass : b.category} data-style={b.lodgingStyle} data-facilities={b.filterFacts.join(' ')} data-rooms={b.roomFilters.join(' ')} data-search={`${b.name} ${b.aliases.join(' ')} ${b.address} ${areaNames[b.area]} ${businessCategoryNames[b.category] || b.category}`}>
     <div class="business-card-top"><span class="eyebrow">{areaNames[b.area]} / {businessCategoryNames[kind === 'hotel' ? b.lodgingClass! : b.category] || b.category}</span><span class="business-index" aria-hidden="true">{kind === 'hotel' ? '住' : '食'}</span></div>
     <h3>{b.detailHref ? <a href={b.detailHref}>{b.name}</a> : b.name}</h3><p class="business-address">{b.address}</p>
     {b.registrationNumber && <p class="small" data-business-registration-status={b.registrationStatus}>登記名稱：{b.legalName}<br/>登記字號：{b.registrationNumber}<br/>{registrationLabels[b.registrationStatus] || registrationLabels.pending}{b.registrationCheckedAt && <> · 核對 {b.registrationCheckedAt}</>}<br/><a data-business-registration-source href={b.registrationSourceUrl} target="_blank" rel="noopener noreferrer">{b.registrationStatus === 'government-listed' ? '核對政府登記來源 →' : b.registrationStatus === 'historical-only' ? '查看歷史登記來源 →' : '查看證號來源 →'}</a>{b.registrationNote && <><br/>{b.registrationNote}</>}</p>}
     {kind === 'hotel' && b.actualOperationStatus !== 'unverified' && <p class="small" data-business-actual-operation={b.actualOperationStatus}>實際營業：{operationLabels[b.actualOperationStatus]}{b.actualOperationCheckedAt && <> · 核對 {b.actualOperationCheckedAt}</>}</p>}
     {b.lodgingStyle && <p class="small" data-business-lodging-style={b.lodgingStyle}>住宿形式：{lodgingStyleNames[b.lodgingStyle]}</p>}
     {b.facts.filter(f => f.name === 'eligibility').map(f => <p class="alert-note">入住資格：{String(f.value)}</p>)}
-    {b.filterFacts.length > 0 && <ul class="business-tags" aria-label="已核實服務">{b.filterFacts.map(key => <li>{facilityNames[key] || key}</li>)}</ul>}
-    {b.facts.filter(f => b.filterFacts.includes(f.name) && f.note).map(f => <p class="small">{f.note}</p>)}
+    {b.filterFacts.length > 0 && <ul class="business-tags" aria-label="來源列出的服務">{b.filterFacts.map(key => <li>{facilityNames[key] || key}</li>)}</ul>}
+    {b.facts.filter(f => b.filterFacts.includes(f.name) && f.note).map(f => <p class="small">{f.note} <a href={f.sourceUrl} target="_blank" rel="noopener noreferrer">來源 · {f.checkedAt}</a></p>)}
     {kind === 'food' && b.facts.filter(f => f.name === 'sourceReportedSundayScheduleAndService').map(f => <details class="small"><summary>來源列出的週日時段／服務參考</summary><p>{String(f.value)}</p><p>不代表當日供餐保證；其他日期與最後點餐請查來源或向店家確認。</p></details>)}
     {b.facts.filter(f => factLabels[f.name]).map(f => <details class="small" data-business-fact={f.name}><summary>{factLabels[f.name]}</summary><p>{String(f.value)}</p>{f.note && <p>{f.note}</p>}<a href={f.sourceUrl} target="_blank" rel="noopener noreferrer">核對此項來源 · {f.checkedAt}</a></details>)}
     <p class:list={['small', { 'business-closed': ['temporary_closed', 'permanently_closed'].includes(b.state) }]}>{b.notice}</p>
@@ -64,6 +69,7 @@ document.querySelectorAll<HTMLElement>('[data-business-directory]').forEach(root
   const area = root.querySelector<HTMLSelectElement>('[data-business-area]')!;
   const category = root.querySelector<HTMLSelectElement>('[data-business-category]')!;
   const style = root.querySelector<HTMLSelectElement>('[data-business-style]');
+  const room = root.querySelector<HTMLSelectElement>('[data-business-room]');
   const query = root.querySelector<HTMLInputElement>('[data-business-query]')!;
   const facilities = [...root.querySelectorAll<HTMLInputElement>('[data-business-facility]')];
   const pagination = root.querySelector<HTMLElement>('[data-business-pagination]')!;
@@ -83,6 +89,7 @@ document.querySelectorAll<HTMLElement>('[data-business-directory]').forEach(root
     return cards.filter(card => (area.value === 'all' || card.dataset.area === area.value)
       && (category.value === 'all' || card.dataset.category === category.value)
       && (!style || style.value === 'all' || card.dataset.style === style.value)
+      && (!room || room.value === 'all' || (card.dataset.rooms || '').split(' ').includes(room.value))
       && searchable.get(card)!.includes(q)
       && selected.every(key => (card.dataset.facilities || '').split(' ').includes(key)));
   }
@@ -101,6 +108,7 @@ document.querySelectorAll<HTMLElement>('[data-business-directory]').forEach(root
   function clearFilters() {
     area.value = 'all'; category.value = 'all'; query.value = ''; facilities.forEach(f => f.checked = false);
     if (style) style.value = 'all';
+    if (room) room.value = 'all';
     currentPage = 1;
   }
   function changeFilters() { currentPage = 1; update(); }
@@ -118,7 +126,7 @@ document.querySelectorAll<HTMLElement>('[data-business-directory]').forEach(root
   }
   root.querySelector('form')?.addEventListener('submit', event => event.preventDefault());
   area.addEventListener('change', changeFilters); category.addEventListener('change', changeFilters); query.addEventListener('input', changeFilters);
-  style?.addEventListener('change', changeFilters);
+  style?.addEventListener('change', changeFilters); room?.addEventListener('change', changeFilters);
   facilities.forEach(f => f.addEventListener('change', changeFilters));
   root.querySelectorAll('[data-business-reset]').forEach(button => button.addEventListener('click', () => { clearFilters(); update(); query.focus(); }));
   [[previous, -1], [next, 1]].forEach(([button, step]) => (button as HTMLButtonElement).addEventListener('click', () => {
@@ -131,5 +139,5 @@ document.querySelectorAll<HTMLElement>('[data-business-directory]').forEach(root
 });
 </script>
 <style>
-.business-directory{border-top:1px solid var(--line);padding-top:42px;scroll-margin-top:115px}.directory-note{padding:18px 22px;background:#eeeee4;border-left:3px solid #a43e2e;font-size:14px;line-height:1.8}.directory-note p+p{margin-top:6px}.directory-note a{color:#a43e2e;text-decoration:underline}.business-filters[hidden],.business-pagination[hidden]{display:none}.business-filters{display:grid;grid-template-columns:1fr 1fr 1.5fr auto;gap:16px;align-items:end;margin:24px 0 8px}.business-filters.has-lodging-style{grid-template-columns:1fr 1fr 1fr 1.5fr auto}.business-filters label{display:grid;gap:6px;font-size:13px}.business-filters .search-input{min-width:0;width:100%}.business-facilities{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:16px;border:1px solid var(--line);padding:12px 16px}.business-facilities legend{font-size:12px;color:var(--muted)}.business-facilities label{display:flex;align-items:center;gap:7px}.business-batch{margin:0 0 20px}.business-batch>summary{cursor:pointer;padding:12px 0;font-size:14px;font-weight:600;color:#a43e2e}.business-pagination{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:24px}.business-pagination span{font-size:14px}.business-pagination button:disabled{opacity:.45;cursor:default}.result-count{scroll-margin-top:120px}.business-card[hidden]{display:none}.business-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.business-card{min-width:0;padding:24px;background:white;border:1px solid var(--line);display:flex;flex-direction:column;gap:12px;scroll-margin-top:120px}.business-card:target{outline:2px solid #a43e2e;outline-offset:4px}.business-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.business-card-top .eyebrow{margin:0;font-size:10px}.business-index{font:24px var(--font-serif);color:#a43e2e;border:1px solid #cfb9a6;padding:3px 9px;flex-shrink:0}.business-card h3{font:700 22px/1.5 var(--font-serif)}.business-card h3 a:hover{color:#a43e2e}.business-address{font-size:14px;overflow-wrap:anywhere}.business-actions{display:flex;flex-wrap:wrap;gap:10px 16px;font-size:13px;color:#a43e2e}.business-actions a{border-bottom:1px solid #d7b2a5;overflow-wrap:anywhere}.business-card-bottom{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.business-tags{list-style:none;padding:0;margin:0;display:flex;gap:7px;flex-wrap:wrap}.business-tags li{padding:2px 8px;background:#edf2e9;font-size:12px}.business-closed{color:#a43e2e;font-weight:600}@media(max-width:1000px){.business-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.business-filters,.business-filters.has-lodging-style{grid-template-columns:1fr 1fr}.business-query-label{grid-column:1/2}}@media(max-width:600px){.business-grid{grid-template-columns:1fr}.business-filters,.business-filters.has-lodging-style{grid-template-columns:1fr 1fr}.business-query-label{grid-column:1/-1}.business-filters>button{grid-column:1/-1}.business-card{padding:20px}.directory-note{padding:16px}}
+.business-directory{border-top:1px solid var(--line);padding-top:42px;scroll-margin-top:115px}.directory-note{padding:18px 22px;background:#eeeee4;border-left:3px solid #a43e2e;font-size:14px;line-height:1.8}.directory-note p+p{margin-top:6px}.directory-note a{color:#a43e2e;text-decoration:underline}.business-filters[hidden],.business-pagination[hidden]{display:none}.business-filters{display:grid;grid-template-columns:1fr 1fr 1.5fr auto;gap:16px;align-items:end;margin:24px 0 8px}.business-filters.has-lodging-style{grid-template-columns:repeat(4,minmax(0,1fr))}.filter-note{margin:12px 0}.business-filters label{display:grid;gap:6px;font-size:13px}.business-filters .search-input{min-width:0;width:100%}.business-facilities{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:16px;border:1px solid var(--line);padding:12px 16px}.business-facilities legend{font-size:12px;color:var(--muted)}.business-facilities label{display:flex;align-items:center;gap:7px}.business-batch{margin:0 0 20px}.business-batch>summary{cursor:pointer;padding:12px 0;font-size:14px;font-weight:600;color:#a43e2e}.business-pagination{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:24px}.business-pagination span{font-size:14px}.business-pagination button:disabled{opacity:.45;cursor:default}.result-count{scroll-margin-top:120px}.business-card[hidden]{display:none}.business-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.business-card{min-width:0;padding:24px;background:white;border:1px solid var(--line);display:flex;flex-direction:column;gap:12px;scroll-margin-top:120px}.business-card:target{outline:2px solid #a43e2e;outline-offset:4px}.business-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.business-card-top .eyebrow{margin:0;font-size:10px}.business-index{font:24px var(--font-serif);color:#a43e2e;border:1px solid #cfb9a6;padding:3px 9px;flex-shrink:0}.business-card h3{font:700 22px/1.5 var(--font-serif)}.business-card h3 a:hover{color:#a43e2e}.business-address{font-size:14px;overflow-wrap:anywhere}.business-actions{display:flex;flex-wrap:wrap;gap:10px 16px;font-size:13px;color:#a43e2e}.business-actions a{border-bottom:1px solid #d7b2a5;overflow-wrap:anywhere}.business-card-bottom{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.business-tags{list-style:none;padding:0;margin:0;display:flex;gap:7px;flex-wrap:wrap}.business-tags li{padding:2px 8px;background:#edf2e9;font-size:12px}.business-closed{color:#a43e2e;font-weight:600}@media(max-width:1000px){.business-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.business-filters,.business-filters.has-lodging-style{grid-template-columns:1fr 1fr}.business-query-label{grid-column:1/2}}@media(max-width:600px){.business-grid{grid-template-columns:1fr}.business-filters,.business-filters.has-lodging-style{grid-template-columns:1fr 1fr}.business-query-label{grid-column:1/-1}.business-filters>button{grid-column:1/-1}.business-card{padding:20px}.directory-note{padding:16px}}
 </style>

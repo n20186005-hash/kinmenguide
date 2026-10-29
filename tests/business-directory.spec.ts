@@ -210,3 +210,27 @@ test('attraction links retain current lodging references without presenting unkn
     expect(record.facts?.registrationStatus?.value).toBe('government-listed');
   }
 });
+
+test('room and sourced amenity filters combine and reset without treating unknown as yes', async ({ page }) => {
+  await page.goto('/hotels/');
+  const directory = page.locator('[data-business-directory]');
+  const room = directory.getByLabel('房型參考');
+  await room.selectOption('twin');
+  await expect(directory.locator('#business-lodging-7959747c13f4')).toBeVisible();
+  await expect(directory.locator('#business-lodging-afc54d0893d6')).toBeVisible();
+  await expect(directory.locator('#business-golden-lake-hotel')).toBeHidden();
+  await directory.getByLabel('免費停車', { exact: true }).check();
+  for (const card of await directory.locator('[data-business-card]:visible').all()) {
+    expect(await card.getAttribute('data-rooms')).toContain('twin');
+    expect(await card.getAttribute('data-facilities')).toContain('freeParking');
+  }
+  await directory.locator('[data-business-reset]').first().click();
+  await expect(room).toHaveValue('all');
+  await directory.getByLabel('免費機場接送', { exact: true }).check();
+  await directory.getByLabel('接送', { exact: true }).check();
+  await directory.getByLabel('免費停車', { exact: true }).check();
+  await directory.getByLabel('停車', { exact: true }).check();
+  await expect(directory.locator('#business-lodging-f537f696a5a9')).toBeVisible();
+  await expect(directory.locator('#business-lodging-f537f696a5a9')).toContainText('預約');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
+});
