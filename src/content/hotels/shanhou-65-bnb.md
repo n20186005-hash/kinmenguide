@@ -85,3 +85,7 @@
 ## 住宿基地怎麼選
 
 [比較金門五鄉鎮住宿、交通與行程](/hotels/kinmen-five-townships-stay-comparison/)，依實際地址、同行者與交通方式決定。
+
+## 長輩同行選房
+
+[查看帶長輩住金門的電梯、樓梯及動線比較](/hotels/kinmen-senior-stay-stairs/)，實際條件請依訂單與業者答覆確認。
