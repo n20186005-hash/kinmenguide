@@ -201,3 +201,7 @@
 住宿資料可參考[愛玩客107](/hotels/love-player-107/)、[閩南小院](/hotels/minnan-courtyard/)，訂房前請核對館別與入住條件。
 
 住宿資料可參考[藍色星空庭園](/hotels/blue-starry-garden/)，訂房前請核對館別與入住條件。
+
+## 想住景觀房怎麼選
+
+如果想在金寧住宿時看橋或看海，可先閱讀[金門海景住宿與大橋景觀房選擇](/hotels/kinmen-seaview-room-choice/)，再依房型、實際視角與交通安排確認。
