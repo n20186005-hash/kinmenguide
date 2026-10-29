@@ -90,3 +90,7 @@
 ## 住宿基地怎麼選
 
 [比較金門五鄉鎮住宿、交通與行程](/hotels/kinmen-five-townships-stay-comparison/)，依實際地址、同行者與交通方式決定。
+
+## 不租車怎麼到
+
+[查看機場公車線索與不租車住宿安排](/hotels/kinmen-no-car-stay/)，站點及班次請依當日公告核對。

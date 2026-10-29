@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 const guides = [
+  { path: '/hotels/kinmen-no-car-stay/', stays: [['/hotels/haifu-business-hotel/', 'https://t.ctrip.cn/7683ieU']] },
   { path: '/hotels/kinmen-five-townships-stay-comparison/', stays: [['/hotels/haifu-business-hotel/', 'https://t.ctrip.cn/7683ieU'], ['/hotels/823-hotel/', 'https://t.ctrip.cn/8imKMdT'], ['/hotels/shanhou-65-bnb/', 'https://t.ctrip.cn/5Wkvp8w'], ['/hotels/cicada-greece/', 'https://t.ctrip.cn/vMUXr9h'], ['/hotels/jindian-bnb/', 'https://t.ctrip.cn/uFzh6IY']] },
   { path: '/hotels/kinmen-ferry-shuitou-jincheng/', stays: [['/hotels/shuitou-ancient-water-tower/', 'https://t.ctrip.cn/0D2Ypf5'], ['/hotels/haifu-business-hotel/', 'https://t.ctrip.cn/7683ieU']] },
   { path: '/hotels/kinmen-breakfast-stay-choice/', stays: [['/hotels/golden-lake-hotel/', 'https://t.ctrip.cn/yAdrsGO'], ['/hotels/beishan-hostel/', 'https://t.ctrip.cn/hIR0IuE']] },
