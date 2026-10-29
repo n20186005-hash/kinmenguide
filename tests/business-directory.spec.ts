@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import fs from 'node:fs';
 import { BUSINESS_PAGE_SIZE } from '../src/lib/business-directory';
+import { ctripFacilityFor, mergeCtripFacilities } from '../src/lib/ctrip-facilities';
 const records = JSON.parse(fs.readFileSync('src/data/businesses.json', 'utf8')).records;
 const group = (kind: string) => records.filter((b: any) => b.kind === kind);
 const firstPageCount = (items: any[]) => Math.min(items.length, BUSINESS_PAGE_SIZE);
@@ -14,7 +15,7 @@ test('lodging selection combines town, class and verified facilities without mer
   await expect(directory.locator('#business-jindian-bnb')).toContainText('278號');
   await expect(directory.locator('#business-jindian-bnb-2')).toContainText('723號');
   await directory.getByLabel('電梯', { exact: true }).check();
-  await expect(directory.locator('[data-business-card]:visible')).toHaveCount(firstPageCount(group('hotel').filter((b: any) => b.area === 'lieyu' && b.filterFacts?.includes('elevator'))));
+  await expect(directory.locator('[data-business-card]:visible')).toHaveCount(firstPageCount(group('hotel').filter((b: any) => b.area === 'lieyu' && mergeCtripFacilities(b.filterFacts || [], b.facts, ctripFacilityFor(b.id)).filterFacts.includes('elevator'))));
   await expect(directory.locator('#business-jindian-bnb-2')).toBeVisible();
   await expect(directory.locator('#business-jindian-bnb-2')).toContainText('未推定所有房間或衛浴均無障礙');
   await directory.getByLabel('政府登記類別').selectOption('homestay');
@@ -27,7 +28,7 @@ test('lodging selection combines town, class and verified facilities without mer
   await expect(directory.locator('[data-business-card]:visible')).toHaveCount(firstPageCount(group('hotel').filter((b: any) => b.lodgingClass === 'hotel')));
   for (const input of await directory.locator('[data-business-facility]').all()) {
     const fact = await input.getAttribute('value');
-    expect(group('hotel').some((b: any) => b.filterFacts?.includes(fact))).toBeTruthy();
+    expect(group('hotel').some((b: any) => mergeCtripFacilities(b.filterFacts || [], b.facts, ctripFacilityFor(b.id)).filterFacts.includes(fact || ''))).toBeTruthy();
   }
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
 });
@@ -233,4 +234,38 @@ test('room and sourced amenity filters combine and reset without treating unknow
   await expect(directory.locator('#business-lodging-f537f696a5a9')).toBeVisible();
   await expect(directory.locator('#business-lodging-f537f696a5a9')).toContainText('預約');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
+});
+
+test('Ctrip score and review facets use dated hotel snapshots together', async ({ page }) => {
+  await page.goto('/hotels/');
+  const directory = page.locator('[data-business-directory]');
+  const score = directory.getByLabel('攜程評分');
+  const reviews = directory.getByLabel('攜程點評數');
+  await score.selectOption('4.5');
+  await reviews.selectOption('50');
+  const cards = directory.locator('[data-business-card]:visible');
+  expect(await cards.count()).toBeGreaterThan(0);
+  for (const card of await cards.all()) {
+    expect(Number(await card.getAttribute('data-ctrip-score'))).toBeGreaterThanOrEqual(4.5);
+    expect(Number(await card.getAttribute('data-ctrip-reviews'))).toBeGreaterThanOrEqual(50);
+    await expect(card).toContainText('攜程資料查閱於');
+  }
+  await directory.locator('[data-business-reset]').first().click();
+  await expect(score).toHaveValue('all');
+  await expect(reviews).toHaveValue('all');
+});
+
+test('expired Ctrip snapshot is not used to filter or display platform-only services', async ({ page }) => {
+  await page.clock.install({ time: new Date('2027-02-02T12:00:00Z') });
+  await page.goto('/hotels/');
+  const directory = page.locator('[data-business-directory]');
+  const card = directory.locator('#business-lodging-59130f8e4118');
+  await directory.getByLabel('店名或地址').fill('初城');
+  await expect(card).toBeVisible();
+  await expect(card).toContainText('設施資料已過期');
+  await directory.getByLabel('行李寄放', { exact: true }).check();
+  await expect(card).toBeHidden();
+  await directory.locator('[data-business-reset]').first().click();
+  await directory.getByLabel('攜程評分').selectOption('4.5');
+  await expect(directory.locator('[data-business-card]:visible')).toHaveCount(0);
 });
