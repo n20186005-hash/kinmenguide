@@ -16,6 +16,7 @@
     {"title": "柚木的家官網客房與地址（查閱2026-10-28）", "url": "https://www.kinmenhome.com/"},
     {"title": "金門觀光旅遊網・十美登記與地址（查閱2026-10-28）", "url": "https://kinmen.travel/zh-tw/accommodation/details/3119"},
     {"title": "臺灣旅宿網・柚木的家（登記快照2026-10-27）", "url": "https://www.taiwanstay.net.tw/TSA/web_page/TSA020200.jsp?hohi_id=14278"},
+    {"title": "金門觀光旅遊網・老柚木民宿登記（查閱2026-10-28）", "url": "https://kinmen.travel/zh-tw/accommodation/details/3855"},
     {"title": "攜程・柚木的家入住政策（查閱2026-10-28）", "url": "https://hotels.ctrip.com/hotels/5601770.html"},
     {"title": "PTT旅客三人房心得（2025年歷史需求線索；查閱2026-10-28）", "url": "https://www.ptt.cc/bbs/Hotel/M.1746549028.A.4F1.html"}
   ],
@@ -52,7 +53,7 @@
 | 金門十美渡假村・金湖后壠 | 兩臥室三人豪華套房有「1大1小床」與「3小床」兩種；前者雙人床200×200公分、單人床105×200公分，後者三張單人床105×200公分 | 想比較各睡一床與共用大床，並需要兩個睡眠空間；實際床位分布、門與衛浴仍請確認 | [十美住宿詳情](/hotels/happy-casa-resorts/) · <a href="https://t.ctrip.cn/lalnZZA" target="_blank" rel="sponsored noopener noreferrer">攜程查看十美房型（合作連結）</a> |
 | 柚木的家Home & Teak Residence・金湖國順街 | 歡聚豪華3人房：一張180×200公分大床，加一張110×200公分單人床；官網列3成人入住、不可加床 | 兩人接受共床、第三人需要單人床；此配置不能當作三張獨立床；攜程目前列辦理入住者須年滿20歲，實際資格請確認 | [柚木的家住宿詳情](/hotels/home-teak-residence/) · <a href="https://t.ctrip.cn/vFaQWZr" target="_blank" rel="sponsored noopener noreferrer">攜程查看柚木的家房型（合作連結）</a> |
 
-十美官方旅遊資料列后壟200號，政府登記範圍為后壠200、201號；柚木的家登記列國順街32、34、36號，官網聯絡地址為36號，攜程則列32號。兩家都應把訂單傳給住宿方，確認本次房間與報到入口。柚木的家也不是金寧前厝的「老柚木民宿」，不要混用店名或門牌。
+十美官方旅遊資料列后壟200號，政府登記範圍為后壠200、201號；柚木的家登記列國順街32、34、36號，官網聯絡地址為36號，攜程則列32號。兩家都應把訂單傳給住宿方，確認本次房間與報到入口。金湖的「柚木的家」與金寧前厝的「老柚木民宿」是不同地址及不同旅宿登記；兩者是否另有經營關聯尚未確認，訂房時請勿混用名稱或門牌。
 
 ## 床位之外，金湖兩個位置怎麼排
 
