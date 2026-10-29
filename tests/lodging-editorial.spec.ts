@@ -1,6 +1,9 @@
 import { test, expect } from '@playwright/test';
 
 const guides = [
+  { path: '/hotels/kinmen-pet-friendly-stay/', stays: [['/hotels/lishe-homestay/', 'https://t.ctrip.cn/uxIXpUy'], ['/hotels/xiang-pin-yuan/', 'https://t.ctrip.cn/nNJKQXY']] },
+  { path: '/hotels/kinmen-laundry-long-stay/', stays: [['/hotels/tipsy-hotel/', 'https://t.ctrip.cn/yVESf7h'], ['/hotels/wagui-bnb/', 'https://t.ctrip.cn/8YPNVvg']] },
+  { path: '/hotels/kinmen-flight-cancel-stay-plan/', stays: [['/hotels/823-hotel/', 'https://t.ctrip.cn/8imKMdT'], ['/hotels/haifu-business-hotel/', 'https://t.ctrip.cn/7683ieU']] },
   { path: '/hotels/kinmen-whole-house-booking/', stays: [['/hotels/yuntian-bnb/', 'https://t.ctrip.cn/l1wPDLu'], ['/hotels/happy-house-bnb/', 'https://t.ctrip.cn/9LlcLjN']] },
   { path: '/hotels/kinmen-senior-stay-stairs/', stays: [['/hotels/jinlu-second/', 'https://t.ctrip.cn/6fWK8GO'], ['/hotels/shanhou-65-bnb/', 'https://t.ctrip.cn/5Wkvp8w']] },
   { path: '/hotels/kinmen-late-ferry-stay/', stays: [['/hotels/haifu-business-hotel/', 'https://t.ctrip.cn/7683ieU'], ['/hotels/chang-hong-hotel/', 'https://t.ctrip.cn/bJZAJeC'], ['/hotels/shuitou-ancient-water-tower/', 'https://t.ctrip.cn/0D2Ypf5']] },

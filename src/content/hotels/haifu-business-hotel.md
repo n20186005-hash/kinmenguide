@@ -98,3 +98,7 @@
 ## 晚船抵達住宿
 
 [查看晚船抵達金門的住宿接待與交通安排](/hotels/kinmen-late-ferry-stay/)，實際條件請依訂單與業者答覆確認。
+
+## 航班停飛住宿安排
+
+[查看航班停飛住宿安排](/hotels/kinmen-flight-cancel-stay-plan/)，實際方案及服務請向業者與平台確認。

@@ -87,3 +87,7 @@
 ## 住宿基地怎麼選
 
 [比較金門五鄉鎮住宿、交通與行程](/hotels/kinmen-five-townships-stay-comparison/)，依實際地址、同行者與交通方式決定。
+
+## 航班停飛住宿安排
+
+[查看航班停飛住宿安排](/hotels/kinmen-flight-cancel-stay-plan/)，實際方案及服務請向業者與平台確認。
