@@ -8,7 +8,7 @@ import { canPlanBusiness, canShowBusinessReference, governmentRegistrationUrl } 
 const day = z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(s => !Number.isNaN(Date.parse(s)) && new Date(s).toISOString().slice(0, 10) === s, 'Invalid calendar date');
 const url = z.url().refine(s => /^https?:\/\//.test(s), 'Public HTTP URL required');
 const slug = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
-const source = z.object({ id: z.string().min(1), url, type: z.enum(['official', 'business', 'onsite', 'maps-manual']), checkedAt: day }).strict();
+const source = z.object({ id: z.string().min(1), url: url.optional(), type: z.enum(['official', 'business', 'onsite', 'maps-manual', 'user-provided']), checkedAt: day }).strict().refine(s => s.type === 'user-provided' || !!s.url, 'Public sources require a URL');
 const fact = z.object({ value: z.union([z.string(), z.number(), z.boolean(), z.null()]), sourceId: z.string().optional(), checkedAt: day.optional(), validFrom: day.optional(), validUntil: day.optional(), historical: z.boolean().optional(), note: z.string().optional() }).strict();
 const record = z.object({
   id: slug, kind: z.enum(['food', 'hotel']), name: z.string().min(2), address: z.string().min(4),
@@ -26,7 +26,7 @@ const record = z.object({
 }).strict();
 export type BusinessRecord = z.infer<typeof record>;
 const today = new Date().toISOString().slice(0, 10);
-const facilities = ['parking', 'breakfast', 'pickup', 'elevator', 'accessibility', 'freeParking', 'laundryMachine', 'luggageStorageAvailable', 'restaurantAvailable', 'freeAirportPickup', ...Object.keys(ctripFacilityNames)];
+const facilities = ['parking', 'breakfast', 'pickup', 'elevator', 'accessibility', 'freeParking', 'freePierPickup', 'laundryMachine', 'luggageStorageAvailable', 'restaurantAvailable', 'freeAirportPickup', ...Object.keys(ctripFacilityNames)];
 export const lodgingStyleNames: Record<string, string> = { dormitory: '床位／宿舍房', 'private-room': '獨立客房', 'whole-house': '包棟', mixed: '多種住宿形式', restricted: '資格限定住宿', backpacker: '背包客住宿', 'traditional-house': '傳統建築住宿', business: '商務住宿', resort: '渡假住宿' };
 const registrationStates = ['government-listed', 'historical-only', 'pending'];
 const operationStates = ['unverified', 'operating', 'temporary_closed', 'permanently_closed'];
@@ -76,7 +76,7 @@ const data = z.object({ version: z.literal(1), records: z.array(record) }).stric
         if (typeof registration.value !== 'string' || !registrationStates.includes(registration.value)) fail(i, 'Unknown lodging registration status');
         requireSource(registration.sourceId, true);
         const evidence = registration.sourceId ? sourceMap.get(registration.sourceId) : undefined;
-        if (registration.value === 'government-listed' && evidence && !governmentRegistrationUrl(evidence.url)) fail(i, 'Government listing needs a government registration source, not a tourism directory');
+        if (registration.value === 'government-listed' && evidence && (!evidence.url || !governmentRegistrationUrl(evidence.url))) fail(i, 'Government listing needs a government registration source, not a tourism directory');
       }
       const actual = b.facts?.actualOperationStatus;
       if (actual && actual.value !== null && (typeof actual.value !== 'string' || !operationStates.includes(actual.value))) fail(i, 'Unknown actual lodging operation status');
@@ -91,7 +91,7 @@ const data = z.object({ version: z.literal(1), records: z.array(record) }).stric
     const mapCid = b.facts?.verifiedMapCid;
     if (mapCid && mapCid.value !== null) {
       const evidence = mapCid.sourceId ? sourceMap.get(mapCid.sourceId) : undefined;
-      if (typeof mapCid.value !== 'string' || !/^\d{1,20}$/.test(mapCid.value) || !evidence || evidence.type !== 'maps-manual' || googleMapCid(evidence.url) !== mapCid.value) fail(i, 'Verified map CID needs the matching manual map source');
+      if (typeof mapCid.value !== 'string' || !/^\d{1,20}$/.test(mapCid.value) || !evidence || evidence.type !== 'maps-manual' || !evidence.url || googleMapCid(evidence.url) !== mapCid.value) fail(i, 'Verified map CID needs the matching manual map source');
     }
     Object.entries(b.facts || {}).forEach(([name, f]) => {
       if (f.value === null) return;
@@ -124,7 +124,7 @@ const data = z.object({ version: z.literal(1), records: z.array(record) }).stric
 }).parse(raw);
 
 export const businessCategoryNames: Record<string, string> = { restaurant: '餐廳', breakfast: '早餐', snack: '在地小吃', cafe: '咖啡甜點', beverage: '飲料', bakery: '麵包糕點', beef: '牛肉料理', dessert: '甜品', bar: '餐酒館', 'specialty-food-retail': '伴手禮食品門市', hotel: '旅館', homestay: '民宿', tourist_hotel: '觀光旅館', restricted: '資格限定住宿' };
-export const facilityNames: Record<string, string> = { parking: '停車', breakfast: '早餐', pickup: '接送', elevator: '電梯', accessibility: '無障礙', freeParking: '免費停車', laundryMachine: '洗衣設備', luggageStorageAvailable: '行李寄放', restaurantAvailable: '餐廳', freeAirportPickup: '免費機場接送', ...ctripFacilityNames };
+export const facilityNames: Record<string, string> = { parking: '停車', breakfast: '早餐', pickup: '接送', elevator: '電梯', accessibility: '無障礙', freeParking: '免費停車', freePierPickup: '免費碼頭接送', laundryMachine: '洗衣設備', luggageStorageAvailable: '行李寄放', restaurantAvailable: '餐廳', freeAirportPickup: '免費機場接送', ...ctripFacilityNames };
 export const businessHref = (b: { id: string; kind: 'food' | 'hotel'; detailHref?: string }) => b.detailHref || `/${b.kind === 'hotel' ? 'hotels' : 'food'}/#business-${b.id}`;
 function registrationSourceUrl(b: BusinessRecord) {
   const registration = b.facts?.registrationStatus;
@@ -132,7 +132,7 @@ function registrationSourceUrl(b: BusinessRecord) {
   const evidence = b.sources.filter(s => s.type === 'official' && b.verifiedFields.registrationNumber?.includes(s.id));
   // The service description may come from the operator; certificate links
   // must instead follow the official evidence for the registration field.
-  return (evidence.find(s => governmentRegistrationUrl(s.url)) || evidence[0])?.url;
+  return (evidence.find(s => s.url && governmentRegistrationUrl(s.url)) || evidence[0])?.url;
 }
 function ctripForPublic(b: BusinessRecord) {
   if (b.kind !== 'hotel' || ['temporary_closed', 'permanently_closed'].includes(b.status.state) || ['temporary_closed', 'permanently_closed'].includes(String(b.facts?.actualOperationStatus?.value || ''))) return undefined;
@@ -155,7 +155,7 @@ export function getPublicBusinesses() {
     verifiedMapUrl: typeof b.facts?.verifiedMapCid?.value === 'string' && !b.facts.verifiedMapCid.historical ? `https://www.google.com/maps?cid=${b.facts.verifiedMapCid.value}` : undefined,
     phone: b.contact?.phone, website: b.contact?.website,
     websiteLabel: b.facts?.websiteSource ? '政府資料所列網站' : '業者網站',
-    sourceUrl: b.sources.find(s => s.id === b.status.sourceId)!.url, sources: b.sources.map(s => ({ url: s.url, checkedAt: s.checkedAt })),
+    sourceUrl: b.sources.find(s => s.id === b.status.sourceId)!.url || '', sources: b.sources.filter(s => s.url).map(s => ({ url: s.url!, checkedAt: s.checkedAt })),
     checkedAt: b.status.checkedAt, state: b.status.state,
     notice: b.kind === 'hotel' && !canPlanBusiness(b) && !['temporary_closed', 'permanently_closed'].includes(b.status.state) ? '此筆提供住宿資料參考；實際入住服務尚待確認，請先向業者核對。' : b.status.state === 'operating' ? '公開資料供規劃參考；出發前另確認營業、供餐或入住條件。' : b.status.state === 'unverified' ? '此筆提供住宿基本資料；入住服務與訂房條件尚待確認。' : b.status.reason!,
     detailHref: b.publication.href || businessLinks[`${b.kind}:${b.id}`],
@@ -164,7 +164,7 @@ export function getPublicBusinesses() {
     ctripFacilities: ctripForPublic(b),
     ctripFacilityConflicts: mergeCtripFacilities(b.filterFacts || [], b.facts, ctripForPublic(b)).conflicts,
     roomFilters: b.kind === 'hotel' ? lodgingRoomFilters(b.id, b.facts?.roomTypes) : [],
-    facts: Object.entries(b.facts || {}).filter(([, f]) => f.value !== null && !f.historical).map(([name, f]) => ({ name, value: f.value, checkedAt: f.checkedAt!, sourceUrl: b.sources.find(s => s.id === f.sourceId)!.url, note: f.note })),
+    facts: Object.entries(b.facts || {}).filter(([, f]) => f.value !== null && !f.historical).map(([name, f]) => ({ name, value: f.value, checkedAt: f.checkedAt!, sourceUrl: b.sources.find(s => s.id === f.sourceId)!.url, sourceType: b.sources.find(s => s.id === f.sourceId)!.type, note: f.note })),
     coordinates: b.coordinates ? { lat: b.coordinates.lat, lng: b.coordinates.lng } : undefined,
     connections: b.detail?.connections || [],
   }));
