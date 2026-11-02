@@ -54,7 +54,7 @@ test('food discovery combines category and town, handles no results and omits co
 
 test('business map switches layers and keeps unverified coordinates out of markers', async ({ page }) => {
   await page.goto('/map/');
-  await expect(page.locator('#map-count')).toHaveText('162 個景點');
+  await expect(page.locator('#map-count')).toHaveText('174 個景點');
   await page.getByRole('button', { name: '住宿', exact: true }).click();
   await expect(page.locator('.map-point:visible')).toHaveCount(group('hotel').length);
   await expect(page.locator('#map-pin-count')).toContainText('沒有可確認及復用的坐標');

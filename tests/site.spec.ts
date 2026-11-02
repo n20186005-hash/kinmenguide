@@ -56,9 +56,9 @@ test('home navigation, image loading and viewport',async({page},info)=>{
 });
 
 test('catalog filters, zero results, and reset',async({page})=>{
- await page.goto('/attractions/');await expect(page.locator('[data-card]:visible')).toHaveCount(162);
+ await page.goto('/attractions/');await expect(page.locator('[data-card]:visible')).toHaveCount(174);
  await page.getByRole('button',{name:'烈嶼',exact:true}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(34);await expect(page.locator('[data-card]:visible h3').filter({hasText:'九宮坑道'})).toBeVisible();
- await page.locator('[data-query]').fill('不存在的景點xyz');await expect(page.locator('[data-empty]')).toBeVisible();await page.getByRole('button',{name:'清除篩選'}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(162);
+ await page.locator('[data-query]').fill('不存在的景點xyz');await expect(page.locator('[data-empty]')).toBeVisible();await page.getByRole('button',{name:'清除篩選'}).click();await expect(page.locator('[data-card]:visible')).toHaveCount(174);
 });
 
 test('search accepts simplified queries and empty state',async({page})=>{
@@ -124,9 +124,9 @@ test('new place aliases lead to the corrected street and real guides',async({pag
 });
 
 test('map distinguishes verified coordinates from place search',async({page})=>{
- await page.goto('/map/');await expect(page.locator('#map-count')).toHaveText('162 個景點');
+ await page.goto('/map/');await expect(page.locator('#map-count')).toHaveText('174 個景點');
  const stop=page.locator('.map-point').filter({hasText:'小徑公車亭'});await expect(stop.locator('[data-map-location-link]')).toHaveAttribute('href',/query=/);await expect(stop.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
- await page.getByRole('button',{name:'金湖',exact:true}).click();await expect(stop).toBeVisible();await expect(page.locator('.map-point:visible')).toHaveCount(50);
+ await page.getByRole('button',{name:'金湖',exact:true}).click();await expect(stop).toBeVisible();await expect(page.locator('.map-point:visible')).toHaveCount(57);
 });
 
 test('new Guningtou and Qionglin routes are discoverable and respect the Cihu closure',async({page})=>{
@@ -148,7 +148,7 @@ test('new Guningtou and Qionglin routes are discoverable and respect the Cihu cl
 test('Houhu seaside park keeps its Jinning location, map point and credited photo',async({page})=>{
  await page.goto('/attractions/');
  await page.getByRole('button',{name:'金寧',exact:true}).click();
- await expect(page.locator('[data-card]:visible')).toHaveCount(18);
+ await expect(page.locator('[data-card]:visible')).toHaveCount(20);
  await expect(page.locator('[data-card]:visible h3 a[href="/attractions/houhu-seaside-park/"]')).toBeVisible();
  await page.goto('/attractions/houhu-seaside-park/');
  await expect(page.locator('h1')).toHaveText('后湖海濱公園');
