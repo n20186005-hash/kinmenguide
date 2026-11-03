@@ -20,11 +20,14 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
   await noHorizontalOverflow();
   await expect(page.locator('[data-attraction-detail="v1"]')).toHaveCount(1);
   const headings = await page.locator('article.article-body h2').allTextContents();
-  expect(headings.slice(0, 10)).toEqual([
+  expect(headings.slice(0, 9)).toEqual([
     '探索翟山坑道', '關於翟山坑道', '基本資料', '交通方式', '路線地圖',
-    '人文生態', '景點相冊', '遊客資訊與常見問答', '行前規劃與深度遊覽',
+    '人文生態', '遊客資訊與常見問答', '行前規劃與深度遊覽',
     '周邊景點與順路行程'
   ]);
+  // No empty gallery placeholder: hero and credit remain, but the section must not exist.
+  expect(headings).not.toContain('景點相冊');
+  await expect(page.getByRole('heading', { name: '景點相冊' })).toHaveCount(0);
   const allSectionHeadings = await page.locator('article.article-body h2, article.article-body h3').allTextContents();
   const supplementsStart = allSectionHeadings.indexOf('行前規劃與深度遊覽');
   expect(supplementsStart).toBeGreaterThan(allSectionHeadings.indexOf('遊客資訊與常見問答'));
@@ -33,6 +36,7 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
     '拍照、親子與雨天', '從戰時運補，看見坑道的尺度', '已結束的活動公告'
   ]);
   expect(allSectionHeadings[supplementsStart + 7]).toBe('周邊景點與順路行程');
+  expect(allSectionHeadings.indexOf('遊客資訊與常見問答') + 1).toBe(supplementsStart);
   const about = page.locator('#about-attraction');
   const basic = page.locator('#basic-info');
   await about.scrollIntoViewIfNeeded();
@@ -74,7 +78,17 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
       question: detail.querySelector('summary')?.textContent?.trim(),
       answer: detail.querySelector('p')?.textContent?.trim()
     })));
-  expect(visibleFaq).toHaveLength(2);
+  expect(visibleFaq).toHaveLength(10);
+  expect(visibleFaq.map(f => f.question)).toEqual([
+    '翟山坑道要留多久？', '可以與得月樓同一天嗎？',
+    '翟山坑道一般參觀需要門票嗎？', '翟山坑道的開放時間是幾點？',
+    '從金城車站可以搭公車到翟山坑道嗎？',
+    '自駕前往翟山坑道有停車場嗎？',
+    '輪椅或嬰兒推車能走完整個坑道嗎？',
+    '雨天還可以參觀翟山坑道嗎？',
+    '翟山坑道有現場解說服務嗎？',
+    '翟山坑道有廁所嗎？遇到問題可以打哪支電話？'
+  ]);
   expect(faqSchema[0].mainEntity.map((item: { name: string; acceptedAnswer: { text: string } }) =>
     ({ question: item.name, answer: item.acceptedAnswer.text }))).toEqual(visibleFaq);
   for (const detail of await page.locator('article.article-body details').all()) {
