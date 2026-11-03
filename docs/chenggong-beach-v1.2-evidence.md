@@ -1,0 +1,38 @@
+# 成功沙灘 v1.2 evidence
+
+Checks2026-11-03 UTC; public-source research, not a field visit or today's sea-condition report. Sol-family implementation; independent Luna authority research/Maps verification/content review. No commit/push/deploy. CSV AWAITING_LIVE_CHECK, independent production acceptance still required.
+
+## Baseline and original inventory
+
+Managed create_worktree again rejected nested sourceRoot; existing authorized CLI fallback created detached42f53d3 work/chenggong-beach-ready. GitHub compare to082a6e608d15d1a307a4a9a953ad66a4e3911640 listed61overlay files.60files copied from previous Chen worktree only after matching remote blob SHA; releaseCSV fetched via GitHub API. Full recursive082a6e6tree matched local with zero mismatches before implementation. These61files are baseline, not this batch.
+
+Original three topics retained asH3after FAQ:這裡值得看什麼、怎麼安排參觀、把下一站排在附近. All three original paragraphs remain verbatim except heading level. PreservesLiaoluoBay/Chenhouse/coastal defence context, separate tunnel/opening rules, dry-safe-shore recommendation, no assumed lifeguard, no guaranteedblue tears ornightcoastventure,Chenggongtunnel/Chenhouse links and itinerarychoice. RelatedJinhuareaandoriginalofficial1637linkretained.30–45minute duration stays editorial shore stop,not combinedofficial1–3hourmandate. No originalFAQ;9neworderedFAQs exactlysharefrontmatter/HTML/JSON-LD.
+
+Original imagechenggong retained: alt金湖成功沙灘的沙岸、近岸岩石與料羅灣海面,rheins/CC BY3.0,credits/#chenggong. Asset/photos.json/PHOTO-CREDITS unchanged. Implementation independently read rendered CommonsGUI exactfile https://commons.wikimedia.org/wiki/File:%E6%88%90%E5%8A%9F%E6%B5%B7%E6%BB%A9_-_Chenggong_Beach_-_2014.05_-_panoramio.jpg : Taken on2May2014,photographerrheins,Panoramio116337154,CCBY3.0;botreview2017-05-20confirmedlicense. Originalfullfile4493×3369,not the separatecroppedderivative. Existingresize/WebP/cropchange disclosure retained. Photo not claimed today's tide/shore/equipment;visiblecaptioncreditandsourceremindermaintained. No duplicated/emptygallery.
+
+## Official sources and uncertainty
+
+- https://www.kinmen.travel/zh-tw/travel/attraction/1637 implementation independently read full renderedChineseChromeGUI,updated2026-03-31. Combinedtitle成功坑道/成功海灘;allseven24hours/free;082-332528;geography正義里成功村成功海灘;parking;combined1–3hourreference. Officialpoint24.43542,118.38954 is combinedcontext,not automatically beachnamedPOI. Tunnel560mlength/militarysegment/displaydescriptionnotconvertedintoasandywalkingrouteor24htunnelpermission. Closed/private/militaryspacenotaccessgrant. Page mentionsblue tears4–6months andphotographyadvice;copydoesnotpromiseappearance,timing,swimming/lifeguardsafetyoradoptriskyunknownnightshorepath.
+- https://media.taiwan.net.tw/zh-tw/portal/travel/details/attraction_371020000a_001637 independentlyreadofficialindexedentry,updated2026-03-31:address891正義里成功村成功海灘,phone332528,Open/publicbadges,and「是否為免費入場：需入場相關費用」,butnoactualchargeamount. This conflicts with countyfrontendfree. Visibleadmission/facts/FAQ discloseinconsistency;databasefieldnotchargedticketannouncementnorfreedomofallservices. Originalunsupportedblanket「戶外公共動線不另售門票」replacedwithattributedconflict/currentconfirmation.
+- https://kinmen.travel/zh-tw/nearby/ebus?placeId=1637&type=Attractions independentlyreadfull18stopindexedlist:成功二3往山外andnotairportbranches,陳景蘭洋樓84好行榕園太湖線,explicitdynamicbusdisclaimer. Static179/244mdistancesnotwalktimesorsandyshoreentrance;nofixedinterval,freeall-dayshuttleorallbranchguarantee. Useofficialdynamicqueryfordirection/day.
+- https://kmasd.kinmen.gov.tw/News_Content.aspx?n=C95E9B23137FF63C&s=6929C9C9B5175B4F&sms=A2C62D68901B977C officialpolicenotice independentlyread:2026-07-18flowerclam-releaseevent09–11byJinhutownship,dated2026-07-15,eventspecifictrafficandoverflowparkinginstructions. Article labels historicalevent. Notnormaldayparkingpermission,freecollectionpermit,eventongoingorwhole-beachmanagerproof.
+
+Independentauthority found county2026southcoastarticle describescounty/townshipscooperation across beaches,not assignsChenggongpointmanager. Currenttownshiprosterlistsadjacenthouse/park/tunnelmaintenance,notwholebeach. No officialdirectappointmentordutymapconfirmingsinglepresentbeachmanager/cleaningauthority obtained. ManagementcardandFAQ explicitlypending;official1637linkisvisitorinformation,notproofcountyTourismDepartment,park,townshipormilitaryowns/managesentirebeach. Ownership,currentcontracts,andseawardmilitaryjurisdictionnotinvented. Eventorganizerandstatutoryshoregovernancedistinctfromdailymaintenance.
+
+No currentfullclosure/reopening/shoreengineeringresolutionverified. Lackoffoundnoticeisnotproofnoconstruction. Surf,tides,lightning,fencingandactualrulesgovernaccess. No tideheight,swimmingpermission,lifeguard,clam-harvest/open-fishinglicenseorcurrentbluetearforecastinvented. Emergency/forecastadviceisnotclaimedfieldinspection.
+
+## Named Google Maps POI
+
+ImplementationdirectChineseGoogleMapsGUIandindependentauthorityconfirmedsamebeachPOI:成功沙灘/ChenggongBeach,CID0x3414a4f000000001:0x55b291bb1cb9854e,24.4352043,118.387407. Implementationvisiblebuttonaddressoriginal `891金門縣金湖鎮`;authorityEnglishUIoriginal `Jinhu Township, Kinmen County, 891` notedseparately,notmisrepresentedasaChineseoriginaltranslation. Frontmatter/schemauseimplementationdirectChineseoriginal. SameChineseplaceURLreuseddetailCTA,articlemap,/map/andschemahasMap. Not substitutedChenhouse,tunnelPOIorcoordinate-searchlink.
+
+Officialcombinedpoint24.43542,118.38954differsfrombeachnamedpoint;notaclaimoneiscurrententranceorwalkablecoastline. OfficialgeographyislocationDescription,not fabricatedstreetaddress. Mainmapnoticepreservesnon-swimming/sea-conditionwarning. Google24hbadge/officialwebsiteassociationnotacurrentwater-safetyguarantee.
+
+## Acceptance and handoff
+
+FocusedtestchecksuniqueH1/canonical,orderedsections,allthreelegacytopics,originalrheinsCCBY3.0hero/credit,noemptygallery,pendingmanagementandprimarysource,combined-feeconflict/tunnel-boundarycaveat,9FAQexactfrontmatter/HTML/schema,Googleoriginaladdress/CID/coordinates/hasMap,isolatedtripadd/remove,/map/samePOIandnon-swimmingnotice,mobileoverflow. Full desktop/mobile regressioncoversothercollections. Resultscompletedbelow. NextuntouchedCSVslug chenggong-tunnel.
+
+Independent Luna review confirmed newscope/POI/fees/9FAQ/image and requested a narrowparkingclarifier: combinedofficialparkingiconnotproofbeachentrancehasavailablemarkedspaces. Frontmatterparking,transportandFAQnowexplicitlyuseonlyday-open/signpostedlegalspaceandnopresumedbeachentranceparking. FAQexactparityretained. Firstvalidate0/0/0andfull246PASS(1.0m)predatesthiswording;finalrerunbelow.
+
+Final corrected-artifact acceptance completed2026-11-03T14:21:27Z: pnpm validate PASS,Astro0errors/0warnings/0hints,complete build/static andbusiness/Ctrip audits passed. Full Playwright246passed(1.0m),desktop+mobile,including finalparkingclarifier,9FAQparity and isolatedtripadd/remove. Finaldist checked to include parkingwording before suite. Independentauthority review corrections applied; first246PASS(1.0m)waspre-correction,finalrunisthehandoffresult.
+
+Final recursive082a6e6tree comparison found only targetMD,registryandCSVexistingfilesdifferent;newfocusedtest/evidencemakefivebatchfiles. Removing additivebeachregistryblockequalsbaseline;allthreeoriginalbodyparagraphsremainverbatimwithH2toH3only;allnon-targetCSVrowsequalbaseline.61overlaychangespreserved. No non-attractioncollectiondrift. gitdiff--checkclean. Temporarynode_moduleslink/config/scratchremovedafterchecks. No commit,push,deploymentorliveacceptanceclaimed. Nextchenggong-tunnel.
