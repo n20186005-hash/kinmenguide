@@ -1,7 +1,18 @@
 // Explicit pilot registry: other attractions keep their existing rendering.
-export const attractionDetailPilots = {
+export interface AttractionDetailPilot {
+  title: string;
+  statusNotice: string;
+  paragraphs: string[];
+  advice: string[];
+  features: string[];
+  about: string;
+  management?: { name: string; sourceUrl: string };
+  facts: { label: string; value: string }[];
+}
+export const attractionDetailPilots: Record<string, AttractionDetailPilot | undefined> = {
   'zhaishan-tunnel': {
     title: '翟山坑道',
+    statusNotice: '一般參觀08:30–17:00 · 免費 · 公開資料核對非即時開放狀態；臨時公告優先。',
     paragraphs: [
       '從入口沿階梯走入山腹，岩壁、水面與通道轉折逐漸展開。依開放動線觀察人工鑿岩痕跡與地下運補空間，理解這座工程如何把戰時交通藏入山體。',
       '這裡的看點不只是一張倒影照片。人員通道與小艇水道的不同尺度，呈現地下工程的用途；入口周邊的軍事展示則可與坑道解說一起閱讀。'
@@ -37,6 +48,44 @@ export const attractionDetailPilots = {
       {label:'服務設施',value:'官方列公廁、停車場、室內展覽；停車依現場劃設車位。'},
       {label:'可達性',value:'官方列無障礙廁所及坡道，不代表完整坑道動線皆適用輪椅或推車。'},
       {label:'水道尺度',value:'A字形水道約357公尺；不是遊客實際步行里程。'}
+    ]
+  },
+  'shuitou-village': {
+    title: '水頭聚落',
+    statusNotice: '戶外聚落通常可自由散步 · 各展館有不同開館時段 · 公開資料核對非即時狀態。',
+    paragraphs: [
+      '走入金城西南方的水頭聚落，傳統閩南古厝、燕尾屋脊與帶有南洋風格的洋樓沿巷弄交錯。聚落仍是居民生活的地方，可從開放的巷道慢慢觀察建築，不必把每處民宅當成可進入的展館。',
+      '從金水國小與得月樓周邊，可以把僑民往返海外、返鄉興學與興建宅第的故事串成一段步行路線。建築群、展館和私人院落的開放條件不同，出發前應逐一確認。'
+    ],
+    advice: [
+      '以90–120分鐘作為聚落散步的編輯規劃；若要參觀多處展示館，另留等待與解說時間。',
+      '戶外巷弄通常可通行，但室內展示館、得月樓與金水國小應各查當日開放公告。',
+      '行走時避免在私人住宅門前久留、擅入院落或堵塞住戶通道；拍照尊重在地生活。',
+      '自駕停在標示車位後步行，搭公車先確認金城7路或A線觀光公車的去回程班次。'
+    ],
+    features: [
+      '保存閩南式古厝、洋樓與中西合璧宅第的僑鄉聚落。',
+      '得月樓、金水國小與僑鄉文化展示館可串成步行認識路線。',
+      '聚落傳統建築細節與南洋移民故事具有地方文化特色。',
+      '戶外巷道與各棟展示館、民宅的參訪規則應分別確認。'
+    ],
+    about: '水頭聚落又稱金水、前水頭，位於金門縣金城鎮西南側。它因早期海上交通與海外經商形成僑匯文化，保留多種閩式古厝、洋樓及學校建築。這裡既是文化資產群，也是居民生活聚落：文化資產由金門縣文化局主管，部分公共展示場域由金門國家公園管理處管理維護，其他私人宅第及商業空間各有自身權屬，並非整座聚落由單一管理者經營。',
+    management: {
+      name: '金門縣文化局（文化資產主管機關）；金門國家公園管理處（部分公共展示場域）',
+      sourceUrl: 'https://nchdb.boch.gov.tw/city/cabkc.kinmen/assets/overview/historicalBuilding/20030331000016/'
+    },
+    facts: [
+      {label:'正式名稱／別稱',value:'水頭聚落／前水頭／金水（Shuitou Village）'},
+      {label:'景點類型',value:'歷史聚落、閩南古厝、僑鄉建築'},
+      {label:'景點地址（Google 地圖）',value:'893 金門縣金城鎮（具名聚落地標僅顯示鄉鎮層級，沒有全聚落統一門牌）'},
+      {label:'所在地／位置描述',value:'金門縣金城鎮西南方，金水里水頭聚落'},
+      {label:'管理及權責',value:'金門縣文化局主管文化資產；金門國家公園管理處管理部分展示場域；聚落內另有私人住家及業者'},
+      {label:'一般開放',value:'聚落戶外巷道可散步；得月樓等室內展示館另查開館與整修公告'},
+      {label:'一般門票',value:'聚落戶外參觀免費；個別活動與私有空間另依規定'},
+      {label:'建議停留',value:'90–120分鐘（編輯建議）'},
+      {label:'服務電話',value:'(082) 313282（官方景點資訊）'},
+      {label:'服務設施',value:'官方列公廁、停車場、室內展覽；個別場館設施與可達性另查'},
+      {label:'參觀限制',value:'私宅與未開放院落不可擅入；可參觀展館與戶外巷弄分別確認'}
     ]
   }
 };
