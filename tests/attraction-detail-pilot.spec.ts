@@ -127,7 +127,8 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
 test('detail pilot does not opt other collections or attractions in', async ({ page }) => {
   // All fixtures correspond to existing Markdown entries, not inferred routes.
   for (const url of [
-    '/attractions/shuitou-village/',
+    '/attractions/jiugong-tunnel/',
+    '/attractions/deyue-tower/',
     '/areas/kincheng/',
     '/hotels/family/',
     '/itineraries/kinmen-three-days-two-nights/',
