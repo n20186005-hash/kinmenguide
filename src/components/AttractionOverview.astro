@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  paragraphs: string[];
+  advice: string[];
+  features: string[];
+  about: string;
+  facts: { label: string; value: string }[];
+}
+const { title, paragraphs, advice, features, about, facts } = Astro.props;
+---
+<div class="attraction-overview prose" data-attraction-detail="v1">
+  <section aria-labelledby="explore"><h2 id="explore">探索{title}</h2>{paragraphs.map(p => <p>{p}</p>)}
+    <h3>遊覽建議</h3><ul>{advice.map(item => <li>{item}</li>)}</ul>
+    <h3>景區特色</h3><ul>{features.map(item => <li>{item}</li>)}</ul>
+  </section>
+  <section aria-labelledby="about-attraction"><h2 id="about-attraction">關於{title}</h2><p>{about}</p></section>
+</div>
+<section class="attraction-basic" aria-labelledby="basic-info">
+  <h2 id="basic-info" class="content-section-title">基本資料</h2>
+  <dl class="facts-grid">{facts.map(f => <div><dt>{f.label}</dt><dd>{f.value}</dd></div>)}</dl>
+</section>
