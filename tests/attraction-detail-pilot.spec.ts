@@ -12,7 +12,7 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
   await expect(page.locator('[data-trip-add="zhaishan-tunnel"]')).toBeEnabled();
   await expect(page.locator('figcaption')).toContainText('jason199567 / CC BY-SA 2.0');
   await expect(page.locator('a[href="/credits/#zhaishan"]').first()).toBeVisible();
-  await expect(page.locator('.prose')).toContainText('6A不繞翟山坑道');
+  await expect(page.locator('article.article-body')).toContainText('6A不繞翟山坑道');
   await expect(page.locator('details summary').filter({ hasText: '翟山坑道要留多久？' })).toHaveCount(1);
   const schemas = await page.locator('script[type="application/ld+json"]').allTextContents();
   const graph = schemas.flatMap(text => JSON.parse(text)['@graph'] ?? []);
@@ -22,7 +22,7 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
 });
 
 test('detail pilot does not opt other collections or attractions in', async ({ page }) => {
-  for (const url of ['/attractions/shuitou-village/', '/food/kincheng-food/', '/transport/airport/']) {
+  for (const url of ['/attractions/shuitou-village/', '/food/kincheng-food/', '/transport/kinmen-airport/']) {
     const response = await page.goto(url);
     expect(response?.status()).toBe(200);
     await expect(page.locator('[data-attraction-detail]')).toHaveCount(0);
