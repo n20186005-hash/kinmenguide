@@ -167,7 +167,7 @@ yangzhai-old-street,https://kinmenguide.com/attractions/yangzhai-old-street/,,NO
 yannan-academy,https://kinmenguide.com/attractions/yannan-academy/,,NOT_STARTED,,,,,,,,,,
 yanping-prince-shrine,https://kinmenguide.com/attractions/yanping-prince-shrine/,,NOT_STARTED,,,,,,,,,,
 yu-dawei-museum,https://kinmenguide.com/attractions/yu-dawei-museum/,,NOT_STARTED,,,,,,,,,,
-zhaishan-tunnel,https://kinmenguide.com/attractions/zhaishan-tunnel/,v1,PR_OPEN,2026-11-03,feat/zhaishan-detail-template-pilot,https://github.com/n20186005-hash/kinmenguide/pull/52,c3e7ede0259bc5f4927b82be0da3b66db15e3d3b,PENDING,PENDING,LUNA_REVIEWED,,shuitou-village,Initial pilot: sources checked; independent review done; CI and production pending.
+zhaishan-tunnel,https://kinmenguide.com/attractions/zhaishan-tunnel/,v1,VERIFIED,2026-11-03,feat/zhaishan-detail-template-pilot,https://github.com/n20186005-hash/kinmenguide/pull/52,3466805383e080019f35f194caf5cf587f95ed7f,PASS_41576630392,PASS_41576630392,LUNA_PASSED,2026-11-03T04:18:14.278Z,shuitou-village,"Live-page browser verified: correct headings, real hero, transport and sourced content. CI 41576630392 passed. Next is a separate conversation after user reviews this pilot."
 zhongshan-forest,https://kinmenguide.com/attractions/zhongshan-forest/,,NOT_STARTED,,,,,,,,,,
 zhongxing-fort,https://kinmenguide.com/attractions/zhongxing-fort/,,NOT_STARTED,,,,,,,,,,
 zhongzheng-forest,https://kinmenguide.com/attractions/zhongzheng-forest/,,NOT_STARTED,,,,,,,,,,
