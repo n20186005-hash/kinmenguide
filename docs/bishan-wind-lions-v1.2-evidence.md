@@ -1,0 +1,34 @@
+# 碧山風獅爺 v1.2 evidence
+
+Checks2026-11-03 UTC; public-source research,not field visit. Sol-family implementation,independent Luna source/POI/content review coordinated by parent. No commit/push/deploy. CSV AWAITING_LIVE_CHECK; next untouchedslug chen-jinglan-house.
+
+## Original inventory
+
+Three original H2topics retained asH3afterFAQ:這裡值得看什麼、怎麼安排參觀、把下一站排在附近. All three original paragraphs preserved verbatim(H2→H3only),including132vs78individuals,王字/彩帶,numbering caveat,main map representslarger one,private-access caution andYangzhai/Shanhoulinks. OriginalJinshaarea relatedlink andboth570/592sources retained.15–25minutes stays editorial;parking/walking/restseparate. No previousFAQ;8neworderedentries exactlymatchfrontmatter/HTML/JSON-LD.
+
+Original hero place-bishan-wind-lions,alt碧山風獅爺(132公分；石雕、立姿)實景,金門縣政府觀光處/政府網站資料開放宣告,https://kinmen.travel/zh-tw/gwoia retained. Asset/photos.json/PHOTO-CREDITS unchanged. Implementation inspectedlocalimageanddownloadedoriginal https://kinmen.travel/attractions/6401/1024x768_attractions-image-s0icghcdp0gyskbfd4f2sg.jpg ;byte-identicalSHA256478aa3aaabefb52ec9f127555783fc2fd232a4ccffc309e767886c57bd393e8e. No second photo or duplicate gallery invented. Graystone/redcloth in retained photograph is not used tooverride2018text'scolor description oridentify a secondindividual.
+
+## Official and archival source checks
+
+- https://kinmen.travel/zh-tw/travel/attraction/570 directlyreadfullrenderedChromeGUI,updated2018-07-30:132cmstone/upright,40cmwidth/depth,王字/彩球/彩帶,southwest-facingnortheast,originallybybarracksbehind素嫻別墅;allseven24h. Addressgeographyandofficialpoint24.4878,118.44237separatefromGoogleoriginaladdress. Noprice,servicephone,publictoilet,parkingorcurrentmanagementverifiedfrompage. Spiritualstone/呂厝generalstoryisexplicitly傳說,notarchaeologicalageorconfirmedhistoricalevent. Formermilitarypositiondoesnotproveactivecampaccessorcurrentpropertyowner.
+- https://kinmen.travel/zh-tw/travel/attraction/592 directlyreadfullrenderedChineseGUI,updated2018-07-30:78cmstone/upright,30cmwidth/28cmdepth,19號民宅前/附近,王字/彩帶,all-day. Officialpoint24.48538,118.44327. Formercolor/pigmentandclotharenotcurrentconditionguarantees. Differentrecord,notprimary132cmPOIorpublichouseentry. No currentmanagementorfeesourceconfirmed.
+- https://catalog.digitalarchives.tw/item/00/66/7a/d7.html independentlyreadcompleteprimaryuniversity-linkedrecord,ID100-WLG-JS-33,132cmbehind素嫻別墅,public財/金沙鎮三山里management,國立金門大學digitalarchive. Citationhas2013/01/25accessdate;not2026ownershipregisterorcurrentmanagementconfirmation. Managementcardclearlylabelsoldrecordandcurrentrolesunresolved. Do notextend132recordto78individual,parcelownership,publicrightofwayorcounty/parkoperation.
+- https://www.kinmen.travel/zh-tw/nearby/ebus?placeId=1620&type=Attractions officialBishanvillage13-stoplistdirectindexedread:碧山18往沙美/山外,25繞陽翟村內,31幸福巴士,好行afternoonroute. Linkedasvillagecontext,notverifieddoorstopforbothstatues. Separateofficialregionalbuslistshave18不繞碧山variants;copywarnscheckactualbranch/direction/day. No fixedfrequency,walktime,shuttleorreservationspromise. Target570/592nearbyendpointwebfetchunavailable;notpretenddirectread. Staticnearbydistanceisnotwalkingrouteproof.
+
+570GUInearbylistclaims78cmlocation28m,butindividualofficialcoordinatesdifferapproximately285m.592nearbyindexedcontextalsoshowed132roughly250m. RecordinconsistencyratherthanderiveawalkingdistanceorclaimtwoPOIsidentical. No routeGPXorprivate-yardshortcutinvented.
+
+## Google named POIs and separation
+
+ImplementationChineseGUIreadprimary碧山風獅爺一:exactaddress原文 `890金門縣金沙鎮`,CID0x3414badfca132b67:0xeaca1d010b5cfabc,24.4877938,118.4423704;matchesofficial132pointclosely. SameverifieddirectplaceURLinfrontmatter,detailCTA,articlemap,schemahasMapand/map/card. Schema.streetAddresspreservesGoogleoriginalwithoutinsertingvillaname/door number.OfficialvillabacklocationislocationDescription. Primarypointisnotbothstatues'entryorprivateaccesspermission.
+
+SecondarydirectGUIlookupyielded碧山(二)風獅爺,exactoddaddress `890碧山風獅爺`,CID0x3414bb0057cc6e17:0x861e7986724505b1,24.48546,118.4432599,approximately9mfromofficial78point. Secondarylinkvisiblewithcareful“落點接近官方位置、編號與石像仍須現場辨識”qualifier;notsecondaryaddressinprimaryschema,andnoautomaticcross-platformnumberstandard. Googlephotosarenotusedasproofheight,dateorcurrentplacement;noprice,ratingoropenbadgeusedasofficialcurrentstatus.
+
+## Unresolved and acceptance
+
+Bothcurrentmanagement/maintenance,privateparcelrights,legalon-sitepath,fees,constructionandfullaccessibility/toilets/parkingremainunverified. Originaladmissionassumption“公共動線不另售門票”replacedwithunverifiedfeesratherthaninferfreeentryfrommissingfield.Official全天notpermissioninsidehouse,barracks,fencedlandorafterdarkvisitrecommendation. Attributionsmakehistoricalmanagementexplicitanddonotpresentcountywebsitepublisherasowner.
+
+FocusedtestchecksoneH1/canonical,orderedsections,allthreelegacytopics,retainedhero/credit,noemptygallery,current-managementcaveatandarchivallink,individualscope,8FAQexactHTML/frontmatter/schema,primaryexactaddress/CID/coordinates/hasMap,tripaddand/map/samelink,mobileoverflow. Full desktop/mobile suite regressessharedcollections. Resultscompletedbelow. Productionacceptancepending.
+
+Independent Luna content review found no blocking issue and corroborated both namedPOIs/address originals/secondary near78cmposition. Source distance conflict should be understood as approximately270–285m from different roundedcoordinatecomparisons,not28m andnot awalkdistance.
+
+Final local acceptance2026-11-03T13:31:24Z: pnpm validate PASS,0errors/0warnings/0hints,complete build/static andbusiness/Ctrip audits passed. Full Playwright242passed(1.1m),desktop/mobile including focused Bishan acceptance. Againstactualmain423e37tree,onlytargetMD/registry differed beforeCSV;removalofadditiveBishanregistryblockequalsbaseline;allthreeoriginalbodyparagraphspreservedexactly. CSVallnon-targetrowsequalbaseline.55overlaychangesarebaseline,nothisbatch. Fivefinalfiles:targetMD,registry,focusedtest,evidence,oneCSVrow. gitdiff--checkclean. Productioninspectionpending;nextchen-jinglan-house.
