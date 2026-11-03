@@ -16,7 +16,7 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
   const cover = page.locator('.article-cover img');
   await expect(cover).toBeVisible();
   await expect(cover).toHaveAttribute('alt', '翟山坑道內的花崗岩岩壁與水道');
-  await expect.poll(() => cover.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
+  await expect.poll(() => cover.evaluate(image => image instanceof HTMLImageElement && image.complete && image.naturalWidth > 0)).toBe(true);
   await noHorizontalOverflow();
   await expect(page.locator('[data-attraction-detail="v1"]')).toHaveCount(1);
   const headings = await page.locator('article.article-body h2').allTextContents();
