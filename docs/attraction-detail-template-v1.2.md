@@ -55,6 +55,10 @@ management:
   name: "{{現行主管/管理或維護機關正式名稱}}"
   sourceUrl: "{{直接官方來源}}"
   checkedAt: "{{YYYY-MM-DD}}"
+address: "{{Google 地圖具名景點 POI 顯示的地址原文；含郵遞區號／門牌}}"
+locationDescription: "{{獨立的官方所在地／地理位置說明，非門牌}}"
+googleMapsUrl: "{{已核對對應具名景點的 Google Maps URL，不用經緯度搜尋代替}}"
+coordinates: null # 有可靠測量依據才用於地圖示意；不能作為導航 POI 連結
 facts: [] # 正式名稱、類別、國家／城市／鄉鎮、地址／坐標、管理者、開放、門票、設施等
 transport:
   driving: "{{已確認的道路與停車指引}}"
@@ -84,6 +88,14 @@ lastReviewed: "{{YYYY-MM-DD}}"
 - 對於縣府所有、國家公園管理、委外維護、私人管理等，按官方資料區分「所有者」「主管機關」「經營者」「維護單位」；不可推定四者相同。
 - 只拿到過期、轉載或疑似資料時，呈現「尚待確認」，不聲稱現行管理者。
 - `基本資料` 同步顯示管理單位全稱；一旦異動，兩處與來源同時更新。
+
+### v1.2 補充：景點地址以 Google 地圖具名地標為準
+
+- 頁面「景點地址／地址」應使用該景點 **Google Maps 具名地標（Place/POI）頁面顯示的地址**，保留郵遞區號及門牌原文；不要把「在古崗湖東南方」等地理位置敘述當地址。
+- 如果觀光局、國家公園或其他官方來源以地理描述作地址，保留於獨立欄位 **所在地／位置描述**（`locationDescription`）；兩者不混用，也不任意推斷它們矛盾。
+- 導航連結 **googleMapsUrl** 須人工確認指向同名、同地點的 Google Maps 景點地標；**全部的「查看位置」「查看位置與導航」「路線地圖」與 /map/ 全島地圖入口優先使用該連結**，不以坐標、縣市搜尋、文字地址或其他 POI 取代。網站現有坐標點可作示意，但不代表導航目的地。
+- 景點 Schema 的 `TouristAttraction.address.streetAddress` 使用 Google 地圖地址，`hasMap` 使用同一個具名 POI URL。定址來源須有人工查核日期；沒有 POI 時需記錄待查並避免作出已核對的導航聲明。
+- **翟山坑道例子：** Google Maps 顯示地址「893金門縣金城鎮90號」，Google Maps 景點連結 [翟山坑道](https://maps.app.goo.gl/aQ2NqLzgZ3mATHpYA)。官方地理說明「金門縣金城鎮古崗湖東南方翟山腹」保留為位置描述；來源可參考[金門觀光旅遊網](https://kinmen.travel/zh-tw/travel/attraction/1337)。此 Google Maps 地址／連結由網站委託方提供，需在發布後點擊確認地標一致性。
 
 ### v1.2：無實質內容的相冊一律刪除
 
@@ -140,7 +152,7 @@ lastReviewed: "{{YYYY-MM-DD}}"
 - 資料：`src/content/attractions/<slug>.md`；共用組件：`src/components/AttractionOverview.astro`；試點結構：`src/data/attraction-detail-pilots.ts`。
 - 每次單站分支修改；其他景點 opt-in 狀態不變。
 - Sol：較複雜的 Astro/TS、可視化結構、測試與差異處理。Luna：官方資訊比對、圖片授權、每段事實核對、獨立 QA。主 Agent 整合與發布決策。若無法調用子 Agent，保留其角色作檢查規則，不冒稱已使用。
-- 必過測試：`pnpm validate`、`pnpm test:browser`；桌機與手機標題順序、**空相冊缺席且主圖署名仍在**、管理機關/來源連結、原專題保留、**可見 FAQ 題數/順序/答文與 JSON-LD 精準相等**、加入行程、其他欄目回歸。
+- 必過測試：`pnpm validate`、`pnpm test:browser`；Google 地圖門牌與地理位置描述分開、詳頁＋全島地圖與 JSON-LD 的 Google Maps POI URL 相同；桌機與手機標題順序、**空相冊缺席且主圖署名仍在**、管理機關/來源連結、原專題保留、**可見 FAQ 題數/順序/答文與 JSON-LD 精準相等**、加入行程、其他欄目回歸。
 - 發布前在 PR 確認 CI 和審查；發布後實際讀取正式網址並核實，再於 `docs/attraction-template-migration.csv` 記錄 VERIFIED。
 - 完成一站之後才開始另一站；新對話接力須附來源、commit、PR、驗收、下一 slug。不能聲稱可自行開啟新對話。
 
