@@ -52,7 +52,7 @@ jiacun-experience,https://kinmenguide.com/attractions/jiacun-experience/,,NOT_ST
 jiangong-islet,https://kinmenguide.com/attractions/jiangong-islet/,,NOT_STARTED,,,,,,,,,,
 jieshou-pavilion,https://kinmenguide.com/attractions/jieshou-pavilion/,,NOT_STARTED,,,,,,,,,,
 jindong-cinema,https://kinmenguide.com/attractions/jindong-cinema/,,NOT_STARTED,,,,,,,,,,
-jinshui-school,https://kinmenguide.com/attractions/jinshui-school/,,NOT_STARTED,,,,,,,,,,
+jinshui-school,https://kinmenguide.com/attractions/jinshui-school/,v1.2,AWAITING_LIVE_CHECK,2026-11-03,feat/jinshui-relay,,,PASS_LOCAL,PASS_LOCAL_208_DESKTOP_MOBILE,LUNA_OFFICIAL_REVIEW_SOL_IMPLEMENTATION,,overseas-chinese-museum,4 original topics and all paragraphs/links preserved; 8 exact FAQs; 2026-05 reopening supersedes old closure. Named Maps school POI and exact address verified; park management distinguished from ownership. Local validate and208 browser tests PASS; final date-edit validate and2 focused tests PASS. CI/release/live acceptance pending. See docs/jinshui-school-v1.2-evidence.md.
 jiugong-tunnel,https://kinmenguide.com/attractions/jiugong-tunnel/,,NOT_STARTED,,,,,,,,,,
 juguang-inclusive-park,https://kinmenguide.com/attractions/juguang-inclusive-park/,,NOT_STARTED,,,,,,,,,,
 juguang-lake,https://kinmenguide.com/attractions/juguang-lake/,,NOT_STARTED,,,,,,,,,,
