@@ -167,7 +167,7 @@ yangzhai-old-street,https://kinmenguide.com/attractions/yangzhai-old-street/,,NO
 yannan-academy,https://kinmenguide.com/attractions/yannan-academy/,,NOT_STARTED,,,,,,,,,,
 yanping-prince-shrine,https://kinmenguide.com/attractions/yanping-prince-shrine/,,NOT_STARTED,,,,,,,,,,
 yu-dawei-museum,https://kinmenguide.com/attractions/yu-dawei-museum/,,NOT_STARTED,,,,,,,,,,
-zhaishan-tunnel,https://kinmenguide.com/attractions/zhaishan-tunnel/,v1.2,PR_OPEN,2026-11-03,feat/zhaishan-gallery-faq-skill-v1-2,https://github.com/n20186005-hash/kinmenguide/pull/57,,PENDING,PENDING,OFFICIAL_FAQ_CHECKED,,shuitou-village,"v1.2 remove empty gallery; FAQ 2-to-10, FAQ/JSON-LD test, image credits preserved. Await latest CI and official production verification."
+zhaishan-tunnel,https://kinmenguide.com/attractions/zhaishan-tunnel/,v1.2,AWAITING_LIVE_CHECK,2026-11-03,main,https://github.com/n20186005-hash/kinmenguide/pull/57,2c95652eca0738bd2adfffb362ed87d90d194d37,PASS_41585809371,PASS_41585809371,OFFICIAL_FAQ_CHECKED,,shuitou-village,"v1.2 merged; gallery removed; 10 FAQ answers and JSON-LD parity tests passed. Public web retrieval still stale (2026-10-21); direct runtime DNS unavailable. Production Cloudflare check pending; do not mark VERIFIED until accessible live page shows 10 FAQs."
 zhongshan-forest,https://kinmenguide.com/attractions/zhongshan-forest/,,NOT_STARTED,,,,,,,,,,
 zhongxing-fort,https://kinmenguide.com/attractions/zhongxing-fort/,,NOT_STARTED,,,,,,,,,,
 zhongzheng-forest,https://kinmenguide.com/attractions/zhongzheng-forest/,,NOT_STARTED,,,,,,,,,,
