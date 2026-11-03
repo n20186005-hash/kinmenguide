@@ -103,6 +103,12 @@
 ## 景點相冊
 本頁主圖為坑道岩壁與水道實景，攝影／提供：jason199567，CC BY-SA 2.0。請見[照片原始來源與授權條件](/credits/#zhaishan)。目前僅使用這張已收錄且可署名的照片，不以其他坑道照片補充相冊。
 
+## 遊客資訊與常見問答
+
+<details><summary>翟山坑道要留多久？</summary><p>建議留 45–60 分鐘；若加走外側步道，另留時間並先確認開放情形。</p></details>
+
+<details><summary>可以與得月樓同一天嗎？</summary><p>可以，兩者都在金城南側，適合接成半天路線。出發前先確認坑道開放。</p></details>
+
 ## 周邊景點與順路行程
 開放當天可搭配[水頭聚落](/attractions/shuitou-village/)、[得月樓](/attractions/deyue-tower/)與[金水國小](/attractions/jinshui-school/)。從[金城地區指南](/areas/kincheng/)與[三天兩夜行程](/itineraries/kinmen-three-days-two-nights/)調整順序，再比較[金城餐飲](/food/kincheng-food/)及[住宿區域](/hotels/)。
 
