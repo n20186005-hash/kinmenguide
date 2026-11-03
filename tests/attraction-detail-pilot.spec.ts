@@ -20,14 +20,28 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
   await noHorizontalOverflow();
   await expect(page.locator('[data-attraction-detail="v1"]')).toHaveCount(1);
   const headings = await page.locator('article.article-body h2').allTextContents();
-  expect(headings.slice(0, 9)).toEqual([
+  expect(headings.slice(0, 10)).toEqual([
     '探索翟山坑道', '關於翟山坑道', '基本資料', '交通方式', '路線地圖',
-    '人文生態', '景點相冊', '遊客資訊與常見問答', '周邊景點與順路行程'
+    '人文生態', '景點相冊', '遊客資訊與常見問答', '行前規劃與深度遊覽',
+    '周邊景點與順路行程'
   ]);
+  const allSectionHeadings = await page.locator('article.article-body h2, article.article-body h3').allTextContents();
+  const supplementsStart = allSectionHeadings.indexOf('行前規劃與深度遊覽');
+  expect(supplementsStart).toBeGreaterThan(allSectionHeadings.indexOf('遊客資訊與常見問答'));
+  expect(allSectionHeadings.slice(supplementsStart + 1, supplementsStart + 7)).toEqual([
+    '出發前怎麼查開放？', '值得停下來看的風景', '怎麼排進一天',
+    '拍照、親子與雨天', '從戰時運補，看見坑道的尺度', '已結束的活動公告'
+  ]);
+  expect(allSectionHeadings[supplementsStart + 7]).toBe('周邊景點與順路行程');
   const about = page.locator('#about-attraction');
   const basic = page.locator('#basic-info');
   await about.scrollIntoViewIfNeeded();
   await expect(about).toBeVisible();
+  const management = page.locator('section[aria-labelledby="about-attraction"] .attraction-manager');
+  await expect(management).toContainText('目前管理單位：');
+  await expect(management).toContainText('內政部國家公園署金門國家公園管理處');
+  await expect(management.locator('a')).toHaveAttribute('href', 'https://www.kmnp.gov.tw/ch/touristInfo/recreation-sites/40');
+  await expect(page.locator('.attraction-basic')).toContainText('目前管理單位');
   await expect(page.locator('[data-attraction-detail] > section:last-child h2')).toHaveAttribute('id', 'about-attraction');
   expect(await page.locator('[data-attraction-detail]').evaluate(element =>
     element.nextElementSibling?.querySelector('h2')?.id)).toBe('basic-info');
