@@ -13,10 +13,11 @@ Checked 2026-11-03 (UTC). Scope: deyue-tower only. No commit/push/deployment per
 
 - https://kinmen.travel/zh-tw/travel/attraction/654 — main agent directly inspected official browser page: free admission and 6/6A or 7/7A/7B buses to 水頭圓環 verified; web extraction incomplete.
 - https://www.taiwan.nps.gov.tw/home/zh-tw/attractions/21165.html — 08:30–17:00, 除夕休館, exhibition/guide/stroller service, venue telephone 082-375458. Distinguish venue phone from other tourism contacts.
-- https://www.taiwan.nps.gov.tw/home/zh-tw/topic/18180.html — 2019 historical article explicitly says park office maintains/manages the exhibition. Page labels this dated evidence and current management reconfirmation unresolved. Its 1931 chronology conflicts with the exhibit page's 1931 house/1933 tower account; both disclosed.
+- https://www.taiwan.nps.gov.tw/home/zh-tw/topic/18180.html — Official page updated 2026-09-08 explicitly identifies the park office as current exhibition maintenance manager. Correction distinguishes maintenance/management from ownership. Its 1931 chronology conflicts with the exhibit page's 1931 house/1933 tower account; both disclosed.
+- https://www.kmnp.gov.tw/ch/titlelist/latest-news/4025 — 2026 park exhibition-service notice corroborates the park authority role; historical holiday dates do not establish current opening status.
 - https://tcmb.culture.tw/zh-tw/detail?id=20190410000001&indexCode=BOCH_CountryCulture_11 — cultural heritage record independently reviewed by Luna; added direct source without assuming ownership equals management.
 - Google Maps named 得月樓 POI manually inspected by main agent: `893金門縣金城鎮金水里前水頭45號`; exact supplied POI URL used in frontmatter, body navigation and inherited header/map/schema. Lat/lng 24.409716,118.2984092 is POI point, not a walking track. Geographical description separate.
-- Unresolved: current management confirmation, exact parking configuration, current public-transit times, all-floor accessibility and current floor/tunnel access. Official bus branches included; no fixed bus timings, full accessibility or opening-status guarantees added.
+- Unresolved: exact parking configuration, current public-transit times, all-floor accessibility and current floor/tunnel access. Official bus branches included; no fixed bus timings, full accessibility or opening-status guarantees added.
 
 ## Roles and acceptance
 
@@ -31,3 +32,7 @@ Implementation: Sol-family delegated agent; independent official/source review: 
 
 Final stable-build full browser run: **206/206 PASS**, desktop + mobile (54.0s). Final parking wording avoids unsupported designated spaces; source-check date explicitly UTC.
 Final copy-edit build validation: PASS; focused Deyue desktop/mobile recheck: 2/2 PASS (1.6s). Temporary isolated-preview config removed after tests.
+
+## Management correction, 2026-11-03
+
+Independent live QA identified the former 2019-only qualification as stale: directly read NPS page with 2026-09-08 update and present-tense maintenance responsibility, corroborated by park 2026 exhibition announcement. Corrected registry, page sources and reminder; preserved chronology uncertainty, FAQ, imagery and all other access limitations. CSV remains AWAITING_LIVE_CHECK until this correction is deployed and independently checked. Local correction checks: `npx --yes pnpm@10.32.1 validate` PASS (556 pages; Astro, SEO/canonical, links, schema, photo, business and Ctrip audits); full `test:browser` using temporary isolated port 4338 configuration PASS **206/206 desktop/mobile (50.4s)**, including new exact manager and ownership-distinction assertions. Temporary config removed; `git diff --check` clean; only the five Deyue correction files changed. Checks ran on base 42f53d3; latest-main release metadata must be reconciled before publishing.

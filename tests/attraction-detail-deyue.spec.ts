@@ -14,6 +14,9 @@ test('Deyue v1.2 preserves legacy topics, photo, map POI and exact FAQ schema', 
   const topics = await page.locator('article.article-body h3').allTextContents();
   for (const title of ['1931年的洋樓防禦設計（興建年代待釐清）','看得到樓高，不等於能登頂','四個門牌，四種看法']) expect(topics).toContain(title);
   await expect(page.locator('.attraction-basic')).toContainText(data.address);
+  await expect(page.locator('.attraction-manager a')).toHaveText('內政部國家公園署金門國家公園管理處');
+  await expect(page.locator('.attraction-basic')).toContainText('展示館維護管理；非所有權認定');
+  await expect(page.locator('article.article-body')).not.toContainText('現行待複核');
   await expect(page.locator('.attraction-manager a')).toHaveAttribute('href','https://www.taiwan.nps.gov.tw/home/zh-tw/topic/18180.html');
   await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
   await expect(page.getByRole('link',{name:'Google 地圖・得月樓（具名景點）'})).toHaveAttribute('href',data.googleMapsUrl);
