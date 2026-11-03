@@ -28,7 +28,7 @@ fuyu-temple-photo-spot,https://kinmenguide.com/attractions/fuyu-temple-photo-spo
 gaodong-tunnel,https://kinmenguide.com/attractions/gaodong-tunnel/,,NOT_STARTED,,,,,,,,,,
 general-fort,https://kinmenguide.com/attractions/general-fort/,,NOT_STARTED,,,,,,,,,,
 golden-lion-cinema,https://kinmenguide.com/attractions/golden-lion-cinema/,,NOT_STARTED,,,,,,,,,,
-guanao-wind-lions,https://kinmenguide.com/attractions/guanao-wind-lions/,,NOT_STARTED,,,,,,,,,,
+guanao-wind-lions,https://kinmenguide.com/attractions/guanao-wind-lions/,v1.2,AWAITING_LIVE_CHECK,2026-11-03,feat/guanao-relay,,,PASS_LOCAL,PASS_LOCAL_230_DESKTOP_MOBILE,SOL_IMPLEMENTATION_LUNA_INDEPENDENT_REVIEW_CORRECTED,,tianmo-mountain,"Local migration; male228cm named Google POI only; other three locations not conflated. Current management, ownership, access and fees unresolved; official distances and coordinates conflict. Exact unchanged photo attribution corrected to official association provider, government declaration retained with third-party rights pending. Await CI, source follow-up and independent live acceptance. Source classification caveat and both credit records reconciled; current rights unresolved."
 guande-bridge,https://kinmenguide.com/attractions/guande-bridge/,,NOT_STARTED,,,,,,,,,,
 guanli-wind-lion,https://kinmenguide.com/attractions/guanli-wind-lion/,,NOT_STARTED,,,,,,,,,,
 guanlubian-wind-lion,https://kinmenguide.com/attractions/guanlubian-wind-lion/,,NOT_STARTED,,,,,,,,,,

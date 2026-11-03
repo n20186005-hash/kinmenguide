@@ -438,8 +438,8 @@
 
 - 內容：官澳風獅爺(228公分，石雕、立姿雄獅)實景
 - 檔案：1024x768_attractions-image-v7kgqlrog0cqlwv8ypd9xw.jpg
-- 攝影／提供：金門縣政府觀光處
-- 授權：[政府網站資料開放宣告](https://kinmen.travel/zh-tw/gwoia)
+- 攝影／提供：官澳社區發展協會（官方圖片來源標示）
+- 授權：[政府網站資料開放宣告（保留既有依據；第三人權利待確認）](https://kinmen.travel/zh-tw/gwoia)；此來源標示不表示已確認個人攝影者、權屬或取得協會另行授權。
 - [來源頁](https://kinmen.travel/zh-tw/travel/attraction/549) · [原始圖片](https://kinmen.travel/attractions/47062/1024x768_attractions-image-v7kgqlrog0cqlwv8ypd9xw.jpg)
 - 本站處理：縮放、轉換為 WebP；依版面裁切顯示。
 
