@@ -88,7 +88,7 @@ luocuo-mazu-park,https://kinmenguide.com/attractions/luocuo-mazu-park/,,NOT_STAR
 maogongshi-coast,https://kinmenguide.com/attractions/maogongshi-coast/,,NOT_STARTED,,,,,,,,,,
 maogongshi-viewpoint,https://kinmenguide.com/attractions/maogongshi-viewpoint/,,NOT_STARTED,,,,,,,,,,
 mashan-broadcasting-station,https://kinmenguide.com/attractions/mashan-broadcasting-station/,,NOT_STARTED,,,,,,,,,,
-mashan-observation-post,https://kinmenguide.com/attractions/mashan-observation-post/,,NOT_STARTED,,,,,,,,,,
+mashan-observation-post,https://kinmenguide.com/attractions/mashan-observation-post/,v1.2,AWAITING_LIVE_CHECK,2026-11-03,feat/mashan-relay,,,PASS_LOCAL,PASS_LOCAL_224_DESKTOP_MOBILE,SOL_IMPLEMENTATION_LUNA_INDEPENDENT_REVIEW_CORRECTED,,mashan-broadcasting-station,"Local migration only; named observation-post POI distinct from broadcasting station; exact Google township address retained; 2025 park path-improvement plan is historical and does not prove current whole-site management, completion, ownership or outsourcing. Broadcasting-station area marker awaits its own verification. Official telephone discrepancy remains. Await CI, review and independent production acceptance."
 mingde-park,https://kinmenguide.com/attractions/mingde-park/,,NOT_STARTED,,,,,,,,,,
 mingyi-old-street,https://kinmenguide.com/attractions/mingyi-old-street/,,NOT_STARTED,,,,,,,,,,
 mofan-street,https://kinmenguide.com/attractions/mofan-street/,,NOT_STARTED,,,,,,,,,,
