@@ -26,7 +26,8 @@ export const attractionDetailPilots = {
     facts: [
       {label:'正式名稱／英文',value:'翟山坑道 / Zhaishan Tunnel'},
       {label:'類型',value:'軍事史蹟、地下坑道、水道工程'},
-      {label:'所在地／地址',value:'金門縣金城鎮古崗湖東南方翟山腹'},
+      {label:'景點地址（Google 地圖）',value:'893金門縣金城鎮90號'},
+      {label:'所在地／位置描述',value:'金門縣金城鎮古崗湖東南方翟山腹'},
       {label:'座標',value:'24.3903, 118.32054（沿用本站已核對位置）'},
       {label:'目前管理單位',value:'內政部國家公園署金門國家公園管理處'},
       {label:'一般開放時間',value:'官方旅遊資訊列每日08:30–17:00；臨時管制與活動公告優先，非即時營業狀態。'},
