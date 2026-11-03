@@ -97,7 +97,7 @@ national-quemoy-university,https://kinmenguide.com/attractions/national-quemoy-u
 north-wind-lord,https://kinmenguide.com/attractions/north-wind-lord/,,NOT_STARTED,,,,,,,,,,
 oucuo-tank,https://kinmenguide.com/attractions/oucuo-tank/,,NOT_STARTED,,,,,,,,,,
 oucuo-wind-lion,https://kinmenguide.com/attractions/oucuo-wind-lion/,,NOT_STARTED,,,,,,,,,,
-overseas-chinese-museum,https://kinmenguide.com/attractions/overseas-chinese-museum/,,NOT_STARTED,,,,,,,,,,
+overseas-chinese-museum,https://kinmenguide.com/attractions/overseas-chinese-museum/,v1.2,AWAITING_LIVE_CHECK,2026-11-03,feat/overseas-relay,,,PASS_LOCAL,PASS_LOCAL_210_DESKTOP_MOBILE,LUNA_OFFICIAL_REVIEW_SOL_IMPLEMENTATION,,wind-lion-cultural-shop,3 original topics and all text/links/photo preserved; 8 exact FAQs. 2026 Aug10 reopening supersedes Jan closure. Named POI/address verified; no invented postcode. Local validate and210 browser tests PASS; final review copy correction validate and2 focused tests PASS. CI/release/live pending. See docs/overseas-chinese-museum-v1.2-evidence.md.
 prince-lu-tomb,https://kinmenguide.com/attractions/prince-lu-tomb/,,NOT_STARTED,,,,,,,,,,
 qilin-mountain-park,https://kinmenguide.com/attractions/qilin-mountain-park/,,NOT_STARTED,,,,,,,,,,
 qingqi-harbor,https://kinmenguide.com/attractions/qingqi-harbor/,,NOT_STARTED,,,,,,,,,,
