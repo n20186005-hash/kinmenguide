@@ -46,6 +46,15 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
   await expect(management).toContainText('內政部國家公園署金門國家公園管理處');
   await expect(management.locator('a')).toHaveAttribute('href', 'https://www.kmnp.gov.tw/ch/touristInfo/recreation-sites/40');
   await expect(page.locator('.attraction-basic')).toContainText('目前管理單位');
+  // A postal address is not a free-form landscape/location description.
+  await expect(page.locator('.attraction-basic')).toContainText('景點地址（Google 地圖）');
+  await expect(page.locator('.attraction-basic')).toContainText('893金門縣金城鎮90號');
+  await expect(page.locator('.attraction-basic')).toContainText('所在地／位置描述');
+  await expect(page.locator('.attraction-basic')).toContainText('金門縣金城鎮古崗湖東南方翟山腹');
+  const mapsPoiUrl = 'https://maps.app.goo.gl/aQ2NqLzgZ3mATHpYA';
+  await expect(page.getByRole('link', { name: '查看位置', exact: true })).toHaveAttribute('href', mapsPoiUrl);
+  await expect(page.getByRole('link', { name: '查看位置與導航' })).toHaveAttribute('href', mapsPoiUrl);
+  await expect(page.getByRole('link', { name: '開啟翟山坑道位置地圖' })).toHaveAttribute('href', mapsPoiUrl);
   await expect(page.locator('[data-attraction-detail] > section:last-child h2')).toHaveAttribute('id', 'about-attraction');
   expect(await page.locator('[data-attraction-detail]').evaluate(element =>
     element.nextElementSibling?.querySelector('h2')?.id)).toBe('basic-info');
@@ -71,6 +80,9 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
   const schemas = await page.locator('script[type="application/ld+json"]').allTextContents();
   const graph = schemas.flatMap(text => JSON.parse(text)['@graph'] ?? []);
   expect(graph.some(node => node['@type'] === 'TouristAttraction')).toBe(true);
+  const placeSchema = graph.find(node => node['@type'] === 'TouristAttraction');
+  expect(placeSchema.address.streetAddress).toBe('893金門縣金城鎮90號');
+  expect(placeSchema.hasMap).toBe(mapsPoiUrl);
   const faqSchema = graph.filter(node => node['@type'] === 'FAQPage');
   expect(faqSchema).toHaveLength(1);
   const visibleFaq = await page.locator('article.article-body details').evaluateAll(details =>
@@ -95,6 +107,15 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
     await detail.locator('summary').click();
     await expect(detail.locator('p')).toBeVisible();
   }
+  await noHorizontalOverflow();
+
+  // Full-island map must also navigate to the named Google Maps landmark, not its raw coordinates.
+  const mapResponse = await page.goto('/map/');
+  expect(mapResponse?.status()).toBe(200);
+  const mapPlace = page.locator('#map-point-attraction-zhaishan-tunnel');
+  await expect(mapPlace).toContainText('893金門縣金城鎮90號');
+  await expect(mapPlace.locator('[data-map-location-link]')).toHaveAttribute('href', mapsPoiUrl);
+  await expect(mapPlace.locator('[data-map-location-link]')).toHaveText('Google 地圖景點導航');
   await noHorizontalOverflow();
 
   const creditsResponse = await page.goto('/credits/#zhaishan');
