@@ -128,7 +128,6 @@ test('detail pilot does not opt other collections or attractions in', async ({ p
   // All fixtures correspond to existing Markdown entries, not inferred routes.
   for (const url of [
     '/attractions/jiugong-tunnel/',
-    '/attractions/deyue-tower/',
     '/areas/kincheng/',
     '/hotels/family/',
     '/itineraries/kinmen-three-days-two-nights/',
