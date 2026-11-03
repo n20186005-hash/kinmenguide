@@ -8,6 +8,11 @@ test('Huang Tingcan v1.2 preserves legacy topics, photo, map POI and exact FAQ s
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/huang-tingcan-house/');
   await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
   await expect(page.locator('.article-cover')).toHaveCount(0);
+  await expect(page.locator('.article-header')).toContainText('讀者2026-11-03回報');
+  await expect(page.locator('.article-header')).toContainText('入口免費停車');
+  await expect(page.locator('article.article-body')).toContainText('門前井水可汲取');
+  await expect(page.locator('article.article-body')).toContainText('未提供到訪日期');
+  await expect(page.locator('article.article-body')).toContainText('井水不作飲用水保證');
   const heads = await page.locator('article.article-body h2').allTextContents();
   expect(heads.slice(0,9)).toEqual(['探索黃廷參三落大厝（古厝小舖）','關於黃廷參三落大厝（古厝小舖）','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程']);
   expect(heads).not.toContain('景點相冊');
