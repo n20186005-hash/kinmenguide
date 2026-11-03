@@ -20,14 +20,19 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
   await noHorizontalOverflow();
   await expect(page.locator('[data-attraction-detail="v1"]')).toHaveCount(1);
   const headings = await page.locator('article.article-body h2').allTextContents();
-  expect(headings.slice(0, 9)).toEqual([
+  expect(headings.slice(0, 10)).toEqual([
     '探索翟山坑道', '關於翟山坑道', '基本資料', '交通方式', '路線地圖',
-    '人文生態', '景點相冊', '遊客資訊與常見問答', '周邊景點與順路行程'
+    '人文生態', '景點相冊', '遊客資訊與常見問答',
+    '現地遊覽與行程延伸', '周邊景點與順路行程'
   ]);
   const about = page.locator('#about-attraction');
   const basic = page.locator('#basic-info');
   await about.scrollIntoViewIfNeeded();
   await expect(about).toBeVisible();
+  const manager = page.locator('section[aria-labelledby="about-attraction"] .attraction-operator a');
+  await expect(manager).toHaveText('內政部國家公園署金門國家公園管理處');
+  await expect(manager).toHaveAttribute('href', 'https://www.kmnp.gov.tw/ch/touristInfo/recreation-sites/40');
+  await expect(page.locator('.attraction-basic')).toContainText('管理單位');
   await expect(page.locator('[data-attraction-detail] > section:last-child h2')).toHaveAttribute('id', 'about-attraction');
   expect(await page.locator('[data-attraction-detail]').evaluate(element =>
     element.nextElementSibling?.querySelector('h2')?.id)).toBe('basic-info');
@@ -43,6 +48,23 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
   await expect(page.locator('figcaption')).toContainText('jason199567 / CC BY-SA 2.0');
   await expect(page.locator('a[href="/credits/#zhaishan"]').first()).toHaveAttribute('href', '/credits/#zhaishan');
   await expect(page.locator('article.article-body')).toContainText('6A不繞翟山坑道');
+  // Preserve the original editorial topics AFTER the FAQ and BEFORE nearby attractions.
+  const restoredTopics = [
+    '出發前怎麼查開放？', '值得停下來看的風景', '怎麼排進一天',
+    '拍照、親子與雨天', '從戰時運補，看見坑道的尺度', '已結束的活動公告'
+  ];
+  const extendedHeadings = await page.locator('article.article-body h2, article.article-body h3').allTextContents();
+  const faqIndex = extendedHeadings.indexOf('遊客資訊與常見問答');
+  const nextSectionIndex = extendedHeadings.indexOf('現地遊覽與行程延伸');
+  const nearIndex = extendedHeadings.indexOf('周邊景點與順路行程');
+  expect(faqIndex).toBeGreaterThan(-1);
+  expect(nextSectionIndex).toBe(faqIndex + 1);
+  expect(nearIndex).toBe(nextSectionIndex + restoredTopics.length + 1);
+  expect(extendedHeadings.slice(nextSectionIndex + 1, nearIndex)).toEqual(restoredTopics);
+  expect(extendedHeadings.filter(text => text === '遊客資訊與常見問答')).toHaveLength(1);
+  await expect(page.locator('article.article-body')).toContainText('1960年代');
+  await expect(page.locator('article.article-body')).toContainText('金門國家公園管理處的最新公告');
+  await noHorizontalOverflow();
 
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://kinmenguide.com/attractions/zhaishan-tunnel/');
   await expect(page).toHaveTitle('翟山坑道｜金門旅遊實用攻略 | Kinmen Guide');
