@@ -167,7 +167,7 @@ yangzhai-old-street,https://kinmenguide.com/attractions/yangzhai-old-street/,,NO
 yannan-academy,https://kinmenguide.com/attractions/yannan-academy/,,NOT_STARTED,,,,,,,,,,
 yanping-prince-shrine,https://kinmenguide.com/attractions/yanping-prince-shrine/,,NOT_STARTED,,,,,,,,,,
 yu-dawei-museum,https://kinmenguide.com/attractions/yu-dawei-museum/,,NOT_STARTED,,,,,,,,,,
-zhaishan-tunnel,https://kinmenguide.com/attractions/zhaishan-tunnel/,v1.2,PR_OPEN,2026-11-03,fix/zhaishan-google-maps-poi-address-skill-v1-2,https://github.com/n20186005-hash/kinmenguide/pull/58,,PENDING,PENDING,GOOGLE_MAPS_POI_USER_SUPPLIED,,shuitou-village,"Address according to supplied Google Maps POI: 893金門縣金城鎮90號; keep official landscape location description separately; navigation header/detail/map and hasMap direct POI link; skill v1.2 sync. Requires CI and live review."
+zhaishan-tunnel,https://kinmenguide.com/attractions/zhaishan-tunnel/,v1.2,AWAITING_LIVE_CHECK,2026-11-03,main,https://github.com/n20186005-hash/kinmenguide/pull/58,090ed42aef1bf3330cd45d25aa625f781c2233b8,PASS_41587129421,PASS_41587129421,GOOGLE_MAPS_POI_USER_SUPPLIED,,shuitou-village,"Google Maps POI address 893金門縣金城鎮90號, geo description separately preserved. Header, transit, route map, full-island map and TouristAttraction.hasMap use user-provided named POI URL. Build/browser passed; Google short-link resolution and live Cloudflare page cannot be independently checked from current network."
 zhongshan-forest,https://kinmenguide.com/attractions/zhongshan-forest/,,NOT_STARTED,,,,,,,,,,
 zhongxing-fort,https://kinmenguide.com/attractions/zhongxing-fort/,,NOT_STARTED,,,,,,,,,,
 zhongzheng-forest,https://kinmenguide.com/attractions/zhongzheng-forest/,,NOT_STARTED,,,,,,,,,,
