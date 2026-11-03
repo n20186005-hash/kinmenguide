@@ -20,7 +20,7 @@ test('Mashan v1.2 preserves legacy topics, photo, map POI and exact FAQ schema',
   await expect(page.locator('.attraction-basic')).toContainText('082-352149');
   await expect(page.locator('.attraction-basic')).toContainText('082-330086');
   await expect(page.locator('article.article-body')).toContainText('不代表目前仍施工');
-  await expect(page.locator('article.article-body')).toContainText('本站播音站條目目前沿用區域定位');
+  await expect(page.locator('article.article-body')).toContainText('本站馬山播音站亦已另行核對其獨立具名地標與導航');
   await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
   await expect(page.getByRole('link',{name:'Google地圖・馬山觀測所（具名景點）'})).toHaveAttribute('href',data.googleMapsUrl);
   await expect(page.getByRole('link',{name:'查看馬山觀測所Google地圖具名地標'})).toHaveAttribute('href',data.googleMapsUrl);
