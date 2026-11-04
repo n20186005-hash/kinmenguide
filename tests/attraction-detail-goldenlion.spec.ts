@@ -1,0 +1,28 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/golden-lion-cinema.md','utf8').split('---')[1]);
+test('Golden Lion preserves cessation evidence exact Maps address and safe planning reminders',async({page})=>{
+  expect((await page.goto('/attractions/golden-lion-cinema/'))?.status()).toBe(200);
+  await expect(page.locator('h1')).toHaveCount(1);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/golden-lion-cinema/');
+  await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+  await expect(page.locator('.article-cover img')).toHaveCount(0);expect(data.image).toBeUndefined();await expect(page.locator('figcaption')).toHaveCount(0);
+  const hs=await page.locator('article.article-body h2').allTextContents();
+  expect(hs.slice(0,10)).toEqual(['探索'+data.title,'關於'+data.title,'基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','資料來源與行前提醒']);expect(hs).not.toContain('景點相冊');
+  const ts=await page.locator('article.article-body h3').allTextContents();for(const t of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])expect(ts).toContain(t);
+  await expect(page.locator('.attraction-manager a')).toContainText('現行營運與管理權責待確認');
+  await expect(page.locator('.article-header').getByRole('link',{name:'查看2026-11-01停業報導',exact:true})).toHaveAttribute('href','https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=A3A77E7A0EFAC8EE&sms=BF7D6D478B935644');
+  await expect(page.locator('article.article-body')).toContainText('沒有據此確認永久歇業');
+  await expect(page.locator('article.article-body')).toContainText('未查得復業公告');
+  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'Google地圖・金獅影城'})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'查看金獅影城Google具名地標'})).toHaveAttribute('href',data.googleMapsUrl);
+  const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));expect(visible).toEqual(data.faq);
+  const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+  expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+  const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address.streetAddress).toBe('891金門縣金湖鎮瓊林里中山路8-8號8-5號 西棟 3F');expect(place.hasMap).toBe(data.googleMapsUrl);expect(data.googleMapsUrl).toContain('0x3414a2691a955881:0x94309d0c49c0854a');expect(data.coordinates).toEqual({lat:24.4416785,lng:118.3624664});
+  await expect(page.locator('article.article-body')).not.toContainText('公告結束日期尚未到');
+  await page.locator('[data-trip-add="golden-lion-cinema"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="golden-lion-cinema"]')).toBeVisible();await expect(page.locator('[data-stop="golden-lion-cinema"]')).toContainText('查核備忘');await page.locator('[data-stop="golden-lion-cinema"] [data-action="remove"]').click();await expect(page.locator('[data-stop="golden-lion-cinema"]')).toHaveCount(0);
+  await page.goto('/attractions/golden-lion-cinema/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.goto('/map/');await expect(page.locator('#map-point-attraction-golden-lion-cinema [data-map-location-link]')).toHaveAttribute('href',data.googleMapsUrl);await expect(page.locator('#map-point-attraction-golden-lion-cinema')).toContainText('2026-10-31最後營業日');
+});
