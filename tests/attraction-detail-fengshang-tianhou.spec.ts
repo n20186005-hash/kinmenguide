@@ -1,0 +1,28 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/fengshang-tianhou-temple.md','utf8').split('---')[1]);
+test('Fengshang Tianhou separates intangible custom preservation from building ownership and unknown visiting access',async({page})=>{
+  expect((await page.goto('/attractions/fengshang-tianhou-temple/'))?.status()).toBe(200);
+  await expect(page.locator('h1')).toHaveCount(1);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/fengshang-tianhou-temple/');
+  await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+  await expect(page.locator('.article-cover img')).toHaveCount(0);expect(data.image).toBeUndefined();
+  await expect(page.locator('figcaption')).toHaveCount(0);
+  const hs=await page.locator('article.article-body h2').allTextContents();
+  expect(hs.slice(0,10)).toEqual(['探索'+data.title,'關於'+data.title,'基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','資料來源與行前提醒']);expect(hs).not.toContain('景點相冊');
+  const ts=await page.locator('article.article-body h3').allTextContents();for(const t of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])expect(ts).toContain(t);
+  await expect(page.locator('.attraction-manager a')).toContainText('日常權責待核');
+  await expect(page.locator('.article-header').getByRole('link',{name:'查看2026醮慶與管委會紀錄',exact:true})).toHaveAttribute('href','https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=4CFB7CB03B89FBD5&sms=BF7D6D478B935644');
+  await expect(page.locator('article.article-body')).toContainText('也不合併地標、主祀或開門規則');
+  await expect(page.locator('article.article-body')).toContainText('保存民俗不是建物產權證明');
+  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'Google地圖・峰上天后宮'})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'查看峰上天后宮Google具名地標'})).toHaveAttribute('href',data.googleMapsUrl);
+  const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));expect(visible).toEqual(data.faq);
+  const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+  expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+  const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address.streetAddress).toBe('891金門縣金湖鎮峰上6號');expect(place.hasMap).toBe(data.googleMapsUrl);expect(data.googleMapsUrl).toContain('0x3414a5129e9a788f:0x2c965b20c8db350');expect(data.coordinates).toEqual({lat:24.4311291,lng:118.4612598});
+  await page.locator('[data-trip-add="fengshang-tianhou-temple"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="fengshang-tianhou-temple"]')).toBeVisible();await page.locator('[data-stop="fengshang-tianhou-temple"] [data-action="remove"]').click();await expect(page.locator('[data-stop="fengshang-tianhou-temple"]')).toHaveCount(0);
+  await page.goto('/attractions/fengshang-tianhou-temple/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.goto('/map/');await expect(page.locator('#map-point-attraction-fengshang-tianhou-temple [data-map-location-link]')).toHaveAttribute('href',data.googleMapsUrl);await expect(page.locator('#map-point-attraction-fengshang-tianhou-temple')).toContainText('不穿神轎與儀式中心');
+});
