@@ -191,7 +191,7 @@ test('Lieyu entry points preserve exact park identity and access notices',async(
  await expect(page.locator('.facts-grid')).toContainText('C66F+6M');
  await expect(page.getByRole('link',{name:'在 Google 地圖查看位置',exact:true})).toHaveAttribute('href','https://www.google.com/maps/search/?api=1&query=24.4105791,118.2241265');
  await expect(page.locator('.prose')).toContainText('不是東林海濱公園');
- await page.goto('/map/');const restricted=page.locator('.map-point').filter({hasText:'虎堡'});
+ await page.goto('/map/');const restricted=page.locator('#map-point-attraction-tiger-fort');
  await expect(restricted.locator('[data-visit-notice]')).toContainText('尚未確認常態開放');
  await expect(restricted.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
  await page.goto('/attractions/tiger-fort/');await expect(page.locator('[data-visit-notice]')).toContainText('未列入本站推薦參觀路線');
