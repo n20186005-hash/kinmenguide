@@ -1,0 +1,28 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/fengshang-fuji-temple.md','utf8').split('---')[1]);
+test('Fengshang Fuji preserves original topics with no invented photo and separates committee activity from ownership',async({page})=>{
+  expect((await page.goto('/attractions/fengshang-fuji-temple/'))?.status()).toBe(200);
+  await expect(page.locator('h1')).toHaveCount(1);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/fengshang-fuji-temple/');
+  await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+  await expect(page.locator('.article-cover img')).toHaveCount(0);expect(data.image).toBeUndefined();
+  await expect(page.locator('figcaption')).toHaveCount(0);
+  const hs=await page.locator('article.article-body h2').allTextContents();
+  expect(hs.slice(0,10)).toEqual(['探索'+data.title,'關於'+data.title,'基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','資料來源與行前提醒']);expect(hs).not.toContain('景點相冊');
+  const ts=await page.locator('article.article-body h3').allTextContents();for(const t of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])expect(ts).toContain(t);
+  await expect(page.locator('.attraction-manager a')).toContainText('日常權責待核');
+  await expect(page.locator('.article-header').getByRole('link',{name:'查看2026醮慶與管委會紀錄',exact:true})).toHaveAttribute('href','https://www.kmdn.gov.tw/1117/1271/1272/590675/');
+  await expect(page.locator('article.article-body')).toContainText('不表示兩座建物是同一地點或共用開門、拍照與參拜規則');
+  await expect(page.locator('article.article-body')).toContainText('不等於政府經營或擁有廟產');
+  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'Google地圖・峰上孚濟宮'})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'查看峰上孚濟宮Google具名地標'})).toHaveAttribute('href',data.googleMapsUrl);
+  const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));expect(visible).toEqual(data.faq);
+  const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+  expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+  const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address.streetAddress).toBe('891金門縣金湖鎮峰上13之2號');expect(place.hasMap).toBe(data.googleMapsUrl);expect(data.googleMapsUrl).toContain('0x3414a50c318190d1:0xb77fadbcac5b2369');expect(data.coordinates).toEqual({lat:24.4284796,lng:118.4581019});
+  await page.locator('[data-trip-add="fengshang-fuji-temple"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="fengshang-fuji-temple"]')).toBeVisible();await page.locator('[data-stop="fengshang-fuji-temple"] [data-action="remove"]').click();await expect(page.locator('[data-stop="fengshang-fuji-temple"]')).toHaveCount(0);
+  await page.goto('/attractions/fengshang-fuji-temple/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.goto('/map/');await expect(page.locator('#map-point-attraction-fengshang-fuji-temple [data-map-location-link]')).toHaveAttribute('href',data.googleMapsUrl);await expect(page.locator('#map-point-attraction-fengshang-fuji-temple')).toContainText('拍照先詢廟方');
+});
