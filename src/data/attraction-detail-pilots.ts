@@ -6,7 +6,7 @@ export interface AttractionDetailPilot {
   advice: string[];
   features: string[];
   about: string;
-  management?: { name: string; sourceUrl: string };
+  management?: { name: string; sourceUrl: string; ctaLabel?: string };
   facts: { label: string; value: string }[];
 }
 export const attractionDetailPilots: Record<string, AttractionDetailPilot | undefined> = {
@@ -72,7 +72,8 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   "about": "東崗誠實亭曾列入官方公布的烈嶼路跑活動路線，可作為辨認南岸地景的地名。本次未取得亭本體現行管理、清潔維護、產權或委外關係的直接證據；官方刊登活動、鄉公所辦理周邊工程或國家公園範圍討論，不能直接推定今日亭的管理單位。",
   "management": {
     "name": "亭本體現行管理／清潔維護待確認（來源為2021年活動地名紀錄）",
-    "sourceUrl": "https://kinmen.travel/zh-tw/news/details/2902"
+    "sourceUrl": "https://kinmen.travel/zh-tw/news/details/2902",
+    "ctaLabel": "查看2021路跑路線紀錄"
   },
   "facts": [
     {

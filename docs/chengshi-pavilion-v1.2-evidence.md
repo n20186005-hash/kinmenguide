@@ -43,3 +43,15 @@ GUI列24h，頁面明確歸因Google第三方，不寫官方24h、全年無管�
 最終相對actual main僅3個既有檔差異（target MD/registry/CSV）+2個新增檔（focused test/evidence）；registry其他條目、CSV其他列逐項精確不變，無其他content collection差異。舊四段除上述已記錄來源/通行窄修外逐字保持。git diff --check通過。臨時preview config、node_modules symlink、work scratch移除；未commit/push。CSV待線上，不把本地測試當production驗收。
 
 Final check recorded at 2026-11-04T02:11:41Z (UTC).
+
+## 上線驗收後 CTA 用語窄修
+
+authority獨立檢查正式頁發現頁首第二CTA標為「查看管理／文化資產資料」，但實際連至2021年活動路線2902，會使人誤認歷史路跑可證現管。依父代理任務，以GitHub main `c34368cd133ed1b4bed031e50fb9a3c8095ca638` 重建獨立 `work/chengshi-cta-ready`，42f53d3加78個變更覆蓋，833個remote blob全hash一致作基線。
+
+最小修正：pilot管理來源增加可選ctaLabel，僅誠實亭指定「查看2021路跑路線紀錄」；景點頁header優先該文字，未指定者仍採原「查看管理／文化資產資料」。href、正文管理待核、FAQ、地址、原文與圖像狀態均不動。不改其他景點data，不以改label提升來源證據能力。
+
+既有誠實亭focused測試新增頁首exact label/href與舊誤導label缺席，並跨至翟山坑道驗證原預設label及國家公園來源不變；其餘8FAQ/schema、地圖、行程及行動版檢查保留。CSV回AWAITING_LIVE_CHECK，舊PR/SHA/部署歷史保留於notes、新fix欄位等待父代理發布，不把上一版live驗收當此版通過。
+
+CTA窄修最終本地結果（2026-11-04T02:23:00Z UTC）：`pnpm validate`通過，0 errors/0 warnings/0 hints，556頁稽核通過；完整桌機+手機 **254 passed（56.7s）**。誠實亭header顯示正確活動紀錄label/href、舊管理CTA缺席、翟山預設管理label/href保持；原FAQ/schema/地圖/行程等回歸通過。actual-main差異僅registry、景點renderer、既有誠實亭test、此evidence、CSV單列共5檔，無MD或其他collection變動；registry其餘資料及CSV其他列逐項相同。git diff --check通過。臨時config/symlink/work scratch已移除，不commit/push，待父代理PR與正式頁複核。
+
+authority/Luna獨立最終交接確認本次CTA實作與回歸測試審閱通過；其2026-11-04 02:22 UTC正式頁驗收仍見舊label，因此fix版尚待合併部署後重新線上核對，不誤標已live。
