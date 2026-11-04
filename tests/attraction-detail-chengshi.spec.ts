@@ -5,6 +5,8 @@ test('Chengshi v1.2 separates pavilion, preserves legacy and exact POI FAQ', asy
   expect((await page.goto('/attractions/chengshi-pavilion/'))?.status()).toBe(200);
   await expect(page.locator('h1')).toHaveCount(1);
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/chengshi-pavilion/');
+  await expect(page.locator('.article-header').getByRole('link',{name:'查看2021路跑路線紀錄',exact:true})).toHaveAttribute('href','https://kinmen.travel/zh-tw/news/details/2902');
+  await expect(page.locator('.article-header').getByRole('link',{name:'查看管理／文化資產資料',exact:true})).toHaveCount(0);
   await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
   await expect(page.locator('.article-cover')).toHaveCount(0);
   expect((await page.locator('article.article-body h2').allTextContents()).slice(0,10)).toEqual(['探索東崗誠實亭','關於東崗誠實亭','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','資料來源與行前提醒']);
@@ -31,6 +33,9 @@ test('Chengshi v1.2 separates pavilion, preserves legacy and exact POI FAQ', asy
   await expect(page.getByRole('heading',{name:data.title,exact:true})).toBeVisible();
   await page.locator('[data-stop="chengshi-pavilion"] [data-action="remove"]').click();await expect(page.locator('[data-stop="chengshi-pavilion"]')).toHaveCount(0);
   await page.goto('/attractions/chengshi-pavilion/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.goto('/attractions/zhaishan-tunnel/');
+  await expect(page.locator('.article-header').getByRole('link',{name:'查看管理／文化資產資料',exact:true})).toHaveAttribute('href','https://www.kmnp.gov.tw/ch/touristInfo/recreation-sites/40');
+  await expect(page.locator('.article-header').getByRole('link',{name:'查看2021路跑路線紀錄',exact:true})).toHaveCount(0);
   await page.goto('/map/');await expect(page.locator('#map-point-attraction-chengshi-pavilion [data-map-location-link]')).toHaveAttribute('href',data.googleMapsUrl);
   await expect(page.locator('#map-point-attraction-chengshi-pavilion')).toContainText('不沿舊遊記追找下海小徑');
 });
