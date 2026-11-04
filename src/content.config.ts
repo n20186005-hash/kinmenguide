@@ -28,6 +28,7 @@ const attraction = common.extend({
   address: z.string(), // Google 地圖景點地標顯示的完整門牌地址
   locationDescription: z.string().optional(), // 另存官方地理位置描述，不冒充地址
   googleMapsAddressLocalityConflict: z.boolean().optional(), // 原始 POI 地址行政區有衝突時，不另拼接 area 行政區
+  googleMapsVerificationPending: z.boolean().optional(), // 未核具名POI時，不輸出Google地址與導航
   googleMapsUrl: z.url().optional(), // 已核對的具名景點 POI 連結，優先用於導航
   parking: z.string(),
   hours: z.string(),
