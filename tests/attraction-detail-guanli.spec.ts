@@ -1,0 +1,27 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/guanli-wind-lion.md','utf8').split('---')[1]);
+test('Guanli preserves source-qualified village lion topics and named POI',async({page})=>{
+  expect((await page.goto('/attractions/guanli-wind-lion/'))?.status()).toBe(200);
+  await expect(page.locator('h1')).toHaveCount(1);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/guanli-wind-lion/');
+  await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+  await expect(page.locator('.article-cover img')).toHaveCount(1);expect(data.image).toBe('place-guanli-wind-lion');await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處');await expect(page.locator('figcaption')).toContainText('政府網站資料開放宣告');
+  const hs=await page.locator('article.article-body h2').allTextContents();
+  expect(hs.slice(0,10)).toEqual(['探索'+data.title,'關於'+data.title,'基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','資料來源與行前提醒']);expect(hs).not.toContain('景點相冊');
+  const ts=await page.locator('article.article-body h3').allTextContents();for(const t of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])expect(ts).toContain(t);
+  await expect(page.locator('.attraction-manager a')).toContainText('現行管理、維護及產權待確認');
+  await expect(page.locator('.article-header').getByRole('link',{name:'查看歷史重塑介紹',exact:true})).toHaveAttribute('href','https://kinmen.travel/zh-tw/travel/attraction/615');
+  await expect(page.locator('article.article-body')).toContainText('不能推為今日管理');
+  await expect(page.locator('article.article-body')).toContainText('2018-07-30');
+  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'Google地圖・官裡風獅爺'})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'查看官裡風獅爺Google具名地標'})).toHaveAttribute('href',data.googleMapsUrl);
+  const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));expect(visible).toEqual(data.faq);
+  const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+  expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+  const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address.streetAddress).toBe('893金門縣金城鎮');expect(place.hasMap).toBe(data.googleMapsUrl);expect(data.googleMapsUrl).toContain('0x3414a219177925f5:0xb340bf1d43a2844b');expect(data.coordinates).toEqual({lat:24.4125089,lng:118.3191411});
+  await page.locator('[data-trip-add="guanli-wind-lion"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="guanli-wind-lion"]')).toBeVisible();await page.locator('[data-stop="guanli-wind-lion"] [data-action="remove"]').click();await expect(page.locator('[data-stop="guanli-wind-lion"]')).toHaveCount(0);
+  await page.goto('/attractions/guanli-wind-lion/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.goto('/map/');await expect(page.locator('#map-point-attraction-guanli-wind-lion [data-map-location-link]')).toHaveAttribute('href',data.googleMapsUrl);await expect(page.locator('#map-point-attraction-guanli-wind-lion')).toContainText('不占路肩');
+});
