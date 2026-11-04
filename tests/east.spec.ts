@@ -53,8 +53,9 @@ test('restricted and closing facilities show notices and stay out of ordinary ro
  await page.goto('/map/');
  const doumen=page.locator('.map-point').filter({has:page.locator('a[href="/attractions/doumen-trail/"]')});
  await expect(doumen).toHaveCount(1);
- await expect(doumen.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
- await expect(doumen.locator('[data-map-location-link]')).toHaveAttribute('href',/maps\/search/);
+ await expect(doumen.getByRole('button',{name:'圖上查看'})).toHaveCount(1);
+ await expect(doumen.locator('[data-visit-notice]')).toContainText('路線點非入口或停車地');
+ await expect(doumen.locator('[data-map-location-link]')).toHaveAttribute('href',/0x3414a4b0ac30d3a1:0x2879a30166d3dca5/);
  const sky=page.locator('.map-point').filter({has:page.locator('a[href="/attractions/sky-castle-e094/"]')});
  await expect(sky).toHaveCount(1);
  await expect(sky.locator('[data-visit-notice]')).toContainText('掏空');
