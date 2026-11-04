@@ -1,0 +1,28 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/fengshang-patrol-fort.md','utf8').split('---')[1]);
+test('Fengshang Patrol distinguishes rebuilt walls, raw Maps address and conflicting fee fields',async({page})=>{
+  expect((await page.goto('/attractions/fengshang-patrol-fort/'))?.status()).toBe(200);
+  await expect(page.locator('h1')).toHaveCount(1);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/fengshang-patrol-fort/');
+  await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+  await expect(page.locator('.article-cover img')).toBeVisible();
+  await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+  const hs=await page.locator('article.article-body h2').allTextContents();
+  expect(hs.slice(0,10)).toEqual(['探索'+data.title,'關於'+data.title,'基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','資料來源與行前提醒']);expect(hs).not.toContain('景點相冊');
+  const ts=await page.locator('article.article-body h3').allTextContents();for(const t of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])expect(ts).toContain(t);
+  await expect(page.locator('.attraction-manager a')).toContainText('產權待確認');
+  await expect(page.locator('.article-header').getByRole('link',{name:'查看官方巡檢司介紹',exact:true})).toHaveAttribute('href','https://kinmen.travel/zh-tw/travel/attraction/1668');
+  await expect(page.locator('article.article-body')).toContainText('不把每段新砌城牆、城門或亭台都說成明代原物');
+  await expect(page.locator('article.article-body')).toContainText('來源欄位不一致，不將DB欄當收費公告');
+  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'Google地圖・峰上巡檢司'})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'查看峰上巡檢司Google具名地標'})).toHaveAttribute('href',data.googleMapsUrl);
+  const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));expect(visible).toEqual(data.faq);
+  const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+  expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+  const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address.streetAddress).toBe('891福建省金湖鎮');expect(place.hasMap).toBe(data.googleMapsUrl);expect(data.googleMapsUrl).toContain('0x3414a5cc9c210e27:0x156177cbfb373bfc');expect(data.coordinates).toEqual({lat:24.4274778,lng:118.4600984});
+  await page.locator('[data-trip-add="fengshang-patrol-fort"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="fengshang-patrol-fort"]')).toBeVisible();await page.locator('[data-stop="fengshang-patrol-fort"] [data-action="remove"]').click();await expect(page.locator('[data-stop="fengshang-patrol-fort"]')).toHaveCount(0);
+  await page.goto('/attractions/fengshang-patrol-fort/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.goto('/map/');await expect(page.locator('#map-point-attraction-fengshang-patrol-fort [data-map-location-link]')).toHaveAttribute('href',data.googleMapsUrl);await expect(page.locator('#map-point-attraction-fengshang-patrol-fort')).toContainText('不攀垛口、跨欄或闖周邊據點私地');
+});
