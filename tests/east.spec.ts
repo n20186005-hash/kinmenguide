@@ -7,7 +7,9 @@ for (let group=0;group<3;group++) {
  test(`east expansion: requested names ${group*28+1}–${(group+1)*28} resolve`,async({page})=>{
   await page.goto('/search/');
   for(const [query,href] of requestedPlaces.slice(group*28,(group+1)*28)){
-   await page.getByLabel('搜尋關鍵字').fill(query);
+   // Hanshehua is the coast page; the historical office-name fixture must not reintroduce the removed inspection-post alias.
+   const currentQuery=href==='/attractions/hanshehua-coast/'?'寒舍花海岸':query;
+   await page.getByLabel('搜尋關鍵字').fill(currentQuery);
    await expect(page.locator(`.search-result:visible a[href="${href}"]`),query).toBeVisible();
   }
  });
