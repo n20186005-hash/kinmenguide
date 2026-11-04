@@ -1,0 +1,27 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/guoxing-well.md','utf8').split('---')[1]);
+test('Guoxing preserves well legends photo and distinguishes water drawing from potability',async({page})=>{
+  expect((await page.goto('/attractions/guoxing-well/'))?.status()).toBe(200);
+  await expect(page.locator('h1')).toHaveCount(1);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/guoxing-well/');
+  await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+  await expect(page.locator('.article-cover img')).toHaveCount(1);expect(data.image).toBe('place-guoxing-well');await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處');await expect(page.locator('figcaption')).toContainText('政府網站資料開放宣告');
+  const hs=await page.locator('article.article-body h2').allTextContents();
+  expect(hs.slice(0,10)).toEqual(['探索'+data.title,'關於'+data.title,'基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','資料來源與行前提醒']);expect(hs).not.toContain('景點相冊');
+  const ts=await page.locator('article.article-body h3').allTextContents();for(const t of ['一口井與地方傳說','以村落尺度慢慢看','井邊不嬉戲，也不試飲','附近怎麼安排'])expect(ts).toContain(t);
+  await expect(page.locator('.attraction-manager a')).toContainText('現行管理、維護、產權及廟方分工待確認');
+  await expect(page.locator('.article-header').getByRole('link',{name:'查看官方傳說與汲水介紹',exact:true})).toHaveAttribute('href','https://kinmen.travel/zh-tw/travel/attraction/433');
+  await expect(page.locator('article.article-body')).toContainText('未查到近期飲用水質檢測');
+  await expect(page.locator('article.article-body')).toContainText('歡迎遊客汲水使用');
+  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'Google地圖・國姓井'})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'查看國姓井Google具名地標'})).toHaveAttribute('href',data.googleMapsUrl);
+  const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));expect(visible).toEqual(data.faq);
+  const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+  expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+  const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address.streetAddress).toBe('894金門縣烈嶼鄉');expect(place.hasMap).toBe(data.googleMapsUrl);expect(data.googleMapsUrl).toContain('0x3414993bfdf73bfd:0x6cb9f29a11399678');expect(data.coordinates).toEqual({lat:24.438449,lng:118.235141});
+  await page.locator('[data-trip-add="guoxing-well"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="guoxing-well"]')).toBeVisible();await page.locator('[data-stop="guoxing-well"] [data-action="remove"]').click();await expect(page.locator('[data-stop="guoxing-well"]')).toHaveCount(0);
+  await page.goto('/attractions/guoxing-well/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.goto('/map/');await expect(page.locator('#map-point-attraction-guoxing-well [data-map-location-link]')).toHaveAttribute('href',data.googleMapsUrl);await expect(page.locator('#map-point-attraction-guoxing-well')).toContainText('不試飲');
+});
