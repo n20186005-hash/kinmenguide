@@ -1,0 +1,28 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/donglin-east-well.md','utf8').split('---')[1]);
+test('Donglin well preserves history and supervised drawing evidence without claiming potable water',async({page})=>{
+  expect((await page.goto('/attractions/donglin-east-well/'))?.status()).toBe(200);
+  await expect(page.locator('h1')).toHaveCount(1);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/donglin-east-well/');
+  await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+  await expect(page.locator('.article-cover img')).toBeVisible();
+  await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+  const hs=await page.locator('article.article-body h2').allTextContents();
+  expect(hs.slice(0,10)).toEqual(['探索'+data.title,'關於'+data.title,'基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','資料來源與行前提醒']);expect(hs).not.toContain('景點相冊');
+  const ts=await page.locator('article.article-body h3').allTextContents();for(const t of ['方井裡的聚落歷史','看井體，也看保存方式','在聚落裡放低音量','附近怎麼安排'])expect(ts).toContain(t);
+  await expect(page.locator('.attraction-manager a')).toContainText('當期細項待核');
+  await expect(page.locator('.article-header').getByRole('link',{name:'查看文資管理維護紀錄',exact:true})).toHaveAttribute('href','https://cabkc.kinmen.gov.tw/uploads/files/202508/ebbaa3c0-f653-41bd-a962-4a6c549a260b.pdf');
+  await expect(page.locator('article.article-body')).toContainText('未取得當期水質檢驗或飲用許可證據');
+  await expect(page.locator('article.article-body')).toContainText('不是隨時可自行操作或今天必有服務');
+  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'Google地圖・烈嶼東林宋代東井'})).toHaveAttribute('href',data.googleMapsUrl);
+  await expect(page.getByRole('link',{name:'查看東林東井Google具名地標'})).toHaveAttribute('href',data.googleMapsUrl);
+  const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));expect(visible).toEqual(data.faq);
+  const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+  expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+  const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address.streetAddress).toBe('894金門縣烈嶼鄉');expect(place.hasMap).toBe(data.googleMapsUrl);expect(data.googleMapsUrl).toContain('0x341499290140cac5:0xe9464826e400ba23');expect(data.coordinates).toEqual({lat:24.4275032,lng:118.2494496});
+  await page.locator('[data-trip-add="donglin-east-well"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="donglin-east-well"]')).toBeVisible();await page.locator('[data-stop="donglin-east-well"] [data-action="remove"]').click();await expect(page.locator('[data-stop="donglin-east-well"]')).toHaveCount(0);
+  await page.goto('/attractions/donglin-east-well/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.goto('/map/');await expect(page.locator('#map-point-attraction-donglin-east-well [data-map-location-link]')).toHaveAttribute('href',data.googleMapsUrl);await expect(page.locator('#map-point-attraction-donglin-east-well')).toContainText('不自行開罩、投物或取水');
+});
