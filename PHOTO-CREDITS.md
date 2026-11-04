@@ -76,7 +76,7 @@
 
 ## guningtou
 
-- 內容：古寧頭戰史館入口與展示坦克
+- 內容：古寧頭戰史館入口與正面浮雕
 - 檔案：Guningtou Battle Museum DSC 3248.jpg
 - 攝影／提供：P95521708
 - 授權：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
