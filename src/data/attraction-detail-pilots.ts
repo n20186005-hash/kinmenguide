@@ -6,7 +6,7 @@ export interface AttractionDetailPilot {
   advice: string[];
   features: string[];
   about: string;
-  management?: { name: string; sourceUrl: string; ctaLabel?: string };
+  management?: { name: string; sourceUrl: string; ctaLabel?: string; linkName?: boolean };
   facts: { label: string; value: string }[];
 }
 export const attractionDetailPilots: Record<string, AttractionDetailPilot | undefined> = {
@@ -71,6 +71,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   "about": "寒舍花為金東海岸轉折岬角，國家公園地質解說提供岩性與風化景觀背景，並非海岸開放或管理契約。觀光資料以安檢所定位，不證現行海岸管養、所有權或設施使用狀態，完整權責仍待核。",
   "management": {
     "name": "海岸現行管理、維護、產權及設施權界待確認",
+    "linkName": false,
     "sourceUrl": "https://www.kmnp.gov.tw/ch/specialreport/geological-landscape/103",
     "ctaLabel": "查看國家公園地質解說"
   },

@@ -13,7 +13,8 @@ test('Hanshehua coast does not substitute a government inspection post for verif
   const hs=await page.locator('article.article-body h2').allTextContents();
   expect(hs.slice(0,10)).toEqual(['探索'+data.title,'關於'+data.title,'基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','資料來源與行前提醒']);expect(hs).not.toContain('景點相冊');
   const ts=await page.locator('article.article-body h3').allTextContents();for(const t of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])expect(ts).toContain(t);
-  await expect(page.locator('.attraction-manager a')).toContainText('海岸現行管理、維護、產權及設施權界待確認');
+  await expect(page.locator('.attraction-manager')).toContainText('海岸現行管理、維護、產權及設施權界待確認');
+  await expect(page.locator('.attraction-manager a')).toHaveCount(0);
   await expect(page.locator('.article-header').getByRole('link',{name:'查看國家公園地質解說',exact:true})).toHaveAttribute('href','https://www.kmnp.gov.tw/ch/specialreport/geological-landscape/103');
   await expect(page.locator('article.article-body')).toContainText('不把工作設施點冒充公眾海岸入口或停車目的地');
   await expect(page.locator('article.article-body')).toContainText('不當實際收費公告或全域免費證明');
@@ -28,5 +29,6 @@ test('Hanshehua coast does not substitute a government inspection post for verif
   await page.goto('/map/');
   const card=page.locator('#map-point-attraction-hanshehua-coast');await expect(card.locator('[data-map-location-link]')).toHaveCount(0);await expect(card.locator('[data-map-poi-pending]')).toContainText('官方位置示意');await expect(card.locator('[data-pin]')).toHaveAttribute('data-pin','24.50718,118.44817');
   const neighbor=JSON.parse(readFileSync('src/content/attractions/fuguodun-viewpoint.md','utf8').split('---')[1]);await expect(page.locator('#map-point-attraction-fuguodun-viewpoint [data-map-location-link]')).toHaveAttribute('href',neighbor.googleMapsUrl);
+  await page.goto('/attractions/zhaishan-tunnel/');await expect(page.locator('.attraction-manager a')).toHaveCount(1);await expect(page.locator('.attraction-manager a')).toHaveAttribute('href','https://www.kmnp.gov.tw/ch/touristInfo/recreation-sites/40');
   await page.goto('/attractions/fuguodun-viewpoint/');const other=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]).find(n=>n['@type']==='TouristAttraction');expect(other.address.streetAddress).toBe(neighbor.address);expect(other.hasMap).toBe(neighbor.googleMapsUrl);
 });
