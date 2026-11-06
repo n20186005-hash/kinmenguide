@@ -1899,10 +1899,12 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     "地方鎮風止煞及護衛海疆信仰。",
     "與成功嶺私人裝置分開辨識的聚落走訪。"
   ],
-  "about": "成功村舊名陳坑，官方介紹此尊為留存的南側村落石獅，位於陳景蘭洋樓右前方斜坡附近。本次未找到足以確認其現行單一管理、清潔維護或產權的直接資料；旅遊網發布、社區祭祀及鄰近公所設施職掌不能代替石獅本身權責證明。成功嶺私人藝術裝置另有縣府說明，不套用到本文石獅。",
+  "about": "數位典藏聯合目錄將此尊管理單位列為金門縣金湖鎮正義里、所有權屬列公共財，欄位更新日未明，引用欄2013/01/25瀏覽紀錄不是現任登記日期。2016-05-22金門日報另記正義社區志工隊於5月21日製作並更換披風，僅證當時對象特定照料；不推現任像體管理、今日產權或私人土地准入。 現行完整分工仍待核；不以鄰近洋樓或成功嶺私人裝置權責套用。",
   "management": {
-    "name": "村落石獅現行管理／清潔維護權責待確認（連結為官方景點資訊）",
-    "sourceUrl": "https://kinmen.travel/zh-tw/travel/attraction/587"
+    "name": "典藏歷史正義里管理欄位及2016志工照料已核；現行完整權責待確認",
+    "linkName": false,
+    "sourceUrl": "https://catalog.digitalarchives.tw/item/00/66/7a/ac.html",
+    "ctaLabel": "查看歷史典藏管理欄位"
   },
   "facts": [
     {
@@ -1926,8 +1928,8 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
       "value": "24.4372471, 118.3895366（具名村落石獅地標）"
     },
     {
-      "label": "目前管理單位",
-      "value": "現行單一管理、清潔維護與產權待確認；不套用成功嶺私人裝置資訊"
+      "label": "歷史管理／照料記錄",
+      "value": "典藏列正義里管理與公共財（更新日未明）；2016志工換披風僅當時照料，現任分工、產權及准入待核"
     },
     {
       "label": "參考開放時間",
@@ -1970,7 +1972,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     "指揮、生活空間及情境展示。",
     "需依當日開放範圍理解的分段設施。"
   ],
-  "about": "成功海防坑道位於成功村海岸，曾結合軍事防禦與民防避難。金湖鎮公所現行職掌包含坑道環境維護，歷史報導另記2005年軍方段釋出與2008年民防段移交。此處揭露公所維護角色；不把歷史管制、移交、尺度或工程計畫推為今日全線權管、開放、產權或委外契約的證明。",
+  "about": "成功海防坑道位於成功村海岸，曾結合軍事防禦與民防避難。金湖鎮公所現行職掌包含坑道環境維護，歷史報導另記2005年軍方段釋出與2008年民防段移交。觀光署前瞻清單114.12（2025年12月）進度截點列成功坑道至中興堡工程已完工、已結案，非具體完工日或當日全線及各支線開放證明。此處揭露公所維護角色；不把歷史管制、移交、尺度或工程計畫推為今日全線權管、開放、產權或委外契約的證明。",
   "management": {
     "name": "金門縣金湖鎮公所（環境維護職掌；各段權管與產權另待核）",
     "sourceUrl": "https://kinhu.kinmen.gov.tw/cp.aspx?n=5C09A32EDF7ADBDC"
@@ -2006,7 +2008,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     },
     {
       "label": "一般門票",
-      "value": "合併景點前台免費與多媒體費用欄不一致；坑道當期費用與特殊活動另確認。"
+      "value": "官方合併景點2026-03-31資料列免費；截至2026-11-05核對的其他官方資料未提供明確費用資訊，當期安排及特殊服務費用請向金湖鎮公所確認。"
     },
     {
       "label": "建議停留",
@@ -2041,10 +2043,11 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     "可與鄰近館舍分開取捨的岸上停留。",
     "春夏自然現象介紹需配合天候與現場條件。"
   ],
-  "about": "成功沙灘位於成功村海岸，官方將它與成功坑道合併介紹，但沙岸、地下展示及軍事區域須分別看待。本次未取得足以確認海灘單一現行管理、清潔維護或產權的直接資料；鄰近設施由公所維護、活動由公所主辦，均不能直接擴張為整片沙灘的常態管理。",
+  "about": "成功沙灘位於成功村海岸，官方將它與成功坑道合併介紹，但沙岸、地下展示及軍事區域須分別看待。金湖鎮公所2026-10-27職掌表列洋樓、天空之城及成功海邊景點人員排班，支持公所對所列景點的人員排班角色；不推為整片海灘管理、清潔維護、產權或軍事界線。排班也不證當日人員到勤、救生服務、水域開放或每個岸段可進，整片沙灘權責及當期准入仍另核。",
   "management": {
-    "name": "海灘單一現行管理／清潔維護權責待確認（連結為官方遊憩資訊）",
-    "sourceUrl": "https://kinmen.travel/zh-tw/travel/attraction/1637"
+    "name": "金湖鎮公所所列成功海邊景點人員排班角色已核；整片海灘管理與清潔維護另核",
+    "linkName": false,
+    "sourceUrl": "https://kinhu.kinmen.gov.tw/cp.aspx?n=5C09A32EDF7ADBDC"
   },
   "facts": [
     {
@@ -2068,8 +2071,8 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
       "value": "24.4352043, 118.387407（具名海灘POI，非安全岸線）"
     },
     {
-      "label": "目前管理單位",
-      "value": "海灘單一現行管理／清潔維護權責待確認；不由鄰近坑道或活動主辦推定"
+      "label": "有界排班角色",
+      "value": "公所2026-10-27職掌列成功海邊景點人員排班；非整片海灘管理、清潔、產權或軍界證明。"
     },
     {
       "label": "一般開放時間",
@@ -2077,7 +2080,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     },
     {
       "label": "一般門票",
-      "value": "官方前台列免費，多媒體費用欄顯示不一致；當期與特殊服務費用待確認。"
+      "value": "官方合併景點2026-03-31資料列免費；截至2026-11-05核對的其他官方資料未提供明確費用資訊，當期安排及特殊服務費用請向金湖鎮公所確認。"
     },
     {
       "label": "建議停留",

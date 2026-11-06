@@ -17,12 +17,16 @@ test('ChenggongTunnel v1.2 preserves legacy topics, photo, map POI and exact FAQ
   await expect(page.locator('.attraction-basic')).toContainText(data.address);
   await expect(page.locator('.attraction-manager a')).toContainText('金門縣金湖鎮公所');
   await expect(page.locator('.attraction-basic')).toContainText('當期坑道時段待確認');
-  await expect(page.locator('.attraction-basic')).toContainText('前台免費與多媒體費用欄不一致');
+  await expect(page.locator('.attraction-basic')).toContainText('其他官方資料未提供明確費用資訊');
   await expect(page.locator('.attraction-manager a')).toHaveAttribute('href','https://kinhu.kinmen.gov.tw/cp.aspx?n=5C09A32EDF7ADBDC');
   await expect(page.locator('article.article-body')).toContainText('不授予任何封閉坑口');
   await expect(page.locator('article.article-body')).toContainText('不保證坑道入口有車位');
   await expect(page.locator('article.article-body')).toContainText('公所現行觀光導覽列中興亭到出海口段');
   await expect(page.locator('article.article-body')).toContainText('不宣稱今天仍演出');
+  await expect(page.locator('article.article-body')).toContainText('114.12（2025年12月）進度截點');
+  await expect(page.locator('article.article-body')).toContainText('並非具體完工日，也不證明當日全線、各坑口或支線開放');
+  await expect(page.locator('article.article-body')).toContainText('當期安排及特殊服務費用請向金湖鎮公所確認');
+  expect(data.admission).not.toContain('費用欄不一致');
   await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
   await expect(page.getByRole('link',{name:'Google地圖・成功海防坑道（具名坑道地標）'})).toHaveAttribute('href',data.googleMapsUrl);
   await expect(page.getByRole('link',{name:'查看成功海防坑道Google具名地標'})).toHaveAttribute('href',data.googleMapsUrl);

@@ -36,3 +36,16 @@
 最終完整 browser suite：**250 passed（57.9s）**，desktop + iPhone13/mobile；完成記錄 2026-11-04T01:16:24Z。新增測試涵蓋唯一H1/canonical/H2順序、舊3主題、原圖署名、8FAQ逐字HTML/frontmatter/schema對應、Google原址/CID/座標/hasMap、詳頁三地圖鏈及/map同POI、只新增再移除測試自身行程、手機無溢出，以及其他景點未設flag仍輸出原locality。Luna最終審閱無阻斷；建議用更保守位置字眼屬非阻斷意見，現有允許通行條件及私域限制已明示。
 
 最終範圍：對actual main僅5個既有檔差異 + 2個新檔；registry其他條目與CSV其他列逐項相同。舊全文僅上述單句來源收斂，其餘逐字保留。git diff --check通過；臨時preview config、node_modules symlink與work scratch已清除。無commit/push，等待父代理PR及production驗收。
+
+## 2026-11-05 對象特定歷史角色補充
+https://catalog.digitalarchives.tw/item/00/66/7a/ac.html 本輪直接讀到管理權字段，國立金門大學計畫典藏不是今日權利登記。
+https://www.kmdn.gov.tw/1117/1271/1272/267387?cprint=pt 直接讀到2016/05/22發布及5/21志工更換披風。
+數位典藏聯合目錄將此尊管理單位列為金門縣金湖鎮正義里、所有權屬列公共財，欄位更新日未明，引用欄2013/01/25瀏覽紀錄不是現任登記日期。2016-05-22金門日報另記正義社區志工隊於5月21日製作並更換披風，僅證當時對象特定照料；不推現任像體管理、今日產權或私人土地准入。
+觀光網2018-07-27介紹記生日或正月初九天公生供奉米糕；數位典藏則記原生日為農曆五月十六，後來祭祀漸集中元月初九，描述村民準備紅龜粿與金帛。各為來源當時記錄，不合併推作今日祭典日程或參與許可。
+管理名稱不整段連結，保留獨立歷史來源CTA；FAQ/schema、registry、測試同步。原圖及授權保留，不改CSV或待查狀態。
+
+Validation PASS: /tmp/chenggong-history-validate.log; desktop/mobile focused 2 passed (1.9s), /tmp/chenggong-history-browser.log. Temporary isolated 4347 config removed; source/build frozen. No CSV/status changes, commits or deployment.
+
+## 2026-11-05 independent local acceptance after reconnect
+
+Archive records historic Zhengyi village management and public-property fields with unknown update date; 2016 volunteers renewed the cloak. Current management, property and public access remain unconfirmed. Independent QA checked FAQ/schema, mapping differences and original image. Complete browser regression: 552 passed. Temporary config cleanup verified; no new deployment.
