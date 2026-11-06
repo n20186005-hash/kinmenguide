@@ -6,8 +6,10 @@ test('Fengshang Fuji preserves original topics with no invented photo and separa
   await expect(page.locator('h1')).toHaveCount(1);
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/fengshang-fuji-temple/');
   await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
-  await expect(page.locator('.article-cover img')).toHaveCount(0);expect(data.image).toBeUndefined();
-  await expect(page.locator('figcaption')).toHaveCount(0);
+  await expect(page.locator('.article-cover img')).toHaveCount(1);expect(data.image).toBe('place-fengshang-fuji-temple');
+  await expect(page.locator('.article-cover figcaption')).toContainText('不代表目前開放或准入狀態');
+  await expect(page.locator('.article-cover figcaption')).toContainText('來源未標示再利用許可');
+  await expect(page.locator('.article-cover figcaption')).toHaveCount(1);
   const hs=await page.locator('article.article-body h2').allTextContents();
   expect(hs.slice(0,10)).toEqual(['探索'+data.title,'關於'+data.title,'基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','資料來源與行前提醒']);expect(hs).not.toContain('景點相冊');
   const ts=await page.locator('article.article-body h3').allTextContents();for(const t of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])expect(ts).toContain(t);
