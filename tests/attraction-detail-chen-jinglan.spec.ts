@@ -15,9 +15,17 @@ test('ChenJinglan v1.2 preserves legacy topics, photo, map POI and exact FAQ sch
   const topics = await page.locator('article.article-body h3').allTextContents();
   for (const title of ['從南洋回到故鄉的一棟洋樓','三個可以慢慢看的地方','怎麼到、怎麼順遊','帶長輩或遇雨的安排','洋樓前後的三個停留']) expect(topics).toContain(title);
   await expect(page.locator('.attraction-basic')).toContainText(data.address);
-  await expect(page.locator('.attraction-manager a')).toContainText('金門縣金湖鎮公所');
+  await expect(page.locator('.attraction-manager a')).toContainText('金湖鎮公所');
   await expect(page.locator('.attraction-manager a')).toHaveAttribute('href','https://kinhu.kinmen.gov.tw/cp.aspx?n=5C09A32EDF7ADBDC');
   await expect(page.locator('article.article-body')).toContainText('私人所有權與個別商業服務不能畫上等號');
+  await expect(page.locator('.attraction-basic')).toContainText('觀光網2025-04-24資料列每日08:30–17:30');
+  await expect(page.locator('.attraction-basic')).toContainText('文化部記憶庫於2026-11-05核對時亦列相同時間');
+  await expect(page.locator('.attraction-basic')).toContainText('休館、維護及天候公告優先');
+  await expect(page.locator('.attraction-basic')).toContainText('金門縣文化局／文化資產科（文資主管）');
+  expect(data.updatedAt).toBe('2026-11-05');
+  expect(data.faq[0].answer).toContain('出發前請向金湖鎮公所確認');
+  expect(data.faq[1].answer).toContain('公所館務、文化局文資主管與私人土地所有權分開');
+  expect(data.sources.some((s:any)=>s.url==='https://tcmb.culture.tw/zh-tw/detail?id=20030331000015&indexCode=BOCH_CountryCulture_12')).toBe(true);
   await expect(page.locator('.attraction-basic')).toContainText('完整無障礙及各層動線未核實');
   await expect(page.locator('article.article-body')).toContainText('不保證固定班距或步行分鐘');
   await expect(page.locator('article.article-body')).toContainText('觀光署詳頁列成功1-1號');

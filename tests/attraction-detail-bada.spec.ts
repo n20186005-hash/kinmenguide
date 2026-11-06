@@ -5,6 +5,12 @@ const data = JSON.parse(raw.split('---')[1]);
 test('Bada v1.2 preserves legacy topics, photo, map POI and exact FAQ schema', async ({page}) => {
   expect((await page.goto('/attractions/bada-tower/'))?.status()).toBe(200);
   await expect(page.locator('h1')).toHaveCount(1);
+  await expect(page.locator('.article-body')).toContainText('憲兵指揮部第3282期刊物第7頁');
+  await expect(page.locator('.article-body')).toContainText('其他官方資料未提供明確費用資訊');
+  await expect(page.locator('.article-body')).toContainText('當期票價與活動費用請依現場公告確認');
+  expect(data.parking).toContain('停車情況未核');
+  expect(data.parking).toContain('當日明確允許且有合法標示處');
+  expect(data.sources.map((x:any)=>x.title).join(' ')).not.toContain('青年日報');
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/bada-tower/');
   await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
   await expect(page.locator('.article-cover img')).toBeVisible();
