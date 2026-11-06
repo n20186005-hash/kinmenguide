@@ -1,0 +1,38 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/yannan-academy.md','utf8').split('---')[1]);
+test('Yannan separates landscape heritage and daily access',async({page})=>{
+ await page.goto('/attractions/yannan-academy/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body')).toContainText('893, Kinmen County, Jincheng Township, 古區268號');
+ await expect(page.locator('article.article-body')).toContainText('顯示地址已辨識');
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/Yan+Nan+Shan/@24.4069602,118.31385,861m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3414a2028361fabb:0xd119ea9808ece8de!8m2!3d24.4069602!4d118.31385!16s%2Fg%2F1tzlwk_t"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('具名點位身份已經地圖UI核對');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/yannan-academy/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索燕南書院','關於燕南書院','基本資料','交通方式','路線地圖','舊址文化景觀與現有建築','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['書院與廟宇在同一處相遇','回字布局與大型書卷','山上多留一些步行時間','南線小聚落怎麼接'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('文資主管及活動計畫角色');
+ await expect(page.locator('.article-body')).toContainText('2006年6月13日');
+ await expect(page.locator('.article-body')).toContainText('不把登錄類別改稱宋代古蹟');
+ await expect(page.locator('.article-body')).toContainText('不證文化局擁有全部產權');
+ await expect(page.locator('.article-body')).toContainText('2025年5月15日版索引');
+ await expect(page.locator('.article-body')).toContainText('不是今日開門確認');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="yannan-academy"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="yannan-academy"]')).toBeVisible();await page.locator('[data-stop="yannan-academy"] [data-action="remove"]').click();await expect(page.locator('[data-stop="yannan-academy"]')).toHaveCount(0);
+ await page.goto('/attractions/yannan-academy/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-yannan-academy [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-yannan-academy [data-pin]')).toHaveCount(0);
+
+});
