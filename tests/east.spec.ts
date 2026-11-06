@@ -24,7 +24,7 @@ test('east navigation keeps geography and facility purposes distinct',async({pag
  await expect(page.locator('[data-card]:visible')).toHaveCount(1);
  await page.goto('/attractions/liaoluo-mazu-park/');
  await expect(page.locator('.facts-grid')).toContainText('金湖');
- await expect(page.locator('.prose')).toContainText('烈嶼羅厝');
+ await expect(page.locator('article.article-body')).toContainText('烈嶼羅厝');
  await page.goto('/food/liangjin-ranch/');
  await expect(page.locator('.facts-grid')).toContainText('漁村160號');
  await expect(page.locator('.prose')).toContainText('畜產試驗所');

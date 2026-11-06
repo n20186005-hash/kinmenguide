@@ -1,0 +1,38 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/xishan-lake-park.md','utf8').split('---')[1]);
+test('Xishan separates play facilities and water access',async({page})=>{
+ await page.goto('/attractions/xishan-lake-park/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/Xishan+Lake+Park/@24.4246692,118.2474517,861m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3414992a2beded7f:0x39557ad4523ab51f!8m2!3d24.4246643!4d118.250032!16s%2Fg%2F1tptn74z"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('具名點位身份已由地圖核對');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/xishan-lake-park/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索習山湖公園','關於習山湖公園','基本資料','交通方式','路線地圖','共融遊戲與季節水景','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['把遊戲時間放進小島旅行','水景開放依季節與維護','公園不是全天候托管空間','附近怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('金門縣政府／烈嶼鄉公所（2023維護角色記錄）');
+ await expect(page.locator('.article-body')).toContainText('遊戲設施限5–12歲兒童使用');
+ await expect(page.locator('.article-body')).toContainText('不能當常設或全年救生服務');
+ await expect(page.locator('.article-body')).toContainText('不是當日供水承諾');
+ await expect(page.locator('.article-body')).toContainText('不把共融名稱當所有能力均能使用');
+ await expect(page.locator('.article-body')).toContainText('戲水池每年4–10月開放');
+ await expect(page.locator('.article-body')).toContainText('金門縣烈嶼鄉西路60號');
+ await expect(page.locator('.article-body')).toContainText('尚未核實Google顯示地址與實際訪客入口');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="xishan-lake-park"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="xishan-lake-park"]')).toBeVisible();await page.locator('[data-stop="xishan-lake-park"] [data-action="remove"]').click();await expect(page.locator('[data-stop="xishan-lake-park"]')).toHaveCount(0);
+ await page.goto('/attractions/xishan-lake-park/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-xishan-lake-park [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-xishan-lake-park [data-pin]')).toHaveCount(0);
+
+});
