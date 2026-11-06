@@ -15,8 +15,12 @@ test('ChenggongLion v1.2 preserves legacy topics, photo, map POI and exact FAQ s
   const topics = await page.locator('article.article-body h3').allTextContents();
   for (const title of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近']) expect(topics).toContain(title);
   await expect(page.locator('.attraction-basic')).toContainText(data.address);
-  await expect(page.locator('.attraction-manager a')).toContainText('權責待確認');
-  await expect(page.locator('.attraction-manager a')).toHaveAttribute('href','https://kinmen.travel/zh-tw/travel/attraction/587');
+  await expect(page.locator('.attraction-manager a')).toHaveCount(0);
+  await expect(page.locator('.attraction-manager')).toContainText('現行完整權責待確認');
+  await expect(page.locator('.attraction-basic')).toContainText('歷史管理／照料記錄');
+  await expect(page.locator('article.article-body')).toContainText('2013/01/25瀏覽紀錄不是現任登記日期');
+  await expect(page.locator('article.article-body')).toContainText('正義社區志工隊於5月21日');
+  await expect(page.locator('article.article-body')).toContainText('不合併推作今日祭典日程或參與許可');
   await expect(page.locator('.attraction-basic')).toContainText('Google地址行政區與官方不一致');
   await expect(page.locator('article.article-body')).toContainText('不預設石像旁有車位');
   await expect(page.locator('article.article-body')).toContainText('不認定石獅位於金城');
