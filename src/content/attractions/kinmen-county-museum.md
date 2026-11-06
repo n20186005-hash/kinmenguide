@@ -92,10 +92,10 @@
 
 ## 路線地圖
 
-Google具名POI、顯示地址與開放入口未核，不提供導航、marker或結構化座標；官方館址不是已核Google地址，沒有實測GPX或跨館步行保證。
+Google Maps「金門博物館」具名景點參考點已核；顯示地址、實際訪客入口與當日准入仍未核，因此不以參考點導航，也不提供marker或結構化座標。官方館址不是已核Google地址，沒有實測GPX或跨館步行保證。
 
 
-[Google 地圖景點參考點](https://www.google.com/maps/place/%E9%87%91%E9%96%80%E5%8D%9A%E7%89%A9%E9%A4%A8/@24.498859,118.4028459,861m/data=!3m1!1e3!4m10!1m2!2m1!1z6YeR6ZaA57ij56uL5Y2a54mp6aSo!3m6!1s0x3414bb67c968dec9:0xce61747551d7a343!8m2!3d24.4992809!4d118.4033966!15sChXph5HploDnuKPnq4vljZrnianppKhaGiIY6YeR6ZaAIOe4oyDnq4sg5Y2a54mp6aSokgEUbG9jYWxfaGlzdG9yeV9tdXNldW2aAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjVWTldKdGFFaFhiR1JXVVRKV05sSlZXa2RoTURCNVdWYzVkbUl4UlJBQuABAPoBBQiHAhAN!16s%2Fg%2F1q64rd7l8!5m1!1e2?entry=ttu)僅供辨識景點或街區位置，不是已核實的訪客入口，也不代表准入、停車或無障礙許可；私人店屋、工作區、水域及大橋徒步通行仍依當日公告與現場允許範圍確認。
+[Google 地圖景點參考點](https://www.google.com/maps/place/%E9%87%91%E9%96%80%E5%8D%9A%E7%89%A9%E9%A4%A8/@24.498859,118.4028459,861m/data=!3m1!1e3!4m10!1m2!2m1!1z6YeR6ZaA57ij56uL5Y2a54mp6aSo!3m6!1s0x3414bb67c968dec9:0xce61747551d7a343!8m2!3d24.4992809!4d118.4033966!15sChXph5HploDnuKPnq4vljZrnianppKhaGiIY6YeR6ZaAIOe4oyDnq4sg5Y2a54mp6aSokgEUbG9jYWxfaGlzdG9yeV9tdXNldW2aAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjVWTldKdGFFaFhiR1JXVVRKV05sSlZXa2RoTURCNVdWYzVkbUl4UlJBQuABAPoBBQiHAhAN!16s%2Fg%2F1q64rd7l8!5m1!1e2?entry=ttu)的具名點位已核，僅供辨識景點；顯示地址、訪客入口、當日准入、停車與無障礙仍未核，不代表館內各展區或周邊私人/工作空間開放。 僅供辨識景點或街區位置，不是已核實的訪客入口，也不代表准入、停車或無障礙許可；私人店屋、工作區、水域及大橋徒步通行仍依當日公告與現場允許範圍確認。
 
 ## 人文與展示
 
