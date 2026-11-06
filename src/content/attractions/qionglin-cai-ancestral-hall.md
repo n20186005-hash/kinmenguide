@@ -1,6 +1,8 @@
 ---
 {
   "title": "瓊林蔡氏祠堂",
+  "image": "place-qionglin-cai-ancestral-hall",
+  "imageCaption": "2019年瓊林13號蔡氏十一世宗祠外觀；歷史照片不代表目前開放或可入內。",
   "nameEn": "Qionglin Cai Ancestral Hall",
   "seoTitle": "瓊林蔡氏祠堂｜位置與參觀資訊｜Kinmen Guide",
   "description": "瓊林蔡氏祠堂呈現聚落的宗族與祭祖文化，走訪時可留意祠堂與周邊聚落的關係。",
