@@ -7,7 +7,14 @@ test('BeishanMansion v1.2 preserves legacy topics, photo, map POI and exact FAQ 
   await expect(page.locator('h1')).toHaveCount(1);
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/beishan-old-mansion/');
   await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
-  await expect(page.locator('.article-cover img')).toHaveCount(0);
+  const cover = page.locator('.article-cover img');
+  await expect(cover).toHaveCount(1);
+  await expect(cover).toHaveAttribute('alt', '2019年北山古洋樓的雙層殘牆、彈痕與相連閩式建築');
+  expect(await cover.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
+  await expect(page.locator('.article-cover figcaption')).toContainText('2019年北山古洋樓歷史外觀');
+  await expect(page.locator('.article-cover figcaption')).toContainText('不代表目前住宿空間、入內範圍或開放狀態');
+  await expect(page.locator('.article-cover figcaption')).toContainText('Rueichung / CC BY-SA 4.0');
+  await expect(page.locator('.article-cover a')).toHaveAttribute('href', '/credits/#place-beishan-old-mansion');
   const heads = await page.locator('article.article-body h2').allTextContents();
   expect(heads.slice(0,9)).toEqual(['探索北山古洋樓','關於北山古洋樓','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程']);
   expect(heads).not.toContain('景點相冊');
