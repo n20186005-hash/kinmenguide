@@ -1,0 +1,36 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/tiehan-fort.md','utf8').split('---')[1]);
+test('Tiehan distinguishes fort ticket and underground museum access',async({page})=>{
+ await page.goto('/attractions/tiehan-fort/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/tiehan-fort/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索鐵漢堡','關於鐵漢堡','基本資料','交通方式','路線地圖','堡壘與地下展示','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['地面城堡與地下工事','與地雷主題館同一段走','注意低處與明暗轉換','附近怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('現任整體維護、營運分工與權屬待核');
+ await expect(page.locator('.article-body')).toContainText('團體須20人以上');
+ await expect(page.locator('.article-body')).toContainText('2025年6月23日版列免費');
+ await expect(page.locator('.article-body')).toContainText('連通坑道實際如何計費仍未說明');
+ await expect(page.locator('.article-body')).toContainText('不能把堡票價直接當館票');
+ await expect(page.locator('.article-body')).toContainText('不承諾體驗可操作');
+ await expect(page.locator('.article-body')).toContainText('2025年5月15日版');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps/place/"]')).toHaveCount(1);
+ await expect(page.locator('.article-body')).toContainText('不是入口、准入、停車或無障礙證明');
+ await page.locator('[data-trip-add="tiehan-fort"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="tiehan-fort"]')).toBeVisible();await page.locator('[data-stop="tiehan-fort"] [data-action="remove"]').click();await expect(page.locator('[data-stop="tiehan-fort"]')).toHaveCount(0);
+ await page.goto('/attractions/tiehan-fort/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-tiehan-fort [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-tiehan-fort [data-pin]')).toHaveCount(0);
+
+});

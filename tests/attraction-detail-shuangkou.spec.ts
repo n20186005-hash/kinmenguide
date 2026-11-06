@@ -1,0 +1,36 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/shuangkou-beach.md','utf8').split('---')[1]);
+test('Shuangkou separates historical ferry coastline planning and water access',async({page})=>{
+ await page.goto('/attractions/shuangkou-beach/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/shuangkou-beach/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索雙口海邊（雙口海濱公園）','關於雙口海邊（雙口海濱公園）','基本資料','交通方式','路線地圖','海防與海岸','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['從渡運記憶到海岸風景','夕陽有機會，能見度不保證','軌條砦是遺構，不是攀爬道具','附近怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('現管理權屬分工另核');
+ await expect(page.locator('.article-body')).toContainText('不推現在有渡船');
+ await expect(page.locator('.article-body')).toContainText('不等平日可自行下水');
+ await expect(page.locator('.article-body')).toContainText('不移用慈湖或其他海灘戰車');
+ await expect(page.locator('.article-body')).toContainText('不證明連續步道已完工');
+ await expect(page.locator('.article-body')).toContainText('不據此推今天仍有地雷');
+ await expect(page.locator('.article-body')).toContainText('專業小組掃查並攜回後續處置');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps/place/"]')).toHaveCount(1);
+ await expect(page.locator('.article-body')).toContainText('不是入口、准入、停車或無障礙證明');
+ await page.locator('[data-trip-add="shuangkou-beach"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="shuangkou-beach"]')).toBeVisible();await page.locator('[data-stop="shuangkou-beach"] [data-action="remove"]').click();await expect(page.locator('[data-stop="shuangkou-beach"]')).toHaveCount(0);
+ await page.goto('/attractions/shuangkou-beach/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-shuangkou-beach [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-shuangkou-beach [data-pin]')).toHaveCount(0);
+
+});
