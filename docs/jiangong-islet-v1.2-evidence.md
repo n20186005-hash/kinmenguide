@@ -51,3 +51,11 @@ Google全名直接查詢不可讀具名POI；島嶼與本島入口各有導航�
 
 ### 本次獨立QA最終結果
 2026-11-06主代理回報兩頁獨立QA通過：地圖只作身份參考；建功嶼日間退潮、現場許可、不涉水及預報非安全保證界線正確；牌坊基金會管理/使用角色依文資欄位，該欄位更新日期未知，不得寫為2011已核。舊照片/署名保持；最終validate、4專項與單次430 passed (2.0m)對應產品/測試未變。來源現況、實地入口/路權與當日安全仍未核；NOT_DEPLOYED，非VERIFIED。本次僅QA紀錄修正，未提交推送。
+
+## #195最新main集成最終記錄
+
+真實main896e52159d8d97377754a602de7f74300304f3d9由GitHub GET獨立核實，精確基線tree fdeb15957e9f62d6072b6090062e773459aaf987；本地占位e798400僅用測試，不能推送。兩目標頁原基線blob相同，按slug/key合入，保留#193兩頁及#194已合併單張照片/registry/pending，未帶#192或其他未授權照片候選。
+
+集成validate PASS；最終單次完整436 passed (2.0m)，session52514 exit0，日誌/tmp/sixteenth-integrated-validate.log與/tmp/sixteenth-integrated-full.log。舊430屬舊基線歷史結果；兩頁產品與專項程式碼逐字節保持獨立QA通過版本，來源現況/入口/路權/安全未核限制不變。CSV174只目標2行改、其餘172行不變，舊圖完全保留。
+
+本段及CSV集成驗證記錄於全量後追加，非產品行為修改；清理本輪config/node_modules鏈接，未提交推送，NOT_DEPLOYED。

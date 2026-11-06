@@ -1,0 +1,33 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/maogongshi-coast.md','utf8').split('---')[1]);
+test('Maogongshi Coast separates coastal terrain military sites and tide safety',async({page})=>{
+ await page.goto('/attractions/maogongshi-coast/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/maogongshi-coast/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索貓公石濱海休憩區','關於貓公石濱海休憩區','基本資料','交通方式','路線地圖','地景與海岸','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['看岩石表面的紋理','海岸休憩區與眺景平台不同','保留地景原貌','附近怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('現行管理/土地及軍事遺構分工待核');
+ await expect(page.locator('.article-body')).toContainText('低潮時刻不等安全通行窗');
+ await expect(page.locator('.article-body')).toContainText('不由國家公園監測或附近堡體推完整管理');
+ await expect(page.locator('.article-body')).toContainText('不安排涉水、游泳');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps/place/"]')).toHaveCount(1);
+ await expect(page.locator('.article-body')).toContainText('不是入口、准入、停車或無障礙證明');
+ await page.locator('[data-trip-add="maogongshi-coast"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="maogongshi-coast"]')).toBeVisible();await page.locator('[data-stop="maogongshi-coast"] [data-action="remove"]').click();await expect(page.locator('[data-stop="maogongshi-coast"]')).toHaveCount(0);
+ await page.goto('/attractions/maogongshi-coast/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-maogongshi-coast [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-maogongshi-coast [data-pin]')).toHaveCount(0);
+
+});
