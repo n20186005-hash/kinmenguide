@@ -37,3 +37,11 @@ GitHub main `d82f32f3a38919acd905ad3a6e6599f65517f8f1` 完整tree861 blobs逐一
 authority獨立官方／GUI及新版複讀無內容阻斷。遠端tree scope僅本頁MD、pilot registry、CSV三既有blob改動，加本頁專測及本證據共五檔；registry去本頁block後與main基線逐字相同，CSV其餘列不變，其他景點／共享renderer／其他集合及照片metadata不變。原六段除已記條件句外逐字保存；`git diff --check`通過。
 
 最終logs `/tmp/gaodong-validate-final.log`、`/tmp/gaodong-browser-final.log`。scratch、臨時config及node_modules連結清理；沒有commit/push。CSV AWAITING_LIVE_CHECK，PR/SHA/部署留空，正式站未驗收。下一slug依CSV為 `general-fort`。
+
+## 2026-11-05 management and opening follow-up
+
+Directly read tourism JSON https://media.taiwan.net.tw/zh-tw/portal/travel/json/attraction_371020000a_001816 updated 2026-10-06: ServiceStatus=1, IsPublicAccess=1, Organizations empty, IsAccessibleForFree=null and FeeInfo empty. General public status does not establish the current operator or each branch's access today. County 2025-03-30 https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=4035910FF6F9B8AA&sms=BF7D6D478B935644 gives general hours; 2024-10-23 https://www.kinmen.gov.tw/News_Content2.aspx?Create=1&n=98E3CA7358C89100&s=28FE8AA886AA4933&sms=BF7D6D478B935644 describes extended hours for the entrance installation at that time only. The 2023 meeting https://www.kinmen.gov.tw/News_Content2.aspx?Create=1&n=98E3CA7358C89100&s=2AAF1E6F21BDC2C6&sms=BF7D6D478B935644 discussed future maintenance without determining it; it does not establish a current contract. Previously rejected misattributed delegation evidence remains excluded. Current management and branch access remain unresolved; AWAITING_SOURCE_CHECK remains.
+
+## 2026-11-05 bounded local acceptance
+
+Earlier pending-status references are historical. County tourism agency 2024 renovation and reopening are dated historical roles. Current full management and day-to-day access remain unconfirmed; historic installation hours are distinct from tunnel hours. Independent QA checked scope and original image. Full regression 552 passed. No new deployment.

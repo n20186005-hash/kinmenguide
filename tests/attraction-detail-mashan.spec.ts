@@ -15,8 +15,13 @@ test('Mashan v1.2 preserves legacy topics, photo, map POI and exact FAQ schema',
   const topics = await page.locator('article.article-body h3').allTextContents();
   for (const title of ['沿著坑道，走到海的另一種視角','天氣會改變體驗','與金沙北線一起走','從觀測口看見戰地地理','觀察視野，也認識官澳']) expect(topics).toContain(title);
   await expect(page.locator('.attraction-basic')).toContainText(data.address);
-  await expect(page.locator('.attraction-manager a')).toContainText('現行整站管理待確認');
-  await expect(page.locator('.attraction-manager a')).toHaveAttribute('href','https://www.kmnp.gov.tw/ch/titlelist/latest-news/476');
+  await expect(page.locator('.attraction-manager')).toContainText('金管處據點、歷史工程及服務發布角色已核');
+  await expect(page.locator('.attraction-manager')).toContainText('完整現行管維與准入待核');
+  await expect(page.locator('.article-cover img')).toHaveAttribute('alt','馬山觀測所的戰地建築與入口');
+  await expect(page.locator('.attraction-basic')).toContainText('管理角色與狀態');
+  expect(data.faq.find((f:any)=>f.question==='目前由誰維護遊客參觀範圍？').answer).toContain('未列入該公告所列駐點解說展示館');
+  expect(data.faq.find((f:any)=>f.question==='目前由誰維護遊客參觀範圍？').answer).toContain('此分類僅歸該次春節公告，不推全年服務配置');
+  await expect(page.getByRole('link',{name:'金管處・2026春節自導式景點服務公告',exact:true})).toHaveAttribute('href','https://www.kmnp.gov.tw/ch/titlelist/latest-news/4025');
   await expect(page.locator('.attraction-basic')).toContainText('082-352149');
   await expect(page.locator('.attraction-basic')).toContainText('082-330086');
   await expect(page.locator('article.article-body')).toContainText('不代表目前仍施工');

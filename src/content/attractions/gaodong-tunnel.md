@@ -8,7 +8,7 @@
   "tag": "海岸坑道",
   "duration": "30–45 分鐘",
   "order": 26,
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-06",
   "sources": [
     {
       "title": "金門觀光旅遊網・高洞坑道",

@@ -40,3 +40,12 @@ Luna終稿獨立複核：報告日期、Maps、官方舊頁、引導汲水與水
 Final checks recorded at 2026-11-04T04:27:18Z (UTC).
 
 臨時config、node_modules symlink與work scratch已清除；git diff --check通過，未commit/push。
+
+## 2026-11-05 標籤與安全措辭補正
+基本資料標籤改官方管理維護記錄，保留2025編製報告範圍，不擴張為當期分工。原圖、授權及主題不變，CSV與進度不動。
+
+Final combined validation PASS: /tmp/hanshehua-shanhou-validate.log; desktop/mobile three-page focused checks 6 passed (2.8s), /tmp/three-role-browser.log. Earlier two-page checks also passed 4 tests, /tmp/well-taihu3d-browser.log; validate /tmp/well-taihu3d-validate.log. Temporary 4347 configuration removed; source/build frozen. No CSV/status changes, commits or deployment.
+
+## 2026-11-05 bounded local acceptance
+
+Earlier pending-status references are historical. 2025 heritage report records township maintenance for the well; current details, ownership and delegation remain unconfirmed. Do not drink water or open the cover; present guided drawing and public access require confirmation. Independent QA accepted the bounded recorded role and well safety; the large PDF was not independently re-read in this round. Complete browser regression: 552 passed. No new deployment.

@@ -17,7 +17,7 @@
 ## 來源與未知
 
 - [官方觀光頁456](https://kinmen.travel/zh-tw/travel/attraction/456)：實作者GUI直接讀2025-05-15更新、全天／免費／停車場、建議0.5小時、地理地址復國墩60號旁。非當日港區／全岸線可行走保證。
-- [官方多媒體456](https://media.taiwan.net.tw/zh-tw/portal/travel/details/attraction_371020000a_000456)：同更新日，費用所見欄「需入場相關費用」，金額空白，組織／時段／停車／設施欄空；與觀光前台免費不一致。不由字段推成收費公告或保證免費。
+- [官方多媒體456](https://media.taiwan.net.tw/zh-tw/portal/travel/details/attraction_371020000a_000456)：【歷史讀取，已由下方2026-11-05原始JSON讀值取代】同更新日，費用所見欄「需入場相關費用」，金額空白，組織／時段／停車／設施欄空；與觀光前台免費不一致。不由字段推成收費公告或保證免費。
 - [官方附近公車](https://www.kinmen.travel/zh-tw/nearby/ebus?placeId=456&type=Attractions)：復國墩站19繞復國墩、20多分支，標420m及僅供參考。未採為實走距離、步行分鐘或入口。班次方向回程查動態。
 - 原[螃蟹景觀藝術縣府報導](https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=E0292E3A86FEB8E5&sms=BF7D6D478B935644)留存；實作者直接web開啟逾時，未稱現況證據。
 - [2023縣府嗆蟹禁攀爬](https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=8BB0A1B4B83C26F8&sms=BF7D6D478B935644)：可讀公所當年設告示／規劃監視器、避免攀爬及破壞。僅支撐裝置歷史安全行動，不能推整個觀海台、步道、港區現管或產權。CTA明確寫查看2023裝置安全提醒。
@@ -41,3 +41,35 @@
 authority獨立GUI／來源／新版複讀無內容阻斷。遠端tree範圍比較：既有blob僅目標MD、pilot registry、CSV改動；加本頁專測及本證據，共五檔。registry去除本頁block後與main逐字相同，CSV其餘列全不變；照片/授權metadata及非景點集合全無漂移。原四段除已記條件句外逐字保存，`git diff --check`通過。無commit或push。
 
 CSV AWAITING_LIVE_CHECK，PR／SHA／部署欄留空；正式站未驗收。下一slug按CSV為 `fuyu-temple-photo-spot`。
+
+## 2026-11-05 代管附件實讀補充
+
+本節取代前文「附件未讀得」的最新狀態；保留前述歷史查核限制。[公告頁](https://jincheng.kinmen.gov.tw/News_Content.aspx?n=9B50929660575BD9&s=C4E9B3F0D948DB68&sms=A2C62D68901B977C)日期2026-01-28，附件公開原連結：
+
+https://ws.kinmen.gov.tw/Download.ashx?u=LzAwMS9VcGxvYWQvMzM2L3JlbGZpbGUvMTE5NTkvNzkyNTU4LzA4MGVhNDY3LWQyMzgtNDFlNS1iNjAwLWYxMTgzZDExZTczMy5wZGY%3d&n=MTE1MDAwOTAyMzFf5YWs5ZGKLnBkZg%3d%3d
+
+本輪公告頁Chrome為ERR_CERT_AUTHORITY_INVALID，未繞過；文字工具與官方下載端不可讀。但找到先前已下載`/tmp/fuguodun-2026-port.pdf`（429219 bytes、1頁），從PDF DCTDecode內嵌掃描原圖直接視讀，非重新網路下載驗證。掃描為縣府115-01-28府產漁字第1150009023號，文件名11500090231_公告；委託期115/1/1–12/31，列新湖、羅厝、復國墩、金水漁港及新湖漁船加油站，由金門區漁會代為經營及管理維護。
+
+職責包括港區不動產及修船廠設施清理維護、碼頭泊地及船舶進出港秩序、港區道路清潔及油污處理、漁船船員動態等管理、加油核配／服務及環境設備保養、交辦事項。全文未具名觀海台、涼亭、木棧道或螃蟹，也無設施邊界圖。故不推全部納管或排除，不推產權及遊客准入；本頁完整設施權責仍AWAITING_SOURCE_CHECK。management及facts皆限定港區代管與觀景設施待核，管理名稱無連結以免模板誤導。
+
+照片本輪重看本地圖，確為岩岸木棧道／海面；Chrome相簿210直接列9656同原圖連結，未見個別攝影者署名，未新增私人圖或變更授權。照片身份及授權與管理判斷獨立，不能以缺圖或權利疑點推成無管理。四原主題及所有原鏈保留。
+
+本輪`pnpm validate` PASS（`/tmp/fuguodun-port-validate.log`）；4347隔離桌機／手機專項 **2 passed (1.7s)**（`/tmp/fuguodun-port-browser.log`）。新增代管期限／職責／設施不推全納或排除／產權准入待核斷言，FAQ-schema、原四主題／圖授權／POI及trip回歸保留。臨時設定已刪，文件凍結供獨立QA與完整回歸；未改CSV／進度或待查狀態，未提交部署。
+
+## 2026-11-05 follow-up validation
+
+Independent QA confirmed the 2026 harbor delegation's limited scope and the local-copy/certificate limitation; the named viewpoint's inclusion and current access remain unresolved. Focused desktop/mobile tests: 2 passed; complete desktop/mobile regression: 552 passed. AWAITING_SOURCE_CHECK remains. No deployment.
+
+## 2026-11-05 viewpoint-specific historic jurisdiction and raw fee reread
+
+Direct county B39ACC4DEAFFC23F article publication 2019-05-08 explicitly states the viewpoint pavilion and boardwalk were then under Construction Department fisheries/livestock section jurisdiction and established by that department. This object-specific bounded historical role is now distinguished from 2023-11-18 township crab-art notices/signs (camera installation only proposed) and 2026 harbor delegation, whose exact viewpoint inclusion is still unknown. No current whole-facility management, property or daily public access inferred.
+
+Direct raw JSON https://media.taiwan.net.tw/zh-tw/portal/travel/json/attraction_371020000a_000456 obtained via official details-page JSON download link: UpdateTime 2025-05-15T03:02:48+08:00; IsAccessibleForFree=null, FeeInfo empty. Details page likewise blank. Earlier charge-field reading above is superseded and withdrawn as a current assertion. County tourism dated free listing remains a separately attributed source; null does not establish either fee or free access. Full current operation flags do not guarantee each shore segment safe/open.
+
+Original government image/credit and four themes unchanged; no CSV/status/progress changes.
+
+Validation: corepack pnpm validate PASS (/tmp/fuguodun-historic-role-validate.log); isolated 4347 desktop/mobile focused checks 2 passed (1.2s), /tmp/fuguodun-historic-role-browser.log. Checks verify historic jurisdiction, current harbor-boundary uncertainty, null/empty fee attribution and withdrawn old reading, exact FAQ/schema, retained photo/themes/map/trip and mobile width. Temporary config removed; frozen for independent QA/full regression.
+
+## 2026-11-05 bounded local acceptance
+
+Earlier pending-status references are historical. County 2019 report establishes the then fisheries section role for pavilion and boardwalk; 2023 safety action and 2026 harbor delegation are separately bounded. Delegation coverage of these facilities and present access remain unconfirmed. Independent QA accepted boundaries and retained image; 2026 delegation attachment was checked from previously saved scan, not fetched again. Complete browser regression: 552 passed. No new deployment.

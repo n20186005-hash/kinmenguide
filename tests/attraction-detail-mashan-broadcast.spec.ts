@@ -15,8 +15,13 @@ test('Mashan broadcast v1.2 preserves legacy topics, photo, map POI and exact FA
   const topics = await page.locator('article.article-body h3').allTextContents();
   for (const title of ['用聲音跨越海面的年代','播音站與觀測所差在哪裡','怎麼排金沙北線','保留對場所的尊重','播音站與觀測所各看什麼']) expect(topics).toContain(title);
   await expect(page.locator('.attraction-basic')).toContainText(data.address);
-  await expect(page.locator('.attraction-manager a')).toContainText('現行整站管理待確認');
-  await expect(page.locator('.attraction-manager a')).toHaveAttribute('href','https://www.kmnp.gov.tw/ch/titlelist/latest-news/4025');
+  await expect(page.locator('.attraction-manager')).toContainText('金管處官方據點、歷史工程及節期服務發布角色已核');
+  await expect(page.locator('.attraction-manager')).toContainText('完整現行管維待核');
+  await expect(page.locator('.attraction-basic')).toContainText('管理角色與狀態');
+  expect(data.parking).toContain('停車情況未核');
+  expect(data.parking).toContain('僅在當日明確允許且有合法標示處');
+  expect(data.faq.find((f:any)=>f.question==='目前由誰管理？').answer).toContain('春節分類與時段僅歸該次公告');
+  expect(data.faq.find((f:any)=>f.question==='目前由誰管理？').answer).toContain('不證完整現行管維、產權、軍方權界或今日站內各房間開放');
   await expect(page.locator('.attraction-basic')).toContainText('Google列08:00起');
   await expect(page.locator('article.article-body')).toContainText('兩者不是同一個地標');
   await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);

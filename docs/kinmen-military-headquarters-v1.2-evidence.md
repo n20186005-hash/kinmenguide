@@ -1,6 +1,6 @@
 # 清金門鎮總兵署 v1.2 evidence
 
-Source checks2026-11-03 UTC. Implementation only; no commit/push/deploy. CSV AWAITING_LIVE_CHECK; official management-role divergence remains a source follow-up.
+Source checks2026-11-03 UTC. Implementation only; no commit/push/deploy. Historical AWAITING_LIVE_CHECK handoff is superseded by parent-owned current source-check tracking; status unchanged.
 
 ## Inventory
 
@@ -27,3 +27,15 @@ Implementation directly searched exact name and reached same POI清金門鎮總�
 Sol-family implementation/official reading; main agent direct Maps and registry checks; independent researcher official source review. Still unresolved: present authority division across conflicting official management fields, complete accessible route, day-specific exhibit/night-tour service, parking configuration and actual bus departures. No operation, closure or ownership inferred from dated records.
 
 Final local checks: `npx --yes pnpm@10.32.1 validate` PASS (Astro zero errors/warnings/hints;556pages; SEO/canonical, internal links, schema, photo, business and Ctrip audits). Full desktop/mobile browser **218/218 PASS (55.9s)** isolated4344, including10 exactFAQ/schema, manager-role divergence text/official source, all4originaltopics, CCBY2photo, noemptygallery, canonical, EnglishGoogleaddress/hasMap/full-islandmap, trip and overflow. Exact entire original body retained after H2→H3; first2FAQobjects unchanged. Against actualmain7a45fe8:18unrelatedparentoverlayfiles match remote blobs, registry without only newblock equals remote, all non-targetCSVrows unchanged. `git diff --check` clean, no shared renderer/schema or other content collection edits. Temporary dependency/config/scratch files removed. Parent overlaid main7a45fe8299bfa7c86c67c3489c51b4507b9d569a over localHEAD42f53; release only this attraction page, additive registry, focusedtest,evidence andCSVrow. Earlier20 overlay changes form baseline.
+
+## 2026-11-05 bounded-role correction
+
+Direct culture-memory reread confirms cultural bureau heritage authority and tourism bureau long-term visitor staffing, regular cleaning and maintenance. Register management and 2024 monitoring roles remain individually attributed; field update dates and full current division remain unknown. Management name is unlinked, with a labelled memory-source link; facts label is 有界管理角色. FAQ and visible answers match schema.
+
+Chrome tab 1418557331 directly verified original Commons: tomscoffin, 2012-06-05, CC BY 2.0; Flickr review 2022-03-15. Photo unchanged. No CSV/status/progress changes.
+
+Validation: corepack pnpm validate PASS (/tmp/headquarters-role-validate.log). Isolated 4347 desktop/mobile focused test 2 passed (1.7s), /tmp/headquarters-role-browser.log. Initial test assumed the unlinked manager still contained a source anchor; corrected locator checks no manager anchor plus the separately labelled header source link. Temporary config removed. Source frozen for independent review/full regression.
+
+## 2026-11-05 bounded local acceptance
+
+Earlier pending-status references are historical. Culture Bureau heritage supervision and Tourism Department on-site services/cleaning are separately sourced; complete current division and contracts remain unconfirmed. Daily opening and access remain visitor checks. Independent QA directly read the cultural memory record and checked original image; 2024 PDF was not independently re-read due size. Complete browser regression: 552 passed. No new deployment.

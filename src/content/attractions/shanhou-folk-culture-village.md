@@ -10,7 +10,7 @@
   "duration": "60–90 分鐘",
   "order": 4,
   "featured": true,
-  "updatedAt": "2026-11-03",
+  "updatedAt": "2026-11-06",
   "related": [
     "/guides/kinmen-summer-heat-family/",
     "/guides/kinmen-village-architecture/",

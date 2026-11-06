@@ -14,7 +14,7 @@
   "duration": "15–20 分鐘",
   "order": 46,
   "featured": false,
-  "updatedAt": "2026-11-03",
+  "updatedAt": "2026-11-06",
   "related": [
     "/attractions/xishan-lake-park/",
     "/attractions/donglin-seaside-park/",

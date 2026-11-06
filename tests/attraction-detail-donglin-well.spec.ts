@@ -12,6 +12,7 @@ test('Donglin well preserves history and supervised drawing evidence without cla
   expect(hs.slice(0,10)).toEqual(['探索'+data.title,'關於'+data.title,'基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','資料來源與行前提醒']);expect(hs).not.toContain('景點相冊');
   const ts=await page.locator('article.article-body h3').allTextContents();for(const t of ['方井裡的聚落歷史','看井體，也看保存方式','在聚落裡放低音量','附近怎麼安排'])expect(ts).toContain(t);
   await expect(page.locator('.attraction-manager a')).toContainText('當期細項待核');
+  await expect(page.locator('.attraction-basic dt')).toContainText(['官方管理維護記錄']);
   await expect(page.locator('.article-header').getByRole('link',{name:'查看文資管理維護紀錄',exact:true})).toHaveAttribute('href','https://cabkc.kinmen.gov.tw/uploads/files/202508/ebbaa3c0-f653-41bd-a962-4a6c549a260b.pdf');
   await expect(page.locator('article.article-body')).toContainText('未取得當期水質檢驗或飲用許可證據');
   await expect(page.locator('article.article-body')).toContainText('不是隨時可自行操作或今天必有服務');
