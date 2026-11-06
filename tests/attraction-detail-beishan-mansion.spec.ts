@@ -24,6 +24,8 @@ test('BeishanMansion v1.2 preserves legacy topics, photo, map POI and exact FAQ 
   await expect(page.locator('.attraction-manager a')).toContainText('內政部國家公園署金門國家公園管理處');
   await expect(page.locator('.attraction-manager a')).toHaveAttribute('href','https://www.kmnp.gov.tw/ch/planlist/conservation-achievement-reports/614');
   await expect(page.locator('.attraction-basic')).toContainText('住宿區與洋樓殘跡不保證開放');
+  await expect(page.locator('article.article-body')).toContainText('2019年歷史外觀照片已補入頁面');
+  await expect(page.locator('article.article-body')).toContainText('不證明目前住宿、入內或開放狀態');
   await expect(page.locator('article.article-body')).toContainText('雙落大厝、不含洋樓');
   await expect(page.locator('article.article-body')).toContainText('但未說明住宿區或左護龍的進入規則');
   await expect(page.locator('article.article-body')).toContainText('非今日開放現況或結構安全鑑定');
