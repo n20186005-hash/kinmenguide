@@ -1,0 +1,34 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/mingyi-old-street.md','utf8').split('---')[1]);
+test('Mingyi separates heritage designation residences and individual exhibit admission',async({page})=>{
+ await page.goto('/attractions/mingyi-old-street/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/Mingyi+Old+Street/@24.4035936,118.308746,862m/data=!3m1!1e3!4m15!1m8!3m7!1s0x3414a1f99e56753d:0x960960f9c9f82f57!2sMingyi+Old+Street!8m2!3d24.4035936!4d118.308746!10e5!16s%2Fg%2F1tdggwsl!3m5!1s0x3414a1f99e56753d:0x960960f9c9f82f57!8m2!3d24.4035936!4d118.308746!16s%2Fg%2F1tdggwsl"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('具名點位身份已核');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/mingyi-old-street/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索明遺老街','關於明遺老街','基本資料','交通方式','路線地圖','人文與街屋','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['北門外的老市集','街屋與故事館','古城散步的起點'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('現行管理/權屬待核');
+ await expect(page.locator('.article-body')).toContainText('文化資產身分不等民宅室內公開');
+ await expect(page.locator('.article-body')).toContainText('不稱整街由單一單位營運');
+ await expect(page.locator('.article-body')).toContainText('兩者法定個案與範圍不同');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="mingyi-old-street"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="mingyi-old-street"]')).toBeVisible();await page.locator('[data-stop="mingyi-old-street"] [data-action="remove"]').click();await expect(page.locator('[data-stop="mingyi-old-street"]')).toHaveCount(0);
+ await page.goto('/attractions/mingyi-old-street/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-mingyi-old-street [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-mingyi-old-street [data-pin]')).toHaveCount(0);
+
+});

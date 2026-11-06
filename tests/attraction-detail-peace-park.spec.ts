@@ -1,0 +1,36 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/kinmen-peace-memorial-park.md','utf8').split('---')[1]);
+test('Peace Park keeps facility status fees and overall management qualified',async({page})=>{
+ await page.goto('/attractions/kinmen-peace-memorial-park/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/%E6%9E%97%E5%8E%9D%E7%A0%B2%E9%99%A3%E5%9C%B0(%E9%87%91%E9%96%80%E5%92%8C%E5%B9%B3%E7%B4%80%E5%BF%B5%E5%9C%92%E5%8D%80)/@24.4754756,118.3165932,861m/data=!3m1!1e3!4m10!1m2!2m1!1sKinmen+Peace+Memorial+Park!3m6!1s0x3414a2ecebfa679d:0xe1bcaa6af63b3b56!8m2!3d24.4760316!4d118.3164871!16s%2Fg%2F1tgz7zvz"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('具名點位身份已核');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/kinmen-peace-memorial-park/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('.article-cover figcaption')).toContainText('2019年林厝砲陣地');
+ await expect(page.locator('article.article-body')).toContainText('保留已發布的2019年林厝砲陣地');
+ await expect(page.locator('article.article-body')).not.toContainText('原頁無景點照片欄位');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索金門和平紀念園區：林厝砲陣地與和平鐘','關於金門和平紀念園區：林厝砲陣地與和平鐘','基本資料','交通方式','路線地圖','紀念與戰地地景','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['從砲陣地看和平的意義','先確認展區時間'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('整園管理及權屬待核');
+ await expect(page.locator('.article-body')).toContainText('不由空值推收費或所有服務免費');
+ await expect(page.locator('.article-body')).toContainText('不能推全天自由通行');
+ await expect(page.locator('.article-body')).toContainText('不要擅自操作紀念設施');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="kinmen-peace-memorial-park"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="kinmen-peace-memorial-park"]')).toBeVisible();await page.locator('[data-stop="kinmen-peace-memorial-park"] [data-action="remove"]').click();await expect(page.locator('[data-stop="kinmen-peace-memorial-park"]')).toHaveCount(0);
+ await page.goto('/attractions/kinmen-peace-memorial-park/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-kinmen-peace-memorial-park [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-kinmen-peace-memorial-park [data-pin]')).toHaveCount(0);
+
+});
