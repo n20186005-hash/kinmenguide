@@ -1,6 +1,8 @@
 ---
 {
   "title": "蘭湖",
+  "image": "place-lan-lake",
+  "imageCaption": "2014年蘭湖歷史湖景；照片不代表目前水位、設施或開放狀態。",
   "nameEn": "Lan Lake",
   "seoTitle": "蘭湖｜位置與參觀資訊｜Kinmen Guide",
   "description": "蘭湖是金湖一處可加入聚落行程的水景停留，適合與瓊林一帶的文化景點搭配。",
