@@ -2,6 +2,11 @@ import { test, expect } from '@playwright/test';
 import { travelThemes } from '../src/data/travel-themes';
 
 test('traveller routes are discoverable and have useful day plans', async ({ page }) => {
+  // Exercise navigation before its shared stylesheet arrives, as on a cold CI runner.
+  await page.route('**/_astro/*.css', async route => {
+    await new Promise(resolve => setTimeout(resolve, 150));
+    await route.continue();
+  });
   await page.goto('/');
   await expect(page.locator('[data-travel-theme]')).toHaveCount(6);
   for (const theme of travelThemes) {
@@ -12,9 +17,21 @@ test('traveller routes are discoverable and have useful day plans', async ({ pag
   for (const theme of travelThemes) {
     await page.locator(`[data-travel-theme="${theme.id}"]`).click();
     await expect(page).toHaveURL(new RegExp(`/itineraries/${theme.route}/$`));
+    // URL and DOM assertions can pass before CSS applies after a link navigation.
+    await page.waitForLoadState('load');
+    expect(await page.locator('link[rel="stylesheet"]').evaluateAll(links =>
+      links.length > 0 && links.every(link => Boolean((link as HTMLLinkElement).sheet)),
+    )).toBe(true);
     await expect(page.locator('.timeline-day')).toHaveCount(theme.id === 'solo' ? 1 : 2);
     await expect(page.getByRole('navigation', { name: '行程主題' }).getByRole('link', { name: `${theme.label}行程` })).toHaveAttribute('href', `/itineraries/?theme=${theme.id}`);
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
+    const layout = await page.evaluate(() => ({
+      url: location.href, viewport: innerWidth, scrollWidth: document.documentElement.scrollWidth,
+      outliers: Array.from(document.querySelectorAll('body *')).map(element => {
+        const rect = element.getBoundingClientRect();
+        return { tag: element.tagName, className: element.className, right: rect.right, width: rect.width };
+      }).filter(element => element.right > innerWidth).slice(0, 8),
+    }));
+    expect(layout.scrollWidth, JSON.stringify(layout)).toBeLessThanOrEqual(layout.viewport);
     await page.goto('/attractions/');
   }
 });
