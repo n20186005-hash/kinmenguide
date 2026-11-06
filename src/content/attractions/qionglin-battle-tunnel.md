@@ -1,6 +1,8 @@
 ---
 {
   "title": "瓊林戰鬥坑道：走進聚落地下的民防史",
+  "image": "place-qionglin-battle-tunnel",
+  "imageCaption": "2018年瓊林地道內部紀錄；照片不代表目前開放或可入內。",
   "nameEn": "Qionglin Battle Tunnel",
   "seoTitle": "瓊林戰鬥坑道攻略｜入口、清潔費與參觀提醒｜Kinmen Guide",
   "description": "瓊林戰鬥坑道的入口在瓊林村辦公室，是金門戰鬥村的地下民防設施。整理開放時間、清潔費、出入口與狹窄坑道的參觀提醒。",
