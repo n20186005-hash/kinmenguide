@@ -1,0 +1,34 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/liaoluo-mazu-park.md','utf8').split('---')[1]);
+test('Liaoluo Mazu Park separates worship coastal access and historical management',async({page})=>{
+ await page.goto('/attractions/liaoluo-mazu-park/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/Kinmen+Mazu+Public+Garden/@24.4126498,118.4318221,861m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3414a44dda818d39:0x648be595c591d0d1!8m2!3d24.4126449!4d118.4344024!16s%2Fg%2F1tdy6pl1"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('具名點位身份已由地圖核對');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/liaoluo-mazu-park/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索金門媽祖公園（料羅）','關於金門媽祖公園（料羅）','基本資料','交通方式','路線地圖','信仰與海岸','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('2021縣府報導列金門縣林務所轄管');
+ await expect(page.locator('.article-body')).toContainText('順濟宮也是獨立祭祀場域');
+ await expect(page.locator('.article-body')).toContainText('不證明目前仍施工或已全部修復');
+ await expect(page.locator('.article-body')).toContainText('不包括港區工作動線');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="liaoluo-mazu-park"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="liaoluo-mazu-park"]')).toBeVisible();await page.locator('[data-stop="liaoluo-mazu-park"] [data-action="remove"]').click();await expect(page.locator('[data-stop="liaoluo-mazu-park"]')).toHaveCount(0);
+ await page.goto('/attractions/liaoluo-mazu-park/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-liaoluo-mazu-park [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-liaoluo-mazu-park [data-pin]')).toHaveCount(0);
+
+});
