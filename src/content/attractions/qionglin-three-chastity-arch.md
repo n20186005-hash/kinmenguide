@@ -1,6 +1,8 @@
 ---
 {
   "title": "一門三節坊",
+  "image": "place-qionglin-three-chastity-arch",
+  "imageCaption": "2018年瓊林一門三節坊實景；歷史照片不代表目前設施或准入狀態。",
   "nameEn": "Qionglin Three Chastity Arch",
   "seoTitle": "一門三節坊｜位置與參觀資訊｜Kinmen Guide",
   "description": "瓊林一門三節坊是聚落走讀時可留意的牌坊，適合與附近宗祠和古厝一起認識。",
