@@ -1,0 +1,37 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/kinmen-bridge.md','utf8').split('---')[1]);
+test('Kinmen Bridge keeps dated traffic rules separate for vehicles and pedestrians',async({page})=>{
+ await page.goto('/attractions/kinmen-bridge/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/Kinmen+Bridge/@24.4521007,118.3014548,861m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3414a2ed4a7f4cd3:0x951415bf2f6d2795!8m2!3d24.4520958!4d118.3040351!16s%2Fg%2F155r_5jv"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('也不代表准入、停車或無障礙許可');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/kinmen-bridge/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('總統府 / CC BY 2.0');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索金門大橋與岸邊觀景','關於金門大橋與岸邊觀景','基本資料','交通方式','路線地圖','人文與工程','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['一座橋，串起大金門與小金門','想拍全景，留在合適的岸邊','一趟跨橋，怎麼排比較舒服','想拍橋，從湖下與慈湖選一站','抵達烈嶼後怎麼玩'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('完整現行分工待核');
+ await expect(page.locator('.article-body')).toContainText('不得進行車道拍照');
+ await expect(page.locator('.article-body')).toContainText('行人、自行車及機車可全天使用改設的慢車道');
+ await expect(page.locator('.article-body')).toContainText('不表示機車只能走該道');
+ await expect(page.locator('.article-body')).toContainText('2025年5月28日後續報導說明已無時段問題');
+ await expect(page.locator('.article-body')).toContainText('不能靠本頁判定今天可上橋');
+ await expect(page.locator('.attraction-manager a')).toHaveCount(0);
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="kinmen-bridge"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="kinmen-bridge"]')).toBeVisible();await page.locator('[data-stop="kinmen-bridge"] [data-action="remove"]').click();await expect(page.locator('[data-stop="kinmen-bridge"]')).toHaveCount(0);
+ await page.goto('/attractions/kinmen-bridge/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-kinmen-bridge [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-kinmen-bridge [data-pin]')).toHaveCount(0);
+
+});
