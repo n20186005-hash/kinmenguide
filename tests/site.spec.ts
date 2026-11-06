@@ -145,14 +145,20 @@ test('new Guningtou and Qionglin routes are discoverable and respect the Cihu cl
  await expect(page.locator('[data-visit-notice]')).toContainText('2026年8月17日');
 });
 
-test('Houhu seaside park keeps its Jinning location, map point and credited photo',async({page})=>{
+test('Houhu seaside park keeps its Jinning location and photo while unverified navigation stays disabled',async({page})=>{
  await page.goto('/attractions/');
  await page.getByRole('button',{name:'金寧',exact:true}).click();
  await expect(page.locator('[data-card]:visible')).toHaveCount(20);
  await expect(page.locator('[data-card]:visible h3 a[href="/attractions/houhu-seaside-park/"]')).toBeVisible();
  await page.goto('/attractions/houhu-seaside-park/');
  await expect(page.locator('h1')).toHaveText('后湖海濱公園');
- await expect(page.getByRole('link',{name:'在 Google 地圖查看位置',exact:true})).toHaveAttribute('href','https://www.google.com/maps/search/?api=1&query=24.4158999,118.346068');
+ await expect(page.getByRole('link',{name:'在 Google 地圖查看位置',exact:true})).toHaveCount(0);
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ await expect(page.locator('.article-body')).toContainText('Google 地圖具名 POI、顯示地址與入口落點尚待核實');
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ const houhuGraph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ const houhuPlace=houhuGraph.find(n=>n['@type']==='TouristAttraction');
+ expect(houhuPlace.geo).toBeUndefined();expect(houhuPlace.hasMap).toBeUndefined();
  await expect(page.locator('.article-cover img')).toHaveAttribute('alt',/2014 年后湖海濱公園/);
  await expect(page.locator('.article-cover a[href="/credits/#place-houhu-seaside-park"]')).toBeVisible();
  await expect(page.locator('[data-visit-notice]')).toContainText('水域開放');
