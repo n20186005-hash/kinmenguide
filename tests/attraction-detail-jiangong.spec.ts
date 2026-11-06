@@ -1,0 +1,34 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/jiangong-islet.md','utf8').split('---')[1]);
+test('Jiangong requires daylight low tide and does not treat forecast as permission',async({page})=>{
+ await page.goto('/attractions/jiangong-islet/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/jiangong-islet/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('Miklcct / CC BY-SA 4.0');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索建功嶼：跟著潮汐走上小島','關於建功嶼：跟著潮汐走上小島','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['金門摩西分海，就是這條潮汐步道','退潮之後，海中出現一條路','先查可登島時段，再安排前後兩站','拍照與金城順遊'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('全島管理分工待核');
+ await expect(page.locator('.article-body')).toContainText('僅限日間退潮時間上島');
+ await expect(page.locator('.article-body')).toContainText('不假定舊公告至今未變');
+ await expect(page.locator('.article-body')).toContainText('不把任何表列時段直接當登島許可');
+ await expect(page.locator('.attraction-manager a')).toHaveCount(0);
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps/place/"]')).toHaveCount(1);
+ await expect(page.locator('.article-body')).toContainText('不是入口、准入、停車或無障礙證明');
+ await page.locator('[data-trip-add="jiangong-islet"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="jiangong-islet"]')).toBeVisible();await page.locator('[data-stop="jiangong-islet"] [data-action="remove"]').click();await expect(page.locator('[data-stop="jiangong-islet"]')).toHaveCount(0);
+ await page.goto('/attractions/jiangong-islet/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-jiangong-islet [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-jiangong-islet [data-pin]')).toHaveCount(0);
+
+});
