@@ -1,0 +1,37 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/shamei-old-street.md','utf8').split('---')[1]);
+test('Shamei separates street scope current shops and private buildings',async({page})=>{
+ await page.goto('/attractions/shamei-old-street/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/Shamei+Old+Street/@24.4906075,118.4122725,861m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3414bb412e30e48b:0x564fd20f44a49260!8m2!3d24.4906075!4d118.4122725!16s%2Fg%2F1v2ywhv9!5m1!1e2?entry=ttu"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('也不代表准入、停車或無障礙許可');
+ await expect(page.locator('article.article-body a[href="https://kinmen.travel/zh-tw/travel/attraction/1450"]').first()).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('不是已核實的訪客入口');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/shamei-old-street/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索沙美老街與沙美摩洛哥','關於沙美老街與沙美摩洛哥','基本資料','交通方式','路線地圖','市街與建築','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('街區及個別建物現行管理/權屬待核');
+ await expect(page.locator('.article-body')).toContainText('不把整體24小時欄位推攤商全天營業');
+ await expect(page.locator('.article-body')).toContainText('不等所有街屋、攤商或市場由單一單位營運');
+ await expect(page.locator('.article-body')).toContainText('2026年1月21日公告記自1月17日起金沙戲院報到');
+ await expect(page.locator('.article-body')).toContainText('1月21日報導未確認暑期例外');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="shamei-old-street"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="shamei-old-street"]')).toBeVisible();await page.locator('[data-stop="shamei-old-street"] [data-action="remove"]').click();await expect(page.locator('[data-stop="shamei-old-street"]')).toHaveCount(0);
+ await page.goto('/attractions/shamei-old-street/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-shamei-old-street [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-shamei-old-street [data-pin]')).toHaveCount(0);
+
+});
