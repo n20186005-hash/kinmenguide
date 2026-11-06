@@ -10,7 +10,7 @@
 
 validate exit0；4414雙端照片及site回歸40/40通過（14.3s）。首輪2失敗因測試預期不存在的「舊水頭」短語，改為原文實際「和西海路一段的原旅客服務中心是不同大樓」，不修改產品正文。日誌/tmp/port-photo-validate.log、/tmp/port-photo-browser.log、/tmp/port-photo-browser-final.log；截圖/tmp/port-photo-{desktop,mobile}-credits.png。臨時配置/依賴移除，未提交推送，凍結供獨立QA，最新main變動需再對齊。
 
-## #195最新main完整集成
-API實際main0cced7df90e02bb275ee62d640fb910c982ec931 treee61f55db16df22e36777481c92e98081dddcbd6e（/tmp/port-latest-main.json）與release-tiger-integrated-local乾淨HEAD精確一致，建立獨立release-port-current；只叠港圖六文件。此基線不含尚未合併#196虎堡新圖，已確認place-tiger-fort不在registry，未宣稱已集成虎堡照片；若#196先合併需再對齊。全部舊JPEG逐字節、全部原registry鍵值及非目標pending新reason保持不變。
+## #196最新main整合候選
+GitHub main merge #196 `e9dfe25b7f33e128d18b39458addee4243b14f27` 已核對 tree `e9f8c72f011228f84b2abcd751c0ca7b958dfc1f`。本地因無遠端 commit object，以該精確 tree 建立隔離臨時等價基線（不是遠端 SHA）；港站目標頁/原始圖、port photo registry key、測試和來源證據按文件合入，registry 按 key 增加港站並保留 `place-tiger-fort`，pending 按 slug 僅移除 `kinmen-port-terminal`；虎堡保持已移除且不復入待辦。全部既有圖片和registry鍵值保留。
 
-validate exit0；4415隔離端口完整全站桌機/手機438 passed (2.8m)、exit0，這是完整回歸，不是舊40項專項。日誌/tmp/port-current-validate.log、/tmp/port-current-full-browser.log。臨時配置/依賴移除，六文件未提交推送，凍結待最終QA與main更新核對。
+候選相對 #196 基線仍限六文件：本證據、原圖、港站頁兩封面欄、港站registry一項、新專項測試及pending一項移除。整合後照片registry共138項（含虎堡與港站），pending 38項（兩個目標均不在待辦）。本候選執行 validate 成功；Astro建置556頁、49259內部引用、4162 schema nodes、138張可解碼署名資產、38項明確pending。完整桌機/手機Playwright回歸440 passed (2.3m)，包含虎堡與港圖專項。本次隔離測試日誌 `/tmp/port-on-tiger-validate.log`、`/tmp/port-on-tiger-browser.log`；先前 `/tmp/port-current-*` 438通過屬 #195 基線，不作本候選結果。最終 tree 由當前候選index計算，見整合驗收記錄。臨時依賴連結及Playwright設定測後移除，未提交推送。
