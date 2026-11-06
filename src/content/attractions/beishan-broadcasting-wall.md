@@ -1,6 +1,8 @@
 ---
 {
   "title": "北山播音牆：在斷崖聽戰地聲音史",
+  "image": "place-beishan-broadcasting-wall",
+  "imageCaption": "北山播音牆48孔揚聲器方陣的歷史影像；照片不代表目前開放或可入內。",
   "nameEn": "Beishan Broadcasting Wall",
   "seoTitle": "北山播音牆攻略｜古寧頭斷崖與戰地廣播｜Kinmen Guide",
   "description": "北山播音牆立於古寧頭海岸，是金門戰地廣播留下的48喇叭地標。整理開放、聆聽與拍照安全，串聯北山洋樓和戰史館。",

@@ -7,7 +7,10 @@ test('BeishanWall v1.2 preserves legacy topics, photo, map POI and exact FAQ sch
   await expect(page.locator('h1')).toHaveCount(1);
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/beishan-broadcasting-wall/');
   await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
-  await expect(page.locator('.article-cover img')).toHaveCount(0);
+  await expect(page.locator('.article-cover img')).toHaveCount(1);
+  expect(await page.locator('.article-cover img').evaluate((i:HTMLImageElement)=>i.complete&&i.naturalWidth>0)).toBe(true);
+  await expect(page.locator('.article-cover figcaption')).toContainText('照片不代表目前開放或可入內');
+  await expect(page.locator('.article-cover a')).toHaveAttribute('href','/credits/#place-beishan-broadcasting-wall');
   const heads = await page.locator('article.article-body h2').allTextContents();
   expect(heads.slice(0,9)).toEqual(['探索北山播音牆','關於北山播音牆','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程']);
   expect(heads).not.toContain('景點相冊');
