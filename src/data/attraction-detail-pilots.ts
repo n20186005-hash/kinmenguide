@@ -657,9 +657,10 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     "1958巡視記述、1980定名及2003接管脈絡。",
     "歷史建築與小型軍事展示空間。"
   ],
-  "about": "將軍堡位在烈嶼后頭海岸，公園資料記2003年由金防部移撥接管、依原貌修復開放。文資登錄列金管處與烈嶼區站為管理紀錄，並分列國有土地、縣政府文資主管機關及文化局聯絡單位；舊機關名稱與資料時點應留意，最新完整日常維護、委外範圍未核，不擴張至全海岸。",
+  "about": "將軍堡位在烈嶼后頭海岸，公園資料記2003年由金防部移撥接管、依原貌修復開放。既有文資紀錄曾列舊機關名金管處與烈嶼區站為管理人，目前管理人欄位及更新日期未直接讀明，不推現任；土地紀錄分列國有土地；文化部記憶庫同筆資料列所屬主管機關金門縣政府、主管機關名稱金門縣文化局、單位文化資產科，屬文資主管角色；舊機關名稱與資料時點應留意，最新完整日常維護、委外範圍未核，不擴張至全海岸。",
   "management": {
-    "name": "內政部國家公園署金門國家公園管理處（接管及登錄管理紀錄；完整日常權責待核）",
+    "name": "現行完整管理待核；金管處為2003接管及官方據點所列單位",
+    "linkName": false,
     "sourceUrl": "https://www.kmnp.gov.tw/ch/touristInfo/recreation-sites/31",
     "ctaLabel": "查看公園接管與據點資料"
   },
@@ -681,12 +682,12 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
       "value": "24.4409148, 118.2662476（具名金門烈嶼將軍堡）"
     },
     {
-      "label": "目前管理單位",
-      "value": "內政部國家公園署金門國家公園管理處（接管及登錄管理紀錄；完整日常權責待核）"
+      "label": "管理狀態",
+      "value": "現行完整管理待核；金管處為2003接管及官方據點所列單位"
     },
     {
       "label": "土地／文資角色",
-      "value": "文資登錄土地所有人列中華民國；縣政府為文資主管機關、文化局為聯絡單位，不等同現場營運。"
+      "value": "文資登錄土地所有人列中華民國；文化部記憶庫列所屬主管機關金門縣政府、主管機關名稱金門縣文化局／文化資產科，文資主管不等同現場營運，欄位更新日期未明。"
     },
     {
       "label": "一般開放時間",
@@ -847,7 +848,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
 },
   'fuguodun-viewpoint': {
   "title": "復國墩觀海台與大螃蟹",
-  "statusNotice": "官方2025-05-15列全天，非現場通行保證 · 費用欄來源不一致待核 · 不攀裝置或涼亭，現行完整權責待確認。",
+  "statusNotice": "官方2025-05-15列全天，非現場通行保證 · 觀光頁免費、原始JSON費用空值分源 · 不攀裝置或涼亭，現行完整權責待確認。",
   "paragraphs": [
     "復國墩的岩岸、港灣與海防地景可與近代嗆蟹裝置分開閱讀。當日允許通行時，從安全平台或步道看海，不為拍照靠近浪打岩面。",
     "本站定位是具名觀海台，不是螃蟹腳下或商店入口；購物、用餐與看海分別確認開放和交通，不把同一村名當同一經營場所。"
@@ -855,7 +856,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   "advice": [
     "30–45分鐘為編輯建議，交通停車另計；建議白天，現場管制優先。",
     "大螃蟹與涼亭屋頂均不可攀爬；只在當日允許的安全步道或平台觀察，不跨欄、不踏海防刀坡與浪打岩面，不進港區作業範圍。",
-    "免費前台與多媒體費用字段不同，不作現行價格承諾。",
+    "觀光頁列免費；目前原始JSON免費null／費用空，不能由空值推收費。",
     "公車分支及回程先查動態；輪椅與推車可達範圍先確認。"
   ],
   "features": [
@@ -864,11 +865,12 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     "軍事工事與海防刀坡，保持距離觀看。",
     "以漁業嗆蟹為題的近代大型裝置。"
   ],
-  "about": "復國墩舊稱蚵殼墩，考古、海防與漁業留下不同時間層。2023報導記金湖鎮公所對嗆蟹裝置採取安全告示等行動，不能直接推定整座觀海台、步道、港區的現行權管、產權或委外；官方觀光頁也不是指定管理人的文件。",
+  "about": "復國墩舊稱蚵殼墩，考古、海防與漁業留下不同時間層。2019-05-08縣府報導明載當時觀海涼亭及棧道歸建設處漁牧科管轄，並由該處設置，屬對象特定歷史角色，不推2026仍由同單位全面管理。2026-01-28縣府公告委託金門區漁會於2026-01-01至12-31代管包括復國墩在內的漁港，職責列港區不動產及設施清理維護、碼頭泊地及船舶進出秩序、港區道路清潔與油污處理等。公告未具名觀海台、涼亭、棧道或螃蟹，也未附具體邊界圖；不能推定這些設施全部納管或全部排除，完整現行權責、產權與當日准入仍待確認。2023公所裝置安全行動亦不等於全區管理證明。",
   "management": {
-    "name": "現行觀海台／步道／裝置完整管理權責待確認",
-    "sourceUrl": "https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=8BB0A1B4B83C26F8&sms=BF7D6D478B935644",
-    "ctaLabel": "查看2023裝置安全提醒"
+    "name": "2019觀海亭／棧道建設處漁牧科管轄角色已核；完整現管待核，另列2026港區代管",
+    "linkName": false,
+    "sourceUrl": "https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=B39ACC4DEAFFC23F&sms=BF7D6D478B935644",
+    "ctaLabel": "查看2019觀海亭與棧道管轄紀錄"
   },
   "facts": [
     {
@@ -888,8 +890,8 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
       "value": "24.4471963, 118.473356（具名觀海台，不是螃蟹腳下）"
     },
     {
-      "label": "目前管理單位",
-      "value": "現行觀海台、步道與裝置的完整權責待確認；2023公所裝置安全公告不等於全區管理或產權證明。"
+      "label": "管理狀態",
+      "value": "2019觀海亭／棧道建設處漁牧科管轄角色已核；完整現管待核，另列2026港區代管，設施範圍不推全納或排除。"
     },
     {
       "label": "一般開放時間",
@@ -897,7 +899,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     },
     {
       "label": "門票與費用",
-      "value": "官方觀光頁2025-05-15列免費；觀光多媒體同點所見費用欄為需入場相關費用但未列金額，兩者不一致，不能當作實際收費公告；當期收費與活動另核。"
+      "value": "官方觀光頁2025-05-15列免費；目前直接讀取同點原始JSON，更新時間2025-05-15，免費欄IsAccessibleForFree為null、FeeInfo空白，空值不證明免費或收費。前輪「需入場相關費用」為已被目前讀值取代的歷史讀取；當期活動費用另核。"
     },
     {
       "label": "停車",
@@ -1327,7 +1329,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
 },
   'donglin-seaside-park': {
   "title": "東林海濱公園",
-  "statusNotice": "官方2024頁列全天及停車場 · 官方費用欄位不一致 · 海域、遊具及現行權責分開核實。",
+  "statusNotice": "官方2024頁列全天及停車場 · 觀光頁2024列免費、JSON費用空值不作判定 · 海域、遊具及現行權責分開核實。",
   "paragraphs": [
     "在當日允許的園區位置看海、觀察海洋動物雕塑與聚落海岸關係，保留時間休息，不把公園地標當海岸全線通行保證。",
     "東林海濱公園、附近習山湖遊戲場與海域是不同使用範圍；園區散步不等於可游泳，也不由舊介紹推救生服務、夜間照明或設施今日完備。"
@@ -1344,9 +1346,10 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     "官方介紹的林蔭與觀景休憩空間。",
     "與習山湖及東井分開安排的聚落路線。"
   ],
-  "about": "東林海濱公園位於烈嶼東林海岸，鄉公所2019介紹記2001整建，官方2024旅遊頁介紹海洋動物雕塑及休憩空間。本次未取得整園現行單一管理、日常維護、產權或委外直接證據；鄉公所介紹、觀光處發布與過往淨灘各有範圍，均不直接推整園現行管理。",
+  "about": "東林海濱公園位於烈嶼東林海岸，鄉公所2019介紹記2001整建，官方2024旅遊頁介紹海洋動物雕塑及休憩空間。烈嶼鄉公所2026年9月出版的《鄉政紀要暨施政成果紀實》第368頁，回顧東林濱海公園環境改善工程於2023-07-12、公廁改善工程於2023-10-25實際完工。這支持公所對本景點歷史環境及公廁工程的有界角色，不證當前整園管理、日常維護、產權、安全、救生或設施狀態；當日准入與使用仍另核。",
   "management": {
-    "name": "整園現行管理／維護權責待核（連結為官方景點介紹）",
+    "name": "烈嶼鄉公所歷史環境及公廁工程角色已核；當前整園管理與日常維護另核",
+    "linkName": false,
     "sourceUrl": "https://kinmen.travel/zh-tw/travel/attraction/481",
     "ctaLabel": "查看官方公園介紹"
   },
@@ -1372,8 +1375,8 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
       "value": "24.425083, 118.2517665（具名東林公園地標）"
     },
     {
-      "label": "目前管理單位",
-      "value": "現行整園管理、日常維護、產權與委外待核"
+      "label": "有界歷史工程角色",
+      "value": "公所2026出版紀要回顧2023環境及公廁工程；不證當前整園管理、產權、安全、救生或設施狀態。"
     },
     {
       "label": "參考開放時間",
@@ -1381,7 +1384,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     },
     {
       "label": "門票與活動",
-      "value": "官方觀光頁列免費，觀光多媒體資料同日版本卻標需入場相關費用且無金額，欄位不一致；不將資料欄當收費公告，活動與設施另確認。"
+      "value": "官方觀光頁2024-06-17資料列免費；2026-11-05直接下載同筆原始JSON（資料更新2024-06-17）IsAccessibleForFree為null、FeeInfo為空字串。空值不證明免費或收費，舊「需入場相關費用」快取不作現值；當期活動與設施另確認。"
     },
     {
       "label": "建議停留",
@@ -1444,7 +1447,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
       "value": "24.4275032, 118.2494496（具名古井地標）"
     },
     {
-      "label": "目前管理單位",
+      "label": "官方管理維護記錄",
       "value": "2025文資報告列烈嶼鄉公所管理維護；當期細項、產權與委外待核"
     },
     {
@@ -2691,10 +2694,11 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     "與馬山觀測所分別呈現聲音和視線任務。",
     "可與官澳及金沙北線串訪。"
   ],
-  "about": "馬山喊話站於1954年設立，1985年改名為馬山播音站；國家公園資料記載2017年修復並展示當時人員編制與喊話內容規定。金門國家公園管理處發布2026年春節服務公告，列馬山觀測所（播音站）為自導式景點；節期公告不能作全年管理證明。現行整站管理待確認，土地所有權、軍方全部權責及現行委外契約亦未核實。",
+  "about": "馬山喊話站於1954年設立，1985年改名為馬山播音站；國家公園資料記載2017年修復並展示當時人員編制與喊話內容規定。金管處官方據點頁介紹馬山播音站，2025年公告辦理播音站及觀測所外便道改善、於9月16–19日當時暫停開放；2026年春節公告將「馬山觀測所（播音站）」列為自導式景點。這些支持官方據點、對象特定工程及節期服務發布角色，不證完整現行管維、產權、軍方權界或今日站內各房間開放；春節分類與時段僅歸該次公告。",
   "management": {
-    "name": "現行整站管理待確認；金門國家公園管理處發布2026年春節服務公告",
-    "sourceUrl": "https://www.kmnp.gov.tw/ch/titlelist/latest-news/4025"
+    "name": "金管處官方據點、歷史工程及節期服務發布角色已核；完整現行管維待核",
+    "linkName": false,
+    "sourceUrl": "https://www.kmnp.gov.tw/ch/touristInfo/recreation-sites/20"
   },
   "facts": [
     {
@@ -2718,8 +2722,8 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
       "value": "24.5287029, 118.4084773（播音站具名地標落點，非觀測所）"
     },
     {
-      "label": "目前管理單位",
-      "value": "現行整站管理待確認；金管處2026年春節服務公告另列，非全年管理證明。"
+      "label": "管理角色與狀態",
+      "value": "金管處官方據點、2025外便道工程及2026春節自導式發布角色已核；完整現管、產權及當日准入待核。"
     },
     {
       "label": "開放資訊",
@@ -2762,10 +2766,11 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     "可分別串訪馬山播音站。",
     "天候與能見度形成不同觀察體驗。"
   ],
-  "about": "馬山位於金門北端，是過去觀察海上活動的重要據點。觀測所藉地下坑道連接觀測空間，與鄰近播音站分別呈現視覺警戒與聲音廣播的戰地歷史。金門國家公園管理處2025年曾公告規劃外便道改善及暫停開放；這是歷史工作紀錄，不能單獨證明2026年現行整站管理，亦不表示工程已完成。現行管理、土地所有權、軍方權責與委外契約仍待確認。",
+  "about": "馬山位於金門北端，是過去觀察海上活動的重要據點。觀測所藉地下坑道連接觀測空間，與鄰近播音站分別呈現視覺警戒與聲音廣播的戰地歷史。金門國家公園管理處2025年曾公告規劃外便道改善及暫停開放；這是歷史工作紀錄，不能單獨證明2026年現行整站管理，亦不表示工程已完成。金管處官方據點頁介紹馬山觀測所，2025年公告辦理觀測所及播音站外便道改善；2026年春節公告將「馬山觀測所（播音站）」列為自導式景點，未列入該公告所列駐點解說展示館；此分類僅歸該次春節公告，不推全年服務配置。這些支持據點、工程及當時參觀服務發布角色，不證全面產權、完整現行管維、軍方權界或當日開放。觀測所與播音站用途、入口及開放仍分別確認。",
   "management": {
-    "name": "現行整站管理待確認；金門國家公園管理處2025年曾公告便道改善",
-    "sourceUrl": "https://www.kmnp.gov.tw/ch/titlelist/latest-news/476"
+    "name": "金管處據點、歷史工程及服務發布角色已核；完整現行管維與准入待核",
+    "linkName": false,
+    "sourceUrl": "https://www.kmnp.gov.tw/ch/touristInfo/recreation-sites/21"
   },
   "facts": [
     {
@@ -2789,8 +2794,8 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
       "value": "24.5277161, 118.4088789（具名地標落點）"
     },
     {
-      "label": "目前管理單位",
-      "value": "現行整站管理待確認；金管處2025年歷史公告另列。"
+      "label": "管理角色與狀態",
+      "value": "金管處官方據點、2025便道工程及2026春節自導式服務發布角色已核；完整現行管維、產權及當日准入待核。"
     },
     {
       "label": "一般開放時間",
@@ -3001,8 +3006,10 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   ],
   "about": "總兵署所在地舊稱叢青軒，清代遷署後歷經改建及不同政軍機關使用，如今作為歷史展示與服務空間。國家文化資產網登載文化局為管理人，2024年度官方監測報告則列觀光處為管理單位，文化記憶庫另述觀光處駐點服務與清潔維護。官方管理欄位不同，現行權責分工待主管確認；不把管理、服務及土地權屬合併。",
   "management": {
-    "name": "金門縣文化局（文資網管理人）；金門縣政府觀光處（2024報告管理單位、駐點服務維護）；現行分工待確認",
-    "sourceUrl": "https://nchdb.boch.gov.tw/assets/overview/monument/19911123000008"
+    "name": "文資主管、登記管理及駐點清潔維護角色已核；現行完整分工待確認",
+    "sourceUrl": "https://tcmb.culture.tw/zh-tw/detail?id=19911123000008&indexCode=BOCH_CountryCulture_11",
+    "linkName": false,
+    "ctaLabel": "文化部記憶庫・文資主管與駐點維護角色"
   },
   "facts": [
     {
@@ -3026,8 +3033,8 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
       "value": "24.432258, 118.3183799（Google具名地標落點）"
     },
     {
-      "label": "目前管理單位",
-      "value": "文化局（文資網管理人）；觀光處（2024報告管理單位、駐點服務維護）；現行分工待確認"
+      "label": "有界管理角色",
+      "value": "文化局為文資主管及文資網登記管理人；觀光處為2024報告管理單位、記憶庫所述駐點清潔維護單位；現行完整分工待確認"
     },
     {
       "label": "一般開放時間",

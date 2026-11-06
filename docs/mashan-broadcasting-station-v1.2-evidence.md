@@ -1,6 +1,6 @@
 # 馬山播音站 v1.2 evidence
 
-Checks 2026-11-03 UTC, public sources rather than site visit. No commit/push/deploy. CSV AWAITING_LIVE_CHECK.
+Checks 2026-11-03 UTC, public sources rather than site visit. No commit/push/deploy. Historical implementation state was CSV AWAITING_LIVE_CHECK; current tracking is AWAITING_SOURCE_CHECK (unchanged by this patch).
 
 ## Original inventory
 
@@ -28,3 +28,18 @@ Direct URL: https://www.google.com/maps/place/%E9%A6%AC%E5%B1%B1%E6%92%AD%E9%9F%
 Sol-family implementation with independent primary-source and Maps reads; parent coordinates Luna-family research/review, separately corroborated POI, photo and 2026 holiday notice. Parent relayed independent review: seasonal announcement cannot prove present year-round management. Draft revised throughout to state current whole-site manager pending. No false claim of completed production acceptance. Unresolved: ownership, current contractor, full military division of responsibility, independent special-service charges, parking fee/capacity, all-room opening, accessibility and daily broadcast/playback. No promised performance or GPX.
 
 Final local checks after management-review and associated observation-post correction: `npx --yes pnpm@10.32.1 validate` PASS (Astro zero errors/warnings/hints, 556 pages; SEO/canonical/link/schema/photo/business/Ctrip audits). Full desktop/mobile browser suite 226/226 PASS (54.2s), isolated port 4348. Both affected focused tests passed on desktop and mobile: single H1/canonical, heading order, eight exact broadcast FAQ/frontmatter/schema pairs, image credit, no empty gallery, pending manager with dated source, official/Google hour difference, exact POI address/coordinates/CID and matching detail/map/hasMap links, trip add and mobile overflow. Original body retained except documented obsolete map sentence; original image and source links retained. Scope versus actual main: 28 unrelated overlay files match remote blobs; registry minus additive block matches remote; all other CSV rows unchanged. Observation-post page and test each match remote after reversing their one authorized sentence/assertion replacement. `git diff --check` clean. Temporary config, dependency symlink and scratch removed. Actual main 9690f04ace6759ddc30e7e5760f18182f5aafeff overlay on local HEAD42f53d3 is baseline; its 32 earlier changes are not this batch. Seven deliverables: target page, additive pilot block, focused test, this evidence and target CSV row, plus minimal observation-post text correction and its affected focused test. Shared renderer/schema and other content collections untouched.
+
+## 2026-11-05 source follow-up
+
+Independent review reconfirmed the national park's broadcasting-station facility page, the dated 2025 external-access works notice and the 2026 Spring Festival self-guided listing. The holiday listing is not a year-round service guarantee and the 2025 closure does not establish present closure or completion. Commons source https://commons.wikimedia.org/wiki/File:Mashan_broadcasting_post.JPG lists koika, CC BY-SA 3.0; the existing entrance/sign alt matches the local image. Current complete site management, military role and daily access remain unresolved; AWAITING_SOURCE_CHECK remains. No image or published asset was removed.
+
+## 2026-11-05 bounded-role and parking correction
+Directly reread official recreation-sites/20 (broadcasting identity and 2017 restoration/exhibition) and latest-news/476 (park administration's named external-path work and 2025-09-16–19 historical closure). Existing latest-news/4025 supports only 2026 Spring Festival self-guided service publication; classification is limited to that announcement, not year-round staffing. Together these establish bounded official-site, object-specific works and seasonal-service roles, not complete present management, property, military boundary or all-room/day admission. Registry name and facts explicitly distinguish these roles; no misleading manager-name link.
+Commons original https://commons.wikimedia.org/wiki/File:Mashan_broadcasting_post.JPG directly read again: caption author koika, licence CC BY-SA 3.0; local image visually matches entrance/sign alt. Photo file, author, licence and metadata untouched. This is Commons photography, not governmental image licensing.
+Parking previously assumed marked spaces; corrected frontmatter/visible FAQ/schema/body to unverified parking and only same-day permitted legally signed parking. No existing usable space promised. Five original topics/links, independent broadcast POI and photo retained. Current AWAITING_SOURCE_CHECK retained; CSV/progress untouched.
+
+Patch validation: validate passed (`/tmp/mashan-broadcast-bounded-validate.log`); desktop/mobile focused tests 2 passed (1.7s), `/tmp/mashan-broadcast-bounded-browser.log`, isolated4347. Temporary config removed. Source frozen for independent QA/full regression; no status change or commit.
+
+## 2026-11-05 independent local acceptance
+
+Earlier pending-status references are historical. National park site information, 2025 access-path works and 2026 holiday-only self-guided notice independently verified; current rooms, management and lawful parking remain unconfirmed. Independent QA accepted bounded statements, image credit and visitor caveats. Complete local browser regression: 552 passed. No new deployment.

@@ -10,7 +10,7 @@
   "duration": "60–90 分鐘",
   "order": 11,
   "featured": false,
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-06",
   "related": [
     "/guides/kinmen-war-sites-history/",
     "/areas/jinning/",

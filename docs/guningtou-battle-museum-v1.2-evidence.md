@@ -35,3 +35,9 @@
 CSV AWAITING_LIVE_CHECK，未正式站驗收，不提交推送。下一guningtou-village。
 
 authority獨立內容與照片複核完成，無內容阻斷：原圖為館舍入口與浮雕，Commons文字誤稱其他場所；作者及CC BY-SA 4.0保留。正式站仍待驗收。
+
+## 2026-11-05 museum follow-up
+
+National park facility page https://www.kmnp.gov.tw/ch/touristInfo/recreation-sites/39 and reopening notice https://www.kmnp.gov.tw/ch/titlelist/latest-news/1156 support the national park's museum operation role following transfer, not ownership of all land/buildings. https://www.taiwan.nps.gov.tw/home/zh-tw/attractions/21008.html lists regular 08:30–17:00 and Lunar New Year's Eve closure; verify actual day. Notice https://www.kmnp.gov.tw/ch/titlelist/latest-news/4494 published 2026-08-13 said the museum operated normally at that time during Cihu platform works. Notice https://www.kmnp.gov.tw/ch/titlelist/latest-news/1188 describes entrance accessibility works beginning 2025-03-01 while the museum remained open then; neither actual completion nor current works were established. Tourism JSON https://media.taiwan.net.tw/zh-tw/portal/travel/json/attraction_371020000a_000533 has null free field and empty fee, not proof of either charge or free admission. Current services and facilities remain unresolved; AWAITING_SOURCE_CHECK remains.
+
+Independent QA accepted the national park's bounded museum operation and dated notices; whole-workspace validate and complete desktop/mobile regression passed (552). Current services, entrance facilities and ownership remain unresolved. LOCAL_READY_AWAITING_BATCH_RELEASE is local only and does not assert a new deployment.
