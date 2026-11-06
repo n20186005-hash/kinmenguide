@@ -1,6 +1,8 @@
 ---
 {
   "title": "金門和平紀念園區：林厝砲陣地與和平鐘",
+  "image": "place-kinmen-peace-memorial-park",
+  "imageCaption": "2019年林厝砲陣地／金門和平紀念園區入口歷史照片；不代表目前設施或開放狀態。",
   "nameEn": "Kinmen Peace Memorial Park",
   "seoTitle": "金門和平紀念園區攻略｜林厝砲陣地與古寧頭順遊｜Kinmen Guide",
   "description": "林厝砲陣地改為金門和平紀念園區，保留戰地設施與和平鐘。整理展區時段、入園禮節和古寧頭戰史館周邊順遊。",
