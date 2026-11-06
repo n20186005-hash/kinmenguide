@@ -1,0 +1,34 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/lan-lake.md','utf8').split('---')[1]);
+test('Lan Lake qualifies shore access water activities and management evidence',async({page})=>{
+ await page.goto('/attractions/lan-lake/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/Lan+Hu/@24.4520049,118.3829049,861m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3414a365de87e941:0xa11cf5a96be5592c!8m2!3d24.4520049!4d118.3829049!16s%2Fg%2F1tfq6vx1"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('具名身份已由地圖UI核對');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/lan-lake/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('.article-cover figcaption')).toContainText('2014年蘭湖');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索蘭湖','關於蘭湖','基本資料','交通方式','路線地圖','水利與湖岸','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['認識蘭湖','參觀時留意','怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('現行管理與權屬待核');
+ await expect(page.locator('.article-body')).toContainText('不是游泳、戲水、垂釣或船艇許可');
+ await expect(page.locator('.article-body')).toContainText('不稱目前一定施工或已全開');
+ await expect(page.locator('.article-body')).toContainText('不把旅遊資料發布機關當完整管理者');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="lan-lake"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="lan-lake"]')).toBeVisible();await page.locator('[data-stop="lan-lake"] [data-action="remove"]').click();await expect(page.locator('[data-stop="lan-lake"]')).toHaveCount(0);
+ await page.goto('/attractions/lan-lake/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-lan-lake [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-lan-lake [data-pin]')).toHaveCount(0);
+
+});
