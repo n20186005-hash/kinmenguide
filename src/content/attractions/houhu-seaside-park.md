@@ -137,6 +137,6 @@
 2026年11月5日公開資料整理，非現場勘查或即時開放確認。現行管理、維護、所有權與水域責任分工尚待確認；一般門票、當季救生與水域開放、設施現況、Google 地圖具名地址和導航落點均待核實。Kinmen Guide 是第三方旅遊指南，並非官方管理單位。
 
 
-[金門觀光旅遊網景點資料](https://www.kinmen.travel/zh-tw/travel/attraction/480)提供景點與設施記載；[官方近站資訊](https://www.kinmen.travel/zh-tw/nearby/ebus?placeId=480&type=Attractions)須配合公車動態查詢。[2019年水域公告](https://www.kinmen.travel/zh-tw/news/details/2362)僅作歷史背景，不推定現行管理者。原站地圖短鏈以純文字歷史紀錄保留：`https://maps.app.goo.gl/QRtPb3bPH8cNUR5x8`；未核對前不作導航。
+[金門觀光旅遊網景點資料](https://www.kinmen.travel/zh-tw/travel/attraction/480)提供景點與設施記載；[官方近站資訊](https://www.kinmen.travel/zh-tw/nearby/ebus?placeId=480&type=Attractions)須配合公車動態查詢。[2019年水域公告](https://www.kinmen.travel/zh-tw/news/details/2362)僅作歷史背景，不推定現行管理者。原站地圖短鏈尚未核對，暫不提供導航；相關查核記錄保留於編輯資料。
 
 原2014年實景照片、rheins署名、CC BY 3.0授權及[照片來源與編輯處理](/credits/#place-houhu-seaside-park)保留；照片不是今日設施使用狀態的證明。停留時間與順遊安排是編輯建議。

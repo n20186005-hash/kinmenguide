@@ -22,7 +22,7 @@ test('Houhu preserves coast topics and marks unverified POI and water services',
  await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
  await expect(page.locator('article a[href*="google.com/maps"]')).toHaveCount(0);
  await page.locator('[data-trip-add="houhu-seaside-park"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="houhu-seaside-park"]')).toBeVisible();await page.locator('[data-stop="houhu-seaside-park"] [data-action="remove"]').click();await expect(page.locator('[data-stop="houhu-seaside-park"]')).toHaveCount(0);
- await page.goto('/attractions/houhu-seaside-park/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/attractions/houhu-seaside-park/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=Math.ceil(window.visualViewport?.width ?? innerWidth))).toBe(true);
  await page.goto('/map/');await expect(page.locator('#map-point-attraction-houhu-seaside-park [data-map-location-link]')).toHaveCount(0);
  await expect(page.locator('#map-point-attraction-houhu-seaside-park [data-pin]')).toHaveCount(0);
  await expect(page.locator('[data-pin="24.4158999,118.346068"]')).toHaveCount(0);
