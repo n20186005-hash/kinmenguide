@@ -1,6 +1,6 @@
 # 陳景蘭洋樓 v1.2 evidence
 
-Checks: 2026-11-03 UTC. Public-source research, not a field visit. Sol-family implementation; independent Luna source research, Google Maps GUI verification and review via authority. No commit, push or deployment. CSV remains AWAITING_LIVE_CHECK pending independent production acceptance.
+Checks: 2026-11-03 UTC. Public-source research, not a field visit. Sol-family implementation; independent Luna source research, Google Maps GUI verification and review via authority. No commit, push or deployment. Historical implementation state was AWAITING_LIVE_CHECK; current AWAITING_SOURCE_CHECK is unchanged by this patch.
 
 ## Baseline and inventory
 
@@ -45,3 +45,29 @@ Authority directly opened originalTADsource and found incorrect map118.25003/24.
 Final acceptance completed 2026-11-03T13:55:19Z: pnpm validate PASS, Astro0 errors/0 warnings/0 hints; complete build/static and business/Ctrip audits passed. Full Playwright244 passed(57.7s), desktop+mobile, including9FAQ exact parity, finalTAD warning/address variation, and trip self-add/remove. Finaldist explicitly checked to include map/bus misplacement caveat before finaltest. One intermediate browser run was intentionally interrupted after additional authority source findings made its built snapshot stale; it is not counted as PASS. First244/59.6s was prior version; final57.7s is the handoff result.
 
 Final recursive412fb72 tree comparison found only targetMD, registry andCSV existing files different; new focused test/evidence make five batch files. Removing additive Chen registry block matches baseline exactly. All seven old body paragraphs remain verbatim with heading level only. All non-targetCSV rows equal baseline;58 overlay files preserved. No hotel/food/guide/itinerary/area/transport/tour/car-rental collection drift. git diff --check clean. Node_modules symlink, temporary Playwrightconfig and scratch removed after checks. No commit,push,deployment or live acceptance claimed. Next chenggong-beach.
+
+## 2026-11-05 前輪官方時段及文資角色補正（09–17現值結論已由下節取代）
+
+複查實際source、FAQ與registry，先前只列觀光網08:30–17:30及公所館務，沒有記憶庫09–17與文化局文資主管，故本輪補正不是重複添加。
+
+[文化部國家文化記憶庫同筆20030331000015](https://tcmb.culture.tw/zh-tw/detail?id=20030331000015&indexCode=BOCH_CountryCulture_12)正文可直接讀取，建檔文化部文化資產局、來源國家文化資產網：開放時間每日09:00–17:00，是否收費否；欄位更新日期未明，不能宣稱此版本比觀光網較新。[觀光網649](https://kinmen.travel/zh-tw/travel/attraction/649)2025-04-24索引列08:30–17:30／免費，兩組時段分來源並提示當日向公所確認。觀光署原始JSON同日免費null、FeeInfo空，不以空值推免費；免費依觀光網及記憶庫「否」字段。
+
+記憶庫使用情形明載公所管理維護；主管機關名稱金門縣文化局、單位文化資產科、所屬主管機關金門縣政府；土地所有人為私人（原頁已分列，不公開姓名）。頁面／FAQ／schema及registry分清公所館務、文化局文資主管、私人所有權與商戶。現行契約、經營範圍、當日各層／海岸／坑道准入仍待核，不改AWAITING_SOURCE_CHECK。原圖片rheins／CC BY 3.0、五主題及舊連結未改。
+
+本輪公所職掌頁Chrome遭ERR_CERT_AUTHORITY_INVALID、文字工具超時，未繞過憑證錯誤；既有2026-10-27日期是此前獨立查核紀錄，不冒稱本輪成功重讀。文資113報告91.7MB超工具限制；NCHDB全文本輪僅shell，但官方搜尋摘要列管理人／使用人金湖鎮公所。記憶庫直接正文支持上述館務／主管角色。另2026-06-22金門日報588051直接記覺民堂書法展當時開放；不把計畫長期展出當今日保障，故未添加現況推薦。咖啡豆採購只有第三方索引，不當委外經營或全館管理證據。
+
+本輪`pnpm validate` PASS（`/tmp/chen-hours-role-validate.log`）；隔離4347桌機／手機專項 **2 passed (1.7s)**（`/tmp/chen-hours-role-browser.log`），含兩時段／來源日期未明／主管分工及原FAQ-schema、圖授權、五主題、POI與trip回歸。臨時配置已刪，文件凍結供獨立QA與完整回歸；未更改CSV／進度／待查狀態，未提交或部署。
+
+## 2026-11-05 follow-up validation
+
+Historical follow-up review confirmed role distinctions and then recorded cultural-record 09:00–17:00; that hours observation is superseded as a current-value claim by the direct reread below. Focused desktop/mobile tests: 2 passed; full desktop/mobile regression: 550 passed. Current concessions, individual rooms and daily access remain unresolved; AWAITING_SOURCE_CHECK remains. No deployment.
+
+## 2026-11-05 latest direct cultural-record hours reread
+Direct original https://tcmb.culture.tw/zh-tw/detail?id=20030331000015&indexCode=BOCH_CountryCulture_12 now returns 開放時間 每日8:30~17:30 (body field, not site service/footer time). This agrees with tourism649's separately attributed 2025-04-24 general hours. The field's own update date is unknown; do not guess change date or reason. Earlier09–17 is retained only as previous-read history and withdrawn as current value, not presented as an ongoing conflict. Frontmatter, visible FAQ/schema, registry notice/facts and date test synchronized.
+The directly readable body still records township management/maintenance, culture bureau heritage authority, and private land ownership separately. Commons exact original re-read confirms rheins/CC BY3.0,2014-05-02 photo and Panoramio licence review; local photo visually matches mansion/Jintang Park alt. Original asset/metadata untouched. Daily admission, concessions and individual-room services remain separate current questions, not implied by matching general hours. CSV/progress/status unchanged.
+
+Current-hours patch verification: validate passed (`/tmp/chen-current-hours-validate.log`); isolated4347 desktop/mobile focused tests 2 passed (1.2s), `/tmp/chen-current-hours-browser.log`. Initial focused run only exposed stale wording assertion (該欄位 versus 欄位), corrected in test and rerun against unchanged valid build. Temporary config removed; source frozen for review.
+
+## 2026-11-05 bounded local acceptance
+
+Earlier pending-status references are historical. Culture memory source read 2026-11-05 lists 08:30–17:30; earlier 09:00–17:00 is historical, field update date unconfirmed. Township museum maintenance, county cultural supervision and private land ownership are distinguished; daily access and contracts remain unconfirmed. Independent QA confirmed source reading, bounded roles and original image. Complete browser regression: 552 passed. No new deployment.
