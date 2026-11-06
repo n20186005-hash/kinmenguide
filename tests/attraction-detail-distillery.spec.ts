@@ -1,0 +1,35 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/kinmen-distillery.md','utf8').split('---')[1]);
+test('Distillery separates public visits shop hours ages and production access',async({page})=>{
+ await page.goto('/attractions/kinmen-distillery/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://kinmen.travel/travel-map/zh-tw/guide-sign/2/attraction/1342"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('不是已核實的訪客入口');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/kinmen-distillery/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('rheins / CC BY 3.0');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索金門酒廠：金寧廠參訪','關於金門酒廠：金寧廠參訪','基本資料','交通方式','路線地圖','產業與文化','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['先分清楚要去的廠區','公開參訪動線看什麼','午休與參訪時間先確認','酒與交通，分開安排','伴手禮帶得回去才買'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('金門酒廠實業股份有限公司');
+ await expect(page.locator('.article-body')).toContainText('語系不一致先洽酒廠');
+ await expect(page.locator('.article-body')).toContainText('製程介紹不等於實際產線准入');
+ await expect(page.locator('.article-body')).toContainText('飲酒限制不能直接當作全廠參訪年齡限制');
+ await expect(page.locator('.attraction-manager a')).toHaveAttribute('href',"https://www.kkl.com.tw/tc/booking.aspx");
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]')).toHaveCount(0);
+ await page.locator('[data-trip-add="kinmen-distillery"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="kinmen-distillery"]')).toBeVisible();await page.locator('[data-stop="kinmen-distillery"] [data-action="remove"]').click();await expect(page.locator('[data-stop="kinmen-distillery"]')).toHaveCount(0);
+ await page.goto('/attractions/kinmen-distillery/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-kinmen-distillery [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-kinmen-distillery [data-pin]')).toHaveCount(0);
+
+});

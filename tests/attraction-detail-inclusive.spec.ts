@@ -1,0 +1,34 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/juguang-inclusive-park.md','utf8').split('---')[1]);
+test('Juguang inclusive design does not guarantee present accessibility or equipment use',async({page})=>{
+ await page.goto('/attractions/juguang-inclusive-park/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/Juguang+Gongrong+Park/@24.4273562,118.317618,861m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3414a37539063f93:0x1cb787efece9cc90!8m2!3d24.4273562!4d118.317618!16s%2Fg%2F11t707qhjn"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('也不證明准入、停車或無障礙條件');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/juguang-inclusive-park/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索莒光共融公園','關於莒光共融公園','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['把遊戲時間留進行程','共融也需要遵守使用方式','湖、樓與公園分配時間'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('尚待確認');
+ await expect(page.locator('.article-body')).toContainText('不能由名稱保證全部可用');
+ await expect(page.locator('.article-body')).toContainText('這是歷史工程及活動角色');
+ await expect(page.locator('.attraction-manager a')).toHaveCount(0);
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="juguang-inclusive-park"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="juguang-inclusive-park"]')).toBeVisible();await page.locator('[data-stop="juguang-inclusive-park"] [data-action="remove"]').click();await expect(page.locator('[data-stop="juguang-inclusive-park"]')).toHaveCount(0);
+ await page.goto('/attractions/juguang-inclusive-park/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-juguang-inclusive-park [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-juguang-inclusive-park [data-pin]')).toHaveCount(0);
+
+});

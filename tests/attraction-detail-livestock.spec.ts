@@ -1,0 +1,35 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/kinmen-livestock.md','utf8').split('---')[1]);
+test('Livestock separates visitor areas milk sales and biosecurity restrictions',async({page})=>{
+ await page.goto('/attractions/kinmen-livestock/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://kinmen.travel/travel-map/zh-tw/guide-sign/3/attraction/1615"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('不是已核實的訪客入口');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/kinmen-livestock/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('rheins / CC BY 3.0');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索金門縣畜產試驗所與牧場散步','關於金門縣畜產試驗所與牧場散步','基本資料','交通方式','路線地圖','畜產與動物觀察','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['牧場風景背後，是地方畜產研究','帶孩子怎麼逛','乳品、騎乘與活動要分別確認','金湖親子半日','巨大青草地牛奶盒怎麼拍','牛奶盒地標和良金牧場不同'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('金門縣畜產試驗所');
+ await expect(page.locator('.article-body')).toContainText('種牛牧場與乳牛區因防疫不開放');
+ await expect(page.locator('.article-body')).toContainText('兩頁結束時間不同先洽');
+ await expect(page.locator('.article-body')).toContainText('不是畜試所所有銷售點統一時表');
+ await expect(page.locator('.attraction-manager a')).toHaveAttribute('href',"https://klri.kinmen.gov.tw/cp.aspx?n=3B770880CF2CDE7D");
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]')).toHaveCount(0);
+ await page.locator('[data-trip-add="kinmen-livestock"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="kinmen-livestock"]')).toBeVisible();await page.locator('[data-stop="kinmen-livestock"] [data-action="remove"]').click();await expect(page.locator('[data-stop="kinmen-livestock"]')).toHaveCount(0);
+ await page.goto('/attractions/kinmen-livestock/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-kinmen-livestock [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-kinmen-livestock [data-pin]')).toHaveCount(0);
+
+});

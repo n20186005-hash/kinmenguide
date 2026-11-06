@@ -1,0 +1,35 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/kinmen-city-east-gate.md','utf8').split('---')[1]);
+test('East Gate separates listed city remains from modern gate and historical repair',async({page})=>{
+ await page.goto('/attractions/kinmen-city-east-gate/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/Kinmen+Cheng+Historical+Remains/@24.400147,118.3092091,862m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3414a1fa435af89f:0xadb313e3cd6c49be!8m2!3d24.400147!4d118.3092091!16s%2Fg%2F1vknl_4y"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('也不證明准入、停車或無障礙條件');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/kinmen-city-east-gate/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索金門城東門','關於金門城東門','基本資料','交通方式','路線地圖','人文與建築','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['從東門認識舊金門城','現在的門樓與明代城址','安全停車，再開始看城門'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('現行管理分工待核');
+ await expect(page.locator('.article-body')).toContainText('不推定整座新門樓皆為指定原構');
+ await expect(page.locator('.article-body')).toContainText('2021修繕新聞也不是今日施工或已完工證明');
+ await expect(page.locator('.article-body')).toContainText('全天欄位不能視為東門各空間全天准入許可');
+ await expect(page.locator('.attraction-manager a')).toHaveAttribute('href',"https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=EDCF9EA1CAAAF72C&sms=BF7D6D478B935644");
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="kinmen-city-east-gate"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="kinmen-city-east-gate"]')).toBeVisible();await page.locator('[data-stop="kinmen-city-east-gate"] [data-action="remove"]').click();await expect(page.locator('[data-stop="kinmen-city-east-gate"]')).toHaveCount(0);
+ await page.goto('/attractions/kinmen-city-east-gate/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-kinmen-city-east-gate [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-kinmen-city-east-gate [data-pin]')).toHaveCount(0);
+
+});
