@@ -1,6 +1,8 @@
 ---
 {
   "title": "北山古洋樓：僑鄉建築與戰火彈痕",
+  "image": "place-beishan-old-mansion",
+  "imageCaption": "2019年北山古洋樓歷史外觀；照片不代表目前住宿空間、入內範圍或開放狀態。",
   "nameEn": "Beishan Old Mansion",
   "seoTitle": "北山古洋樓攻略｜古寧頭戰役彈痕與參觀界線｜Kinmen Guide",
   "description": "北山古洋樓是古寧頭的僑鄉建築，也是戰役留下彈痕的現場。整理地址、外觀參觀與住宿空間的界線，串起聚落和戰史館。",
