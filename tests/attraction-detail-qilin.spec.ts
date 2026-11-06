@@ -1,0 +1,35 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/qilin-mountain-park.md','utf8').split('---')[1]);
+test('Qilin separates historical entrances and current trail access',async({page})=>{
+ await page.goto('/attractions/qilin-mountain-park/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/Qilinshan+Forest+Park/@24.439161,118.25456,861m/data=!3m2!1e3!4b1!4m6!3m5!1s0x341498de4a5e002b:0xf93b95f927e2afe7!8m2!3d24.439161!4d118.25456!16s%2Fg%2F11c1nc1tq2"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('具名點位身份已核');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/qilin-mountain-park/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索麒麟山森林公園','關於麒麟山森林公園','基本資料','交通方式','路線地圖','山林與軍事沿革','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['從靶場走向山林','視野取決於天候','不是全程平坦散步','附近怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('現行管理/權屬分工待核');
+ await expect(page.locator('.article-body')).toContainText('不證明目前三處皆通或可穿越');
+ await expect(page.locator('.article-body')).toContainText('不能當全程平坦或連續無障礙路線');
+ await expect(page.locator('.article-body')).toContainText('不等現行全部維護、權屬或管理分工');
+ await expect(page.locator('.article-body')).toContainText('全票20元、優待票10元、團體票15元（20人以上）');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="qilin-mountain-park"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="qilin-mountain-park"]')).toBeVisible();await page.locator('[data-stop="qilin-mountain-park"] [data-action="remove"]').click();await expect(page.locator('[data-stop="qilin-mountain-park"]')).toHaveCount(0);
+ await page.goto('/attractions/qilin-mountain-park/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-qilin-mountain-park [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-qilin-mountain-park [data-pin]')).toHaveCount(0);
+
+});

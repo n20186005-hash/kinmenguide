@@ -1,0 +1,36 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/qingqi-harbor.md','utf8').split('---')[1]);
+test('Qingqi separates working harbor schedules and coastal access',async({page})=>{
+ await page.goto('/attractions/qingqi-harbor/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/%E9%9D%92%E5%B2%90%E7%A2%BC%E9%A0%AD/@24.4121451,118.230752,861m/data=!3m2!1e3!4b1!4m6!3m5!1s0x34149ec7ddf413ed:0xe3ff78ded688d4ea!8m2!3d24.4121451!4d118.230752!16s%2Fg%2F11c48pbwp7"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('具名點位身份已核');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/qingqi-harbor/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索青岐碼頭（青岐港）','關於青岐碼頭（青岐港）','基本資料','交通方式','路線地圖','海岸與港區','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['漁港日常與遠方島影','綠石槽要看季節與海況','不走上濕滑藻岩','附近怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('港區現行管理/權屬');
+ await expect(page.locator('.article-body')).toContainText('未查得青岐港現行定期公共客運班表');
+ await expect(page.locator('.article-body')).toContainText('退潮不等安全觀景窗口');
+ await expect(page.locator('.article-body')).toContainText('不指定單一單位管理全部範圍');
+ await expect(page.locator('.article-body')).toContainText('不能把解說費說成港區入場費');
+ await expect(page.locator('.article-body')).toContainText('縣府2024年1月17日轉載公告');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="qingqi-harbor"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="qingqi-harbor"]')).toBeVisible();await page.locator('[data-stop="qingqi-harbor"] [data-action="remove"]').click();await expect(page.locator('[data-stop="qingqi-harbor"]')).toHaveCount(0);
+ await page.goto('/attractions/qingqi-harbor/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-qingqi-harbor [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-qingqi-harbor [data-pin]')).toHaveCount(0);
+
+});

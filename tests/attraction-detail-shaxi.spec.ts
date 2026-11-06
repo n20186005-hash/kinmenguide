@@ -1,0 +1,34 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/shaxi-fort.md','utf8').split('---')[1]);
+test('Shaxi separates dated ticket rules and coastal military access',async({page})=>{
+ await page.goto('/attractions/shaxi-fort/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/Shaxi+Fort/@24.4116614,118.2102178,861m/data=!3m2!1e3!4b1!4m6!3m5!1s0x34149ea411640189:0xa1679a8ec8908263!8m2!3d24.4116565!4d118.2127981!16s%2Fg%2F11by_g7bhd"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('具名點位身份已核');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/shaxi-fort/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索沙溪堡','關於沙溪堡','基本資料','交通方式','路線地圖','海防與地質','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['岬角上的舊海防據點','海景與參觀動線','風大時縮短停留','附近怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('鄉公所有歷史活化與2024票務角色');
+ await expect(page.locator('.article-body')).toContainText('這與觀光頁2025-11-07更新版一般免費欄位有差異');
+ await expect(page.locator('.article-body')).toContainText('全票30元、優待15元、團體25元（20人以上）');
+ await expect(page.locator('.article-body')).toContainText('貓公石濱海休憩區是另一場域');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="shaxi-fort"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="shaxi-fort"]')).toBeVisible();await page.locator('[data-stop="shaxi-fort"] [data-action="remove"]').click();await expect(page.locator('[data-stop="shaxi-fort"]')).toHaveCount(0);
+ await page.goto('/attractions/shaxi-fort/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-shaxi-fort [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-shaxi-fort [data-pin]')).toHaveCount(0);
+
+});
