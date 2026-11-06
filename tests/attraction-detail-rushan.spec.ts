@@ -1,0 +1,37 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/rushan-fort.md','utf8').split('---')[1]);
+test('Rushan separates military displays visitor center and tunnel access',async({page})=>{
+ await page.goto('/attractions/rushan-fort/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body')).toContainText('這是有日期的一般資料，不是今日開放確認');
+ await expect(page.locator('article.article-body')).not.toContainText('官方一般開放時間為08:30–17:00');
+ await expect(page.locator('article.article-body a[href="https://www.google.com/maps/place/Old+Rushan+Fort/@24.4371198,118.3499012,861m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3414a3a90f020eef:0xb4e89935e1da339!8m2!3d24.4371149!4d118.3524815!16s%2Fg%2F1td0qhxm"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('具名點位身份已核');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/rushan-fort/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索乳山故壘','關於乳山故壘','基本資料','交通方式','路線地圖','工程與展示','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('國家公園有整建紀錄');
+ await expect(page.locator('.article-body')).toContainText('整體時段不代表所有坑道');
+ await expect(page.locator('.article-body')).toContainText('不保證當日每項設備運轉');
+ await expect(page.locator('.article-body')).toContainText('不把遊客中心生態展覽');
+ await expect(page.locator('.article-body')).toContainText('2025年6月24日更新版本');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]:not(:text-is("Google 地圖景點參考點"))')).toHaveCount(0);
+ await page.locator('[data-trip-add="rushan-fort"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="rushan-fort"]')).toBeVisible();await page.locator('[data-stop="rushan-fort"] [data-action="remove"]').click();await expect(page.locator('[data-stop="rushan-fort"]')).toHaveCount(0);
+ await page.goto('/attractions/rushan-fort/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-rushan-fort [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-rushan-fort [data-pin]')).toHaveCount(0);
+
+});

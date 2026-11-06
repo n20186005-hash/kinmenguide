@@ -73,7 +73,7 @@ test('planner respects days and transport',async({page})=>{
 
 test('map loads only on request and filters by area',async({page})=>{
  await page.route('https://www.openstreetmap.org/**',route=>route.fulfill({body:'<html><body>Test map surface</body></html>',contentType:'text/html'}));
- await page.goto('/map/');await expect(page.locator('#kinmen-map')).not.toHaveAttribute('src',/.+/);await page.getByRole('button',{name:'烈嶼',exact:true}).click();await expect(page.locator('.map-point:visible')).toHaveCount(34);await page.locator('.map-point:visible').filter({hasText:'九宮坑道'}).getByRole('button',{name:'圖上查看',exact:true}).click();await expect(page.locator('#kinmen-map')).toHaveAttribute('src',/marker=24/);await expect(page.locator('#map-consent')).toBeHidden();
+ await page.goto('/map/');await expect(page.locator('#kinmen-map')).not.toHaveAttribute('src',/.+/);await page.getByRole('button',{name:'烈嶼',exact:true}).click();await expect(page.locator('.map-point:visible')).toHaveCount(34);await page.locator('.map-point:visible').filter({hasText:'烈嶼將軍堡'}).getByRole('button',{name:'圖上查看',exact:true}).click();await expect(page.locator('#kinmen-map')).toHaveAttribute('src',/marker=24\.4409148%2C118\.2662476/);await expect(page.locator('#map-consent')).toBeHidden();
 });
 
 test('FAQ and honest contact draft download',async({page})=>{
