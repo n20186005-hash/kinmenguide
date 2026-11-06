@@ -1,0 +1,35 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/wujiang-academy.md','utf8').split('---')[1]);
+test('Wujiang preserves opening source differences and heritage scope',async({page})=>{
+ await page.goto('/attractions/wujiang-academy/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://kinmen.travel/travel-map/zh-tw/guide-sign/2/attraction/1489"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('不是已核實的訪客入口');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/wujiang-academy/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索浯江書院','關於浯江書院','基本資料','交通方式','路線地圖','教育與朱子祠沿革','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['老城裡安靜的一站','開放與步行位置','早餐、書院與夜間導覽'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('金門縣文化局（所轄場館與朱子祠管理角色）');
+ await expect(page.locator('.article-body')).toContainText('不自行合併為最新全年規則');
+ await expect(page.locator('.article-body')).toContainText('不由觀光網無障礙標籤推全院可達');
+ await expect(page.locator('.article-body')).toContainText('不直接推每年例外');
+ await expect(page.locator('.article-body')).toContainText('2025年5月15日版');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]')).toHaveCount(0);
+ await page.locator('[data-trip-add="wujiang-academy"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="wujiang-academy"]')).toBeVisible();await page.locator('[data-stop="wujiang-academy"] [data-action="remove"]').click();await expect(page.locator('[data-stop="wujiang-academy"]')).toHaveCount(0);
+ await page.goto('/attractions/wujiang-academy/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-wujiang-academy [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-wujiang-academy [data-pin]')).toHaveCount(0);
+
+});

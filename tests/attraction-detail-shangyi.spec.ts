@@ -1,0 +1,34 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/shangyi-environmental-park.md','utf8').split('---')[1]);
+test('Shangyi separates current schedules certification and facility access',async({page})=>{
+ await page.goto('/attractions/shangyi-environmental-park/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://kinmen.travel/travel-map/zh-tw/guide-sign/3/attraction/1492"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('不是已核實的訪客入口');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/shangyi-environmental-park/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('金門縣政府觀光處 / 政府網站資料開放宣告');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索尚義環保公園與風獅爺','關於尚義環保公園與風獅爺','基本資料','交通方式','路線地圖','復育與環境教育','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('金門縣環境保護局為環教認證申請單位');
+ await expect(page.locator('.article-body')).toContainText('不沿用原頁08:00–17:30及週末休館');
+ await expect(page.locator('.article-body')).toContainText('24小時是污染源管理而非遊客開放時間');
+ await expect(page.locator('.article-body')).toContainText('證書有效不是課程隨到隨上');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]')).toHaveCount(0);
+ await page.locator('[data-trip-add="shangyi-environmental-park"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="shangyi-environmental-park"]')).toBeVisible();await page.locator('[data-stop="shangyi-environmental-park"] [data-action="remove"]').click();await expect(page.locator('[data-stop="shangyi-environmental-park"]')).toHaveCount(0);
+ await page.goto('/attractions/shangyi-environmental-park/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-shangyi-environmental-park [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-shangyi-environmental-park [data-pin]')).toHaveCount(0);
+
+});

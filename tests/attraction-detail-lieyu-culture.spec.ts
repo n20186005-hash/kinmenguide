@@ -1,0 +1,35 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const data=JSON.parse(readFileSync('src/content/attractions/lieyu-culture-museum.md','utf8').split('---')[1]);
+test('Lieyu Culture Museum keeps dated fee rules exhibits and governance distinct',async({page})=>{
+ await page.goto('/attractions/lieyu-culture-museum/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('article.article-body a[href="https://kinmen.travel/travel-map/zh-tw/guide-sign/4/attraction/1527"]')).toBeVisible();
+ await expect(page.locator('article.article-body')).toContainText('不是已核實的訪客入口');
+ await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://kinmenguide.com/attractions/lieyu-culture-museum/');
+ await expect(page.locator('[data-attraction-detail]')).toHaveCount(1);
+ await expect(page.locator('.article-cover img')).toBeVisible();
+ await expect(page.locator('figcaption')).toContainText('Allenwang6212a / CC BY-SA 4.0');
+ const hs=await page.locator('article.article-body h2').allTextContents();
+ expect(hs).not.toContain('景點相冊');
+ expect(hs.slice(0,10)).toEqual(['探索烈嶼鄉文化館','關於烈嶼鄉文化館','基本資料','交通方式','路線地圖','人文與展示','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
+ for(const title of ['看見戰史之外的居民生活','從器物追問生活方式','室內備案也要查開館','附近怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('烈嶼鄉公所');
+ await expect(page.locator('.attraction-manager a')).toHaveAttribute('href','https://lieyu.kinmen.gov.tw/News_Content.aspx?Create=1&n=163D622C1593A5D7&s=D01DABEC57251AEC&sms=A2C62D68901B977C');
+ await expect(page.locator('.article-body')).toContainText('文化館列全票50元');
+ await expect(page.locator('.article-body')).toContainText('不能當今天仍在展');
+ await expect(page.locator('.article-body')).toContainText('實際啟徵、票種及最新調整先向鄉公所或館方核對');
+ await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
+ const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
+ expect(visible).toEqual(data.faq);
+ const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
+ expect(graph.find(n=>n['@type']==='FAQPage').mainEntity.map((q:any)=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(data.faq);
+ const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address).toBeUndefined();expect(place.hasMap).toBeUndefined();expect(place.geo).toBeUndefined();expect(data.coordinates).toBeUndefined();
+ await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
+ await expect(page.locator('article a[href*="google.com/maps"]')).toHaveCount(0);
+ await page.locator('[data-trip-add="lieyu-culture-museum"]').click();await page.goto('/trip/');await expect(page.locator('[data-stop="lieyu-culture-museum"]')).toBeVisible();await page.locator('[data-stop="lieyu-culture-museum"] [data-action="remove"]').click();await expect(page.locator('[data-stop="lieyu-culture-museum"]')).toHaveCount(0);
+ await page.goto('/attractions/lieyu-culture-museum/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/map/');await expect(page.locator('#map-point-attraction-lieyu-culture-museum [data-map-location-link]')).toHaveCount(0);
+ await expect(page.locator('#map-point-attraction-lieyu-culture-museum [data-pin]')).toHaveCount(0);
+
+});
