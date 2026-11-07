@@ -10,6 +10,9 @@ test('BeishanWall v1.2 preserves legacy topics, photo, map POI and exact FAQ sch
   await expect(page.locator('.article-cover img')).toHaveCount(1);
   expect(await page.locator('.article-cover img').evaluate((i:HTMLImageElement)=>i.complete&&i.naturalWidth>0)).toBe(true);
   await expect(page.locator('.article-cover figcaption')).toContainText('照片不代表目前開放或可入內');
+  await expect(page.locator('article.article-body')).toContainText('已收錄北山播音牆48孔揚聲器方陣的歷史照片；照片不代表現況、目前開放或可入內');
+  await expect(page.locator('article.article-body')).not.toContainText('本站尚未收錄此處實景照片');
+  await expect(page.locator('article.article-body')).toContainText('管理權責、產權與維護契約仍待確認，官方一般時段不保證室內或音訊當日服務；天候、修繕及現場管制優先');
   await expect(page.locator('.article-cover a')).toHaveAttribute('href','/credits/#place-beishan-broadcasting-wall');
   const heads = await page.locator('article.article-body h2').allTextContents();
   expect(heads.slice(0,9)).toEqual(['探索北山播音牆','關於北山播音牆','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程']);
