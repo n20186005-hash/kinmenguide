@@ -1,6 +1,8 @@
 ---
 {
   "title": "金門港旅運中心",
+  "image": "place-kinmen-port-terminal",
+  "imageCaption": "官方來源的金門港旅運中心空拍；拍攝日期未標示，不代表目前施工、營運或准入狀態。",
   "nameEn": "Kinmen Port Passenger Terminal",
   "seoTitle": "金門港旅運中心｜位置、參觀重點與順遊攻略",
   "description": "金門港旅運中心位於金豐路300號，是小三通新場站。整理一樓入境、三樓出境、接送停車與行李動線，分清舊水頭旅客服務中心和水頭聚落。",
