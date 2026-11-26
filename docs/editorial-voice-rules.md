@@ -158,8 +158,8 @@
 
 **判定**：現行電話為 `082-329222`。2026-11-26 以瀏覽器實際渲染 `https://kinmen.travel/zh-tw/shop/details/3172`，讀到「更新：2026-11-24」與「電話 +886-82-329222」；同一天以瀏覽器開啟 `https://goo.gl/maps/hkQcwcL8TRDaDKRu8`，Google 地圖「蚵嗲之家」具名地點顯示「893金門縣金城鎮北門里莒光路一段59號」與「+886 82 32 9222」。兩者換算同為 082-329222。
 
-**舊號來源**：`https://kinmen.travel/zh-tw/discover/tour/579` 為 2025-04-29 更新的官方小吃專題，蚵嗲之家條目列「082-322210」；搜尋引擎對官方店家頁的舊快取也保留 2025-06-25 版本與舊號。舊號不是本站捏造，但不再用於基本資料、正文電話與 FAQ。
+**舊號來源**：`https://kinmen.travel/zh-tw/discover/tour/579` 為 2025-04-29 更新的官方小吃專題，蚵嗲之家條目列「082-322210」；搜尋引擎對官方店家頁的舊快取也保留 2025-06-25 版本與舊號。舊號不是本站捏造，但不再當作電話結論用在基本資料與正文致電說明；舊號只在 FAQ 的來源判定與來源紀錄中出現。
 
 **頁面更新**：`src/content/food/oyster-fritter-house.md` 的 `updatedAt` 改為 2026-11-26；`facts[電話]`、正文致電說明改為 082-329222；新增「蚵嗲之家的電話是哪一支？」FAQ，frontmatter 與可見 FAQ／JSON-LD 同源；`sources[]` 加入官方店家頁、Google Maps 具名地點與舊官方專題，舊號留在來源紀錄。`tests/food-guides.spec.ts` 增加現行電話與舊號位置的回歸斷言。
 
-**驗證與上線**：本節後續補記本輪 `pnpm test:voice`、`pnpm validate`、`pnpm test:browser`、提交 SHA 與正式站 live 檢查結果。
+**驗證與上線**：`pnpm test:voice` 通過（584 個原始檔、66,633 行、534 頁、9 份帶路、FAQ parity、讀者可見部分 0 不確定詞）；`pnpm validate` 通過（`astro check` 208 檔 0 errors / 0 warnings / 0 hints，556 頁、49,793 內部連結、1,928 圖片實例、4,162 schema 節點、canonical／錨點／sitemap／robots／照片／商家／攜程稽核）；`pnpm test:browser` 438 passed（desktop + mobile）。提交 `45e2237733ba88d4015683c22647453d0c5802cf` 已推送至 `origin/main`；以帶 SHA 的 cache-busting URL 讀取正式站 `https://kinmenguide.com/food/oyster-fritter-house/`，確認基本事實與正文致電號碼為 082-329222、可見 FAQ 4 題並含電話判定問答、資料來源區塊列出舊號 082-322210 與三個來源連結、帶路區塊仍在。CSV notes 已補記 `phone-fix-live-check-2026-11-26-sha-45e223...`。
