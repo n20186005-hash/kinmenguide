@@ -61,7 +61,7 @@ attractions,jinshui-school,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,jiugong-tunnel,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,juguang-inclusive-park,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,juguang-lake,sweep-2026-11-25,CLEARED,no,0,PENDING,-
-attractions,juguang-tower,batch-1-2026-11-25,AWAITING_LIVE_CHECK,yes,0,PENDING,deployed-page-live-check-pending
+attractions,juguang-tower,batch-1-2026-11-25,DONE,yes,0,VERIFIED,live-check-2026-11-26-sha-4b8df2915cd6d9521579c542decd6973e7b4a818
 attractions,kincheng-civil-defense-tunnel,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,kincheng-old-streets,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,kincheng-seaside-park,sweep-2026-11-25,CLEARED,no,0,PENDING,-
@@ -129,7 +129,7 @@ attractions,shuangkou-beach,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,shuangli-wetland-center,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,shuitou-passenger-service-center,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,shuitou-port-fishing-area,sweep-2026-11-25,CLEARED,no,0,PENDING,-
-attractions,shuitou-village,batch-1-2026-11-25,AWAITING_LIVE_CHECK,yes,0,PENDING,deployed-page-live-check-pending
+attractions,shuitou-village,batch-1-2026-11-25,DONE,yes,0,VERIFIED,live-check-2026-11-26-sha-4b8df2915cd6d9521579c542decd6973e7b4a818
 attractions,sihu-jinshunxing-mural,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,simulated-minefield-park,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,siwei-seventh-camp,sweep-2026-11-25,CLEARED,no,0,PENDING,-
@@ -172,7 +172,7 @@ attractions,yangzhai-old-street,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,yannan-academy,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,yanping-prince-shrine,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,yu-dawei-museum,sweep-2026-11-25,CLEARED,no,0,PENDING,-
-attractions,zhaishan-tunnel,batch-1-2026-11-25,AWAITING_LIVE_CHECK,yes,0,PENDING,deployed-page-live-check-pending
+attractions,zhaishan-tunnel,batch-1-2026-11-25,DONE,yes,0,VERIFIED,live-check-2026-11-26-sha-4b8df2915cd6d9521579c542decd6973e7b4a818
 attractions,zhongshan-forest,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,zhongxing-fort,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 attractions,zhongzheng-forest,sweep-2026-11-25,CLEARED,no,0,PENDING,-
@@ -192,7 +192,7 @@ food,gaokeng-beef,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,jinhu-food,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,jinning-food,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,jinsha-food,sweep-2026-11-25,CLEARED,no,0,PENDING,-
-food,jinshan-smoked-goose,batch-1-2026-11-25,AWAITING_LIVE_CHECK,yes,0,PENDING,deployed-page-live-check-pending
+food,jinshan-smoked-goose,batch-1-2026-11-25,DONE,yes,0,VERIFIED,live-check-2026-11-26-sha-4b8df2915cd6d9521579c542decd6973e7b4a818
 food,kincheng-food,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,kincheng-tea-walk,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,kinmen-bread-souvenir,sweep-2026-11-25,CLEARED,no,0,PENDING,-
@@ -202,11 +202,11 @@ food,liangjin-paifang,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,liangjin-ranch,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,liankun-beef,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,lieyu-food,sweep-2026-11-25,CLEARED,no,0,PENDING,-
-food,max-bakery,batch-2-2026-11-26,AWAITING_LIVE_CHECK,yes,0,PENDING,deployed-page-live-check-pending
+food,max-bakery,batch-2-2026-11-26,DONE,yes,0,VERIFIED,live-check-2026-11-26-sha-4b8df2915cd6d9521579c542decd6973e7b4a818
 food,monga-fried-chicken,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,niujiazhuang,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,oyster,sweep-2026-11-25,CLEARED,no,0,PENDING,-
-food,oyster-fritter-house,batch-2-2026-11-26,AWAITING_LIVE_CHECK,yes,0,PENDING,official-page-phone-082-329222-vs-page-082-322210-unresolved
+food,oyster-fritter-house,batch-2-2026-11-26,DONE,yes,0,VERIFIED,official-page-phone-082-329222-vs-page-082-322210-unresolved;live-check-2026-11-26-sha-4b8df2915cd6d9521579c542decd6973e7b4a818
 food,pinchilin-croissants,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,shanwai-chicken-coffin-bread,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,tantianlou,sweep-2026-11-25,CLEARED,no,0,PENDING,-
@@ -215,7 +215,7 @@ food,yongchun-congee,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,yuantou-ranch,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 food,yuchuan-canteen,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 guides,best-time-to-visit,sweep-2026-11-25,CLEARED,no,0,PENDING,-
-guides,carrefour-kinmen,batch-2-2026-11-26,AWAITING_LIVE_CHECK,yes,0,PENDING,deployed-page-live-check-pending
+guides,carrefour-kinmen,batch-2-2026-11-26,DONE,yes,0,VERIFIED,live-check-2026-11-26-sha-4b8df2915cd6d9521579c542decd6973e7b4a818
 guides,entry-documents,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 guides,first-time-visitor,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 guides,guningtou-vs-823,sweep-2026-11-25,CLEARED,no,0,PENDING,-
@@ -232,7 +232,7 @@ guides,kinmen-winter-wind-itinerary,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 guides,otter-road-signs,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 guides,packing,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 guides,pxmart-cihu,sweep-2026-11-25,CLEARED,no,0,PENDING,-
-guides,restricted-items,batch-2-2026-11-26,AWAITING_LIVE_CHECK,yes,0,PENDING,deployed-page-live-check-pending
+guides,restricted-items,batch-2-2026-11-26,DONE,yes,0,VERIFIED,live-check-2026-11-26-sha-4b8df2915cd6d9521579c542decd6973e7b4a818
 guides,travel-checklist,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 hotels,58-percent-inn,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 hotels,823-hotel,sweep-2026-11-25,CLEARED,no,0,PENDING,-
@@ -531,5 +531,5 @@ transport,kinmen-to-lieyu,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 transport,scooter,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 transport,shanwai-station,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 transport,taxi,sweep-2026-11-25,CLEARED,no,0,PENDING,-
-transport,xiamen-kinmen-ferry-november-2026,batch-2-2026-11-26,AWAITING_LIVE_CHECK,yes,0,PENDING,deployed-page-live-check-pending
+transport,xiamen-kinmen-ferry-november-2026,batch-2-2026-11-26,DONE,yes,0,VERIFIED,live-check-2026-11-26-sha-4b8df2915cd6d9521579c542decd6973e7b4a818
 transport,xiaosantong,sweep-2026-11-25,CLEARED,no,0,PENDING,-

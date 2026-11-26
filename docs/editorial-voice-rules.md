@@ -64,7 +64,7 @@
 
 **來源 live 查核**：以瀏覽器實際渲染 `kinmen.travel/zh-tw/travel/attraction/1337`、`520`、`389`，三頁皆為對應具名官方景點頁；讀到 6 路／08:30–17:00／停車場／公廁／無障礙、7 路與 A 線／24 小時／停車場／公廁、3 號／08:00–22:00／三層展示／停車場／公廁，與首批 `routeGuide` 的抵達與沿途描述一致。靜態 `web_fetch` 只會拿到「資料讀取中」，不能當作查核證據。
 
-**阻塞（不得標 `DONE`）**：本輪沒有部署也沒有 push，kinmenguide.com 上線頁面的 live URL 檢查無法進行，因此 4 篇維持 `AWAITING_LIVE_CHECK`、`liveCheck=PENDING`，0 篇 `DONE`，CSV 沒有合併 SHA，也未更新 GitHub Issue #59。部署後須逐頁點開上線 URL 檢查帶路段落、可見標題、FAQ／schema 與導航，再手動把 `liveCheck` 改成 `VERIFIED`、狀態改成 `DONE`。
+**當時阻塞（不得標 `DONE`）**：本輪沒有部署也沒有 push，kinmenguide.com 上線頁面的 live URL 檢查無法進行，因此 4 篇維持 `AWAITING_LIVE_CHECK`、`liveCheck=PENDING`，0 篇 `DONE`，CSV 沒有合併 SHA，也未更新 GitHub Issue #59。部署後須逐頁點開上線 URL 檢查帶路段落、可見標題、FAQ／schema 與導航，再手動把 `liveCheck` 改成 `VERIFIED`、狀態改成 `DONE`；實際完成情形見 §13。
 
 **環境注意**：本機 Node 26 與 `engines.node >=22.12 <25` 衝突，指令需加 `pnpm --config.engine-strict=false`；全域 pnpm store 有 EPERM，改用 `--store-dir node_modules/.pnpm-store` 安裝；瀏覽器測試前需 `pnpm --config.engine-strict=false exec playwright install chromium`。`astro.config.mjs` 與 `scripts/verify-build.mjs` 的 frontmatter 正則已改為容許 Windows CRLF，否則本機 sitemap lastmod 與查核會假失敗。
 
@@ -74,7 +74,7 @@
 
 在 `.worktrees/batch2`、分支 `voice-batch-2-20261126` 進行；未提交的批次 1 成果以 git patch 加六个未追踪档案带入，主工作区未被覆盖。`node_modules` 用 junction 指向主工作区以复用依赖。
 
-**改寫範圍**：5 篇写入完整 `routeGuide` — `food/max-bakery`、`food/oyster-fritter-house`、`guides/carrefour-kinmen`、`transport/xiamen-kinmen-ferry-november-2026`、`guides/restricted-items`。CSV 现为 525 `CLEARED`、9 `AWAITING_LIVE_CHECK`、0 `DONE`；没有改这些页面的事实、价格、链接、FAQ 或 schema。
+**改寫範圍**：5 篇写入完整 `routeGuide` — `food/max-bakery`、`food/oyster-fritter-house`、`guides/carrefour-kinmen`、`transport/xiamen-kinmen-ferry-november-2026`、`guides/restricted-items`。合併前 CSV 为 525 `CLEARED`、9 `AWAITING_LIVE_CHECK`、0 `DONE`；没有改这些页面的事实、价格、链接、FAQ 或 schema。合併與上線結果見 §13。
 
 **来源 live 查核（浏览器实际渲染）**：
 - 麦斯：`shop/details/3369` 官方页为「麥斯西點麵包」，地址復興路76號、06:30–21:30、外帶，列風獅爺餅／芋泥麻糬／切達乳酪麻糬／紅豆麻糬／1/4 切片。
@@ -85,7 +85,7 @@
 
 **查核证据**：`pnpm test:voice` 通过（584 档 / 66,621 行 / 534 页 / 9 份带路 / FAQ parity）；`pnpm validate` 通过（556 页、49,795 内部链接、1,928 图片、4,162 schema 节点、canonical／锚点／sitemap／照片／商家／攜程稽核）；`pnpm test:browser` 通过（438 passed，desktop + mobile）。
 
-**阻塞**：仍未部署／push，上线 URL 检查无法进行，9 篇全部维持 `AWAITING_LIVE_CHECK`、`liveCheck=PENDING`，0 篇 `DONE`；无合并 SHA，未更新 Issue #59。部署后先核对这 9 页的上线内容，再把 `liveCheck` 改 `VERIFIED`、状态改 `DONE`。
+**當時阻塞**：仍未部署／push，上线 URL 检查无法进行，9 篇全部维持 `AWAITING_LIVE_CHECK`、`liveCheck=PENDING`，0 篇 `DONE`；无合并 SHA，未更新 Issue #59。部署后先核对这 9 页的上线内容，再把 `liveCheck` 改 `VERIFIED`、状态改 `DONE`；實際完成情形見 §13。
 
 **下一批**：以 CSV 当下状态为准，从剩余 525 个 `CLEARED` 页面挑选；建议优先 GSC 有曝光但低 CTR 的页面，另开 worktree 与分支。
 
@@ -110,7 +110,7 @@
 - 测试同步：删除或改写 21 个 spec 中断言旧免责句的 expectation，改断言仍存在的事实；`pnpm test:browser` 438 passed（desktop + mobile）。`--workers=4` 的并发失败不视为内容问题。
 - 共用层同步：详情页 FAQ 标题「你可能還想知道」改为「大家常問的問題」；关于页的查核方法、公告套语改写；管理单位面板与住宿提示的「尚待確認」占位改为「公開資料未提供」；相关 spec 断言同步更新。
 - 未改范围：`/terms/`、`/privacy/`、`/cookies/`、`/404/` 的法律与功能文案，以及地图页「建議停留」「地標待核」等功能标签仍含这类词；它们不是攻略正文／FAQ。若要连这些也清，需另行确认并同步法律页测试。
-- 仍需部署：本轮未 push／部署，上线 URL 检查未做，CSV 的 `AWAITING_LIVE_CHECK` 与 `DONE` 状态不变。
+- 部署：本轮结束时仍未 push／部署；合併后的实际部署与上线核查见 §13。
 
 ## 11. 待确认/仍须类句式补清（2026-11-26）
 
@@ -131,3 +131,25 @@
 - `政府查詢列有登記資料；目前入住服務、房型與營運狀態尚待業者確認。` → `…入住服務、房型與營運狀態看業者回覆。`
 
 `verify-uncertainty.mjs` 增加对 `src/data/businesses.json` 与 `src/lib/businesses.ts` 的独立检查，防止这类说明回到名录。两个工作区均通过 `pnpm test:voice`、`pnpm validate` 与 `pnpm test:browser`（438 passed）。
+
+## 13. 合併、推送與上線核查（2026-11-26）
+
+**合併**：批次 2 的 5 份 `routeGuide` 與追蹤狀態已合入主工作區，沒有覆蓋主線後續的房況句、不確定詞與商家名錄清除。合併後 `pnpm test:voice` 檢查 584 個原始檔、534 頁、9 份帶路與 FAQ parity 全過；`pnpm validate` 通過（556 頁、49,793 內部連結、1,928 圖片實例、4,162 schema 節點，`astro check` 0 errors / 0 warnings / 0 hints）；`pnpm test:browser` 438 passed（desktop + mobile）。
+
+**提交與推送**：提交 `4b8df2915cd6d9521579c542decd6973e7b4a818`（`Rewrite site voice and add guided route content`）已推送至 `origin/main`；`git ls-remote origin main` 回傳同一 SHA。README 記載正式站由 GitHub `main` 的既有 Cloudflare 部署連線發布；GitHub Actions `verify.yml` 只負責驗證，不等於部署狀態。
+
+**上線 live 檢查**：以帶 SHA 的 cache-busting URL 實際讀取 9 個正式站頁面，逐頁確認 HTTP 200、canonical、`<section id="route-guide">` 標題「像朋友帶路」、五個帶路小標題、來源連結、FAQ 可見問答與 JSON-LD 逐字一致，並確認帶路段沒有不確定詞。九頁全部 PASS：
+
+- `/attractions/zhaishan-tunnel/`（FAQ 10/10、來源 4）
+- `/attractions/shuitou-village/`（FAQ 10/10、來源 3）
+- `/attractions/juguang-tower/`（FAQ 10/10、來源 3）
+- `/food/jinshan-smoked-goose/`（FAQ 3/3、來源 2）
+- `/food/max-bakery/`（FAQ 3/3、來源 1）
+- `/food/oyster-fritter-house/`（FAQ 3/3、來源 1）
+- `/guides/carrefour-kinmen/`（FAQ 4/4、來源 2）
+- `/transport/xiamen-kinmen-ferry-november-2026/`（FAQ 3/3、來源 3）
+- `/guides/restricted-items/`（無 FAQ，來源 5）
+
+**狀態更新**：CSV 九列改為 `DONE`、`liveCheck=VERIFIED`，notes 記入 `live-check-2026-11-26-sha-4b8df291...`。蚵嗲之家官方電話 `082-329222` 與頁面既有 `082-322210` 的來源衝突仍如實保留；本輪沒有改動電話事實。
+
+**殘留阻塞**：本機沒有 `gh` CLI，也未設定可寫入 GitHub Issues 的 API 憑證，因此 GitHub Issue #59 尚未更新合併 SHA 與下一批 slug；此項需要的人在授權環境補登。
