@@ -12,4 +12,9 @@ test('food discovery connects regional guides and keeps the afternoon snack afte
   const snack = page.locator('.timeline li').filter({ has: page.locator('a[href="/food/oyster-fritter-house/"]') });
   await expect(snack.locator('.time')).toContainText('14:30');
   await expect(page.locator('.timeline a[href="/food/kincheng-food/"]')).toBeVisible();
+  await page.goto('/food/oyster-fritter-house/');
+  await expect(page.locator('.facts-grid')).toContainText('082-329222');
+  await expect(page.locator('.facts-grid')).not.toContainText('082-322210');
+  await expect(page.locator('.faq-list')).toContainText('082-329222');
+  await expect(page.locator('.sources')).toContainText('082-322210');
 });
