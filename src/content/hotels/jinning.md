@@ -87,7 +87,7 @@
 
 
 
-## 寫「金寧」的房源，可能在不同方向
+## 寫「金寧」的房源先認方向
 
 先把住宿的完整門牌放入每天第一站與晚餐之間比較。古寧頭、湖下、后湖與大學周邊不屬於同一個步行商圈；旅宿名稱有海景或市區字樣，也不能代替實際路線。
 
@@ -124,7 +124,7 @@
 | [慈湖山莊海景](/hotels/#business-registered-homestay-597) · 金門縣民宿597號 | 金門縣金寧鄉慈湖路一段32之6號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/3224) |
 | [好室行旅](/hotels/#business-county-4036) · 金門縣民宿395號 | 金門縣金寧鄉環島西路二段93巷5號 | [來源所報服務](https://www.kinmen.travel/zh-tw/accommodation/details/4036) |
 
-安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/jinning-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。
+安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/jinning-food/)。區域相同不代表步行可達。
 
 <!-- reverse-directory-2026-10-26 -->
 ## 按門牌比較更多住宿

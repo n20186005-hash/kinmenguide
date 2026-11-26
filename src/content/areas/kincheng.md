@@ -7,7 +7,7 @@
   "image": "mofan",
   "area": "kincheng",
   "tag": "老街與僑鄉",
-  "duration": "分區半日；完整慢遊建議2天以上",
+  "duration": "分區半日；完整慢遊2天以上",
   "order": 1,
   "featured": true,
   "updatedAt": "2026-10-25",
@@ -32,7 +32,7 @@
 ## 先選一區，別把整個金城鎮當步行圈
 金城鎮包含熱鬧的後浦市區，也包括水頭、金門城、珠山和海岸。**金城老街指後浦街區；金門城與明遺老街在南邊另一處。** 市區內適合步行，分區之間請安排公車、接送或自駕。
 
-以下依地理位置整理，可先選一區半日走訪。停留和順序為編輯建議，港區限制、潮汐、館舍與店家開放仍需各自確認。
+以下依地理位置整理，可先選一區半日走訪。停留和順序為行程安排，港區限制、潮汐、館舍與店家開放仍需各自確認。
 
 ## 後浦市區：老街與地下城市
 
@@ -94,7 +94,7 @@
 想兼顧市區與一個聚落，選[金城一日散步](/itineraries/kincheng-one-day/)；喜歡古蹟和洋樓，選[金城南線一日遊](/itineraries/kincheng-south-day/)。建功嶼依潮汐替換其中一站，不把「摩西分海」重複算一個景點。親子可將兩個古蹟停留換成莒光共融公園和湖畔。
 
 ## 沿路吃什麼、住哪裡
-後浦有[中興路146巷奶茶街](/food/kincheng-tea-walk/)、[聯成廣東粥](/food/liancheng-congee/)、[永春](/food/yongchun-congee/)、[雨川食堂](/food/yuchuan-canteen/)、[品其林牛角包](/food/pinchilin-croissants/)及[甜水厝豆花](/food/tianshuicuo-tofu-pudding/)等選擇；依當日營業挑一兩家即可。
+後浦有[中興路146巷奶茶街](/food/kincheng-tea-walk/)、[聯成廣東粥](/food/liancheng-congee/)、[永春](/food/yongchun-congee/)、[雨川食堂](/food/yuchuan-canteen/)、[品其林牛角包](/food/pinchilin-croissants/)及[甜水厝豆花](/food/tianshuicuo-tofu-pudding/)等選擇；看當日營業挑一兩家即可。
 
 住[金城市區](/hotels/kincheng/)較方便晚間步行用餐；住水頭或珠山古厝先確認夜間接送、停車和行李搬運。到港當天，先核對新旅運中心接送地點，再決定是否有時間逛聚落。
 

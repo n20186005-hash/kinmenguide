@@ -57,7 +57,7 @@
 | [陽翟老街](/attractions/yangzhai-old-street/) | 軍旅街區，45–60 分鐘 |
 | [金東電影院](/attractions/jindong-cinema/) | 老戲院與軍旅記憶，20–40 分鐘 |
 | [碧山風獅爺：兩尊怎麼分](/attractions/bishan-wind-lions/) | 村落風獅爺，15–25 分鐘 |
-| [船型堡（湖山堡 E-037）](/attractions/ship-shaped-fort/) | 依當日正式開放範圍參觀；不探入封閉坑道、不跨越海岸障礙物。 |
+| [船型堡（湖山堡 E-037）](/attractions/ship-shaped-fort/) |看當日正式開放範圍參觀；不探入封閉坑道、不跨越海岸障礙物。|
 | [寒舍花海岸（安檢所周邊）](/attractions/hanshehua-coast/) | 安檢所是執勤設施；僅走公開海岸，不進工作區、不擋公務通道。 |
 | [獅山海灘](/attractions/shishan-beach/) | 非承諾有救生服務的游泳場；巨石、岩壁與潮水邊保持距離。 |
 

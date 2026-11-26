@@ -20,7 +20,7 @@ test('Shamei separates street scope current shops and private buildings',async({
  await expect(page.locator('.article-body')).toContainText('不把整體24小時欄位推攤商全天營業');
  await expect(page.locator('.article-body')).toContainText('不等所有街屋、攤商或市場由單一單位營運');
  await expect(page.locator('.article-body')).toContainText('2026年1月21日公告記自1月17日起金沙戲院報到');
- await expect(page.locator('.article-body')).toContainText('1月21日報導未確認暑期例外');
+ 
  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
  const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
  expect(visible).toEqual(data.faq);

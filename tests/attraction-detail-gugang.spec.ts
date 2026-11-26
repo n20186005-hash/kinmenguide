@@ -14,7 +14,7 @@ test('Gugang preserves lake topics, original CC photo and partial construction c
   await expect(page.locator('.article-header').getByRole('link',{name:'查看2026彩繪整修公告',exact:true})).toHaveAttribute('href','https://www.kmnp.gov.tw/ch/titlelist/latest-news/4574');
   await expect(page.locator('article.article-body')).toContainText('預計12月15日全面開放，不是完工或復開證明');
   await expect(page.locator('article.article-body')).toContainText('二樓以上封閉');
-  await expect(page.locator('article.article-body')).toContainText('湖邊步道是否受施工影響，依當日標示確認');
+  await expect(page.locator('article.article-body')).toContainText('湖邊步道是否受施工影響，看當日標示確認');
   await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
   await expect(page.getByRole('link',{name:'Google地圖・古崗樓'})).toHaveAttribute('href',data.googleMapsUrl);
   await expect(page.getByRole('link',{name:'查看古崗樓Google具名地標'})).toHaveAttribute('href',data.googleMapsUrl);

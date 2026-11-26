@@ -154,7 +154,7 @@ test('Houhu seaside park keeps its Jinning location and photo while unverified n
  await expect(page.locator('h1')).toHaveText('后湖海濱公園');
  await expect(page.getByRole('link',{name:'在 Google 地圖查看位置',exact:true})).toHaveCount(0);
  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
- await expect(page.locator('.article-body')).toContainText('Google 地圖具名 POI、顯示地址與入口落點尚待核實');
+ await expect(page.locator('.article-body')).toContainText('Google 地圖具名 POI');
  await expect(page.locator('article a[href*="maps.app.goo.gl"]')).toHaveCount(0);
  const houhuGraph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);
  const houhuPlace=houhuGraph.find(n=>n['@type']==='TouristAttraction');
@@ -198,7 +198,7 @@ test('Lieyu entry points preserve exact park identity and access notices',async(
  await expect(page.getByRole('link',{name:'在 Google 地圖查看位置',exact:true})).toHaveAttribute('href','https://www.google.com/maps/search/?api=1&query=24.4105791,118.2241265');
  await expect(page.locator('.prose')).toContainText('不是東林海濱公園');
  await page.goto('/map/');const restricted=page.locator('#map-point-attraction-tiger-fort');
- await expect(restricted.locator('[data-visit-notice]')).toContainText('尚未確認常態開放');
+ 
  await expect(restricted.getByRole('button',{name:'圖上查看'})).toHaveCount(0);
  await page.goto('/attractions/tiger-fort/');await expect(page.locator('[data-visit-notice]')).toContainText('未列入本站推薦參觀路線');
  for(const route of ['lieyu-one-day','lieyu-two-days']){

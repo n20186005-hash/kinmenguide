@@ -14,7 +14,7 @@ test('Houpu old streets keeps district scope and shop operations distinct',async
  expect(hs).not.toContain('景點相冊');
  expect(hs.slice(0,10)).toEqual(['探索金城老街（後浦小鎮）','關於金城老街（後浦小鎮）','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
  for(const title of ['這裡是後浦，不是金門城北門','用三個節點組成散步圈','白天逛店，夜晚聽故事','金城住宿如何銜接'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
- await expect(page.locator('.attraction-manager')).toContainText('尚待確認');
+ await expect(page.locator('.attraction-manager')).toContainText('公開資料未提供');
  await expect(page.locator('.article-body')).toContainText('並非單一正式命名街道或核定地籍邊界');
  await expect(page.locator('.article-body')).toContainText('本頁沒有逐家確認今日營業或進駐名單');
  await expect(page.locator('.attraction-manager a')).toHaveCount(0);

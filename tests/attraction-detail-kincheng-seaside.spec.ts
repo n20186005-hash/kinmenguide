@@ -14,7 +14,7 @@ test('Kincheng seaside distinguishes historical works and shore views from prese
  expect(hs).not.toContain('景點相冊');
  expect(hs.slice(0,10)).toEqual(['探索金城海濱休閒公園','關於金城海濱休閒公園','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
  for(const title of ['位在金城浯江溪口','在步道上觀察潮間帶','海岸三站慢慢走'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
- await expect(page.locator('.attraction-manager')).toContainText('尚待確認');
+ await expect(page.locator('.attraction-manager')).toContainText('公開資料未提供');
  await expect(page.locator('.article-body')).toContainText('水域開放及救生服務目前未核');
  await expect(page.locator('.article-body')).toContainText('不將計畫串聯當已保證全線通行');
  await expect(page.locator('.attraction-manager a')).toHaveCount(0);

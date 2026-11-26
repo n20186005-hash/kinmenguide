@@ -12,7 +12,7 @@ test('Huxia does not infer current access or construction from a start notice',a
  expect(hs).not.toContain('景點相冊');
  expect(hs.slice(0,10)).toEqual(['探索湖下海堤：在岸邊看金門大橋','關於湖下海堤：在岸邊看金門大橋','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
  for(const title of ['不必上橋，就能看見橋的線條','夕陽與夜景怎麼安排','與慈湖排一個不趕的下午'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
- await expect(page.locator('.attraction-manager')).toContainText('尚待確認');
+ await expect(page.locator('.attraction-manager')).toContainText('公開資料未提供');
  await expect(page.locator('.article-body')).toContainText('不代表今天一定仍施工，也不代表已開放');
  await expect(page.locator('.article-body')).toContainText('不繞圍籬');
  await expect(page.locator('.attraction-manager a')).toHaveCount(0);

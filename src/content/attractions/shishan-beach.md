@@ -25,7 +25,7 @@
     }
   ],
   "address": "890 金門縣金沙鎮獅山附近",
-  "hours": "建議白天走訪；依現場開放與管理公告。",
+  "hours": "白天走訪；看現場開放與管理公告。",
   "admission": "戶外公共動線不另售門票；活動與店家消費另計。",
   "parking": "停放劃設車位後步行；不占用村道、住戶門口或工作出入口。",
   "coordinates": {
@@ -44,4 +44,4 @@
 先看現場是否有清楚安全的下行路線，沒有就不勉強靠近巨石。勿爬落石、站崖腳或跨過潮水追角度；風浪大、下雨或天色將暗時略過。若看砲操，先以陣地場次排程，再評估是否有時間訪海灘。
 
 ## 把下一站排在附近
-[獅山砲陣地](/attractions/shishan-howitzer-front/)、[山后民俗文化村](/attractions/shanhou-folk-culture-village/)。停留時間是本站的安排建議，請把停車、步行和休息另外算入；想慢慢看，可只選其中一至兩站。
+[獅山砲陣地](/attractions/shishan-howitzer-front/)、[山后民俗文化村](/attractions/shanhou-folk-culture-village/)。停留時間是本站的安排，請把停車、步行和休息另外算入；想慢慢看，可只選其中一至兩站。

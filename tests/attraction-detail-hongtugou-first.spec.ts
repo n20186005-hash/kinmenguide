@@ -11,7 +11,7 @@ test('L34 keeps original camp topics and photo with a verified named POI distinc
   await expect(page.locator('figcaption')).toContainText('政府網站資料開放宣告');
   const hs=await page.locator('article.article-body h2').allTextContents();
   expect(hs.slice(0,10)).toEqual(['探索'+data.title,'關於'+data.title,'基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','資料來源與行前提醒']);expect(hs).not.toContain('景點相冊');
-  const ts=await page.locator('article.article-body h3').allTextContents();for(const t of ['從入口看見營區年代','修復後仍依現場動線參觀','別和其他名稱相近的點混淆','附近怎麼安排'])expect(ts).toContain(t);
+  const ts=await page.locator('article.article-body h3').allTextContents();for(const t of ['從入口看見營區年代','修復後看現場動線','別和其他名稱相近的點混淆','附近怎麼安排'])expect(ts).toContain(t);
   await expect(page.locator('.attraction-manager a')).toHaveCount(0);await expect(page.locator('.attraction-manager')).toContainText('2023修復');
   await expect(page.locator('.article-header').getByRole('link',{name:'查看2025公園據點施工範圍公告',exact:true})).toHaveAttribute('href','https://www.kmnp.gov.tw/ch/titlelist/latest-news/1212');
   await expect(page.locator('article.article-body')).toContainText('L36與東崗誠實亭是不同地標');

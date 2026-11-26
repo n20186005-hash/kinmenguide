@@ -14,7 +14,7 @@ test('Jindong does not turn historic screenings and allocation into current oper
  expect(hs).not.toContain('景點相冊');
  expect(hs.slice(0,10)).toEqual(['探索金東電影院','關於金東電影院','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
  for(const title of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
- await expect(page.locator('.attraction-manager')).toContainText('尚待確認');
+ await expect(page.locator('.attraction-manager')).toContainText('公開資料未提供');
  await expect(page.locator('.article-body')).toContainText('沒有核到現行常態放映或院線售票場次');
  await expect(page.locator('.article-body')).toContainText('不能直接認定今日完整經營、管理或土地所有權');
  await expect(page.locator('.attraction-manager a')).toHaveCount(0);

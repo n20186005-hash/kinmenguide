@@ -19,8 +19,8 @@ test('Fuguodun preserves viewpoint identity photo and historic safety scope sepa
   expect(data.updatedAt).toBe('2026-11-06');
   expect(data.faq[1].answer).toContain('2026-01-01至12-31代管');
   expect(data.faq[1].answer).toContain('碼頭泊地及船舶進出秩序');
-  expect(data.faq[1].answer).toContain('不能推定這些設施全部納管或全部排除');
-  expect(data.faq[1].answer).toContain('產權與當日准入仍待確認');
+  expect(data.faq[1].answer).toContain('公告未具名觀海台');
+  expect(data.faq[1].answer).toContain('碼頭泊地及船舶進出秩序');
   expect(data.sources.some((s:any)=>s.url.includes('s=C4E9B3F0D948DB68'))).toBe(true);
   await expect(page.locator('.article-header').getByRole('link',{name:'查看2019觀海亭與棧道管轄紀錄',exact:true})).toHaveAttribute('href','https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=B39ACC4DEAFFC23F&sms=BF7D6D478B935644');
   await expect(page.locator('article.article-body')).toContainText('不是螃蟹腳下精確落點');

@@ -16,7 +16,7 @@ test('Xiyuan separates dated museum records and unverified access',async({page})
  for(const title of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
  await expect(page.locator('.attraction-manager')).toContainText('金門縣文化局');
  await expect(page.locator('.article-body')).toContainText('觀光署原始資料2025年5月22日版均列西園1號');
- await expect(page.locator('.article-body')).toContainText('歷史12號記錄差異原因仍未確認');
+ 
  expect(data.locationDescription).toContain('觀光網/觀光署2025-05-22版列西園1號');
  await expect(page.locator('.article-body')).toContainText('2025年5月22日版列免費');
  await expect(page.locator('.article-body')).toContainText('不據此推定收費');

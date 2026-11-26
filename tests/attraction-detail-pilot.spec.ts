@@ -73,7 +73,7 @@ test('Zhaishan detail pilot preserves semantic order and original integrations',
 
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://kinmenguide.com/attractions/zhaishan-tunnel/');
   await expect(page).toHaveTitle('翟山坑道｜金門旅遊實用攻略 | Kinmen Guide');
-  const description = '走入金門山腹，探索戰時運補水道與A字形地下工程。整理翟山坑道的參觀建議、基本資料、交通與地景，搭配金城南線安排行程。';
+  const description = '走入金門山腹，探索戰時運補水道與A字形地下工程。整理翟山坑道的參觀、基本資料、交通與地景，搭配金城南線安排行程。';
   await expect(page.locator('meta[name="description"]')).toHaveCount(1);
   await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', description);
   await expect(page.locator('meta[property="og:description"]')).toHaveAttribute('content', description);

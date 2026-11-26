@@ -51,10 +51,10 @@
 ## 一杯飲料配一份鹹食
 同巷可查[艋舺雞排金城店](/food/monga-fried-chicken/)，周邊民生路則有[品其林牛角包](/food/pinchilin-croissants/)。先看食物出餐時間，再決定飲料是否立即取走；有公車要搭時，別把等餐時間估得太緊。
 
-鮮奶茶、奶精茶和加料飲品成分不同，點餐時確認甜度、冰量和過敏原。特色口味不一定每天供應，價格以各店現場菜單為準。
+鮮奶茶、奶精茶和加料飲品成分不同，點餐時確認甜度、冰量和過敏原。特色口味不一定每天供應，價格看各店現場菜單。
 
 ## 從車站走到後浦老城
-編輯建議先買飲料休息，再走[浯江書院](/attractions/wujiang-academy/)、[總兵署](/attractions/kinmen-military-headquarters/)與[模範街](/attractions/mofan-street/)；館內是否能飲食依規定，先喝完或收妥。晚上想聽老城故事，可改接[後浦夜遊](/tours/houpu-night-walk/)。
+行程安排先買飲料休息，再走[浯江書院](/attractions/wujiang-academy/)、[總兵署](/attractions/kinmen-military-headquarters/)與[模範街](/attractions/mofan-street/)；館內是否能飲食依規定，先喝完或收妥。晚上想聽老城故事，可改接[後浦夜遊](/tours/houpu-night-walk/)。
 
 巷道也有居民、機車與送貨人員通行。排隊靠店家指示的範圍，不站車道拍照，飲料杯與食物包裝自行回收。含酒茶飲先確認酒精成分，駕駛者不選含酒精飲品。
 

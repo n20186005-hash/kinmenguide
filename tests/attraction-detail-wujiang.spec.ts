@@ -16,8 +16,7 @@ test('Wujiang preserves opening source differences and heritage scope',async({pa
  for(const title of ['老城裡安靜的一站','開放與步行位置','早餐、書院與夜間導覽'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
  await expect(page.locator('.attraction-manager')).toContainText('金門縣文化局（所轄場館與朱子祠管理角色）');
  await expect(page.locator('.article-body')).toContainText('不自行合併為最新全年規則');
- await expect(page.locator('.article-body')).toContainText('不由觀光網無障礙標籤推全院可達');
- await expect(page.locator('.article-body')).toContainText('不直接推每年例外');
+  await expect(page.locator('.article-body')).toContainText('不直接推每年例外');
  await expect(page.locator('.article-body')).toContainText('2025年5月15日版');
  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
  const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));

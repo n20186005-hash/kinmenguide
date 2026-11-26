@@ -14,7 +14,7 @@ function lastmodFor(urlPath) {
     const file = path.join('src/content', match[1], `${match[2]}.md`);
     try {
       const raw = fs.readFileSync(file, 'utf8');
-      const frontmatter = raw.match(/^---\n([\s\S]*?)\n---/);
+      const frontmatter = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
       const data = frontmatter && JSON.parse(frontmatter[1]);
       if (typeof data?.updatedAt === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(data.updatedAt)) {
         const date = new Date(`${data.updatedAt}T00:00:00.000Z`);

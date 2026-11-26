@@ -28,7 +28,7 @@
       "url": "https://kpb.kinmen.gov.tw/Content_List.aspx?Create=1&n=3610E46577D15FA3"
     }
   ],
-  "visitNotice": "官方公告2026-01-01至2026-12-31整建暫停營業；恢復後仍須符合入住資格。",
+  "visitNotice": "官方公告2026-01-01至2026-12-31整建暫停營業；恢復後要符合入住資格。",
   "facts": [
     {
       "label": "營運狀態",
@@ -57,4 +57,4 @@
 警政署公開名錄公告2026年1月1日至12月31日因整建暫停營業，後續恢復日期要再確認。實際場址是金沙鎮環島北路斗門段1號，警察局網站頁尾的金城金山路15號是機關地址，不是會館。不要以電話尚能查到就預排住宿。
 
 ## 把下一站排在附近
-[金門縣立博物館](/attractions/kinmen-county-museum/)、[陽翟老街](/attractions/yangzhai-old-street/)。停留時間是本站的安排建議，請把停車、步行和休息另外算入；想慢慢看，可只選其中一至兩站。
+[金門縣立博物館](/attractions/kinmen-county-museum/)、[陽翟老街](/attractions/yangzhai-old-street/)。停留時間是本站的安排，請把停車、步行和休息另外算入；想慢慢看，可只選其中一至兩站。

@@ -84,7 +84,7 @@
 ## 想住古厝，先問日常細節
 水頭等聚落提供不同的住宿氛圍。老建築的門檻、隔音、採光與浴室配置各異，行李重或帶長輩時尤其應先詢問。
 ## 訂房前核對
-確認合法登記、房型與床型、入住時間、停車距離及接送是否另外收費。取消條款與遇航班停飛的處理方式，建議保留書面回覆。
+確認合法登記、房型與床型、入住時間、停車距離及接送是否另外收費。取消條款與遇航班停飛的處理方式，保留書面回覆。
 ## 用具體門牌比較市區與古厝
 
 | 住宿方向 | 名錄入口 | 想清楚再訂房 |
@@ -95,7 +95,7 @@
 
 市區早餐可比較[傳記](/food/#business-chuanji-congee)、[聯成](/food/liancheng-congee/)與其他[金城用餐選擇](/food/kincheng-food/)；住南側古厝先確認早餐是否含於所訂方案，晚上是否要另行開車。前往[水頭聚落](/attractions/shuitou-village/)與[珠山](/attractions/zhushan-village/)分別導航，不把整個鎮當成步行範圍。
 
-[金城住宿名錄](/hotels/?area=kincheng#business-directory)可依類型、已核實設施搜尋；沒有列出的設施代表尚未核實，不代表店家一定不提供。
+[金城住宿名錄](/hotels/?area=kincheng#business-directory)可依類型、已核實設施搜尋；
 
 ## 按門牌比較同區住宿
 
@@ -113,7 +113,7 @@
 | [落番居LuoFunJyu](/hotels/#business-registered-homestay-352) · 金門縣民宿352號 | 金門縣金城鎮珠山28號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/2284) |
 | [浯島魁星背包棧](/hotels/#business-registered-homestay-809) · 金門縣民宿809號 | 金門縣金城鎮民族路162巷25號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/3937) |
 
-安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/kincheng-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。
+安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/kincheng-food/)。區域相同不代表步行可達。
 
 <!-- reverse-directory-2026-10-26 -->
 ## 按門牌比較更多住宿
@@ -156,7 +156,7 @@
 
 ## 核對門牌後比較住宿
 
-金城鎮的[法蘭克民宿](/hotels/franks-hostel/)、[市區背包客棧民宿](/hotels/kinmen-backpacker/)及[庫克民宿](/hotels/cook-bnb/)分別位於民權路、珠浦西路與中興路巷內。可按完整地址、入住時間及所選房型比較，營業狀態和接待方式仍應先確認。
+金城鎮的[法蘭克民宿](/hotels/franks-hostel/)、[市區背包客棧民宿](/hotels/kinmen-backpacker/)及[庫克民宿](/hotels/cook-bnb/)分別位於民權路、珠浦西路與中興路巷內。可按完整地址，入住時間及所選房型比較。
 
 [樂客2館](/hotels/yueke-second-house/)登記於金城賢聚51-6號，與金寧下埔下315號的[樂客民宿](/hotels/yueke-guesthouse/)不是同一地址；預訂前請先確認館別與入口。
 

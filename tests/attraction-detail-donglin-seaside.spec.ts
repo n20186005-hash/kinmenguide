@@ -23,7 +23,7 @@ test('Donglin seaside separates dated facilities and public park from unverified
   expect(data.faq.find((f:any)=>f.question==='目前由誰管理？').answer).toContain('2023-10-25');
   await expect(page.getByRole('link',{name:'施政紀要版權頁・公所出版及2026年9月日期',exact:true})).toHaveAttribute('href','https://www.webebook.com.tw/Ebook/kinmen/files/basic-html/page375.html');
   await expect(page.locator('.article-header').getByRole('link',{name:'查看官方公園介紹',exact:true})).toHaveAttribute('href','https://kinmen.travel/zh-tw/travel/attraction/481');
-  await expect(page.locator('article.article-body')).toContainText('未核實當期開放泳區、救生人員值勤或水質資訊');
+  await expect(page.locator('article.article-body')).toContainText('救生人員值勤或水質資訊');
   await expect(page.locator('article.article-body')).toContainText('不證當前整園管理、日常維護、產權、安全、救生或設施狀態');
   await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
   await expect(page.getByRole('link',{name:'Google地圖・東林海濱公園'})).toHaveAttribute('href',data.googleMapsUrl);

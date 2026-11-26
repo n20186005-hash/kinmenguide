@@ -97,7 +97,7 @@
 | [蕃茄紅了古典館](/hotels/#business-registered-homestay-466) · 金門縣民宿466號 | 金門縣金沙鎮山后45號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/3370) |
 | [麗絲的家2館](/hotels/#business-registered-homestay-585) · 金門縣民宿585號 | 金門縣金沙鎮光前里陽翟219號 | [來源所報服務](https://kinmen.travel/zh-tw/accommodation/details/3234) |
 
-安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/jinsha-food/)。區域相同不代表步行可達，這裡沒有推算未核實的移動時間。
+安排住宿與用餐時，可接著比較[同區的餐飲與供餐方向](/food/jinsha-food/)。區域相同不代表步行可達。
 
 <!-- reverse-directory-2026-10-26 -->
 ## 按門牌比較更多住宿

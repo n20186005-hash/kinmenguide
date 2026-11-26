@@ -1,0 +1,26 @@
+---
+interface Props {
+  arrival: string;
+  entrance: string;
+  alongTheWay: string;
+  rain: string;
+  shortOnTime: string;
+  photoTip: string;
+  sources: { title: string; url: string }[];
+}
+const { arrival, entrance, alongTheWay, rain, shortOnTime, photoTip, sources } = Astro.props;
+---
+<section class="prose route-guide" id="route-guide" data-route-guide aria-labelledby="route-guide-heading">
+  <h2 id="route-guide-heading">像朋友帶路</h2>
+  <h3>從哪裡抵達</h3><p>{arrival}</p>
+  <h3>哪個入口好找</h3><p>{entrance}</p>
+  <h3>沿途看什麼</h3><p>{alongTheWay}</p>
+  <h3>下雨或時間不夠，怎麼改走</h3><p>{rain} {shortOnTime}</p>
+  <h3>拍照：站哪裡、取捨什麼</h3><p>{photoTip}</p>
+  <p class="route-guide-sources">這段路線的依據：{sources.map((source, index) => <><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>{index < sources.length - 1 ? '、' : ''}</>)}</p>
+</section>
+<style>
+.route-guide{border-top:1px solid var(--line);padding-top:28px;margin-top:36px}
+.route-guide h2{font:700 28px/1.4 var(--font-serif)}
+.route-guide-sources{font-size:13px;color:var(--muted)}
+</style>

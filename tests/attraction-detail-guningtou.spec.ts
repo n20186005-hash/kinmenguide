@@ -17,7 +17,7 @@ test('Guningtou preserves war-history topics original FAQs and licensed facade p
   await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
   await expect(page.getByRole('link',{name:'Google地圖・古寧頭戰史館'})).toHaveAttribute('href',data.googleMapsUrl);
   await expect(page.getByRole('link',{name:'查看古寧頭戰史館Google具名地標'})).toHaveAttribute('href',data.googleMapsUrl);
-  expect(data.faq.slice(0,2)).toEqual([{question:'適合帶孩子參觀嗎？',answer:'可依年齡挑選展覽內容，家長可以先用簡單時間線說明歷史背景。'},{question:'能否與烈嶼排在同一個離島日？',answer:'不建議全部塞進半天。選金寧或烈嶼其中一區，留足機場緩衝。'}]);
+  expect(data.faq.slice(0,2)).toEqual([{question:'適合帶孩子參觀嗎？',answer:'可依年齡挑選展覽內容，家長可以先用簡單時間線說明歷史背景。'},{question:'能否與烈嶼排在同一個離島日？',answer:'不全部塞進半天。選金寧或烈嶼其中一區，留足機場緩衝。'}]);
   await expect(page.locator('.article-cover img')).toHaveAttribute('alt','古寧頭戰史館入口與正面浮雕');
   const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));expect(visible).toEqual(data.faq);
   const graph=(await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap(t=>JSON.parse(t)['@graph']??[]);

@@ -506,7 +506,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
 },
   'guande-bridge': {
   "title": "觀德橋",
-  "statusNotice": "文化局清冊（2025目錄版本）列全區／全天，非當日橋面或道路通行保證 · 管維紀錄、土地管理與實際准入分開確認。",
+  "statusNotice": "文化局清冊（2025目錄版本）列全區／全天。",
   "paragraphs": [
     "高坑的觀德橋保留清代石橋建築線索，可在當日允許且安全的位置觀察橋體與周邊；不攀爬或沿溪溝尋找拍攝角度。",
     "地標定位與今天可否走到橋邊是兩回事。原短連結已核對為觀德橋，不與觀瀾橋合併，也不把橋點當車行入口或停車位。"
@@ -781,7 +781,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
 },
   'fuyu-temple-photo-spot': {
   "title": "福寓宮旁：為什麼來金門彩繪",
-  "statusNotice": "Google彩繪牆具名POI待核 · 官方2026-07-09列24小時／免費，非當日通行保證 · 溝渠整建完成及完整維護權責待確認。",
+  "statusNotice": "Google彩繪牆具名POI待核 · 官方2026-07-09列24小時／免費。",
   "paragraphs": [
     "下堡福寓宮旁的字樣與彩繪，讓排水空間成為聚落觀察線索；只在當日允許且安全的位置停留，不為拍照進溝渠或沿狹窄溝緣排隊。",
     "拍照牆和福寓宮用途、入口不同。未核到牆本身的Google具名點，不用附近廟宇或公園替代；看見照片或圖點不代表可停車、可入殿或全線可走。"
@@ -848,7 +848,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
 },
   'fuguodun-viewpoint': {
   "title": "復國墩觀海台與大螃蟹",
-  "statusNotice": "官方2025-05-15列全天，非現場通行保證 · 觀光頁免費、原始JSON費用空值分源 · 不攀裝置或涼亭，現行完整權責待確認。",
+  "statusNotice": "官方2025-05-15列全天，當日通行仍待確認 · 觀光頁免費、原始JSON費用空值分源 · 不攀裝置或涼亭，現行完整權責待確認。",
   "paragraphs": [
     "復國墩的岩岸、港灣與海防地景可與近代嗆蟹裝置分開閱讀。當日允許通行時，從安全平台或步道看海，不為拍照靠近浪打岩面。",
     "本站定位是具名觀海台，不是螃蟹腳下或商店入口；購物、用餐與看海分別確認開放和交通，不把同一村名當同一經營場所。"
@@ -1136,7 +1136,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     "短而陡的太武山北麓古道背景。",
     "天然岩盤鑿階與人工石材踏階。",
     "木麻黃、馬尾松等官方林相介紹。",
-    "觀兵奕棋處、倒影塔的路線背景，非當日可達承諾。"
+    "觀兵奕棋處、倒影塔的路線背景。"
   ],
   "about": "斗門古道從太武山北麓斗門山腳上行，官方介紹終點連往觀兵奕棋處。金門國家公園管理處官方資料提供步道整修、定期維護與遊憩安全依據，範圍限公告步道，不直接代表整山產權、軍事區或所有支線管理；當期委外、入口與全段通行仍須確認。",
   "management": {
@@ -2162,7 +2162,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     },
     {
       "label": "聯絡電話",
-      "value": "082-332528（官方景點頁所列公所電話，非現場值勤保證）"
+      "value": "082-332528（官方景點頁所列公所電話）"
     },
     {
       "label": "服務設施",
@@ -2627,7 +2627,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     "90及75公分重新出土石獅的地方記憶。",
     "四尊分開辨識，不因官方落點重疊而合併，也不共用導航或開放條件。"
   ],
-  "about": "風獅爺反映聚落鎮風與護境的信仰。縣旅遊網資料以雌雄名稱分別收錄高大石獅，以及重新出土的90與75公分石像，不能把它們視為單一管理園區。現行各尊管理維護、產權及委外尚待確認；官方旅遊收錄與照片提供資訊均不能代替管理或所有權證明。",
+  "about": "風獅爺反映聚落鎮風與護境的信仰。縣旅遊網資料以雌雄名稱分別收錄高大石獅，以及重新出土的90與75公分石像，不能把它們視為單一管理園區。現行各尊管理維護、產權及委外公開資料未提供；官方旅遊收錄與照片提供資訊均不能代替管理或所有權證明。",
   "management": {
     "name": "現行各尊管理維護單位待確認（官方旅遊收錄不等於直接管理）",
     "sourceUrl": "https://kinmen.travel/zh-tw/travel/attraction/549"
@@ -3598,7 +3598,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   ],
   "about": "后湖以海濱休憩景觀為主要參訪內容。2019年官方曾記錄夏季水域專區及救生安排，僅能作歷史背景；目前管理、維護、所有權與水域責任分工尚未取得直接現行依據，不能由公告發布機關推定今日管理者。",
   "management": {
-    "name": "尚待確認（公園、水域、維護與所有權分工未核）",
+    "name": "公開資料未提供（公園、水域、維護與所有權分工未核）",
     "sourceUrl": "https://www.kinmen.travel/zh-tw/news/details/2362",
     "ctaLabel": "查看2019年歷史水域公告",
     "linkName": false
@@ -3622,7 +3622,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
     },
     {
       "label": "目前管理單位",
-      "value": "尚待確認；不以2019年公告推定今日權責"
+      "value": "公開資料未提供；不以2019年公告推定今日權責"
     },
     {
       "label": "開放與門票",
@@ -3658,7 +3658,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   ],
   "about": "后麟以舊營區空間安排步槍模擬體驗，正式名稱為后麟步槍模擬射擊館。官方景點資料列預約電話與分梯安排；烈嶼鄉公所另有特定活動公告，但活動主辦角色不等同今日經營、管理或土地所有權，現行完整權責仍待核實。",
   "management": {
-    "name": "尚待確認（現行經營、維護及所有權分工未核）",
+    "name": "公開資料未提供（現行經營、維護及所有權分工未核）",
     "sourceUrl": "https://kinmen.travel/zh-tw/travel/attraction/1531",
     "ctaLabel": "查看官方景點與預約資料",
     "linkName": false
@@ -3786,7 +3786,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   ],
   "about": "后頭新舊兩尊風獅爺由官方名錄分開介紹，反映村落重塑與尋回舊像的記憶。村民重塑、供奉及歷史配置不能作為現任管理、土地所有或通行權的證明；目前尚未取得完整現行權責依據。",
   "management": {
-    "name": "尚待確認（現行管理、土地權屬與准入分工未核）",
+    "name": "公開資料未提供（現行管理、土地權屬與准入分工未核）",
     "sourceUrl": "https://kinmen.travel/zh-tw/travel/attraction/1650",
     "linkName": false,
     "ctaLabel": "查看官方新像歷史介紹"
@@ -3909,7 +3909,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   ],
   "about": "湖下海堤兼具海岸與大橋景觀的旅遊背景，2026年5月官方新聞記錄調適工程開工。目前沒有完工、現行開放或圍設的直接證據，工程發布與施作角色也不能推定整體海堤現任管理、產權或維護分工。",
   "management": {
-    "name": "尚待確認（現行管理、產權及維護分工未核）",
+    "name": "公開資料未提供（現行管理、產權及維護分工未核）",
     "sourceUrl": "https://www.kinmen.gov.tw/News_Content2.aspx?Create=1&n=98E3CA7358C89100&s=1FC9BE63FD0D6D82&sms=BF7D6D478B935644",
     "linkName": false,
     "ctaLabel": "查看2026年5月工程開工記錄"
@@ -3969,7 +3969,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   ],
   "about": "2021年官方啟用公告記遊戲場由金門縣養護工程所承辦，教育處辦理當次活動，並介紹共融設計。這些是歷史工程與活動角色，不足以確認現任整體管理、日常檢修或產權；當日設備及無障礙可用性也未經目前現場確認。",
   "management": {
-    "name": "尚待確認（現行整體管理、日常檢修與產權分工未核）",
+    "name": "公開資料未提供（現行整體管理、日常檢修與產權分工未核）",
     "sourceUrl": "https://kinmen.travel/zh-tw/news/details/2854",
     "linkName": false,
     "ctaLabel": "查看2021啟用與設施設計介紹"
@@ -4029,7 +4029,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   ],
   "about": "官方湖景介紹提供名稱與地理背景，縣府救溺演練報導提供安全宣導。旅遊發布、活動主辦或救援角色不能證明整體湖區現任管理、產權或水域准入；目前尚未取得完整直接依據。",
   "management": {
-    "name": "尚待確認（現任湖區管理、維護、土地權屬與水域准入未核）",
+    "name": "公開資料未提供（現任湖區管理、維護、土地權屬與水域准入未核）",
     "sourceUrl": "https://kinmen.travel/zh-tw/travel/attraction/514",
     "linkName": false,
     "ctaLabel": "查看官方湖景位置介紹"
@@ -4089,7 +4089,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   ],
   "about": "官方商圈與遊程介紹列出後浦的街巷及文化節點，屬旅遊閱讀範圍，不是正式地籍邊界。公共道路、各文化資產與私人店屋的管理、產權與經營分工不同，目前未取得全街區完整現行權責資料，不能用介紹發布者或某館管理推成單一管理者。",
   "management": {
-    "name": "尚待確認（整體街區與個別道路/場館/店屋管理及產權分工未核）",
+    "name": "公開資料未提供（整體街區與個別道路/場館/店屋管理及產權分工未核）",
     "sourceUrl": "https://kinmen.travel/zh-tw/travel/attraction/1639",
     "linkName": false,
     "ctaLabel": "查看官方商圈節點介紹"
@@ -4641,7 +4641,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   ],
   "about": "官方旅遊介紹提供河口位置與景觀，歷史城鎮之心計畫記海濱及周邊空間改善。規劃與旅遊發布不能認定現行整體管理、維護、土地權屬或正式界線，也不足以證明今天全線已完工可走，完整分工與現況待核。",
   "management": {
-    "name": "尚待確認（現行管理、維護、土地權屬與範圍分工未核）",
+    "name": "公開資料未提供（現行管理、維護、土地權屬與範圍分工未核）",
     "sourceUrl": "https://kinmen.travel/zh-tw/travel/attraction/1493",
     "linkName": false,
     "ctaLabel": "查看官方河口景點介紹"
@@ -4868,7 +4868,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   ],
   "about": "2020年官方公告記金沙鎮公所2018年完成撥用及辦理修繕、啟用，文化資產資料亦提供歷史建築背景。這些有年代的角色不等於今日完整經營、管理維護或所有權；現行分工與室內准入仍待核。",
   "management": {
-    "name": "尚待確認（2020公告記鎮公所撥用修繕角色，非現任完整管理或產權認定）",
+    "name": "公開資料未提供（2020公告記鎮公所撥用修繕角色，非現任完整管理或產權認定）",
     "sourceUrl": "https://kinmen.travel/zh-tw/news/details/2619",
     "linkName": false,
     "ctaLabel": "查看2020年撥用修繕與啟用公告"
@@ -5028,7 +5028,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   ],
   "about": "觀光網與有日期活動資料介紹金城民防坑道及車站二樓入口，支持旅遊發布與導覽安排背景。發布機關或活動安排不能直接認定整套坑道現任管理、日常維修、產權與委託關係，完整分工仍待核。",
   "management": {
-    "name": "尚待確認（完整管理、日常維修、產權及委託分工未核）",
+    "name": "公開資料未提供（完整管理、日常維修、產權及委託分工未核）",
     "sourceUrl": "https://kinmen.travel/zh-tw/travel/attraction/1340",
     "linkName": false,
     "ctaLabel": "查看官方參觀入口與一般資訊"
@@ -6438,7 +6438,7 @@ export const attractionDetailPilots: Record<string, AttractionDetailPilot | unde
   ],
   "about": "鄉公所介紹記載亭與公園的歷史，但介紹發布者與歷史營建角色不等於已證實的現任管理者或所有者；現行管理、日常維修、產權及准入權責仍待直接證據確認。",
   "management": {
-    "name": "尚待確認（未取得此處現行管理與產權的直接依據）",
+    "name": "公開資料未提供（未取得此處現行管理與產權的直接依據）",
     "sourceUrl": "https://lieyu.kinmen.gov.tw/travel/cp.aspx?n=E9904C4AEF4C0B73",
     "linkName": false,
     "ctaLabel": "查看鄉公所景點歷史介紹"

@@ -11,8 +11,8 @@ test('Houlin preserves booking topics and distinguishes event fees from admissio
  const hs=await page.locator('article.article-body h2').allTextContents();
  expect(hs).not.toContain('景點相冊');
  expect(hs.slice(0,10)).toEqual(['探索后麟模擬靶場：步槍模擬射擊館','關於后麟模擬靶場：步槍模擬射擊館','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
- for(const title of ['舊營區裡的模擬體驗','年齡、預約與報到','票價與場次以當期公告為準','附近怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
- await expect(page.locator('.attraction-manager')).toContainText('尚待確認');
+ for(const title of ['舊營區裡的模擬體驗','年齡、預約與報到','票價與場次看當期公告','附近怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
+ await expect(page.locator('.attraction-manager')).toContainText('公開資料未提供');
  await expect(page.locator('.article-body')).toContainText('2026特定比賽200元不是一般門票');
  await expect(page.locator('.article-body')).toContainText('082-363455');
  await expect(page.locator('.attraction-manager a')).toHaveCount(0);

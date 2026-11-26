@@ -74,13 +74,13 @@
 
 | 地點 | 參觀重點與條件 |
 | --- | --- |
-| [成功沙灘](/attractions/chenggong-beach/) | 潮汐、海象及現場管制優先；本文建議岸上散步，不代表當天可游泳。 |
+| [成功沙灘](/attractions/chenggong-beach/) |潮汐、海象及現場管制優先；本文岸上散步，不代表當天可游泳。|
 | [成功海防坑道](/attractions/chenggong-tunnel/) | 只走已開放展示動線；未開放坑口及軍事管制區不得進入。 |
 | [成功風獅爺](/attractions/chenggong-wind-lion/) | 村落風獅爺，15–25 分鐘 |
-| [成功嶺風獅爺（私人裝置）](/attractions/chenggongling-wind-lion/) | 私人装置現況及開放未確認；僅從公共道路觀看，不列為必到站。 |
+| [成功嶺風獅爺（私人裝置）](/attractions/chenggongling-wind-lion/) |僅從公共道路觀看，不列為必到站。|
 | [夏興（下坑）風獅爺](/attractions/xiaxing-wind-lions/) | 村落風獅爺，15–25 分鐘 |
 | [尚義環保公園與風獅爺](/attractions/shangyi-environmental-park/) | 環境教育，45–60 分鐘 |
-| [中興堡 E-095](/attractions/zhongxing-fort/) | 海岸據點僅依現場開放動線參觀；不登堡頂、不進封閉坑口，風浪大時略過。 |
+| [中興堡 E-095](/attractions/zhongxing-fort/) |海岸據點僅看現場開放動線參觀；不登堡頂、不進封閉坑口，風浪大時略過。|
 | [E-094天空之城](/attractions/sky-castle-e094/) | 堡體下緣受浪蝕掏空；勿攀登、勿進入下方，僅在安全公共岸段遠看。 |
 | [金門縣陶瓷廠](/attractions/kinmen-ceramics/) | 工藝與產業，45–90 分鐘 |
 
@@ -100,7 +100,7 @@
 
 | 地點 | 參觀重點與條件 |
 | --- | --- |
-| [料羅灣龍堡三營區（82據點）](/attractions/longbao-third-camp/) | 尚未確認常態開放；不列入推薦參觀路線，不進入封閉營區或坑道。 |
+| [料羅灣龍堡三營區（82據點）](/attractions/longbao-third-camp/) |不列入推薦參觀路線，不進入封閉營區或坑道。|
 | [金門媽祖公園（料羅）](/attractions/liaoluo-mazu-park/) | 信仰與海景，20–40 分鐘 |
 | [東村風獅爺](/attractions/dongcun-wind-lion/) | 村落風獅爺，15–25 分鐘 |
 | [峰上巡檢司](/attractions/fengshang-patrol-fort/) | 古海防與城牆，30–45 分鐘 |
@@ -108,7 +108,7 @@
 | [峰上天后宮](/attractions/fengshang-tianhou-temple/) | 媽祖信仰，20–30 分鐘 |
 | [下湖風獅爺與嘯天風獅爺](/attractions/xiahu-wind-lions/) | 村落風獅爺，15–25 分鐘 |
 | [溪邊風獅爺](/attractions/xibian-wind-lion/) | 村落風獅爺，15–25 分鐘 |
-| [溪邊海水浴場](/attractions/xibian-beach/) | 未確認當日救生與開放條件前不要下水；風浪、潮汐與現場管制優先。 |
+| [溪邊海水浴場](/attractions/xibian-beach/) |風浪、潮汐與現場管制優先。|
 | [復國墩觀海台與大螃蟹](/attractions/fuguodun-viewpoint/) | 大螃蟹為景觀裝置，不可攀爬；請從安全平台拍攝，勿進入危險岩岸。 |
 | [下新厝風獅爺](/attractions/xiaxincuo-wind-lion/) | 村落風獅爺，15–25 分鐘 |
 
@@ -130,15 +130,15 @@
 
 | 地點 | 參觀重點與條件 |
 | --- | --- |
-| [金獅影城：營運異動提醒](/attractions/golden-lion-cinema/) | 營運異動：公告營業至2026-10-31；之後是否恢復以新公告為準，勿預排未確認場次。 |
+| [金獅影城：營運異動提醒](/attractions/golden-lion-cinema/) |營運異動：公告營業至2026-10-31；之後是否恢復看新公告。|
 
 ## 交通、午餐與一日提案
-搭車先看[山外車站](/transport/shanwai-station/)與[金門機場](/transport/kinmen-airport/)；漁村用餐可查[良金牧場總店](/food/liangjin-ranch/)。想按時間走，選[金湖一日遊](/itineraries/jinhu-one-day/)，太武山另留半天；不把需申請的軍事場所或未確認開放營區插進隨興路線。
+搭車先看[山外車站](/transport/shanwai-station/)與[金門機場](/transport/kinmen-airport/)；漁村用餐可查[良金牧場總店](/food/liangjin-ranch/)。想按時間走，選[金湖一日遊](/itineraries/jinhu-one-day/)，太武山另留半天；
 
 ## 金湖吃良金，認明工廠總店
 [良金牧場工廠總店](/food/liangjin-ranch/)在漁村160號，適合接陶瓷廠一帶行程；金城莒光路的貞節牌坊店是另一處門店。兩家位置與電話已分頁整理，按當天路線選一家即可。
 ## 太湖住宿、山外正餐和海岸另排
 
-太湖路可比較[金湖飯店](/hotels/golden-lake-hotel/)與[明園民宿](/hotels/#business-county-1166)，夏興方向另看[八二三行館](/hotels/#business-county-2281)。[金湖住宿比較](/hotels/jinhu/)說明基地選擇，接送、早餐或停車都以各場所已核實資料為準。
+太湖路可比較[金湖飯店](/hotels/golden-lake-hotel/)與[明園民宿](/hotels/#business-county-1166)，夏興方向另看[八二三行館](/hotels/#business-county-2281)。[金湖住宿比較](/hotels/jinhu/)說明基地選擇，接送、早餐或停車都看各場所已核實資料。
 
 山外正餐可比較[金拌麵](/food/#business-jinfen-noodles)、[薩諾瓦義式廚房](/food/#business-sanova-italian)及[一來順山外店](/food/#business-ilai-shun-shanwai)的不同用途：食品門市不是同類型餐廳。沿復國墩海岸的[海角之東36](/food/#business-haijiao36)也不是山外步行街內的替代店，先看完整地址與預約，再安排交通。

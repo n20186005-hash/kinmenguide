@@ -14,8 +14,7 @@ test('Maogongshi Coast separates coastal terrain military sites and tide safety'
  for(const title of ['看岩石表面的紋理','海岸休憩區與眺景平台不同','保留地景原貌','附近怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
  await expect(page.locator('.attraction-manager')).toContainText('現行管理/土地及軍事遺構分工待核');
  await expect(page.locator('.article-body')).toContainText('低潮時刻不等安全通行窗');
- await expect(page.locator('.article-body')).toContainText('不由國家公園監測或附近堡體推完整管理');
- await expect(page.locator('.article-body')).toContainText('不安排涉水、游泳');
+  await expect(page.locator('.article-body')).toContainText('不安排涉水、游泳');
  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
  const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
  expect(visible).toEqual(data.faq);

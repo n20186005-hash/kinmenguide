@@ -11,7 +11,7 @@ test('Houhu preserves coast topics and marks unverified POI and water services',
  const hs=await page.locator('article.article-body h2').allTextContents();
  expect(hs.slice(0,10)).toEqual(['探索后湖海濱公園','關於后湖海濱公園','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
  for(const title of ['在料羅灣西岸看海','怎麼到、停留多久','海岸與戲水提醒'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
- await expect(page.locator('.attraction-manager')).toContainText('尚待確認');
+ await expect(page.locator('.attraction-manager')).toContainText('公開資料未提供');
  await expect(page.locator('.attraction-manager a')).toHaveCount(0);
  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
  const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));

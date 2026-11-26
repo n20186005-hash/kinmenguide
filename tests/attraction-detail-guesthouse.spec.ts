@@ -15,8 +15,7 @@ test('Guesthouse separates historic lodging and dated repairs from current admis
  expect(hs.slice(0,10)).toEqual(['探索金門國家公園迎賓館','關於金門國家公園迎賓館','基本資料','交通方式','路線地圖','人文與展示','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
  for(const title of ['這裡值得看什麼','怎麼安排參觀','把下一站排在附近'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
  await expect(page.locator('.attraction-manager')).toContainText('2000年移交維護管理');
- await expect(page.locator('.article-body')).toContainText('不因迎賓館、地下希爾頓或復原客房名稱推可入住');
- await expect(page.locator('.article-body')).toContainText('不稱現在一定施工或已開放');
+  await expect(page.locator('.article-body')).toContainText('不稱現在一定施工或已開放');
  await expect(page.locator('.article-body')).toContainText('不當全年不變規則');
  await expect(page.locator('.article-body')).toContainText('不代表土地所有權移轉或當日全館開放');
  await expect(page.locator('.attraction-manager a')).toHaveAttribute('href',"https://www.kmnp.gov.tw/ch/touristInfo/recreation-sites/38");

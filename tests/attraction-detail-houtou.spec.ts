@@ -12,7 +12,7 @@ test('Houtou distinguishes two historic statues without inferring present access
  expect(hs).not.toContain('景點相冊');
  expect(hs.slice(0,10)).toEqual(['探索后頭風獅爺','關於后頭風獅爺','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
  for(const title of ['兩尊風獅爺一起看','從造型讀地方信仰','不移動衣飾與供品','附近怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
- await expect(page.locator('.attraction-manager')).toContainText('尚待確認');
+ await expect(page.locator('.attraction-manager')).toContainText('公開資料未提供');
  await expect(page.locator('.article-body')).toContainText('2010年尋回');
  await expect(page.locator('.article-body')).toContainText('1991年重塑');
  await expect(page.locator('.attraction-manager a')).toHaveCount(0);

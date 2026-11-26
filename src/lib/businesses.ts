@@ -157,7 +157,7 @@ export function getPublicBusinesses() {
     websiteLabel: b.facts?.websiteSource ? '政府資料所列網站' : '業者網站',
     sourceUrl: b.sources.find(s => s.id === b.status.sourceId)!.url || '', sources: b.sources.filter(s => s.url).map(s => ({ url: s.url!, checkedAt: s.checkedAt })),
     checkedAt: b.status.checkedAt, state: b.status.state,
-    notice: b.kind === 'hotel' && !canPlanBusiness(b) && !['temporary_closed', 'permanently_closed'].includes(b.status.state) ? '此筆提供住宿資料參考；實際入住服務尚待確認，請先向業者核對。' : b.status.state === 'operating' ? '公開資料供規劃參考；出發前另確認營業、供餐或入住條件。' : b.status.state === 'unverified' ? '此筆提供住宿基本資料；入住服務與訂房條件尚待確認。' : b.status.reason!,
+    notice: b.kind === 'hotel' && !canPlanBusiness(b) && !['temporary_closed', 'permanently_closed'].includes(b.status.state) ? '此筆提供住宿資料參考；實際入住服務公開資料未提供，請先向業者核對。' : b.status.state === 'operating' ? '公開資料供規劃參考；出發前另確認營業、供餐或入住條件。' : b.status.state === 'unverified' ? '此筆提供住宿基本資料；入住服務與訂房條件公開資料未提供。' : b.status.reason!,
     detailHref: b.publication.href || businessLinks[`${b.kind}:${b.id}`],
     filterFacts: mergeCtripFacilities(b.filterFacts || [], b.facts, ctripForPublic(b)).filterFacts,
     baseFilterFacts: b.filterFacts || [],

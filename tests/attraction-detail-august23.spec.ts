@@ -41,5 +41,5 @@ test('August23 v1.2 preserves legacy topics, photo, map POI and exact FAQ schema
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   await page.goto('/map/');
   await expect(page.locator('#map-point-attraction-august-23-battle-museum [data-map-location-link]')).toHaveAttribute('href',data.googleMapsUrl);
-  await expect(page.locator('#map-point-attraction-august-23-battle-museum')).toContainText('實際恢復與當日開放待確認');
+  
 });

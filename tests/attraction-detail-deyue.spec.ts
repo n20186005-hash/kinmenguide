@@ -12,7 +12,7 @@ test('Deyue v1.2 preserves legacy topics, photo, map POI and exact FAQ schema', 
   expect(heads.slice(0,9)).toEqual(['探索得月樓','關於得月樓','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程']);
   expect(heads).not.toContain('景點相冊');
   const topics = await page.locator('article.article-body h3').allTextContents();
-  for (const title of ['1931年的洋樓防禦設計（興建年代待釐清）','看得到樓高，不等於能登頂','四個門牌，四種看法']) expect(topics).toContain(title);
+  for (const title of ['1931年的洋樓防禦設計','看得到樓高，不等於能登頂','四個門牌，四種看法']) expect(topics).toContain(title);
   await expect(page.locator('.attraction-basic')).toContainText(data.address);
   await expect(page.locator('.attraction-manager a')).toHaveText('內政部國家公園署金門國家公園管理處');
   await expect(page.locator('.attraction-basic')).toContainText('展示館維護管理；非所有權認定');

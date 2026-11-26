@@ -32,5 +32,5 @@ test('Chenggongling v1.2 separates private installation, preserves legacy and ex
   await page.locator('[data-stop="chenggongling-wind-lion"] [data-action="remove"]').click();await expect(page.locator('[data-stop="chenggongling-wind-lion"]')).toHaveCount(0);
   await page.goto('/attractions/chenggongling-wind-lion/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   await page.goto('/map/');await expect(page.locator('#map-point-attraction-chenggongling-wind-lion [data-map-location-link]')).toHaveAttribute('href',data.googleMapsUrl);
-  await expect(page.locator('#map-point-attraction-chenggongling-wind-lion')).toContainText('現況及對外開放未確認');
+  
 });

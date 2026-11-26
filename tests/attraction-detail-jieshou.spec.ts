@@ -12,7 +12,7 @@ test('Jieshou keeps management unverified without relying on an ambiguous report
  expect(hs).not.toContain('景點相冊');
  expect(hs.slice(0,10)).toEqual(['探索介壽亭與介壽公園','關於介壽亭與介壽公園','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
  for(const title of ['龍蟠山腰的六角亭','一段短程散步','雨後注意階梯','附近怎麼安排'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
- await expect(page.locator('.attraction-manager')).toContainText('尚待確認');
+ await expect(page.locator('.attraction-manager')).toContainText('公開資料未提供');
  await expect(page.locator('.article-body')).not.toContainText('2018年縣府報告曾記鄉公所管理');
  await expect(page.locator('.article-body')).toContainText('鄉公所發布景點介紹不等於已證實由其管理或擁有');
  await expect(page.locator('.attraction-manager a')).toHaveCount(0);

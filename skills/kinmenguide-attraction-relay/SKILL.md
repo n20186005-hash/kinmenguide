@@ -5,7 +5,7 @@ description: Kinmen Guide 金門景點接力 Skill v1.2：統一景點詳頁、�
 
 # Kinmen Guide 景點接力優化 Skill v1.2
 
-使用前先閱讀倉庫 `docs/attraction-detail-template-v1.2.md`；該文件為此 Skill 的內容和順序標準。初次改版須查 `src/content/attractions/` 和 `docs/attraction-template-migration.csv`，以單一 slug 為範圍。
+使用前先閱讀倉庫 `docs/attraction-detail-template-v1.2.md`；該文件為此 Skill 的內容和順序標準。**語調另須遵守 `docs/editorial-voice-rules.md`（2026-11-25 使用者指令）**：用可核實的路線與在地細節寫出遊記筆法，不加「未親訪」之類的固定聲明，不編造第一人稱體驗。初次改版須查 `src/content/attractions/` 和 `docs/attraction-template-migration.csv`，以單一 slug 為範圍；語調批次另查 `docs/editorial-voice-migration.csv`。
 
 ## 必做流程
 
@@ -15,12 +15,13 @@ description: Kinmen Guide 金門景點接力 Skill v1.2：統一景點詳頁、�
 2b. **導航直達景點地標**：每站提供經人工核對、屬於**同一個景點**的 `googleMapsUrl`（可使用實際 Google Maps `maps.app.goo.gl` 短連結），「查看位置」「查看位置與導航」「路線地圖」及全島 `/map/` 導航按鈕全部優先使用它，不能用經緯度搜尋網址、地區關鍵字、其他同名地標或地址文字搜尋替代。只把已核對的 Google Maps POI 顯示地址輸出至 `TouristAttraction.address.streetAddress`，`hasMap` 設成同一 URL。原經緯度僅用於已核實的地圖示意點，不能代替導航目的地。暫無可核對 POI 連結應登記待查，不得宣稱導航已核對。
 
 3. 排列頁面：H1＋短描述 → **有授權的實景主圖及署名** → 探索 → 遊覽建議 → 景區特色 → 關於（含「目前管理單位」和來源連結）→ 基本資料 → 交通方式 → 路線地圖 → 人文生態 → **遊客資訊與常見問答** → **行前規劃與深度遊覽**（保留原有各專題，H3）→ 周邊景點與順路行程 → 查核提醒與來源。**不再預設輸出相冊 H2。**
+3a. **語調層**：探索、行前規劃、拍照與攻略段用 `docs/editorial-voice-rules.md` 的遊記筆法，寫清楚從哪裡抵達、哪個入口好找、沿途看什麼、下雨或時間不夠怎麼改走；細節要能指到本頁已核對的來源。逐頁撰寫 `routeGuide`，禁止把同一套句子套到所有景點；查不到就記「尚待確認」，不補情節。頁尾不重複「本站是第三方指南」或「非現場訪查」固定句。
 4. **刪除空白相冊**：若只有已用作主圖的一張照片、重複主圖、授權說明或缺少實景，**不渲染「景點相冊」標題與空容器**；主圖、alt、來源、作者和 CC 授權不能刪。只有至少兩張不同且可合法展示的景點實景圖，才可評估獨立相冊。此規則適用所有既有和未來新增的景點。
 5. **擴充有根據的 FAQ**：先讀官方資料與遊客需求，再增加票價、時間、交通、停車、設施、無障礙、雨天與解說等真實問答；沒有來源不補湊數。**凡可見 FAQ，須同步更新內容 frontmatter 的 faq[]，使 HTML <details> 與 FAQPage JSON-LD 的問題、答案、順序完全一致**。測試逐項比較，不只數量。
 6. 若該頁有原本的出發前查開放、風景觀察、行程安排、親子攝影、歷史工程等專題，放在 FAQ **後面**、周邊推薦 **前面**，不能只搬摘要。
 7. 在單獨 feature branch 更新，明確 opt-in，避免同步污染未改版景點；保留 SEO schema、行程清單、圖片來源及內鏈。
 8. Sol 負責 Astro/TS、測試與複雜修復；Luna 負責官方來源及獨立 QA。需要記錄模型和產出；無可用子代理時自行核對並坦白記錄未派遣，不假稱。
-9. 執行 `pnpm validate` 和 `pnpm test:browser`；核驗唯一 H1、H2/H3 順序、**Google 地圖門牌與地址描述分離、具名 POI 導航連結一致（詳頁、全島地圖、JSON-LD）**、無內容相冊 H2 不存在、原主圖/授權保留、FAQ 資料與 HTML/JSON-LD 共用且完整對應、manager 來源連結、手機無溢出、舊專題全部保留。
+9. 執行 `pnpm test:voice`、`pnpm validate` 和 `pnpm test:browser`；核驗唯一 H1、H2/H3 順序、routeGuide 四個帶路問題與來源、**Google 地圖門牌與地址描述分離、具名 POI 導航連結一致（詳頁、全島地圖、JSON-LD）**、無內容相冊 H2 不存在、原主圖/授權保留、FAQ 資料與 HTML/JSON-LD 共用且完整對應、manager 來源連結、手機無溢出、舊專題全部保留。
 10. CI 通過、審閱同意、合併部署後**再次檢查公開頁面**；未核實到 live 更新不得記 VERIFIED。更新接力 CSV 及下一站任務包。
 
 ## 翟山坑道 v1.2 驗收鎖點

@@ -24,7 +24,7 @@ test('ChenJinglan v1.2 preserves legacy topics, photo, map POI and exact FAQ sch
   await expect(page.locator('.attraction-basic')).toContainText('金門縣文化局／文化資產科（文資主管）');
   expect(data.updatedAt).toBe('2026-11-05');
   expect(data.faq[0].answer).toContain('出發前請向金湖鎮公所確認');
-  expect(data.faq[1].answer).toContain('公所館務、文化局文資主管與私人土地所有權分開');
+  expect(data.faq[1].answer).toContain('公所館務，文化局文資主管與私人土地所有權分開');
   expect(data.sources.some((s:any)=>s.url==='https://tcmb.culture.tw/zh-tw/detail?id=20030331000015&indexCode=BOCH_CountryCulture_12')).toBe(true);
   await expect(page.locator('.attraction-basic')).toContainText('完整無障礙及各層動線未核實');
   await expect(page.locator('article.article-body')).toContainText('不保證固定班距或步行分鐘');

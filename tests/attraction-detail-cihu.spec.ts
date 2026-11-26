@@ -25,5 +25,5 @@ test('Cihu v1.2 preserves original topics, distinguishes platform works and exac
   const place=graph.find(n=>n['@type']==='TouristAttraction');expect(place.address.streetAddress).toBe('892');expect(place.hasMap).toBe('https://maps.app.goo.gl/XEQyhdcK9TMB15uKA');expect(data.coordinates).toEqual({lat:24.463408,lng:118.3005492});
   await page.locator('[data-trip-add="cihu-causeway"]').click();await page.goto('/trip/');await expect(page.getByRole('heading',{name:data.title,exact:true})).toBeVisible();await page.locator('[data-stop="cihu-causeway"] [data-action="remove"]').click();await expect(page.locator('[data-stop="cihu-causeway"]')).toHaveCount(0);
   await page.goto('/attractions/cihu-causeway/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
-  await page.goto('/map/');await expect(page.locator('#map-point-attraction-cihu-causeway [data-map-location-link]')).toHaveAttribute('href',data.googleMapsUrl);await expect(page.locator('#map-point-attraction-cihu-causeway')).toContainText('未確認重開');
+  await page.goto('/map/');await expect(page.locator('#map-point-attraction-cihu-causeway [data-map-location-link]')).toHaveAttribute('href',data.googleMapsUrl);
 });

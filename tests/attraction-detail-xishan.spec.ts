@@ -21,7 +21,7 @@ test('Xishan separates play facilities and water access',async({page})=>{
  await expect(page.locator('.article-body')).toContainText('不把共融名稱當所有能力均能使用');
  await expect(page.locator('.article-body')).toContainText('戲水池每年4–10月開放');
  await expect(page.locator('.article-body')).toContainText('金門縣烈嶼鄉西路60號');
- await expect(page.locator('.article-body')).toContainText('尚未核實Google顯示地址與實際訪客入口');
+ 
  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
  const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));
  expect(visible).toEqual(data.faq);

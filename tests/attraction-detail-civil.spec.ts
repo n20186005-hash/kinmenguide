@@ -14,7 +14,7 @@ test('Civil defense tunnel separates opening hours and dated tours from admissio
  expect(hs).not.toContain('景點相冊');
  expect(hs.slice(0,10)).toEqual(['探索金城民防坑道','關於金城民防坑道','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
  for(const title of ['入口在車站二樓','看見城市下方的防護網','窄、濕、暗的路段要先評估'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
- await expect(page.locator('.attraction-manager')).toContainText('尚待確認');
+ await expect(page.locator('.attraction-manager')).toContainText('公開資料未提供');
  await expect(page.locator('.article-body')).toContainText('不保證每分鐘有場次');
  await expect(page.locator('.article-body')).toContainText('不保證現行路線或出口相同');
  await expect(page.locator('.attraction-manager a')).toHaveCount(0);

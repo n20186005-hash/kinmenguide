@@ -13,6 +13,17 @@ This is an Astro + Tailwind + TypeScript static tourism guide. The user has appr
 - Tests per batch: `pnpm validate`, `pnpm test:browser` (desktop/mobile), SEO/canonical, visible headings and FAQ/schema, image credits, trip planner, no non-attraction collection drift. Every work unit needs a reviewable PR, CI evidence and updated `docs/attraction-template-migration.csv`. Only mark `VERIFIED` after independent live URL inspection; otherwise `AWAITING_LIVE_CHECK`.
 - After a batch, update Issue #59 and CSV with merged SHA, unresolved sources and exact next slugs. Resume from those durable files in a separate task/worktree to avoid context inflation. Continue until all attractions are genuinely reviewed and verified; do not ask for permission after each site within the already-authorized scope. If task spawning, repository access, image provenance, external lookup or deployment verification is unavailable, record the blocker rather than reporting success.
 
+## Site-wide editorial voice (user instruction, 2026-11-25)
+
+The user superseded the disclaimer approach for the whole site: **write in a real travelogue voice, do not add disclaimers**. Read **`docs/editorial-voice-rules.md`** before touching any reader-facing copy; it is the durable handoff for this work. This instruction explicitly authorises a site-wide sweep of fixed disclaimer sentences across all content collections plus the shared templates/components — it is not the standing attraction batch mandate. Changes to non-attraction collections stay limited to removing fixed "not-visited" statements and rewriting voice; do not alter their facts, prices, links, schemas or structure.
+
+- Never add 「未親訪」-type fixed statements, never fabricate first-person experience; every arrival point, entrance, along-the-way detail, photo position and rain/short-on-time alternative must be grounded in verifiable sources.
+- Also never add fixed availability disclaimers such as 「當日房況仍待確認」/「即時房況仍待確認」 to reader-facing pages (user instruction, 2026-11-26). Delete them; keep only the checked dates and source facts.
+- Reader-facing body copy and FAQ must contain no uncertainty wording at all: no 「待確認／未確認／未核實」 verification-status language and no hedges such as 「可能／建議／以現場公告為準」. Rewrite them as confident, sourced guidance without inventing facts. Source/edit records (`sources[]` and the visible source sections) are exempt. Run `pnpm test:voice` (which includes `scripts/verify-uncertainty.mjs`).
+- Keep the v1.2 framework for basic facts, management, named Google Maps POI, visible FAQ / `faq[]` / JSON-LD parity, photo credits and source/edit records.
+- Track batches in **`docs/editorial-voice-migration.csv`**; `DONE` requires a complete `routeGuide` and a live check of the deployed URL, not just a source lookup. Run `pnpm test:voice`, `pnpm validate` and `pnpm test:browser` per batch. Do not claim the whole site is rewritten without evidence.
+- Tooling: `scripts/rewrite-editorial-voice.mjs` (dry-run by default, `--write` applies), `scripts/update-voice-csv.mjs` (rebuilds the tracking CSV from source), `scripts/verify-editorial-voice.mjs` (`pnpm test:voice`, also in `pnpm test` / `pnpm validate`). Current batch status, evidence and blockers are recorded in `docs/editorial-voice-rules.md` §7.
+
 ## Outside attraction migration
 
 Make the narrowest possible changes requested by the user. The standing attraction batch mandate is **not** permission to alter hotel, dining, editorial, itinerary, or other content.

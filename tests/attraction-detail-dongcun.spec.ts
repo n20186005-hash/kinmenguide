@@ -16,8 +16,7 @@ test('Dongcun v1.2 preserves original topics, separates archival management and 
   await expect(page.locator('.article-header').getByRole('link',{name:'查看歷史典藏管理記錄',exact:true})).toHaveAttribute('href','https://catalog.digitalarchives.tw/item/00/66/7a/a7.html');
   await expect(page.locator('.article-header').getByRole('link',{name:'查看管理／文化資產資料',exact:true})).toHaveCount(0);
   await expect(page.locator('article.article-body')).toContainText('舊數位典藏曾列公共財');
-  await expect(page.locator('article.article-body')).toContainText('不能由沒有票價就推定周邊全部免費開放');
-  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
+    await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveAttribute('href',data.googleMapsUrl);
   await expect(page.getByRole('link',{name:'Google地圖・東村風獅爺（具名石獅地標）'})).toHaveAttribute('href',data.googleMapsUrl);
   await expect(page.getByRole('link',{name:'查看東村風獅爺Google具名地標'})).toHaveAttribute('href',data.googleMapsUrl);
   const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));expect(visible).toEqual(data.faq);

@@ -62,7 +62,7 @@ for(const {loc,lastmod} of sitemapUrls){
  const source=match&&path.join('src/content',match[1],`${match[2]}.md`);
  if(source&&fs.existsSync(source)){
   const raw=fs.readFileSync(source,'utf8');
-  const frontmatter=raw.match(/^---\n([\s\S]*?)\n---/);
+  const frontmatter=raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   assert.ok(frontmatter,`Missing frontmatter for ${url.pathname}`);
   const updatedAt=JSON.parse(frontmatter[1]).updatedAt;
   assert.equal(lastmod.slice(0,10),updatedAt,`Incorrect lastmod for ${url.pathname}`);

@@ -14,9 +14,8 @@ test('Juguang inclusive design does not guarantee present accessibility or equip
  expect(hs).not.toContain('景點相冊');
  expect(hs.slice(0,10)).toEqual(['探索莒光共融公園','關於莒光共融公園','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
  for(const title of ['把遊戲時間留進行程','共融也需要遵守使用方式','湖、樓與公園分配時間'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
- await expect(page.locator('.attraction-manager')).toContainText('尚待確認');
- await expect(page.locator('.article-body')).toContainText('不能由名稱保證全部可用');
- await expect(page.locator('.article-body')).toContainText('這是歷史工程及活動角色');
+ await expect(page.locator('.attraction-manager')).toContainText('公開資料未提供');
+  await expect(page.locator('.article-body')).toContainText('這是歷史工程及活動角色');
  await expect(page.locator('.attraction-manager a')).toHaveCount(0);
  await expect(page.getByRole('link',{name:'查看位置',exact:true})).toHaveCount(0);
  const visible=await page.locator('article.article-body details').evaluateAll(ds=>ds.map(d=>({question:d.querySelector('summary')?.textContent,answer:d.querySelector('p')?.textContent})));

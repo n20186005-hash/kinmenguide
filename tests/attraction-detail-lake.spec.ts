@@ -14,7 +14,7 @@ test('Juguang Lake keeps shore access separate from water activities and rescue 
  expect(hs).not.toContain('景點相冊');
  expect(hs.slice(0,10)).toEqual(['探索莒光湖','關於莒光湖','基本資料','交通方式','路線地圖','人文生態','遊客資訊與常見問答','行前規劃與深度遊覽','周邊景點與順路行程','查核日期與參觀提醒']);
  for(const title of ['市區南邊的一段留白','季節與光線各有表情','與親子遊戲分開選'])await expect(page.getByRole('heading',{name:title,exact:true})).toHaveCount(1);
- await expect(page.locator('.attraction-manager')).toContainText('尚待確認');
+ await expect(page.locator('.attraction-manager')).toContainText('公開資料未提供');
  await expect(page.locator('.article-body')).toContainText('湖畔散步不代表可下水');
  await expect(page.locator('.article-body')).toContainText('不能把演練或歷史活動當遊客可自行游泳、划船的證明');
  await expect(page.locator('.attraction-manager a')).toHaveCount(0);

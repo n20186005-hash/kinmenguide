@@ -22,6 +22,16 @@ const common = z.object({
   sources: z.array(z.object({ title: z.string(), url: z.url() })).min(1),
   facts: z.array(z.object({ label: z.string(), value: z.string() })).default([]),
   faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
+  // Per-page travelogue layer: see docs/editorial-voice-rules.md. Optional until the page is rewritten.
+  routeGuide: z.object({
+    arrival: z.string().min(12),
+    entrance: z.string().min(12),
+    alongTheWay: z.string().min(12),
+    rain: z.string().min(12),
+    shortOnTime: z.string().min(12),
+    photoTip: z.string().min(12),
+    sources: z.array(z.object({ title: z.string(), url: z.string() })).min(1),
+  }).optional(),
 });
 const attraction = common.extend({
   coordinates: z.object({ lat: z.number().min(24).max(25), lng: z.number().min(118).max(119) }).optional(),
