@@ -9,7 +9,7 @@
   "duration": "按日期查詢",
   "order": 5.5,
   "featured": true,
-  "updatedAt": "2026-10-12",
+  "updatedAt": "2026-11-26",
   "aliases": [
     "2026年11月厦金小三通排班表",
     "厦门金门船班",
@@ -18,6 +18,7 @@
     "船班时刻表"
   ],
   "related": [
+    "/transport/xiamen-kinmen-ferry-december-2026/",
     "/transport/from-mainland-china/",
     "/transport/xiaosantong/",
     "/attractions/kinmen-port-terminal/"
@@ -30,6 +31,10 @@
     {
       "title": "金門觀光旅遊網・小三通船班資訊與訂票入口",
       "url": "https://www.kinmen.travel/zh-tw/news/details/3470"
+    },
+    {
+      "title": "交通部航港局・115年12月金門小三通航班表",
+      "url": "https://www.motcmpb.gov.tw/Information/Detail/c38c3a2d-475f-454c-ba23-d4ad77f0114a?NodeId=543&SiteId=1"
     }
   ],
   "facts": [],
@@ -62,6 +67,8 @@
   ]
 }
 ---
+
+> **12月船班已更新：** [前往查看2026年12月廈金小三通船班表](/transport/xiamen-kinmen-ferry-december-2026/)；[小三通行前規劃](/transport/xiaosantong/)保留11月與12月入口，並串接官方船班與訂票資訊。
 
 ## 如何閱讀這份11月船班表
 本頁按站方提供的「2026年11月廈金小三通排班表」PDF轉錄，適用 **2026年11月1日至30日**。左半表是五通出發往金門，右半表是金門出發往五通；請按出發港選方向，去程與回程的船名不同。

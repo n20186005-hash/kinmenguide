@@ -171,6 +171,12 @@ public/_redirects            # 舊版 /guide/ 等 URL 301 對應
 
 新增3項瀏覽器案例（桌面與手機共6項），驗證主題入口、路線内容、交叉篩選、空狀態重設及無JavaScript瀏覽。
 
+## 2026年12月廈金船班接棒
+
+`/transport/xiamen-kinmen-ferry-december-2026/` 依交通部航港局2026-11-10發布的12月官方PDF整理，提供31天、雙向每日各12班，共744條排班記錄。日期及方向可查詢；完整月表在無JavaScript時仍可閱讀，原始PDF保留於 `public/documents/`，SHA256記錄於 `verification/ferry-2026-12-extraction.json`。船名保留原表繁體，16:15時段原樣保留，兩端訂位電話也按原表列出。
+
+11月船班頁頂部新增12月明顯入口；首頁、交通欄目、中國大陸赴金門與`小三通行前規劃`固定入口同步串接11月與12月。資料存放 `src/data/ferry-2026-12.json`，`FerrySchedule.astro` 以月份參數共用查詢元件。
+
 ## 2026年11月廈金船班
 
 `/transport/xiamen-kinmen-ferry-november-2026/` 提供30天、雙向每日各12班，共720條排班記錄。日期及方向可查詢；完整月表在無JavaScript時仍可閱讀，原始PDF保留於 `public/documents/`。資料為站方提供PDF的逐格轉錄，沒有即時餘票、停航或票價資訊。首頁、交通欄目、中國大陸赴金門與小三通指南均有入口。

@@ -1,0 +1,22 @@
+{
+  "sourceSha256": "77542fe18475bf592af62303f2b5baa935eefbb76142aa3b0fffae1f9d974a14",
+  "pages": 1,
+  "tableRows": 35,
+  "columns": 26,
+  "days": 31,
+  "directions": 2,
+  "sailingsPerDirectionPerDay": 12,
+  "totalSailings": 744,
+  "checks": [
+    "pdfplumber extract_tables returned one 26-column table",
+    "All 31 dates and weekdays checked against the 2026-12 calendar",
+    "No empty vessel cells in 31 date rows",
+    "Departure headers identical in both directions",
+    "Source PDF copied byte-for-byte and SHA256 recorded",
+    "pypdf layout text stream independently extracted for review"
+  ],
+  "source": "https://www.motcmpb.gov.tw/Information/Detail/c38c3a2d-475f-454c-ba23-d4ad77f0114a?NodeId=543&SiteId=1",
+  "publishedAt": "2026-11-10",
+  "lastCheckedAt": "2026-11-12",
+  "note": "Table columns 3-14 are Kinmen to Wutong and columns 15-26 are Wutong to Kinmen. Vessel names retain source Traditional Chinese spelling. Booking phones from the source PDF are preserved in the JSON."
+}

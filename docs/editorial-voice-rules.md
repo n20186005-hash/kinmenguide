@@ -163,3 +163,19 @@
 **頁面更新**：`src/content/food/oyster-fritter-house.md` 的 `updatedAt` 改為 2026-11-26；`facts[電話]`、正文致電說明改為 082-329222；新增「蚵嗲之家的電話是哪一支？」FAQ，frontmatter 與可見 FAQ／JSON-LD 同源；`sources[]` 加入官方店家頁、Google Maps 具名地點與舊官方專題，舊號留在來源紀錄。`tests/food-guides.spec.ts` 增加現行電話與舊號位置的回歸斷言。
 
 **驗證與上線**：`pnpm test:voice` 通過（584 個原始檔、66,633 行、534 頁、9 份帶路、FAQ parity、讀者可見部分 0 不確定詞）；`pnpm validate` 通過（`astro check` 208 檔 0 errors / 0 warnings / 0 hints，556 頁、49,793 內部連結、1,928 圖片實例、4,162 schema 節點、canonical／錨點／sitemap／robots／照片／商家／攜程稽核）；`pnpm test:browser` 438 passed（desktop + mobile）。提交 `45e2237733ba88d4015683c22647453d0c5802cf` 已推送至 `origin/main`；以帶 SHA 的 cache-busting URL 讀取正式站 `https://kinmenguide.com/food/oyster-fritter-house/`，確認基本事實與正文致電號碼為 082-329222、可見 FAQ 4 題並含電話判定問答、資料來源區塊列出舊號 082-322210 與三個來源連結、帶路區塊仍在。CSV notes 已補記 `phone-fix-live-check-2026-11-26-sha-45e223...`。
+
+## 15. SEO 語氣、分潤一致性與 12 月船班接棒（2026-11-26）
+
+**查核**：以 `https://kinmenguide.com/about/?audit=20261126` 與本地原始檔比對，使用者引用的「停留時間、行程順序和住宿選區是編輯建議，並非官方保證或親訪評分」「本站不將資料整理包裝為已實地體驗」已不在現行 `/about/`；但頁面仍有「查不到就留給官方公告，不替它補一個答案」「不是班次表」「不是金門縣政府或景點管理單位」等負向表述。本輪把 `src/pages/about.astro` 改寫成資料來源、定期維護、現地動線與現地注意事項的正向說明，沒有加入親訪經驗、官方背書或即時狀態保證。
+
+**分潤一致性**：`Footer.astro`、`BusinessDirectory.astro`、`BookingCard.astro`、`terms.astro`、`privacy.astro` 與 `/about/` 統一為「第三方推廣連結、連結旁標示、完成預訂可能獲得佣金、本站不收預訂費用且不受理訂單與付款」。佣金揭露保留 `可能獲得佣金`，以符合既有 Ctrip 披露測試；移除「以合作平台最終頁面為準」這類依賴式措辭，不再讓頁尾與關於頁的商業定位互相打架。
+
+**11月→12月接棒**：交通部航港局 `115年12月金門小三通航班表` 官方頁（發布 2026-11-10、最後檢核 2026-11-12）提供金廈 PDF。下載官方原檔至 `public/documents/xiamen-kinmen-ferry-2026-12.pdf`（SHA256 `77542fe18475bf592af62303f2b5baa935eefbb76142aa3b0fffae1f9d974a14`），以 pdfplumber 表格與 pypdf 文字層抽取 31 天、雙向每日 12 班，共 744 班，逐日核對日期與星期、無空白船名欄位。新增 `src/content/transport/xiamen-kinmen-ferry-december-2026.md`、`src/data/ferry-2026-12.json`、`verification/ferry-2026-12-extraction.json`；`FerrySchedule.astro` 改為月份參數化，11月與12月共用查詢、完整月表、無JavaScript閱讀與原PDF下載。11月頁頂部接上12月明顯連結，首頁／交通欄目 `ArrivalGuide.astro` 主打12月並保留11月表；`xiaosantong.md` 成為固定月份總覽，並同步 `from-mainland-china.md`。
+
+**分類頁可抓取入口**：`src/pages/[collection]/index.astro` 移除「啟用 JavaScript 後可依地區和關鍵字篩選」的 `<noscript>` 提示，加入可直接抓取的地區與主題連結。首頁區塊密度本輪未重排，避免越權改動既有版面與主要 schema；這項留作後續 A/B 或資訊架構工作。
+
+**深度補肉邊界**：本輪完成 12月船班表的可驗證深度內容（744班、兩端訂位電話、官方PDF與FAQ/schema）。其餘 5～10 篇高曝光頁未補價格、排隊細節與實拍照片：本機沒有 GSC 曝光資料，也沒有新的合法照片資產、攝影者與授權紀錄；不編造價格、隊伍或第一人稱照片。候選仍以 `food/jinshan-smoked-goose`、`food/max-bakery`、`guides/restricted-items`、伴手禮與既有 9 篇 `DONE` 頁為準，另開任務逐頁查核。
+
+**追蹤與驗證**：`scripts/update-voice-csv.mjs` 重建 `docs/editorial-voice-migration.csv` 為 535 頁（526 `CLEARED`、9 `DONE`、0 `AWAITING_LIVE_CHECK`），新增 12月頁為 `CLEARED`，未寫入 `DONE`。`pnpm test:voice` 通過（586 個原始檔、67,811 行、535 頁、9 份帶路、FAQ parity、0 不確定詞）；`pnpm check` 0 errors / 0 warnings / 0 hints；`pnpm validate` 通過（557 頁、49,940 內部連結、1,928 圖片實例、4,168 schema 節點、canonical／錨點／sitemap／robots／照片／商家／攜程稽核）；`pnpm test:browser` 440 passed（desktop + mobile），含 11→12 接棒、744 月表欄位與 12月 PDF 雜湊。
+
+**部署狀態**：本輪只完成本地原始檔與檢查，尚未提交、push 或部署；上線 URL live check、合併 SHA 與 CSV 的 `DONE` 更新留到部署後補登。

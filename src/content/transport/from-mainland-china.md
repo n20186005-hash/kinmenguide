@@ -9,8 +9,9 @@
   "tag": "出發指南",
   "duration": "行前必讀",
   "order": -1,
-  "updatedAt": "2026-10-12",
+  "updatedAt": "2026-11-26",
   "related": [
+    "/transport/xiamen-kinmen-ferry-december-2026/",
     "/transport/xiamen-kinmen-ferry-november-2026/",
     "/guides/entry-documents/",
     "/guides/restricted-items/",
@@ -60,8 +61,10 @@
 
 普通護照、身分證、港澳通行證不能直接代替上述赴金旅行文件。旅居海外的大陸居民適用其他申請類別，應按移民署資格判斷，不因改從香港或海外出發就自動取得免簽資格。
 
-## 2026年11月廈門往返金門船班
-[查詢11月廈金小三通船班表](/transport/xiamen-kinmen-ferry-november-2026/)：選搭船日期和方向，查看當日12班開航時間及船名，也可下載站方提供的原始PDF。此表只含廈門五通線，不含石井線；實際開航與換船請向承運公司確認。
+## 2026年11月與12月廈門往返金門船班
+[查詢12月廈金小三通船班表](/transport/xiamen-kinmen-ferry-december-2026/)：依交通部航港局12月官方PDF整理，選搭船日期和方向查看開航時間與船名，也可下載原檔、查看兩端訂位電話。月份入口保留在[小三通行前規劃](/transport/xiaosantong/)。
+
+[查詢11月廈金小三通船班表](/transport/xiamen-kinmen-ferry-november-2026/)：保留11月表供查歷史行程，查看當日12班開航時間及船名，也可下載站方提供的原始PDF。此表只含廈門五通線，不含石井線；實際開航與換船看承運公司當日通知。
 
 ## 怎麼接到水頭碼頭
 **廈門線：** 各地搭飛機或鐵路抵達廈門 → 陸路到五通客運碼頭 → 小三通船班 → 金門水頭 → 金城／住宿。

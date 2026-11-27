@@ -1,34 +1,42 @@
 ---
-import schedule from '../data/ferry-2026-11.json';
+import november from '../data/ferry-2026-11.json';
+import december from '../data/ferry-2026-12.json';
+interface Props { month?: '2026-11' | '2026-12'; }
+const { month = '2026-11' } = Astro.props;
+const schedule = month === '2026-12' ? december : november;
+const monthNumber = month === '2026-12' ? '12' : '11';
+const monthEn = month === '2026-12' ? 'DECEMBER 2026 / XIAMEN ↔ KINMEN' : 'NOVEMBER 2026 / XIAMEN ↔ KINMEN';
+const monthRange = `2026年${monthNumber}月1日至${schedule.days.length}日`;
+const totalSailings = schedule.days.length * schedule.times.length * 2;
 const directions = [{ key: 'toKinmen', label: '廈門五通 → 金門', short: '五通出發' }, { key: 'toWutong', label: '金門 → 廈門五通', short: '金門出發' }] as const;
 ---
-<section class="ferry-schedule" id="ferry-schedule" aria-labelledby="ferry-heading" data-ferry-schedule>
-  <div class="ferry-heading"><span class="eyebrow">NOVEMBER 2026 / XIAMEN ↔ KINMEN</span><h2 id="ferry-heading">11月廈金小三通船班查詢</h2><p>2026年11月1日至30日 · 兩個方向每日各12班</p></div>
-  <p class="ferry-notice">依站方提供的11月PDF整理，供行程規劃參考；不是即時餘票或停航資訊。改班、換船及是否開航，請以承運公司當日通知為準。</p>
-  <div class="ferry-actions"><a class="button button-light" href={schedule.sourceFile} download>下載11月原始PDF</a><a class="text-link" href="https://www.kinmen.travel/zh-tw/news/details/3470" target="_blank" rel="noopener noreferrer">查看官方船班與訂票入口 ↗</a></div>
+<section class="ferry-schedule" id="ferry-schedule" aria-labelledby="ferry-heading" data-ferry-schedule data-schedule={JSON.stringify({ times: schedule.times, days: schedule.days })}>
+  <div class="ferry-heading"><span class="eyebrow">{monthEn}</span><h2 id="ferry-heading">{monthNumber}月廈金小三通船班查詢</h2><p>{monthRange} · 兩個方向每日各12班</p></div>
+  <p class="ferry-notice">依官方{schedule.month === '2026-12' ? '航港局12月' : '站方提供的11月'}PDF整理，列出{monthNumber}月排班的開航時間與船名；改班、換船及開航安排看承運公司當日通知。</p>
+  <div class="ferry-actions"><a class="button button-light" href={schedule.sourceFile} download>下載{monthNumber}月原始PDF</a><a class="text-link" href="https://www.kinmen.travel/zh-tw/news/details/3470" target="_blank" rel="noopener noreferrer">查看官方船班與訂票入口 ↗</a></div>
   <div class="ferry-picker" data-ferry-picker hidden>
     <h3>選擇搭船日期與方向</h3>
     <div class="ferry-controls"><label for="ferry-date"><span id="ferry-date-label">搭船日期</span><select id="ferry-date" aria-labelledby="ferry-date-label">{schedule.days.map(d => <option value={d.date}>{d.date.replaceAll('-', '/')}（週{d.weekday}）</option>)}</select></label><label for="ferry-direction"><span id="ferry-direction-label">航行方向</span><select id="ferry-direction" aria-labelledby="ferry-direction-label">{directions.map(d => <option value={d.key}>{d.label}</option>)}</select></label></div>
     <p class="ferry-result" role="status" aria-live="polite" data-ferry-status></p>
     <table class="ferry-daily"><caption data-ferry-caption>當日開航時間與船名</caption><thead><tr><th scope="col">開航時間</th><th scope="col">船名（依原表）</th></tr></thead><tbody data-ferry-rows></tbody></table>
-    <p class="ferry-small">兩地均為 UTC+8；時間是出發時間，不是抵達或報到截止時間。船名保留原表寫法。</p>
+    <p class="ferry-small">兩地均為 UTC+8；時間是出發時間，抵達與報到截止另看票證與承運公司通知。船名保留原表寫法。</p>
   </div>
   <noscript><p>下方完整月表可直接閱讀；開啟 JavaScript 後可按日期及方向查詢。</p></noscript>
-  <details class="ferry-month" open data-ferry-month><summary>查看完整11月月表（雙向720班）</summary>
+  <details class="ferry-month" open data-ferry-month><summary>{`查看完整${monthNumber}月月表（雙向${totalSailings}班）`}</summary>
     <p class="ferry-small">手機上可在表格內左右滑動；日期欄固定在左側，方便對照。</p>
     {directions.map(direction => <section class="ferry-direction-table" aria-label={direction.label}>
       <h3>{direction.label}</h3><div class="ferry-table-scroll" tabindex="0" role="region" aria-label={`${direction.label}完整月表，可橫向捲動`}><table data-ferry-full={direction.key}>
-        <caption>2026年11月 · {direction.short} · 欄位為開航時間</caption>
+        <caption>2026年{monthNumber}月 · {direction.short} · 欄位為開航時間</caption>
         <thead><tr><th scope="col">日期／星期</th>{schedule.times.map(t => <th scope="col">{t}</th>)}</tr></thead>
-        <tbody>{schedule.days.map(day => <tr data-ferry-day={day.date}><th scope="row">11/{Number(day.date.slice(-2))}（{day.weekday}）</th>{day[direction.key].map(vessel => <td>{vessel}</td>)}</tr>)}</tbody>
+        <tbody>{schedule.days.map(day => <tr data-ferry-day={day.date}><th scope="row">{monthNumber}/{Number(day.date.slice(-2))}（{day.weekday}）</th>{day[direction.key].map(vessel => <td>{vessel}</td>)}</tr>)}</tbody>
       </table></div>
     </section>)}
   </details>
 </section>
 <script>
-import schedule from '../data/ferry-2026-11.json';
 const root = document.querySelector<HTMLElement>('[data-ferry-schedule]');
 if (root) {
+  const schedule = JSON.parse(root.dataset.schedule || '{"times":[],"days":[]}') as { times: string[]; days: { date: string; weekday: string; toKinmen: string[]; toWutong: string[] }[] };
   const date = root.querySelector<HTMLSelectElement>('#ferry-date')!;
   const direction = root.querySelector<HTMLSelectElement>('#ferry-direction')!;
   const rows = root.querySelector<HTMLTableSectionElement>('[data-ferry-rows]')!;
@@ -48,7 +56,6 @@ if (root) {
     status.textContent = `${heading} · 共 ${day[key].length} 班`;
     caption.textContent = `${heading} 開航表`;
   }
-  // A date link can be shared; unsupported dates safely use November 1.
   const params = new URLSearchParams(window.location.search);
   const requestedDate = params.get('date');
   if (schedule.days.some(d => d.date === requestedDate)) date.value = requestedDate!;

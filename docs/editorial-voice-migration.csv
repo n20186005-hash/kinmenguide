@@ -531,5 +531,6 @@ transport,kinmen-to-lieyu,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 transport,scooter,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 transport,shanwai-station,sweep-2026-11-25,CLEARED,no,0,PENDING,-
 transport,taxi,sweep-2026-11-25,CLEARED,no,0,PENDING,-
+transport,xiamen-kinmen-ferry-december-2026,ferry-handoff-2026-11-26,CLEARED,no,0,PENDING,december-schedule-from-motcmpb-2026-11-10-pdf-sha-77542fe18475bf592af62303f2b5baa935eefbb76142aa3b0fffae1f9d974a14
 transport,xiamen-kinmen-ferry-november-2026,batch-2-2026-11-26,DONE,yes,0,VERIFIED,live-check-2026-11-26-sha-4b8df2915cd6d9521579c542decd6973e7b4a818
 transport,xiaosantong,sweep-2026-11-25,CLEARED,no,0,PENDING,-

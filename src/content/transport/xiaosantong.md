@@ -10,8 +10,9 @@
   "duration": "6 分鐘",
   "order": 7,
   "featured": false,
-  "updatedAt": "2026-10-12",
+  "updatedAt": "2026-11-26",
   "related": [
+    "/transport/xiamen-kinmen-ferry-december-2026/",
     "/transport/xiamen-kinmen-ferry-november-2026/",
     "/attractions/kinmen-port-terminal/",
     "/transport/from-mainland-china/",
@@ -40,6 +41,10 @@
       "url": "https://www.kinmen.travel/zh-tw/news/details/3470"
     },
     {
+      "title": "交通部航港局・115年12月金門小三通航班表",
+      "url": "https://www.motcmpb.gov.tw/Information/Detail/c38c3a2d-475f-454c-ba23-d4ad77f0114a?NodeId=543&SiteId=1"
+    },
+    {
       "title": "金門縣港務處・新旅運中心通關動線",
       "url": "https://kinmen.travel/zh-tw/news/details/4333"
     }
@@ -47,8 +52,10 @@
 }
 ---
 
-## 2026年11月廈門往返金門船班
-[查詢11月廈金小三通船班表](/transport/xiamen-kinmen-ferry-november-2026/)：選搭船日期和方向，查看當日12班開航時間及船名，也可下載站方提供的原始PDF。此表只含廈門五通線，不含石井線；實際開航與換船請向承運公司確認。
+## 2026年11月與12月廈門往返金門船班
+[查詢12月廈金小三通船班表](/transport/xiamen-kinmen-ferry-december-2026/)：依交通部航港局12月官方PDF整理，選搭船日期和方向查看開航時間與船名，也可下載原檔、查看兩端訂位電話。這頁是目前的月份入口。
+
+[查詢11月廈金小三通船班表](/transport/xiamen-kinmen-ferry-november-2026/)：11月表保留在同一個月份總覽裡，查看當日12班開航時間及船名，也可下載站方提供的原始PDF。此表只含廈門五通線，不含石井線；實際開航與換船看承運公司當日通知。
 
 ## 兩條航線，抵達同一個金門
 | 出發港 | 抵達港 | 官方概略航程 |
@@ -56,7 +63,7 @@
 | 廈門五通 | 金門水頭／金門港旅運中心 | 約 30 分鐘 |
 | 泉州南安石井 | 金門水頭／金門港旅運中心 | 約 70 分鐘 |
 
-以上只計航行，不含進出港、報到和通關；實際時間會受海況影響。班表依日期更動，請使用[官方船班資訊](https://www.kinmen.travel/zh-tw/news/details/3470)查當月公告，再向承運公司確認有位、票價與報到截止。
+以上只計航行，不含進出港、報到和通關；實際時間受海況影響。月份船班表按[交通部航港局公告](https://www.motcmpb.gov.tw/Information/Detail/c38c3a2d-475f-454c-ba23-d4ad77f0114a?NodeId=543&SiteId=1)與[官方船班資訊](https://www.kinmen.travel/zh-tw/news/details/3470)更新，訂位、票價與報到截止看售票平台與承運公司回覆。
 
 ## 2026年新場站：一樓抵港，三樓離港
 小三通已改至[金門港旅運中心](/attractions/kinmen-port-terminal/)，地址是**金城鎮金豐路300號**。從金門搭船出境到三樓離港區，抵達金門在一樓通關；接送請說清新站及樓層，不沿用[原水頭旅客服務中心](/attractions/shuitou-passenger-service-center/)的位置。船票與承運公司當日通知優先。

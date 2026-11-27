@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { createHash } from 'node:crypto';
 const route = '/transport/xiamen-kinmen-ferry-november-2026/';
+const decemberRoute = '/transport/xiamen-kinmen-ferry-december-2026/';
 
 test('mainland visitors can select departure date and ferry direction', async ({ page }) => {
   await page.goto('/transport/from-mainland-china/');
@@ -50,4 +51,19 @@ test('without JavaScript the complete two-way timetable remains available', asyn
   await expect(page.locator('[data-ferry-full="toWutong"] tbody tr')).toHaveCount(30);
   await expect(page.getByRole('link', { name: '下載11月原始PDF', exact: true })).toBeVisible();
   await context.close();
+});
+
+test('November page hands off to the official December schedule', async ({ page, request }) => {
+  await page.goto(route);
+  await expect(page.getByRole('link', { name: '前往查看2026年12月廈金小三通船班表', exact: true })).toBeVisible();
+  await page.goto(decemberRoute);
+  await expect(page.locator('[data-ferry-status]')).toContainText('2026/12/01（週二） · 廈門五通 → 金門 · 共 12 班');
+  await expect(page.locator('[data-ferry-rows] tr').first()).toHaveText('08:30和平新星');
+  await page.getByText('查看完整12月月表（雙向744班）', { exact: true }).click();
+  await expect(page.locator('[data-ferry-full] tbody tr')).toHaveCount(62);
+  await expect(page.locator('[data-ferry-full] tbody td')).toHaveCount(744);
+  const link = page.getByRole('link', { name: '下載12月原始PDF', exact: true });
+  const response = await request.get((await link.getAttribute('href'))!);
+  expect(response.ok()).toBeTruthy();
+  expect(createHash('sha256').update(await response.body()).digest('hex')).toBe('77542fe18475bf592af62303f2b5baa935eefbb76142aa3b0fffae1f9d974a14');
 });
